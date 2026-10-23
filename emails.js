@@ -1,2 +1,536 @@
 /* © 2026 Alexis Ngakosso. Tous droits réservés. Reproduction, modification ou réutilisation interdites sans autorisation écrite. */
-function _0x2106(){var _0xff2c41=['DhLWzq','B3v2zxj0','y29Kzv9YzxrYywL0','2kFzHnI52yBzInIN2yy','zw1HAwXrDw90yq','E3jLC3rHBNr9ig1VCMuGChvYy2HHC2vZigjLzM9Yzsb5B3vYihTWy3r9jsbYzxDHCMqU','q29TBwfUzgvY','ofDotMnRCa','AhjLzG','15txKTEI16OG15ZxMDEI15mG15txOnEq157xOnEv16O','q29KzsbKzsbYzxrYywL0','15dxMDEP15xxQcdxLnEw157xOnEuihTPzh0','DhH0x3nHBhv0yxrPB24','BgvUz3rO','zMLKzwXPDgu','Dgv4Dgu','t3jKzxiGBM93','sg9YywLYzxm','zMLKx3bYB2DYzxnZ','zgvIDxq','15txKTEI16OG15ZxMDEI15mHinEN15xxKYdxLnEG15dxNTEG15xxQIdxMDEz16NxNnExinEq15ZxMDEAinEr157xMDEz15WG16dxPnEO15mU','mJKZmdGWuLrQwM50','v2uGyxjLihbYzxbHCMLUzYb5B3vYig9YzgvY','uMvHzhKGzM9YihbPy2STDxaGyxqGDgHLihbOyxjTywn5','idOG','Dgv4Da','zgv0ywLS','Ag9YywLYzxm','ugLJAY11CcbHDcb0AguGCgHHCM1Hy3K','DgvTCgXHDgvjza','t3jKzxiGCMvJzwL2zwq','15txLnEw157xOnEuinEP15ZxMIdxLnEQ16FxKDEC15q','zw1HAwXQCW','zw1HAwW','nMLRvLjRCG','2lNzHTIVinIN2ytyP9IZ2kRzHnIN2yxyJcdzGTIV2zhzHsdySDMc2yuG2lFzHnIO2ymGE2LKFsdzInIX2yxySIdyP9Me2kFyS9IQ2ytyP9MfihTJB2rLFs4','Dw5KzwzPBMvK','y29TBwfUzgvqCMv0zq','ChvZAa','zgf0zq','Bwv0DhjLquPVDxi','lxTWy3r9icuGC3vYihzVDhjLihbYB2nOywLUzsbJB21Tyw5KzsWGDMfSywjSzsbQDxnXDsDHDsb7zxHWAxjLFs4Gvw4GC2v1Bcb1C2fNzs4','DhH0x3nLy3rPB25FCMv0CMfPDa','vMLLDYbTEsbVCMrLCNm','BNvSBa','AM9PBG','BNvTzxjPyW','CMvSzxzLtgu','yxiTDs1UDs1SyxrU','C3rYAw5NAwz5','DhH0x2zPzf9JB2rLx3rPDhjL','Dw5ZAgLMDa','16NxOTEv16OG16txOTEz15ZxLDEQ','zxHLyW','15txLnEw157xOnEuinEP15ZxMIdxNTEv15VxOnEu','zMvYBwu','15txLnEw157xOnEuinEP15ZxMG','BhrY','2kRzHsdyQnMe2yJyUIdyP9Me2yxyS9IQ2yJzIseG2lpzITI12ytzGYdySDMf2liG2kFzHnMi2ytyP9IHinMb2yOG2lhyS9IN2ytyQsdzHDMg2yhyTDMe2kKU','qxqGCgLJAY11CcWGC2HVDYb5B3vYig9YzgvYig51BwjLCIb7Awr9igfUzcb5B3vYihbPy2STDxaGy29Kzsb7y29Kzx0U','y29Kzq','Bg9NB1vYBa','2kpzJ9IX2lpzHnIQinMh2ldzHYdyP9Me2lhyS9IN2ytyQsdyQnI52k8G2lFzHnIO2ymG2lNzHnMjinMf2yJzGTI5ihTWAgfYBwf9lG','16NxNnEv150GE3bYzw5VBx0SinEu15txLTEE16dxLcdxQDEC15OGE2LKFsdxNTEv15VxOnEulIdxKnEK16NxQcdxNnEq16hxLDEJinEq15xxQTEuinEr16NxOTEv16OG15txPnEI15NxNnEv16OG15txNTEM15xxMDEG15xxQIdxNnEu15ZxNY4','mte1ndyXu3H5BgLA','iZbgneeYrq','BM9T','zw4Tr0i','ww91CIb7CgHHCM1HFsbSB3LHBhr5ignVzgu','y29KzuzPzgvSAxrL','W4LJAgvJ','rgf0zq','16FxLDEtinEu16dxKnEE16dxLDEQinEP15ZxMG','y2XPzw50','ntaXmZfsAevQwgC','CMvZB2X2zq','zMvYBCoP','CM91BMq','BwvYy3jLzgK','ugX1CYbXDsD1BIbHy2HHDcbHDMfUDcb2B3rYzsbYW6LKDwn0Aw9UigrLihTWy3r9icuU','vM90CMuGy29TBwfUzgu','16hxKTEv16G','16FxLDEtinEu16dxKnEE16dxLDEQinEP15ZxMIdxNI17CgHHCM1HFq','C3vIC3rY','C2v1AwW','zM9YBwf0','zM9YrwfJAa','vM9PCIbTzxmGy29TBwfUzgvZ','Dg9gAxHLza','ww91CIbVCMrLCIb7Awr9igLZihjLywr5igzVCIbWAwnRlxvW','2kFzHnIN2lpyQTMe2kFzHsdzGDMkinIN2ytyTDMk2k/zHnMk2kK','ugHHCM1Hy2LL','zM9Uy2u','qwrKCMvZCW','DgLTzxn0yw1W','vM90CMuGy29TBwfUzguGzxn0ihbYW6P0zq','2lFzHnIO2ym','15JxNnEK15xxNW','CgHHCM1Hx2fKCMvZC2u','mI1KAwDPDa','zMLKx2nVzgu','16FxLDEtihTJB2rLFq','y29TBwfUzgu','2yxySDIT2kJyP9MlihTWCMvUB2192iWG2lFzHnIO2ymGE2LKFsdyRnIN2yFySI4G2yRzHDMd2yBzGYdyP9IZ2kRzHnIN2yxzHYdyRTMe2kFzHcdyS9IN2lNyP9IQinIN2ytyUDMf2yqG2kpyR9Mg2kFzHY4','2kRzH9IN2yBzITMg2kCGE3bYzw5VBx0HinMf2ltyQTIX2yRyP9IQ2ymG2kFzHnMaE3nLDwLSFsdyQTMf2yByRDMdinIQ2k7zGDMk2lByP9MlinIO2yByS9IO2kKGE3bJDh0LlG','qwrYzxnZzq','BwvZC2fNzq','DhH0x21LC3nHz2vFyMfZ','2kFzHnMf2yByQTIS2kFyQG','C3bSAxq','CMvKDwnL','CMvKDwn0Aw9U','Dg9vChbLCKnHC2u','tM91CYbWCSoPCgfYB25ZihzVDhjLignVBw1HBMrL','B3jKzxjFAwq','ywXLCNrL','DhH0x2zPzf90zxH0zq','16FxLDEtinEq15NxODEv16m','rw52B3NdQq','y29KzvrLEhrL','ChjVzhvPDhm','zNvUy3rPB24','CgfYyw1LDhjLCW','CMvZDgfUDde','C2HVCNq','DhH0x2zPzf9JB2rLx3rLEhrL','C2L0zvvYBa','y291Bgv1CLbYAw1HAxjL','yxbWBgLJyxrPB24VANnVBG','sM91CM5HBcbKzxmGzw1HAwXZig5VBIbLBNjLz2LZDhldQq','tg95ywX0EsbWCM9NCMfTBwu','t3bLBMLUzYbOB3vYCW','zMv0y2GGAw5KAxnWB25PyMXL','C2fSDxrHDgLVBG','p3n1yMPLy3q9','ue9tva','yMfZ','CMvZDgfUDa','Aw5KzxHpzG','mJC5odu3ovD1yNLxua','2kFyT9Me2kGG2kFzHnII2yy','DhH0x3rLBf9SywjLBa','qsbYzxDHCMqGAxmGD2fPDgLUzYbMB3iGEw91','15NxQsdxNnEu15BxMDEFinEq16OG15txP9Ev15mG15hxOTEs15ZxQIdxLnEN16dxMDEv16OG15hxLnEw157xOnEuinEu15hxKnEulG','2lFzHnIO2ymGE2LKFsdyRnIN2yFySIdzHnMe2kFyS9IQ2ytyP9Mf','Dg9Fzw1HAwW','DMvUzhjLzgK','y29TBwfUzgvszwn1zq','z2v0sxrLBq','zxHWAxjL','2lNySDI2inI32ytyQnIN2kRzIG','15hxKnEz16hxLDEJlcdxMDEPinEC15txPTEz15iG15dxQIdxNTEH16txQcdxLnEu15BxNTEG15qGE2LKFsdxLDEq16OG16FxLDEtinEu15dxMDEH15xxOYb7y29Kzx0U','mZa2otqZmMHLChjQDW','DhLWzsbPBMnVBM51','BwfUDwvS','AxnbCNjHEq','nJCWnJy1tfrkrNrk','zw52B3LLCW','DxnLCKXHBMD1ywDL','rgf0zvrPBwvgB3jTyxq','CMvWBgfJzq','y3r4','ywrYzxnZzsbLBwfPBcbKDsbKzxn0Aw5HDgfPCMuGywjZzw50zsbVDsbPBNzHBgLKzq','2lpyP9I52kFyQIdyP9Me2lNzHDMe','yxr0zwLUDa','zw1HAwXmB2C','157xLTECinEy15xxKsb7ChjLBM9TFseGE3nLDwLSFsdxLnEO15VxMDEP15xxQIdxQDEC15OG157xLTEB15xxQIdxKnEv16RxMIdxKDEu16dxL9EuinEP15WGE3bJDh0LlG','15txLDEt16lxLcdxLTEvinEG16NxNnEx15qG15hxOTEN15hxLDEQinEu15BxNTEG16RxMIdxKDEq16RxQcb7CgHHCM1HFs4','y2XVC2vK','vmoPBmoPCgHVBMu','2lFzHnIO2ymG2kZyP9Mh2li','uhjVzhvPDhm','CMfPC29U','15dxMDEH15xxOYdxKDEr15NxQIdxLnEE16JxP9Ex16O','vM90CMuGy29KzsbMAwtdQwXPDmoP','2kRyO9Md2yRyRYdyT9Me2kJzGYb7Awr9','q29UzMLYBwf0Aw9UigrLihzVDhjLignVBw1HBMrLihTPzh0','rvvs','vg90ywWGW6aGCSoPz2XLCIbLBIbWAgfYBwfJAwu','zMLKvgL0CMu','2kpyR9IU2yqG2yFySnINinIN2ytySDMf2liG2yhzIIdyS9Me2kKG2yxyTnIQ2lhzITIN2kRzGYdyUDMg2k8G2lFzHnIO2ymG2kFzHnMc2kFyR9MflG','y29KzvjLDhjHAxq','BgvMDa','E259ic8GE3nLDwLSFsbWDxjJAgfZzxm','2kZyP9Mh2liG2ytzHnIN2lpyQTMe2kFzHsdzGDMkinIN2ytyTDMk2k/zHnMk2kK','q29Kzsb7y29Kzx0','DhH0x2fKCMvZC2vFBgfIzwW','ywrYzxnZzq','Cgn0','15ZxLnEw157xOnEu','Bg9UzW','C3vQzxq','rSoPBgLJAxrHDgLVBNmGE3bYzw5VBx0GisbwB3mGE3nLDwLSFsbHy2HHDhmGDM91CYbKB25Uzw50igrYB2L0imoGihvUzsbYW6LKDwn0Aw9UigrLihTWy3r9icuU','E259ic8GE3nLDwLSFsdxQnEB15NxQDEv16O','jMjVzhK9','DgvZDa','ChjLDNu','BM93','15txLnEw157xOnEv16OG16NxNnEz','q29TBwfUzguGyMLLBIbYzCoNDwu','2kRzHsdyP9IZ2kRzHnIN2yuG2lFzHnIO2ym','CMvTAxnL','ChvIBgLJs2v5','ywn0Awy','sxrLBxm','C3rHDhvZ','D2fYBG','ugLJAY11CcbJB2rL','DgvS','CNrS','rw1HAwXkuYbUB24Gy29UzMLNDxldQsbVDsbKW6LZywn0AxBdQq','y3rH','ugfSAwvYigzPzmoPBgL0W6KGyxr0zwLUDa','zM9VDgvY','DhH0x2HVCMfPCMvZx2XHyMvS','y29KzvrPDhjL','BwLU','16RxKnEO15NxMG','DhjPBq','Ahr0Chm6lY9HCgKUzw1HAwXQCY5JB20VyxbPl3yXlJaVzw1HAwWVC2vUza','2kRzHsdyQnMe2yJyUIdzHDIZ2kRzInMjinIN2ytzInMe2kFyOq','DhH0x2nVzgvFBgfIzwW','16NxNnEv150GE3bYzw5VBx0SinEQ15xxK9EuinEI15WG15txLTEE16dxQTEAihTPzh0UinEG16lxK9EB158G15dxLDEQ15OG15hxQnEs16iG16NxLnEz15aG157xLDEB16dxLcdxNnEq15NxODEv16mU','odu1nZGWEvLgrufz','qxuGCMv0CMfPDcWGChldQxnLBNrLEIb2B3rYzsbUDw3dQxjVigrLignVBw1HBMrLihTPzh0GzxqGDM90CMuGy29KzsbKzsbYzxrYywL0ihTJB2rLFs4','ChjLCY1WCM9MAwW','2lhzHDIYihTJB2rLFq','zgvZDgLUyxrHAxjL','sNvZDcbVBMuGBw9YzsbWDxjJAgfZzsbIzwzVCMuGEw91CIb7Cgn0FsuGCMv3yxjKlG','zNiTrLi','CMvSzxzL','y3vYCMvUy3K','uhldQxbHCSoPicHLBNzVAsbTyw51zwWP','BgfUzW','16hxLnE015SG15ZxQTEP15ZxLDEDinEr15hxMDEQinEu157xQnEN15FxQG','BM90AwzbDxrV','DhH0x3jLBwLZzv9SywjLBa','C2vYDMLJzuLK','qM9UAM91CIb7ChjLBM9TFsWGDM90CMuGy29TBwfUzguGE2LKFsbLC3qGChldQNrLlIbwB3vZihbVDxzLEIb2zw5PCIbSysbYzxrPCMvYigf1EcbOB3jHAxjLCYbJAs1KzxnZB3vZlG','twLSzxn0B25LihjLywnOzwqHifLVDxiGBg95ywX0EsbJB2rLigLZihnLBNqGAw4GysbZzwnVBMqGzw1HAwWU','CgHHCM1Hx3rLBa','iZfcnKi0nq','CMfUzg9T','BgfUz3vHz2u','2yBzGTMi2yuG2kJyQTIT2lBzITIXinI32ytyQnMd','ChjVz3jLC3nPB24','CgHHCM1Hx25VBq','l2nVBxb0zs5ODg1Si2nVBw1HBMrLCW','DhH0x3rVDgfSx2XHyMvS','zmoPC2fJDgL2W6KGzgfUCYboB3rPzMLJyxrPB25Z','C2XPy2u','DgHLBG','y291CMfUDa','imk3ia','B2jQzwn0','2k7yTDMfihTWy3r9jsdyUDMe2yKG2lFzHnIO2ymG2kFzHnMc2kFyR9Mf2iWG2lxyP9Me2k0G2k3yQTMjihTLEhbPCMv9lIdyP9IZ2kRyRTIV2kFzHsdzInIN2k3yRYdzGDMc2lCU','16dxLDEQ16JxLsb7CMvZDgfUDh0G16JxM9Ez16NxLDEQinEI15mG15ZxLnEG15FxLcdxQDECihTWy3r9js4','y29YChm','DgL0CMu','Dg9ju09tDhjPBMC','zgLTyw5JAgu','uMv0CMfPDcbLBIbWAgfYBwfJAwu','CMvZDgfUDe4','DhH0x2n0yq','BgfUz3vL','CgHHCM1Hx2HVCMfPCMvZ','zMLU','ugX1CYbXDwuGE3jLC3rHBNr9igfJAgf0CYbHDMfUDcb2B3rYzsbYW6LKDwn0Aw9UigrLihTWy3r9icuU','AguTsuW','BwfW','q29Uz3jHDhvSyxrPB25ZihTWCMvUB219isbzB3vYihTZzxvPBh0GChvYy2HHC2vZigvHCM4GEw91igeGE3bJDh0LigrPC2nVDw50lG','16RxLDEB16dxMDEQinEG15dxNTEG15xxQG','E3bJDh0LinEu16dxL9EuinEr15txLTEE16dxLcdxLnEr15dxLcWG15hxQTEv16FxOYdxOTEtihTLEhbPCMv9lIdxQDEz157xLDEPinEx15mT16txOTEE15KU','q2v0igvTywLSigeGW6L0W6KGzw52B3NdQsbZDwL0zsddOcb2B3rYzsbJB21Tyw5KzsbZDxiGBguGC2L0zsbKzsb7CgHHCM1HFs4','vM90CMuGy29TBwfUzguGE2LKFsbLC3qGChldQNrLimoGimoQDhjLihjLDgLYW6LL','2yxyUTMe2yi','tNvTyMvYrM9YBwf0','2lhzHDIYinIN2ytyP9IZ2kRzHnIN2yu','2kFzHnMf2kZzHDMi2lKG2kFzHnMf2lpyQTIT2yiG2yhzIIdyP9Me2lxzITIV2ytzITIP','Bwf4','ww91CIbSB3LHBhr5ignVzgu','E259ic8GE3nLDwLSFsbHy2HHDhm','AM91CM5HBgLZzxjfBwfPBa','vgHPCYbLBwfPBcb3yxmGC2vUDcbMB2XSB3DPBMCGEw91CIbVCMrLCIbVBIb0AguGE3bOyxjTyx0GD2vIC2L0zs4','y29KzvbYB21V','Dg90ywW','16dxLDEQ16JxLcdxQnEB15NxQDEuinEq15FxQIdxOTEtinEC15txOnEx15qG16NxNcb7Cgn0FsuU','DhH0x3bYB2r1AxrZx2XHyMvS','ugfSAwvYigf0DgvPBNqGisbwB3rYzsbJB2rLigzPzmoPBgL0W6KGDM91CYbLC3qGzw52B3NdQsbKyw5ZihvUihnLy29UzcbLBwfPBc4'];_0x2106=function(){return _0xff2c41;};return _0x2106();}function _0x56ce(_0x42043d,_0x4c0b7a){_0x42043d=_0x42043d-0x66;var _0x2106d6=_0x2106();var _0x56cedc=_0x2106d6[_0x42043d];if(_0x56ce['lofWsD']===undefined){var _0x351d7c=function(_0x541b07){var _0x30e743='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x5e704f='',_0x10be9e='';for(var _0x394d55=0x0,_0x12587b,_0x21f1c6,_0x247f29=0x0;_0x21f1c6=_0x541b07['charAt'](_0x247f29++);~_0x21f1c6&&(_0x12587b=_0x394d55%0x4?_0x12587b*0x40+_0x21f1c6:_0x21f1c6,_0x394d55++%0x4)?_0x5e704f+=String['fromCharCode'](0xff&_0x12587b>>(-0x2*_0x394d55&0x6)):0x0){_0x21f1c6=_0x30e743['indexOf'](_0x21f1c6);}for(var _0xa9f9fd=0x0,_0x24df84=_0x5e704f['length'];_0xa9f9fd<_0x24df84;_0xa9f9fd++){_0x10be9e+='%'+('00'+_0x5e704f['charCodeAt'](_0xa9f9fd)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x10be9e);};_0x56ce['OhiNCS']=_0x351d7c,_0x56ce['owyEtJ']={},_0x56ce['lofWsD']=!![];}var _0x33ca93=_0x2106d6[0x0],_0x5112b7=_0x42043d+_0x33ca93,_0x1055ed=_0x56ce['owyEtJ'][_0x5112b7];return!_0x1055ed?(_0x56cedc=_0x56ce['OhiNCS'](_0x56cedc),_0x56ce['owyEtJ'][_0x5112b7]=_0x56cedc):_0x56cedc=_0x1055ed,_0x56cedc;}(function(_0x140311,_0x565250){var _0x19ab56=_0x56ce,_0x184db7=_0x140311();while(!![]){try{var _0x476500=-parseInt(_0x19ab56(0xf8))/0x1+-parseInt(_0x19ab56(0x6c))/0x2+parseInt(_0x19ab56(0xee))/0x3+parseInt(_0x19ab56(0xc3))/0x4+-parseInt(_0x19ab56(0x14a))/0x5+parseInt(_0x19ab56(0xd0))/0x6*(parseInt(_0x19ab56(0x139))/0x7)+parseInt(_0x19ab56(0xb5))/0x8*(parseInt(_0x19ab56(0x146))/0x9);if(_0x476500===_0x565250)break;else _0x184db7['push'](_0x184db7['shift']());}catch(_0x5ce05b){_0x184db7['push'](_0x184db7['shift']());}}}(_0x2106,0x3ab40));var PharmaEmail=(function(){var _0x50b992=_0x56ce,_0x5e704f=_0x50b992(0x68),_0x10be9e=['fr','en','ar','he'],_0x394d55={'ar':!![],'he':!![]},_0x12587b={'fr':_0x50b992(0x72),'en':_0x50b992(0xf1),'ar':_0x50b992(0xde),'he':_0x50b992(0x99)},_0x21f1c6=0x32,_0x247f29={'fr':{'produits':_0x50b992(0x159),'date':_0x50b992(0xf5),'total':_0x50b992(0x160),'remise':_0x50b992(0x167),'retrait':_0x50b992(0x92),'codeLabel':_0x50b992(0xb8),'adresse':_0x50b992(0x117),'horaires':_0x50b992(0xbf),'tel':_0x50b992(0x157),'fidTitre':'Programme\x20fidélité','ferme':_0x50b992(0xfa),'footer':_0x50b992(0x9e),'progression':_0x50b992(0xa6),'restant1':_0x50b992(0xfd),'restantN':_0x50b992(0x98),'atteint':_0x50b992(0xad),'commandeRecue':{'sujet':_0x50b992(0x15e),'titre':_0x50b992(0x175),'alerte':_0x50b992(0x11f),'salutation':'Bonjour\x20{prenom},\x20merci\x20pour\x20votre\x20commande\x20{id}.\x20Nous\x20vous\x20prévenons\x20dès\x20qu\x27elle\x20est\x20prête\x20à\x20être\x20retirée.','bas':_0x50b992(0x6d),'cta':_0x50b992(0x105)},'commandePrete':{'sujet':_0x50b992(0x9f),'titre':_0x50b992(0x10d),'alerte':'À\x20retirer\x20en\x20pharmacie','salutation':_0x50b992(0x7b),'bas':_0x50b992(0x6d),'cta':'Voir\x20mes\x20commandes'},'codeFidelite':{'sujet':'Votre\x20code\x20fidélité\x20{pharma}','titre':_0x50b992(0x182),'alerte':'Une\x20réduction\x20vous\x20attend','salutation':_0x50b992(0x16e),'codeTitre':_0x50b992(0x15c),'codeTexte':_0x50b992(0xd7),'bas':'Saisissez\x20ce\x20code\x20dans\x20votre\x20panier\x20lors\x20de\x20votre\x20prochaine\x20commande.','cta':_0x50b992(0xb4)}},'en':{'produits':_0x50b992(0x17a),'date':_0x50b992(0xf5),'total':'Total\x20to\x20pay\x20at\x20the\x20pharmacy','remise':'Code\x20{code}','retrait':_0x50b992(0xca),'codeLabel':_0x50b992(0x17d),'adresse':_0x50b992(0x10b),'horaires':_0x50b992(0x131),'tel':'Phone','fidTitre':_0x50b992(0x130),'ferme':_0x50b992(0x156),'footer':_0x50b992(0xa8),'progression':_0x50b992(0x165),'restant1':_0x50b992(0x71),'restantN':_0x50b992(0xb3),'atteint':_0x50b992(0x7c),'commandeRecue':{'sujet':'Confirmation\x20of\x20your\x20order\x20{id}','titre':_0x50b992(0xcc),'alerte':_0x50b992(0xc4),'salutation':'Hello\x20{prenom},\x20thank\x20you\x20for\x20your\x20order\x20{id}.\x20We\x20will\x20let\x20you\x20know\x20as\x20soon\x20as\x20it\x20is\x20ready\x20for\x20pick-up.','bas':'At\x20pick-up,\x20show\x20your\x20order\x20number\x20{id}\x20and\x20your\x20pick-up\x20code\x20{code}.','cta':_0x50b992(0xd9)},'commandePrete':{'sujet':_0x50b992(0x107),'titre':'Your\x20order\x20is\x20ready','alerte':_0x50b992(0xc5),'salutation':'Hello\x20{prenom},\x20your\x20order\x20{id}\x20is\x20ready.\x20You\x20can\x20collect\x20it\x20during\x20the\x20opening\x20hours\x20below.','bas':_0x50b992(0xe9),'cta':_0x50b992(0xd9)},'codeFidelite':{'sujet':_0x50b992(0xf2),'titre':'Loyalty\x20milestone\x20reached','alerte':_0x50b992(0x13c),'salutation':_0x50b992(0x9b),'codeTitre':_0x50b992(0xa5),'codeTexte':'-{pct}%\x20on\x20your\x20next\x20order,\x20valid\x20until\x20{expire}.\x20Single\x20use.','bas':'Enter\x20this\x20code\x20in\x20your\x20basket\x20on\x20your\x20next\x20order.','cta':_0x50b992(0xbe)}},'ar':{'produits':_0x50b992(0x11a),'date':'التاريخ','total':_0x50b992(0xa3),'remise':_0x50b992(0x6f),'retrait':_0x50b992(0x108),'codeLabel':_0x50b992(0xa2),'adresse':_0x50b992(0xb1),'horaires':_0x50b992(0x151),'tel':'الهاتف','fidTitre':'برنامج\x20الولاء','ferme':_0x50b992(0xa0),'footer':_0x50b992(0xec),'progression':'{n}\x20/\x20{seuil}\x20عمليات\x20شراء','restant1':'بقيت\x20عملية\x20شراء\x20واحدة\x20قبل\x20تخفيضك\x20بنسبة\x20{pct}%.','restantN':'بقي\x20{restant}\x20عمليات\x20شراء\x20قبل\x20تخفيضك\x20بنسبة\x20{pct}%.','atteint':_0x50b992(0xe8),'commandeRecue':{'sujet':_0x50b992(0x15d),'titre':_0x50b992(0x176),'alerte':_0x50b992(0x81),'salutation':'مرحباً\x20{prenom}،\x20شكراً\x20على\x20طلبك\x20{id}.\x20سنخبرك\x20فور\x20أن\x20يكون\x20جاهزاً\x20للاستلام.','bas':_0x50b992(0xd1),'cta':_0x50b992(0x144)},'commandePrete':{'sujet':_0x50b992(0x13e),'titre':_0x50b992(0x158),'alerte':_0x50b992(0x166),'salutation':_0x50b992(0x115),'bas':'عند\x20الاستلام،\x20قدّم\x20رقم\x20طلبك\x20{id}\x20ورمز\x20الاستلام\x20{code}.','cta':_0x50b992(0x144)},'codeFidelite':{'sujet':'رمز\x20الولاء\x20من\x20{pharma}','titre':_0x50b992(0x69),'alerte':'مكافأة\x20بانتظارك','salutation':_0x50b992(0x116),'codeTitre':'رمز\x20الولاء\x20الخاص\x20بك','codeTexte':_0x50b992(0x8c),'bas':_0x50b992(0x162),'cta':_0x50b992(0x13a)}},'he':{'produits':'מוצרים','date':_0x50b992(0x66),'total':_0x50b992(0x77),'remise':_0x50b992(0x113),'retrait':_0x50b992(0x15b),'codeLabel':_0x50b992(0x123),'adresse':'כתובת','horaires':_0x50b992(0xe2),'tel':_0x50b992(0x10f),'fidTitre':_0x50b992(0x9c),'ferme':_0x50b992(0xff),'footer':_0x50b992(0x155),'progression':_0x50b992(0x16f),'restant1':_0x50b992(0xab),'restantN':_0x50b992(0x8d),'atteint':_0x50b992(0xc2),'commandeRecue':{'sujet':_0x50b992(0xb9),'titre':_0x50b992(0xcd),'alerte':'אנחנו\x20מכינים\x20את\x20ההזמנה\x20שלך','salutation':_0x50b992(0x6b),'bas':'באיסוף,\x20יש\x20להציג\x20את\x20מספר\x20ההזמנה\x20{id}\x20ואת\x20קוד\x20האיסוף\x20{code}.','cta':_0x50b992(0x174)},'commandePrete':{'sujet':'ההזמנה\x20{id}\x20מוכנה\x20לאיסוף','titre':_0x50b992(0xe4),'alerte':'מוכנה\x20לאיסוף\x20בבית\x20המרקחת','salutation':_0x50b992(0xed),'bas':_0x50b992(0x145),'cta':_0x50b992(0x174)},'codeFidelite':{'sujet':_0x50b992(0x100),'titre':_0x50b992(0xb7),'alerte':'הנחה\x20מחכה\x20לך','salutation':_0x50b992(0x154),'codeTitre':_0x50b992(0xf6),'codeTexte':_0x50b992(0x9d),'bas':_0x50b992(0x13d),'cta':_0x50b992(0x16b)}}},_0xa9f9fd=[_0x50b992(0x141),_0x50b992(0xd3),_0x50b992(0xf3)];function _0x24df84(_0x476580,_0x4e5405){var _0x1b1d14=_0x50b992;return String(_0x476580==null?'':_0x476580)[_0x1b1d14(0x14e)](/\{(\w+)\}/g,function(_0x4cb0a8,_0x5eeb60){return _0x4e5405[_0x5eeb60]!==undefined&&_0x4e5405[_0x5eeb60]!==null?String(_0x4e5405[_0x5eeb60]):'';});}function _0x137061(_0x164b87){var _0x1c6240=_0x50b992;if(typeof pharmaEmailValide===_0x1c6240(0x127))return pharmaEmailValide(_0x164b87);return/^[A-Za-z0-9._%+'-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/[_0x1c6240(0x171)](String(_0x164b87||'')['trim']());}function _0x4854c3(_0x275858){var _0x590c10=_0x50b992,_0x30c154=String(_0x275858||'')['toLowerCase']()['split']('-')[0x0];if(_0x30c154==='iw')_0x30c154='he';return _0x10be9e[_0x590c10(0x138)](_0x30c154)!==-0x1?_0x30c154:'';}function _0x21f4f6(){var _0x5ca98d=_0x50b992,_0x1acb05=null;try{_0x1acb05=JSON['parse'](localStorage[_0x5ca98d(0x142)](_0x5ca98d(0x6e))||_0x5ca98d(0xda));}catch(_0x30a9ef){}var _0x475b99=_0x4854c3(_0x1acb05&&_0x1acb05[_0x5ca98d(0x95)]);if(_0x475b99)return _0x475b99;try{_0x475b99=_0x4854c3(navigator[_0x5ca98d(0x80)]||navigator[_0x5ca98d(0x14c)]);}catch(_0x45e38f){}return _0x475b99||'fr';}function _0x12dbb7(_0x253485){var _0x3fc825=_0x50b992,_0x3edbce=parseInt(_0x253485[_0x3fc825(0x101)](0x1,0x2),0x10)/0xff,_0x3296a2=parseInt(_0x253485[_0x3fc825(0x101)](0x3,0x2),0x10)/0xff,_0x139ad3=parseInt(_0x253485['substr'](0x5,0x2),0x10)/0xff,_0x315a63=Math[_0x3fc825(0xa4)](_0x3edbce,_0x3296a2,_0x139ad3),_0x2a62f8=Math[_0x3fc825(0x186)](_0x3edbce,_0x3296a2,_0x139ad3),_0x4c50a8=0x0,_0x1955b7=0x0,_0x20db2e=(_0x315a63+_0x2a62f8)/0x2;if(_0x315a63!==_0x2a62f8){var _0x2820fd=_0x315a63-_0x2a62f8;_0x1955b7=_0x20db2e>0.5?_0x2820fd/(0x2-_0x315a63-_0x2a62f8):_0x2820fd/(_0x315a63+_0x2a62f8);if(_0x315a63===_0x3edbce)_0x4c50a8=(_0x3296a2-_0x139ad3)/_0x2820fd+(_0x3296a2<_0x139ad3?0x6:0x0);else{if(_0x315a63===_0x3296a2)_0x4c50a8=(_0x139ad3-_0x3edbce)/_0x2820fd+0x2;else _0x4c50a8=(_0x3edbce-_0x3296a2)/_0x2820fd+0x4;}_0x4c50a8*=0x3c;}return{'h':_0x4c50a8,'s':_0x1955b7,'l':_0x20db2e};}function _0x23314a(_0x63410a,_0x26dbd8,_0x217af8){var _0x1614e9=_0x50b992;function _0x5e0210(_0xfab992){var _0x4607e0=_0x56ce,_0x597c80=(_0xfab992+_0x63410a/0x1e)%0xc,_0x5860c0=_0x26dbd8*Math[_0x4607e0(0x186)](_0x217af8,0x1-_0x217af8),_0x192012=_0x217af8-_0x5860c0*Math['max'](-0x1,Math[_0x4607e0(0x186)](_0x597c80-0x3,Math[_0x4607e0(0x186)](0x9-_0x597c80,0x1))),_0x55b49e=Math[_0x4607e0(0xfb)](_0x192012*0xff)['toString'](0x10);return _0x55b49e[_0x4607e0(0xbb)]===0x1?'0'+_0x55b49e:_0x55b49e;}return('#'+_0x5e0210(0x0)+_0x5e0210(0x8)+_0x5e0210(0x4))[_0x1614e9(0x11e)]();}function _0x269e21(_0x50e00f){var _0x178030=_0x50b992;if(!/^#[0-9a-fA-F]{6}$/[_0x178030(0x171)](String(_0x50e00f||'')))_0x50e00f=_0x178030(0x7e);_0x50e00f=_0x50e00f[_0x178030(0x11e)]();if(_0x50e00f==='#1B6B45')return{'couleur':_0x50e00f,'fonce':_0x178030(0xef),'clair':'#2ECC7A'};var _0x3f3592=_0x12dbb7(_0x50e00f);return{'couleur':_0x50e00f,'fonce':_0x23314a(_0x3f3592['h'],_0x3f3592['s'],Math[_0x178030(0xa4)](0.1,_0x3f3592['l']*0.68)),'clair':_0x23314a(_0x3f3592['h'],Math[_0x178030(0x186)](0.75,_0x3f3592['s']+0.1),0.52)};}function _0x43fcd6(_0x1c564b,_0x5e7785){var _0xfafc36=_0x50b992,_0x5008dd=/^(\d{1,2}):(\d{2})$/[_0xfafc36(0xe3)](String(_0x1c564b||''));if(!_0x5008dd)return String(_0x1c564b||'');if(_0x5e7785==='fr')return parseInt(_0x5008dd[0x1],0xa)+'h'+(_0x5008dd[0x2]==='00'?'':_0x5008dd[0x2]);return('0'+parseInt(_0x5008dd[0x1],0xa))['slice'](-0x2)+':'+_0x5008dd[0x2];}function _0x5a4fe9(_0x323233,_0x5922e7,_0x44a50c){var _0x3f62d4=_0x50b992;if(!_0x323233||typeof _0x323233!==_0x3f62d4(0x8b))return'';var _0x24337e=['lundi','mardi',_0x3f62d4(0xfc),'jeudi',_0x3f62d4(0x140),'samedi',_0x3f62d4(0x91)],_0x8b3840;try{var _0x101f43=new Intl[(_0x3f62d4(0x14d))](_0x12587b[_0x5922e7]||_0x3f62d4(0x72),{'weekday':_0x3f62d4(0x12a)});_0x8b3840=_0x24337e[_0x3f62d4(0x9a)](function(_0x658a3d,_0xec165c){var _0x5212a4=_0x3f62d4;return _0x101f43[_0x5212a4(0x103)](new Date(0x7e8,0x0,0x1+_0xec165c))[_0x5212a4(0x14e)](/\.$/,'');});}catch(_0x5da14d){_0x8b3840=_0x24337e[_0x3f62d4(0x9a)](function(_0x30f79c){var _0x304595=_0x3f62d4;return _0x30f79c[_0x304595(0x87)](0x0,0x3);});}var _0x4d6428=[];return _0x24337e[_0x3f62d4(0x104)](function(_0x3451ee,_0x464b97){var _0xd5d733=_0x3f62d4,_0x5a5b20=_0x323233[_0x3451ee];if(!_0x5a5b20)return;var _0x3dd353=_0x5a5b20[_0xd5d733(0xaf)]?_0x43fcd6(_0x5a5b20[_0xd5d733(0xc1)],_0x5922e7)+'–'+_0x43fcd6(_0x5a5b20[_0xd5d733(0x97)],_0x5922e7):_0x44a50c[_0xd5d733(0xe5)],_0x45dbd=_0x4d6428[_0x4d6428[_0xd5d733(0xbb)]-0x1];if(_0x45dbd&&_0x45dbd[_0xd5d733(0xbd)]===_0x3dd353&&_0x45dbd['fin']===_0x464b97-0x1)_0x45dbd['fin']=_0x464b97;else _0x4d6428[_0xd5d733(0xd4)]({'debut':_0x464b97,'fin':_0x464b97,'texte':_0x3dd353});}),_0x4d6428[_0x3f62d4(0x9a)](function(_0x5851c9){var _0x16c8e1=_0x3f62d4,_0x1acd87=_0x5851c9['debut']===_0x5851c9['fin']?_0x8b3840[_0x5851c9[_0x16c8e1(0xc1)]]:_0x8b3840[_0x5851c9[_0x16c8e1(0xc1)]]+'–'+_0x8b3840[_0x5851c9[_0x16c8e1(0x97)]];return _0x1acd87+'\x20'+_0x5851c9['texte'];})[_0x3f62d4(0xdb)](_0x3f62d4(0x8a));}function _0x2069b7(_0x2a6e81,_0x2e9c7c){var _0x3f7ddc=_0x50b992,_0x1c6bd2=new Date(_0x2a6e81);if(isNaN(_0x1c6bd2['getTime']()))_0x1c6bd2=new Date();try{return new Intl[(_0x3f7ddc(0x14d))](_0x12587b[_0x2e9c7c]||_0x3f7ddc(0x72),{'day':_0x3f7ddc(0xdc),'month':_0x3f7ddc(0x16c),'year':_0x3f7ddc(0xdc),'hour':_0x3f7ddc(0x111),'minute':_0x3f7ddc(0x111)})['format'](_0x1c6bd2);}catch(_0x4117fd){return _0x1c6bd2[_0x3f7ddc(0x90)]()[_0x3f7ddc(0x87)](0x0,0x10)[_0x3f7ddc(0x14e)]('T','\x20');}}function _0x69b237(_0x5d439a,_0x17b328){var _0x82a51f=_0x50b992,_0x3acb18=new Date(_0x5d439a);if(isNaN(_0x3acb18['getTime']()))return String(_0x5d439a||'');try{return new Intl['DateTimeFormat'](_0x12587b[_0x17b328]||_0x82a51f(0x72),{'day':_0x82a51f(0xdc),'month':_0x82a51f(0x16c),'year':'numeric'})['format'](_0x3acb18);}catch(_0x198677){return String(_0x5d439a);}}function _0x25d617(_0x54a12a,_0x3db897){var _0x59215b=_0x50b992,_0x32df80=Math[_0x59215b(0xfb)]((parseFloat(_0x54a12a)||0x0)*0x64)/0x64;try{return new Intl[(_0x59215b(0xa1))](_0x12587b[_0x3db897]||'fr-FR',{'style':_0x59215b(0x74),'currency':_0x59215b(0x15f)})['format'](_0x32df80);}catch(_0x135e1b){return _0x32df80[_0x59215b(0x106)](0x2)[_0x59215b(0x14e)]('.',',')+'\x20€';}}function _0x337565(_0x45c7c6){var _0xaa5cb7=_0x50b992,_0x4c480d=_0x45c7c6&&_0x45c7c6['parametres']||{},_0x1cb10b=_0x4c480d[_0xaa5cb7(0xce)]||{};return{'actif':_0x1cb10b[_0xaa5cb7(0x179)]===!![],'serviceId':String(_0x1cb10b['serviceId']||'')[_0xaa5cb7(0x67)](),'templateId':String(_0x1cb10b[_0xaa5cb7(0xcb)]||'')[_0xaa5cb7(0x67)](),'publicKey':String(_0x1cb10b[_0xaa5cb7(0x178)]||'')[_0xaa5cb7(0x67)](),'logoUrl':/^https:\/\//i[_0xaa5cb7(0x171)](String(_0x1cb10b['logoUrl']||'')[_0xaa5cb7(0x67)]())?String(_0x1cb10b[_0xaa5cb7(0xeb)])[_0xaa5cb7(0x67)]():'','siteUrl':String(_0x1cb10b[_0xaa5cb7(0x12c)]||'')['trim']()};}function _0x279b1f(_0x1f722e){var _0x4c7fa8=_0x50b992,_0x49afc3=_0x337565(_0x1f722e);return _0x49afc3[_0x4c7fa8(0x179)]&&!!_0x49afc3[_0x4c7fa8(0x7a)]&&!!_0x49afc3[_0x4c7fa8(0xcb)]&&!!_0x49afc3[_0x4c7fa8(0x178)];}function _0x479728(_0x2b75c6,_0x3c2f6d){var _0xa826d3=_0x50b992,_0x42571f=_0x3c2f6d&&_0x3c2f6d[_0xa826d3(0x128)]&&_0x3c2f6d[_0xa826d3(0x128)][_0xa826d3(0x78)]||{};return _0x42571f[_0x2b75c6]===!![];}function _0x382f4d(_0x1a59d6){var _0x3bc42c=_0x50b992,_0x30d28e=_0x1a59d6[_0x3bc42c(0x12c)];if(!_0x30d28e)try{/^https?:$/[_0x3bc42c(0x171)](location['protocol'])&&!/^(localhost|127\.0\.0\.1|\[::1\])$/['test'](location['hostname'])&&(_0x30d28e=location[_0x3bc42c(0xb6)]['split']('#')[0x0][_0x3bc42c(0x11b)]('?')[0x0]['replace'](/[^\/]*$/,''));}catch(_0x2825a8){}if(!/^https?:\/\//i[_0x3bc42c(0x171)](_0x30d28e||''))return'';return _0x30d28e[_0x3bc42c(0x14e)](/\/+$/,'')[_0x3bc42c(0x14e)](/\/(site|admin|compte)\.html$/,'')+_0x3bc42c(0x84);}function _0x18d31b(_0x468b0c,_0x638df,_0x12f116){var _0x82db7a=_0x50b992;_0x12f116=_0x12f116||{};var _0x4ab922=_0x12f116[_0x82db7a(0x114)]||{},_0x45832d=_0x4854c3(_0x4ab922[_0x82db7a(0x76)])||'fr',_0x28572c=_0x247f29[_0x45832d],_0x948f4a=_0x28572c[_0x468b0c]||_0x28572c[_0x82db7a(0x141)],_0xd70299=_0x638df&&_0x638df[_0x82db7a(0x128)]||{},_0x2b6183=_0x337565(_0x638df),_0x4310b7=_0x269e21(_0xd70299[_0x82db7a(0x12d)]),_0x2811e8=_0xd70299[_0x82db7a(0xf0)]||_0x82db7a(0x109),_0x2138d1=String(_0x4ab922[_0x82db7a(0xf7)]||'')[_0x82db7a(0x67)]()[_0x82db7a(0x11b)](/\s+/)[0x0]||'',_0x1487e5=_0x12f116[_0x82db7a(0xbc)]||null,_0x4c7349=_0x12f116['code']||null,_0x571278={'id':_0x4ab922['id']||'','prenom':_0x2138d1,'code':_0x4ab922[_0x82db7a(0x163)]||'','pharma':_0x2811e8,'seuil':_0x1487e5?_0x1487e5['seuil']:'','pct':_0x4c7349?_0x4c7349[_0x82db7a(0x16a)]:_0x1487e5?_0x1487e5[_0x82db7a(0x11d)]:'','expire':_0x4c7349&&_0x4c7349[_0x82db7a(0x143)]?_0x69b237(_0x4c7349[_0x82db7a(0x143)],_0x45832d):''},_0x154c12={'subject':_0x24df84(_0x948f4a['sujet'],_0x571278),'to_email':String(_0x4ab922[_0x82db7a(0xcf)]||'')[_0x82db7a(0x67)](),'lang':_0x45832d,'dir':_0x394d55[_0x45832d]?_0x82db7a(0x17f):_0x82db7a(0xe7),'align_end':_0x394d55[_0x45832d]?_0x82db7a(0x164):'right','pharma_nom':_0x2811e8,'pharma_adresse':_0xd70299[_0x82db7a(0x169)]||'','pharma_tel':_0xd70299[_0x82db7a(0x17e)]||'','pharma_email':_0xd70299[_0x82db7a(0xcf)]||'','pharma_horaires':_0x5a4fe9(_0x638df&&_0x638df[_0x82db7a(0xc9)],_0x45832d,_0x28572c),'couleur':_0x4310b7['couleur'],'couleur_fonce':_0x4310b7[_0x82db7a(0x10a)],'couleur_clair':_0x4310b7['clair'],'logo_url':_0x2b6183[_0x82db7a(0xeb)],'order_id':_0x4ab922['id']||'','txt_titre':_0x24df84(_0x948f4a[_0x82db7a(0x8f)],_0x571278),'txt_alerte':_0x24df84(_0x948f4a[_0x82db7a(0x121)],_0x571278),'txt_salutation':_0x24df84(_0x948f4a[_0x82db7a(0x133)],_0x571278),'txt_section_commande':{'fr':_0x82db7a(0xfe),'en':'Your\x20order','ar':_0x82db7a(0x10e),'he':_0x82db7a(0xe6)}[_0x45832d],'txt_produits_label':_0x28572c[_0x82db7a(0x126)],'produits':_0x4ab922[_0x82db7a(0x126)]||'','txt_date_label':_0x28572c['date'],'date':_0x2069b7(_0x4ab922[_0x82db7a(0x10c)],_0x45832d),'remise':'','txt_remise_label':'','txt_total_label':_0x28572c['total'],'total':_0x25d617(_0x4ab922[_0x82db7a(0xaa)],_0x45832d),'code_retrait':'','txt_code_label':_0x28572c['codeLabel'],'txt_section_retrait':_0x28572c['retrait'],'txt_adresse_label':_0x28572c[_0x82db7a(0x169)],'txt_horaires_label':_0x28572c['horaires'],'txt_tel_label':_0x28572c[_0x82db7a(0x17e)],'fid_progress':'','fid_pct':'0','txt_fid_titre':_0x28572c[_0x82db7a(0x161)],'txt_fid_texte':'','fid_code':'','txt_fid_code_titre':'','txt_fid_code_texte':'','txt_message_bas':_0x24df84(_0x948f4a[_0x82db7a(0x136)],_0x571278),'lien_cta':_0x382f4d(_0x2b6183),'txt_cta':_0x948f4a[_0x82db7a(0x181)]||'','txt_footer':_0x24df84(_0x28572c[_0x82db7a(0x183)],_0x571278)};if(_0x468b0c!=='codeFidelite')_0x154c12[_0x82db7a(0xb0)]=_0x4ab922['codeRetrait']||'';_0x4ab922[_0x82db7a(0xa9)]&&_0x4ab922[_0x82db7a(0x177)]>0x0&&(_0x154c12[_0x82db7a(0x177)]='-'+_0x25d617(_0x4ab922[_0x82db7a(0x177)],_0x45832d),_0x154c12[_0x82db7a(0x79)]=_0x24df84(_0x28572c[_0x82db7a(0x177)],{'code':_0x4ab922[_0x82db7a(0xa9)]}));if(_0x468b0c===_0x82db7a(0x141)&&_0x1487e5&&_0x1487e5[_0x82db7a(0x102)]>0x0){var _0x2ca660=PharmaFidelite[_0x82db7a(0x82)](_0x1487e5['achats'],_0x1487e5[_0x82db7a(0x102)]);_0x154c12[_0x82db7a(0xc0)]=_0x24df84(_0x28572c[_0x82db7a(0x82)],{'n':_0x2ca660[_0x82db7a(0x89)],'seuil':_0x1487e5[_0x82db7a(0x102)]}),_0x154c12['fid_pct']=String(_0x2ca660[_0x82db7a(0x16a)]),_0x154c12[_0x82db7a(0x122)]=_0x2ca660[_0x82db7a(0x152)]?_0x28572c[_0x82db7a(0x152)]:_0x24df84(_0x2ca660['restant']===0x1?_0x28572c[_0x82db7a(0x129)]:_0x28572c[_0x82db7a(0x93)],{'restant':_0x2ca660[_0x82db7a(0x137)],'pct':_0x1487e5[_0x82db7a(0x11d)]});}return _0x468b0c==='codeFidelite'&&_0x4c7349&&(_0x154c12[_0x82db7a(0x112)]=_0x4c7349[_0x82db7a(0xea)]||'',_0x154c12[_0x82db7a(0xe0)]=_0x948f4a[_0x82db7a(0x185)]||'',_0x154c12[_0x82db7a(0x12b)]=_0x24df84(_0x948f4a[_0x82db7a(0x125)],_0x571278)),_0x154c12;}function _0x31cb42(_0x352714,_0x2f7d39,_0x5d7a6a,_0x290b46){var _0x5f002d=_0x50b992;if(typeof PharmaCloud!==_0x5f002d(0xd2)&&PharmaCloud[_0x5f002d(0x172)]){PharmaCloud[_0x5f002d(0xa7)](_0x352714,_0x2f7d39,_0x5d7a6a,_0x290b46);return;}try{PharmaStore[_0x5f002d(0xd6)](function(_0x27f4f2){var _0x22dea8=_0x5f002d;if(!Array[_0x22dea8(0x149)](_0x27f4f2[_0x22dea8(0x153)]))_0x27f4f2[_0x22dea8(0x153)]=[];_0x27f4f2[_0x22dea8(0x153)][_0x22dea8(0xe1)]({'id':Date[_0x22dea8(0x173)]()*0x3e8+Math['floor'](Math[_0x22dea8(0x7f)]()*0x3e8),'timestamp':new Date()['toISOString'](),'type':_0x290b46?'test':_0x352714,'destinataire':_0x2f7d39[_0x22dea8(0x13f)]||'','commande':_0x2f7d39[_0x22dea8(0x120)]||'','statut':_0x5d7a6a[_0x22dea8(0x148)]?_0x22dea8(0x75):_0x5d7a6a['ok']?_0x22dea8(0x124):_0x22dea8(0xf4),'detail':_0x5d7a6a['ok']||_0x5d7a6a[_0x22dea8(0x148)]?'':String(_0x5d7a6a[_0x22dea8(0xc8)]||_0x5d7a6a[_0x22dea8(0x15a)]||'')['slice'](0x0,0xc8)});if(_0x27f4f2['emailLog'][_0x22dea8(0xbb)]>_0x21f1c6)_0x27f4f2[_0x22dea8(0x153)]=_0x27f4f2['emailLog']['slice'](0x0,_0x21f1c6);var _0x162851=_0x27f4f2[_0x22dea8(0x128)]&&_0x27f4f2['parametres'][_0x22dea8(0xb2)];if(_0x5d7a6a['ok']&&_0x162851&&typeof _0x162851==='object')_0x162851[_0x22dea8(0x14b)]=(parseInt(_0x162851[_0x22dea8(0x14b)],0xa)||0x0)+0x1;});}catch(_0x5265d7){console[_0x5f002d(0x17c)](_0x5f002d(0x12f),_0x5265d7);}}function _0x4d3e17(_0x2a00b9,_0x2cc2d4,_0x4e3742,_0x2ddf00){var _0x39636d=_0x50b992;_0x2ddf00=_0x2ddf00||{};var _0x332bf3=_0x2ddf00[_0x39636d(0x171)]===!![];if(_0xa9f9fd[_0x39636d(0x138)](_0x2a00b9)===-0x1)return Promise[_0x39636d(0xf9)]({'ok':![],'ignore':!![],'raison':_0x39636d(0x147)});if(!_0x332bf3&&!_0x479728(_0x2a00b9,_0x2cc2d4))return Promise[_0x39636d(0xf9)]({'ok':![],'ignore':!![],'raison':_0x39636d(0x86)});if(!_0x279b1f(_0x2cc2d4)&&!(_0x332bf3&&_0x337565(_0x2cc2d4)[_0x39636d(0x7a)]&&_0x337565(_0x2cc2d4)[_0x39636d(0xcb)]&&_0x337565(_0x2cc2d4)[_0x39636d(0x178)]))return Promise[_0x39636d(0xf9)]({'ok':![],'ignore':!![],'raison':_0x39636d(0x180)});var _0x4860ad=_0x18d31b(_0x2a00b9,_0x2cc2d4,_0x4e3742);if(!_0x137061(_0x4860ad[_0x39636d(0x13f)])){var _0x1826e5={'ok':![],'ignore':!![],'raison':_0x39636d(0x150)};return Promise['resolve'](_0x1826e5);}var _0x3bf194=_0x337565(_0x2cc2d4);if(typeof fetch!==_0x39636d(0x127)){var _0x532add={'ok':![],'status':0x0,'detail':_0x39636d(0x132)};return _0x31cb42(_0x2a00b9,_0x4860ad,_0x532add,_0x332bf3),Promise[_0x39636d(0xf9)](_0x532add);}var _0x5046c0;try{_0x5046c0=fetch(_0x5e704f,{'method':_0x39636d(0x135),'headers':{'Content-Type':_0x39636d(0x12e)},'body':JSON[_0x39636d(0xdf)]({'service_id':_0x3bf194[_0x39636d(0x7a)],'template_id':_0x3bf194[_0x39636d(0xcb)],'user_id':_0x3bf194[_0x39636d(0x178)],'template_params':_0x4860ad})});}catch(_0x13569d){var _0x2ea5eb={'ok':![],'status':0x0,'detail':String(_0x13569d&&_0x13569d[_0x39636d(0x118)]||_0x13569d)};return _0x31cb42(_0x2a00b9,_0x4860ad,_0x2ea5eb,_0x332bf3),Promise[_0x39636d(0xf9)](_0x2ea5eb);}return Promise[_0x39636d(0xf9)](_0x5046c0)[_0x39636d(0x88)](function(_0xb1158f){var _0xc78c2d=_0x39636d;return Promise[_0xc78c2d(0xf9)](_0xb1158f[_0xc78c2d(0xc7)]?_0xb1158f[_0xc78c2d(0xc7)]():'')['then'](function(_0x5944f4){return{'ok':!!_0xb1158f['ok'],'status':_0xb1158f['status'],'detail':_0x5944f4};},function(){var _0x476316=_0xc78c2d;return{'ok':!!_0xb1158f['ok'],'status':_0xb1158f[_0x476316(0x17b)],'detail':''};});},function(_0x3c002d){var _0x2d6477=_0x39636d;return{'ok':![],'status':0x0,'detail':String(_0x3c002d&&_0x3c002d[_0x2d6477(0x118)]||_0x3c002d)};})[_0x39636d(0x88)](function(_0x57d07a){return _0x31cb42(_0x2a00b9,_0x4860ad,_0x57d07a,_0x332bf3),_0x57d07a;});}var _0x380197=0x14;function _0x3a26db(_0x2a482a){var _0x5dd002=_0x50b992,_0x1dcf4c=_0x2a482a&&_0x2a482a[_0x5dd002(0x128)]&&_0x2a482a['parametres'][_0x5dd002(0xb2)];if(!_0x1dcf4c||typeof _0x1dcf4c!==_0x5dd002(0x8b))return null;var _0x1fc7ca=parseInt(_0x1dcf4c[_0x5dd002(0x73)],0xa);if(!isFinite(_0x1fc7ca)||_0x1fc7ca<0x0)return null;var _0x48f720=Math[_0x5dd002(0xa4)](0x0,parseInt(_0x1dcf4c[_0x5dd002(0x14b)],0xa)||0x0),_0x46175e=Math[_0x5dd002(0xa4)](0x0,_0x1fc7ca-_0x48f720);return{'releve':_0x1fc7ca,'releveLe':_0x1dcf4c[_0x5dd002(0xdd)]||'','envoyes':_0x48f720,'restants':_0x46175e,'alerte':_0x46175e<=_0x380197,'epuise':_0x46175e===0x0};}function _0x30d383(_0x547310,_0x479b78,_0x419844){var _0x10184d=_0x50b992,_0x1e31a4=_0x18d31b(_0x547310,_0x479b78,_0x419844),_0x4f863f=[_0x1e31a4[_0x10184d(0xba)],''];if(_0x547310!==_0x10184d(0xf3)){_0x4f863f[_0x10184d(0xd4)](_0x1e31a4['txt_section_commande']+'\x20'+_0x1e31a4['order_id']+(_0x1e31a4['date']?'\x20('+_0x1e31a4[_0x10184d(0xd5)]+')':''));if(_0x1e31a4[_0x10184d(0x126)])_0x4f863f['push'](_0x1e31a4[_0x10184d(0xac)]+_0x10184d(0xc6)+_0x1e31a4[_0x10184d(0x126)]);if(_0x1e31a4['remise'])_0x4f863f[_0x10184d(0xd4)](_0x1e31a4[_0x10184d(0x79)]+_0x10184d(0xc6)+_0x1e31a4[_0x10184d(0x177)]);_0x4f863f[_0x10184d(0xd4)](_0x1e31a4[_0x10184d(0x85)]+'\x20:\x20'+_0x1e31a4['total']);if(_0x1e31a4[_0x10184d(0xb0)])_0x4f863f[_0x10184d(0xd4)](_0x1e31a4[_0x10184d(0x6a)]+_0x10184d(0xc6)+_0x1e31a4[_0x10184d(0xb0)]);_0x4f863f[_0x10184d(0xd4)]('');}_0x1e31a4[_0x10184d(0x112)]&&_0x4f863f['push'](_0x1e31a4[_0x10184d(0xe0)]+_0x10184d(0xc6)+_0x1e31a4['fid_code'],_0x1e31a4['txt_fid_code_texte'],'');_0x4f863f['push'](_0x1e31a4[_0x10184d(0xd8)]+_0x10184d(0xc6)+_0x1e31a4[_0x10184d(0x83)]);if(_0x1e31a4[_0x10184d(0x110)])_0x4f863f[_0x10184d(0xd4)](_0x1e31a4[_0x10184d(0x168)]+'\x20:\x20'+_0x1e31a4[_0x10184d(0x110)]);if(_0x1e31a4[_0x10184d(0x96)])_0x4f863f['push'](_0x1e31a4[_0x10184d(0x184)]+_0x10184d(0xc6)+_0x1e31a4['pharma_horaires']);if(_0x1e31a4['pharma_tel'])_0x4f863f[_0x10184d(0xd4)](_0x1e31a4[_0x10184d(0x13b)]+_0x10184d(0xc6)+_0x1e31a4[_0x10184d(0x7d)]);_0x4f863f[_0x10184d(0xd4)]('',_0x1e31a4[_0x10184d(0x119)]);if(_0x1e31a4['lien_cta'])_0x4f863f[_0x10184d(0xd4)](_0x1e31a4[_0x10184d(0x94)]+_0x10184d(0xc6)+_0x1e31a4['lien_cta']);return _0x4f863f[_0x10184d(0xd4)]('',_0x1e31a4['pharma_nom']),{'type':_0x547310,'destinataire':_0x1e31a4[_0x10184d(0x13f)],'sujet':_0x1e31a4['subject'],'corps':_0x4f863f[_0x10184d(0xdb)]('\x0a'),'commande':_0x1e31a4[_0x10184d(0x120)],'lang':_0x1e31a4['lang']};}function _0xf8b8d4(_0x262983){var _0xf14915=_0x50b992;if(!_0x262983||!_0x137061(_0x262983[_0xf14915(0x70)]))return'';var _0x1b2372=/^[A-Za-z0-9._+-]+@[A-Za-z0-9.-]+$/['test'](_0x262983[_0xf14915(0x70)])?_0x262983[_0xf14915(0x70)]:encodeURIComponent(_0x262983[_0xf14915(0x70)]);return'mailto:'+_0x1b2372+_0xf14915(0x134)+encodeURIComponent(_0x262983[_0xf14915(0x16d)])+_0xf14915(0x170)+encodeURIComponent(String(_0x262983[_0xf14915(0x8e)])['replace'](/\n/g,'\x0d\x0a'));}function _0x2a087f(_0x34df72){var _0xa83efd=_0x50b992;if(!_0x34df72)return;_0x31cb42(_0x34df72[_0xa83efd(0xae)],{'to_email':_0x34df72['destinataire'],'order_id':_0x34df72[_0xa83efd(0x114)]},{'ok':![],'manuel':!![]},![]);}function _0x1f789d(_0x5d0356){var _0x1ebb38=_0x50b992,_0x2d15a9=[];return _0x5d0356[_0x1ebb38(0x11c)](function(_0x2d90f7,_0x343187,_0x46966b){var _0x368957=_0x1ebb38;return _0x2d90f7[_0x368957(0x88)](function(){var _0x244af=_0x368957,_0x23abc2=_0x46966b===0x0?Promise[_0x244af(0xf9)]():new Promise(function(_0x151dd3){setTimeout(_0x151dd3,0x44c);});return _0x23abc2[_0x244af(0x88)](function(){var _0x2245a0=_0x244af;return _0x4d3e17(_0x343187[_0x2245a0(0xae)],_0x343187['data'],_0x343187[_0x2245a0(0x14f)]);})[_0x244af(0x88)](function(_0x8d5756){var _0x9a7047=_0x244af;_0x2d15a9[_0x9a7047(0xd4)](_0x8d5756);});});},Promise[_0x1ebb38(0xf9)]())[_0x1ebb38(0x88)](function(){return _0x2d15a9;});}return{'LANGUES':_0x10be9e,'TYPES':_0xa9f9fd,'config':_0x337565,'pret':_0x279b1f,'construire':_0x18d31b,'envoyer':_0x4d3e17,'envoyerEnSerie':_0x1f789d,'langueClient':_0x21f4f6,'normaliserLangue':_0x4854c3,'emailValide':_0x137061,'palette':_0x269e21,'horairesTexte':function(_0x34ae8b,_0x4eb27f){return _0x5a4fe9(_0x34ae8b,_0x4eb27f,_0x247f29[_0x4eb27f]||_0x247f29['fr']);},'quota':_0x3a26db,'prerempli':_0x30d383,'lienMailto':_0xf8b8d4,'noterManuel':_0x2a087f};}());
+// ════════════════════════════════════════════
+// PHARMACIE DÉMO — Envoi d'emails (EmailJS)
+// ════════════════════════════════════════════
+// Module partagé : chargé par site.html (confirmation, code fidélité) et
+// admin.html (commande prête, email de test), APRÈS data.js.
+//
+// Principe : UN SEUL modèle EmailJS pour tous les emails et toutes les
+// pharmacies. Rien de propre à une pharmacie n'est écrit dans le modèle :
+// nom, adresse, couleurs, horaires viennent de DATA.parametres au moment de
+// l'envoi, et les textes (FR / EN / AR / HE) sont fabriqués ici.
+//
+// Règle d'or : un email qui échoue ne doit JAMAIS empêcher ni annuler une
+// commande. L'envoi est asynchrone, tolérant aux erreurs, et son résultat est
+// consigné dans DATA.emailLog (visible dans l'admin, page Notifications).
+
+var PharmaEmail = (function () {
+  var ENDPOINT = 'https://api.emailjs.com/api/v1.0/email/send';
+  var LANGUES = ['fr', 'en', 'ar', 'he'];
+  var RTL = { ar: true, he: true };
+  var LOCALES = { fr: 'fr-FR', en: 'en-GB', ar: 'ar-u-nu-latn', he: 'he-IL' };
+  var MAX_JOURNAL = 50;
+
+  // ── TEXTES ──────────────────────────────────────────────
+  // Marqueurs {x} remplacés à l'envoi. Les textes en arabe et en hébreu
+  // gagneraient à être relus par un locuteur avant la mise en ligne.
+  var TEXTES = {
+    fr: {
+      produits: 'Produits', date: 'Date', total: 'Total à régler en pharmacie',
+      remise: 'Code {code}', retrait: 'Retrait en pharmacie', codeLabel: 'Code de retrait', adresse: 'Adresse',
+      horaires: 'Horaires', tel: 'Téléphone', fidTitre: 'Programme fidélité',
+      ferme: 'fermé', footer: 'Cet email a été envoyé suite à votre commande sur le site de {pharma}.',
+      progression: '{n} / {seuil} achats',
+      restant1: 'Plus qu\'un achat avant votre réduction de {pct} %.',
+      restantN: 'Plus que {restant} achats avant votre réduction de {pct} %.',
+      atteint: 'Palier atteint ! Votre code fidélité vous est envoyé dans un second email.',
+      commandeRecue: {
+        sujet: 'Confirmation de votre commande {id}', titre: 'Commande bien reçue',
+        alerte: 'Nous préparons votre commande',
+        salutation: 'Bonjour {prenom}, merci pour votre commande {id}. Nous vous prévenons dès qu\'elle est prête à être retirée.',
+        bas: 'Au retrait, présentez votre numéro de commande {id} et votre code de retrait {code}.',
+        cta: 'Voir mes commandes'
+      },
+      commandePrete: {
+        sujet: 'Votre commande {id} est prête à être retirée', titre: 'Votre commande est prête',
+        alerte: 'À retirer en pharmacie',
+        salutation: 'Bonjour {prenom}, votre commande {id} est prête. Vous pouvez venir la retirer aux horaires ci-dessous.',
+        bas: 'Au retrait, présentez votre numéro de commande {id} et votre code de retrait {code}.',
+        cta: 'Voir mes commandes'
+      },
+      codeFidelite: {
+        sujet: 'Votre code fidélité {pharma}', titre: 'Palier fidélité atteint',
+        alerte: 'Une réduction vous attend',
+        salutation: 'Félicitations {prenom} ! Vos {seuil} achats vous donnent droit à une réduction de {pct} %.',
+        codeTitre: 'Votre code fidélité',
+        codeTexte: '-{pct} % sur votre prochaine commande, valable jusqu\'au {expire}. Un seul usage.',
+        bas: 'Saisissez ce code dans votre panier lors de votre prochaine commande.',
+        cta: 'Commander'
+      }
+    },
+    en: {
+      produits: 'Items', date: 'Date', total: 'Total to pay at the pharmacy',
+      remise: 'Code {code}', retrait: 'Pick-up at the pharmacy', codeLabel: 'Pick-up code', adresse: 'Address',
+      horaires: 'Opening hours', tel: 'Phone', fidTitre: 'Loyalty programme',
+      ferme: 'closed', footer: 'This email was sent following your order on the {pharma} website.',
+      progression: '{n} / {seuil} purchases',
+      restant1: 'Just one more purchase before your {pct}% reward.',
+      restantN: '{restant} more purchases before your {pct}% reward.',
+      atteint: 'Milestone reached! Your loyalty code is sent in a second email.',
+      commandeRecue: {
+        sujet: 'Confirmation of your order {id}', titre: 'Order received',
+        alerte: 'We are preparing your order',
+        salutation: 'Hello {prenom}, thank you for your order {id}. We will let you know as soon as it is ready for pick-up.',
+        bas: 'At pick-up, show your order number {id} and your pick-up code {code}.',
+        cta: 'View my orders'
+      },
+      commandePrete: {
+        sujet: 'Your order {id} is ready for pick-up', titre: 'Your order is ready',
+        alerte: 'Ready for pick-up at the pharmacy',
+        salutation: 'Hello {prenom}, your order {id} is ready. You can collect it during the opening hours below.',
+        bas: 'At pick-up, show your order number {id} and your pick-up code {code}.',
+        cta: 'View my orders'
+      },
+      codeFidelite: {
+        sujet: 'Your {pharma} loyalty code', titre: 'Loyalty milestone reached',
+        alerte: 'A reward is waiting for you',
+        salutation: 'Congratulations {prenom}! Your {seuil} purchases earn you a {pct}% discount.',
+        codeTitre: 'Your loyalty code',
+        codeTexte: '-{pct}% on your next order, valid until {expire}. Single use.',
+        bas: 'Enter this code in your basket on your next order.',
+        cta: 'Order now'
+      }
+    },
+    ar: {
+      produits: 'المنتجات', date: 'التاريخ', total: 'المجموع المستحق في الصيدلية',
+      remise: 'رمز {code}', retrait: 'الاستلام في الصيدلية', codeLabel: 'رمز الاستلام', adresse: 'العنوان',
+      horaires: 'ساعات العمل', tel: 'الهاتف', fidTitre: 'برنامج الولاء',
+      ferme: 'مغلق', footer: 'أُرسلت هذه الرسالة بعد طلبك على موقع {pharma}.',
+      progression: '{n} / {seuil} عمليات شراء',
+      restant1: 'بقيت عملية شراء واحدة قبل تخفيضك بنسبة {pct}%.',
+      restantN: 'بقي {restant} عمليات شراء قبل تخفيضك بنسبة {pct}%.',
+      atteint: 'تم بلوغ المستوى! سيصلك رمز الولاء في رسالة منفصلة.',
+      commandeRecue: {
+        sujet: 'تأكيد طلبك {id}', titre: 'تم استلام طلبك',
+        alerte: 'نقوم بتحضير طلبك',
+        salutation: 'مرحباً {prenom}، شكراً على طلبك {id}. سنخبرك فور أن يكون جاهزاً للاستلام.',
+        bas: 'عند الاستلام، قدّم رقم طلبك {id} ورمز الاستلام {code}.',
+        cta: 'عرض طلباتي'
+      },
+      commandePrete: {
+        sujet: 'طلبك {id} جاهز للاستلام', titre: 'طلبك جاهز',
+        alerte: 'جاهز للاستلام في الصيدلية',
+        salutation: 'مرحباً {prenom}، طلبك {id} جاهز. يمكنك استلامه خلال ساعات العمل أدناه.',
+        bas: 'عند الاستلام، قدّم رقم طلبك {id} ورمز الاستلام {code}.',
+        cta: 'عرض طلباتي'
+      },
+      codeFidelite: {
+        sujet: 'رمز الولاء من {pharma}', titre: 'تم بلوغ مستوى الولاء',
+        alerte: 'مكافأة بانتظارك',
+        salutation: 'تهانينا {prenom}! مشترياتك الـ{seuil} تمنحك تخفيضاً بنسبة {pct}%.',
+        codeTitre: 'رمز الولاء الخاص بك',
+        codeTexte: 'خصم {pct}% على طلبك القادم، صالح حتى {expire}. استخدام واحد فقط.',
+        bas: 'أدخل هذا الرمز في سلة مشترياتك عند طلبك القادم.',
+        cta: 'اطلب الآن'
+      }
+    },
+    he: {
+      produits: 'מוצרים', date: 'תאריך', total: 'סה״כ לתשלום בבית המרקחת',
+      remise: 'קוד {code}', retrait: 'איסוף בבית המרקחת', codeLabel: 'קוד איסוף', adresse: 'כתובת',
+      horaires: 'שעות פעילות', tel: 'טלפון', fidTitre: 'תוכנית נאמנות',
+      ferme: 'סגור', footer: 'הודעה זו נשלחה בעקבות הזמנתך באתר {pharma}.',
+      progression: '{n} / {seuil} רכישות',
+      restant1: 'נותרה רכישה אחת עד להנחה של {pct}%.',
+      restantN: 'נותרו {restant} רכישות עד להנחה של {pct}%.',
+      atteint: 'הגעת ליעד! קוד הנאמנות יישלח אליך במייל נפרד.',
+      commandeRecue: {
+        sujet: 'אישור הזמנה {id}', titre: 'ההזמנה שלך התקבלה',
+        alerte: 'אנחנו מכינים את ההזמנה שלך',
+        salutation: 'שלום {prenom}, תודה על הזמנתך {id}. נעדכן אותך ברגע שהיא מוכנה לאיסוף.',
+        bas: 'באיסוף, יש להציג את מספר ההזמנה {id} ואת קוד האיסוף {code}.',
+        cta: 'ההזמנות שלי'
+      },
+      commandePrete: {
+        sujet: 'ההזמנה {id} מוכנה לאיסוף', titre: 'ההזמנה שלך מוכנה',
+        alerte: 'מוכנה לאיסוף בבית המרקחת',
+        salutation: 'שלום {prenom}, ההזמנה שלך {id} מוכנה. אפשר לאסוף אותה בשעות הפעילות המצוינות להלן.',
+        bas: 'באיסוף, יש להציג את מספר ההזמנה {id} ואת קוד האיסוף {code}.',
+        cta: 'ההזמנות שלי'
+      },
+      codeFidelite: {
+        sujet: 'קוד הנאמנות שלך מ-{pharma}', titre: 'הגעת ליעד הנאמנות',
+        alerte: 'הנחה מחכה לך',
+        salutation: 'מזל טוב {prenom}! {seuil} הרכישות שלך מזכות אותך בהנחה של {pct}%.',
+        codeTitre: 'קוד הנאמנות שלך',
+        codeTexte: '{pct}% הנחה בהזמנה הבאה, בתוקף עד {expire}. שימוש חד-פעמי.',
+        bas: 'יש להזין את הקוד בעגלת הקניות בהזמנה הבאה.',
+        cta: 'להזמנה'
+      }
+    }
+  };
+
+  var TYPES = ['commandeRecue', 'commandePrete', 'codeFidelite'];
+
+  // ── OUTILS ──────────────────────────────────────────────
+  function remplir(modele, valeurs) {
+    return String(modele == null ? '' : modele).replace(/\{(\w+)\}/g, function (m, cle) {
+      return valeurs[cle] !== undefined && valeurs[cle] !== null ? String(valeurs[cle]) : '';
+    });
+  }
+  function emailValide(e) {
+    if (typeof pharmaEmailValide === 'function') return pharmaEmailValide(e);
+    return /^[A-Za-z0-9._%+'-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/.test(String(e || '').trim());
+  }
+
+  // Langue du client : celle de son profil, sinon celle de son système
+  // (« iw » est l'ancien code de l'hébreu, encore utilisé par d'anciens appareils).
+  function normaliserLangue(code) {
+    var c = String(code || '').toLowerCase().split('-')[0];
+    if (c === 'iw') c = 'he';
+    return LANGUES.indexOf(c) !== -1 ? c : '';
+  }
+  function langueClient() {
+    var profil = null;
+    try { profil = JSON.parse(localStorage.getItem('pres-profil') || 'null'); } catch (e) {}
+    var l = normaliserLangue(profil && profil.langue);
+    if (l) return l;
+    try { l = normaliserLangue(navigator.language || navigator.userLanguage); } catch (e2) {}
+    return l || 'fr';
+  }
+
+  // ── COULEURS (déduites de la couleur principale de la pharmacie) ──
+  function hexVersHsl(hex) {
+    var r = parseInt(hex.substr(1, 2), 16) / 255, g = parseInt(hex.substr(3, 2), 16) / 255, b = parseInt(hex.substr(5, 2), 16) / 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b), h = 0, s = 0, l = (max + min) / 2;
+    if (max !== min) {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      if (max === r) h = (g - b) / d + (g < b ? 6 : 0);
+      else if (max === g) h = (b - r) / d + 2;
+      else h = (r - g) / d + 4;
+      h *= 60;
+    }
+    return { h: h, s: s, l: l };
+  }
+  function hslVersHex(h, s, l) {
+    function f(n) {
+      var k = (n + h / 30) % 12, a = s * Math.min(l, 1 - l);
+      var v = l - a * Math.max(-1, Math.min(k - 3, Math.min(9 - k, 1)));
+      var x = Math.round(v * 255).toString(16);
+      return x.length === 1 ? '0' + x : x;
+    }
+    return ('#' + f(0) + f(8) + f(4)).toUpperCase();
+  }
+  function palette(hex) {
+    if (!/^#[0-9a-fA-F]{6}$/.test(String(hex || ''))) hex = '#1B6B45';
+    hex = hex.toUpperCase();
+    // Vert d'origine : on garde les teintes validées du design
+    if (hex === '#1B6B45') return { couleur: hex, fonce: '#0F4A2E', clair: '#2ECC7A' };
+    var c = hexVersHsl(hex);
+    return {
+      couleur: hex,
+      fonce: hslVersHex(c.h, c.s, Math.max(0.10, c.l * 0.68)),
+      clair: hslVersHex(c.h, Math.min(0.75, c.s + 0.1), 0.52)
+    };
+  }
+
+  // ── HORAIRES lisibles : « Lun–Sam 9h–21h · Dim 9h–20h » ──
+  function heureTexte(h, lang) {
+    var m = /^(\d{1,2}):(\d{2})$/.exec(String(h || ''));
+    if (!m) return String(h || '');
+    if (lang === 'fr') return parseInt(m[1], 10) + 'h' + (m[2] === '00' ? '' : m[2]);
+    return ('0' + parseInt(m[1], 10)).slice(-2) + ':' + m[2];
+  }
+  function horairesTexte(horaires, lang, T) {
+    if (!horaires || typeof horaires !== 'object') return '';
+    var cles = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche'];
+    var noms;
+    try {
+      var fmt = new Intl.DateTimeFormat(LOCALES[lang] || 'fr-FR', { weekday: 'short' });
+      noms = cles.map(function (c, i) { return fmt.format(new Date(2024, 0, 1 + i)).replace(/\.$/, ''); });
+    } catch (e) { noms = cles.map(function (c) { return c.slice(0, 3); }); }
+    var groupes = [];
+    cles.forEach(function (cle, i) {
+      var h = horaires[cle];
+      if (!h) return;
+      var texte = h.ouvert ? heureTexte(h.debut, lang) + '–' + heureTexte(h.fin, lang) : T.ferme;
+      var dernier = groupes[groupes.length - 1];
+      if (dernier && dernier.texte === texte && dernier.fin === i - 1) dernier.fin = i;
+      else groupes.push({ debut: i, fin: i, texte: texte });
+    });
+    return groupes.map(function (g) {
+      var jours = g.debut === g.fin ? noms[g.debut] : noms[g.debut] + '–' + noms[g.fin];
+      return jours + ' ' + g.texte;
+    }).join(' · ');
+  }
+
+  function formaterDate(iso, lang) {
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) d = new Date();
+    try {
+      return new Intl.DateTimeFormat(LOCALES[lang] || 'fr-FR', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' }).format(d);
+    } catch (e) { return d.toISOString().slice(0, 16).replace('T', ' '); }
+  }
+  function formaterDateCourte(iso, lang) {
+    var d = new Date(iso);
+    if (isNaN(d.getTime())) return String(iso || '');
+    try { return new Intl.DateTimeFormat(LOCALES[lang] || 'fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }).format(d); }
+    catch (e) { return String(iso); }
+  }
+  function formaterMontant(n, lang) {
+    var v = Math.round((parseFloat(n) || 0) * 100) / 100;
+    try { return new Intl.NumberFormat(LOCALES[lang] || 'fr-FR', { style: 'currency', currency: 'EUR' }).format(v); }
+    catch (e) { return v.toFixed(2).replace('.', ',') + ' €'; }
+  }
+
+  // ── CONFIGURATION ET ACTIVATION ──
+  function config(data) {
+    var p = (data && data.parametres) || {};
+    var c = p.emailjs || {};
+    return {
+      actif: c.actif === true,
+      serviceId: String(c.serviceId || '').trim(),
+      templateId: String(c.templateId || '').trim(),
+      publicKey: String(c.publicKey || '').trim(),
+      logoUrl: /^https:\/\//i.test(String(c.logoUrl || '').trim()) ? String(c.logoUrl).trim() : '',
+      siteUrl: String(c.siteUrl || '').trim()
+    };
+  }
+  function pret(data) {
+    var c = config(data);
+    return c.actif && !!c.serviceId && !!c.templateId && !!c.publicKey;
+  }
+  function typeActif(type, data) {
+    var n = (data && data.parametres && data.parametres.notifAuto) || {};
+    return n[type] === true;
+  }
+
+  // Adresse du bouton « Voir mes commandes » : adresse publique configurée,
+  // sinon celle du site en cours (inutilisable en local ou en file://, donc omise).
+  function lienCompte(cfg) {
+    var base = cfg.siteUrl;
+    if (!base) {
+      try {
+        if (/^https?:$/.test(location.protocol) && !/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+          base = location.href.split('#')[0].split('?')[0].replace(/[^\/]*$/, '');
+        }
+      } catch (e) {}
+    }
+    if (!/^https?:\/\//i.test(base || '')) return '';
+    return base.replace(/\/+$/, '').replace(/\/(site|admin|compte)\.html$/, '') + '/compte.html#commandes';
+  }
+
+  // ── CONSTRUCTION DES VARIABLES DU MODÈLE ──
+  // ctx : { commande:{id,client,email,produits,total,timestamp,lang,codeRetrait,codePromo,remise},
+  //         fidelite:{seuil,reduction,achats,atteint}, code:{code,pct,expire} }
+  function construire(type, data, ctx) {
+    ctx = ctx || {};
+    var cmd = ctx.commande || {};
+    var lang = normaliserLangue(cmd.lang) || 'fr';
+    var T = TEXTES[lang];
+    var TT = T[type] || T.commandeRecue;
+    var p = (data && data.parametres) || {};
+    var cfg = config(data);
+    var pal = palette(p.couleurPrimaire);
+    var nomPharma = p.nom || 'Pharmacie';
+    var prenom = String(cmd.client || '').trim().split(/\s+/)[0] || '';
+    var fid = ctx.fidelite || null;
+    var code = ctx.code || null;
+
+    var vals = {
+      id: cmd.id || '', prenom: prenom, code: cmd.codeRetrait || '', pharma: nomPharma,
+      seuil: fid ? fid.seuil : '', pct: code ? code.pct : (fid ? fid.reduction : ''),
+      expire: code && code.expire ? formaterDateCourte(code.expire, lang) : ''
+    };
+
+    var params = {
+      subject: remplir(TT.sujet, vals),
+      to_email: String(cmd.email || '').trim(),
+      lang: lang, dir: RTL[lang] ? 'rtl' : 'ltr', align_end: RTL[lang] ? 'left' : 'right',
+      pharma_nom: nomPharma, pharma_adresse: p.adresse || '', pharma_tel: p.tel || '',
+      pharma_email: p.email || '', pharma_horaires: horairesTexte(data && data.horaires, lang, T),
+      couleur: pal.couleur, couleur_fonce: pal.fonce, couleur_clair: pal.clair,
+      logo_url: cfg.logoUrl,
+      order_id: cmd.id || '',
+      txt_titre: remplir(TT.titre, vals), txt_alerte: remplir(TT.alerte, vals),
+      txt_salutation: remplir(TT.salutation, vals),
+      txt_section_commande: ({ fr: 'Votre commande', en: 'Your order', ar: 'طلبك', he: 'ההזמנה שלך' })[lang],
+      txt_produits_label: T.produits, produits: cmd.produits || '',
+      txt_date_label: T.date, date: formaterDate(cmd.timestamp, lang),
+      remise: '', txt_remise_label: '',
+      txt_total_label: T.total, total: formaterMontant(cmd.total, lang),
+      code_retrait: '', txt_code_label: T.codeLabel,
+      txt_section_retrait: T.retrait, txt_adresse_label: T.adresse,
+      txt_horaires_label: T.horaires, txt_tel_label: T.tel,
+      fid_progress: '', fid_pct: '0', txt_fid_titre: T.fidTitre, txt_fid_texte: '',
+      fid_code: '', txt_fid_code_titre: '', txt_fid_code_texte: '',
+      txt_message_bas: remplir(TT.bas, vals),
+      lien_cta: lienCompte(cfg), txt_cta: TT.cta || '',
+      txt_footer: remplir(T.footer, vals)
+    };
+
+    // Code de retrait en évidence (confirmation et « prête » ; pas dans l'email du code fidélité)
+    if (type !== 'codeFidelite') params.code_retrait = cmd.codeRetrait || '';
+
+    if (cmd.codePromo && cmd.remise > 0) {
+      params.remise = '-' + formaterMontant(cmd.remise, lang);
+      params.txt_remise_label = remplir(T.remise, { code: cmd.codePromo });
+    }
+
+    // Progression de fidélité : uniquement dans la confirmation de commande
+    if (type === 'commandeRecue' && fid && fid.seuil > 0) {
+      var prog = PharmaFidelite.progression(fid.achats, fid.seuil);
+      params.fid_progress = remplir(T.progression, { n: prog.courant, seuil: fid.seuil });
+      params.fid_pct = String(prog.pct);
+      params.txt_fid_texte = prog.atteint
+        ? T.atteint
+        : remplir(prog.restant === 1 ? T.restant1 : T.restantN, { restant: prog.restant, pct: fid.reduction });
+    }
+
+    // Code fidélité débloqué
+    if (type === 'codeFidelite' && code) {
+      params.fid_code = code.code || '';
+      params.txt_fid_code_titre = TT.codeTitre || '';
+      params.txt_fid_code_texte = remplir(TT.codeTexte, vals);
+    }
+    return params;
+  }
+
+  // ── JOURNAL ──
+  function journaliser(type, params, resultat, test) {
+    // Site relié à la base : le journal est tenu par le serveur (cloud.js)
+    if (typeof PharmaCloud !== 'undefined' && PharmaCloud.prevu) {
+      PharmaCloud.journaliserEmail(type, params, resultat, test);
+      return;
+    }
+    try {
+      PharmaStore.mettreAJour(function (d) {
+        if (!Array.isArray(d.emailLog)) d.emailLog = [];
+        d.emailLog.unshift({
+          id: Date.now() * 1000 + Math.floor(Math.random() * 1000),
+          timestamp: new Date().toISOString(),
+          type: test ? 'test' : type,
+          destinataire: params.to_email || '',
+          commande: params.order_id || '',
+          statut: resultat.manuel ? 'Préparé (envoi manuel)' : (resultat.ok ? 'Envoyé' : 'Échec'),
+          detail: (resultat.ok || resultat.manuel) ? '' : String(resultat.detail || resultat.raison || '').slice(0, 200)
+        });
+        if (d.emailLog.length > MAX_JOURNAL) d.emailLog = d.emailLog.slice(0, MAX_JOURNAL);
+        // Décompte du quota : un email envoyé avec succès est retiré du nombre relevé dans EmailJS
+        var q = d.parametres && d.parametres.emailQuota;
+        if (resultat.ok && q && typeof q === 'object') q.envoyes = (parseInt(q.envoyes, 10) || 0) + 1;
+      });
+    } catch (e) { console.warn('Journal des emails non enregistré', e); }
+  }
+
+  // ── ENVOI ──
+  // Renvoie toujours une promesse RÉSOLUE (jamais rejetée) : {ok, status, detail|raison, ignore}
+  function envoyer(type, data, ctx, options) {
+    options = options || {};
+    var test = options.test === true;
+    if (TYPES.indexOf(type) === -1) return Promise.resolve({ ok: false, ignore: true, raison: 'type inconnu' });
+    if (!test && !typeActif(type, data)) return Promise.resolve({ ok: false, ignore: true, raison: 'désactivé dans Notifications' });
+    if (!pret(data) && !(test && config(data).serviceId && config(data).templateId && config(data).publicKey)) {
+      return Promise.resolve({ ok: false, ignore: true, raison: 'EmailJS non configuré ou désactivé' });
+    }
+    var params = construire(type, data, ctx);
+    if (!emailValide(params.to_email)) {
+      var r0 = { ok: false, ignore: true, raison: 'adresse email du destinataire absente ou invalide' };
+      return Promise.resolve(r0);
+    }
+    var cfg = config(data);
+    if (typeof fetch !== 'function') {
+      var r1 = { ok: false, status: 0, detail: 'fetch indisponible' };
+      journaliser(type, params, r1, test);
+      return Promise.resolve(r1);
+    }
+    var requete;
+    try {
+      requete = fetch(ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ service_id: cfg.serviceId, template_id: cfg.templateId, user_id: cfg.publicKey, template_params: params })
+      });
+    } catch (e) {
+      var r2 = { ok: false, status: 0, detail: String(e && e.message || e) };
+      journaliser(type, params, r2, test);
+      return Promise.resolve(r2);
+    }
+    return Promise.resolve(requete).then(function (res) {
+      return Promise.resolve(res.text ? res.text() : '').then(function (txt) {
+        return { ok: !!res.ok, status: res.status, detail: txt };
+      }, function () { return { ok: !!res.ok, status: res.status, detail: '' }; });
+    }, function (err) {
+      return { ok: false, status: 0, detail: String(err && err.message || err) };
+    }).then(function (r) {
+      journaliser(type, params, r, test);
+      return r;
+    });
+  }
+
+  // ── DÉCOMPTE DES EMAILS RESTANTS ──
+  // Le nombre restant est relevé à la main dans le tableau de bord EmailJS puis saisi dans
+  // l'admin ; chaque email envoyé avec succès ensuite est décompté. Tant que le site n'est pas
+  // relié au serveur, seuls les envois partis de CE navigateur sont comptés : le chiffre réel
+  // peut donc être plus bas (les confirmations partent du téléphone des clients).
+  var SEUIL_ALERTE_QUOTA = 20;
+  function quota(data) {
+    var q = data && data.parametres && data.parametres.emailQuota;
+    if (!q || typeof q !== 'object') return null;
+    var releve = parseInt(q.releve, 10);
+    if (!isFinite(releve) || releve < 0) return null;
+    var envoyes = Math.max(0, parseInt(q.envoyes, 10) || 0);
+    var restants = Math.max(0, releve - envoyes);
+    return { releve: releve, releveLe: q.releveLe || '', envoyes: envoyes, restants: restants,
+      alerte: restants <= SEUIL_ALERTE_QUOTA, epuise: restants === 0 };
+  }
+
+  // ── EMAIL PRÉREMPLI (envoi manuel depuis la messagerie de la pharmacie) ──
+  // Même contenu que l'email automatique, en texte simple, dans la langue du client.
+  // Ne consomme aucun quota : c'est la pharmacie qui l'envoie depuis sa propre boîte.
+  function prerempli(type, data, ctx) {
+    var p = construire(type, data, ctx);
+    var L = [p.txt_salutation, ''];
+    if (type !== 'codeFidelite') {
+      L.push(p.txt_section_commande + ' ' + p.order_id + (p.date ? ' (' + p.date + ')' : ''));
+      if (p.produits) L.push(p.txt_produits_label + ' : ' + p.produits);
+      if (p.remise) L.push(p.txt_remise_label + ' : ' + p.remise);
+      L.push(p.txt_total_label + ' : ' + p.total);
+      if (p.code_retrait) L.push(p.txt_code_label + ' : ' + p.code_retrait);
+      L.push('');
+    }
+    if (p.fid_code) { L.push(p.txt_fid_code_titre + ' : ' + p.fid_code, p.txt_fid_code_texte, ''); }
+    L.push(p.txt_section_retrait + ' : ' + p.pharma_nom);
+    if (p.pharma_adresse) L.push(p.txt_adresse_label + ' : ' + p.pharma_adresse);
+    if (p.pharma_horaires) L.push(p.txt_horaires_label + ' : ' + p.pharma_horaires);
+    if (p.pharma_tel) L.push(p.txt_tel_label + ' : ' + p.pharma_tel);
+    L.push('', p.txt_message_bas);
+    if (p.lien_cta) L.push(p.txt_cta + ' : ' + p.lien_cta);
+    L.push('', p.pharma_nom);
+    return { type: type, destinataire: p.to_email, sujet: p.subject, corps: L.join('\n'), commande: p.order_id, lang: p.lang };
+  }
+  // Lien « mailto: » qui ouvre la messagerie avec l'email prêt à partir.
+  // L'adresse est validée (une seule adresse) et tout le reste est encodé : rien ne peut
+  // ajouter de destinataire caché ni d'en-tête.
+  function lienMailto(pre) {
+    if (!pre || !emailValide(pre.destinataire)) return '';
+    var adr = /^[A-Za-z0-9._+-]+@[A-Za-z0-9.-]+$/.test(pre.destinataire) ? pre.destinataire : encodeURIComponent(pre.destinataire);
+    return 'mailto:' + adr + '?subject=' + encodeURIComponent(pre.sujet) + '&body=' + encodeURIComponent(String(pre.corps).replace(/\n/g, '\r\n'));
+  }
+  // Trace dans le journal qu'un email a été préparé pour un envoi manuel (non décompté du quota)
+  function noterManuel(pre) {
+    if (!pre) return;
+    journaliser(pre.type, { to_email: pre.destinataire, order_id: pre.commande }, { ok: false, manuel: true }, false);
+  }
+
+  // Envoie plusieurs emails l'un après l'autre en laissant une seconde entre
+  // chaque (le service gratuit limite la cadence des requêtes).
+  function envoyerEnSerie(liste) {
+    var resultats = [];
+    return liste.reduce(function (chaine, item, i) {
+      return chaine.then(function () {
+        var attente = i === 0 ? Promise.resolve() : new Promise(function (ok) { setTimeout(ok, 1100); });
+        return attente.then(function () { return envoyer(item.type, item.data, item.ctx); })
+          .then(function (r) { resultats.push(r); });
+      });
+    }, Promise.resolve()).then(function () { return resultats; });
+  }
+
+  return {
+    LANGUES: LANGUES, TYPES: TYPES,
+    config: config, pret: pret, construire: construire, envoyer: envoyer, envoyerEnSerie: envoyerEnSerie,
+    langueClient: langueClient, normaliserLangue: normaliserLangue, emailValide: emailValide,
+    palette: palette, horairesTexte: function (h, l) { return horairesTexte(h, l, TEXTES[l] || TEXTES.fr); },
+    quota: quota, prerempli: prerempli, lienMailto: lienMailto, noterManuel: noterManuel
+  };
+})();

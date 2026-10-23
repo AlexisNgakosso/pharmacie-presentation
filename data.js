@@ -1,2 +1,624 @@
 /* © 2026 Alexis Ngakosso. Tous droits réservés. Reproduction, modification ou réutilisation interdites sans autorisation écrite. */
-var _0x5a76b4=_0x30bf;(function(_0x23bd62,_0x56c3a2){var _0x3515b0=_0x30bf,_0xdcff0c=_0x23bd62();while(!![]){try{var _0x3a35b9=-parseInt(_0x3515b0(0x190))/0x1*(-parseInt(_0x3515b0(0x134))/0x2)+parseInt(_0x3515b0(0x153))/0x3*(parseInt(_0x3515b0(0x122))/0x4)+parseInt(_0x3515b0(0x193))/0x5+-parseInt(_0x3515b0(0xe3))/0x6*(-parseInt(_0x3515b0(0x14b))/0x7)+-parseInt(_0x3515b0(0xfa))/0x8+parseInt(_0x3515b0(0x15c))/0x9*(parseInt(_0x3515b0(0x13d))/0xa)+parseInt(_0x3515b0(0x16d))/0xb*(-parseInt(_0x3515b0(0x11d))/0xc);if(_0x3a35b9===_0x56c3a2)break;else _0xdcff0c['push'](_0xdcff0c['shift']());}catch(_0x1c88c8){_0xdcff0c['push'](_0xdcff0c['shift']());}}}(_0x3c73,0xb49a7));var PHARMA_STORAGE_KEY='pres-data';function pharmaDateLocale(_0x2ae188){var _0x1b32c4=_0x30bf;return _0x2ae188=_0x2ae188||new Date(),_0x2ae188[_0x1b32c4(0x162)]()+'-'+('0'+(_0x2ae188[_0x1b32c4(0x123)]()+0x1))[_0x1b32c4(0x148)](-0x2)+'-'+('0'+_0x2ae188[_0x1b32c4(0xd5)]())[_0x1b32c4(0x148)](-0x2);}function _pharmaDate(_0x420731){var _0x36ed9b=_0x30bf,_0x54357b=new Date();return _0x54357b['setDate'](_0x54357b[_0x36ed9b(0xd5)]()+_0x420731),pharmaDateLocale(_0x54357b);}var PHARMA_PHOTOS_RAYONS_DEFAUT={'Solaire':_0x5a76b4(0x105),'Vitamines':'images/rayon-vitamines.jpg','Hygiène':_0x5a76b4(0x1a7),'Beauté':_0x5a76b4(0xdc),'Bébé':_0x5a76b4(0x155),'Minceur':_0x5a76b4(0x103),'Aromathérapie':_0x5a76b4(0x106)},PHARMA_PRODUITS_DEMO_RAYONS=[{'id':0x4,'nom':_0x5a76b4(0x100),'ref':_0x5a76b4(0x18f),'cat':_0x5a76b4(0x13c),'prix':18.9,'stock':0x19,'seuil':0x5,'desc':_0x5a76b4(0x1b2)},{'id':0x5,'nom':_0x5a76b4(0xf6),'ref':_0x5a76b4(0x147),'cat':'Bébé','prix':7.5,'stock':0x1e,'seuil':0x8,'desc':'Nettoie\x20et\x20protège\x20la\x20peau\x20de\x20bébé\x20au\x20change'},{'id':0x6,'nom':_0x5a76b4(0x112),'ref':'MIN-001','cat':'Minceur','prix':6.9,'stock':0x12,'seuil':0x5,'desc':'Infusion\x20de\x20plantes,\x20à\x20boire\x20chaud\x20ou\x20froid'},{'id':0x7,'nom':_0x5a76b4(0x13a),'ref':_0x5a76b4(0x15f),'cat':_0x5a76b4(0x104),'prix':5.9,'stock':0x16,'seuil':0x5,'desc':'Huile\x20essentielle\x20100\x20%\x20pure\x20et\x20naturelle'}],PHARMA_SEED_DATA={'categories':[_0x5a76b4(0x10e),_0x5a76b4(0x11f),'Hygiène',_0x5a76b4(0x13c),_0x5a76b4(0x149),_0x5a76b4(0x174),'Aromathérapie'],'produits':[{'id':0x1,'nom':_0x5a76b4(0x10d),'ref':_0x5a76b4(0x13b),'cat':_0x5a76b4(0x10e),'prix':8.4,'stock':0x2d,'seuil':0xa,'desc':_0x5a76b4(0xf0)},{'id':0x2,'nom':'Vitamine\x20C\x201000mg\x2060cp','ref':_0x5a76b4(0x186),'cat':_0x5a76b4(0x11f),'prix':0xf,'stock':0x7,'seuil':0xa,'desc':_0x5a76b4(0x181)},{'id':0x3,'nom':'Gel\x20Douche\x20Surgras\x20400ml','ref':_0x5a76b4(0x18e),'cat':'Hygiène','prix':6.2,'stock':0x0,'seuil':0xa,'desc':_0x5a76b4(0x1b5)}][_0x5a76b4(0x159)](PHARMA_PRODUITS_DEMO_RAYONS),'promos':[{'id':0x1,'produit':_0x5a76b4(0x168),'prixNormal':25.2,'prixPromo':18.9,'pct':-0x19,'debut':_pharmaDate(-0xf),'fin':_pharmaDate(0x1e),'statut':'Active'}],'conseils':[{'id':0x1,'icone':_0x5a76b4(0x1ac),'titre':'Il\x20fait\x20chaud\x20!','texte':'Hydratez-vous\x20et\x20protégez\x20votre\x20peau.','couleur':_0x5a76b4(0x14f),'actif':!![]},{'id':0x2,'icone':_0x5a76b4(0x12b),'titre':'Le\x20saviez-vous\x20?','texte':_0x5a76b4(0x139),'couleur':_0x5a76b4(0x154),'actif':!![]},{'id':0x3,'icone':_0x5a76b4(0x144),'titre':_0x5a76b4(0x19d),'texte':_0x5a76b4(0x16b),'couleur':_0x5a76b4(0x1ab),'actif':!![]}],'codesPromo':[{'code':_0x5a76b4(0x15a),'client':_0x5a76b4(0x15e),'pct':0xa,'scope':_0x5a76b4(0x119),'origine':_0x5a76b4(0x111),'usages':0x0,'maxUsages':0x1,'expire':_pharmaDate(0x14),'actif':!![]},{'code':_0x5a76b4(0x157),'client':_0x5a76b4(0x114),'pct':0xf,'scope':_0x5a76b4(0x10e),'origine':_0x5a76b4(0x10b),'usages':0x1,'maxUsages':0x2,'expire':_pharmaDate(0x2d),'actif':!![]},{'code':'BIENVENUE','client':_0x5a76b4(0x166),'pct':0x5,'scope':_0x5a76b4(0x119),'origine':_0x5a76b4(0x10b),'usages':0x0,'maxUsages':0x0,'expire':'','actif':!![]},{'code':_0x5a76b4(0xeb),'client':'Tous\x20les\x20clients','pct':0x14,'scope':_0x5a76b4(0x10e),'origine':_0x5a76b4(0x10b),'usages':0x0,'maxUsages':0x0,'expire':_pharmaDate(0x3c),'actif':!![]}],'alertes':[],'notifications':[],'emailLog':[],'clients':[{'id':0x1,'nom':_0x5a76b4(0x15e),'email':_0x5a76b4(0xdf),'tel':_0x5a76b4(0xd8),'type':_0x5a76b4(0x1a0),'notifs':_0x5a76b4(0x12d),'rgpd':!![],'achats':0x5,'depenses':0x78},{'id':0x2,'nom':_0x5a76b4(0x114),'email':_0x5a76b4(0x1a4),'tel':_0x5a76b4(0x160),'type':'Compte','notifs':_0x5a76b4(0x194),'rgpd':!![],'achats':0x3,'depenses':0x4c},{'id':0x3,'nom':_0x5a76b4(0xfb),'email':'s.laurent@email.com','tel':'','type':_0x5a76b4(0x1b8),'notifs':_0x5a76b4(0x194),'rgpd':![],'achats':0x1,'depenses':6.2}],'employes':[{'id':0x1,'nom':_0x5a76b4(0xdd),'email':'admin@pharmacie-demo.test','role':'Admin','acces':'Tout','actif':!![]},{'id':0x2,'nom':_0x5a76b4(0xd1),'email':'k.mansouri@pharmacie-demo.test','role':_0x5a76b4(0x16f),'acces':_0x5a76b4(0xfd),'actif':!![]}],'commandes':[],'tickets':[{'id':_0x5a76b4(0x129),'client':_0x5a76b4(0x1aa),'type':_0x5a76b4(0xda),'sujet':_0x5a76b4(0x127),'commande':_0x5a76b4(0x117),'doc':!![],'priorite':_0x5a76b4(0xe1),'statut':_0x5a76b4(0x1a8)},{'id':'#T-086','client':_0x5a76b4(0xf8),'type':_0x5a76b4(0x16e),'sujet':_0x5a76b4(0x141),'commande':'','doc':![],'priorite':'Normal','statut':_0x5a76b4(0x12e)}],'messages':[{'id':0x1,'de':_0x5a76b4(0xd1),'msg':'Stock\x20Vitamine\x20C\x20très\x20bas,\x20penser\x20à\x20renouveler.','heure':_0x5a76b4(0x150),'lu':![]},{'id':0x2,'de':_0x5a76b4(0xdd),'msg':'Merci,\x20commande\x20passée\x20ce\x20matin.','heure':_0x5a76b4(0x191),'lu':!![]}],'horaires':{'lundi':{'ouvert':!![],'debut':_0x5a76b4(0x185),'fin':_0x5a76b4(0x1a1)},'mardi':{'ouvert':!![],'debut':_0x5a76b4(0x185),'fin':_0x5a76b4(0x1a1)},'mercredi':{'ouvert':!![],'debut':_0x5a76b4(0x185),'fin':_0x5a76b4(0x1a1)},'jeudi':{'ouvert':!![],'debut':'09:00','fin':_0x5a76b4(0x1a1)},'vendredi':{'ouvert':!![],'debut':_0x5a76b4(0x185),'fin':_0x5a76b4(0x1a1)},'samedi':{'ouvert':!![],'debut':_0x5a76b4(0x185),'fin':_0x5a76b4(0x1a1)},'dimanche':{'ouvert':!![],'debut':_0x5a76b4(0x185),'fin':'20:00'}},'photosRayons':JSON['parse'](JSON[_0x5a76b4(0x1b9)](PHARMA_PHOTOS_RAYONS_DEFAUT)),'photosRayonsDefaut':0x1,'contenuRayons':{},'rayonsMasques':[],'joursSpeciaux':[{'date':_pharmaDate(0x5),'type':_0x5a76b4(0x172),'debut':_0x5a76b4(0x1b0),'fin':_0x5a76b4(0xd6),'msg':_0x5a76b4(0x132)},{'date':_pharmaDate(0x28),'type':_0x5a76b4(0x121),'debut':'','fin':'','msg':_0x5a76b4(0x17a)}],'parametres':{'nom':_0x5a76b4(0x17d),'adresse':_0x5a76b4(0x1a6),'tel':_0x5a76b4(0x110),'email':_0x5a76b4(0x14d),'couleurPrimaire':_0x5a76b4(0x14f),'logoTexte':'Pharmacie\x20Démo','bandeauActif':!![],'bandeauMsg':_0x5a76b4(0x1b1),'restrictionEmployes':!![],'rapportJour':_0x5a76b4(0xd4),'rapportHeure':_0x5a76b4(0x1b0),'rapportEmail':_0x5a76b4(0x14d),'fideliteSeuil':0x5,'fideliteReduction':0xa,'legal':{'raisonSociale':_0x5a76b4(0x1a9),'formeJuridique':_0x5a76b4(0x1ae),'capital':'[Capital\x20social\x20à\x20compléter]','siret':_0x5a76b4(0x18a),'rcs':'[RCS\x20à\x20compléter]','tva':_0x5a76b4(0x1b4),'titulaire':_0x5a76b4(0xdb),'numeroOrdre':_0x5a76b4(0x1a2),'directeurPublication':_0x5a76b4(0xd2),'ars':_0x5a76b4(0x18b),'licence':_0x5a76b4(0x16a),'hebergeur':'Netlify,\x20Inc.\x20—\x20512\x202nd\x20Street,\x20Suite\x20200,\x20San\x20Francisco,\x20CA\x2094107,\x20États-Unis','hebergeurTel':_0x5a76b4(0x19e),'mediateur':_0x5a76b4(0x136)},'emailQuota':null,'emailjs':{'actif':![],'serviceId':'','templateId':'','publicKey':'','logoUrl':'','siteUrl':''},'notifAuto':{'commandeRecue':!![],'commandePrete':!![],'codeFidelite':!![]}}},PHARMA_MAX_ALERTES=0x32,_pharmaAlerteSeq=0x0;function pharmaAjouterAlerte(_0x57758a,_0x1a800e,_0x1c299a,_0x1ba18a,_0x181c2a){var _0x643d94=_0x5a76b4;if(!_0x57758a[_0x643d94(0x1b3)])_0x57758a[_0x643d94(0x1b3)]=[];var _0x318264;do{_pharmaAlerteSeq++,_0x318264=Date['now']()*0x3e8+_pharmaAlerteSeq%0x3e8;}while(_0x57758a[_0x643d94(0x1b3)][_0x643d94(0x102)](function(_0x53652d){return _0x53652d['id']===_0x318264;}));_0x57758a[_0x643d94(0x1b3)][_0x643d94(0x116)]({'id':_0x318264,'type':_0x1a800e,'titre':_0x1c299a,'texte':_0x1ba18a,'lien':_0x181c2a||'','timestamp':new Date()['toISOString'](),'lu':![]}),_0x57758a[_0x643d94(0x1b3)]['length']>PHARMA_MAX_ALERTES&&(_0x57758a[_0x643d94(0x1b3)]=_0x57758a[_0x643d94(0x1b3)]['slice'](0x0,PHARMA_MAX_ALERTES));}var PharmaStore={'load':function(){var _0x319d13=_0x5a76b4,_0x7935=null;try{_0x7935=localStorage['getItem'](PHARMA_STORAGE_KEY);}catch(_0x23bb0a){}if(_0x7935)try{var _0x172736=JSON['parse'](_0x7935),_0x55d31e=!!(_0x172736&&_0x172736[_0x319d13(0x14e)]===0x1),_0x39de13=this[_0x319d13(0x11e)](_0x172736);if(!_0x55d31e)this[_0x319d13(0x163)](_0x39de13);return _0x39de13;}catch(_0x7c9ac8){console[_0x319d13(0x120)]('pres-data\x20corrompu,\x20réinitialisation\x20avec\x20les\x20données\x20de\x20démo.',_0x7c9ac8);}var _0x936327=JSON['parse'](JSON['stringify'](PHARMA_SEED_DATA));return this[_0x319d13(0x163)](_0x936327),_0x936327;},'migrer':function(_0xa890b2){var _0x4eb2aa=_0x5a76b4;if(!_0xa890b2||typeof _0xa890b2!==_0x4eb2aa(0xfe)||Array[_0x4eb2aa(0xe2)](_0xa890b2))return JSON[_0x4eb2aa(0x198)](JSON[_0x4eb2aa(0x1b9)](PHARMA_SEED_DATA));var _0x2ed7fd=function(_0x253bef){var _0x3ddea0=_0x4eb2aa;return _0x253bef&&typeof _0x253bef==='object'?JSON['parse'](JSON[_0x3ddea0(0x1b9)](_0x253bef)):_0x253bef;};if(_0xa890b2[_0x4eb2aa(0x14e)]!==0x1){var _0x177cd7=Array[_0x4eb2aa(0xe2)](_0xa890b2[_0x4eb2aa(0x182)])?_0xa890b2[_0x4eb2aa(0x182)]:[];if(!_0xa890b2[_0x4eb2aa(0x169)]||typeof _0xa890b2['photosRayons']!==_0x4eb2aa(0xfe)||Array[_0x4eb2aa(0xe2)](_0xa890b2[_0x4eb2aa(0x169)]))_0xa890b2[_0x4eb2aa(0x169)]={};Object[_0x4eb2aa(0x156)](PHARMA_PHOTOS_RAYONS_DEFAUT)['forEach'](function(_0x48c153){var _0x47242e=_0x4eb2aa;if(_0x177cd7['indexOf'](_0x48c153)!==-0x1&&!_0xa890b2[_0x47242e(0x169)][_0x48c153])_0xa890b2['photosRayons'][_0x48c153]=PHARMA_PHOTOS_RAYONS_DEFAUT[_0x48c153];});if(Array[_0x4eb2aa(0xe2)](_0xa890b2['produits'])){var _0x424bb9=_0xa890b2['produits'][_0x4eb2aa(0xf9)](function(_0x5e727e,_0x48a6ae){var _0x32c6ba=_0x4eb2aa;return Math[_0x32c6ba(0x1ad)](_0x5e727e,_0x48a6ae&&parseInt(_0x48a6ae['id'],0xa)||0x0);},0x0);PHARMA_PRODUITS_DEMO_RAYONS['forEach'](function(_0x1e8383){var _0x13d018=_0x4eb2aa,_0x4542c8=_0xa890b2[_0x13d018(0x1b6)][_0x13d018(0x102)](function(_0x310743){var _0xa03b0b=_0x13d018;return _0x310743&&_0x310743[_0xa03b0b(0xde)]===_0x1e8383[_0xa03b0b(0xde)];}),_0x5dad54=!_0xa890b2['produits'][_0x13d018(0x102)](function(_0x313630){var _0x30391b=_0x13d018;return _0x313630&&_0x313630[_0x30391b(0x173)]===_0x1e8383[_0x30391b(0x173)];});if(!_0x4542c8&&_0x5dad54&&_0x177cd7[_0x13d018(0xed)](_0x1e8383[_0x13d018(0x173)])!==-0x1){var _0x14035e=_0x2ed7fd(_0x1e8383);_0x14035e['id']=++_0x424bb9,_0xa890b2[_0x13d018(0x1b6)][_0x13d018(0xe0)](_0x14035e);}});}_0xa890b2['photosRayonsDefaut']=0x1;}return Object[_0x4eb2aa(0x156)](PHARMA_SEED_DATA)[_0x4eb2aa(0x189)](function(_0x3d8f0a){var _0x37840f=_0x4eb2aa,_0x5d8954=PHARMA_SEED_DATA[_0x3d8f0a],_0x5b6530=_0xa890b2[_0x3d8f0a],_0x279aef;if(Array['isArray'](_0x5d8954))_0x279aef=Array[_0x37840f(0xe2)](_0x5b6530);else _0x5d8954&&typeof _0x5d8954===_0x37840f(0xfe)?_0x279aef=_0x5b6530&&typeof _0x5b6530===_0x37840f(0xfe)&&!Array[_0x37840f(0xe2)](_0x5b6530):_0x279aef=_0x5b6530!==undefined&&_0x5b6530!==null;if(!_0x279aef)_0xa890b2[_0x3d8f0a]=_0x2ed7fd(_0x5d8954);}),Object[_0x4eb2aa(0x156)](PHARMA_SEED_DATA['parametres'])['forEach'](function(_0x338434){var _0xd7aff4=_0x4eb2aa,_0x2c5532=PHARMA_SEED_DATA[_0xd7aff4(0x126)][_0x338434],_0x321b48=_0xa890b2['parametres'][_0x338434],_0x7185b3=_0x2c5532&&typeof _0x2c5532==='object'?_0x321b48&&typeof _0x321b48===_0xd7aff4(0xfe):_0x321b48!==undefined&&_0x321b48!==null;if(!_0x7185b3)_0xa890b2[_0xd7aff4(0x126)][_0x338434]=_0x2ed7fd(_0x2c5532);else _0x2c5532&&typeof _0x2c5532===_0xd7aff4(0xfe)&&!Array[_0xd7aff4(0xe2)](_0x2c5532)&&Object[_0xd7aff4(0x156)](_0x2c5532)[_0xd7aff4(0x189)](function(_0x1b7f89){var _0x2bfd13=_0xd7aff4;(_0xa890b2['parametres'][_0x338434][_0x1b7f89]===undefined||_0xa890b2[_0x2bfd13(0x126)][_0x338434][_0x1b7f89]===null)&&(_0xa890b2[_0x2bfd13(0x126)][_0x338434][_0x1b7f89]=_0x2ed7fd(_0x2c5532[_0x1b7f89]));});}),Object['keys'](PHARMA_SEED_DATA[_0x4eb2aa(0xce)])[_0x4eb2aa(0x189)](function(_0x9373e9){var _0x26017d=_0x4eb2aa,_0x456eb7=_0xa890b2[_0x26017d(0xce)][_0x9373e9];if(!_0x456eb7||typeof _0x456eb7!==_0x26017d(0xfe))_0xa890b2[_0x26017d(0xce)][_0x9373e9]=_0x2ed7fd(PHARMA_SEED_DATA[_0x26017d(0xce)][_0x9373e9]);}),Array[_0x4eb2aa(0xe2)](_0xa890b2[_0x4eb2aa(0xea)])&&_0xa890b2['codesPromo'][_0x4eb2aa(0x189)](function(_0x225fb7){var _0x9cb5f5=_0x4eb2aa;if(!_0x225fb7)return;if(_0x225fb7[_0x9cb5f5(0x164)]==='Auto\x20(5\x20achats)')_0x225fb7[_0x9cb5f5(0x164)]=_0x9cb5f5(0x111);else{if(_0x225fb7[_0x9cb5f5(0x164)]===_0x9cb5f5(0x124))_0x225fb7['origine']=_0x9cb5f5(0x10b);}}),_0xa890b2;},'save':function(_0xfd1118){var _0x36f829=_0x5a76b4;try{return localStorage[_0x36f829(0xec)](PHARMA_STORAGE_KEY,JSON['stringify'](_0xfd1118)),!![];}catch(_0xc36243){return console[_0x36f829(0x131)](_0x36f829(0x180),_0xc36243),![];}},'mettreAJour':function(_0xf64c38){var _0x4f03e5=_0x5a76b4,_0x1fc67c=this['load']();return _0xf64c38(_0x1fc67c),this[_0x4f03e5(0x163)](_0x1fc67c),_0x1fc67c;},'reset':function(){var _0x142fa4=_0x5a76b4,_0x263e6d=JSON[_0x142fa4(0x198)](JSON[_0x142fa4(0x1b9)](PHARMA_SEED_DATA));return this[_0x142fa4(0x163)](_0x263e6d),_0x263e6d;}},PHARMA_EMAIL_RE=/^[A-Za-z0-9._%+'-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/;function pharmaEmailValide(_0x1cffb1){var _0xdd9868=_0x5a76b4,_0x53879d=String(_0x1cffb1==null?'':_0x1cffb1)[_0xdd9868(0x143)]();return _0x53879d[_0xdd9868(0x12f)]>0x0&&_0x53879d[_0xdd9868(0x12f)]<=0xc8&&PHARMA_EMAIL_RE[_0xdd9868(0x171)](_0x53879d);}var PHARMA_PHOTO_URL_RE=/^https:\/\/[a-z0-9-]+\.supabase\.co\/storage\/v1\/object\/public\/photos\/[A-Za-z0-9_-]+([.\/][A-Za-z0-9_-]+)*$/,PHARMA_PHOTO_DATA_RE=/^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+\/]+={0,2}$/,PHARMA_PHOTO_DATA_MAX=0xaae60,PHARMA_PHOTO_LOCALE_RE=/^images\/[a-z0-9-]{1,60}\.(jpg|jpeg|png|webp)$/;function pharmaPhotoValide(_0x13bb25){var _0xbdd9bf=_0x5a76b4,_0x1de7cd=typeof _0x13bb25==='string'?_0x13bb25:'';if(_0x1de7cd[_0xbdd9bf(0x12f)]<=0x190&&PHARMA_PHOTO_URL_RE[_0xbdd9bf(0x171)](_0x1de7cd))return _0x1de7cd;if(_0x1de7cd[_0xbdd9bf(0x12f)]<=PHARMA_PHOTO_DATA_MAX&&PHARMA_PHOTO_DATA_RE[_0xbdd9bf(0x171)](_0x1de7cd))return _0x1de7cd;if(PHARMA_PHOTO_LOCALE_RE['test'](_0x1de7cd))return _0x1de7cd;return'';}function pharmaPhotoRayon(_0x2947ce,_0x34a5c3){var _0x4f0212=_0x5a76b4,_0x53528a=_0x2947ce&&_0x2947ce[_0x4f0212(0x169)];if(!_0x53528a||typeof _0x53528a!==_0x4f0212(0xfe)||!Object[_0x4f0212(0xf1)][_0x4f0212(0x17e)][_0x4f0212(0x135)](_0x53528a,_0x34a5c3))return'';return pharmaPhotoValide(_0x53528a[_0x34a5c3]);}function pharmaRayonVisible(_0x3a5e39,_0x2f6f58){var _0x217012=_0x5a76b4,_0x33a289=_0x3a5e39&&_0x3a5e39[_0x217012(0x184)];return!(Array[_0x217012(0xe2)](_0x33a289)&&_0x33a289[_0x217012(0xed)](_0x2f6f58)!==-0x1);}function pharmaSlugRayon(_0x5e547e){var _0x1df902=_0x5a76b4;return String(_0x5e547e==null?'':_0x5e547e)[_0x1df902(0xf4)]()[_0x1df902(0xe4)](_0x1df902(0x1a3))[_0x1df902(0x128)](/[\u0300-\u036f]/g,'')['replace'](/[^a-z0-9]+/g,'-')['replace'](/^-+|-+$/g,'')[_0x1df902(0x148)](0x0,0x3c);}function pharmaRayonDepuisSlug(_0x2e001e,_0x3b9d95){var _0x3f845c=_0x5a76b4,_0x42b6e5=String(_0x3b9d95==null?'':_0x3b9d95)['toLowerCase']();return(_0x2e001e&&_0x2e001e[_0x3f845c(0x182)]||[])['find'](function(_0x2166aa){return pharmaSlugRayon(_0x2166aa)===_0x42b6e5;})||null;}function pharmaListeRayon(_0x4d6aec,_0x50fa29){var _0xba88a3=_0x5a76b4,_0x1277c2=_0x4d6aec&&_0x4d6aec[_0xba88a3(0xd0)],_0x6210e5=_0x1277c2&&typeof _0x1277c2===_0xba88a3(0xfe)&&Object[_0xba88a3(0xf1)]['hasOwnProperty'][_0xba88a3(0x135)](_0x1277c2,_0x50fa29)&&Array[_0xba88a3(0xe2)](_0x1277c2[_0x50fa29])?_0x1277c2[_0x50fa29]:[];return _0x6210e5['filter'](function(_0x23bff2,_0x2f29ee){var _0x1b5f9f=_0xba88a3;return _0x6210e5[_0x1b5f9f(0xed)](_0x23bff2)===_0x2f29ee;});}function pharmaProduitsDuRayon(_0x2b533c,_0x22e8c5){var _0x30dbe0=_0x5a76b4,_0x9f9bc=_0x2b533c&&_0x2b533c['produits']||[],_0x5230bf=pharmaListeRayon(_0x2b533c,_0x22e8c5),_0x7ecebe={};_0x9f9bc['forEach'](function(_0x2d84b9){_0x7ecebe[_0x2d84b9['id']]=_0x2d84b9;});var _0x58ad5f=_0x5230bf[_0x30dbe0(0x10a)](function(_0x158af5){return _0x7ecebe[_0x158af5];})[_0x30dbe0(0x1b7)](Boolean);return _0x9f9bc[_0x30dbe0(0x189)](function(_0x30d82f){var _0x34b47e=_0x30dbe0;if(_0x30d82f[_0x34b47e(0x173)]===_0x22e8c5&&_0x58ad5f[_0x34b47e(0xed)](_0x30d82f)===-0x1)_0x58ad5f[_0x34b47e(0xe0)](_0x30d82f);}),_0x58ad5f;}function pharmaRayonsDuProduit(_0x417bbc,_0x36cb45){var _0x3824d0=_0x5a76b4;if(!_0x36cb45)return[];var _0x1369fa=_0x36cb45[_0x3824d0(0x173)]?[_0x36cb45[_0x3824d0(0x173)]]:[];return(_0x417bbc&&_0x417bbc[_0x3824d0(0x182)]||[])['forEach'](function(_0x312096){var _0x545fe6=_0x3824d0;if(_0x1369fa[_0x545fe6(0xed)](_0x312096)===-0x1&&pharmaListeRayon(_0x417bbc,_0x312096)[_0x545fe6(0xed)](_0x36cb45['id'])!==-0x1)_0x1369fa[_0x545fe6(0xe0)](_0x312096);}),_0x1369fa;}function _0x3c73(){var _0x2ccb7a=['nZq3otzMyNzstM4','BwLNCMvY','vML0yw1PBMvZ','D2fYBG','rMvYBwv0DxjL','mJu5mZe2yw1KyxH5','z2v0tw9UDgG','qxv0BYaOmtuW4OkSkq','thLVBG','CgfYyw1LDhjLCW','uhjVzhvPDcbTyw5XDwfUDa','CMvWBgfJzq','i1qTmdG3','phbHDgGGzd0ItteWlJuGmJaUnuWZlJuGmtmUnwe1iduGmcaWideGnY03BdCGn2e1iduGmcaWideTnYa3EIiVpJXSAw5LihGXpsi4lJuIihKXpsi4lJuIihGYpsiXns41iIb5mJ0ImtuUnsiVpG','CgLSDwXL','ugfYAxm','rw1HAwWGkYbttvm','rw4Gy291CNm','BgvUz3rO','iIbMAwXSpsiJzMzMiI8+pgCGzMLSBd0IiZaWmci+','zxjYB3i','ugHHCM1Hy2LLigrLigDHCMrLiokaLcbpDxzLCNrZigrLidHOimoGidiWAa','CgfKzgLUz1jPz2H0','nKLVzNzrvq','y2fSBa','w03dQwrPyxrLDxiGzguGBgeGy29UC29TBwf0Aw9UimoGignVBxbSW6L0zxjD','iIbMAwXSpsi','phbHDgGGzd0ItteYidiYCZGTnca4lteWvJvSltGTmY04idn2n2mWidyGocaXmca4ideWEIiVpG','tgeGvML0yw1PBMuGqYbIB29ZDguGBcDPBw11BML0W6KSigLKW6LHBguGzw4GW6L0W6KGy29UDhjLigXHigzHDgLNDwuU','shvPBguGzxnZzw50AwvSBguGtgf2yw5Kzsb2CMfPzsaXmg1S','u09mltaWmq','qMvHDxtdQq','mtbHENPuA1q','ttuWidK0qZi2idG2idi4idCYiduWidy2uZC0iduWiduWidqYuZi2idi2idq2ide4','W6aGBgeG','iIbMAwXSpsjUB25LiIbZDhjVA2u9iG','q3ldQg1LihbLyxv4ihnLBNnPyMXLCYa/','mwvY','DhjPBq','z291DhrL','CM91BMq','pgnPCMnSzsbJEd0ImtiIign5psiXmIiGCJ0ImtaIlZ48BgLUzsb4mt0ImtiIihKXpsiXnIiGEdi9iJeYiIb5mJ0ImtiIlZ48BgLUzsb4mt0ImtiIihKXpsi4iIb4mJ0ImtiUmdeIihKYpsi4iI8+','qKvcltaWmq','C2XPy2u','qSoPySoP','DMLSBgu','mJC2nxjIwNbQAW','C3zNw2rHDgeTBw9KDwXLC10','y29UDgfJDebWAgfYBwfJAwuTzgvTBY50zxn0','CgHVDg9ZuMf5B25ZrgvMyxv0','iZfcnKi0nq','mdLOmtu','C3bSAxq','y2XPzw50swq','mZLXBgTVsLC','i0q5qtq0mq','Aw1Hz2vZl3jHEw9UlwjLyMuUANbN','A2v5CW','ueHbuK0TquiXnq','C3r5Bgu','y29Uy2f0','ueHbuK0TtuqXma','phbHDgGGzd0I','odi1mJe5sxPxEKrW','ttm3idrOmJzHnsa1idaGmcaXiduGnxyYm2GYm2e1iduGmcaWideGnsa1DJi2ytuGnsaWidaGms01idvinJH2mJnHnsa1idaGmcaXltuGnuGZn2e1iduGmcaWideTns01vJy4sdLHnsa1idaGmcaXltuTnvyZn2e1iduGmcaWideGns01AdiZvJLHnsa1idaGmcaXiduTnxO','twfYAwuGrhvWB250','qvjpltaWmq','mdyGotGGnZyGntqGmZi','Bwf4vxnHz2vZ','z2v0rNvSBfLLyxi','C2f2zq','B3jPz2LUzq','y2XPzw50v2LKDgG','vg91CYbSzxmGy2XPzw50CW','C3vIC3rY','tg90ienYW6HTzsbtB2XHAxjLifnqrJuWihGZ','CgHVDg9ZuMf5B25Z','w07cScbKzsbSAwnLBMnLigqNB2zMAwnPBMuGW6aGy29TCgZdQxrLCL0','qNv2zxOGyxuGBw9PBNmGmsW1tcbKj2vHDsbWyxiGAM91CIWGC3vYDg91DcbLBIddQxtdQsaH','D2LKDgG','mZyWohPkuMj6rW','uxvLC3rPB24GChjVzhvPDa','rw1WBg95W6K','zw1HAwW','DgvZDa','r2fYzgu','y2f0','twLUy2v1CG','iZbcmeyWra','ndiXmJeXidiXmJe0msaYmtqXmJeGndeYmtiXideXmte0mYaXmteZndeGmtmXmtqXideXndeXmYaXmtqZmteGndeXmteZidqXmtmXmsaXmtmXndeGmte0mtmXidmXmte0msa0mteXmZeGmJeXndeYidiXmtiXncaYmteYmZiGmJmZmteXmG','zw4GCgHHCM1Hy2LL','phjLy3qGD2LKDgG9iG','ksbZy2fSzsG','rMvYBCoPCYbLEgnLChrPB25UzwXSzw1LBNqGy2uGAM91CG','BwfYz2LUuMLNAhq','ksi+pgCGDhjHBNnMB3jTpsj0CMfUC2XHDguO','ugHHCM1Hy2LLietdQw1V','AgfZt3DUuhjVCgvYDhK','y2HHCKnVzgvbDa','sw1WB3nZAwjSzsbKzsbZyxv2zwDHCMrLCIbWAgfYBweTzgf0ysaOCxvVDgeGBg9JywXtDg9YywDLigtdQxbHC3pdQsa/kq','q29TCgZdQw1LBNqGDML0yw1PBSoP','y2f0zwDVCMLLCW','BM9T','CMf5B25ZtwfZCxvLCW','mdK6mda','vKLultaXmG','zxHWAxjL','zgv2AwnLugL4zwXsyxrPBW','zM9YrwfJAa','w1njuKvuimoGignVBxbSW6L0zxjD','qwDLBMnLifldQwDPB25HBguGzguGu2fUDmoPimooBguTzguTrNjHBMnLiokaLcaZnsbYDwuGzguGBgeGr2fYzsWGnZuWmtKGugfYAxm','i0qYm0yZnq','BM9YBuvTywLS','sfLhltaZna','qKvbltaWmq','ndm4mtCZz2Pxy1LW','mdLOmZi','mtmXmtiZideZmtmYmsaXmtiZmtmGmtmYmteZideZmJmXmsaYmteZmtmGmJmXmteZidiZmtmXmsaXmtiXmZmGmteYmZmXideZmJeZmsaXmtmXmJmGmteZmZiXideZmZeYmsaZmtmXmJeGmJeXmZmXidiZmteZmsaYmtmXmtmG','ntKXmtiZnuvvBvLdzG','rw1HAwW','mtiZmtiYideYmZiYmsaYmJmYmteGmJiXmtmYidiYmtiZmsaYmtmYmtiGmJiZmteYidmXmJeZmsaZmteYmJiGmZiXmtiYidmYmtiYmsaZmtiYmtiGmZiYmteYidmYmJiXmsaYmtiXmJmGmJeYmZiXidiZmJeYmsaXmteZmJmG','mdaWmdaW','iIbOzwLNAhq9iG','CgfYC2u','phn2zYbJBgfZCZ0Iy29Kzs1IyxjYzxmTC3zNiIbKyxrHlw1VzhvSzxm9iG','W6aGBcC','zMLKzwXPDgvtzxvPBa','y2iTyMfYCMvZlq','shLKCMf0yxrPB24','w1tdQwZdQxbOB25LigrLigWNAmoPyMvYz2v1CIddOcbJB21WBmoPDgvYxq','phbHDgGGzd0ItteXidiWqtCGnYaWidaGmsa5lJGGnI4XqZe1lJuGnsaXnYa0lJq4ide5idjJmsaYidiGnc4XocaYidGGmca1lJuTnc43ocaXmc0XmcaXmhOIlZ48Cgf0AcbKpsjnmIaYmwmWltmGms44ns01lJm2iduUmdGTnIiVpG','q29TChrL','mJe6mda','w07cScbKj2LUC2nYAxb0Aw9UimoGigWNt3jKCMuGW6aGy29TCgZdQxrLCL0','tKze','ywHTzwqUyKbLBwfPBc5JB20','pgrLzNm+pgnSAxbqyxrOigLKpsi','msbYDwuGzguGBokaMuv4zw1WBguSidC1mdaWifbHCMLZ','Aw1Hz2vZl3jHEw9UlwH5z2LLBMuUANbN','t3v2zxj0','ueHbuK1bq0LfietdIu1picHMAwn0AxzLkq','sMvHBIbqAwvYCMu','iZjfq0m3qq','C29SzwLS','Bwf4','u0vmqvnvicHtB2nPW6L0W6KGzcDLEgvYy2LJzsbSAwldQxjHBcbWyxiGywn0Aw9UCYbZAw1WBgLMACoPzsddOcbHC3nVy2NdQsb1BMLXDwuP','zMXVB3i','mdG6mda','vMvYC2LVBIbKzsbKW6LTB25ZDhjHDgLVBIa6ihbOyxjTywnPzsbMAwn0AxzLlcbHDwn1BMuGy29TBwfUzguGCSoPzwXSzq','u8oPCNvTigZdQwDLCIbWB3vYihbLyxv4igtdQxnOEwrYyxtdQwvZ','ywXLCNrLCW','w07cScbuvKeGAw50CMfJB21TDw5HDxrHAxjLimoGignVBxbSW6L0zxjD','r2vSigrVDxGGCg91CIbWzwf1EcbZzw5ZAwjSzxm','ChjVzhvPDhm','zMLSDgvY','sw52AxtdQq','C3rYAw5NAwz5','y2XPzw50','iIbWCMvZzxj2zufZCgvJDfjHDgLVpsjUB25LiIbZAgfWzs1Yzw5KzxjPBMC9iMnYAxnWrwrNzxmIihjVBgu9iMLTzYiGyxjPys1SywjLBd0I','Ag9YywLYzxm','y2HLEIa','y29UDgvUDvjHEw9UCW','s2fYAw0GtwfUC291CMK','w05VBsbKDsbKAxjLy3rLDxiGzguGBgeGChvIBgLJyxrPB24GW6aGy29TCgZdQxrLCL0','BM9YBu5VBq','BhvUzgK','z2v0rgf0zq','mJa6mda','iZfbmJyYma','mdyGmtiGmZqGntyGnZG','iIbZDhjVA2uTD2LKDgG9iJKIihn0CM9Rzs1SAw5Ly2fWpsjYB3vUzciVpG','uhjVyMZdQg1LignVBw1HBMrL','w05VBsbLDcbWCSoPBM9Tigr1ihbOyxjTywnPzw4GDgL0DwXHAxjLimoGignVBxbSW6L0zxjD','Aw1Hz2vZl3jHEw9UlwjLyxv0zs5QCgC','qwrTAw4GuhjPBMnPCgfS','CMvM','BwfYAwuUzebLBwfPBc5JB20','ChvZAa','vxjNzw50','AxnbCNjHEq','nZi0oejHBuHrwG','BM9YBwfSAxPL','y2XPzw50CW','zgvJB3vWzxjbzhjLC3nL','CNvL','C2vYCgvUDa','y3jVAxG','y29KzxnqCM9TBW','rvrfmJaYnq','C2v0sxrLBq','Aw5KzxHpzG','nZuXmty','iI8+pc9NpJWVzZ48l3n2zZ4','uhjVDgvJDgLVBIbZB2XHAxjLigHHDxrLihbLCMzVCM1HBMnL','ChjVDg90ExbL','DMLSBgvbzMzPy2HLzq','zw5JCMu','Dg9mB3DLCKnHC2u','DxnHz2vZ','tgLUAw1LBNqGB2ZdQw8Ty2fSy2fPCMuGntaWBwW','zMLKzwXPDgvszwr1y3rPB24','rMf0Aw1HieTHy2K','CMvKDwnL','odK5mZC1mMrntvnTDq','u29WAgLLieXHDxjLBNq','pgCGy2XPCc1WyxrOpsj1CMWOiW','q29TBwfUzgvZicSGvgLJA2v0CW','B2jQzwn0','ksiGC2HHCguTCMvUzgvYAw5NpsjNzw9TzxrYAwnqCMvJAxnPB24IpG','u8oPCNvTigH5zhjHDgfUDcb2AxnHz2uGmZbTBa','zxHLyW','C29Tzq','Aw1Hz2vZl3jHEw9Ulw1PBMnLDxiUANbN','qxjVBwf0AmoPCMfWAwu','Aw1Hz2vZl3jHEw9UlxnVBgfPCMuUANbN','Aw1Hz2vZl3jHEw9UlwfYB21HDgHLCMfWAwuUANbN','iI8+','CgfKzgLUz0XLzNq','ywn0Awy','BwfW','twfUDwvS','yxv0BW','q3ldQg1LifnVBgfPCMuGu1bgntaGmtaWBwW','u29SywLYzq','iIbMAwXSpsiJzMzMiI8+pgCGzMLSBd0I','mdeGmdaGmdaGmdaGmda','qxv0BYaOzMLKW6LSAxtdQsK','sw5MDxnPB24Gy2L0CM9Ulw1LBNrOzsaYmcbZywnOzxrZ','q29Kzs1IyxjYzxmG','qwHTzwqGqMvUywXP','pc9NpG','Dw5ZAgLMDa','iZeWmZK','twfYC2vPBgXL','vg91CW','phbHDgGGzd0ItteYidiUnJLSns42nIa1lJy2ytGGocaWideGms0Xms4ZmsaWEIiVpG','mJeZmZeXidiXmZeZmsaZmteXmJmGmZeXmZiXidmZmteYmsaZmtiXmtmGmZeYmZeXidmZmJeXmsaZmtqXmteGmJiXndeXidqZmteXmsaXmteYmJqGmteXndiYideYmteYncaXmJe0mJeGmtqXmtiYide0mtiYmsaXmtiYmtqG','iIb2Awv3qM94psiWidaG'];_0x3c73=function(){return _0x2ccb7a;};return _0x3c73();}function pharmaNumeroFidelite(_0x5dbd7a){var _0x4750f4=_0x5a76b4,_0x49f405=parseInt(_0x5dbd7a&&_0x5dbd7a['id'],0xa);return'FID-'+(_0x4750f4(0x196)+(_0x49f405>0x0?_0x49f405:0x0))[_0x4750f4(0x148)](-0x6);}function pharmaIdDepuisCarte(_0x46cda2){var _0x2bc90a=_0x5a76b4,_0x5eb40e=/^\s*FID-?0*(\d{1,9})\s*$/i[_0x2bc90a(0x101)](String(_0x46cda2==null?'':_0x46cda2));return _0x5eb40e?parseInt(_0x5eb40e[0x1],0xa):null;}function _0x30bf(_0x41e0de,_0x3cb104){_0x41e0de=_0x41e0de-0xcc;var _0x3c73e1=_0x3c73();var _0x30bfb2=_0x3c73e1[_0x41e0de];if(_0x30bf['kKJEiX']===undefined){var _0x13c9ab=function(_0x526bd5){var _0x2db29e='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x2ae188='',_0x420731='';for(var _0x54357b=0x0,_0x57758a,_0x1a800e,_0x1c299a=0x0;_0x1a800e=_0x526bd5['charAt'](_0x1c299a++);~_0x1a800e&&(_0x57758a=_0x54357b%0x4?_0x57758a*0x40+_0x1a800e:_0x1a800e,_0x54357b++%0x4)?_0x2ae188+=String['fromCharCode'](0xff&_0x57758a>>(-0x2*_0x54357b&0x6)):0x0){_0x1a800e=_0x2db29e['indexOf'](_0x1a800e);}for(var _0x1ba18a=0x0,_0x181c2a=_0x2ae188['length'];_0x1ba18a<_0x181c2a;_0x1ba18a++){_0x420731+='%'+('00'+_0x2ae188['charCodeAt'](_0x1ba18a)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x420731);};_0x30bf['wJXPlj']=_0x13c9ab,_0x30bf['YRiarc']={},_0x30bf['kKJEiX']=!![];}var _0x2993b5=_0x3c73e1[0x0],_0x1ee805=_0x41e0de+_0x2993b5,_0x30afc1=_0x30bf['YRiarc'][_0x1ee805];return!_0x30afc1?(_0x30bfb2=_0x30bf['wJXPlj'](_0x30bfb2),_0x30bf['YRiarc'][_0x1ee805]=_0x30bfb2):_0x30bfb2=_0x30afc1,_0x30bfb2;}var PHARMA_CODE128=('212222\x20222122\x20222221\x20121223\x20121322\x20131222\x20122213\x20122312\x20132212\x20221213\x20221312\x20231212\x20112232\x20122132\x20122231\x20113222\x20'+_0x5a76b4(0x195)+_0x5a76b4(0x192)+_0x5a76b4(0x11b)+'112412\x20122114\x20122411\x20142112\x20142211\x20241211\x20221114\x20413111\x20241112\x20134111\x20111242\x20121142\x20121241\x20114212\x20124112\x20124211\x20411212\x20421112\x20'+_0x5a76b4(0x176))[_0x5a76b4(0x151)]('\x20'),PHARMA_EMBLEME={'croix':_0x5a76b4(0x15d),'serpent':_0x5a76b4(0x13e)},PHARMA_EMBLEME_COULEURS={'vitrine':{'encre':_0x5a76b4(0xd7),'croix':'#22985E','serpent':_0x5a76b4(0x18c)},'lecture':{'encre':'#0B0F0D','croix':_0x5a76b4(0x14f),'serpent':_0x5a76b4(0x175)}},pharmaCodeBarresNum=0x0;function pharmaCodeBarres(_0x4f634f,_0x5975e8,_0x30eee2){var _0xa52159=_0x5a76b4,_0x27c2e0=String(_0x4f634f==null?'':_0x4f634f);if(!_0x27c2e0||_0x27c2e0['length']>0x28||/[^\x20-\x7E]/[_0xa52159(0x171)](_0x27c2e0))return'';var _0x45a65f=/^(.*?)((?:\d\d){2,})$/[_0xa52159(0x101)](_0x27c2e0),_0x5c8bac=_0x45a65f?_0x45a65f[0x1]:_0x27c2e0,_0x14e808=_0x45a65f?_0x45a65f[0x2]:'',_0x53635e=_0x5c8bac?[0x68]:[0x69];for(var _0x3a33ce=0x0;_0x3a33ce<_0x5c8bac[_0xa52159(0x12f)];_0x3a33ce++)_0x53635e[_0xa52159(0xe0)](_0x5c8bac[_0xa52159(0x17f)](_0x3a33ce)-0x20);if(_0x14e808){if(_0x5c8bac)_0x53635e[_0xa52159(0xe0)](0x63);for(var _0x359a35=0x0;_0x359a35<_0x14e808[_0xa52159(0x12f)];_0x359a35+=0x2)_0x53635e['push'](parseInt(_0x14e808[_0xa52159(0x167)](_0x359a35,0x2),0xa));}var _0x55e141=_0x53635e[0x0];for(var _0x33bd4f=0x1;_0x33bd4f<_0x53635e[_0xa52159(0x12f)];_0x33bd4f++)_0x55e141+=_0x53635e[_0x33bd4f]*_0x33bd4f;_0x53635e[_0xa52159(0xe0)](_0x55e141%0x67,0x6a);var _0x3cfd9b=0xa,_0x1c251d='';_0x53635e[_0xa52159(0x189)](function(_0x3e255b){var _0x278ee8=_0xa52159,_0xad8a9d=PHARMA_CODE128[_0x3e255b];for(var _0x3b4ef8=0x0;_0x3b4ef8<_0xad8a9d[_0x278ee8(0x12f)];_0x3b4ef8++){var _0x2f9ea0=parseInt(_0xad8a9d['charAt'](_0x3b4ef8),0xa);if(_0x3b4ef8%0x2===0x0)_0x1c251d+='<rect\x20x=\x22'+_0x3cfd9b+'\x22\x20y=\x220\x22\x20width=\x22'+_0x2f9ea0+_0x278ee8(0x197)+(_0x5975e8||0x32)+_0x278ee8(0x107);_0x3cfd9b+=_0x2f9ea0;}});var _0x1116ea=_0x3cfd9b+0xa,_0x5d521d=_0x5975e8||0x32,_0x56914c=_0xa52159(0x113)+_0x27c2e0[_0xa52159(0x128)](/[<>&"]/g,''),_0x3da84d=_0x30eee2&&PHARMA_EMBLEME_COULEURS[_0x30eee2['embleme']];if(!_0x3da84d)return _0xa52159(0x199)+_0x1116ea+'\x22\x20viewBox=\x220\x200\x20'+_0x1116ea+'\x20'+_0x5d521d+_0xa52159(0xcd)+_0x56914c+'\x22><rect\x20width=\x22'+_0x1116ea+_0xa52159(0x197)+_0x5d521d+_0xa52159(0x130)+_0x1c251d+'</g></svg>';var _0x3c1af8=_0xa52159(0x19c)+ ++pharmaCodeBarresNum,_0x1721e6=_0x5d521d*0.96,_0x41de4c=(_0x1116ea-_0x1721e6)/0x2,_0x56d04d=(_0x5d521d-_0x1721e6)/0x2;return'<svg\x20class=\x22code-barres-svg\x20avec-embleme\x22\x20data-modules=\x22'+_0x1116ea+_0xa52159(0x11c)+_0x1116ea+'\x20'+_0x5d521d+'\x22\x20shape-rendering=\x22crispEdges\x22\x20role=\x22img\x22\x20aria-label=\x22'+_0x56914c+'\x22>'+_0xa52159(0x1a5)+_0x3c1af8+'\x22>'+_0x1c251d+'</clipPath></defs>'+_0xa52159(0x178)+_0x1116ea+_0xa52159(0x197)+_0x5d521d+_0xa52159(0x10f)+_0x3da84d[_0xa52159(0xf3)]+'\x22>'+_0x1c251d+_0xa52159(0x115)+_0xa52159(0xfc)+_0x3c1af8+_0xa52159(0x17c)+_0x41de4c+'\x20'+_0x56d04d+_0xa52159(0x179)+_0x1721e6/0x64+_0xa52159(0xff)+_0xa52159(0x15b)+PHARMA_EMBLEME[_0xa52159(0xe9)]+_0xa52159(0x137)+_0x3da84d[_0xa52159(0xe9)]+_0xa52159(0x107)+_0xa52159(0x15b)+PHARMA_EMBLEME[_0xa52159(0xe8)]+_0xa52159(0x140)+_0x3da84d[_0xa52159(0xe8)]+_0xa52159(0xd9)+'<circle\x20cx=\x2247\x22\x20cy=\x2217\x22\x20r=\x226.5\x22\x20fill=\x22'+_0x3da84d[_0xa52159(0xe8)]+_0xa52159(0xef);}function pharmaAjusterCodeBarres(_0x55c836){var _0x161e68=_0x5a76b4,_0x19503f=_0x55c836&&_0x55c836['querySelector'](_0x161e68(0x14c));if(!_0x19503f)return;var _0x513627=parseInt(_0x19503f['getAttribute']('data-modules'),0xa),_0x14c9dd=window[_0x161e68(0x188)]||0x1,_0x2d0a7c=_0x55c836[_0x161e68(0x165)]-(parseFloat(getComputedStyle(_0x55c836)[_0x161e68(0x108)])||0x0)-(parseFloat(getComputedStyle(_0x55c836)[_0x161e68(0x133)])||0x0);if(!(_0x2d0a7c>0x0))return;var _0x2f0918=Math['max'](0x1,Math[_0x161e68(0x1af)](_0x2d0a7c*_0x14c9dd/_0x513627))/_0x14c9dd;_0x19503f[_0x161e68(0x158)][_0x161e68(0x16c)]=_0x513627*_0x2f0918+'px',_0x19503f[_0x161e68(0x158)]['marginLeft']=_0x19503f[_0x161e68(0x158)][_0x161e68(0x17b)]=_0x161e68(0x10c);}var PharmaTextes={'decouperAdresse':function(_0x1b9187){var _0x19666a=_0x5a76b4,_0x3f848b=String(_0x1b9187==null?'':_0x1b9187)[_0x19666a(0x143)]()['replace'](/\s+/g,'\x20'),_0x5ae953=/^(?:(.*?)[,\s]+)?(\d{5}) (.+)$/['exec'](_0x3f848b);if(!_0x5ae953)return{'rue':_0x3f848b,'cp':'','ville':''};return{'rue':(_0x5ae953[0x1]||'')[_0x19666a(0x128)](/[,\s]+$/,''),'cp':_0x5ae953[0x2],'ville':_0x5ae953[0x3][_0x19666a(0x128)](/[,\s]+$/,'')};},'villeAffichee':function(_0x3191f2){var _0xda139f=_0x5a76b4,_0x5cad7c=this[_0xda139f(0xe6)](_0x3191f2);if(!_0x5cad7c[_0xda139f(0x14a)])return'';var _0x55fe0b={'75':'Paris','69':_0xda139f(0x125),'13':_0xda139f(0x118)},_0x4410ab=_0x55fe0b[_0x5cad7c['cp'][_0xda139f(0x148)](0x0,0x2)];if(_0x4410ab&&_0x5cad7c['ville'][_0xda139f(0xf4)]()===_0x4410ab[_0xda139f(0xf4)]()&&/^(750|751|690|130)/[_0xda139f(0x171)](_0x5cad7c['cp'])){var _0x4c47f8=_0x5cad7c['cp']===_0xda139f(0xee)?0x10:parseInt(_0x5cad7c['cp'][_0xda139f(0x148)](0x3),0xa),_0x576820=_0x4410ab===_0xda139f(0x12c)?0x14:_0x4410ab===_0xda139f(0x125)?0x9:0x10;if(_0x4c47f8>=0x1&&_0x4c47f8<=_0x576820)return _0x4410ab+'\x20'+(_0x4c47f8===0x1?_0xda139f(0x142):_0x4c47f8+'e');}return _0x5cad7c[_0xda139f(0x14a)];},'adresseCourte':function(_0x73181d){var _0x2fec0f=_0x5a76b4,_0x39ac66=this['decouperAdresse'](_0x73181d),_0x296e1b=this[_0x2fec0f(0xf2)](_0x73181d);return _0x39ac66[_0x2fec0f(0xe7)]&&_0x296e1b?_0x39ac66[_0x2fec0f(0xe7)]+',\x20'+_0x296e1b:String(_0x73181d==null?'':_0x73181d)['trim']();},'aLaNom':function(_0x4d0cdf){var _0x25c662=_0x5a76b4,_0x1d18fd=String(_0x4d0cdf==null?'':_0x4d0cdf)[_0x25c662(0x143)]()[_0x25c662(0x128)](/\s+/g,'\x20');if(!_0x1d18fd)return _0x25c662(0x177);if(/^la /i[_0x25c662(0x171)](_0x1d18fd))return _0x25c662(0x13f)+_0x1d18fd[_0x25c662(0x148)](0x3);if(/^l['’]/i[_0x25c662(0x171)](_0x1d18fd))return _0x25c662(0x19a)+_0x1d18fd[_0x25c662(0x148)](0x2);if(/^((grande|petite|nouvelle|vieille) )?(para)?pharmacie\b/i[_0x25c662(0x171)](_0x1d18fd))return _0x25c662(0x13f)+_0x1d18fd;return _0x25c662(0xcf)+_0x1d18fd;}},PHARMA_ICONES_CONSEIL={'soleil':'<circle\x20cx=\x2212\x22\x20cy=\x2212\x22\x20r=\x225\x22/><line\x20x1=\x2212\x22\x20y1=\x221\x22\x20x2=\x2212\x22\x20y2=\x223\x22/><line\x20x1=\x2212\x22\x20y1=\x2221\x22\x20x2=\x2212\x22\x20y2=\x2223\x22/><line\x20x1=\x224.2\x22\x20y1=\x224.2\x22\x20x2=\x225.6\x22\x20y2=\x225.6\x22/><line\x20x1=\x2218.4\x22\x20y1=\x2218.4\x22\x20x2=\x2219.8\x22\x20y2=\x2219.8\x22/><line\x20x1=\x221\x22\x20y1=\x2212\x22\x20x2=\x223\x22\x20y2=\x2212\x22/><line\x20x1=\x2221\x22\x20y1=\x2212\x22\x20x2=\x2223\x22\x20y2=\x2212\x22/>','pilule':_0x5a76b4(0x12a),'goutte':_0x5a76b4(0x11a),'coeur':'<path\x20d=\x22M20.8\x204.6a5.5\x205.5\x200\x200\x200-7.8\x200L12\x205.7l-1-1.1a5.5\x205.5\x200\x200\x200-7.8\x207.8l8.8\x208.8\x208.8-8.8a5.5\x205.5\x200\x200\x200\x200-7.8z\x22/>','bouclier':_0x5a76b4(0x138),'feuille':_0x5a76b4(0x19f),'info':_0x5a76b4(0x146)},PharmaClients={'normEmail':function(_0x52f454){var _0x49ed84=_0x5a76b4;return String(_0x52f454==null?'':_0x52f454)[_0x49ed84(0x143)]()['toLowerCase']();},'normNom':function(_0x16838e){var _0x465c8b=_0x5a76b4;return String(_0x16838e==null?'':_0x16838e)[_0x465c8b(0x143)]()[_0x465c8b(0x128)](/\s+/g,'\x20')[_0x465c8b(0xf4)]();},'trouver':function(_0x25b40c,_0x4a6404,_0x402da3){var _0x3c8e75=_0x5a76b4,_0x4bc8b4=_0x25b40c&&_0x25b40c[_0x3c8e75(0xe5)]||[],_0xcf5f18=this[_0x3c8e75(0x18d)](_0x402da3),_0x33fd96=this[_0x3c8e75(0xd3)](_0x4a6404),_0x3d1f60=this;if(_0xcf5f18){var _0x1b906d=_0x4bc8b4[_0x3c8e75(0x1b7)](function(_0x1b5752){return _0x3d1f60['normEmail'](_0x1b5752['email'])===_0xcf5f18;})[0x0];if(_0x1b906d)return _0x1b906d;return _0x4bc8b4[_0x3c8e75(0x1b7)](function(_0x2d4dcf){var _0x4e1aad=_0x3c8e75;return _0x3d1f60['normNom'](_0x2d4dcf[_0x4e1aad(0x183)])===_0x33fd96&&!_0x3d1f60[_0x4e1aad(0x18d)](_0x2d4dcf[_0x4e1aad(0x170)]);})[0x0]||null;}if(!_0x33fd96)return null;return _0x4bc8b4[_0x3c8e75(0x1b7)](function(_0x4d3065){var _0x46bad5=_0x3c8e75;return _0x3d1f60['normNom'](_0x4d3065[_0x46bad5(0x183)])===_0x33fd96;})[0x0]||null;},'commandeAppartient':function(_0x74f4c,_0x1d72a9,_0x150e31){var _0x312614=_0x5a76b4,_0x25d640=this[_0x312614(0x18d)](_0x74f4c&&_0x74f4c[_0x312614(0x170)]),_0x233248=this[_0x312614(0x18d)](_0x150e31);if(_0x25d640&&_0x233248)return _0x25d640===_0x233248;return this[_0x312614(0xd3)](_0x74f4c&&_0x74f4c[_0x312614(0xcc)])===this[_0x312614(0xd3)](_0x1d72a9);}},PharmaFidelite={'config':function(_0x43473c){var _0x4767cb=_0x5a76b4,_0x5a2091=_0x43473c&&_0x43473c[_0x4767cb(0x126)]||{},_0x1ac9a3=parseInt(_0x5a2091[_0x4767cb(0x19b)],0xa),_0x6cd5a0=parseInt(_0x5a2091[_0x4767cb(0xf7)],0xa);return{'seuil':_0x1ac9a3>0x0?_0x1ac9a3:0x5,'reduction':_0x6cd5a0>0x0?_0x6cd5a0:0xa};},'progression':function(_0x3b2149,_0x4333b9){var _0x2f91ae=_0x5a76b4;_0x3b2149=Math[_0x2f91ae(0x1ad)](0x0,parseInt(_0x3b2149,0xa)||0x0);var _0x51cd16=_0x3b2149%_0x4333b9,_0x4a757e=_0x3b2149>0x0&&_0x51cd16===0x0;return{'courant':_0x4a757e?_0x4333b9:_0x51cd16,'atteint':_0x4a757e,'restant':_0x4a757e?0x0:_0x4333b9-_0x51cd16,'pct':Math[_0x2f91ae(0x145)]((_0x4a757e?_0x4333b9:_0x51cd16)/_0x4333b9*0x64)};},'codeActif':function(_0x3c007c,_0x36e399){var _0x3c3adc=_0x5a76b4;if(!_0x36e399)return null;var _0x1f7eec=pharmaDateLocale(),_0x4150ac=(_0x3c007c[_0x3c3adc(0xea)]||[])[_0x3c3adc(0x1b7)](function(_0x12424b){var _0x5b943c=_0x3c3adc,_0x194f32=String(_0x12424b[_0x5b943c(0x164)]||'');if(_0x194f32['indexOf'](_0x5b943c(0x111))!==0x0)return![];var _0x4a13f4=_0x12424b[_0x5b943c(0x152)]!==undefined?_0x12424b[_0x5b943c(0x152)]===_0x36e399['id']:_0x12424b[_0x5b943c(0xcc)]===_0x36e399['nom'];if(!_0x4a13f4||_0x12424b[_0x5b943c(0x109)]===![])return![];if(_0x12424b[_0x5b943c(0x161)]>0x0&&_0x12424b[_0x5b943c(0xf5)]>=_0x12424b[_0x5b943c(0x161)])return![];if(_0x12424b['expire']&&_0x12424b[_0x5b943c(0x187)]<_0x1f7eec)return![];return!![];});return _0x4150ac['length']?_0x4150ac[_0x4150ac[_0x3c3adc(0x12f)]-0x1]:null;}};
+// ============================================================
+// PHARMACIE DÉMO — Données partagées (admin.html / site.html / compte.html)
+// ============================================================
+// Ce fichier doit être chargé AVANT admin.js / site.js / compte.js
+// dans les 3 pages HTML (<script src="data.js"></script>).
+//
+// Principe : DATA est la source de vérité unique. Elle est chargée
+// depuis localStorage si elle existe déjà (visite précédente, ou
+// modification faite côté admin), sinon on part des données de
+// démonstration ci-dessous (identiques à celles historiquement
+// codées en dur dans admin.js).
+
+var PHARMA_STORAGE_KEY = 'pres-data';
+
+// Les données de démonstration utilisent des dates relatives à aujourd'hui :
+// sans cela, promos et codes seraient déjà expirés à la première ouverture.
+// Date au format AAAA-MM-JJ selon l'heure LOCALE (celle de la pharmacie), et non UTC :
+// avec toISOString(), entre minuit et 2 h du matin à Paris on obtiendrait la date de la veille.
+// Ce format se compare directement comme du texte (« 2026-10-12 » < « 2026-10-13 »).
+function pharmaDateLocale(d) {
+  d = d || new Date();
+  return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+}
+function _pharmaDate(joursDecalage) {
+  var d = new Date();
+  d.setDate(d.getDate() + joursDecalage);
+  return pharmaDateLocale(d);
+}
+
+// Photos des rayons proposées par défaut (dossier images/ du site). Elles se remplacent ou se
+// retirent dans l'admin (page Rayons), comme une photo ajoutée à la main.
+var PHARMA_PHOTOS_RAYONS_DEFAUT = {
+  'Solaire': 'images/rayon-solaire.jpg', 'Vitamines': 'images/rayon-vitamines.jpg', 'Hygiène': 'images/rayon-hygiene.jpg',
+  'Beauté': 'images/rayon-beaute.jpg', 'Bébé': 'images/rayon-bebe.jpg', 'Minceur': 'images/rayon-minceur.jpg',
+  'Aromathérapie': 'images/rayon-aromatherapie.jpg'
+};
+// Un produit de démonstration pour chacun des rayons qui n'en avaient pas (sinon le rayon n'apparaît pas sur le site)
+var PHARMA_PRODUITS_DEMO_RAYONS = [
+  { id:4, nom:'Sérum hydratant visage 30ml', ref:'BEA-001', cat:'Beauté', prix:18.90, stock:25, seuil:5, desc:'Sérum léger pour peaux déshydratées' },
+  { id:5, nom:'Liniment oléo-calcaire 500ml', ref:'BEB-001', cat:'Bébé', prix:7.50, stock:30, seuil:8, desc:'Nettoie et protège la peau de bébé au change' },
+  { id:6, nom:'Infusion citron-menthe 20 sachets', ref:'MIN-001', cat:'Minceur', prix:6.90, stock:18, seuil:5, desc:'Infusion de plantes, à boire chaud ou froid' },
+  { id:7, nom:'Huile essentielle Lavande vraie 10ml', ref:'ARO-001', cat:'Aromathérapie', prix:5.90, stock:22, seuil:5, desc:'Huile essentielle 100 % pure et naturelle' }
+];
+var PHARMA_SEED_DATA = {
+  categories: ['Solaire', 'Vitamines', 'Hygiène', 'Beauté', 'Bébé', 'Minceur', 'Aromathérapie'],
+  produits: [
+    { id:1, nom:'Crème Solaire SPF50 100ml', ref:'SOL-001', cat:'Solaire', prix:8.40, stock:45, seuil:10, desc:'Protection solaire haute performance' },
+    { id:2, nom:'Vitamine C 1000mg 60cp', ref:'VIT-012', cat:'Vitamines', prix:15.00, stock:7, seuil:10, desc:'Complément vitaminé' },
+    { id:3, nom:'Gel Douche Surgras 400ml', ref:'HYG-034', cat:'Hygiène', prix:6.20, stock:0, seuil:10, desc:'Gel doux pour peaux sensibles' }
+  ].concat(PHARMA_PRODUITS_DEMO_RAYONS),
+  promos: [
+    { id:1, produit:'Lot Crème Solaire SPF50 x3', prixNormal:25.20, prixPromo:18.90, pct:-25, debut:_pharmaDate(-15), fin:_pharmaDate(30), statut:'Active' }
+  ],
+  conseils: [
+    { id:1, icone:'soleil', titre:'Il fait chaud !', texte:'Hydratez-vous et protégez votre peau.', couleur:'#1B6B45', actif:true },
+    { id:2, icone:'pilule', titre:'Le saviez-vous ?', texte:'La Vitamine C booste l\'immunité, idéale en été contre la fatigue.', couleur:'#D9A441', actif:true },
+    { id:3, icone:'goutte', titre:'Hydratation', texte:'Buvez au moins 1,5L d\'eau par jour, surtout en été !', couleur:'#2ECC7A', actif:true }
+  ],
+  codesPromo: [
+    { code:'PHARM-MD10', client:'Marie Dupont', pct:10, scope:'Tous', origine:'Auto (fidélité)', usages:0, maxUsages:1, expire:_pharmaDate(20), actif:true },
+    { code:'PHARM-AB15', client:'Ahmed Benali', pct:15, scope:'Solaire', origine:'Manuel', usages:1, maxUsages:2, expire:_pharmaDate(45), actif:true },
+    { code:'BIENVENUE', client:'Tous les clients', pct:5, scope:'Tous', origine:'Manuel', usages:0, maxUsages:0, expire:'', actif:true },
+    { code:'ETE2025', client:'Tous les clients', pct:20, scope:'Solaire', origine:'Manuel', usages:0, maxUsages:0, expire:_pharmaDate(60), actif:true }
+  ],
+  // Alertes internes affichées dans la cloche de l'admin
+  // (remplacent l'email d'alerte à la pharmacie)
+  alertes: [],
+  // Historique des notifications envoyées aux clients
+  notifications: [],
+  // Journal des emails automatiques (confirmation, commande prête, code
+  // fidélité) : permet de savoir si un envoi a réussi ou échoué.
+  emailLog: [],
+  clients: [
+    { id:1, nom:'Marie Dupont', email:'marie.d@email.com', tel:'06 12 34 56 78', type:'Compte', notifs:'Email + SMS', rgpd:true, achats:5, depenses:120 },
+    { id:2, nom:'Ahmed Benali', email:'ahmed.b@email.com', tel:'06 98 76 54 32', type:'Compte', notifs:'Email', rgpd:true, achats:3, depenses:76 },
+    { id:3, nom:'Sophie Laurent', email:'s.laurent@email.com', tel:'', type:'Invité', notifs:'Email', rgpd:false, achats:1, depenses:6.20 }
+  ],
+  employes: [
+    { id:1, nom:'Admin Principal', email:'admin@pharmacie-demo.test', role:'Admin', acces:'Tout', actif:true },
+    { id:2, nom:'Karim Mansouri', email:'k.mansouri@pharmacie-demo.test', role:'Employé', acces:'Commandes + Tickets', actif:true }
+  ],
+  // Aucune commande de démonstration : les commandes proviennent du site client.
+  commandes: [],
+  tickets: [
+    { id:'#T-087', client:'Jean Pierre', type:'Problème commande', sujet:'Produit manquant', commande:'#1039', doc:true, priorite:'Urgent', statut:'Ouvert' },
+    { id:'#T-086', client:'Fatima Kaci', type:'Question produit', sujet:'Crème peaux sensibles ?', commande:'', doc:false, priorite:'Normal', statut:'En cours' }
+  ],
+  messages: [
+    { id:1, de:'Karim Mansouri', msg:'Stock Vitamine C très bas, penser à renouveler.', heure:'09h15', lu:false },
+    { id:2, de:'Admin Principal', msg:'Merci, commande passée ce matin.', heure:'09h32', lu:true }
+  ],
+  horaires: {
+    lundi:    { ouvert:true, debut:'09:00', fin:'21:00' },
+    mardi:    { ouvert:true, debut:'09:00', fin:'21:00' },
+    mercredi: { ouvert:true, debut:'09:00', fin:'21:00' },
+    jeudi:    { ouvert:true, debut:'09:00', fin:'21:00' },
+    vendredi: { ouvert:true, debut:'09:00', fin:'21:00' },
+    samedi:   { ouvert:true, debut:'09:00', fin:'21:00' },
+    dimanche: { ouvert:true, debut:'09:00', fin:'20:00' }
+  },
+  // Photos des rayons de la page d'accueil ({ 'Solaire': adresse de la photo }), ajoutées dans l'admin.
+  // Les photos des produits sont dans le champ « photo » de chaque produit.
+  photosRayons: JSON.parse(JSON.stringify(PHARMA_PHOTOS_RAYONS_DEFAUT)),
+  // Repère : les photos par défaut ci-dessus ont déjà été proposées (une seule fois, voir migrer)
+  photosRayonsDefaut: 1,
+  // Contenu des rayons, dans l'ordre choisi dans l'admin ({ 'Bébé': [4, 1] }). Un produit figure toujours
+  // dans son rayon principal (champ « cat ») ; cette liste ajoute d'autres rayons et règle l'ordre d'affichage.
+  contenuRayons: {},
+  // Rayons masqués sur le site (bouton de la page Rayons de l'admin). Leurs produits restent en vente.
+  rayonsMasques: [],
+  joursSpeciaux: [
+    { date:_pharmaDate(5), type:'Garde', debut:'08:00', fin:'20:00', msg:'Pharmacie de garde — Ouverts de 8h à 20h' },
+    { date:_pharmaDate(40), type:'Fermeture', debut:'', fin:'', msg:'Fermés exceptionnellement ce jour' }
+  ],
+  parametres: {
+    nom: 'Pharmacie Démo',
+    adresse: '1 rue de l’Exemple, 75000 Paris',
+    tel: '01 00 00 00 00',
+    email: 'contact@pharmacie-demo.test',
+    couleurPrimaire: '#1B6B45',
+    logoTexte: 'Pharmacie Démo',
+    bandeauActif: true,
+    bandeauMsg: 'Version de démonstration : pharmacie fictive, aucune commande réelle',
+    restrictionEmployes: true,
+    rapportJour: 'lundi',
+    rapportHeure: '08:00',
+    rapportEmail: 'contact@pharmacie-demo.test',
+    fideliteSeuil: 5,
+    fideliteReduction: 10,
+    // ── INFORMATIONS LÉGALES (obligatoires avant mise en ligne) ──
+    // Article 1-1 de la LCEN + obligations propres aux officines.
+    // Les valeurs entre crochets sont des marqueurs à compléter.
+    legal: {
+      raisonSociale: 'PHARMACIE DÉMO (fictive)',
+      formeJuridique: 'SELASU (Société d\'exercice libéral par actions simplifiée à associé unique)',
+      capital: '[Capital social à compléter]',
+      siret: '[SIRET à compléter]',
+      rcs: '[RCS à compléter]',
+      tva: '[N° TVA intracommunautaire à compléter]',
+      titulaire: '[Nom et prénom du pharmacien titulaire à compléter]',
+      numeroOrdre: '[N° d\'inscription à l\'Ordre à compléter]',
+      directeurPublication: '[Nom du directeur de la publication à compléter]',
+      ars: 'Agence Régionale de Santé Île-de-France — 35 rue de la Gare, 75019 Paris',
+      licence: '[N° de licence d\'officine à compléter]',
+      hebergeur: 'Netlify, Inc. — 512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis',
+      hebergeurTel: '[Téléphone de l\'hébergeur à compléter]',
+      mediateur: '[Médiateur de la consommation à compléter]'
+    },
+    // ── DÉCOMPTE DES EMAILS RESTANTS (EmailJS) ──
+    // { releve: nombre relevé dans EmailJS, releveLe: date du relevé, envoyes: envois réussis depuis }
+    emailQuota: null,
+    // ── ENVOI D'EMAILS (EmailJS) ──
+    // Identifiants du compte EmailJS de la pharmacie (section Emails de
+    // l'admin). La clé publique est faite pour être visible dans une page web ;
+    // la clé PRIVÉE ne doit jamais être saisie ici.
+    emailjs: {
+      actif: false,
+      serviceId: '',
+      templateId: '',
+      publicKey: '',
+      logoUrl: '',   // optionnel : adresse https d'un logo PNG/JPG pour les emails
+      siteUrl: ''    // optionnel : adresse publique du site (bouton « Suivre ma commande »)
+    },
+    // Événements déclenchant un email automatique.
+    // Seuls les 3 premiers sont réalisables sans serveur (déclenchés par une
+    // action dans le navigateur) ; les autres nécessitent un serveur.
+    notifAuto: {
+      commandeRecue: true,
+      commandePrete: true,
+      codeFidelite: true
+    }
+  }
+};
+
+// ── ALERTES ADMIN ──────────────────────────────────────────
+// Crée une alerte visible dans la cloche du back-office.
+// Appelée depuis site.js (nouvelle commande, stock bas) et admin.js.
+// Les alertes sont plafonnées pour ne pas faire grossir le stockage indéfiniment.
+var PHARMA_MAX_ALERTES = 50;
+// Compteur incrémental : garantit l'unicité même si plusieurs alertes
+// sont créées dans la même milliseconde (Date.now() seul ne suffit pas).
+var _pharmaAlerteSeq = 0;
+function pharmaAjouterAlerte(data, type, titre, texte, lien) {
+  if (!data.alertes) data.alertes = [];
+  var id;
+  do {
+    _pharmaAlerteSeq++;
+    id = Date.now() * 1000 + (_pharmaAlerteSeq % 1000);
+  } while (data.alertes.some(function(a){ return a.id === id; }));
+  data.alertes.unshift({
+    id: id,
+    type: type,           // 'commande' | 'stock' | 'ticket' | 'fidelite'
+    titre: titre,
+    texte: texte,
+    lien: lien || '',     // page admin à ouvrir au clic
+    timestamp: new Date().toISOString(),
+    lu: false
+  });
+  if (data.alertes.length > PHARMA_MAX_ALERTES) {
+    data.alertes = data.alertes.slice(0, PHARMA_MAX_ALERTES);
+  }
+}
+
+// ── COUCHE DE PERSISTANCE ──────────────────────────────────
+var PharmaStore = {
+  // Charge DATA depuis localStorage, ou initialise avec les données de démo
+  load: function() {
+    var raw = null;
+    try { raw = localStorage.getItem(PHARMA_STORAGE_KEY); } catch (e) {}
+    if (raw) {
+      try {
+        var lu = JSON.parse(raw);
+        var dejaComplete = !!(lu && lu.photosRayonsDefaut === 1);
+        var data = this.migrer(lu);
+        // Ajout unique (photos et produits de démonstration) : enregistré tout de suite, pour qu'une photo
+        // retirée ensuite dans l'admin ne revienne pas au prochain chargement
+        if (!dejaComplete) this.save(data);
+        return data;
+      } catch (e) {
+        console.warn('pres-data corrompu, réinitialisation avec les données de démo.', e);
+      }
+    }
+    // Rien de valide en localStorage : on seed avec les données de démo
+    var seed = JSON.parse(JSON.stringify(PHARMA_SEED_DATA));
+    this.save(seed);
+    return seed;
+  },
+  // Complète les données sauvegardées avec les champs ajoutés depuis, et
+  // répare celles dont le type est incorrect (données corrompues, version
+  // antérieure incompatible). Sans cette vérification de type, un champ
+  // corrompu ferait planter tout le site au premier .filter() ou .map().
+  migrer: function(data) {
+    if (!data || typeof data !== 'object' || Array.isArray(data)) {
+      return JSON.parse(JSON.stringify(PHARMA_SEED_DATA));
+    }
+    var copie = function(v) {
+      return (v && typeof v === 'object') ? JSON.parse(JSON.stringify(v)) : v;
+    };
+    // Une seule fois : photos de rayons par défaut et produits de démonstration des rayons vides.
+    // Un rayon supprimé, une photo déjà choisie ou un produit déjà présent ne sont pas touchés ;
+    // une photo retirée ensuite dans l'admin ne revient pas (repère photosRayonsDefaut).
+    if (data.photosRayonsDefaut !== 1) {
+      var cats = Array.isArray(data.categories) ? data.categories : [];
+      if (!data.photosRayons || typeof data.photosRayons !== 'object' || Array.isArray(data.photosRayons)) data.photosRayons = {};
+      Object.keys(PHARMA_PHOTOS_RAYONS_DEFAUT).forEach(function(cat) {
+        if (cats.indexOf(cat) !== -1 && !data.photosRayons[cat]) data.photosRayons[cat] = PHARMA_PHOTOS_RAYONS_DEFAUT[cat];
+      });
+      if (Array.isArray(data.produits)) {
+        var maxId = data.produits.reduce(function(m, p) { return Math.max(m, (p && parseInt(p.id, 10)) || 0); }, 0);
+        PHARMA_PRODUITS_DEMO_RAYONS.forEach(function(p) {
+          var dejaRef = data.produits.some(function(x) { return x && x.ref === p.ref; });
+          var rayonVide = !data.produits.some(function(x) { return x && x.cat === p.cat; });
+          if (!dejaRef && rayonVide && cats.indexOf(p.cat) !== -1) { var n = copie(p); n.id = ++maxId; data.produits.push(n); }
+        });
+      }
+      data.photosRayonsDefaut = 1;
+    }
+    Object.keys(PHARMA_SEED_DATA).forEach(function(cle) {
+      var attendu = PHARMA_SEED_DATA[cle];
+      var actuel = data[cle];
+      var typeOk;
+      if (Array.isArray(attendu)) {
+        typeOk = Array.isArray(actuel);
+      } else if (attendu && typeof attendu === 'object') {
+        typeOk = actuel && typeof actuel === 'object' && !Array.isArray(actuel);
+      } else {
+        typeOk = actuel !== undefined && actuel !== null;
+      }
+      if (!typeOk) data[cle] = copie(attendu);
+    });
+    // Les paramètres sont complétés champ par champ (nouveaux réglages ajoutés au fil des versions)
+    Object.keys(PHARMA_SEED_DATA.parametres).forEach(function(cle) {
+      var attendu = PHARMA_SEED_DATA.parametres[cle];
+      var actuel = data.parametres[cle];
+      var typeOk = (attendu && typeof attendu === 'object')
+        ? (actuel && typeof actuel === 'object')
+        : (actuel !== undefined && actuel !== null);
+      if (!typeOk) data.parametres[cle] = copie(attendu);
+      else if (attendu && typeof attendu === 'object' && !Array.isArray(attendu)) {
+        // Réglages imbriqués (emailjs, legal, notifAuto) : on ajoute les champs
+        // introduits depuis, sans toucher à ceux déjà renseignés.
+        Object.keys(attendu).forEach(function(sous) {
+          if (data.parametres[cle][sous] === undefined || data.parametres[cle][sous] === null) {
+            data.parametres[cle][sous] = copie(attendu[sous]);
+          }
+        });
+      }
+    });
+    // Horaires : un jour manquant est complété (sinon l'affichage des horaires planterait)
+    Object.keys(PHARMA_SEED_DATA.horaires).forEach(function(jour) {
+      var h = data.horaires[jour];
+      if (!h || typeof h !== 'object') data.horaires[jour] = copie(PHARMA_SEED_DATA.horaires[jour]);
+    });
+    // Anciens libellés d'origine des codes de démo (avant la fidélité par cycle)
+    if (Array.isArray(data.codesPromo)) {
+      data.codesPromo.forEach(function(c) {
+        if (!c) return;
+        if (c.origine === 'Auto (5 achats)') c.origine = 'Auto (fidélité)';
+        else if (c.origine === 'Auto (150€)') c.origine = 'Manuel';
+      });
+    }
+    return data;
+  },
+  // Sauvegarde l'objet DATA complet dans localStorage
+  save: function(data) {
+    try {
+      localStorage.setItem(PHARMA_STORAGE_KEY, JSON.stringify(data));
+      return true;
+    } catch (e) {
+      console.error('Impossible de sauvegarder pharma-data (quota localStorage dépassé ?)', e);
+      return false;
+    }
+  },
+  // Modifie les données à partir de leur état LE PLUS RÉCENT en stockage, puis
+  // sauvegarde. À utiliser pour toute écriture différée (après un envoi
+  // d'email par exemple) : sauvegarder une copie en mémoire plus ancienne
+  // écraserait ce qu'un autre onglet (admin, site) a écrit entre-temps.
+  mettreAJour: function(fn) {
+    var frais = this.load();
+    fn(frais);
+    this.save(frais);
+    return frais;
+  },
+  // Réinitialise complètement aux données de démo (utile pour les tests)
+  reset: function() {
+    var seed = JSON.parse(JSON.stringify(PHARMA_SEED_DATA));
+    this.save(seed);
+    return seed;
+  }
+};
+
+// ── VALIDATION D'EMAIL (commune au site, à l'admin et aux envois) ──
+// Une seule adresse, sans espace, virgule ni point-virgule : on ne peut pas glisser
+// plusieurs destinataires dans le champ pour détourner l'envoi d'emails.
+var PHARMA_EMAIL_RE = /^[A-Za-z0-9._%+'-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/;
+function pharmaEmailValide(e) {
+  var s = String(e == null ? '' : e).trim();
+  return s.length > 0 && s.length <= 200 && PHARMA_EMAIL_RE.test(s);
+}
+
+// ── PHOTOS DES PRODUITS ET DES RAYONS ──────────────────────
+// Une photo n'est affichée que si son adresse a l'une de ces trois formes :
+//  * une image du bucket « photos » d'un projet Supabase (mode base de données) ;
+//  * une image JPEG, PNG ou WebP gardée dans le navigateur (mode démonstration) ;
+//  * un fichier du dossier images/ du site (photos des rayons proposées par défaut).
+// Toute autre valeur (adresse d'un autre site, javascript:, guillemets) est ignorée :
+// une adresse modifiée ne peut ni injecter de code ni charger une image d'ailleurs.
+var PHARMA_PHOTO_URL_RE = /^https:\/\/[a-z0-9-]+\.supabase\.co\/storage\/v1\/object\/public\/photos\/[A-Za-z0-9_-]+([.\/][A-Za-z0-9_-]+)*$/;
+var PHARMA_PHOTO_DATA_RE = /^data:image\/(jpeg|png|webp);base64,[A-Za-z0-9+\/]+={0,2}$/;
+var PHARMA_PHOTO_DATA_MAX = 700000;   // environ 500 Ko d'image
+// Troisième forme : un fichier du dossier images/ livré avec le site (photos des rayons par défaut)
+var PHARMA_PHOTO_LOCALE_RE = /^images\/[a-z0-9-]{1,60}\.(jpg|jpeg|png|webp)$/;
+function pharmaPhotoValide(v) {
+  var s = (typeof v === 'string') ? v : '';
+  if (s.length <= 400 && PHARMA_PHOTO_URL_RE.test(s)) return s;
+  if (s.length <= PHARMA_PHOTO_DATA_MAX && PHARMA_PHOTO_DATA_RE.test(s)) return s;
+  if (PHARMA_PHOTO_LOCALE_RE.test(s)) return s;
+  return '';
+}
+// Photo d'un rayon (catégorie), ou '' s'il n'en a pas
+function pharmaPhotoRayon(data, cat) {
+  var photos = data && data.photosRayons;
+  if (!photos || typeof photos !== 'object' || !Object.prototype.hasOwnProperty.call(photos, cat)) return '';
+  return pharmaPhotoValide(photos[cat]);
+}
+
+// ── RAYONS : contenu, ordre et adresse de leur page ─────────
+// Rayon affiché sur le site (sinon masqué depuis la page Rayons de l'admin)
+function pharmaRayonVisible(data, nom) {
+  var m = data && data.rayonsMasques;
+  return !(Array.isArray(m) && m.indexOf(nom) !== -1);
+}
+// Adresse d'un rayon : « Hygiène » → « hygiene » (site.html?rayon=hygiene)
+function pharmaSlugRayon(nom) {
+  return String(nom == null ? '' : nom).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60);
+}
+function pharmaRayonDepuisSlug(data, slug) {
+  var s = String(slug == null ? '' : slug).toLowerCase();
+  return ((data && data.categories) || []).find(function(c) { return pharmaSlugRayon(c) === s; }) || null;
+}
+// Liste ordonnée des numéros de produits d'un rayon (sans doublon), ou []
+function pharmaListeRayon(data, nom) {
+  var c = data && data.contenuRayons;
+  var l = (c && typeof c === 'object' && Object.prototype.hasOwnProperty.call(c, nom) && Array.isArray(c[nom])) ? c[nom] : [];
+  return l.filter(function(id, i) { return l.indexOf(id) === i; });
+}
+// Produits d'un rayon, dans l'ordre choisi : ceux de la liste d'abord, puis ceux dont c'est le rayon
+// principal et qui n'y ont pas encore été placés
+function pharmaProduitsDuRayon(data, nom) {
+  var produits = (data && data.produits) || [];
+  var liste = pharmaListeRayon(data, nom);
+  var parId = {};
+  produits.forEach(function(p) { parId[p.id] = p; });
+  var res = liste.map(function(id) { return parId[id]; }).filter(Boolean);
+  produits.forEach(function(p) { if (p.cat === nom && res.indexOf(p) === -1) res.push(p); });
+  return res;
+}
+// Rayons d'un produit : son rayon principal, puis les autres (dans l'ordre des rayons)
+function pharmaRayonsDuProduit(data, produit) {
+  if (!produit) return [];
+  var res = produit.cat ? [produit.cat] : [];
+  ((data && data.categories) || []).forEach(function(nom) {
+    if (res.indexOf(nom) === -1 && pharmaListeRayon(data, nom).indexOf(produit.id) !== -1) res.push(nom);
+  });
+  return res;
+}
+
+// ── CARTE DE FIDÉLITÉ : NUMÉRO ET CODE-BARRES (Code 128) ────
+// Le numéro ne change jamais (ni avec l'année, ni avec le nom) : il vient du numéro du client.
+function pharmaNumeroFidelite(client) {
+  var id = parseInt(client && client.id, 10);
+  return 'FID-' + ('000000' + (id > 0 ? id : 0)).slice(-6);
+}
+// Retrouve le numéro de client à partir d'un numéro de carte lu par la douchette (« FID-000123 » → 123)
+function pharmaIdDepuisCarte(texte) {
+  var m = /^\s*FID-?0*(\d{1,9})\s*$/i.exec(String(texte == null ? '' : texte));
+  return m ? parseInt(m[1], 10) : null;
+}
+// Largeurs des barres et des espaces de chaque symbole Code 128 (valeurs 0 à 106 ; 104 = début B, 106 = fin)
+var PHARMA_CODE128 = ('212222 222122 222221 121223 121322 131222 122213 122312 132212 221213 221312 231212 112232 122132 122231 113222 '
+  + '123122 123221 223211 221132 221231 213212 223112 312131 311222 321122 321221 312212 322112 322211 212123 212321 232121 111323 '
+  + '131123 131321 112313 132113 132311 211313 231113 231311 112133 112331 132131 113123 113321 133121 313121 211331 231131 213113 '
+  + '213311 213131 311123 311321 331121 312113 312311 332111 314111 221411 431111 111224 111422 121124 121421 141122 141221 112214 '
+  + '112412 122114 122411 142112 142211 241211 221114 413111 241112 134111 111242 121142 121241 114212 124112 124211 411212 421112 '
+  + '421211 212141 214121 412121 111143 111341 131141 114113 114311 411113 411311 113141 114131 311141 411131 211412 211214 211232 2331112').split(' ');
+// Emblème de la pharmacie (croix et serpent) vu à travers les barres du code : il colore les barres
+// sans changer leur dessin ni toucher aux espaces blancs, le code reste donc lisible.
+// Dessin dans un carré de 100 x 100.
+var PHARMA_EMBLEME = {
+  croix: 'M37 4h26a5 5 0 0 1 5 5v23h23a5 5 0 0 1 5 5v26a5 5 0 0 1-5 5H68v23a5 5 0 0 1-5 5H37a5 5 0 0 1-5-5V68H9a5 5 0 0 1-5-5V37a5 5 0 0 1 5-5h23V9a5 5 0 0 1 5-5z',
+  serpent: 'M50 94C26 86 28 72 50 66S74 50 50 42S26 26 46 18'
+};
+var PHARMA_EMBLEME_COULEURS = {
+  // Carte décorative de l'accueil : croix verte, serpent rouge
+  vitrine: { encre: '#1A2620', croix: '#22985E', serpent: '#D23F35' },
+  // Carte à scanner au comptoir : teintes foncées uniquement. Les douchettes éclairent en rouge :
+  // une barre rouge leur paraîtrait blanche et le code ne se lirait plus.
+  lecture: { encre: '#0B0F0D', croix: '#1B6B45', serpent: '#0B0F0D' }
+};
+var pharmaCodeBarresNum = 0;
+
+// Code-barres SVG. Lettres et tirets en jeu B ; une suite finale d'au moins 4 chiffres (en nombre pair)
+// passe en jeu C, deux chiffres par symbole : le code est plus court, donc ses barres plus larges.
+// options.embleme ('vitrine' ou 'lecture') : emblème dans les barres. Le dessin garde alors ses
+// proportions (hauteur en nombre de modules, comme la largeur) pour que la croix ne soit pas déformée.
+// Renvoie '' pour un texte non encodable.
+function pharmaCodeBarres(texte, hauteur, options) {
+  var t = String(texte == null ? '' : texte);
+  if (!t || t.length > 40 || /[^\x20-\x7E]/.test(t)) return '';
+  var m = /^(.*?)((?:\d\d){2,})$/.exec(t);
+  var debut = m ? m[1] : t, chiffres = m ? m[2] : '';
+  var valeurs = debut ? [104] : [105];
+  for (var i = 0; i < debut.length; i++) valeurs.push(debut.charCodeAt(i) - 32);
+  if (chiffres) {
+    if (debut) valeurs.push(99);   // passage au jeu C
+    for (var c = 0; c < chiffres.length; c += 2) valeurs.push(parseInt(chiffres.substr(c, 2), 10));
+  }
+  var somme = valeurs[0];
+  for (var j = 1; j < valeurs.length; j++) somme += valeurs[j] * j;
+  valeurs.push(somme % 103, 106);
+  var x = 10, barres = '';   // 10 modules de marge blanche de chaque côté (exigée par les lecteurs)
+  valeurs.forEach(function(v) {
+    var motif = PHARMA_CODE128[v];
+    for (var k = 0; k < motif.length; k++) {
+      var l = parseInt(motif.charAt(k), 10);
+      if (k % 2 === 0) barres += '<rect x="' + x + '" y="0" width="' + l + '" height="' + (hauteur || 50) + '"/>';
+      x += l;
+    }
+  });
+  var largeur = x + 10, h = hauteur || 50;
+  var nom = 'Code-barres ' + t.replace(/[<>&"]/g, '');
+  var couleurs = options && PHARMA_EMBLEME_COULEURS[options.embleme];
+  if (!couleurs) {
+    return '<svg class="code-barres-svg" data-modules="' + largeur + '" viewBox="0 0 ' + largeur + ' ' + h + '" preserveAspectRatio="none" shape-rendering="crispEdges" role="img" aria-label="' + nom + '"><rect width="' + largeur + '" height="' + h + '" fill="#fff"/><g fill="#000">' + barres + '</g></svg>';
+  }
+  // Barres à l'encre, puis l'emblème découpé dans ces mêmes barres (centré, presque toute la hauteur)
+  var id = 'cb-barres-' + (++pharmaCodeBarresNum);
+  var taille = h * 0.96, ex = (largeur - taille) / 2, ey = (h - taille) / 2;
+  return '<svg class="code-barres-svg avec-embleme" data-modules="' + largeur + '" viewBox="0 0 ' + largeur + ' ' + h + '" shape-rendering="crispEdges" role="img" aria-label="' + nom + '">' +
+    '<defs><clipPath id="' + id + '">' + barres + '</clipPath></defs>' +
+    '<rect width="' + largeur + '" height="' + h + '" fill="#fff"/><g fill="' + couleurs.encre + '">' + barres + '</g>' +
+    '<g clip-path="url(#' + id + ')"><g transform="translate(' + ex + ' ' + ey + ') scale(' + (taille / 100) + ')" shape-rendering="geometricPrecision">' +
+    '<path d="' + PHARMA_EMBLEME.croix + '" fill="' + couleurs.croix + '"/>' +
+    '<path d="' + PHARMA_EMBLEME.serpent + '" fill="none" stroke="' + couleurs.serpent + '" stroke-width="9" stroke-linecap="round"/>' +
+    '<circle cx="47" cy="17" r="6.5" fill="' + couleurs.serpent + '"/></g></g></svg>';
+}
+
+// Largeur du code-barres calée sur les pixels de l'écran : chaque barre fait un nombre entier de pixels
+// (sinon, sur un écran ordinaire, les barres fines se brouillent et la douchette ne lit plus)
+function pharmaAjusterCodeBarres(conteneur) {
+  var svg = conteneur && conteneur.querySelector('svg[data-modules]');
+  if (!svg) return;
+  var modules = parseInt(svg.getAttribute('data-modules'), 10);
+  var dpr = window.devicePixelRatio || 1;
+  var dispo = conteneur.clientWidth - (parseFloat(getComputedStyle(conteneur).paddingLeft) || 0) - (parseFloat(getComputedStyle(conteneur).paddingRight) || 0);
+  if (!(dispo > 0)) return;   // carte encore masquée (onglet fermé) : calée à son affichage
+  var k = Math.max(1, Math.floor(dispo * dpr / modules)) / dpr;
+  svg.style.width = (modules * k) + 'px';
+  svg.style.marginLeft = svg.style.marginRight = 'auto';
+}
+
+// ── NOM ET ADRESSE DANS LES TEXTES DU SITE ─────────────────
+// Les phrases du site reprennent le nom et la ville saisis dans l'admin (Paramètres) :
+// rien n'est à retaper ailleurs quand la pharmacie change de nom ou d'adresse.
+var PharmaTextes = {
+  // « 37 Bd. Roger Salengro, 78711 Mantes-la-Ville » → { rue, cp, ville }
+  decouperAdresse: function(adresse) {
+    var a = String(adresse == null ? '' : adresse).trim().replace(/\s+/g, ' ');
+    var m = /^(?:(.*?)[,\s]+)?(\d{5}) (.+)$/.exec(a);
+    if (!m) return { rue: a, cp: '', ville: '' };
+    return { rue: (m[1] || '').replace(/[,\s]+$/, ''), cp: m[2], ville: m[3].replace(/[,\s]+$/, '') };
+  },
+  // Ville affichée, avec l'arrondissement à Paris, Lyon et Marseille (75017 Paris → « Paris »)
+  villeAffichee: function(adresse) {
+    var d = this.decouperAdresse(adresse);
+    if (!d.ville) return '';
+    var grandes = { '75': 'Paris', '69': 'Lyon', '13': 'Marseille' };
+    var base = grandes[d.cp.slice(0, 2)];
+    if (base && d.ville.toLowerCase() === base.toLowerCase() && /^(750|751|690|130)/.test(d.cp)) {
+      var n = d.cp === '75116' ? 16 : parseInt(d.cp.slice(3), 10);
+      var max = base === 'Paris' ? 20 : (base === 'Lyon' ? 9 : 16);
+      if (n >= 1 && n <= max) return base + ' ' + (n === 1 ? '1er' : n + 'e');
+    }
+    return d.ville;
+  },
+  // « 1 rue de l’Exemple, Paris »
+  adresseCourte: function(adresse) {
+    var d = this.decouperAdresse(adresse), ville = this.villeAffichee(adresse);
+    return (d.rue && ville) ? d.rue + ', ' + ville : String(adresse == null ? '' : adresse).trim();
+  },
+  // « à la Pharmacie So Ouest », « à La Grande Pharmacie », « chez Espace Santé »
+  aLaNom: function(nom) {
+    var n = String(nom == null ? '' : nom).trim().replace(/\s+/g, ' ');
+    if (!n) return 'en pharmacie';
+    if (/^la /i.test(n)) return 'à la ' + n.slice(3);
+    if (/^l['’]/i.test(n)) return 'à l\'' + n.slice(2);
+    if (/^((grande|petite|nouvelle|vieille) )?(para)?pharmacie\b/i.test(n)) return 'à la ' + n;
+    return 'chez ' + n;
+  }
+};
+
+// ── ICÔNES DES CONSEILS (admin et page d'accueil) ──
+var PHARMA_ICONES_CONSEIL = {
+  soleil:   '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>',
+  pilule:   '<path d="M10.5 20.5L3.5 13.5a5 5 0 0 1 7-7l7 7a5 5 0 0 1-7 7z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/>',
+  goutte:   '<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>',
+  coeur:    '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/>',
+  bouclier: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  feuille:  '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/>',
+  info:     '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>'
+};
+
+// ── CLIENTS : identification ───────────────────────────────
+// L'email identifie un client. Le nom seul ne suffit pas : deux personnes
+// peuvent s'appeler « Marie Dupont » et ne doivent pas partager leur
+// compteur de fidélité. Le nom sert de repli uniquement quand aucun email
+// n'est connu (anciennes fiches, profil client non renseigné).
+var PharmaClients = {
+  normEmail: function(e) { return String(e == null ? '' : e).trim().toLowerCase(); },
+  normNom: function(n) { return String(n == null ? '' : n).trim().replace(/\s+/g, ' ').toLowerCase(); },
+  trouver: function(data, nom, email) {
+    var liste = (data && data.clients) || [];
+    var e = this.normEmail(email);
+    var n = this.normNom(nom);
+    var self = this;
+    if (e) {
+      var parEmail = liste.filter(function(c) { return self.normEmail(c.email) === e; })[0];
+      if (parEmail) return parEmail;
+      // Email inconnu : on ne reprend une fiche existante par son nom que si
+      // elle n'a pas d'email (sinon c'est une autre personne du même nom).
+      return liste.filter(function(c) { return self.normNom(c.nom) === n && !self.normEmail(c.email); })[0] || null;
+    }
+    if (!n) return null;
+    return liste.filter(function(c) { return self.normNom(c.nom) === n; })[0] || null;
+  },
+  // Une commande appartient-elle à ce client ? (email si les deux le connaissent, sinon nom)
+  commandeAppartient: function(commande, nom, email) {
+    var ec = this.normEmail(commande && commande.email);
+    var e = this.normEmail(email);
+    if (ec && e) return ec === e;
+    return this.normNom(commande && commande.client) === this.normNom(nom);
+  }
+};
+
+// ── FIDÉLITÉ : règles partagées (site, compte client, admin) ──
+// Le palier et la réduction se règlent dans l'admin. Le compteur « achats »
+// ne fait qu'augmenter ; la progression affichée est calculée par cycle :
+// après chaque code débloqué, le client repart de 0 (6e achat = 1 / 5).
+var PharmaFidelite = {
+  config: function(data) {
+    var p = (data && data.parametres) || {};
+    var seuil = parseInt(p.fideliteSeuil, 10);
+    var reduction = parseInt(p.fideliteReduction, 10);
+    return { seuil: seuil > 0 ? seuil : 5, reduction: reduction > 0 ? reduction : 10 };
+  },
+  progression: function(achats, seuil) {
+    achats = Math.max(0, parseInt(achats, 10) || 0);
+    var reste = achats % seuil;
+    var atteint = achats > 0 && reste === 0;
+    return {
+      courant: atteint ? seuil : reste,   // 5 / 5 au palier, puis 1 / 5, 2 / 5...
+      atteint: atteint,
+      restant: atteint ? 0 : seuil - reste,
+      pct: Math.round((atteint ? seuil : reste) / seuil * 100)
+    };
+  },
+  // Code fidélité actuellement utilisable par ce client (le plus récent), ou null
+  codeActif: function(data, client) {
+    if (!client) return null;
+    var aujourdhui = pharmaDateLocale();
+    var codes = (data.codesPromo || []).filter(function(c) {
+      var origine = String(c.origine || '');
+      if (origine.indexOf('Auto (fidélité)') !== 0) return false;
+      var sien = (c.clientId !== undefined) ? c.clientId === client.id : c.client === client.nom;
+      if (!sien || c.actif === false) return false;
+      if (c.maxUsages > 0 && c.usages >= c.maxUsages) return false;
+      if (c.expire && c.expire < aujourdhui) return false;
+      return true;
+    });
+    return codes.length ? codes[codes.length - 1] : null;
+  }
+};

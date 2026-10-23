@@ -1,2 +1,2778 @@
 /* © 2026 Alexis Ngakosso. Tous droits réservés. Reproduction, modification ou réutilisation interdites sans autorisation écrite. */
-var _0x5d326d=_0x42b5;(function(_0x2fded4,_0x4d1190){var _0x2b239d=_0x42b5,_0x1c97be=_0x2fded4();while(!![]){try{var _0x55847e=-parseInt(_0x2b239d(0x493))/0x1*(-parseInt(_0x2b239d(0x538))/0x2)+-parseInt(_0x2b239d(0x1b4))/0x3*(parseInt(_0x2b239d(0x4a3))/0x4)+-parseInt(_0x2b239d(0x511))/0x5+-parseInt(_0x2b239d(0x3df))/0x6*(parseInt(_0x2b239d(0x29b))/0x7)+parseInt(_0x2b239d(0x59d))/0x8*(parseInt(_0x2b239d(0x2cf))/0x9)+-parseInt(_0x2b239d(0x29d))/0xa+parseInt(_0x2b239d(0x45c))/0xb*(parseInt(_0x2b239d(0x318))/0xc);if(_0x55847e===_0x4d1190)break;else _0x1c97be['push'](_0x1c97be['shift']());}catch(_0x580bb3){_0x1c97be['push'](_0x1c97be['shift']());}}}(_0x5e6d,0x3cc72));var DATA=PharmaStore[_0x5d326d(0x3a3)]();function persist(){var _0x4cb826=_0x5d326d;PharmaStore[_0x4cb826(0x3a5)](DATA),updateNavBadges();if(typeof renderNotifCloche===_0x4cb826(0x540))renderNotifCloche(![]);}var currentUser={'nom':_0x5d326d(0x226),'role':_0x5d326d(0x2d8)},ADMIN_CLOUD=typeof PharmaAdminCloud!==_0x5d326d(0x5cc)&&PharmaAdminCloud[_0x5d326d(0x409)],currentPage=_0x5d326d(0x1f2);function escAttr(_0xa62557){var _0x130fef=_0x5d326d;return String(_0xa62557==null?'':_0xa62557)[_0x130fef(0x615)](/\\/g,'\x5c\x5c')['replace'](/'/g,'\x5c\x27')[_0x130fef(0x615)](/"/g,'&quot;')[_0x130fef(0x615)](/</g,_0x130fef(0x391))['replace'](/>/g,_0x130fef(0x5cf))[_0x130fef(0x615)](/\r/g,'\x5cr')['replace'](/\n/g,'\x5cn')[_0x130fef(0x615)](/\u2028/g,'\x5cu2028')[_0x130fef(0x615)](/\u2029/g,_0x130fef(0x3a6));}function escHtml(_0x2c3d1c){var _0xbc92ae=_0x5d326d;return String(_0x2c3d1c==null?'':_0x2c3d1c)[_0xbc92ae(0x615)](/&/g,_0xbc92ae(0x4d9))[_0xbc92ae(0x615)](/</g,_0xbc92ae(0x391))[_0xbc92ae(0x615)](/>/g,_0xbc92ae(0x5cf))['replace'](/"/g,_0xbc92ae(0x220))['replace'](/'/g,_0xbc92ae(0x307));}function nombre(_0x5a181f){var _0x41d02d=Number(_0x5a181f);return isFinite(_0x41d02d)?_0x41d02d:0x0;}function couleurSure(_0x28f515,_0x31a506){var _0x4ffdd5=_0x5d326d;return/^#[0-9a-fA-F]{3,8}$/[_0x4ffdd5(0x2ae)](String(_0x28f515||''))?_0x28f515:_0x31a506||_0x4ffdd5(0x34c);}function abregerNom(_0x3aa28f){var _0x451ba5=_0x5d326d,_0x19eb56=(_0x3aa28f||'')[_0x451ba5(0x617)]()['split'](/\s+/)['filter'](Boolean);if(_0x19eb56[_0x451ba5(0x589)]===0x0)return _0x451ba5(0x4ac);if(_0x19eb56[_0x451ba5(0x589)]===0x1)return _0x19eb56[0x0];return _0x19eb56[0x0]+'\x20'+_0x19eb56[0x1][_0x451ba5(0x47b)](0x0)+'.';}function nomValideur(){var _0x1ddf7d=_0x5d326d;return abregerNom(currentUser[_0x1ddf7d(0x293)]);}function normalize(_0x2bb6fc){var _0x2109f5=_0x5d326d;return(_0x2bb6fc||'')['toLowerCase']()[_0x2109f5(0x38b)](_0x2109f5(0x469))[_0x2109f5(0x615)](/[\u0300-\u036f]/g,'')[_0x2109f5(0x615)](/[^a-z0-9 ]/g,'');}function searchMatch(_0x4a203a,_0x160d2b){var _0x4e0260=_0x5d326d;if(!_0x160d2b)return!![];var _0x43295b=normalize(_0x4a203a),_0x299008=normalize(_0x160d2b);if(_0x43295b[_0x4e0260(0x3e2)](_0x299008))return!![];var _0x3f1197=_0x299008['split']('\x20');return _0x3f1197['every'](function(_0x5297f6){var _0x5a10ad=_0x4e0260;return _0x43295b[_0x5a10ad(0x3e2)](_0x5297f6);});}var PAGE_META={'dashboard':{'title':'Tableau\x20de\x20bord','cta':null},'produits':{'title':'Produits','cta':{'label':_0x5d326d(0x612),'fn':_0x5d326d(0x1c6)}},'rayons':{'title':_0x5d326d(0x52a),'cta':{'label':_0x5d326d(0x5ed),'fn':'nouveauRayon()'}},'promos':{'title':_0x5d326d(0x3ca),'cta':{'label':_0x5d326d(0x53c),'fn':_0x5d326d(0x2e4)}},'codes-promo':{'title':_0x5d326d(0x2c8),'cta':{'label':_0x5d326d(0x452),'fn':_0x5d326d(0x616)}},'conseils':{'title':_0x5d326d(0x5e9),'cta':{'label':_0x5d326d(0x609),'fn':_0x5d326d(0x253)}},'stocks':{'title':_0x5d326d(0x2ed),'cta':null},'commandes':{'title':_0x5d326d(0x21b),'cta':null},'tickets':{'title':_0x5d326d(0x5e6),'cta':null},'clients':{'title':'Clients','cta':{'label':'Nouveau\x20client','fn':_0x5d326d(0x36f)}},'notifications':{'title':_0x5d326d(0x5fc),'cta':null},'rapport':{'title':_0x5d326d(0x350),'cta':null},'scan':{'title':'Validation\x20Scan','cta':null},'employes':{'title':_0x5d326d(0x1c7),'cta':{'label':'Nouvel\x20employé','fn':_0x5d326d(0x22b)}},'messages':{'title':'Messages\x20internes','cta':null},'horaires':{'title':'Horaires\x20&\x20Gardes','cta':{'label':'Jour\x20spécial','fn':_0x5d326d(0x2d3)}},'parametres':{'title':_0x5d326d(0x3ee),'cta':null}},CLE_PAGE_ADMIN=_0x5d326d(0x2fc);function memoriserPage(_0x255c24){var _0x5d9ed3=_0x5d326d;try{sessionStorage[_0x5d9ed3(0x4bf)](CLE_PAGE_ADMIN,_0x255c24);}catch(_0x1e1fb2){}}function _0x42b5(_0x119696,_0x42eb69){_0x119696=_0x119696-0x1b0;var _0x5e6dd7=_0x5e6d();var _0x42b515=_0x5e6dd7[_0x119696];if(_0x42b5['xxMMSt']===undefined){var _0xc623e4=function(_0x92e4bd){var _0x3834af='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0xa62557='',_0x2c3d1c='';for(var _0x5a181f=0x0,_0x41d02d,_0x28f515,_0x31a506=0x0;_0x28f515=_0x92e4bd['charAt'](_0x31a506++);~_0x28f515&&(_0x41d02d=_0x5a181f%0x4?_0x41d02d*0x40+_0x28f515:_0x28f515,_0x5a181f++%0x4)?_0xa62557+=String['fromCharCode'](0xff&_0x41d02d>>(-0x2*_0x5a181f&0x6)):0x0){_0x28f515=_0x3834af['indexOf'](_0x28f515);}for(var _0x3aa28f=0x0,_0x19eb56=_0xa62557['length'];_0x3aa28f<_0x19eb56;_0x3aa28f++){_0x2c3d1c+='%'+('00'+_0xa62557['charCodeAt'](_0x3aa28f)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2c3d1c);};_0x42b5['BMIiiU']=_0xc623e4,_0x42b5['XrHvDU']={},_0x42b5['xxMMSt']=!![];}var _0x23ea53=_0x5e6dd7[0x0],_0x1840b5=_0x119696+_0x23ea53,_0x4d1de5=_0x42b5['XrHvDU'][_0x1840b5];return!_0x4d1de5?(_0x42b515=_0x42b5['BMIiiU'](_0x42b515),_0x42b5['XrHvDU'][_0x1840b5]=_0x42b515):_0x42b515=_0x4d1de5,_0x42b515;}function pageMemorisee(){var _0x46c981=_0x5d326d,_0x195cd7=null;try{_0x195cd7=sessionStorage[_0x46c981(0x501)](CLE_PAGE_ADMIN);}catch(_0x2a716d){}return _0x195cd7&&PAGE_META[_0x195cd7]&&document['getElementById'](_0x46c981(0x22a)+_0x195cd7)?_0x195cd7:_0x46c981(0x1f2);}function majEnTetePage(_0x16a192){var _0x49fe00=_0x5d326d,_0x4d58a6=PAGE_META[_0x16a192]||{'title':_0x16a192,'cta':null};document[_0x49fe00(0x30b)](_0x49fe00(0x2d5))[_0x49fe00(0x377)]=_0x4d58a6[_0x49fe00(0x1ee)];var _0x3fbdde=document['getElementById']('topbar-cta'),_0x211dec=document['getElementById']('topbar-cta-label');_0x4d58a6[_0x49fe00(0x1b8)]?(_0x3fbdde[_0x49fe00(0x507)][_0x49fe00(0x2b9)]='',_0x211dec[_0x49fe00(0x377)]=_0x4d58a6['cta'][_0x49fe00(0x25d)],_0x3fbdde['setAttribute'](_0x49fe00(0x5a7),_0x4d58a6[_0x49fe00(0x1b8)]['fn'])):_0x3fbdde[_0x49fe00(0x507)][_0x49fe00(0x2b9)]='none',document[_0x49fe00(0x5f7)](_0x49fe00(0x50e))['forEach'](function(_0x1d48e5){var _0x268a14=_0x49fe00,_0x543f4d=_0x1d48e5[_0x268a14(0x417)](_0x268a14(0x5a7))||'';_0x1d48e5[_0x268a14(0x593)]['toggle']('active',_0x543f4d[_0x268a14(0x5f8)]('\x27'+_0x16a192+'\x27')!==-0x1);});}function go(_0x1c81cc){var _0x104520=_0x5d326d;if(currentUser[_0x104520(0x483)]!==_0x104520(0x2d8)&&!checkAcces()){showBlocage();return;}if(_0x1c81cc===currentPage){if(isMobile()||isTablet())closeSidebar();return;}var _0x2da9f6=document['getElementById'](_0x104520(0x22a)+currentPage);_0x2da9f6&&(_0x2da9f6[_0x104520(0x507)][_0x104520(0x382)]='all\x200.22s\x20ease',_0x2da9f6[_0x104520(0x507)][_0x104520(0x4e9)]='0',_0x2da9f6[_0x104520(0x507)][_0x104520(0x4be)]=_0x104520(0x363),setTimeout(function(){var _0x2d5869=_0x104520;_0x2da9f6[_0x2d5869(0x593)][_0x2d5869(0x27b)](_0x2d5869(0x23f)),_0x2da9f6['style']['cssText']='';},0xdc)),currentPage=_0x1c81cc,memoriserPage(_0x1c81cc),setTimeout(function(){var _0x160b72=_0x104520,_0x5d6fbf=document[_0x160b72(0x30b)](_0x160b72(0x22a)+_0x1c81cc);_0x5d6fbf&&(_0x5d6fbf[_0x160b72(0x507)]['opacity']='0',_0x5d6fbf[_0x160b72(0x507)][_0x160b72(0x4be)]=_0x160b72(0x38a),_0x5d6fbf[_0x160b72(0x593)][_0x160b72(0x20f)](_0x160b72(0x23f)),requestAnimationFrame(function(){var _0x190ad5=_0x160b72;_0x5d6fbf[_0x190ad5(0x507)][_0x190ad5(0x382)]=_0x190ad5(0x3cd),_0x5d6fbf['style']['opacity']='1',_0x5d6fbf[_0x190ad5(0x507)]['transform']='translateX(0)',setTimeout(function(){var _0x349c18=_0x190ad5;_0x5d6fbf[_0x349c18(0x507)][_0x349c18(0x42d)]='';},0x104);}));majEnTetePage(_0x1c81cc),renderPage(_0x1c81cc);if(isMobile()||isTablet())closeSidebar();},0xe6);}function renderPage(_0x5ce104){var _0x4e589f=_0x5d326d;switch(_0x5ce104){case'dashboard':renderDashboard();break;case _0x4e589f(0x4c2):renderProduits();break;case'rayons':renderRayonsAdmin();break;case'promos':renderPromos();break;case _0x4e589f(0x3c9):renderClients();break;case _0x4e589f(0x54c):renderCommandes();break;case _0x4e589f(0x464):renderTickets();break;case _0x4e589f(0x4d2):renderEmployes();break;case _0x4e589f(0x541):renderConseils();break;case _0x4e589f(0x271):renderStocks();break;case _0x4e589f(0x41a):renderCodesPromo();break;case _0x4e589f(0x214):renderRapport();break;case _0x4e589f(0x3ce):renderNotifications();break;case _0x4e589f(0x31a):renderMessages();break;case _0x4e589f(0x564):renderHoraires();break;case _0x4e589f(0x526):renderParametres();break;case _0x4e589f(0x2ca):renderScan();break;}}function renderDashboard(){var _0x112872=_0x5d326d,_0x580a93=DATA[_0x112872(0x54c)][_0x112872(0x578)](function(_0x2271b6){var _0x10f8d8=_0x112872;return _0x2271b6[_0x10f8d8(0x3da)]===_0x10f8d8(0x520);})[_0x112872(0x589)],_0x533e22=DATA[_0x112872(0x4c2)][_0x112872(0x578)](function(_0x539c0b){var _0x1ca357=_0x112872;return _0x539c0b[_0x1ca357(0x2b6)]<=_0x539c0b[_0x1ca357(0x528)];})[_0x112872(0x589)],_0x592598=DATA['promos'][_0x112872(0x578)](function(_0x12e9d8){var _0x5cef58=_0x112872;return _0x12e9d8[_0x5cef58(0x3da)]===_0x5cef58(0x35f);})[_0x112872(0x589)],_0x135eea=DATA[_0x112872(0x464)][_0x112872(0x578)](function(_0x4096f5){return _0x4096f5['statut']==='Ouvert'||_0x4096f5['statut']==='En\x20cours';})[_0x112872(0x589)];animCount(_0x112872(0x425),_0x580a93),animCount(_0x112872(0x5c7),_0x533e22),animCount(_0x112872(0x2a2),_0x592598),animCount('stat-tickets',_0x135eea);var _0x1608eb='';DATA[_0x112872(0x54c)][_0x112872(0x1b9)](0x0,0x3)[_0x112872(0x32b)](function(_0xe3f548){var _0x3c4db0=_0x112872,_0x3b7677=_0xe3f548[_0x3c4db0(0x3da)]===_0x3c4db0(0x3d9)?_0x3c4db0(0x5d0):_0xe3f548[_0x3c4db0(0x3da)]===_0x3c4db0(0x5a9)?'b-blue':'b-orange';_0x1608eb+=_0x3c4db0(0x5e2)+escHtml(_0xe3f548['id'])+_0x3c4db0(0x201)+escHtml(abregerNom(_0xe3f548[_0x3c4db0(0x455)]))+_0x3c4db0(0x240)+_0x3b7677+'\x22>'+escHtml(_0xe3f548[_0x3c4db0(0x3da)])+_0x3c4db0(0x33c)+escAttr(_0xe3f548['id'])+_0x3c4db0(0x1df)+svgEye()+_0x3c4db0(0x530);}),setHTML(_0x112872(0x33f),_0x1608eb);var _0x243f5a='';DATA[_0x112872(0x464)][_0x112872(0x1b9)](0x0,0x3)[_0x112872(0x32b)](function(_0x5b3cc9){var _0x25d4b6=_0x112872,_0xef9b89=_0x5b3cc9['priorite']==='Urgent'?_0x25d4b6(0x531):_0x25d4b6(0x473);_0x243f5a+=_0x25d4b6(0x3ec)+escHtml(_0x5b3cc9[_0x25d4b6(0x5af)])+'</div><div\x20class=\x22td-sub\x22>'+escHtml(_0x5b3cc9[_0x25d4b6(0x4fe)])+_0x25d4b6(0x313)+escHtml(_0x5b3cc9[_0x25d4b6(0x455)])+'</td><td><span\x20class=\x22badge\x20'+_0xef9b89+'\x22>'+escHtml(_0x5b3cc9[_0x25d4b6(0x2af)])+_0x25d4b6(0x2c7);}),setHTML(_0x112872(0x5ae),_0x243f5a),renderGardeTableauDeBord(),renderQuotaTableauDeBord();var _0x3ad6df=DATA[_0x112872(0x31a)][_0x112872(0x578)](function(_0x44bd68){return!_0x44bd68['lu'];})[_0x112872(0x589)],_0x298cfe=document['getElementById']('msg-badge');if(_0x298cfe)_0x298cfe[_0x112872(0x377)]=_0x3ad6df>0x0?_0x3ad6df:'';if(_0x298cfe)_0x298cfe['style']['display']=_0x3ad6df>0x0?'':_0x112872(0x439);updateNavBadges();}function renderGardeTableauDeBord(){var _0x511597=_0x5d326d,_0x131a4e=document[_0x511597(0x30b)](_0x511597(0x4d1)),_0x53e15f=document[_0x511597(0x30b)](_0x511597(0x3b8));if(!_0x131a4e||!_0x53e15f)return;var _0x40ce5a=pharmaDateLocale(),_0x575d90=(DATA['joursSpeciaux']||[])[_0x511597(0x578)](function(_0x2dba1c){var _0x468691=_0x511597;return _0x2dba1c&&String(_0x2dba1c[_0x468691(0x5c4)]||'')['slice'](0x0,0xa)>=_0x40ce5a;})['sort'](function(_0x4125fe,_0x164bbc){var _0x301ed9=_0x511597;return String(_0x4125fe[_0x301ed9(0x5c4)])<String(_0x164bbc[_0x301ed9(0x5c4)])?-0x1:0x1;}),_0x488b04=DATA[_0x511597(0x526)][_0x511597(0x5bc)]&&DATA['parametres'][_0x511597(0x2c5)]?_0x511597(0x52d):_0x511597(0x5ba);if(!_0x575d90['length']){_0x131a4e[_0x511597(0x377)]=_0x511597(0x278),_0x53e15f[_0x511597(0x377)]=_0x488b04;return;}var _0x560880=_0x575d90[0x0],_0x1f44c2=String(_0x560880[_0x511597(0x5c4)])[_0x511597(0x1b9)](0x0,0xa)[_0x511597(0x4dd)]('-'),_0x18659b=_0x1f44c2[_0x511597(0x589)]===0x3?_0x1f44c2[0x2]+'/'+_0x1f44c2[0x1]+'/'+_0x1f44c2[0x0]:_0x560880[_0x511597(0x5c4)];_0x131a4e[_0x511597(0x377)]=(_0x560880[_0x511597(0x4fe)]===_0x511597(0x312)?'Fermeture\x20exceptionnelle':_0x560880[_0x511597(0x4fe)]||_0x511597(0x529))+'\x20—\x20'+_0x18659b,_0x53e15f['textContent']=(_0x560880[_0x511597(0x4fe)]===_0x511597(0x312)?_0x511597(0x4f5):_0x511597(0x334)+(_0x560880[_0x511597(0x389)]||'?')+_0x511597(0x5d2)+(_0x560880[_0x511597(0x388)]||'?'))+_0x511597(0x346)+_0x488b04;}function updateNavBadges(){var _0x1f3675=_0x5d326d,_0x11888c=DATA[_0x1f3675(0x54c)][_0x1f3675(0x578)](function(_0x24bb0a){return _0x24bb0a['statut']==='En\x20préparation';})['length'],_0x46e5ee=DATA[_0x1f3675(0x464)][_0x1f3675(0x578)](function(_0x307fc0){var _0x19fc25=_0x1f3675;return _0x307fc0['statut']===_0x19fc25(0x52e)||_0x307fc0['statut']==='En\x20cours';})[_0x1f3675(0x589)];[[_0x1f3675(0x359),_0x11888c],[_0x1f3675(0x398),_0x46e5ee]][_0x1f3675(0x32b)](function(_0x395d90){var _0x529a4f=_0x1f3675,_0x59999c=document[_0x529a4f(0x30b)](_0x395d90[0x0]);if(!_0x59999c)return;_0x59999c[_0x529a4f(0x377)]=_0x395d90[0x1],_0x59999c['style'][_0x529a4f(0x2b9)]=_0x395d90[0x1]>0x0?'':_0x529a4f(0x439);});}function renderProduits(_0x3cb021,_0x118d87){var _0x4ee15e=_0x5d326d,_0x2e193e='',_0x5480f8=document['getElementById'](_0x4ee15e(0x37a)),_0x23ca17=_0x5480f8?_0x5480f8[_0x4ee15e(0x413)]:'',_0x53a324=DATA['produits'][_0x4ee15e(0x578)](function(_0x406134){var _0x759474=_0x4ee15e,_0x43adea=!_0x3cb021||searchMatch(_0x406134[_0x759474(0x293)]+'\x20'+_0x406134[_0x759474(0x600)]+'\x20'+_0x406134[_0x759474(0x2e9)],_0x3cb021),_0x4bbbc8=!_0x118d87||_0x118d87==='Toutes'||_0x406134[_0x759474(0x2e9)]===_0x118d87,_0x2d5fa0=!_0x23ca17||_0x23ca17===_0x759474(0x44a)&&_0x406134[_0x759474(0x2b6)]<=0x0||_0x23ca17==='faible'&&_0x406134['stock']>0x0&&_0x406134[_0x759474(0x2b6)]<=_0x406134['seuil']||_0x23ca17==='ok'&&_0x406134[_0x759474(0x2b6)]>_0x406134[_0x759474(0x528)];return _0x43adea&&_0x4bbbc8&&_0x2d5fa0;});_0x53a324['length']===0x0&&(_0x2e193e=_0x4ee15e(0x2f3)),_0x53a324[_0x4ee15e(0x32b)](function(_0x79f8fe){var _0x3bb368=_0x4ee15e,_0x3221fb=Math[_0x3bb368(0x208)](_0x79f8fe[_0x3bb368(0x2b6)]/Math[_0x3bb368(0x420)](_0x79f8fe['stock']+_0x79f8fe['seuil'],0x1)*0x64),_0x137c56=_0x79f8fe[_0x3bb368(0x2b6)]<=0x0?_0x3bb368(0x268):_0x79f8fe['stock']<=_0x79f8fe[_0x3bb368(0x528)]?_0x3bb368(0x20c):_0x3bb368(0x5d0),_0x48c8c9=_0x79f8fe[_0x3bb368(0x2b6)]<=0x0?_0x3bb368(0x39f):_0x79f8fe['stock']<=_0x79f8fe[_0x3bb368(0x528)]?_0x3bb368(0x447):_0x3bb368(0x26a),_0x19afa4=_0x79f8fe[_0x3bb368(0x2b6)]<=0x0?_0x3bb368(0x43a):_0x79f8fe[_0x3bb368(0x2b6)]<=_0x79f8fe[_0x3bb368(0x528)]?_0x3bb368(0x484):_0x3bb368(0x254);_0x2e193e+=_0x3bb368(0x1d0),_0x2e193e+='<td><div\x20class=\x22td-main\x22>'+escHtml(_0x79f8fe[_0x3bb368(0x293)])+_0x3bb368(0x46c)+escHtml(_0x79f8fe['ref'])+_0x3bb368(0x418),_0x2e193e+=_0x3bb368(0x371)+escHtml(_0x79f8fe[_0x3bb368(0x2e9)])+_0x3bb368(0x235),_0x2e193e+=_0x3bb368(0x4d8)+nombre(_0x79f8fe[_0x3bb368(0x496)])[_0x3bb368(0x42c)](0x2)+'€</td>',_0x2e193e+=_0x3bb368(0x552)+(_0x79f8fe[_0x3bb368(0x2b6)]<=0x0?_0x3bb368(0x43a):_0x79f8fe[_0x3bb368(0x2b6)]<=_0x79f8fe[_0x3bb368(0x528)]?'var(--or)':'')+'\x22>'+_0x79f8fe[_0x3bb368(0x2b6)]+'</span><div\x20class=\x22progress\x22\x20style=\x22width:70px\x22><div\x20class=\x22progress-fill\x22\x20style=\x22width:'+Math['min'](_0x3221fb,0x64)+_0x3bb368(0x3b9)+_0x19afa4+'\x22></div></div></div></td>',_0x2e193e+=_0x3bb368(0x603)+_0x137c56+'\x22>'+_0x48c8c9+'</span></td>',_0x2e193e+=_0x3bb368(0x1b5)+_0x79f8fe['id']+_0x3bb368(0x5a8)+svgEdit()+_0x3bb368(0x5b0)+escAttr(_0x79f8fe[_0x3bb368(0x293)])+_0x3bb368(0x3eb)+svgTag()+'</button><button\x20class=\x22act-btn\x22\x20style=\x22color:var(--rouge)\x22\x20onclick=\x22deleteProduit('+_0x79f8fe['id']+',\x27'+escAttr(_0x79f8fe[_0x3bb368(0x293)])+_0x3bb368(0x32d)+svgTrash()+_0x3bb368(0x1d4),_0x2e193e+=_0x3bb368(0x54f);}),setHTML('tbody-produits',_0x2e193e),renderCatOptions(_0x4ee15e(0x36a));}function renderCatOptions(_0x58ef72,_0x3c98da){var _0x3617c4=_0x5d326d,_0x4d0f49=document[_0x3617c4(0x30b)](_0x58ef72);if(!_0x4d0f49)return;var _0x2128da=_0x4d0f49[_0x3617c4(0x413)];_0x4d0f49[_0x3617c4(0x453)]=_0x3c98da===![]?'':_0x3617c4(0x40a),DATA[_0x3617c4(0x330)][_0x3617c4(0x32b)](function(_0x1d9d30){var _0x3e0492=_0x3617c4;_0x4d0f49[_0x3e0492(0x453)]+=_0x3e0492(0x5f9)+escAttr(_0x1d9d30)+'\x22'+(_0x2128da===_0x1d9d30?'\x20selected':'')+'>'+escHtml(_0x1d9d30)+'</option>';});}function editProduit(_0x238559){var _0x58dc3d=_0x5d326d,_0x5c99f3=DATA[_0x58dc3d(0x4c2)][_0x58dc3d(0x340)](function(_0x28486b){return _0x28486b['id']===_0x238559;});if(!_0x5c99f3)return;setVal(_0x58dc3d(0x4fb),_0x5c99f3[_0x58dc3d(0x293)]),setVal(_0x58dc3d(0x215),_0x5c99f3[_0x58dc3d(0x600)]),setVal(_0x58dc3d(0x43f),_0x5c99f3['prix']),setVal(_0x58dc3d(0x324),_0x5c99f3['stock']),setVal('p-seuil',_0x5c99f3[_0x58dc3d(0x528)]),setVal('p-desc',_0x5c99f3['desc']);var _0x475855=document[_0x58dc3d(0x30b)](_0x58dc3d(0x50d));if(_0x475855)_0x475855[_0x58dc3d(0x413)]=_0x5c99f3['cat'];document[_0x58dc3d(0x30b)]('p-id')['value']=_0x238559,document[_0x58dc3d(0x30b)]('m-produit-title')[_0x58dc3d(0x377)]=_0x58dc3d(0x368)+_0x5c99f3[_0x58dc3d(0x293)],reinitialiserPhotoProduit(),majChampPhotoProduit(_0x5c99f3[_0x58dc3d(0x482)]),openModal(_0x58dc3d(0x316));}function saveProduit(){var _0x137767=_0x5d326d,_0x236794=parseInt(document[_0x137767(0x30b)]('p-id')['value']),_0x354960=getVal(_0x137767(0x4fb)),_0x4682a5=getVal(_0x137767(0x1f9))[_0x137767(0x617)](),_0x1ca411=_0x4682a5||getVal(_0x137767(0x50d));if(_0x4682a5&&!DATA[_0x137767(0x330)][_0x137767(0x3e2)](_0x4682a5))DATA[_0x137767(0x330)]['push'](_0x4682a5);if(!_0x354960||!_0x354960[_0x137767(0x617)]()){toast(_0x137767(0x5a1),_0x137767(0x536));return;}_0x354960=_0x354960['trim']();var _0x12be58=parseFloat(String(getVal(_0x137767(0x43f)))[_0x137767(0x615)](',','.')),_0x5d636b=getVal(_0x137767(0x324))===''?0x0:Number(getVal(_0x137767(0x324))),_0x185077=getVal(_0x137767(0x52b))===''?0xa:Number(getVal(_0x137767(0x52b)));if(!isFinite(_0x12be58)||_0x12be58<=0x0){toast(_0x137767(0x24f),_0x137767(0x536));return;}if(!Number[_0x137767(0x3ac)](_0x5d636b)||_0x5d636b<0x0){toast('Le\x20stock\x20doit\x20être\x20un\x20nombre\x20entier\x20positif\x20ou\x20nul',_0x137767(0x536));return;}if(!Number['isInteger'](_0x185077)||_0x185077<0x0){toast(_0x137767(0x294),_0x137767(0x536));return;}_0x12be58=Math['round'](_0x12be58*0x64)/0x64;if(DATA[_0x137767(0x4c2)][_0x137767(0x49b)](function(_0x1135aa){var _0x3bce3e=_0x137767;return _0x1135aa['id']!==_0x236794&&String(_0x1135aa[_0x3bce3e(0x293)])[_0x3bce3e(0x617)]()[_0x3bce3e(0x3e7)]()===_0x354960[_0x3bce3e(0x3e7)]();})){toast('Un\x20produit\x20porte\x20déjà\x20ce\x20nom',_0x137767(0x536));return;}if(photoProduit[_0x137767(0x380)]){toast(_0x137767(0x4e4),'error');return;}var _0x254757=pharmaPhotoValide(getVal(_0x137767(0x35c))),_0x184ee6=null,_0x347fe6='';if(_0x236794){var _0xccba59=DATA[_0x137767(0x4c2)]['find'](function(_0x51a33c){return _0x51a33c['id']===_0x236794;});_0xccba59&&(_0x347fe6=_0xccba59[_0x137767(0x482)]||'',_0xccba59[_0x137767(0x293)]=_0x354960,_0xccba59[_0x137767(0x600)]=getVal(_0x137767(0x215)),_0xccba59[_0x137767(0x2e9)]=_0x1ca411,_0xccba59['prix']=_0x12be58,_0xccba59[_0x137767(0x2b6)]=_0x5d636b,_0xccba59['seuil']=_0x185077,_0xccba59[_0x137767(0x4d3)]=getVal('p-desc'),_0xccba59[_0x137767(0x482)]=_0x254757,_0x184ee6=_0xccba59);}else{var _0x5f41f2=DATA[_0x137767(0x4c2)][_0x137767(0x589)]?Math[_0x137767(0x420)]['apply'](null,DATA['produits'][_0x137767(0x3bb)](function(_0x8df52c){return _0x8df52c['id'];}))+0x1:0x1;_0x184ee6={'id':_0x5f41f2,'nom':_0x354960,'ref':getVal(_0x137767(0x215)),'cat':_0x1ca411,'prix':_0x12be58,'stock':_0x5d636b,'seuil':_0x185077,'desc':getVal(_0x137767(0x3a0)),'photo':_0x254757},DATA[_0x137767(0x4c2)]['push'](_0x184ee6);}var _0x4c16c9=![];!ADMIN_CLOUD&&_0x184ee6&&_0x254757&&_0x254757!==_0x347fe6&&!PharmaStore[_0x137767(0x3a5)](DATA)&&(_0x184ee6[_0x137767(0x482)]=_0x347fe6,_0x4c16c9=!![]);if(_0x4c16c9)toast(_0x137767(0x1e5),_0x137767(0x536));else toast(_0x236794?'Produit\x20modifié\x20avec\x20succès':_0x137767(0x301));closeModal(_0x137767(0x316)),renderProduits(),resetForm('form-produit'),persist();}function deleteProduit(_0x1c57d5,_0x3adb85){var _0x38cc00=_0x5d326d;confirmer(_0x38cc00(0x3ba)+escHtml(_0x3adb85)+'\x22\x20?',function(){var _0x422407=_0x38cc00;DATA['produits']=DATA[_0x422407(0x4c2)][_0x422407(0x578)](function(_0x168045){return _0x168045['id']!==_0x1c57d5;}),Object[_0x422407(0x4f1)](DATA[_0x422407(0x3d8)]||{})[_0x422407(0x32b)](function(_0x54127c){var _0x432bba=_0x422407;if(Array[_0x432bba(0x4bd)](DATA[_0x432bba(0x3d8)][_0x54127c]))DATA['contenuRayons'][_0x54127c]=DATA[_0x432bba(0x3d8)][_0x54127c][_0x432bba(0x578)](function(_0x2cb656){return _0x2cb656!==_0x1c57d5;});}),renderProduits(),toast(_0x3adb85+_0x422407(0x2d9)),persist();});}var PHOTO_LOCAL_TOTAL_MAX=0x2625a0,SVG_PHOTO=_0x5d326d(0x2b0);function photoCloud(){return ADMIN_CLOUD;}function redimensionnerPhoto(_0xb501f,_0x2ea90e,_0x59adab){return new Promise(function(_0xe38396,_0x4c54af){var _0x1702d6=_0x42b5;if(!_0xb501f||!/^image\//[_0x1702d6(0x2ae)](_0xb501f[_0x1702d6(0x4fe)]||'')){_0x4c54af(new Error('Choisissez\x20une\x20image\x20(photo\x20JPEG,\x20PNG\x20ou\x20WebP).'));return;}if(_0xb501f[_0x1702d6(0x557)]>0x19*0x400*0x400){_0x4c54af(new Error('Image\x20trop\x20lourde\x20(25\x20Mo\x20au\x20maximum).'));return;}var _0x44637b=URL[_0x1702d6(0x232)](_0xb501f),_0x1ad6d8=new Image();_0x1ad6d8[_0x1702d6(0x217)]=function(){var _0x50d558=_0x1702d6;URL[_0x50d558(0x2e6)](_0x44637b);var _0x40f886=_0x1ad6d8['naturalWidth'],_0x3e6276=_0x1ad6d8[_0x50d558(0x1b3)];if(!_0x40f886||!_0x3e6276){_0x4c54af(new Error(_0x50d558(0x261)));return;}var _0x829a27=Math['min'](0x1,_0x2ea90e/Math[_0x50d558(0x420)](_0x40f886,_0x3e6276)),_0x3469d6=document[_0x50d558(0x3ae)](_0x50d558(0x255));_0x3469d6[_0x50d558(0x2aa)]=Math[_0x50d558(0x420)](0x1,Math[_0x50d558(0x208)](_0x40f886*_0x829a27)),_0x3469d6[_0x50d558(0x4d0)]=Math[_0x50d558(0x420)](0x1,Math['round'](_0x3e6276*_0x829a27));var _0x393fc9=_0x3469d6[_0x50d558(0x378)]('2d');_0x393fc9[_0x50d558(0x47a)]=_0x50d558(0x4f6),_0x393fc9['fillRect'](0x0,0x0,_0x3469d6[_0x50d558(0x2aa)],_0x3469d6[_0x50d558(0x4d0)]),_0x393fc9[_0x50d558(0x5e3)]=_0x50d558(0x24e),_0x393fc9['drawImage'](_0x1ad6d8,0x0,0x0,_0x3469d6[_0x50d558(0x2aa)],_0x3469d6[_0x50d558(0x4d0)]),_0xe38396(_0x3469d6);},_0x1ad6d8[_0x1702d6(0x47f)]=function(){var _0x109bb1=_0x1702d6;URL[_0x109bb1(0x2e6)](_0x44637b),_0x4c54af(new Error(_0x109bb1(0x580)));},_0x1ad6d8[_0x1702d6(0x39e)]=_0x44637b;});}function poidsPhotosLocales(_0x2a69c1){var _0x196772=_0x5d326d,_0x4ccfbd=0x0;return(DATA[_0x196772(0x4c2)]||[])[_0x196772(0x32b)](function(_0x40c6c1){var _0x55a69b=_0x196772;if(_0x40c6c1['photo']&&_0x40c6c1[_0x55a69b(0x482)]!==_0x2a69c1&&/^data:/['test'](_0x40c6c1[_0x55a69b(0x482)]))_0x4ccfbd+=_0x40c6c1['photo'][_0x55a69b(0x589)];}),Object[_0x196772(0x4f1)](DATA[_0x196772(0x315)]||{})[_0x196772(0x32b)](function(_0x305471){var _0x372ab1=_0x196772,_0x56b60f=DATA[_0x372ab1(0x315)][_0x305471];if(_0x56b60f&&_0x56b60f!==_0x2a69c1&&/^data:/['test'](_0x56b60f))_0x4ccfbd+=String(_0x56b60f)[_0x372ab1(0x589)];}),_0x4ccfbd;}function preparerPhoto(_0x518056,_0x5519d4,_0x450163){var _0x579839=_0x5d326d;if(photoCloud())return redimensionnerPhoto(_0x518056,0x3e8,0.82)['then'](function(_0x4586ca){return new Promise(function(_0x44833a,_0x3420c0){var _0x3fa554=_0x42b5;_0x4586ca['toBlob'](function(_0x1d8ace){_0x1d8ace?_0x44833a(_0x1d8ace):_0x3420c0(new Error('Conversion\x20de\x20la\x20photo\x20impossible.'));},_0x3fa554(0x50f),0.82);});})[_0x579839(0x2e5)](function(_0x10c760){return _0x10c760['arrayBuffer']();})[_0x579839(0x2e5)](function(_0x1288db){var _0x177833=_0x579839;return PharmaAdminCloud[_0x177833(0x568)](_0x1288db,_0x5519d4);});return redimensionnerPhoto(_0x518056,0x280,0.78)[_0x579839(0x2e5)](function(_0x124cd1){var _0x25d050=_0x579839,_0xe4df37=_0x124cd1['toDataURL'](_0x25d050(0x50f),0.78);if(!pharmaPhotoValide(_0xe4df37))_0xe4df37=_0x124cd1[_0x25d050(0x4a7)](_0x25d050(0x50f),0.55);if(!pharmaPhotoValide(_0xe4df37))throw new Error(_0x25d050(0x3c4));if(poidsPhotosLocales(_0x450163)+_0xe4df37[_0x25d050(0x589)]>PHOTO_LOCAL_TOTAL_MAX)throw new Error('Mode\x20démonstration\x20:\x20la\x20place\x20réservée\x20aux\x20photos\x20dans\x20ce\x20navigateur\x20est\x20pleine.\x20Retirez\x20une\x20photo,\x20ou\x20reliez\x20le\x20site\x20à\x20la\x20base\x20de\x20données.');return _0xe4df37;});}function afficherApercuPhoto(_0x5347e1,_0x1785cb,_0x183566){var _0x35a174=_0x5d326d;if(!_0x5347e1)return;var _0x3b4543=pharmaPhotoValide(_0x1785cb);_0x5347e1[_0x35a174(0x453)]='';if(!_0x3b4543){_0x5347e1['innerHTML']=SVG_PHOTO;return;}var _0xe645ea=document[_0x35a174(0x3ae)]('img');_0xe645ea[_0x35a174(0x21d)]=_0x183566||'',_0xe645ea[_0x35a174(0x39e)]=_0x3b4543,_0x5347e1[_0x35a174(0x1cc)](_0xe645ea);}var photoProduit={'jeton':0x0,'envoi':![]};function etatPhotoProduit(_0x1fb257,_0x427204){var _0x1cb5ad=_0x5d326d,_0x4a2ed8=document[_0x1cb5ad(0x30b)]('p-photo-etat');if(!_0x4a2ed8)return;_0x4a2ed8[_0x1cb5ad(0x377)]=_0x1fb257||'',_0x4a2ed8[_0x1cb5ad(0x593)][_0x1cb5ad(0x322)](_0x1cb5ad(0x4a6),!!_0x427204);}function majChampPhotoProduit(_0x52ffa3){var _0x394d19=_0x5d326d,_0x2fc5cf=pharmaPhotoValide(_0x52ffa3);setVal(_0x394d19(0x35c),_0x2fc5cf),afficherApercuPhoto(document['getElementById'](_0x394d19(0x4b9)),_0x2fc5cf);var _0x1460d5=document[_0x394d19(0x30b)]('p-photo-retirer');if(_0x1460d5)_0x1460d5[_0x394d19(0x4bb)]=!_0x2fc5cf;var _0x456958=document[_0x394d19(0x30b)](_0x394d19(0x5de));if(_0x456958)_0x456958[_0x394d19(0x377)]=_0x2fc5cf?_0x394d19(0x4d6):_0x394d19(0x44c);}function reinitialiserPhotoProduit(){var _0x5468bc=_0x5d326d;photoProduit[_0x5468bc(0x5eb)]++,photoProduit[_0x5468bc(0x380)]=![],majChampPhotoProduit(''),etatPhotoProduit(_0x5468bc(0x35e));var _0x36291e=document['getElementById'](_0x5468bc(0x4b9));if(_0x36291e)_0x36291e[_0x5468bc(0x593)][_0x5468bc(0x27b)](_0x5468bc(0x427));}function choisirPhotoProduit(_0x59c935){var _0x544e39=_0x5d326d;if(!_0x59c935)return;var _0xc42b9f=++photoProduit[_0x544e39(0x5eb)],_0x5bd3f6=getVal(_0x544e39(0x35c));photoProduit['envoi']=!![];var _0x28ad6f=document['getElementById'](_0x544e39(0x4b9));if(_0x28ad6f)_0x28ad6f[_0x544e39(0x593)][_0x544e39(0x20f)](_0x544e39(0x427));etatPhotoProduit(photoCloud()?_0x544e39(0x3ef):_0x544e39(0x28b)),preparerPhoto(_0x59c935,'produits',_0x5bd3f6)[_0x544e39(0x2e5)](function(_0x2c217f){var _0x3d5fd5=_0x544e39;if(_0xc42b9f!==photoProduit[_0x3d5fd5(0x5eb)])return;photoProduit[_0x3d5fd5(0x380)]=![];if(_0x28ad6f)_0x28ad6f[_0x3d5fd5(0x593)]['remove'](_0x3d5fd5(0x427));majChampPhotoProduit(_0x2c217f),etatPhotoProduit('Photo\x20prête\x20:\x20cliquez\x20sur\x20Sauvegarder\x20pour\x20l\x27enregistrer.'),verifierAffichagePhoto(_0x28ad6f,etatPhotoProduit);},function(_0x356308){var _0x35d64d=_0x544e39;if(_0xc42b9f!==photoProduit[_0x35d64d(0x5eb)])return;photoProduit[_0x35d64d(0x380)]=![];if(_0x28ad6f)_0x28ad6f[_0x35d64d(0x593)][_0x35d64d(0x27b)]('charge');etatPhotoProduit(_0x35d64d(0x523)+(_0x356308&&_0x356308[_0x35d64d(0x518)]||_0x35d64d(0x1ff)),!![]);});}function verifierAffichagePhoto(_0x16ba97,_0x269b5a){var _0x200dc6=_0x5d326d,_0x31d064=_0x16ba97&&_0x16ba97['querySelector'](_0x200dc6(0x1e7));if(!_0x31d064||!photoCloud())return;_0x31d064[_0x200dc6(0x1da)]('error',function(){var _0x542336=_0x200dc6;_0x269b5a(_0x542336(0x4c0),!![]);},{'once':!![]});}var photoRayons={'envoi':{}};function renderPhotosRayons(){var _0x13e855=_0x5d326d;if(typeof renderRayonsAdmin===_0x13e855(0x540))renderRayonsAdmin();}function etatTuileRayon(_0x5c400c,_0x15a067,_0x5c368e){var _0x315197=_0x5d326d,_0x547cec=(DATA['categories']||[])[_0x315197(0x5f8)](_0x5c400c),_0x56a197=document[_0x315197(0x4b4)](_0x315197(0x49e)+_0x547cec+_0x315197(0x5ce));if(!_0x56a197)return;_0x56a197[_0x315197(0x377)]=_0x15a067,_0x56a197[_0x315197(0x593)][_0x315197(0x322)](_0x315197(0x4a6),!!_0x5c368e);}function choisirPhotoRayon(_0x3d309a,_0x21d008){var _0xe8df4f=_0x5d326d;photoRayons[_0xe8df4f(0x380)][_0x3d309a]=!![],renderPhotosRayons(),etatTuileRayon(_0x3d309a,photoCloud()?_0xe8df4f(0x3ef):_0xe8df4f(0x28b)),preparerPhoto(_0x21d008,'rayons',pharmaPhotoRayon(DATA,_0x3d309a))[_0xe8df4f(0x2e5)](function(_0x4634e){var _0xc2cd65=_0xe8df4f;delete photoRayons[_0xc2cd65(0x380)][_0x3d309a],enregistrerPhotoRayon(_0x3d309a,_0x4634e);},function(_0x4d84f7){var _0x42967a=_0xe8df4f;delete photoRayons[_0x42967a(0x380)][_0x3d309a],renderPhotosRayons(),etatTuileRayon(_0x3d309a,'Photo\x20non\x20ajoutée\x20:\x20'+(_0x4d84f7&&_0x4d84f7['message']||_0x42967a(0x1ff)),!![]);});}function enregistrerPhotoRayon(_0x3217cc,_0x43f016){var _0x1a1fe1=_0x5d326d;if((DATA[_0x1a1fe1(0x330)]||[])[_0x1a1fe1(0x5f8)](_0x3217cc)===-0x1){renderPhotosRayons();return;}if(!DATA[_0x1a1fe1(0x315)]||typeof DATA[_0x1a1fe1(0x315)]!==_0x1a1fe1(0x4cb))DATA[_0x1a1fe1(0x315)]={};var _0x2c035b=DATA['photosRayons'][_0x3217cc];if(_0x43f016)DATA[_0x1a1fe1(0x315)][_0x3217cc]=_0x43f016;else delete DATA[_0x1a1fe1(0x315)][_0x3217cc];if(!photoCloud()&&!PharmaStore[_0x1a1fe1(0x3a5)](DATA)){if(_0x2c035b)DATA[_0x1a1fe1(0x315)][_0x3217cc]=_0x2c035b;else delete DATA[_0x1a1fe1(0x315)][_0x3217cc];renderPhotosRayons(),etatTuileRayon(_0x3217cc,'Photo\x20non\x20enregistrée\x20:\x20la\x20mémoire\x20de\x20ce\x20navigateur\x20est\x20pleine.',!![]);return;}persist(),renderPhotosRayons(),toast(_0x43f016?_0x1a1fe1(0x4e2)+_0x3217cc+_0x1a1fe1(0x49c):'Photo\x20du\x20rayon\x20'+_0x3217cc+_0x1a1fe1(0x24a));}document[_0x5d326d(0x1da)](_0x5d326d(0x58e),function(){var _0x448a26=_0x5d326d,_0x63fd9f=document[_0x448a26(0x30b)](_0x448a26(0x257));if(_0x63fd9f)_0x63fd9f[_0x448a26(0x1da)](_0x448a26(0x42e),function(){var _0x44a488=_0x448a26;if(_0x63fd9f['files']&&_0x63fd9f[_0x44a488(0x605)][0x0])choisirPhotoProduit(_0x63fd9f[_0x44a488(0x605)][0x0]);_0x63fd9f[_0x44a488(0x413)]='';});var _0x32b14a=document[_0x448a26(0x30b)](_0x448a26(0x2ad));if(_0x32b14a)_0x32b14a[_0x448a26(0x1da)]('click',function(){var _0x29077a=_0x448a26;photoProduit[_0x29077a(0x5eb)]++,photoProduit[_0x29077a(0x380)]=![],majChampPhotoProduit(''),etatPhotoProduit(_0x29077a(0x5cd));});reinitialiserPhotoProduit();}),document[_0x5d326d(0x1da)](_0x5d326d(0x5f6),function(_0x557d92){var _0x556649=_0x5d326d;if(_0x557d92['detail']===_0x556649(0x316))reinitialiserPhotoProduit();});var rayonOuvert=null,rechercheAjoutRayon='',SVG_POIGNEE='<svg\x20width=\x2216\x22\x20height=\x2216\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20fill=\x22currentColor\x22\x20aria-hidden=\x22true\x22><circle\x20cx=\x229\x22\x20cy=\x226\x22\x20r=\x221.6\x22/><circle\x20cx=\x2215\x22\x20cy=\x226\x22\x20r=\x221.6\x22/><circle\x20cx=\x229\x22\x20cy=\x2212\x22\x20r=\x221.6\x22/><circle\x20cx=\x2215\x22\x20cy=\x2212\x22\x20r=\x221.6\x22/><circle\x20cx=\x229\x22\x20cy=\x2218\x22\x20r=\x221.6\x22/><circle\x20cx=\x2215\x22\x20cy=\x2218\x22\x20r=\x221.6\x22/></svg>',SVG_PHOTO_PETIT=_0x5d326d(0x5d5),SVG_CHEVRON=_0x5d326d(0x3f0);function nomRayonValide(_0x443df7,_0x4848dc){var _0x514118=_0x5d326d,_0x84a501=String(_0x443df7==null?'':_0x443df7)[_0x514118(0x617)]()[_0x514118(0x615)](/\s+/g,'\x20');if(!_0x84a501)return{'erreur':'Indiquez\x20le\x20nom\x20du\x20rayon'};if(_0x84a501['length']>0x3c)return{'erreur':_0x514118(0x2f5)};if((DATA[_0x514118(0x330)]||[])[_0x514118(0x49b)](function(_0x2d9c11){var _0x4fe3fa=_0x514118;return _0x2d9c11!==_0x4848dc&&_0x2d9c11[_0x4fe3fa(0x3e7)]()===_0x84a501[_0x4fe3fa(0x3e7)]();}))return{'erreur':_0x514118(0x405)};return{'nom':_0x84a501};}function renderRayonsAdmin(){var _0x528c8b=_0x5d326d,_0xf46b85=document['getElementById'](_0x528c8b(0x1ed));if(!_0xf46b85)return;var _0x5284bd=DATA[_0x528c8b(0x330)]||[];if(rayonOuvert&&_0x5284bd[_0x528c8b(0x5f8)](rayonOuvert)===-0x1)rayonOuvert=null;if(!_0x5284bd[_0x528c8b(0x589)]){_0xf46b85[_0x528c8b(0x453)]='<li\x20class=\x22rayons-aide\x22>Aucun\x20rayon\x20pour\x20l\x27instant\x20:\x20créez-en\x20un\x20avec\x20«\x20Nouveau\x20rayon\x20».</li>';return;}var _0x5c3f42=document['activeElement']&&document[_0x528c8b(0x59e)][_0x528c8b(0x417)](_0x528c8b(0x1bd))==='visible'?document['activeElement'][_0x528c8b(0x381)](_0x528c8b(0x311))[_0x528c8b(0x417)](_0x528c8b(0x54d)):null;_0xf46b85[_0x528c8b(0x453)]=_0x5284bd[_0x528c8b(0x3bb)](function(_0x19ad51,_0x568030){var _0x3e213d=_0x528c8b,_0x2b9104=pharmaProduitsDuRayon(DATA,_0x19ad51)[_0x3e213d(0x589)],_0xa4448c=_0x19ad51===rayonOuvert,_0x4d4008=!!photoRayons['envoi'][_0x19ad51],_0x486722=pharmaRayonVisible(DATA,_0x19ad51),_0x5e310e=(_0x2b9104?_0x2b9104+'\x20produit'+(_0x2b9104>0x1?'s':''):_0x3e213d(0x49a))+(!_0x486722?_0x3e213d(0x411):_0x2b9104?'':_0x3e213d(0x2cc));return _0x3e213d(0x295)+(_0xa4448c?_0x3e213d(0x337):'')+(_0x486722?'':_0x3e213d(0x435))+_0x3e213d(0x35b)+_0x568030+'\x22>'+_0x3e213d(0x429)+_0x3e213d(0x4b5)+escHtml(_0x3e213d(0x5b3)+_0x19ad51+'\x20:\x20glisser,\x20ou\x20flèches\x20haut\x20et\x20bas')+'\x22>'+SVG_POIGNEE+_0x3e213d(0x2a8)+_0x3e213d(0x37d)+(_0x4d4008?_0x3e213d(0x393):'')+_0x3e213d(0x586)+_0x3e213d(0x266)+_0xa4448c+_0x3e213d(0x2b8)+escHtml(_0x19ad51)+'</strong><span>'+_0x5e310e+_0x3e213d(0x29a)+_0x3e213d(0x561)+_0x3e213d(0x41e)+(_0x486722?_0x3e213d(0x533):'')+_0x3e213d(0x537)+escHtml(_0x3e213d(0x283)+_0x19ad51+'\x20sur\x20le\x20site')+_0x3e213d(0x328)+_0x3e213d(0x3d3)+escHtml(_0x3e213d(0x4e2)+_0x19ad51)+'\x22'+(_0x4d4008?_0x3e213d(0x546):'')+'>'+SVG_PHOTO_PETIT+_0x3e213d(0x2be)+(_0x4d4008?'Envoi…':_0x3e213d(0x2a4))+_0x3e213d(0x2f2)+_0x3e213d(0x280)+escHtml(_0x3e213d(0x431)+_0x19ad51)+'\x22>'+svgEdit()+'<span>Renommer</span></button>'+_0x3e213d(0x555)+escHtml(_0x3e213d(0x5bd)+_0x19ad51)+'\x22>'+svgTrash()+_0x3e213d(0x2a8)+SVG_CHEVRON+'</div></div>'+_0x3e213d(0x385)+(_0xa4448c?detailRayonHTML(_0x19ad51):'')+_0x3e213d(0x458);})[_0x528c8b(0x314)](''),_0xf46b85['querySelectorAll'](_0x528c8b(0x311))['forEach'](function(_0x813229){var _0x351239=_0x528c8b,_0x38d624=_0x5284bd[parseInt(_0x813229['getAttribute'](_0x351239(0x54d)),0xa)];afficherApercuPhoto(_0x813229[_0x351239(0x4b4)]('.photo-apercu'),pharmaPhotoRayon(DATA,_0x38d624)),_0x813229[_0x351239(0x4b4)](_0x351239(0x5ef))[_0x351239(0x1da)](_0x351239(0x4ed),function(){rayonOuvert=rayonOuvert===_0x38d624?null:_0x38d624,rechercheAjoutRayon='',renderRayonsAdmin();});var _0x3ccd7d=_0x813229[_0x351239(0x4b4)](_0x351239(0x5bb));_0x3ccd7d[_0x351239(0x1da)](_0x351239(0x42e),function(){var _0x57c9d8=_0x351239;if(_0x3ccd7d[_0x57c9d8(0x605)]&&_0x3ccd7d[_0x57c9d8(0x605)][0x0])choisirPhotoRayon(_0x38d624,_0x3ccd7d[_0x57c9d8(0x605)][0x0]);}),_0x813229[_0x351239(0x4b4)](_0x351239(0x463))['addEventListener']('click',function(){editerNomRayon(_0x813229,_0x38d624);}),_0x813229['querySelector'](_0x351239(0x5c0))['addEventListener'](_0x351239(0x4ed),function(){supprimerRayon(_0x38d624);}),_0x813229['querySelector'](_0x351239(0x246))['addEventListener'](_0x351239(0x42e),function(){var _0x3cb3ae=_0x351239;basculerRayonVisible(_0x38d624,this[_0x3cb3ae(0x3d4)]);});if(_0x38d624===rayonOuvert)brancherDetailRayon(_0x813229,_0x38d624);});if(_0x5c3f42!==null){var _0x396ce5=_0xf46b85[_0x528c8b(0x4b4)](_0x528c8b(0x1d1)+_0x5c3f42+_0x528c8b(0x5db));if(_0x396ce5)_0x396ce5['focus']();}rendreReordonnable(_0xf46b85,_0x528c8b(0x311),function(_0x253d25,_0x41df46){var _0x1df99d=_0x528c8b,_0x4157a9=!!(document[_0x1df99d(0x59e)]&&document[_0x1df99d(0x59e)][_0x1df99d(0x593)][_0x1df99d(0x47e)](_0x1df99d(0x512))),_0x36fe95=DATA['categories'][_0x1df99d(0x502)](_0x253d25,0x1)[0x0];DATA[_0x1df99d(0x330)][_0x1df99d(0x502)](_0x41df46,0x0,_0x36fe95),persist(),renderRayonsAdmin();var _0x23ba9c=document[_0x1df99d(0x4b4)]('#liste-rayons\x20.rayon-ligne[data-index=\x22'+_0x41df46+'\x22]\x20.rayon-tete\x20.poignee');if(_0x23ba9c&&_0x4157a9)_0x23ba9c[_0x1df99d(0x2eb)]();});}function detailRayonHTML(_0x5955a7){var _0x233206=_0x5d326d,_0x3821a7=pharmaProduitsDuRayon(DATA,_0x5955a7),_0x263577=_0x233206(0x476);if(!_0x3821a7['length'])_0x263577+='<p\x20class=\x22rayons-aide\x22>Aucun\x20produit\x20pour\x20l\x27instant.\x20Ajoutez-en\x20ci-dessous.</p>';_0x263577+=_0x233206(0x2c2)+_0x3821a7['map'](function(_0x381d81){var _0x145446=_0x233206,_0x11332d=_0x381d81[_0x145446(0x2e9)]===_0x5955a7;return _0x145446(0x52c)+nombre(_0x381d81['id'])+'\x22>'+_0x145446(0x4b5)+escHtml(_0x145446(0x222)+_0x381d81[_0x145446(0x293)]+_0x145446(0x277))+'\x22>'+SVG_POIGNEE+_0x145446(0x2a8)+_0x145446(0x3e6)+escHtml(_0x381d81[_0x145446(0x293)])+_0x145446(0x25b)+(_0x11332d?_0x145446(0x619):_0x145446(0x2c0)+escHtml(_0x145446(0x1bf)+_0x381d81[_0x145446(0x293)]+_0x145446(0x441))+_0x145446(0x21e))+_0x145446(0x458);})[_0x233206(0x314)]('')+'</ul>';if(pharmaPhotoRayon(DATA,_0x5955a7))_0x263577+='<button\x20type=\x22button\x22\x20class=\x22btn\x20btn-ghost\x22\x20data-action=\x22retirer-photo\x22\x20style=\x22margin-top:10px\x22>Retirer\x20la\x20photo\x20du\x20rayon</button>';return _0x263577+=_0x233206(0x258)+_0x233206(0x347)+escHtml(rechercheAjoutRayon)+'\x22>'+_0x233206(0x587),_0x263577;}function resultatsAjoutRayon(_0x3e42e0){var _0x1c8789=_0x5d326d,_0x5c0198=pharmaProduitsDuRayon(DATA,_0x3e42e0)[_0x1c8789(0x3bb)](function(_0x342890){return _0x342890['id'];}),_0x26a075=(DATA['produits']||[])[_0x1c8789(0x578)](function(_0x1dae47){var _0x5d4513=_0x1c8789;return _0x5c0198[_0x5d4513(0x5f8)](_0x1dae47['id'])===-0x1&&searchMatch(_0x1dae47[_0x5d4513(0x293)]+'\x20'+_0x1dae47['ref']+'\x20'+_0x1dae47['cat'],rechercheAjoutRayon);});if(!_0x26a075[_0x1c8789(0x589)])return _0x1c8789(0x379)+(rechercheAjoutRayon?_0x1c8789(0x40f):_0x1c8789(0x2d6))+_0x1c8789(0x458);return _0x26a075[_0x1c8789(0x1b9)](0x0,0x1e)[_0x1c8789(0x3bb)](function(_0x5ba957){var _0x265d83=_0x1c8789;return _0x265d83(0x375)+nombre(_0x5ba957['id'])+_0x265d83(0x34d)+escHtml(_0x5ba957[_0x265d83(0x293)])+(_0x5ba957[_0x265d83(0x2e9)]?_0x265d83(0x3b1)+escHtml(_0x5ba957['cat'])+'</span>':'')+'</span>'+'<button\x20type=\x22button\x22\x20class=\x22btn\x20btn-ghost\x22\x20aria-label=\x22'+escHtml(_0x265d83(0x1bc)+_0x5ba957[_0x265d83(0x293)]+_0x265d83(0x45d))+_0x265d83(0x5ab);})[_0x1c8789(0x314)]('')+(_0x26a075[_0x1c8789(0x589)]>0x1e?_0x1c8789(0x569):'');}function brancherDetailRayon(_0x4847b5,_0x54479d){var _0x14ce76=_0x5d326d,_0x4d17cd=_0x4847b5[_0x14ce76(0x4b4)](_0x14ce76(0x285));_0x4d17cd[_0x14ce76(0x5f7)](_0x14ce76(0x56f))[_0x14ce76(0x32b)](function(_0x302c6a){var _0x584490=_0x14ce76;_0x302c6a[_0x584490(0x1da)](_0x584490(0x4ed),function(){var _0x1800b5=_0x584490;retirerDuRayon(_0x54479d,nombre(_0x302c6a[_0x1800b5(0x381)]('.produit-rayon')[_0x1800b5(0x417)](_0x1800b5(0x397))));});}),rendreReordonnable(_0x4d17cd,_0x14ce76(0x46e),function(_0x2a44a9,_0x285c8c){var _0x49334a=_0x14ce76,_0x558140=!!(document[_0x49334a(0x59e)]&&document[_0x49334a(0x59e)][_0x49334a(0x593)][_0x49334a(0x47e)]('poignee')),_0x319918=pharmaProduitsDuRayon(DATA,_0x54479d)[_0x49334a(0x3bb)](function(_0x16ff0f){return _0x16ff0f['id'];}),_0x317085=_0x319918[_0x49334a(0x502)](_0x2a44a9,0x1)[0x0];_0x319918[_0x49334a(0x502)](_0x285c8c,0x0,_0x317085),enregistrerContenuRayon(_0x54479d,_0x319918);var _0x4b2e42=document[_0x49334a(0x4b4)](_0x49334a(0x1e8)+(_0x285c8c+0x1)+_0x49334a(0x521));if(_0x4b2e42&&_0x558140)_0x4b2e42[_0x49334a(0x2eb)]();});var _0x3ebc26=_0x4847b5['querySelector'](_0x14ce76(0x2ab));if(_0x3ebc26)_0x3ebc26['addEventListener'](_0x14ce76(0x4ed),function(){enregistrerPhotoRayon(_0x54479d,'');});var _0x3a0b99=_0x4847b5['querySelector'](_0x14ce76(0x4c1)),_0x5e2ab1=_0x4847b5['querySelector'](_0x14ce76(0x566));function _0x29a5fa(){var _0x1486fd=_0x14ce76;_0x5e2ab1['innerHTML']=resultatsAjoutRayon(_0x54479d),_0x5e2ab1[_0x1486fd(0x5f7)](_0x1486fd(0x588))[_0x1486fd(0x32b)](function(_0x26aa4b){var _0x118aa4=_0x1486fd;_0x26aa4b[_0x118aa4(0x1da)](_0x118aa4(0x4ed),function(){var _0x3018b7=_0x118aa4;ajouterAuRayon(_0x54479d,nombre(_0x26aa4b['closest']('li')[_0x3018b7(0x417)](_0x3018b7(0x397))));});});}_0x3a0b99[_0x14ce76(0x1da)](_0x14ce76(0x4b8),function(){rechercheAjoutRayon=_0x3a0b99['value'],_0x29a5fa();}),_0x29a5fa();}function enregistrerContenuRayon(_0x107949,_0x517301){var _0x17273f=_0x5d326d;if(!DATA[_0x17273f(0x3d8)]||typeof DATA['contenuRayons']!==_0x17273f(0x4cb))DATA[_0x17273f(0x3d8)]={};DATA[_0x17273f(0x3d8)][_0x107949]=_0x517301,persist(),renderRayonsAdmin();}function ajouterAuRayon(_0x179ded,_0x35cdfb){var _0xa210a4=_0x5d326d,_0x1bbc4e=pharmaProduitsDuRayon(DATA,_0x179ded)[_0xa210a4(0x3bb)](function(_0x30bccb){return _0x30bccb['id'];});if(_0x1bbc4e[_0xa210a4(0x5f8)](_0x35cdfb)!==-0x1)return;_0x1bbc4e[_0xa210a4(0x35a)](_0x35cdfb);var _0x122e9d=DATA[_0xa210a4(0x4c2)]['find'](function(_0x3145ef){return _0x3145ef['id']===_0x35cdfb;});enregistrerContenuRayon(_0x179ded,_0x1bbc4e);var _0x2ef737=document[_0xa210a4(0x30b)](_0xa210a4(0x462));if(_0x2ef737)_0x2ef737[_0xa210a4(0x2eb)]();toast((_0x122e9d?_0x122e9d['nom']:'Produit')+_0xa210a4(0x325)+_0x179ded);}function retirerDuRayon(_0x3ddb43,_0x292962){var _0x2024b6=_0x5d326d,_0x16952a=DATA[_0x2024b6(0x4c2)][_0x2024b6(0x340)](function(_0x41d6be){return _0x41d6be['id']===_0x292962;});if(_0x16952a&&_0x16952a[_0x2024b6(0x2e9)]===_0x3ddb43){toast('C\x27est\x20le\x20rayon\x20principal\x20de\x20ce\x20produit\x20:\x20changez-le\x20dans\x20la\x20fenêtre\x20du\x20produit',_0x2024b6(0x536));return;}enregistrerContenuRayon(_0x3ddb43,pharmaProduitsDuRayon(DATA,_0x3ddb43)[_0x2024b6(0x3bb)](function(_0x39f549){return _0x39f549['id'];})['filter'](function(_0x1216fe){return _0x1216fe!==_0x292962;})),toast((_0x16952a?_0x16952a['nom']:_0x2024b6(0x3db))+_0x2024b6(0x61f)+_0x3ddb43);}function nouveauRayon(){var _0x36e8da=_0x5d326d;openModal(_0x36e8da(0x459)),setTimeout(function(){var _0x42c25f=_0x36e8da,_0x24bb1a=document['getElementById'](_0x42c25f(0x241));if(_0x24bb1a)_0x24bb1a[_0x42c25f(0x2eb)]();},0x50);}function creerRayon(){var _0x2a8d3a=_0x5d326d,_0xab4777=nomRayonValide(getVal(_0x2a8d3a(0x241)));if(_0xab4777[_0x2a8d3a(0x4a6)]){toast(_0xab4777[_0x2a8d3a(0x4a6)],_0x2a8d3a(0x536));return;}DATA['categories'][_0x2a8d3a(0x35a)](_0xab4777[_0x2a8d3a(0x293)]),rayonOuvert=_0xab4777['nom'],rechercheAjoutRayon='',closeModal('m-rayon'),persist();if(currentPage===_0x2a8d3a(0x59c))renderRayonsAdmin();toast(_0x2a8d3a(0x60e)+_0xab4777[_0x2a8d3a(0x293)]+'\x20créé\x20:\x20ajoutez-lui\x20des\x20produits');}function editerNomRayon(_0x48d280,_0x3dc550){var _0x106dc6=_0x5d326d,_0x1b3232=_0x48d280[_0x106dc6(0x4b4)](_0x106dc6(0x5ef)),_0x147f3a=document[_0x106dc6(0x3ae)](_0x106dc6(0x571));_0x147f3a[_0x106dc6(0x212)]=_0x106dc6(0x51a),_0x147f3a[_0x106dc6(0x453)]=_0x106dc6(0x55e)+escHtml(_0x106dc6(0x570)+_0x3dc550)+_0x106dc6(0x4dc)+escHtml(_0x3dc550)+'\x22>'+_0x106dc6(0x3fc),_0x1b3232[_0x106dc6(0x55f)](_0x147f3a),_0x48d280[_0x106dc6(0x4b4)](_0x106dc6(0x4da))['style'][_0x106dc6(0x2b9)]='none';var _0x412703=_0x147f3a['querySelector'](_0x106dc6(0x4b8));_0x412703[_0x106dc6(0x2eb)](),_0x412703[_0x106dc6(0x4f4)](),_0x147f3a[_0x106dc6(0x4b4)](_0x106dc6(0x20b))[_0x106dc6(0x1da)](_0x106dc6(0x4ed),renderRayonsAdmin),_0x412703[_0x106dc6(0x1da)](_0x106dc6(0x3e8),function(_0x34ae2d){if(_0x34ae2d['key']==='Escape')renderRayonsAdmin();}),_0x147f3a[_0x106dc6(0x1da)](_0x106dc6(0x399),function(_0x4a04dd){var _0x38313b=_0x106dc6;_0x4a04dd[_0x38313b(0x50b)]();var _0x1e6395=nomRayonValide(_0x412703[_0x38313b(0x413)],_0x3dc550);if(_0x1e6395[_0x38313b(0x4a6)]){toast(_0x1e6395[_0x38313b(0x4a6)],_0x38313b(0x536));return;}if(_0x1e6395[_0x38313b(0x293)]===_0x3dc550){renderRayonsAdmin();return;}renommerRayon(_0x3dc550,_0x1e6395[_0x38313b(0x293)]);});}function basculerRayonVisible(_0x4d73e7,_0x524dc8){var _0x2947fb=_0x5d326d;if(!Array[_0x2947fb(0x4bd)](DATA[_0x2947fb(0x4ec)]))DATA[_0x2947fb(0x4ec)]=[];DATA[_0x2947fb(0x4ec)]=DATA['rayonsMasques'][_0x2947fb(0x578)](function(_0x3e29e0){return _0x3e29e0!==_0x4d73e7;});if(!_0x524dc8)DATA['rayonsMasques']['push'](_0x4d73e7);persist(),renderRayonsAdmin(),toast(_0x524dc8?'Rayon\x20'+_0x4d73e7+_0x2947fb(0x3c3):'Rayon\x20'+_0x4d73e7+'\x20masqué\x20sur\x20le\x20site\x20:\x20ses\x20produits\x20restent\x20en\x20vente');}function renommerRayon(_0x5aabb8,_0x5b2707){var _0x50ad19=_0x5d326d;if(ADMIN_CLOUD){PharmaAdminCloud[_0x50ad19(0x1fc)](_0x5aabb8,_0x5b2707)['then'](function(){if(rayonOuvert===_0x5aabb8)rayonOuvert=_0x5b2707;renderRayonsAdmin(),toast('Rayon\x20renommé\x20:\x20'+_0x5b2707);},function(_0x4b99f1){var _0x1dda30=_0x50ad19;toast(_0x1dda30(0x3f8)+(_0x4b99f1&&_0x4b99f1[_0x1dda30(0x518)]||_0x1dda30(0x1ff)),'error'),renderRayonsAdmin();});return;}DATA[_0x50ad19(0x330)]=DATA[_0x50ad19(0x330)][_0x50ad19(0x3bb)](function(_0x1a34de){return _0x1a34de===_0x5aabb8?_0x5b2707:_0x1a34de;}),DATA[_0x50ad19(0x4c2)]['forEach'](function(_0x4f8fcd){var _0x52f91c=_0x50ad19;if(_0x4f8fcd[_0x52f91c(0x2e9)]===_0x5aabb8)_0x4f8fcd['cat']=_0x5b2707;}),(DATA[_0x50ad19(0x3fa)]||[])[_0x50ad19(0x32b)](function(_0x3fe69d){var _0x5a042e=_0x50ad19;if(_0x3fe69d[_0x5a042e(0x32c)]===_0x5aabb8)_0x3fe69d[_0x5a042e(0x32c)]=_0x5b2707;});if(Array[_0x50ad19(0x4bd)](DATA['rayonsMasques']))DATA[_0x50ad19(0x4ec)]=DATA[_0x50ad19(0x4ec)][_0x50ad19(0x3bb)](function(_0x5027b4){return _0x5027b4===_0x5aabb8?_0x5b2707:_0x5027b4;});[_0x50ad19(0x315),_0x50ad19(0x3d8)][_0x50ad19(0x32b)](function(_0x32f683){var _0x3107f4=_0x50ad19,_0x1afb42=DATA[_0x32f683];_0x1afb42&&Object[_0x3107f4(0x40c)][_0x3107f4(0x251)]['call'](_0x1afb42,_0x5aabb8)&&(_0x1afb42[_0x5b2707]=_0x1afb42[_0x5aabb8],delete _0x1afb42[_0x5aabb8]);});if(rayonOuvert===_0x5aabb8)rayonOuvert=_0x5b2707;persist(),renderRayonsAdmin(),toast('Rayon\x20renommé\x20:\x20'+_0x5b2707);}function supprimerRayon(_0x178c81){var _0x5f21d4=_0x5d326d,_0x4e4548=DATA[_0x5f21d4(0x4c2)][_0x5f21d4(0x578)](function(_0x4383fb){var _0x2ad7eb=_0x5f21d4;return _0x4383fb[_0x2ad7eb(0x2e9)]===_0x178c81;});if(_0x4e4548['length']){toast('Le\x20rayon\x20'+_0x178c81+'\x20est\x20le\x20rayon\x20principal\x20de\x20'+_0x4e4548[_0x5f21d4(0x589)]+_0x5f21d4(0x224)+(_0x4e4548['length']>0x1?'s':'')+_0x5f21d4(0x335),_0x5f21d4(0x536));return;}var _0x355c8b=(DATA['codesPromo']||[])['filter'](function(_0x382d7c){var _0x24b76c=_0x5f21d4;return _0x382d7c[_0x24b76c(0x32c)]===_0x178c81;})['length'];confirmer(_0x5f21d4(0x223)+escHtml(_0x178c81)+_0x5f21d4(0x44d)+(_0x355c8b?_0x5f21d4(0x550)+_0x355c8b+_0x5f21d4(0x5a0)+(_0x355c8b>0x1?'s':'')+_0x5f21d4(0x376)+(_0x355c8b>0x1?'nt':'')+_0x5f21d4(0x599)+(_0x355c8b>0x1?'s':'')+'\x20ne\x20s\x27appliquer'+(_0x355c8b>0x1?'ont':'a')+_0x5f21d4(0x43b):''),function(){var _0x2602e8=_0x5f21d4;DATA[_0x2602e8(0x330)]=DATA['categories']['filter'](function(_0x28521f){return _0x28521f!==_0x178c81;});if(DATA[_0x2602e8(0x315)])delete DATA[_0x2602e8(0x315)][_0x178c81];if(DATA[_0x2602e8(0x3d8)])delete DATA[_0x2602e8(0x3d8)][_0x178c81];if(Array['isArray'](DATA[_0x2602e8(0x4ec)]))DATA[_0x2602e8(0x4ec)]=DATA['rayonsMasques'][_0x2602e8(0x578)](function(_0x4f38a5){return _0x4f38a5!==_0x178c81;});if(rayonOuvert===_0x178c81)rayonOuvert=null;persist(),renderRayonsAdmin(),toast(_0x2602e8(0x60e)+_0x178c81+_0x2602e8(0x2d9));});}function rendreReordonnable(_0x2f1729,_0x211c74,_0x413a31){var _0x140194=_0x5d326d,_0x567244=Array[_0x140194(0x40c)][_0x140194(0x578)]['call'](_0x2f1729[_0x140194(0x3c1)],function(_0x5418f5){var _0x4ae084=_0x140194;return _0x5418f5[_0x4ae084(0x34f)](_0x211c74);});_0x567244[_0x140194(0x32b)](function(_0x3aae2,_0xe4f5f6){var _0x3df607=_0x140194,_0x4b01dd=_0x3aae2[_0x3df607(0x4b4)]('.poignee');if(!_0x4b01dd||_0x4b01dd[_0x3df607(0x381)](_0x211c74)!==_0x3aae2)return;_0x4b01dd[_0x3df607(0x1da)](_0x3df607(0x3e8),function(_0xbab022){var _0x39bb06=_0x3df607;if(_0xbab022['key']==='ArrowUp'&&_0xe4f5f6>0x0)_0xbab022['preventDefault'](),_0x413a31(_0xe4f5f6,_0xe4f5f6-0x1);else _0xbab022['key']===_0x39bb06(0x216)&&_0xe4f5f6<_0x567244['length']-0x1&&(_0xbab022[_0x39bb06(0x50b)](),_0x413a31(_0xe4f5f6,_0xe4f5f6+0x1));}),_0x4b01dd['addEventListener'](_0x3df607(0x544),function(_0x1b63e1){glisser(_0x1b63e1,_0x2f1729,_0x3aae2,_0x211c74,_0x413a31,_0x4b01dd);});});}function glisser(_0x4ab7de,_0x563944,_0x2ac3ad,_0x51548e,_0x378c0b,_0x49e4bc){var _0xb42c5e=_0x5d326d;if(_0x4ab7de[_0xb42c5e(0x51b)]!==undefined&&_0x4ab7de[_0xb42c5e(0x51b)]!==0x0)return;_0x4ab7de['preventDefault']();var _0x282579=function(){var _0x118106=_0xb42c5e;return Array[_0x118106(0x40c)][_0x118106(0x578)][_0x118106(0x1cd)](_0x563944[_0x118106(0x3c1)],function(_0x189d34){var _0x535aed=_0x118106;return _0x189d34[_0x535aed(0x34f)](_0x51548e);});},_0x4ca9cd=_0x282579()[_0xb42c5e(0x5f8)](_0x2ac3ad),_0x2b018e=_0x4ab7de['clientY']+window[_0xb42c5e(0x1c1)],_0x4baeb2=_0x2ac3ad[_0xb42c5e(0x45f)],_0x39b748=_0x4ab7de[_0xb42c5e(0x46a)],_0x545e48=null;try{_0x49e4bc[_0xb42c5e(0x23c)](_0x4ab7de[_0xb42c5e(0x3bc)]);}catch(_0x399ffb){}_0x2ac3ad[_0xb42c5e(0x593)][_0xb42c5e(0x20f)](_0xb42c5e(0x37c)),document[_0xb42c5e(0x3c5)][_0xb42c5e(0x593)][_0xb42c5e(0x20f)](_0xb42c5e(0x5f5));function _0x182f8b(_0xa25c1a){var _0x5b3b46=_0xb42c5e;_0x39b748=_0xa25c1a;var _0x107829=_0xa25c1a+window['scrollY']-_0x2b018e;_0x2ac3ad[_0x5b3b46(0x507)][_0x5b3b46(0x4be)]=_0x5b3b46(0x547)+(_0x107829-(_0x2ac3ad[_0x5b3b46(0x45f)]-_0x4baeb2))+_0x5b3b46(0x2bd);var _0xc1dbe=_0x2ac3ad[_0x5b3b46(0x28a)](),_0x5198fa=_0xc1dbe[_0x5b3b46(0x40e)]+_0xc1dbe[_0x5b3b46(0x4d0)]/0x2,_0x31d587=_0x2ac3ad[_0x5b3b46(0x36d)],_0x2eb65d=_0x2ac3ad[_0x5b3b46(0x27a)];if(_0x31d587&&_0x31d587['matches'](_0x51548e)){var _0x345b08=_0x31d587[_0x5b3b46(0x28a)]();if(_0x5198fa>_0x345b08[_0x5b3b46(0x40e)]+_0x345b08['height']/0x2){_0x563944[_0x5b3b46(0x2e0)](_0x31d587,_0x2ac3ad),_0x182f8b(_0xa25c1a);return;}}if(_0x2eb65d&&_0x2eb65d[_0x5b3b46(0x34f)](_0x51548e)){var _0xde724a=_0x2eb65d[_0x5b3b46(0x28a)]();if(_0x5198fa<_0xde724a[_0x5b3b46(0x40e)]+_0xde724a[_0x5b3b46(0x4d0)]/0x2){_0x563944[_0x5b3b46(0x2e0)](_0x2ac3ad,_0x2eb65d),_0x182f8b(_0xa25c1a);return;}}}function _0x36b0ad(){var _0x635666=_0x39b748<0x46?-0xa:_0x39b748>window['innerHeight']-0x46?0xa:0x0;_0x635666&&(window['scrollBy'](0x0,_0x635666),_0x182f8b(_0x39b748)),_0x545e48=requestAnimationFrame(_0x36b0ad);}_0x545e48=requestAnimationFrame(_0x36b0ad);function _0xb18b17(_0x4b0497){var _0x322111=_0xb42c5e;if(_0x4b0497[_0x322111(0x3bc)]===_0x4ab7de[_0x322111(0x3bc)])_0x182f8b(_0x4b0497[_0x322111(0x46a)]);}function _0x4d2849(_0x31cc87){var _0xe2cce9=_0xb42c5e;if(_0x31cc87&&_0x31cc87[_0xe2cce9(0x3bc)]!==undefined&&_0x31cc87[_0xe2cce9(0x3bc)]!==_0x4ab7de[_0xe2cce9(0x3bc)])return;cancelAnimationFrame(_0x545e48),document[_0xe2cce9(0x5a4)](_0xe2cce9(0x331),_0xb18b17),document[_0xe2cce9(0x5a4)]('pointerup',_0x4d2849),document['removeEventListener']('pointercancel',_0x4d2849),_0x2ac3ad[_0xe2cce9(0x593)]['remove'](_0xe2cce9(0x37c)),_0x2ac3ad['style']['transform']='',document[_0xe2cce9(0x3c5)][_0xe2cce9(0x593)][_0xe2cce9(0x27b)](_0xe2cce9(0x5f5));var _0x3000b7=_0x282579()[_0xe2cce9(0x5f8)](_0x2ac3ad);if(_0x3000b7!==_0x4ca9cd&&_0x3000b7!==-0x1)_0x378c0b(_0x4ca9cd,_0x3000b7);}document['addEventListener'](_0xb42c5e(0x331),_0xb18b17),document[_0xb42c5e(0x1da)](_0xb42c5e(0x2fe),_0x4d2849),document['addEventListener'](_0xb42c5e(0x5b6),_0x4d2849);}function renderConseils(){var _0x396a8c=_0x5d326d,_0x54512f='';DATA[_0x396a8c(0x541)][_0x396a8c(0x32b)](function(_0x4a93b9){var _0x1beec6=_0x396a8c;_0x54512f+=_0x1beec6(0x3d2)+couleurSure(_0x4a93b9[_0x1beec6(0x298)])+_0x1beec6(0x49d),_0x54512f+=_0x1beec6(0x367)+couleurSure(_0x4a93b9[_0x1beec6(0x298)])+_0x1beec6(0x60f)+svgConseil(_0x4a93b9[_0x1beec6(0x3a9)])+_0x1beec6(0x30a),_0x54512f+=_0x1beec6(0x480)+escHtml(_0x4a93b9[_0x1beec6(0x209)])+'</div><div\x20style=\x22font-size:0.76rem;color:var(--texte-2);margin-top:2px\x22>'+escHtml(_0x4a93b9['texte'])+_0x1beec6(0x419),_0x54512f+=_0x1beec6(0x362),_0x54512f+='<label\x20class=\x22toggle-wrap\x22><input\x20type=\x22checkbox\x22\x20class=\x22toggle-input\x22'+(_0x4a93b9['actif']?_0x1beec6(0x533):'')+'\x20onchange=\x22toggleConseil('+_0x4a93b9['id']+',this.checked)\x22><span\x20class=\x22toggle-track\x22></span></label>',_0x54512f+=_0x1beec6(0x276)+_0x4a93b9['id']+')\x22>'+svgEdit()+_0x1beec6(0x2a8),_0x54512f+=_0x1beec6(0x46d)+_0x4a93b9['id']+',\x27'+escAttr(_0x4a93b9['titre'])+_0x1beec6(0x1df)+svgTrash()+_0x1beec6(0x2a8),_0x54512f+=_0x1beec6(0x419);}),setHTML(_0x396a8c(0x5b9),_0x54512f);}function editConseil(_0x28f662){var _0x2bd237=_0x5d326d,_0x187baa=DATA['conseils'][_0x2bd237(0x340)](function(_0x925fa){return _0x925fa['id']===_0x28f662;});if(!_0x187baa)return;setVal('cs-icone',_0x187baa[_0x2bd237(0x3a9)]||_0x2bd237(0x5e5)),setVal(_0x2bd237(0x1dd),_0x187baa['titre']),setVal(_0x2bd237(0x446),_0x187baa['texte']),setVal('cs-couleur',_0x187baa[_0x2bd237(0x298)]),document['getElementById']('cs-id')[_0x2bd237(0x413)]=_0x28f662,document[_0x2bd237(0x30b)](_0x2bd237(0x2dc))[_0x2bd237(0x377)]='Modifier\x20le\x20conseil',openModal(_0x2bd237(0x1fd));}function saveConseil(){var _0x546bcd=_0x5d326d,_0x5a3593=parseInt(document[_0x546bcd(0x30b)](_0x546bcd(0x519))[_0x546bcd(0x413)]),_0x5f5c61=getVal('cs-icone')||_0x546bcd(0x5e5),_0x70e3c6=getVal(_0x546bcd(0x1dd)),_0x61176d=getVal('cs-texte'),_0x233512=getVal(_0x546bcd(0x5b5))||'#1B6B45';if(!_0x70e3c6){toast(_0x546bcd(0x562),_0x546bcd(0x536));return;}if(_0x5a3593){var _0x507127=DATA[_0x546bcd(0x541)][_0x546bcd(0x340)](function(_0x27508a){return _0x27508a['id']===_0x5a3593;});_0x507127&&(_0x507127[_0x546bcd(0x3a9)]=_0x5f5c61,_0x507127[_0x546bcd(0x209)]=_0x70e3c6,_0x507127[_0x546bcd(0x329)]=_0x61176d,_0x507127['couleur']=_0x233512),toast(_0x546bcd(0x200));}else{var _0x5e35c0=DATA[_0x546bcd(0x541)][_0x546bcd(0x589)]?Math[_0x546bcd(0x420)][_0x546bcd(0x300)](null,DATA[_0x546bcd(0x541)][_0x546bcd(0x3bb)](function(_0x16b2c3){return _0x16b2c3['id'];}))+0x1:0x1;DATA[_0x546bcd(0x541)][_0x546bcd(0x35a)]({'id':_0x5e35c0,'icone':_0x5f5c61,'titre':_0x70e3c6,'texte':_0x61176d,'couleur':_0x233512,'actif':!![]}),toast(_0x546bcd(0x57f));}closeModal(_0x546bcd(0x1fd)),renderConseils(),document[_0x546bcd(0x30b)](_0x546bcd(0x519))[_0x546bcd(0x413)]='',persist();}function toggleConseil(_0x5a3307,_0x58619b){var _0x214b24=_0x5d326d,_0x579627=DATA[_0x214b24(0x541)][_0x214b24(0x340)](function(_0xa10036){return _0xa10036['id']===_0x5a3307;});_0x579627&&(_0x579627[_0x214b24(0x409)]=_0x58619b,toast(_0x58619b?_0x214b24(0x56b):'Conseil\x20désactivé'),persist());}function deleteConseil(_0x5d9cfc,_0x5c70ea){var _0x2e2ac2=_0x5d326d;confirmer(_0x2e2ac2(0x3f1)+escHtml(_0x5c70ea)+'\x22\x20?',function(){var _0x261ac2=_0x2e2ac2;DATA['conseils']=DATA['conseils']['filter'](function(_0x4d2df3){return _0x4d2df3['id']!==_0x5d9cfc;}),renderConseils(),toast(_0x261ac2(0x4b0)),persist();});}function renderPromos(_0x377e32){var _0xbb9422=_0x5d326d,_0x3d615c='',_0xc3bf83=DATA[_0xbb9422(0x265)][_0xbb9422(0x578)](function(_0x39ce19){var _0x4175fa=_0xbb9422;return!_0x377e32||searchMatch(_0x39ce19[_0x4175fa(0x3dd)],_0x377e32);});if(_0xc3bf83[_0xbb9422(0x589)]===0x0)_0x3d615c='<tr><td\x20colspan=\x227\x22\x20style=\x22text-align:center;padding:30px;color:var(--texte-3)\x22>Aucune\x20promotion</td></tr>';_0xc3bf83[_0xbb9422(0x32b)](function(_0x1403b2){var _0xcedc33=_0xbb9422,_0xfa12ad=_0x1403b2[_0xcedc33(0x3da)]==='Active'?_0xcedc33(0x5d0):'b-grey';_0x3d615c+=_0xcedc33(0x3ec)+escHtml(_0x1403b2[_0xcedc33(0x3dd)])+_0xcedc33(0x30a)+(_0x1403b2[_0xcedc33(0x1e6)]?_0xcedc33(0x5be):'')+'</td>',_0x3d615c+=_0xcedc33(0x4d8)+nombre(_0x1403b2[_0xcedc33(0x613)])[_0xcedc33(0x42c)](0x2)+_0xcedc33(0x56e),_0x3d615c+=_0xcedc33(0x282)+nombre(_0x1403b2[_0xcedc33(0x516)])['toFixed'](0x2)+_0xcedc33(0x58f),_0x3d615c+=_0xcedc33(0x1c0)+escHtml(_0x1403b2[_0xcedc33(0x1bb)])+_0xcedc33(0x1f7),_0x3d615c+='<td>'+escHtml(_0x1403b2[_0xcedc33(0x388)])+_0xcedc33(0x56c),_0x3d615c+=_0xcedc33(0x603)+_0xfa12ad+'\x22>'+escHtml(_0x1403b2[_0xcedc33(0x3da)])+_0xcedc33(0x235),_0x3d615c+=_0xcedc33(0x430)+_0x1403b2['id']+')\x22>'+svgEdit()+_0xcedc33(0x5d8)+_0x1403b2['id']+',\x27'+escAttr(_0x1403b2[_0xcedc33(0x3dd)])+'\x27)\x22>'+svgTrash()+_0xcedc33(0x210);}),setHTML(_0xbb9422(0x321),_0x3d615c);}function editPromo(_0x1c6eff){var _0x12dbae=_0x5d326d,_0x4f65db=DATA[_0x12dbae(0x265)][_0x12dbae(0x340)](function(_0x476b21){return _0x476b21['id']===_0x1c6eff;});if(!_0x4f65db)return;renderPromoProduitOptions(_0x4f65db[_0x12dbae(0x3dd)]),document[_0x12dbae(0x30b)]('pn')[_0x12dbae(0x413)]=_0x4f65db['prixNormal'],document['getElementById']('pp')[_0x12dbae(0x413)]=_0x4f65db[_0x12dbae(0x516)],setVal('promo-debut',_0x4f65db[_0x12dbae(0x389)]||''),setVal(_0x12dbae(0x3dc),_0x4f65db['fin']||''),setVal(_0x12dbae(0x60a),_0x4f65db[_0x12dbae(0x3a2)]||0x1);var _0xa06ed9=document[_0x12dbae(0x30b)]('promo-avant');if(_0xa06ed9)_0xa06ed9['checked']=_0x4f65db[_0x12dbae(0x1e6)]===!![];document[_0x12dbae(0x30b)]('p-promo-id')[_0x12dbae(0x413)]=_0x1c6eff,calcP(),openModal(_0x12dbae(0x1b7));}function renderPromoProduitOptions(_0x2f898d){var _0x4b753d=_0x5d326d,_0x216e90=document[_0x4b753d(0x30b)](_0x4b753d(0x5f3));if(!_0x216e90)return;var _0x1548fd=_0x2f898d||_0x216e90[_0x4b753d(0x413)];_0x216e90['innerHTML']=DATA[_0x4b753d(0x4c2)]['map'](function(_0x30d33f){var _0x223432=_0x4b753d;return'<option\x20value=\x22'+escAttr(_0x30d33f[_0x223432(0x293)])+'\x22'+(_0x1548fd===_0x30d33f[_0x223432(0x293)]?_0x223432(0x3e0):'')+'>'+escHtml(_0x30d33f[_0x223432(0x293)])+_0x223432(0x31d);})[_0x4b753d(0x314)](''),_0x1548fd&&!DATA[_0x4b753d(0x4c2)][_0x4b753d(0x49b)](function(_0x2bd2b6){var _0x57a7ff=_0x4b753d;return _0x2bd2b6[_0x57a7ff(0x293)]===_0x1548fd;})&&(_0x216e90[_0x4b753d(0x453)]+=_0x4b753d(0x5f9)+escHtml(_0x1548fd)+_0x4b753d(0x4c9)+escHtml(_0x1548fd)+_0x4b753d(0x31d));}function nouvellePromo(_0x160926){var _0x568e9c=_0x5d326d,_0x3ecffc=document[_0x568e9c(0x30b)](_0x568e9c(0x361));if(_0x3ecffc)_0x3ecffc[_0x568e9c(0x413)]='';renderPromoProduitOptions(_0x160926||''),setVal('promo-debut',''),setVal('promo-fin',''),setVal('promo-qte',0x1);var _0xcbbe52=document[_0x568e9c(0x30b)](_0x568e9c(0x31e));if(_0xcbbe52)_0xcbbe52[_0x568e9c(0x3d4)]=![];var _0xfd9f6c=document['getElementById']('pn'),_0x341dcb=document[_0x568e9c(0x30b)]('pp');if(_0xfd9f6c)_0xfd9f6c[_0x568e9c(0x413)]='';if(_0x341dcb)_0x341dcb[_0x568e9c(0x413)]='';var _0x4a4acd=document['querySelector'](_0x568e9c(0x3cb));if(_0x4a4acd)_0x4a4acd[_0x568e9c(0x377)]=_0x568e9c(0x5c1);openModal(_0x568e9c(0x1b7));}function savePromo(){var _0x401abc=_0x5d326d,_0xd3549d=parseInt(document[_0x401abc(0x30b)]('p-promo-id')?document['getElementById']('p-promo-id')[_0x401abc(0x413)]:0x0),_0x3c8a42=parseFloat(document[_0x401abc(0x30b)]('pn')[_0x401abc(0x413)])||0x0,_0x5bd7c3=parseFloat(document[_0x401abc(0x30b)]('pp')[_0x401abc(0x413)])||0x0;if(!(_0x3c8a42>0x0)||!(_0x5bd7c3>0x0)){toast(_0x401abc(0x48a),_0x401abc(0x536));return;}if(_0x5bd7c3>=_0x3c8a42){toast('Le\x20prix\x20promo\x20doit\x20être\x20inférieur\x20au\x20prix\x20normal',_0x401abc(0x536));return;}var _0xabdfd9=-Math[_0x401abc(0x208)]((0x1-_0x5bd7c3/_0x3c8a42)*0x64),_0x497662=getVal(_0x401abc(0x41c)),_0x8166c8=getVal(_0x401abc(0x3dc));if(_0x497662&&_0x8166c8&&_0x8166c8<_0x497662){toast('La\x20date\x20de\x20fin\x20doit\x20être\x20après\x20la\x20date\x20de\x20début',_0x401abc(0x536));return;}var _0x2fc6f4=parseInt(getVal('promo-qte'))||0x1,_0x41159d=document[_0x401abc(0x30b)](_0x401abc(0x31e)),_0x3d40c2=!!(_0x41159d&&_0x41159d[_0x401abc(0x3d4)]);if(!(parseInt(getVal(_0x401abc(0x60a)),0xa)>=0x1)){toast('Le\x20nombre\x20d\x27unités\x20par\x20lot\x20doit\x20être\x20d\x27au\x20moins\x201',_0x401abc(0x536));return;}if(_0xd3549d){var _0x363677=DATA[_0x401abc(0x265)]['find'](function(_0x10c439){return _0x10c439['id']===_0xd3549d;});_0x363677&&(_0x363677[_0x401abc(0x3dd)]=getVal('promo-produit')||_0x363677[_0x401abc(0x3dd)],_0x363677['prixNormal']=_0x3c8a42,_0x363677[_0x401abc(0x516)]=_0x5bd7c3,_0x363677[_0x401abc(0x1bb)]=_0xabdfd9,_0x363677[_0x401abc(0x389)]=_0x497662,_0x363677[_0x401abc(0x388)]=_0x8166c8,_0x363677[_0x401abc(0x3a2)]=_0x2fc6f4,_0x363677[_0x401abc(0x1e6)]=_0x3d40c2),toast('Promo\x20modifiée');}else{var _0x1b6673=DATA[_0x401abc(0x265)][_0x401abc(0x589)]?Math[_0x401abc(0x420)][_0x401abc(0x300)](null,DATA[_0x401abc(0x265)]['map'](function(_0x58feb3){return _0x58feb3['id'];}))+0x1:0x1;DATA[_0x401abc(0x265)][_0x401abc(0x35a)]({'id':_0x1b6673,'produit':getVal(_0x401abc(0x5f3)),'prixNormal':_0x3c8a42,'prixPromo':_0x5bd7c3,'pct':_0xabdfd9,'debut':_0x497662,'fin':_0x8166c8,'qte':_0x2fc6f4,'statut':'Active','miseEnAvant':_0x3d40c2}),toast(_0x401abc(0x281));}closeModal(_0x401abc(0x1b7)),renderPromos();if(document['getElementById'](_0x401abc(0x361)))document['getElementById'](_0x401abc(0x361))[_0x401abc(0x413)]='';persist();}function deletePromo(_0x402ec0,_0x5c0bc9){var _0x154b6f=_0x5d326d;confirmer(_0x154b6f(0x560)+escHtml(_0x5c0bc9)+_0x154b6f(0x20e),function(){var _0x3b4dc2=_0x154b6f;DATA[_0x3b4dc2(0x265)]=DATA[_0x3b4dc2(0x265)][_0x3b4dc2(0x578)](function(_0x4eefbb){return _0x4eefbb['id']!==_0x402ec0;}),renderPromos(),toast(_0x3b4dc2(0x29e)),persist();});}function renderRegleFidelite(){var _0x47bac2=_0x5d326d,_0x24c95d=PharmaFidelite['config'](DATA),_0x37ac86=DATA['parametres'][_0x47bac2(0x4c7)]||{},_0x545c89=_0x37ac86[_0x47bac2(0x3be)]===!![]&&typeof PharmaEmail!=='undefined'&&PharmaEmail[_0x47bac2(0x5f2)](DATA);setHTML('regle-fidelite',_0x47bac2(0x49f)+_0x47bac2(0x450)+_0x24c95d[_0x47bac2(0x528)]+_0x47bac2(0x61c)+_0x47bac2(0x4d4)+_0x24c95d[_0x47bac2(0x290)]+'%</strong>\x20sur\x20tous\x20les\x20produits\x20·\x2030\x20jours\x20·\x20usage\x20unique\x20·\x20réservé\x20au\x20client\x20·\x20'+(_0x545c89?_0x47bac2(0x403):_0x47bac2(0x4a8))+_0x47bac2(0x419)+_0x47bac2(0x4db));}function renderCodesPromo(){var _0x141602=_0x5d326d;renderRegleFidelite();var _0x142d3e=document[_0x141602(0x30b)](_0x141602(0x4ee));if(_0x142d3e&&!/^PHARM-[A-Z0-9]{6}$/['test'](_0x142d3e[_0x141602(0x377)]['trim']()))regenCode();var _0x4dddb2=document[_0x141602(0x30b)](_0x141602(0x2df));if(_0x4dddb2){var _0x117827=_0x4dddb2[_0x141602(0x413)];_0x4dddb2[_0x141602(0x453)]=_0x141602(0x2f6)+DATA[_0x141602(0x3c9)][_0x141602(0x3bb)](function(_0x105484){var _0x3acf70=_0x141602;return _0x3acf70(0x39b)+(_0x117827===_0x105484[_0x3acf70(0x293)]?_0x3acf70(0x3e0):'')+'>'+escHtml(_0x105484['nom'])+_0x3acf70(0x31d);})[_0x141602(0x314)]('');}var _0x145b8f=document[_0x141602(0x30b)](_0x141602(0x608));if(_0x145b8f){var _0x1ca832=_0x145b8f[_0x141602(0x413)];_0x145b8f['innerHTML']='<option\x20value=\x22Tous\x22>Tous\x20les\x20produits</option>'+DATA['categories'][_0x141602(0x3bb)](function(_0x42783a){var _0x9b6155=_0x141602;return _0x9b6155(0x39b)+(_0x1ca832===_0x42783a?_0x9b6155(0x3e0):'')+'>'+escHtml(_0x42783a)+_0x9b6155(0x31d);})[_0x141602(0x314)]('');}calcCode();var _0x123577=document[_0x141602(0x30b)](_0x141602(0x57d));if(!_0x123577)return;if(!DATA[_0x141602(0x3fa)][_0x141602(0x589)]){_0x123577[_0x141602(0x453)]=_0x141602(0x5fe);return;}var _0x42311f='';DATA[_0x141602(0x3fa)][_0x141602(0x32b)](function(_0x2c5f16){var _0x418000=_0x141602,_0x5adebf=_0x2c5f16[_0x418000(0x38f)]?_0x2c5f16[_0x418000(0x38f)]['split']('-')[_0x418000(0x40d)]()[_0x418000(0x314)]('/'):_0x418000(0x30c),_0x1040ae=_0x2c5f16[_0x418000(0x490)]?_0x2c5f16[_0x418000(0x292)]+'/'+_0x2c5f16[_0x418000(0x490)]:_0x2c5f16[_0x418000(0x292)]+'/∞',_0x272b0a=_0x2c5f16[_0x418000(0x490)]&&_0x2c5f16[_0x418000(0x292)]>=_0x2c5f16[_0x418000(0x490)],_0x52b966=!_0x2c5f16[_0x418000(0x409)]?_0x418000(0x1ba):_0x272b0a?_0x418000(0x36b):_0x418000(0x55d);_0x42311f+=_0x418000(0x1d0),_0x42311f+=_0x418000(0x416)+escHtml(_0x2c5f16[_0x418000(0x386)])+_0x418000(0x2e3),_0x42311f+=_0x418000(0x4d8)+escHtml(_0x2c5f16[_0x418000(0x455)])+_0x418000(0x56c),_0x42311f+='<td><span\x20class=\x22badge\x20b-vif\x22>-'+escHtml(_0x2c5f16['pct'])+'%</span></td>',_0x42311f+='<td>'+(_0x2c5f16[_0x418000(0x32c)]===_0x418000(0x1f5)?_0x418000(0x1db):escHtml(_0x2c5f16[_0x418000(0x32c)]))+_0x418000(0x56c),_0x42311f+=_0x418000(0x1d9)+escHtml(_0x2c5f16[_0x418000(0x422)])+_0x418000(0x235),_0x42311f+=_0x418000(0x4d8)+escHtml(_0x1040ae)+_0x418000(0x56c),_0x42311f+=_0x418000(0x4d8)+escHtml(_0x5adebf)+_0x418000(0x56c),_0x42311f+=_0x418000(0x4d8)+_0x52b966+'</td>',_0x42311f+=_0x418000(0x3ea),_0x42311f+=_0x418000(0x303)+escAttr(_0x2c5f16[_0x418000(0x386)])+_0x418000(0x227),_0x42311f+=_0x418000(0x211)+escAttr(_0x2c5f16[_0x418000(0x386)])+_0x418000(0x302)+(_0x2c5f16[_0x418000(0x409)]?'Désactiver':_0x418000(0x3af))+_0x418000(0x508)+(_0x2c5f16['actif']?'var(--rouge)':_0x418000(0x2d7))+'\x22><svg\x20width=\x2213\x22\x20height=\x2213\x22\x20fill=\x22none\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22><circle\x20cx=\x2212\x22\x20cy=\x2212\x22\x20r=\x2210\x22/><line\x20x1=\x224.93\x22\x20y1=\x224.93\x22\x20x2=\x2219.07\x22\x20y2=\x2219.07\x22/></svg></button>',_0x42311f+=_0x418000(0x327)+escAttr(_0x2c5f16['code'])+_0x418000(0x32d)+svgTrash()+_0x418000(0x2a8),_0x42311f+=_0x418000(0x27e);}),_0x123577[_0x141602(0x453)]=_0x42311f;}function genererCode(){var _0xd9da3b=_0x5d326d,_0x2ea3c8=document[_0xd9da3b(0x30b)](_0xd9da3b(0x4ee)),_0x4e29c9=_0x2ea3c8?_0x2ea3c8[_0xd9da3b(0x377)][_0xd9da3b(0x617)]():'';if(!_0x4e29c9){toast(_0xd9da3b(0x4c6),_0xd9da3b(0x536));return;}if(DATA[_0xd9da3b(0x3fa)][_0xd9da3b(0x49b)](function(_0x416fd6){var _0x2645fd=_0xd9da3b;return _0x416fd6[_0x2645fd(0x386)]===_0x4e29c9;})){toast(_0xd9da3b(0x1f3),_0xd9da3b(0x536));return;}var _0x16ea32=parseInt(getVal(_0xd9da3b(0x55b)))||0x0;if(_0x16ea32<=0x0||_0x16ea32>0x64){toast('Réduction\x20invalide\x20(1\x20à\x20100%)',_0xd9da3b(0x536));return;}var _0x17e91d=document[_0xd9da3b(0x30b)](_0xd9da3b(0x608)),_0x520d7f=_0x17e91d?_0x17e91d['value']===_0xd9da3b(0x326)?_0xd9da3b(0x1f5):_0x17e91d[_0xd9da3b(0x413)]:'Tous',_0x543108=getVal(_0xd9da3b(0x2df))||'Tous\x20les\x20clients';DATA['codesPromo'][_0xd9da3b(0x35a)]({'code':_0x4e29c9,'client':_0x543108,'pct':_0x16ea32,'scope':_0x520d7f,'origine':_0xd9da3b(0x37e),'usages':0x0,'maxUsages':_0x543108===_0xd9da3b(0x58b)?0x0:0x1,'expire':'','actif':!![]}),persist(),renderCodesPromo(),regenCode(),toast(_0xd9da3b(0x3c2)+_0x4e29c9+_0xd9da3b(0x509));}function toggleCode(_0x196c0c){var _0x565fa2=_0x5d326d,_0x2ec83a=DATA['codesPromo'][_0x565fa2(0x340)](function(_0x2cbddc){var _0x1ecb49=_0x565fa2;return _0x2cbddc[_0x1ecb49(0x386)]===_0x196c0c;});if(!_0x2ec83a)return;_0x2ec83a[_0x565fa2(0x409)]=!_0x2ec83a['actif'],persist(),renderCodesPromo(),toast(_0x2ec83a[_0x565fa2(0x409)]?_0x565fa2(0x2e2):'Code\x20désactivé');}function deleteCode(_0x368b13){var _0x26d917=_0x5d326d;confirmer(_0x26d917(0x618)+escHtml(_0x368b13)+_0x26d917(0x20e),function(){var _0xc85c6e=_0x26d917;DATA[_0xc85c6e(0x3fa)]=DATA['codesPromo'][_0xc85c6e(0x578)](function(_0x3363c4){var _0x5a61c9=_0xc85c6e;return _0x3363c4[_0x5a61c9(0x386)]!==_0x368b13;}),persist(),renderCodesPromo(),toast(_0xc85c6e(0x2a6));});}var CONSEIL_ICONES_ANCIEN={'soleil':_0x5d326d(0x26b),'pilule':_0x5d326d(0x610),'goutte':_0x5d326d(0x60d),'coeur':_0x5d326d(0x30f),'bouclier':'<path\x20d=\x22M12\x2022s8-4\x208-10V5l-8-3-8\x203v7c0\x206\x208\x2010\x208\x2010z\x22/>','feuille':_0x5d326d(0x50c),'info':_0x5d326d(0x33d)},CONSEIL_ICONES=typeof PHARMA_ICONES_CONSEIL!==_0x5d326d(0x5cc)?PHARMA_ICONES_CONSEIL:CONSEIL_ICONES_ANCIEN;function svgConseil(_0x5b5fc0,_0x4b0920){var _0x503be1=_0x5d326d,_0x105c43=CONSEIL_ICONES[_0x5b5fc0]||CONSEIL_ICONES[_0x503be1(0x5e5)],_0x54c280=_0x4b0920||0x16;return _0x503be1(0x513)+_0x54c280+_0x503be1(0x274)+_0x54c280+_0x503be1(0x3f3)+_0x105c43+_0x503be1(0x4b6);}function renderRapport(){var _0x54c78e=_0x5d326d,_0x11abb8=DATA[_0x54c78e(0x526)]['rapportContenu'];if(_0x11abb8)[_0x54c78e(0x265),_0x54c78e(0x341),_0x54c78e(0x202),_0x54c78e(0x4d2)][_0x54c78e(0x32b)](function(_0x2581a4){var _0x29a246=_0x54c78e,_0x4a00a3=document[_0x29a246(0x30b)](_0x29a246(0x262)+_0x2581a4);if(_0x4a00a3)_0x4a00a3['checked']=!!_0x11abb8[_0x2581a4];});var _0x25a582=document[_0x54c78e(0x30b)](_0x54c78e(0x22d)),_0x2616df=document[_0x54c78e(0x30b)]('par-rapport-heure');setVal(_0x54c78e(0x434),DATA['parametres'][_0x54c78e(0x42a)]);if(_0x25a582&&DATA[_0x54c78e(0x526)][_0x54c78e(0x243)])_0x25a582[_0x54c78e(0x413)]=DATA[_0x54c78e(0x526)][_0x54c78e(0x243)];if(_0x2616df&&DATA['parametres'][_0x54c78e(0x438)])_0x2616df['value']=DATA[_0x54c78e(0x526)][_0x54c78e(0x438)];var _0x1dc905=new Date(),_0x523ae6=new Date(_0x1dc905[_0x54c78e(0x491)]()-0x7*0x18*0x3c*0x3c*0x3e8),_0x4afb3e=DATA[_0x54c78e(0x54c)][_0x54c78e(0x578)](function(_0x3507f1){var _0x11e181=_0x54c78e;if(!_0x3507f1[_0x11e181(0x234)])return![];var _0x1ee889=new Date(_0x3507f1[_0x11e181(0x234)]);return _0x1ee889>=_0x523ae6&&_0x1ee889<=_0x1dc905;}),_0x18d7b4=_0x4afb3e[_0x54c78e(0x602)](function(_0x40f57b,_0x2a2327){var _0xf5efb6=_0x54c78e;return _0x40f57b+nombre(_0x2a2327[_0xf5efb6(0x5e1)]);},0x0),_0x40d708=_0x4afb3e[_0x54c78e(0x589)],_0x2fe1e3=_0x40d708?_0x18d7b4/_0x40d708:0x0,_0x5aacc8=_0x4afb3e[_0x54c78e(0x578)](function(_0x2361bc){var _0x3e1d8b=_0x54c78e;return _0x2361bc[_0x3e1d8b(0x3da)]===_0x3e1d8b(0x5a9);})[_0x54c78e(0x589)],_0x537216=DATA[_0x54c78e(0x54c)][_0x54c78e(0x578)](function(_0x106c3d){var _0x1e1b0b=_0x54c78e;return _0x106c3d[_0x1e1b0b(0x3da)]===_0x1e1b0b(0x520);})['length'],_0x4b0d72=DATA[_0x54c78e(0x265)]['filter'](function(_0x163fb5){var _0x544941=_0x54c78e;return _0x163fb5[_0x544941(0x3da)]===_0x544941(0x35f);})['length'],_0x4e40e6=DATA[_0x54c78e(0x3fa)][_0x54c78e(0x602)](function(_0x4fb45f,_0x378190){return _0x4fb45f+(_0x378190['usages']||0x0);},0x0),_0x28449d=DATA[_0x54c78e(0x3fa)][_0x54c78e(0x589)],_0x2365ce=DATA[_0x54c78e(0x4c2)][_0x54c78e(0x578)](function(_0x18f54f){var _0x4e6465=_0x54c78e;return _0x18f54f['stock']<=_0x18f54f[_0x4e6465(0x528)];}),_0x2869b7={};_0x4afb3e[_0x54c78e(0x32b)](function(_0x1bc3d8){var _0x5cf311=_0x54c78e;(_0x1bc3d8[_0x5cf311(0x4c2)]||'')[_0x5cf311(0x4dd)]('\x20+\x20')[_0x5cf311(0x32b)](function(_0x2b011a){var _0x18d1aa=_0x5cf311,_0x2563ec=_0x2b011a[_0x18d1aa(0x264)](/^(.*?)\s+x(\d+)$/);if(!_0x2563ec)return;var _0x3a046e=_0x2563ec[0x1][_0x18d1aa(0x617)]();_0x2869b7[_0x3a046e]=(_0x2869b7[_0x3a046e]||0x0)+parseInt(_0x2563ec[0x2],0xa);});});var _0x5adbab=Object[_0x54c78e(0x4f1)](_0x2869b7)[_0x54c78e(0x3bb)](function(_0x487334){return{'nom':_0x487334,'qte':_0x2869b7[_0x487334]};})['sort'](function(_0x3b29a0,_0x5142f2){var _0x4fa158=_0x54c78e;return _0x5142f2[_0x4fa158(0x3a2)]-_0x3b29a0['qte'];})[_0x54c78e(0x1b9)](0x0,0x3),_0x265b32=function(_0x1f4846){var _0x223383=_0x54c78e;return('0'+_0x1f4846[_0x223383(0x539)]())['slice'](-0x2)+'/'+('0'+(_0x1f4846[_0x223383(0x1c5)]()+0x1))[_0x223383(0x1b9)](-0x2);},_0x471a97=document['getElementById']('rapport-periode');if(_0x471a97)_0x471a97[_0x54c78e(0x377)]=_0x54c78e(0x25e)+_0x265b32(_0x523ae6)+_0x54c78e(0x506)+_0x265b32(_0x1dc905);var _0x535b48=document[_0x54c78e(0x30b)]('rapport-contenu');if(!_0x535b48)return;var _0xd71029=_0x54c78e(0x279);_0xd71029+=_0x54c78e(0x2f1),_0xd71029+=statBox(nombre(_0x18d7b4)[_0x54c78e(0x42c)](0x2)[_0x54c78e(0x615)]('.',',')+'€','Chiffre\x20d\x27affaires',_0x54c78e(0x2d7)),_0xd71029+=statBox(_0x40d708,_0x54c78e(0x21b),_0x54c78e(0x3bf)),_0xd71029+=_0x54c78e(0x30a),_0xd71029+='<div\x20class=\x22g2\x22\x20style=\x22gap:8px;margin-bottom:10px\x22>',_0xd71029+=statBox(nombre(_0x2fe1e3)[_0x54c78e(0x42c)](0x2)[_0x54c78e(0x615)]('.',',')+'€',_0x54c78e(0x24b),'var(--vert)'),_0xd71029+=statBox(_0x4b0d72,_0x54c78e(0x4a2),_0x54c78e(0x484)),_0xd71029+='</div>',_0xd71029+=_0x54c78e(0x5a2),_0xd71029+='<div>Commandes\x20retirées\x20:\x20<strong>'+_0x5aacc8+_0x54c78e(0x442)+_0x537216+_0x54c78e(0x4c5),_0xd71029+=_0x54c78e(0x5c8)+_0x28449d+_0x54c78e(0x53f)+_0x4e40e6+_0x54c78e(0x3fe),_0x5adbab['length']&&(_0xd71029+=_0x54c78e(0x2fa),_0x5adbab[_0x54c78e(0x32b)](function(_0x469a0c,_0x500900){var _0x53eae7=_0x54c78e;_0xd71029+=_0x53eae7(0x4fd)+(_0x500900+0x1)+'.\x20'+escHtml(_0x469a0c['nom'])+'\x20—\x20<strong>'+escHtml(_0x469a0c[_0x53eae7(0x3a2)])+_0x53eae7(0x22f)+(_0x469a0c['qte']>0x1?'s':'')+_0x53eae7(0x30a);})),_0x2365ce[_0x54c78e(0x589)]&&(_0xd71029+='<div\x20style=\x22margin-top:6px;color:var(--rouge)\x22><strong>'+_0x2365ce['length']+_0x54c78e(0x472)+_0x2365ce[_0x54c78e(0x3bb)](function(_0xdf814c){var _0x59b662=_0x54c78e;return escHtml(_0xdf814c[_0x59b662(0x293)])+'\x20('+escHtml(_0xdf814c['stock'])+')';})[_0x54c78e(0x314)](',\x20')+_0x54c78e(0x30a)),_0xd71029+=_0x54c78e(0x419),!_0x40d708&&(_0xd71029=_0x54c78e(0x3ed)+_0x54c78e(0x47c)),_0x535b48[_0x54c78e(0x453)]=_0xd71029;}function statBox(_0x3b0df3,_0x1e68d0,_0x41849e){var _0x39c030=_0x5d326d;return _0x39c030(0x492)+_0x39c030(0x415)+_0x41849e+'\x22>'+_0x3b0df3+_0x39c030(0x30a)+_0x39c030(0x48f)+_0x1e68d0+_0x39c030(0x419);}var NOTIF_EVENTS=[{'cle':'commandeRecue','titre':_0x5d326d(0x522),'desc':_0x5d326d(0x449),'dispo':!![]},{'cle':_0x5d326d(0x3aa),'titre':'Commande\x20prête\x20à\x20retirer','desc':_0x5d326d(0x408),'dispo':!![]},{'cle':_0x5d326d(0x3be),'titre':_0x5d326d(0x4e3),'desc':_0x5d326d(0x61b),'dispo':!![]},{'cle':_0x5d326d(0x5d1),'titre':_0x5d326d(0x1d2),'desc':_0x5d326d(0x1b6),'dispo':![]},{'cle':_0x5d326d(0x260),'titre':_0x5d326d(0x225),'desc':_0x5d326d(0x5df),'dispo':![]},{'cle':_0x5d326d(0x4a4),'titre':_0x5d326d(0x1e3),'desc':_0x5d326d(0x55a),'dispo':![]}];function renderNotifications(){var _0x5e744f=_0x5d326d,_0x280e2a=DATA[_0x5e744f(0x526)][_0x5e744f(0x4c7)]||{},_0x40cdf9=document[_0x5e744f(0x30b)](_0x5e744f(0x4b2));_0x40cdf9&&(_0x40cdf9[_0x5e744f(0x453)]=NOTIF_EVENTS[_0x5e744f(0x3bb)](function(_0x57bed3){var _0xcb7c8b=_0x5e744f,_0x1c3525=_0x280e2a[_0x57bed3[_0xcb7c8b(0x53a)]]===!![],_0x544cbd=_0x57bed3[_0xcb7c8b(0x1f0)]?'':_0xcb7c8b(0x5f1),_0x501a69=_0x57bed3[_0xcb7c8b(0x1f0)]?'':_0xcb7c8b(0x343);return _0xcb7c8b(0x36e)+_0x544cbd+_0xcb7c8b(0x2f4)+_0xcb7c8b(0x21a)+_0x57bed3[_0xcb7c8b(0x209)]+_0x501a69+_0xcb7c8b(0x30a)+_0xcb7c8b(0x515)+_0x57bed3[_0xcb7c8b(0x4d3)]+_0xcb7c8b(0x419)+'<label\x20class=\x22toggle-wrap\x22\x20style=\x22flex-shrink:0\x22><input\x20type=\x22checkbox\x22\x20class=\x22toggle-input\x22'+(_0x1c3525?'\x20checked':'')+(_0x57bed3['dispo']?'':_0xcb7c8b(0x546))+_0xcb7c8b(0x33e)+_0x57bed3[_0xcb7c8b(0x53a)]+_0xcb7c8b(0x57b)+_0xcb7c8b(0x30a);})[_0x5e744f(0x314)](''));var _0x44a69d=document[_0x5e744f(0x30b)]('notif-dest');if(_0x44a69d){var _0x50348d=DATA[_0x5e744f(0x3c9)]['filter'](function(_0x51f279){var _0x398420=_0x5e744f;return _0x51f279[_0x398420(0x3f2)];})[_0x5e744f(0x589)],_0x4edfa4=DATA[_0x5e744f(0x3c9)][_0x5e744f(0x578)](function(_0x210c6d){var _0xf21a68=_0x5e744f;return _0x210c6d[_0xf21a68(0x31f)];})[_0x5e744f(0x589)];_0x44a69d[_0x5e744f(0x453)]=_0x5e744f(0x248)+DATA[_0x5e744f(0x3c9)][_0x5e744f(0x589)]+_0x5e744f(0x4eb)+'<option\x20value=\x22email\x22>Clients\x20avec\x20email\x20('+_0x50348d+_0x5e744f(0x4eb)+'<option\x20value=\x22sms\x22>Clients\x20avec\x20téléphone\x20('+_0x4edfa4+_0x5e744f(0x4eb);}renderNotifHistorique(),renderEmailJournal();}function toggleNotifAuto(_0x5544a9,_0x20d7c7){var _0x2fd372=_0x5d326d;if(!DATA[_0x2fd372(0x526)][_0x2fd372(0x4c7)])DATA[_0x2fd372(0x526)][_0x2fd372(0x4c7)]={};DATA[_0x2fd372(0x526)][_0x2fd372(0x4c7)][_0x5544a9]=_0x20d7c7,persist();var _0x315f64=NOTIF_EVENTS[_0x2fd372(0x340)](function(_0x3742b2){return _0x3742b2['cle']===_0x5544a9;});toast((_0x315f64?_0x315f64['titre']:'Notification')+(_0x20d7c7?'\x20activée':'\x20désactivée'));}function envoyerNotification(){var _0x1d3a8e=_0x5d326d,_0x3cc7e7=(getVal(_0x1d3a8e(0x31b))||'')[_0x1d3a8e(0x617)]();if(!_0x3cc7e7){toast(_0x1d3a8e(0x465),_0x1d3a8e(0x536));return;}var _0x41512f=getVal(_0x1d3a8e(0x33b))||_0x1d3a8e(0x40b),_0x21c19f=getVal('notif-dest')||_0x1d3a8e(0x4a9),_0x371d5c=DATA[_0x1d3a8e(0x3c9)][_0x1d3a8e(0x578)](function(_0x2be2f9){var _0x31804e=_0x1d3a8e;if(_0x21c19f===_0x31804e(0x3f2))return!!_0x2be2f9['email'];if(_0x21c19f===_0x31804e(0x4fa))return!!_0x2be2f9[_0x31804e(0x31f)];return!![];});if(!_0x371d5c['length']){toast(_0x1d3a8e(0x306),'error');return;}DATA[_0x1d3a8e(0x3ce)][_0x1d3a8e(0x35a)]({'id':Date[_0x1d3a8e(0x556)](),'type':_0x41512f,'message':_0x3cc7e7,'destinataires':_0x371d5c['length'],'cible':_0x21c19f,'timestamp':new Date()[_0x1d3a8e(0x36c)](),'statut':_0x1d3a8e(0x23a)}),persist(),setVal(_0x1d3a8e(0x31b),''),renderNotifHistorique(),toast('Notification\x20enregistrée\x20pour\x20'+_0x371d5c[_0x1d3a8e(0x589)]+_0x1d3a8e(0x601));}function renderNotifHistorique(){var _0xa094f8=_0x5d326d,_0x40617b=document[_0xa094f8(0x30b)](_0xa094f8(0x1fb));if(!_0x40617b)return;if(!DATA[_0xa094f8(0x3ce)]||!DATA[_0xa094f8(0x3ce)]['length']){_0x40617b['innerHTML']='<div\x20style=\x22text-align:center;padding:20px;color:var(--texte-3);font-size:0.82rem\x22>Aucune\x20notification\x20envoyée\x20pour\x20le\x20moment.</div>';return;}var _0xfdf92d=DATA['notifications'][_0xa094f8(0x1b9)]()['sort'](function(_0x8922f,_0xe8f757){var _0xc20e6e=_0xa094f8;return new Date(_0xe8f757[_0xc20e6e(0x234)])-new Date(_0x8922f['timestamp']);});_0x40617b['innerHTML']=_0xfdf92d[_0xa094f8(0x3bb)](function(_0x28f7b6){var _0x289c9f=_0xa094f8,_0x198738=new Date(_0x28f7b6[_0x289c9f(0x234)]),_0x39903d=('0'+_0x198738['getDate']())[_0x289c9f(0x1b9)](-0x2)+'/'+('0'+(_0x198738[_0x289c9f(0x1c5)]()+0x1))['slice'](-0x2)+'/'+_0x198738[_0x289c9f(0x55c)]()+_0x289c9f(0x238)+('0'+_0x198738[_0x289c9f(0x394)]())[_0x289c9f(0x1b9)](-0x2)+'h'+('0'+_0x198738[_0x289c9f(0x2b3)]())[_0x289c9f(0x1b9)](-0x2);return'<div\x20style=\x22border:1px\x20solid\x20var(--bord);border-radius:9px;padding:12px;margin-bottom:8px\x22>'+'<div\x20style=\x22display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:5px\x22>'+'<span\x20style=\x22font-weight:700;font-size:0.8rem\x22>'+escHtml(_0x28f7b6[_0x289c9f(0x4fe)])+'</span>'+'<span\x20class=\x22badge\x20b-orange\x22>'+escHtml(_0x28f7b6[_0x289c9f(0x3da)])+_0x289c9f(0x3b6)+_0x289c9f(0x205)+escHtml(_0x28f7b6[_0x289c9f(0x518)])+_0x289c9f(0x30a)+_0x289c9f(0x5b2)+_0x39903d+'\x20·\x20'+escHtml(_0x28f7b6[_0x289c9f(0x543)])+_0x289c9f(0x5ca)+_0x289c9f(0x596)+_0x28f7b6['id']+')\x22\x20title=\x22Supprimer\x22>'+svgTrash()+_0x289c9f(0x4ad)+_0x289c9f(0x30a);})[_0xa094f8(0x314)]('');}function deleteNotification(_0x484a2f){var _0x449861=_0x5d326d;confirmer(_0x449861(0x579),function(){var _0x23e0c6=_0x449861;DATA['notifications']=DATA[_0x23e0c6(0x3ce)][_0x23e0c6(0x578)](function(_0x16e3bd){return _0x16e3bd['id']!==_0x484a2f;}),persist(),renderNotifHistorique(),toast(_0x23e0c6(0x5d7));});}function filtrerCommandes(){var _0x5669ed=_0x5d326d;renderCommandes(getVal(_0x5669ed(0x5dc)),getVal('filter-statut-cmd'));}function filtrerTickets(){var _0x47e976=_0x5d326d;renderTickets(getVal('search-tickets'),getVal(_0x47e976(0x534)));}function filtrerClients(){var _0x3b28ad=_0x5d326d;renderClients(getVal(_0x3b28ad(0x2ef)),getVal(_0x3b28ad(0x2b1)));}function annulerCommande(_0x590f3c){var _0x477b8c=_0x5d326d,_0x4c3eab=DATA[_0x477b8c(0x54c)][_0x477b8c(0x340)](function(_0x2681a2){return _0x2681a2['id']===_0x590f3c;});if(!_0x4c3eab)return;if(_0x4c3eab[_0x477b8c(0x3da)]===_0x477b8c(0x583)){toast('Cette\x20commande\x20est\x20déjà\x20annulée');return;}if(_0x4c3eab[_0x477b8c(0x3da)]===_0x477b8c(0x5a9)){toast(_0x477b8c(0x1d3),'error');return;}confirmer(_0x477b8c(0x34a)+escHtml(_0x590f3c)+'\x20de\x20'+escHtml(_0x4c3eab[_0x477b8c(0x455)])+_0x477b8c(0x239),function(){var _0x2e8cd2=_0x477b8c;if(ADMIN_CLOUD){PharmaAdminCloud[_0x2e8cd2(0x4f2)](_0x590f3c);return;}defaireCommande(_0x4c3eab),_0x4c3eab[_0x2e8cd2(0x3da)]='Annulée',persist(),filtrerCommandes(),toast(_0x2e8cd2(0x433)+_0x590f3c+_0x2e8cd2(0x3e1));},{'titre':'Annuler\x20la\x20commande','bouton':_0x477b8c(0x5ac)});}function deleteCommande(_0x59c18e){var _0x5bcf8b=_0x5d326d,_0x2660ea=DATA['commandes'][_0x5bcf8b(0x340)](function(_0x53931a){return _0x53931a['id']===_0x59c18e;});if(!_0x2660ea)return;confirmer(_0x5bcf8b(0x2de)+escHtml(_0x59c18e)+'\x20?<br><span\x20style=\x22font-size:0.78rem;color:var(--texte-2)\x22>Cette\x20action\x20est\x20irréversible.\x20Préférez\x20«\x20Annuler\x20»\x20pour\x20garder\x20une\x20trace.</span>',function(){var _0xf7fe35=_0x5bcf8b;if(ADMIN_CLOUD){PharmaAdminCloud[_0xf7fe35(0x352)](_0x59c18e);return;}if(_0x2660ea[_0xf7fe35(0x3da)]!=='Annulée'&&_0x2660ea[_0xf7fe35(0x3da)]!==_0xf7fe35(0x5a9))defaireCommande(_0x2660ea);DATA[_0xf7fe35(0x54c)]=DATA[_0xf7fe35(0x54c)][_0xf7fe35(0x578)](function(_0xe0520){return _0xe0520['id']!==_0x59c18e;}),persist(),filtrerCommandes(),toast(_0xf7fe35(0x433)+_0x59c18e+_0xf7fe35(0x29f));});}function restaurerStock(_0x5e3064){var _0x35eefa=_0x5d326d;if(Array[_0x35eefa(0x4bd)](_0x5e3064['lignes'])&&_0x5e3064[_0x35eefa(0x3e5)][_0x35eefa(0x589)]){_0x5e3064[_0x35eefa(0x3e5)][_0x35eefa(0x32b)](function(_0x47d5fa){var _0x2658b5=_0x35eefa,_0x107d74=DATA[_0x2658b5(0x4c2)][_0x2658b5(0x340)](function(_0x8ab5cf){var _0x10f5b8=_0x2658b5;return _0x8ab5cf['id']===_0x47d5fa[_0x10f5b8(0x5b4)];});if(_0x107d74)_0x107d74[_0x2658b5(0x2b6)]+=(parseInt(_0x47d5fa[_0x2658b5(0x310)],0xa)||0x0)*(parseInt(_0x47d5fa[_0x2658b5(0x288)],0xa)||0x1);});return;}(_0x5e3064[_0x35eefa(0x4c2)]||'')['split'](_0x35eefa(0x4ba))[_0x35eefa(0x32b)](function(_0x448a40){var _0x336914=_0x35eefa,_0x255c60=_0x448a40[_0x336914(0x264)](/^(.*?)\s+x(\d+)$/);if(!_0x255c60)return;var _0x43104d=_0x255c60[0x1][_0x336914(0x617)](),_0x3dc333=parseInt(_0x255c60[0x2],0xa),_0x4f3338=DATA[_0x336914(0x4c2)]['find'](function(_0x31cbfd){var _0x215290=_0x336914;return _0x31cbfd[_0x215290(0x293)]===_0x43104d;}),_0x207aad=0x1;if(!_0x4f3338){var _0x49fd34=_0x43104d[_0x336914(0x615)](/^Lot\s+/i,'')['split']('\x20')[0x0][_0x336914(0x3e7)]();_0x4f3338=DATA[_0x336914(0x4c2)][_0x336914(0x340)](function(_0x1a8eff){var _0x445891=_0x336914;return _0x1a8eff['nom'][_0x445891(0x3e7)]()[_0x445891(0x5f8)](_0x49fd34)!==-0x1;});var _0x5f073f=DATA['promos'][_0x336914(0x340)](function(_0x45fbb1){var _0x53fe55=_0x336914;return _0x45fbb1[_0x53fe55(0x3dd)]===_0x43104d;});if(_0x5f073f&&_0x5f073f[_0x336914(0x3a2)]>0x0)_0x207aad=_0x5f073f['qte'];else{var _0x2380a9=_0x43104d[_0x336914(0x264)](/x\s*(\d+)\s*$/i);if(_0x2380a9)_0x207aad=parseInt(_0x2380a9[0x1],0xa);}}if(_0x4f3338)_0x4f3338[_0x336914(0x2b6)]+=_0x3dc333*_0x207aad;});}function defaireCommande(_0x5bd661){var _0x540ae4=_0x5d326d;restaurerStock(_0x5bd661);var _0x4bf027=DATA[_0x540ae4(0x3c9)][_0x540ae4(0x340)](function(_0x5bf2a4){var _0x3d40ef=_0x540ae4;return _0x5bd661[_0x3d40ef(0x48d)]!==undefined&&_0x5bf2a4['id']===_0x5bd661[_0x3d40ef(0x48d)];})||PharmaClients[_0x540ae4(0x320)](DATA,_0x5bd661[_0x540ae4(0x455)],_0x5bd661[_0x540ae4(0x3f2)]);_0x4bf027&&(_0x4bf027[_0x540ae4(0x535)]=Math[_0x540ae4(0x420)](0x0,(_0x4bf027[_0x540ae4(0x535)]||0x0)-0x1),_0x4bf027[_0x540ae4(0x5d6)]=Math['max'](0x0,Math[_0x540ae4(0x208)](((_0x4bf027[_0x540ae4(0x5d6)]||0x0)-(_0x5bd661[_0x540ae4(0x5e1)]||0x0))*0x64)/0x64));if(_0x5bd661[_0x540ae4(0x61a)]){var _0x36528f=DATA[_0x540ae4(0x3fa)]['find'](function(_0x25b5aa){var _0x5ea995=_0x540ae4;return _0x25b5aa[_0x5ea995(0x386)]===_0x5bd661[_0x5ea995(0x61a)];});if(_0x36528f&&_0x36528f[_0x540ae4(0x292)]>0x0)_0x36528f[_0x540ae4(0x292)]-=0x1;}DATA['codesPromo']=DATA[_0x540ae4(0x3fa)]['filter'](function(_0x5cccdd){var _0x1e7450=_0x540ae4;return!(_0x5cccdd[_0x1e7450(0x218)]&&_0x5cccdd[_0x1e7450(0x218)]===_0x5bd661['id']&&!_0x5cccdd[_0x1e7450(0x292)]&&String(_0x5cccdd[_0x1e7450(0x422)]||'')[_0x1e7450(0x5f8)](_0x1e7450(0x48c))===0x0);});}function viderCommandesDemo(){var _0x4f364a=_0x5d326d;if(ADMIN_CLOUD){toast(_0x4f364a(0x3d5),'error');return;}confirmer('Supprimer\x20TOUTES\x20les\x20commandes\x20?<br><span\x20style=\x22font-size:0.78rem;color:var(--texte-2)\x22>Utile\x20pour\x20repartir\x20sur\x20des\x20données\x20propres\x20pendant\x20les\x20tests.</span>',function(){var _0x2a4bdc=_0x4f364a;DATA[_0x2a4bdc(0x54c)]=[],persist(),filtrerCommandes(),toast('Toutes\x20les\x20commandes\x20ont\x20été\x20supprimées');});}var NOTIF_STYLES={'commande':{'couleur':'var(--vert)','svg':_0x5d326d(0x2a9)},'stock':{'couleur':_0x5d326d(0x43a),'svg':'<path\x20d=\x22M10.29\x203.86\x201.82\x2018a2\x202\x200\x200\x200\x201.71\x203h16.94a2\x202\x200\x200\x200\x201.71-3L13.71\x203.86a2\x202\x200\x200\x200-3.42\x200z\x22/><line\x20x1=\x2212\x22\x20y1=\x229\x22\x20x2=\x2212\x22\x20y2=\x2213\x22/><line\x20x1=\x2212\x22\x20y1=\x2217\x22\x20x2=\x2212.01\x22\x20y2=\x2217\x22/>'},'ticket':{'couleur':_0x5d326d(0x484),'svg':_0x5d326d(0x1cb)},'fidelite':{'couleur':_0x5d326d(0x3bf),'svg':'<polygon\x20points=\x2212\x202\x2015.09\x208.26\x2022\x209.27\x2017\x2014.14\x2018.18\x2021.02\x2012\x2017.77\x205.82\x2021.02\x207\x2014.14\x202\x209.27\x208.91\x208.26\x2012\x202\x22/>'}},_titreOriginal=document[_0x5d326d(0x1ee)],_clignoteTimer=null;function nbAlertesNonLues(){var _0x39e6b7=_0x5d326d;return(DATA['alertes']||[])['filter'](function(_0x45eedc){return!_0x45eedc['lu'];})[_0x39e6b7(0x589)];}function renderNotifCloche(_0x24d47d){var _0x4106b1=_0x5d326d,_0x4a6ff3=nbAlertesNonLues(),_0x80eb54=document[_0x4106b1(0x30b)](_0x4106b1(0x4a5));_0x80eb54&&(_0x80eb54[_0x4106b1(0x377)]=_0x4a6ff3>0x9?'9+':_0x4a6ff3,_0x80eb54[_0x4106b1(0x507)]['display']=_0x4a6ff3>0x0?'':_0x4106b1(0x439));var _0x502d38=document['getElementById']('notif-bell');_0x502d38&&_0x24d47d&&_0x4a6ff3>0x0&&(_0x502d38[_0x4106b1(0x593)][_0x4106b1(0x27b)](_0x4106b1(0x2f0)),void _0x502d38[_0x4106b1(0x27f)],_0x502d38['classList'][_0x4106b1(0x20f)]('has-new')),majTitreOnglet(_0x4a6ff3),renderNotifPanel();}function majTitreOnglet(_0xe2c32){_clignoteTimer&&(clearInterval(_clignoteTimer),_clignoteTimer=null);if(_0xe2c32>0x0&&document['hidden']){var _0x2ef19b=![];_clignoteTimer=setInterval(function(){var _0x7c5563=_0x42b5;document['title']=_0x2ef19b?_titreOriginal:'('+_0xe2c32+_0x7c5563(0x370),_0x2ef19b=!_0x2ef19b;},0x4b0);}else document['title']=_0xe2c32>0x0?'('+_0xe2c32+')\x20'+_titreOriginal:_titreOriginal;}function renderNotifPanel(){var _0x25c963=_0x5d326d,_0x15f14d=document['getElementById'](_0x25c963(0x58a));if(!_0x15f14d)return;var _0x2d0404=DATA[_0x25c963(0x372)]||[];if(!_0x2d0404[_0x25c963(0x589)]){_0x15f14d[_0x25c963(0x453)]='<div\x20class=\x22notif-vide\x22>Aucune\x20notification\x20pour\x20le\x20moment.</div>';return;}_0x15f14d[_0x25c963(0x453)]=_0x2d0404[_0x25c963(0x3bb)](function(_0xa669b3){var _0x513f71=_0x25c963,_0x122fcd=NOTIF_STYLES[_0xa669b3[_0x513f71(0x4fe)]]||NOTIF_STYLES[_0x513f71(0x45b)];return _0x513f71(0x374)+(_0xa669b3['lu']?'':_0x513f71(0x5b8))+_0x513f71(0x3b0)+_0xa669b3['id']+_0x513f71(0x3cf)+_0x513f71(0x46b)+_0x122fcd['couleur']+_0x513f71(0x41d)+_0x122fcd[_0x513f71(0x4ca)]+_0x513f71(0x2cd)+_0x513f71(0x549)+escHtml(_0xa669b3['titre'])+_0x513f71(0x30a)+_0x513f71(0x401)+escHtml(_0xa669b3[_0x513f71(0x329)])+_0x513f71(0x30a)+'<div\x20class=\x22notif-heure\x22>'+tempsRelatif(_0xa669b3[_0x513f71(0x234)])+_0x513f71(0x419)+(_0xa669b3['lu']?'':_0x513f71(0x4d5))+'</div>';})[_0x25c963(0x314)]('');}function tempsRelatif(_0x44e209){var _0x2a147b=_0x5d326d;if(!_0x44e209)return'';var _0x1ab4a5=Math[_0x2a147b(0x60b)]((Date[_0x2a147b(0x556)]()-new Date(_0x44e209)['getTime']())/0x3e8);if(_0x1ab4a5<0x3c)return _0x2a147b(0x4cd);if(_0x1ab4a5<0xe10)return _0x2a147b(0x4a0)+Math['floor'](_0x1ab4a5/0x3c)+_0x2a147b(0x41f);if(_0x1ab4a5<0x15180)return _0x2a147b(0x4a0)+Math[_0x2a147b(0x60b)](_0x1ab4a5/0xe10)+'\x20h';var _0x36487b=new Date(_0x44e209);return('0'+_0x36487b['getDate']())[_0x2a147b(0x1b9)](-0x2)+'/'+('0'+(_0x36487b[_0x2a147b(0x1c5)]()+0x1))[_0x2a147b(0x1b9)](-0x2)+'\x20à\x20'+('0'+_0x36487b['getHours']())[_0x2a147b(0x1b9)](-0x2)+'h'+('0'+_0x36487b[_0x2a147b(0x2b3)]())['slice'](-0x2);}function toggleNotifPanel(){var _0x1d0e81=_0x5d326d,_0x19f932=document[_0x1d0e81(0x30b)](_0x1d0e81(0x38d));if(!_0x19f932)return;_0x19f932['classList']['toggle'](_0x1d0e81(0x470));if(_0x19f932[_0x1d0e81(0x593)][_0x1d0e81(0x47e)](_0x1d0e81(0x470)))renderNotifPanel();}function ouvrirAlerte(_0xa5deab){var _0xb42e43=_0x5d326d,_0x580c1b=(DATA[_0xb42e43(0x372)]||[])[_0xb42e43(0x340)](function(_0x49c10c){return _0x49c10c['id']===_0xa5deab;});if(!_0x580c1b)return;!_0x580c1b['lu']&&(_0x580c1b['lu']=!![],persist());var _0x570516=document[_0xb42e43(0x30b)](_0xb42e43(0x38d));if(_0x570516)_0x570516['classList'][_0xb42e43(0x27b)]('open');renderNotifCloche(![]);if(_0x580c1b['lien'])go(_0x580c1b['lien']);}function marquerToutLu(){var _0x19b36c=_0x5d326d;(DATA[_0x19b36c(0x372)]||[])[_0x19b36c(0x32b)](function(_0x27ec94){_0x27ec94['lu']=!![];}),persist(),renderNotifCloche(![]),toast(_0x19b36c(0x317));}function initNotifSync(){var _0x3680ea=_0x5d326d;window['addEventListener'](_0x3680ea(0x2bc),function(_0x44baf9){var _0x6eb9fa=_0x3680ea;if(_0x44baf9[_0x6eb9fa(0x440)]!==PHARMA_STORAGE_KEY)return;var _0x5c4098=nbAlertesNonLues();DATA=PharmaStore['load']();var _0x4d5a85=nbAlertesNonLues();renderNotifCloche(_0x4d5a85>_0x5c4098),updateNavBadges();if(typeof currentPage===_0x6eb9fa(0x488)&&[_0x6eb9fa(0x526),_0x6eb9fa(0x564)][_0x6eb9fa(0x5f8)](currentPage)===-0x1)renderPage(currentPage);if(_0x4d5a85>_0x5c4098)toast(_0x6eb9fa(0x574));}),document[_0x3680ea(0x1da)](_0x3680ea(0x5ec),function(){majTitreOnglet(nbAlertesNonLues());}),document['addEventListener'](_0x3680ea(0x4ed),function(_0x4a5d2a){var _0x4bdad0=_0x3680ea,_0x5d41fa=document[_0x4bdad0(0x4b4)](_0x4bdad0(0x590)),_0x4c30d5=document[_0x4bdad0(0x30b)](_0x4bdad0(0x38d));if(_0x5d41fa&&_0x4c30d5&&!_0x5d41fa['contains'](_0x4a5d2a[_0x4bdad0(0x2c6)]))_0x4c30d5[_0x4bdad0(0x593)][_0x4bdad0(0x27b)](_0x4bdad0(0x470));});}var LEGAL_CHAMPS={'lg-raison':_0x5d326d(0x1ec),'lg-forme':_0x5d326d(0x5f0),'lg-capital':_0x5d326d(0x477),'lg-siret':_0x5d326d(0x494),'lg-rcs':_0x5d326d(0x576),'lg-tva':_0x5d326d(0x59f),'lg-titulaire':_0x5d326d(0x582),'lg-ordre':'numeroOrdre','lg-directeur':_0x5d326d(0x485),'lg-mediateur':_0x5d326d(0x460),'lg-ars':'ars','lg-licence':_0x5d326d(0x4bc),'lg-hebergeur':'hebergeur','lg-hebergeur-tel':_0x5d326d(0x517)};function renderLegal(){var _0x1b4b97=_0x5d326d,_0x3c5792=DATA[_0x1b4b97(0x526)][_0x1b4b97(0x236)]||{};Object[_0x1b4b97(0x4f1)](LEGAL_CHAMPS)['forEach'](function(_0x2d66fc){setVal(_0x2d66fc,_0x3c5792[LEGAL_CHAMPS[_0x2d66fc]]||'');}),majAlerteLegal();}function majAlerteLegal(){var _0xff2aab=_0x5d326d,_0x21489a=DATA[_0xff2aab(0x526)][_0xff2aab(0x236)]||{},_0xa868a=Object[_0xff2aab(0x4f1)](LEGAL_CHAMPS)['filter'](function(_0x511cfe){var _0x413add=_0xff2aab,_0x2e5136=_0x21489a[LEGAL_CHAMPS[_0x511cfe]];return!_0x2e5136||String(_0x2e5136)[_0x413add(0x5f8)]('[')===0x0;}),_0x2f2419=document[_0xff2aab(0x30b)](_0xff2aab(0x245));if(!_0x2f2419)return;!_0xa868a['length']?_0x2f2419[_0xff2aab(0x453)]=_0xff2aab(0x3f5):_0x2f2419[_0xff2aab(0x453)]=_0xff2aab(0x358)+_0xa868a[_0xff2aab(0x589)]+_0xff2aab(0x244);}function saveLegal(){var _0x3eac03=_0x5d326d;if(!DATA[_0x3eac03(0x526)][_0x3eac03(0x236)])DATA[_0x3eac03(0x526)][_0x3eac03(0x236)]={};Object[_0x3eac03(0x4f1)](LEGAL_CHAMPS)['forEach'](function(_0x496765){var _0x16947c=_0x3eac03;DATA[_0x16947c(0x526)][_0x16947c(0x236)][LEGAL_CHAMPS[_0x496765]]=(getVal(_0x496765)||'')[_0x16947c(0x617)]();}),persist(),majAlerteLegal(),toast('Informations\x20légales\x20sauvegardées');}function renderClients(_0x25cff2,_0x24378d){var _0x509979=_0x5d326d,_0x297482='',_0x2a38fa=pharmaIdDepuisCarte(_0x25cff2),_0x2937b5=DATA[_0x509979(0x3c9)]['filter'](function(_0x189e4a){var _0x3a9968=_0x509979,_0x24510c=_0x2a38fa!==null?_0x189e4a['id']===_0x2a38fa:!_0x25cff2||searchMatch(_0x189e4a[_0x3a9968(0x293)]+'\x20'+_0x189e4a[_0x3a9968(0x3f2)]+'\x20'+_0x189e4a['tel'],_0x25cff2),_0x25d371=!_0x24378d||_0x24378d===_0x3a9968(0x1f5)||_0x189e4a[_0x3a9968(0x4fe)]===_0x24378d;return _0x24510c&&_0x25d371;});if(_0x2937b5[_0x509979(0x589)]===0x0)_0x297482=_0x509979(0x400);_0x2937b5[_0x509979(0x32b)](function(_0x49528c){var _0x4cd52b=_0x509979,_0x357b39=PharmaFidelite['config'](DATA),_0x5df78b=PharmaFidelite[_0x4cd52b(0x53d)](_0x49528c['achats'],_0x357b39[_0x4cd52b(0x528)]);_0x297482+='<tr>',_0x297482+=_0x4cd52b(0x28e)+escHtml(_0x49528c['nom'])+_0x4cd52b(0x2da)+escHtml(_0x49528c[_0x4cd52b(0x3f2)])+_0x4cd52b(0x418),_0x297482+=_0x4cd52b(0x603)+(_0x49528c['type']==='Compte'?'b-green':_0x4cd52b(0x606))+'\x22>'+escHtml(_0x49528c[_0x4cd52b(0x4fe)])+'</span></td>',_0x297482+='<td>'+escHtml(_0x49528c[_0x4cd52b(0x3ab)])+_0x4cd52b(0x56c),_0x297482+=_0x4cd52b(0x603)+(_0x49528c[_0x4cd52b(0x594)]?'b-green':_0x4cd52b(0x20c))+'\x22>'+(_0x49528c[_0x4cd52b(0x594)]?'Consenti':_0x4cd52b(0x213))+_0x4cd52b(0x235),_0x297482+='<td>'+nombre(_0x49528c['achats'])+_0x4cd52b(0x351)+nombre(_0x49528c[_0x4cd52b(0x5d6)])['toFixed'](0x2)+_0x4cd52b(0x56e),_0x297482+=_0x4cd52b(0x5bf)+_0x5df78b[_0x4cd52b(0x1bb)]+_0x4cd52b(0x51d)+_0x5df78b[_0x4cd52b(0x2f9)]+'/'+_0x357b39[_0x4cd52b(0x528)]+_0x4cd52b(0x4b3),_0x297482+=_0x4cd52b(0x3a8)+_0x49528c['id']+')\x22>'+svgEdit()+_0x4cd52b(0x30d)+_0x49528c['id']+',\x27'+escAttr(_0x49528c[_0x4cd52b(0x293)])+'\x27)\x22>'+svgTrash()+'</button></div></td>',_0x297482+=_0x4cd52b(0x54f);}),setHTML('tbody-clients',_0x297482);}function editClient(_0x4d87dc){var _0x327499=_0x5d326d,_0xaee61c=DATA[_0x327499(0x3c9)][_0x327499(0x340)](function(_0x58a586){return _0x58a586['id']===_0x4d87dc;});if(!_0xaee61c)return;setVal('cl-nom',_0xaee61c['nom']),setVal(_0x327499(0x299),_0xaee61c[_0x327499(0x3f2)]),setVal(_0x327499(0x349),_0xaee61c[_0x327499(0x31f)]),document['getElementById']('cl-type')[_0x327499(0x413)]=_0xaee61c[_0x327499(0x4fe)],document[_0x327499(0x30b)](_0x327499(0x384))[_0x327499(0x413)]=_0x4d87dc,openModal(_0x327499(0x2d4));}function saveClient(){var _0x4efec4=_0x5d326d,_0x4fa9bb=parseInt(document[_0x4efec4(0x30b)]('cl-id')[_0x4efec4(0x413)]),_0x47473c=(getVal('cl-nom')||'')[_0x4efec4(0x617)](),_0x99c58e=(getVal(_0x4efec4(0x299))||'')[_0x4efec4(0x617)]();if(!_0x47473c){toast(_0x4efec4(0x5a1),_0x4efec4(0x536));return;}if(_0x99c58e&&!pharmaEmailValide(_0x99c58e)){toast(_0x4efec4(0x1e0),_0x4efec4(0x536));return;}if(_0x99c58e&&DATA[_0x4efec4(0x3c9)]['some'](function(_0x5376fd){var _0x4c50ba=_0x4efec4;return _0x5376fd['id']!==_0x4fa9bb&&PharmaClients[_0x4c50ba(0x404)](_0x5376fd[_0x4c50ba(0x3f2)])===PharmaClients[_0x4c50ba(0x404)](_0x99c58e);})){toast(_0x4efec4(0x2d0),_0x4efec4(0x536));return;}if(_0x4fa9bb){var _0xd3eca1=DATA[_0x4efec4(0x3c9)][_0x4efec4(0x340)](function(_0x265be5){return _0x265be5['id']===_0x4fa9bb;});_0xd3eca1&&(_0xd3eca1[_0x4efec4(0x293)]=_0x47473c,_0xd3eca1['email']=_0x99c58e,_0xd3eca1['tel']=getVal(_0x4efec4(0x349)),_0xd3eca1['type']=getVal(_0x4efec4(0x1ea))),toast('Client\x20modifié');}else{var _0x1fc737=DATA['clients'][_0x4efec4(0x589)]?Math[_0x4efec4(0x420)][_0x4efec4(0x300)](null,DATA['clients'][_0x4efec4(0x3bb)](function(_0x136836){return _0x136836['id'];}))+0x1:0x1;DATA[_0x4efec4(0x3c9)][_0x4efec4(0x35a)]({'id':_0x1fc737,'nom':_0x47473c,'email':_0x99c58e,'tel':getVal(_0x4efec4(0x349)),'type':getVal(_0x4efec4(0x1ea)),'notifs':_0x4efec4(0x24d),'rgpd':![],'achats':0x0,'depenses':0x0}),toast(_0x4efec4(0x410));}closeModal('m-client'),renderClients(),resetForm('form-client'),persist();}function deleteClient(_0x317f10,_0x40c2cf){var _0x5ae7cb=_0x5d326d;confirmer(_0x5ae7cb(0x219)+escHtml(_0x40c2cf)+'\x22\x20?',function(){var _0x2fbe92=_0x5ae7cb;DATA[_0x2fbe92(0x3c9)]=DATA['clients']['filter'](function(_0x4b9555){return _0x4b9555['id']!==_0x317f10;}),renderClients(),toast(_0x40c2cf+'\x20supprimé'),persist();});}function renderCommandes(_0x1f7873,_0x4f35ff){var _0x533258=_0x5d326d,_0x22393b='',_0x4914d1=DATA[_0x533258(0x54c)]['filter'](function(_0x5a28d8){var _0xe39d60=_0x533258,_0x2d90b9=!_0x1f7873||searchMatch(_0x5a28d8['id']+'\x20'+_0x5a28d8['client']+'\x20'+_0x5a28d8['produits'],_0x1f7873),_0x32f086=!_0x4f35ff||_0x4f35ff===_0xe39d60(0x1f5)||_0x5a28d8[_0xe39d60(0x3da)]===_0x4f35ff;return _0x2d90b9&&_0x32f086;});if(!_0x4914d1[_0x533258(0x589)])_0x22393b=_0x533258(0x3bd);_0x4914d1[_0x533258(0x32b)](function(_0x4d4fd9){var _0x4924cd=_0x533258,_0x19494f=_0x4d4fd9[_0x4924cd(0x3da)]===_0x4924cd(0x3d9)?'b-green':_0x4d4fd9[_0x4924cd(0x3da)]===_0x4924cd(0x5a9)?_0x4924cd(0x4f0):_0x4d4fd9[_0x4924cd(0x3da)]==='Annulée'?_0x4924cd(0x268):_0x4924cd(0x473);_0x22393b+=_0x4924cd(0x1d0),_0x22393b+=_0x4924cd(0x282)+escHtml(_0x4d4fd9['id'])+_0x4924cd(0x28c),_0x22393b+=_0x4924cd(0x28e)+escHtml(_0x4d4fd9[_0x4924cd(0x455)])+_0x4924cd(0x2da)+escHtml(_0x4d4fd9[_0x4924cd(0x31f)])+_0x4924cd(0x418),_0x22393b+='<td\x20class=\x22txt-muted\x22>'+escHtml(_0x4d4fd9[_0x4924cd(0x4c2)])+_0x4924cd(0x56c),_0x22393b+=_0x4924cd(0x282)+nombre(_0x4d4fd9[_0x4924cd(0x5e1)])[_0x4924cd(0x42c)](0x2)+_0x4924cd(0x58f),_0x22393b+=_0x4924cd(0x20a)+escHtml(_0x4d4fd9[_0x4924cd(0x5c4)])+_0x4924cd(0x56c),_0x22393b+=_0x4924cd(0x4d8)+(_0x4d4fd9[_0x4924cd(0x4d7)]?_0x4924cd(0x2d1)+escHtml(_0x4d4fd9['valide'])+'</span>':_0x4924cd(0x25f))+_0x4924cd(0x56c),_0x22393b+='<td><span\x20class=\x22badge\x20'+_0x19494f+'\x22>'+escHtml(_0x4d4fd9['statut'])+_0x4924cd(0x235),_0x22393b+='<td\x20class=\x22actions-cell\x22><div><button\x20class=\x22act-btn\x22\x20onclick=\x22voirCommande(\x27'+escAttr(_0x4d4fd9['id'])+_0x4924cd(0x1ef)+svgEye()+'</button>'+(_0x4d4fd9[_0x4924cd(0x3da)]===_0x4924cd(0x520)?_0x4924cd(0x249)+escAttr(_0x4d4fd9['id'])+_0x4924cd(0x3ff):'')+(_0x4d4fd9[_0x4924cd(0x3da)]!=='Retirée'&&_0x4d4fd9[_0x4924cd(0x3da)]!==_0x4924cd(0x583)?_0x4924cd(0x41b)+escAttr(_0x4d4fd9['id'])+_0x4924cd(0x47d):'')+_0x4924cd(0x4b1)+escAttr(_0x4d4fd9['id'])+'\x27)\x22\x20title=\x22Supprimer\x20définitivement\x22>'+svgTrash()+_0x4924cd(0x2a8)+_0x4924cd(0x418),_0x22393b+=_0x4924cd(0x54f);}),setHTML('tbody-commandes',_0x22393b);}function voirCommande(_0x131fad){var _0x22035e=_0x5d326d,_0x1d537d=DATA[_0x22035e(0x54c)][_0x22035e(0x340)](function(_0x34f8d1){return _0x34f8d1['id']===_0x131fad;});if(!_0x1d537d)return;var _0x5dc59f=_0x1d537d['statut']===_0x22035e(0x3d9)?_0x22035e(0x5d0):_0x1d537d[_0x22035e(0x3da)]==='Retirée'?'b-blue':_0x22035e(0x473),_0x142873='<div\x20class=\x22flex-between\x20mb3\x22><div><div\x20class=\x22td-main\x22>'+escHtml(_0x1d537d[_0x22035e(0x455)])+_0x22035e(0x2da)+escHtml(_0x1d537d[_0x22035e(0x31f)])+(_0x1d537d[_0x22035e(0x3f2)]?'\x20·\x20'+escHtml(_0x1d537d[_0x22035e(0x3f2)]):'')+_0x22035e(0x592)+_0x5dc59f+'\x22>'+escHtml(_0x1d537d[_0x22035e(0x3da)])+_0x22035e(0x3b6);_0x142873+=_0x22035e(0x3cc)+escHtml(_0x1d537d[_0x22035e(0x4c2)])+'</div>';if(_0x1d537d[_0x22035e(0x5ee)])_0x142873+=_0x22035e(0x468)+escHtml(_0x1d537d['codeRetrait'])+'</strong></div>';_0x142873+=_0x22035e(0x3d1)+nombre(_0x1d537d[_0x22035e(0x5e1)])[_0x22035e(0x42c)](0x2)+_0x22035e(0x2a5),_0x142873+='<div\x20style=\x22background:var(--fond);border-radius:8px;padding:12px;border:1px\x20solid\x20var(--bord)\x22><div\x20style=\x22font-size:0.65rem;font-weight:700;color:var(--texte-3);text-transform:uppercase;margin-bottom:6px\x22>Historique</div>',_0x142873+=_0x22035e(0x2a7)+escHtml(_0x1d537d['date'])+_0x22035e(0x30a);if(_0x1d537d[_0x22035e(0x3da)]!==_0x22035e(0x520))_0x142873+=_0x22035e(0x443)+escHtml(_0x1d537d[_0x22035e(0x4d7)]||'—')+_0x22035e(0x30a);if(_0x1d537d['statut']===_0x22035e(0x5a9))_0x142873+='<div\x20class=\x22txt-muted\x22>Retirée\x20en\x20pharmacie</div>';_0x142873+=_0x22035e(0x30a),_0x142873+=blocEmailPrerempliHTML(_0x1d537d);var _0x41c772=_0x22035e(0x3fd);if(_0x1d537d['statut']===_0x22035e(0x520))_0x41c772+=_0x22035e(0x467)+escAttr(_0x1d537d['id'])+_0x22035e(0x3d7);showDetail(_0x22035e(0x433)+_0x1d537d['id'],_0x142873,_0x41c772);}function marquerPrete(_0x557609){var _0x2bf5bd=_0x5d326d;if(ADMIN_CLOUD){PharmaAdminCloud[_0x2bf5bd(0x4fc)](_0x557609)[_0x2bf5bd(0x2e5)](function(_0x160edf){if(_0x160edf)notifierCommandePrete(_0x557609);});return;}var _0x35ee65=DATA[_0x2bf5bd(0x54c)][_0x2bf5bd(0x340)](function(_0x43fb56){return _0x43fb56['id']===_0x557609;});if(!_0x35ee65)return;_0x35ee65[_0x2bf5bd(0x3da)]=_0x2bf5bd(0x3d9),_0x35ee65['valide']=nomValideur(),persist(),renderCommandes(),notifierCommandePrete(_0x557609);}function notifierCommandePrete(_0x1adce1){var _0x526fb1=_0x5d326d,_0x5399d8=DATA[_0x526fb1(0x54c)]['find'](function(_0x5e63cb){return _0x5e63cb['id']===_0x1adce1;});if(!_0x5399d8)return;if(typeof PharmaEmail===_0x526fb1(0x5cc)){toast(_0x526fb1(0x433)+_0x1adce1+_0x526fb1(0x3c6));return;}var _0x14e7dc={'commande':{'id':_0x5399d8['id'],'client':_0x5399d8[_0x526fb1(0x455)],'email':_0x5399d8['email'],'produits':_0x5399d8[_0x526fb1(0x4c2)],'total':_0x5399d8[_0x526fb1(0x5e1)],'timestamp':_0x5399d8[_0x526fb1(0x234)],'lang':_0x5399d8[_0x526fb1(0x247)],'codeRetrait':_0x5399d8[_0x526fb1(0x5ee)]}};PharmaEmail['envoyer'](_0x526fb1(0x3aa),DATA,_0x14e7dc)['then'](function(_0x3b68d7){var _0x428bc7=_0x526fb1;DATA=PharmaStore[_0x428bc7(0x3a3)]();if(currentPage==='commandes')renderCommandes();if(currentPage===_0x428bc7(0x3ce))renderEmailJournal();if(currentPage===_0x428bc7(0x526))renderEtatQuota();renderQuotaTableauDeBord();if(_0x3b68d7&&_0x3b68d7['ok']){toast('Client\x20notifié\x20par\x20email\x20—\x20Commande\x20'+_0x1adce1+_0x428bc7(0x3c6));return;}if(_0x3b68d7&&_0x3b68d7[_0x428bc7(0x1de)])toast(_0x428bc7(0x433)+_0x1adce1+_0x428bc7(0x30e)+_0x3b68d7['raison']+')');else toast(_0x428bc7(0x433)+_0x1adce1+_0x428bc7(0x39c),'error');var _0x4568b6=!(_0x3b68d7&&_0x3b68d7[_0x428bc7(0x1de)])||/non configuré/['test'](String(_0x3b68d7['raison']||'')),_0x10121a=DATA[_0x428bc7(0x54c)]['find'](function(_0x5efb9d){return _0x5efb9d['id']===_0x1adce1;});_0x4568b6&&_0x10121a&&PharmaEmail['emailValide'](_0x10121a[_0x428bc7(0x3f2)])&&showDetail(_0x428bc7(0x4aa)+_0x1adce1,_0x428bc7(0x5da)+blocEmailPrerempliHTML(_0x10121a),_0x428bc7(0x3fd));});}function renderTickets(_0x485c87,_0x1846d0){var _0x2e4aac=_0x5d326d,_0x3de21b='',_0x22d1e9=DATA[_0x2e4aac(0x464)]['filter'](function(_0x191297){var _0x29d9fd=_0x2e4aac,_0xd08f3b=!_0x485c87||searchMatch(_0x191297['id']+'\x20'+_0x191297[_0x29d9fd(0x455)]+'\x20'+_0x191297[_0x29d9fd(0x5af)]+'\x20'+_0x191297['type'],_0x485c87),_0x2c4b0c=!_0x1846d0||_0x1846d0===_0x29d9fd(0x1f5)||_0x191297['statut']===_0x1846d0;return _0xd08f3b&&_0x2c4b0c;});if(!_0x22d1e9[_0x2e4aac(0x589)])_0x3de21b='<tr><td\x20colspan=\x229\x22\x20style=\x22text-align:center;padding:30px;color:var(--texte-3)\x22>Aucun\x20ticket</td></tr>';_0x22d1e9[_0x2e4aac(0x32b)](function(_0x3d7c0c){var _0x47817f=_0x2e4aac,_0x45fb1b=_0x3d7c0c[_0x47817f(0x2af)]===_0x47817f(0x206)?_0x47817f(0x531):_0x47817f(0x606),_0x258ec3=_0x3d7c0c[_0x47817f(0x3da)]===_0x47817f(0x52e)?_0x47817f(0x268):_0x3d7c0c[_0x47817f(0x3da)]==='En\x20cours'?_0x47817f(0x473):_0x47817f(0x5d0);_0x3de21b+=_0x47817f(0x1d0),_0x3de21b+=_0x47817f(0x282)+escHtml(_0x3d7c0c['id'])+_0x47817f(0x28c),_0x3de21b+=_0x47817f(0x4d8)+escHtml(_0x3d7c0c[_0x47817f(0x455)])+_0x47817f(0x56c),_0x3de21b+=_0x47817f(0x20a)+escHtml(_0x3d7c0c[_0x47817f(0x4fe)])+_0x47817f(0x56c),_0x3de21b+=_0x47817f(0x28e)+escHtml(_0x3d7c0c['sujet'])+'</div></td>',_0x3de21b+='<td>'+(_0x3d7c0c[_0x47817f(0x45b)]?_0x47817f(0x565)+escHtml(_0x3d7c0c[_0x47817f(0x45b)])+'</span>':'—')+_0x47817f(0x56c),_0x3de21b+=_0x47817f(0x4d8)+(_0x3d7c0c[_0x47817f(0x45a)]?_0x47817f(0x53b):'—')+'</td>',_0x3de21b+=_0x47817f(0x603)+_0x45fb1b+'\x22>'+escHtml(_0x3d7c0c[_0x47817f(0x2af)])+_0x47817f(0x235),_0x3de21b+=_0x47817f(0x603)+_0x258ec3+'\x22>'+escHtml(_0x3d7c0c[_0x47817f(0x3da)])+'</span></td>',_0x3de21b+=_0x47817f(0x390)+(_0x3d7c0c[_0x47817f(0x3da)]===_0x47817f(0x52e)?_0x47817f(0x505):_0x47817f(0x4c4))+'\x22\x20style=\x22height:26px;font-size:0.7rem;padding:0\x2010px\x22\x20onclick=\x22voirTicket(\x27'+escAttr(_0x3d7c0c['id'])+_0x47817f(0x1df)+(_0x3d7c0c[_0x47817f(0x3da)]===_0x47817f(0x52e)?_0x47817f(0x4b7):_0x47817f(0x2fd))+'</button></div></td>',_0x3de21b+=_0x47817f(0x54f);}),setHTML(_0x2e4aac(0x237),_0x3de21b);}function voirTicket(_0x5e1156){var _0x1853b4=_0x5d326d,_0x12f535=DATA[_0x1853b4(0x464)]['find'](function(_0x1ae664){return _0x1ae664['id']===_0x5e1156;});if(!_0x12f535)return;var _0x307933=_0x1853b4(0x28d)+(_0x12f535[_0x1853b4(0x2af)]===_0x1853b4(0x206)?'b-red':_0x1853b4(0x606))+'\x22>'+escHtml(_0x12f535[_0x1853b4(0x2af)])+_0x1853b4(0x4ef)+escHtml(_0x12f535['type'])+_0x1853b4(0x25b)+(_0x12f535[_0x1853b4(0x45b)]?'<span\x20class=\x22badge\x20b-blue\x22>'+escHtml(_0x12f535[_0x1853b4(0x45b)])+_0x1853b4(0x25b):'')+_0x1853b4(0x30a);_0x307933+=_0x1853b4(0x392)+escHtml(_0x12f535[_0x1853b4(0x5af)])+_0x1853b4(0x42f)+escHtml(_0x12f535['client'])+'</div></div></div>',(Array[_0x1853b4(0x4bd)](_0x12f535[_0x1853b4(0x284)])?_0x12f535[_0x1853b4(0x284)]:[])[_0x1853b4(0x32b)](function(_0x397b1e){var _0x280180=_0x1853b4,_0x20c7e4=new Date(_0x397b1e['date']),_0x49878e=isNaN(_0x20c7e4)?'':('0'+_0x20c7e4[_0x280180(0x539)]())[_0x280180(0x1b9)](-0x2)+'/'+('0'+(_0x20c7e4[_0x280180(0x1c5)]()+0x1))['slice'](-0x2)+'\x20'+('0'+_0x20c7e4[_0x280180(0x394)]())[_0x280180(0x1b9)](-0x2)+'h'+('0'+_0x20c7e4[_0x280180(0x2b3)]())['slice'](-0x2);_0x307933+='<div\x20class=\x22msg\x20mb3\x22\x20style=\x22text-align:right\x22><div><div\x20class=\x22msg-bubble\x20'+(_0x397b1e[_0x280180(0x4fe)]===_0x280180(0x53e)?_0x280180(0x4ab):_0x280180(0x1c9))+'\x22>'+escHtml(_0x397b1e[_0x280180(0x329)])+_0x280180(0x30a)+_0x280180(0x344)+(_0x397b1e[_0x280180(0x4fe)]===_0x280180(0x53e)?_0x280180(0x563):_0x280180(0x4cc))+escHtml(_0x397b1e['auteur'])+_0x280180(0x346)+escHtml(_0x49878e)+'</div></div></div>';}),_0x307933+='<hr><div\x20class=\x22form-group\x20mb3\x22><label>Répondre\x20au\x20client</label><textarea\x20id=\x22ticket-reponse\x22\x20placeholder=\x22Votre\x20réponse...\x22></textarea></div>',_0x307933+=_0x1853b4(0x353);var _0x2f4094=_0x1853b4(0x3fd);_0x2f4094+=_0x1853b4(0x44e)+escAttr(_0x5e1156)+_0x1853b4(0x1d5),_0x2f4094+=_0x1853b4(0x23d)+escAttr(_0x5e1156)+_0x1853b4(0x1dc),showDetail(_0x1853b4(0x5a5)+_0x5e1156+_0x1853b4(0x5ad)+_0x12f535[_0x1853b4(0x455)],_0x307933,_0x2f4094);}function repondreTicket(_0x2c71a8){var _0x31f91f=_0x5d326d,_0x36c2f9=DATA[_0x31f91f(0x464)]['find'](function(_0x1cff83){return _0x1cff83['id']===_0x2c71a8;});if(!_0x36c2f9)return;var _0xc3c7=(getVal(_0x31f91f(0x5c3))||'')[_0x31f91f(0x617)](),_0x5aeea5=(getVal(_0x31f91f(0x2ec))||'')[_0x31f91f(0x617)]();if(!_0xc3c7&&!_0x5aeea5){toast(_0x31f91f(0x332),'error');return;}if(!Array['isArray'](_0x36c2f9['historique']))_0x36c2f9[_0x31f91f(0x284)]=[];var _0x450793=new Date()[_0x31f91f(0x36c)]();_0xc3c7&&(_0x36c2f9['historique'][_0x31f91f(0x35a)]({'type':'reponse','texte':_0xc3c7,'auteur':nomValideur(),'date':_0x450793}),_0x36c2f9[_0x31f91f(0x3da)]=_0x31f91f(0x25c));if(_0x5aeea5)_0x36c2f9[_0x31f91f(0x284)][_0x31f91f(0x35a)]({'type':'note','texte':_0x5aeea5,'auteur':nomValideur(),'date':_0x450793});closeModal(_0x31f91f(0x436)),renderTickets(),toast(_0xc3c7?'Réponse\x20enregistrée\x20dans\x20le\x20ticket\x20(à\x20transmettre\x20au\x20client\x20par\x20téléphone\x20ou\x20email\x20en\x20attendant\x20l\x27envoi\x20automatique)':_0x31f91f(0x1d6)),persist();}function resoudreTicket(_0x41ac45){var _0x4765de=_0x5d326d,_0x29c6ed=DATA['tickets']['find'](function(_0x5ca1de){return _0x5ca1de['id']===_0x41ac45;});if(_0x29c6ed)_0x29c6ed[_0x4765de(0x3da)]=_0x4765de(0x267);closeModal(_0x4765de(0x436)),renderTickets(),toast(_0x4765de(0x5a5)+_0x41ac45+_0x4765de(0x256)),persist();}function renderEmployes(){var _0x528c08=_0x5d326d,_0x14ee8d='';DATA[_0x528c08(0x4d2)]['forEach'](function(_0x2170c2){var _0x447da1=_0x528c08;_0x14ee8d+=_0x447da1(0x1d0),_0x14ee8d+='<td><div\x20class=\x22td-main\x22>'+escHtml(_0x2170c2[_0x447da1(0x293)])+_0x447da1(0x2da)+escHtml(_0x2170c2[_0x447da1(0x3f2)])+_0x447da1(0x418),_0x14ee8d+=_0x447da1(0x603)+(_0x2170c2[_0x447da1(0x483)]===_0x447da1(0x2d8)?'b-red':_0x447da1(0x4f0))+'\x22>'+escHtml(_0x2170c2[_0x447da1(0x483)])+_0x447da1(0x235),_0x14ee8d+=_0x447da1(0x20a)+escHtml(_0x2170c2['acces'])+_0x447da1(0x56c),_0x14ee8d+=_0x447da1(0x603)+(_0x2170c2[_0x447da1(0x409)]?_0x447da1(0x5d0):'b-grey')+'\x22>'+(_0x2170c2[_0x447da1(0x409)]?'Actif':_0x447da1(0x395))+_0x447da1(0x235),_0x14ee8d+=_0x447da1(0x527);if(currentUser[_0x447da1(0x483)]===_0x447da1(0x2d8)){_0x14ee8d+='<button\x20class=\x22act-btn\x22\x20onclick=\x22editEmploye('+_0x2170c2['id']+_0x447da1(0x3cf)+svgEdit()+_0x447da1(0x2a8);if(_0x2170c2[_0x447da1(0x483)]!=='Admin')_0x14ee8d+=_0x447da1(0x456)+_0x2170c2['id']+',\x27'+escAttr(_0x2170c2[_0x447da1(0x293)])+_0x447da1(0x1df)+svgTrash()+'</button>';}_0x14ee8d+=_0x447da1(0x5dd);}),setHTML(_0x528c08(0x25a),_0x14ee8d);}function editEmploye(_0xc778fe){var _0x55414e=_0x5d326d,_0x4bdfb4=DATA[_0x55414e(0x4d2)]['find'](function(_0x4aa665){return _0x4aa665['id']===_0xc778fe;});if(!_0x4bdfb4)return;setVal('emp-nom',_0x4bdfb4[_0x55414e(0x293)]),setVal(_0x55414e(0x230),_0x4bdfb4[_0x55414e(0x3f2)]),document[_0x55414e(0x30b)]('emp-role')[_0x55414e(0x413)]=_0x4bdfb4[_0x55414e(0x483)],document[_0x55414e(0x30b)]('emp-id')[_0x55414e(0x413)]=_0xc778fe,openModal(_0x55414e(0x57e));}function saveEmploye(){var _0x31dfd3=_0x5d326d,_0x231cd8=parseInt(document['getElementById'](_0x31dfd3(0x2db))[_0x31dfd3(0x413)]),_0x4d012c=(getVal('emp-nom')||'')[_0x31dfd3(0x617)](),_0x579594=(getVal(_0x31dfd3(0x230))||'')[_0x31dfd3(0x617)](),_0xd693a6=getVal(_0x31dfd3(0x336));if(!_0x4d012c){toast('Le\x20nom\x20est\x20obligatoire',_0x31dfd3(0x536));return;}if(_0x579594&&!pharmaEmailValide(_0x579594)){toast(_0x31dfd3(0x1e0),'error');return;}if(_0x231cd8){var _0x69f3eb=DATA['employes'][_0x31dfd3(0x340)](function(_0x1c6830){return _0x1c6830['id']===_0x231cd8;});_0x69f3eb&&(_0x69f3eb[_0x31dfd3(0x293)]=_0x4d012c,_0x69f3eb['email']=_0x579594,_0x69f3eb[_0x31dfd3(0x483)]=_0xd693a6,_0x69f3eb[_0x31dfd3(0x4cf)]=_0xd693a6===_0x31dfd3(0x2d8)?_0x31dfd3(0x38e):'Commandes\x20+\x20Tickets'),toast('Employé\x20modifié');}else{var _0x4850aa=DATA['employes'][_0x31dfd3(0x589)]?Math['max']['apply'](null,DATA[_0x31dfd3(0x4d2)]['map'](function(_0x961300){return _0x961300['id'];}))+0x1:0x1;DATA[_0x31dfd3(0x4d2)]['push']({'id':_0x4850aa,'nom':_0x4d012c,'email':_0x579594,'role':_0xd693a6,'acces':_0xd693a6===_0x31dfd3(0x2d8)?_0x31dfd3(0x38e):_0x31dfd3(0x614),'actif':!![]}),toast(_0x31dfd3(0x3b3));}closeModal(_0x31dfd3(0x57e)),renderEmployes(),resetForm('form-employe'),persist();}function deleteEmploye(_0x54c93b,_0x4c767c){var _0x4169af=_0x5d326d;confirmer('Supprimer\x20le\x20compte\x20de\x20\x22'+escHtml(_0x4c767c)+_0x4169af(0x20e),function(){var _0x449819=_0x4169af;DATA['employes']=DATA[_0x449819(0x4d2)][_0x449819(0x578)](function(_0x49a199){return _0x49a199['id']!==_0x54c93b;}),renderEmployes(),toast(_0x4c767c+_0x449819(0x2d9)),persist();});}function renderStocks(_0x3a61f8){var _0xfcfb45=_0x5d326d,_0x5e19fa='',_0x3dd7e7=DATA['produits'][_0xfcfb45(0x578)](function(_0x10f6b0){var _0x4b457e=_0xfcfb45;return!_0x3a61f8||searchMatch(_0x10f6b0[_0x4b457e(0x293)]+'\x20'+_0x10f6b0[_0x4b457e(0x600)],_0x3a61f8);});_0x3dd7e7[_0xfcfb45(0x32b)](function(_0x11e69f){var _0x5c1b28=_0xfcfb45,_0xa23e42=_0x11e69f['stock']<=0x0?'b-red':_0x11e69f[_0x5c1b28(0x2b6)]<=_0x11e69f['seuil']?_0x5c1b28(0x20c):'b-green',_0x5d7394=_0x11e69f[_0x5c1b28(0x2b6)]<=0x0?_0x5c1b28(0x39f):_0x11e69f['stock']<=_0x11e69f[_0x5c1b28(0x528)]?'Faible':'OK';_0x5e19fa+=_0x5c1b28(0x1d0),_0x5e19fa+=_0x5c1b28(0x28e)+escHtml(_0x11e69f[_0x5c1b28(0x293)])+_0x5c1b28(0x2da)+escHtml(_0x11e69f[_0x5c1b28(0x600)])+_0x5c1b28(0x418),_0x5e19fa+='<td\x20style=\x22'+(_0x11e69f[_0x5c1b28(0x2b6)]<=0x0?_0x5c1b28(0x5a6):_0x11e69f['stock']<=_0x11e69f['seuil']?'color:var(--or);font-weight:700':'')+'\x22>'+_0x11e69f['stock']+'</td>',_0x5e19fa+=_0x5c1b28(0x4d8)+_0x11e69f['seuil']+'</td>',_0x5e19fa+=_0x5c1b28(0x603)+_0xa23e42+'\x22>'+_0x5d7394+'</span></td>',_0x5e19fa+=_0x5c1b28(0x296)+_0x11e69f['id']+_0x5c1b28(0x4dc)+_0x11e69f[_0x5c1b28(0x2b6)]+_0x5c1b28(0x207)+_0x11e69f['id']+_0x5c1b28(0x1f6),_0x5e19fa+=_0x5c1b28(0x54f);}),setHTML(_0xfcfb45(0x3e4),_0x5e19fa);}function updateStock(_0x1bcfa7){var _0x48fff7=_0x5d326d,_0x4fa986=DATA[_0x48fff7(0x4c2)][_0x48fff7(0x340)](function(_0x153ea4){return _0x153ea4['id']===_0x1bcfa7;}),_0x34ced9=document[_0x48fff7(0x30b)](_0x48fff7(0x26d)+_0x1bcfa7);if(_0x4fa986&&_0x34ced9){var _0x420548=_0x34ced9[_0x48fff7(0x413)]===''?NaN:Number(_0x34ced9['value']);if(!Number[_0x48fff7(0x3ac)](_0x420548)||_0x420548<0x0){toast(_0x48fff7(0x532),_0x48fff7(0x536));return;}_0x4fa986[_0x48fff7(0x2b6)]=_0x420548,renderStocks(),toast(_0x48fff7(0x2a3)+_0x4fa986['nom']+'\x22\x20mis\x20à\x20jour\x20:\x20'+_0x4fa986[_0x48fff7(0x2b6)]+_0x48fff7(0x44f)),persist();}}function renderMessages(){var _0x51dc36=_0x5d326d,_0x36d59f='';DATA['messages'][_0x51dc36(0x32b)](function(_0xd4295e){var _0x1ea398=_0x51dc36,_0x408206=_0xd4295e['de']===currentUser[_0x1ea398(0x293)];_0x36d59f+=_0x1ea398(0x5d3)+(_0x408206?'flex-end':_0x1ea398(0x29c)),_0x36d59f+=_0x1ea398(0x1f1),_0x36d59f+=_0x1ea398(0x481)+(_0x408206?_0x1ea398(0x1c9):_0x1ea398(0x5e0))+'\x22>'+escHtml(_0xd4295e[_0x1ea398(0x59b)])+_0x1ea398(0x30a),_0x36d59f+=_0x1ea398(0x344)+(_0x408206?'Vous':escHtml(_0xd4295e['de']))+'\x20·\x20'+escHtml(_0xd4295e[_0x1ea398(0x497)])+_0x1ea398(0x419);}),setHTML(_0x51dc36(0x229),_0x36d59f);var _0x249428=DATA[_0x51dc36(0x31a)][_0x51dc36(0x49b)](function(_0x2cff13){return!_0x2cff13['lu'];});DATA[_0x51dc36(0x31a)][_0x51dc36(0x32b)](function(_0x26347c){_0x26347c['lu']=!![];});if(_0x249428)persist();var _0x3ce986=document[_0x51dc36(0x30b)]('msg-badge');_0x3ce986&&(_0x3ce986[_0x51dc36(0x377)]='',_0x3ce986[_0x51dc36(0x507)]['display']=_0x51dc36(0x439));var _0x42d5da=document['getElementById'](_0x51dc36(0x229));if(_0x42d5da)_0x42d5da[_0x51dc36(0x4de)]=_0x42d5da[_0x51dc36(0x27d)];}function envoyerMessage(){var _0xb366eb=_0x5d326d,_0x277e34=document[_0xb366eb(0x30b)]('msg-input');if(!_0x277e34||!_0x277e34[_0xb366eb(0x413)]['trim']())return;var _0x312bf9=new Date(),_0x2fbf2e=_0x312bf9[_0xb366eb(0x394)]()+'h'+(_0x312bf9[_0xb366eb(0x2b3)]()<0xa?'0':'')+_0x312bf9[_0xb366eb(0x2b3)]();DATA['messages'][_0xb366eb(0x35a)]({'id':DATA[_0xb366eb(0x31a)][_0xb366eb(0x589)]+0x1,'de':currentUser[_0xb366eb(0x293)],'msg':_0x277e34[_0xb366eb(0x413)][_0xb366eb(0x617)](),'heure':_0x2fbf2e,'lu':!![]}),_0x277e34[_0xb366eb(0x413)]='',renderMessages(),persist();}function renderHoraires(){var _0x45eba2=_0x5d326d,_0x276c92=[_0x45eba2(0x604),_0x45eba2(0x559),_0x45eba2(0x595),'jeudi','vendredi',_0x45eba2(0x2fb),'dimanche'];_0x276c92[_0x45eba2(0x32b)](function(_0x342018){var _0x1b0caf=_0x45eba2,_0x385b68=DATA[_0x1b0caf(0x564)]&&DATA[_0x1b0caf(0x564)][_0x342018]||{'ouvert':![],'debut':'','fin':''},_0x3f6a97=document['getElementById']('h-'+_0x342018),_0x2e335f=document[_0x1b0caf(0x30b)]('h-'+_0x342018+_0x1b0caf(0x542)),_0x3f3497=document[_0x1b0caf(0x30b)]('h-'+_0x342018+_0x1b0caf(0x233));if(_0x3f6a97)_0x3f6a97[_0x1b0caf(0x3d4)]=_0x385b68[_0x1b0caf(0x3ad)];if(_0x2e335f)_0x2e335f[_0x1b0caf(0x413)]=_0x385b68['debut'];if(_0x3f3497)_0x3f3497[_0x1b0caf(0x413)]=_0x385b68['fin'];});var _0x4b2ed5='';DATA[_0x45eba2(0x59a)][_0x45eba2(0x32b)](function(_0xf92fa4,_0x24fe04){var _0x24632c=_0x45eba2,_0x4224e3=_0xf92fa4[_0x24632c(0x4fe)]==='Fermeture'?_0x24632c(0x4e5):'';_0x4b2ed5+=_0x24632c(0x486)+_0x4224e3+'\x22>',_0x4b2ed5+=_0x24632c(0x4e1)+escHtml(_0xf92fa4[_0x24632c(0x5c4)])+_0x24632c(0x21f)+escHtml(_0xf92fa4[_0x24632c(0x4fe)])+_0x24632c(0x419),_0x4b2ed5+='<div\x20class=\x22sday-hrs\x22\x20style=\x22'+(_0xf92fa4[_0x24632c(0x4fe)]==='Fermeture'?_0x24632c(0x4c3):'')+'\x22>'+(_0xf92fa4[_0x24632c(0x4fe)]===_0x24632c(0x312)?'Fermé':escHtml(_0xf92fa4[_0x24632c(0x389)])+_0x24632c(0x5d2)+escHtml(_0xf92fa4[_0x24632c(0x388)]))+_0x24632c(0x30a),_0x4b2ed5+=_0x24632c(0x2ce)+_0x24fe04+')\x22>'+svgTrash()+_0x24632c(0x2a8),_0x4b2ed5+=_0x24632c(0x30a);}),setHTML(_0x45eba2(0x504),_0x4b2ed5||_0x45eba2(0x1f4));var _0x355032=document['getElementById'](_0x45eba2(0x38c)),_0x538fd6=document['getElementById'](_0x45eba2(0x5a3));if(_0x355032)_0x355032[_0x45eba2(0x3d4)]=DATA[_0x45eba2(0x526)][_0x45eba2(0x5bc)];if(_0x538fd6)_0x538fd6[_0x45eba2(0x413)]=DATA[_0x45eba2(0x526)]['bandeauMsg'];}function saveHoraires(){var _0x2b29f4=_0x5d326d,_0x4078c9=[_0x2b29f4(0x604),_0x2b29f4(0x559),_0x2b29f4(0x595),_0x2b29f4(0x43d),_0x2b29f4(0x23e),_0x2b29f4(0x2fb),_0x2b29f4(0x269)],_0x5e93e0={};for(var _0x236c55=0x0;_0x236c55<_0x4078c9[_0x2b29f4(0x589)];_0x236c55++){var _0x44eb7e=_0x4078c9[_0x236c55],_0x3e9c60=document[_0x2b29f4(0x30b)]('h-'+_0x44eb7e),_0x7da834=document[_0x2b29f4(0x30b)]('h-'+_0x44eb7e+_0x2b29f4(0x542)),_0x38bfc5=document['getElementById']('h-'+_0x44eb7e+'-fin'),_0x53b729={'ouvert':_0x3e9c60?_0x3e9c60[_0x2b29f4(0x3d4)]:![],'debut':_0x7da834?_0x7da834[_0x2b29f4(0x413)]:'','fin':_0x38bfc5?_0x38bfc5[_0x2b29f4(0x413)]:''};if(_0x53b729[_0x2b29f4(0x3ad)]&&(!_0x53b729['debut']||!_0x53b729[_0x2b29f4(0x388)])){toast(_0x2b29f4(0x57c)+_0x44eb7e,'error');return;}if(_0x53b729[_0x2b29f4(0x3ad)]&&_0x53b729['fin']<=_0x53b729[_0x2b29f4(0x389)]){toast('Le\x20'+_0x44eb7e+',\x20l\x27heure\x20de\x20fermeture\x20doit\x20être\x20après\x20l\x27ouverture','error');return;}_0x5e93e0[_0x44eb7e]=_0x53b729;}DATA[_0x2b29f4(0x564)]=_0x5e93e0,toast(_0x2b29f4(0x406)),persist();}function saveGarde(){var _0x118cb7=_0x5d326d,_0x4b2c2e=getVal(_0x118cb7(0x414)),_0x4143a2=getVal(_0x118cb7(0x423)),_0x95c2f6=getVal(_0x118cb7(0x339)),_0xde04e0=getVal(_0x118cb7(0x474)),_0x20cf2f=getVal(_0x118cb7(0x553));if(!_0x4b2c2e){toast('La\x20date\x20est\x20obligatoire',_0x118cb7(0x536));return;}DATA[_0x118cb7(0x59a)]['push']({'date':_0x4b2c2e,'type':_0x4143a2,'debut':_0x95c2f6,'fin':_0xde04e0,'msg':_0x20cf2f}),closeModal(_0x118cb7(0x259)),renderHoraires(),toast(_0x118cb7(0x1e9)),persist();}function deleteJourSpecial(_0x21cc1a){confirmer('Supprimer\x20ce\x20jour\x20spécial\x20?',function(){var _0x3ff30f=_0x42b5;DATA[_0x3ff30f(0x59a)][_0x3ff30f(0x502)](_0x21cc1a,0x1),renderHoraires(),toast(_0x3ff30f(0x1b1)),persist();});}function saveBandeau(){var _0x23b0f1=_0x5d326d,_0x4b2aff=document[_0x23b0f1(0x30b)](_0x23b0f1(0x38c)),_0x5bd7eb=document['getElementById'](_0x23b0f1(0x5a3));DATA[_0x23b0f1(0x526)]['bandeauActif']=_0x4b2aff?_0x4b2aff[_0x23b0f1(0x3d4)]:![],DATA[_0x23b0f1(0x526)][_0x23b0f1(0x2c5)]=_0x5bd7eb?_0x5bd7eb['value']:'',toast(_0x23b0f1(0x585)),persist();}function renderParametres(){var _0x27c5e9=_0x5d326d;setVal('par-nom',DATA[_0x27c5e9(0x526)][_0x27c5e9(0x293)]),setVal('par-adresse',DATA[_0x27c5e9(0x526)][_0x27c5e9(0x44b)]),setVal(_0x27c5e9(0x432),DATA[_0x27c5e9(0x526)][_0x27c5e9(0x31f)]),setVal('par-email',DATA['parametres']['email']),setVal(_0x27c5e9(0x434),DATA['parametres'][_0x27c5e9(0x42a)]),setVal(_0x27c5e9(0x333),DATA[_0x27c5e9(0x526)]['couleurPrimaire']||'#1B6B45'),setVal(_0x27c5e9(0x1be),DATA[_0x27c5e9(0x526)][_0x27c5e9(0x424)]||DATA['parametres'][_0x27c5e9(0x293)]),setVal('par-fid-seuil',DATA[_0x27c5e9(0x526)][_0x27c5e9(0x3b4)]||0x5),setVal(_0x27c5e9(0x567),DATA[_0x27c5e9(0x526)]['fideliteReduction']||0xa);var _0x2a6265=document[_0x27c5e9(0x30b)]('par-rapport-jour'),_0x4aa772=document['getElementById']('par-rapport-heure'),_0xa7b7c1=document[_0x27c5e9(0x30b)](_0x27c5e9(0x2ff));if(_0x2a6265)_0x2a6265[_0x27c5e9(0x413)]=DATA['parametres'][_0x27c5e9(0x243)];if(_0x4aa772)_0x4aa772[_0x27c5e9(0x413)]=DATA['parametres'][_0x27c5e9(0x438)];if(_0xa7b7c1)_0xa7b7c1['checked']=DATA['parametres'][_0x27c5e9(0x203)];renderLegal(),renderEmailParams();}function saveApparence(){var _0x310616=_0x5d326d,_0x4b7b2a=getVal(_0x310616(0x333))||_0x310616(0x34c);if(!/^#[0-9a-fA-F]{6}$/['test'](_0x4b7b2a)){toast(_0x310616(0x514),'error');return;}DATA['parametres']['couleurPrimaire']=_0x4b7b2a,DATA[_0x310616(0x526)][_0x310616(0x424)]=(getVal('par-logo')||'')[_0x310616(0x617)]()||DATA[_0x310616(0x526)][_0x310616(0x293)],persist(),appliquerCouleur(),toast(_0x310616(0x24c));}function appliquerCouleur(){var _0x412f5a=_0x5d326d,_0x5174a4=DATA[_0x412f5a(0x526)][_0x412f5a(0x5ff)];if(_0x5174a4)document[_0x412f5a(0x558)]['style'][_0x412f5a(0x3fb)](_0x412f5a(0x34b),_0x5174a4);var _0x583f6f=DATA[_0x412f5a(0x526)][_0x412f5a(0x293)]||_0x412f5a(0x545),_0x3b350d=document[_0x412f5a(0x30b)](_0x412f5a(0x499));if(_0x3b350d)_0x3b350d[_0x412f5a(0x377)]=_0x583f6f;var _0x309ca8=document[_0x412f5a(0x30b)](_0x412f5a(0x3c7));if(_0x309ca8)_0x309ca8[_0x412f5a(0x377)]=_0x583f6f;document[_0x412f5a(0x1ee)]=_0x583f6f+'\x20—\x20Administration',_titreOriginal=document[_0x412f5a(0x1ee)];}function saveFidelite(){var _0x2eaf61=_0x5d326d,_0x5015af=parseInt(getVal(_0x2eaf61(0x1ca)),0xa),_0x379041=parseInt(getVal('par-fid-reduction'),0xa);if(!_0x5015af||_0x5015af<0x1){toast(_0x2eaf61(0x364),_0x2eaf61(0x536));return;}if(!_0x379041||_0x379041<0x1||_0x379041>0x64){toast(_0x2eaf61(0x27c),_0x2eaf61(0x536));return;}DATA[_0x2eaf61(0x526)][_0x2eaf61(0x3b4)]=_0x5015af,DATA[_0x2eaf61(0x526)]['fideliteReduction']=_0x379041,persist(),toast('Programme\x20de\x20fidélité\x20mis\x20à\x20jour\x20:\x20'+_0x5015af+_0x2eaf61(0x46f)+_0x379041+'%');}function saveParametres(){var _0x576fd2=_0x5d326d,_0x555a5c=(getVal(_0x576fd2(0x57a))||'')[_0x576fd2(0x617)](),_0xaa464d=(getVal(_0x576fd2(0x1eb))||'')[_0x576fd2(0x617)]();if(!_0x555a5c){toast(_0x576fd2(0x32a),'error');return;}if(_0xaa464d&&!pharmaEmailValide(_0xaa464d)){toast(_0x576fd2(0x366),'error');return;}DATA['parametres'][_0x576fd2(0x293)]=_0x555a5c,DATA['parametres'][_0x576fd2(0x44b)]=(getVal(_0x576fd2(0x56a))||'')[_0x576fd2(0x617)](),DATA['parametres'][_0x576fd2(0x31f)]=(getVal(_0x576fd2(0x432))||'')[_0x576fd2(0x617)](),DATA[_0x576fd2(0x526)][_0x576fd2(0x3f2)]=_0xaa464d,toast(_0x576fd2(0x2c1)),persist(),appliquerCouleur();}function saveRestriction(_0x10e7dd){var _0x17fc77=_0x5d326d;DATA['parametres'][_0x17fc77(0x203)]=!!_0x10e7dd,persist(),toast(_0x10e7dd?_0x17fc77(0x471):_0x17fc77(0x466));}function renderEmailParams(){var _0x3a11a1=_0x5d326d,_0x4ce8e5=DATA[_0x3a11a1(0x526)][_0x3a11a1(0x26e)]||{},_0x8217ff=document[_0x3a11a1(0x30b)](_0x3a11a1(0x3e9));if(_0x8217ff)_0x8217ff[_0x3a11a1(0x3d4)]=_0x4ce8e5[_0x3a11a1(0x409)]===!![];setVal(_0x3a11a1(0x37b),_0x4ce8e5[_0x3a11a1(0x5fb)]),setVal('em-template',_0x4ce8e5[_0x3a11a1(0x43c)]),setVal(_0x3a11a1(0x4a1),_0x4ce8e5['publicKey']),setVal(_0x3a11a1(0x2ea),_0x4ce8e5[_0x3a11a1(0x2e8)]),setVal(_0x3a11a1(0x54a),_0x4ce8e5[_0x3a11a1(0x287)]);var _0x4d919e=typeof PharmaEmail!==_0x3a11a1(0x5cc)?PharmaEmail[_0x3a11a1(0x56d)](DATA):null;setVal('em-quota',_0x4d919e?String(_0x4d919e[_0x3a11a1(0x48e)]):''),renderEtatQuota();}function texteDateCourte(_0x3534bb){var _0x48419c=_0x5d326d,_0x2030a0=new Date(_0x3534bb);return isNaN(_0x2030a0)?'':('0'+_0x2030a0[_0x48419c(0x539)]())[_0x48419c(0x1b9)](-0x2)+'/'+('0'+(_0x2030a0[_0x48419c(0x1c5)]()+0x1))[_0x48419c(0x1b9)](-0x2);}function resumeQuotaHTML(_0x2e8770,_0x34b461){var _0x10d982=_0x5d326d;if(!_0x2e8770)return _0x10d982(0x498);var _0x4456ef=_0x2e8770[_0x10d982(0x33a)]?_0x10d982(0x43a):_0x2e8770[_0x10d982(0x39d)]?_0x10d982(0x61e):_0x10d982(0x2d7),_0x55f2a4='<div\x20style=\x22font-size:0.82rem;line-height:1.5\x22><strong\x20style=\x22color:'+_0x4456ef+'\x22>'+_0x2e8770[_0x10d982(0x48e)]+'\x20email'+(_0x2e8770['restants']>0x1?'s':'')+_0x10d982(0x554)+(_0x2e8770[_0x10d982(0x48e)]>0x1?'s':'')+_0x10d982(0x5ea)+_0x10d982(0x5d4)+_0x2e8770[_0x10d982(0x3d6)]+(_0x2e8770[_0x10d982(0x323)]?_0x10d982(0x421)+texteDateCourte(_0x2e8770[_0x10d982(0x323)]):'')+'\x20·\x20'+_0x2e8770[_0x10d982(0x548)]+'\x20envoyé'+(_0x2e8770[_0x10d982(0x548)]>0x1?'s':'')+_0x10d982(0x48b);if(_0x34b461)_0x55f2a4+=_0x10d982(0x412)+(ADMIN_CLOUD?_0x10d982(0x22c):_0x10d982(0x2d2))+_0x10d982(0x30a);if(_0x2e8770['epuise'])_0x55f2a4+=_0x10d982(0x4e8);return _0x55f2a4;}function renderEtatQuota(){var _0x10a869=_0x5d326d,_0xf043b1=document[_0x10a869(0x30b)]('em-quota-etat');if(_0xf043b1)_0xf043b1[_0x10a869(0x453)]=resumeQuotaHTML(typeof PharmaEmail!=='undefined'?PharmaEmail['quota'](DATA):null,!![]);}function saveEmailQuota(){var _0x38f448=_0x5d326d,_0x4036a4=(getVal(_0x38f448(0x289))||'')[_0x38f448(0x617)]();if(_0x4036a4===''){DATA[_0x38f448(0x526)][_0x38f448(0x573)]=null,persist(),renderEtatQuota(),renderQuotaTableauDeBord(),toast(_0x38f448(0x50a));return;}if(!/^\d{1,6}$/[_0x38f448(0x2ae)](_0x4036a4)){toast(_0x38f448(0x5b7),_0x38f448(0x536));return;}var _0x574720=parseInt(_0x4036a4,0xa);DATA[_0x38f448(0x526)][_0x38f448(0x573)]={'releve':_0x574720,'releveLe':new Date()[_0x38f448(0x36c)](),'envoyes':0x0},persist(),renderEtatQuota(),renderQuotaTableauDeBord(),toast(_0x38f448(0x1b2)+_0x574720+_0x38f448(0x2f8)+(_0x574720>0x1?'s':'')+'\x20restant'+(_0x574720>0x1?'s':''));}function renderQuotaTableauDeBord(){var _0x2546d9=_0x5d326d,_0x281a89=document['getElementById'](_0x2546d9(0x21c));if(!_0x281a89)return;var _0x265535=typeof PharmaEmail!==_0x2546d9(0x5cc)?PharmaEmail[_0x2546d9(0x56d)](DATA):null;if(!_0x265535||!_0x265535[_0x2546d9(0x39d)]){_0x281a89['innerHTML']='';return;}var _0x491087=_0x265535[_0x2546d9(0x33a)]?'var(--rouge-pale,\x20rgba(229,83,83,0.1))':_0x2546d9(0x250);_0x281a89[_0x2546d9(0x453)]='<div\x20style=\x22display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:'+_0x491087+_0x2546d9(0x4c8)+_0x2546d9(0x5e7)+(_0x265535['epuise']?_0x2546d9(0x3b7):_0x2546d9(0x3de)+_0x265535['restants']+_0x2546d9(0x2f8)+(_0x265535[_0x2546d9(0x48e)]>0x1?'s':'')+_0x2546d9(0x444)+(_0x265535['restants']>0x1?'s':''))+_0x2546d9(0x5ea)+_0x2546d9(0x4e0)+(_0x265535[_0x2546d9(0x33a)]?'Prévenez\x20les\x20clients\x20avec\x20l\x27email\x20prérempli\x20(détail\x20de\x20la\x20commande).':_0x2546d9(0x338))+_0x2546d9(0x419)+_0x2546d9(0x356);}var TYPES_PREREMPLI={'commandeRecue':_0x5d326d(0x2ac),'commandePrete':_0x5d326d(0x1ce),'codeFidelite':_0x5d326d(0x396)};function ctxEmailCommande(_0x5f54bd,_0x29e1ae){var _0x2a428f=_0x5d326d,_0x237de4={'commande':{'id':_0x5f54bd['id'],'client':_0x5f54bd[_0x2a428f(0x455)],'email':_0x5f54bd[_0x2a428f(0x3f2)],'produits':_0x5f54bd[_0x2a428f(0x4c2)],'total':_0x5f54bd[_0x2a428f(0x5e1)],'timestamp':_0x5f54bd[_0x2a428f(0x234)],'lang':_0x5f54bd[_0x2a428f(0x247)],'codeRetrait':_0x5f54bd[_0x2a428f(0x5ee)],'codePromo':_0x5f54bd['codePromo'],'remise':_0x5f54bd[_0x2a428f(0x35d)]}};if(_0x29e1ae===_0x2a428f(0x3be)){var _0x332f9c=(DATA[_0x2a428f(0x3fa)]||[])[_0x2a428f(0x340)](function(_0x152671){var _0x11906d=_0x2a428f;return _0x152671&&_0x152671[_0x11906d(0x218)]===_0x5f54bd['id'];});if(!_0x332f9c)return null;var _0x3cfe18=PharmaFidelite[_0x2a428f(0x373)](DATA);_0x237de4[_0x2a428f(0x355)]={'seuil':_0x3cfe18['seuil'],'reduction':_0x3cfe18[_0x2a428f(0x290)]},_0x237de4[_0x2a428f(0x386)]={'code':_0x332f9c['code'],'pct':_0x332f9c['pct'],'expire':_0x332f9c[_0x2a428f(0x38f)]};}return _0x237de4;}function preparerEmail(_0x4f70a7,_0x2be1ac){var _0x2d9c66=_0x5d326d;if(typeof PharmaEmail===_0x2d9c66(0x5cc))return null;var _0x375f69=DATA[_0x2d9c66(0x54c)]['find'](function(_0x53a37e){return _0x53a37e['id']===_0x4f70a7;});if(!_0x375f69||!PharmaEmail[_0x2d9c66(0x461)](_0x375f69[_0x2d9c66(0x3f2)]))return null;var _0x132e87=ctxEmailCommande(_0x375f69,_0x2be1ac);return _0x132e87?PharmaEmail[_0x2d9c66(0x1c8)](_0x2be1ac,DATA,_0x132e87):null;}function typesEmailCommande(_0x3a0295){var _0x148fd2=_0x5d326d,_0x184d8a=[_0x148fd2(0x39a)];if(_0x3a0295['statut']===_0x148fd2(0x3d9))_0x184d8a[_0x148fd2(0x35a)]('commandePrete');if((DATA[_0x148fd2(0x3fa)]||[])['some'](function(_0x244ed1){var _0x167548=_0x148fd2;return _0x244ed1&&_0x244ed1[_0x167548(0x218)]===_0x3a0295['id'];}))_0x184d8a[_0x148fd2(0x35a)](_0x148fd2(0x3be));return _0x184d8a;}function blocEmailPrerempliHTML(_0x4dd605){var _0x47b3ba=_0x5d326d;if(typeof PharmaEmail===_0x47b3ba(0x5cc))return'';if(!PharmaEmail['emailValide'](_0x4dd605[_0x47b3ba(0x3f2)]))return'<div\x20class=\x22txt-muted\x22\x20style=\x22font-size:0.76rem;margin-top:12px\x22>Pas\x20d\x27adresse\x20email\x20valide\x20pour\x20ce\x20client\x20:\x20prévenez-le\x20par\x20téléphone.</div>';var _0x36b962=(DATA[_0x47b3ba(0x2dd)]||[])[_0x47b3ba(0x578)](function(_0x56fced){var _0x19162c=_0x47b3ba;return _0x56fced&&_0x56fced['commande']===_0x4dd605['id']&&_0x56fced[_0x19162c(0x3da)]==='Échec';})['length'],_0x85d5d=_0x47b3ba(0x31c)+_0x47b3ba(0x3e3);if(_0x36b962)_0x85d5d+=_0x47b3ba(0x437)+_0x36b962+_0x47b3ba(0x5fa)+(_0x36b962>0x1?'s':'')+_0x47b3ba(0x2bb);else _0x85d5d+=_0x47b3ba(0x37f);return typesEmailCommande(_0x4dd605)[_0x47b3ba(0x32b)](function(_0x3da587){var _0x4b7ba4=_0x47b3ba,_0x3f3af4=preparerEmail(_0x4dd605['id'],_0x3da587),_0x52df2e=_0x3f3af4?PharmaEmail[_0x4b7ba4(0x58c)](_0x3f3af4):'';if(!_0x52df2e)return;_0x85d5d+=_0x4b7ba4(0x2c4)+escHtml(TYPES_PREREMPLI[_0x3da587])+_0x4b7ba4(0x25b)+_0x4b7ba4(0x1e1)+escHtml(_0x52df2e)+_0x4b7ba4(0x383)+escAttr(_0x4dd605['id'])+_0x4b7ba4(0x2a0)+_0x3da587+_0x4b7ba4(0x2b7)+_0x4b7ba4(0x495)+escAttr(_0x4dd605['id'])+'\x27,\x27'+_0x3da587+_0x4b7ba4(0x4f9);}),_0x85d5d+_0x47b3ba(0x30a);}function noterEmailManuel(_0x38d150,_0x4ed687){var _0x3f1ff4=_0x5d326d,_0x54b00a=preparerEmail(_0x38d150,_0x4ed687);if(!_0x54b00a)return;PharmaEmail[_0x3f1ff4(0x607)](_0x54b00a),DATA=PharmaStore['load']();if(currentPage===_0x3f1ff4(0x3ce))renderEmailJournal();}function copierEmailPrerempli(_0x176669,_0x8ade65){var _0x37c1d0=_0x5d326d,_0x43433d=preparerEmail(_0x176669,_0x8ade65);if(!_0x43433d){toast(_0x37c1d0(0x23b),_0x37c1d0(0x536));return;}var _0x11f42e=_0x37c1d0(0x52f)+_0x43433d['destinataire']+_0x37c1d0(0x598)+_0x43433d[_0x37c1d0(0x5af)]+'\x0a\x0a'+_0x43433d[_0x37c1d0(0x1c3)],_0x43c64b=function(){var _0x152356=_0x37c1d0;noterEmailManuel(_0x176669,_0x8ade65),toast(_0x152356(0x3a4));},_0x95b49d=function(){var _0x5a1b93=_0x37c1d0,_0x1030dc=document[_0x5a1b93(0x3ae)](_0x5a1b93(0x5e4));_0x1030dc[_0x5a1b93(0x413)]=_0x11f42e,_0x1030dc[_0x5a1b93(0x1b0)](_0x5a1b93(0x4ff),''),_0x1030dc[_0x5a1b93(0x507)][_0x5a1b93(0x2ba)]=_0x5a1b93(0x591),_0x1030dc[_0x5a1b93(0x507)]['opacity']='0',document[_0x5a1b93(0x3c5)][_0x5a1b93(0x1cc)](_0x1030dc),_0x1030dc[_0x5a1b93(0x4f4)]();var _0x39a1f0=![];try{_0x39a1f0=document[_0x5a1b93(0x4ea)]('copy');}catch(_0x1462a1){}document['body'][_0x5a1b93(0x4f7)](_0x1030dc);if(_0x39a1f0)_0x43c64b();else toast(_0x5a1b93(0x3b5),'error');};try{if(navigator[_0x37c1d0(0x4ae)]&&navigator[_0x37c1d0(0x4ae)][_0x37c1d0(0x5fd)])navigator[_0x37c1d0(0x4ae)][_0x37c1d0(0x5fd)](_0x11f42e)[_0x37c1d0(0x2e5)](_0x43c64b,_0x95b49d);else _0x95b49d();}catch(_0x4210a9){_0x95b49d();}}function saveEmailParams(){var _0x12bf5d=_0x5d326d,_0xb8a9ad=document['getElementById'](_0x12bf5d(0x3e9)),_0x48ef72=_0xb8a9ad?_0xb8a9ad[_0x12bf5d(0x3d4)]:![],_0x14a114=getVal(_0x12bf5d(0x37b))['trim'](),_0x524729=getVal('em-template')[_0x12bf5d(0x617)](),_0x9a41ff=getVal('em-key')[_0x12bf5d(0x617)](),_0x20069f=getVal(_0x12bf5d(0x2ea))[_0x12bf5d(0x617)](),_0x379f62=getVal(_0x12bf5d(0x54a))['trim']();if(_0x48ef72&&(!_0x14a114||!_0x524729||!_0x9a41ff)){toast(_0x12bf5d(0x5c2),_0x12bf5d(0x536));return;}if(_0x14a114&&!/^service_[A-Za-z0-9_-]+$/[_0x12bf5d(0x2ae)](_0x14a114)){toast(_0x12bf5d(0x402),_0x12bf5d(0x536));return;}if(_0x524729&&!/^template_[A-Za-z0-9_-]+$/[_0x12bf5d(0x2ae)](_0x524729)){toast('Le\x20Template\x20ID\x20doit\x20commencer\x20par\x20template_',_0x12bf5d(0x536));return;}if(_0x9a41ff&&!/^[A-Za-z0-9_-]{10,40}$/[_0x12bf5d(0x2ae)](_0x9a41ff)){toast('Clé\x20publique\x20invalide','error');return;}if(_0x20069f&&!/^https:\/\//i['test'](_0x20069f)){toast(_0x12bf5d(0x611),_0x12bf5d(0x536));return;}if(_0x379f62&&!/^https?:\/\//i[_0x12bf5d(0x2ae)](_0x379f62)){toast(_0x12bf5d(0x54b),_0x12bf5d(0x536));return;}DATA[_0x12bf5d(0x526)]['emailjs']={'actif':_0x48ef72,'serviceId':_0x14a114,'templateId':_0x524729,'publicKey':_0x9a41ff,'logoUrl':_0x20069f,'siteUrl':_0x379f62},persist(),toast(_0x12bf5d(0x3c0));}function envoyerEmailTest(){var _0x352002=_0x5d326d,_0x47dc85=getVal(_0x352002(0x584))[_0x352002(0x617)](),_0x21caca=document[_0x352002(0x30b)]('em-test-etat');if(typeof PharmaEmail===_0x352002(0x5cc)){toast(_0x352002(0x524),_0x352002(0x536));return;}if(!PharmaEmail[_0x352002(0x461)](_0x47dc85)){toast(_0x352002(0x3d0),_0x352002(0x536));return;}if(_0x21caca)_0x21caca[_0x352002(0x377)]='Envoi\x20en\x20cours…';var _0x59eb53={'commande':{'id':'#TEST','client':_0x352002(0x61d),'email':_0x47dc85,'lang':'fr','codeRetrait':'A1B2C3','produits':_0x352002(0x5aa),'total':24.9,'timestamp':new Date()[_0x352002(0x36c)]()},'fidelite':{'seuil':PharmaFidelite[_0x352002(0x373)](DATA)[_0x352002(0x528)],'reduction':PharmaFidelite[_0x352002(0x373)](DATA)[_0x352002(0x290)],'achats':0x2}};PharmaEmail[_0x352002(0x581)](_0x352002(0x39a),DATA,_0x59eb53,{'test':!![]})[_0x352002(0x2e5)](function(_0x1ca2a4){var _0x58499e=_0x352002;DATA=PharmaStore[_0x58499e(0x3a3)](),renderEtatQuota();if(currentPage===_0x58499e(0x526)){}if(_0x1ca2a4&&_0x1ca2a4['ok']){if(_0x21caca)_0x21caca[_0x58499e(0x377)]='Test\x20envoyé';toast('Email\x20de\x20test\x20envoyé\x20à\x20'+_0x47dc85);}else{var _0xce8729=_0x1ca2a4&&_0x1ca2a4[_0x58499e(0x1de)]?_0x1ca2a4[_0x58499e(0x291)]:_0x58499e(0x270)+(_0x1ca2a4&&_0x1ca2a4[_0x58499e(0x42b)]?_0x1ca2a4[_0x58499e(0x42b)]:'')+'\x20'+String(_0x1ca2a4&&_0x1ca2a4[_0x58499e(0x54e)]||'')[_0x58499e(0x1b9)](0x0,0x50);if(_0x21caca)_0x21caca[_0x58499e(0x377)]=_0x58499e(0x22e);toast(_0x58499e(0x5d9)+_0xce8729,_0x58499e(0x536));}});}var LIBELLES_EMAIL={'commandeRecue':_0x5d326d(0x522),'commandePrete':_0x5d326d(0x1ce),'codeFidelite':_0x5d326d(0x396),'test':'Test'};function renderEmailJournal(){var _0x5627d2=_0x5d326d,_0x171f43=document['getElementById'](_0x5627d2(0x2b4));if(!_0x171f43)return;var _0x3e0e34=DATA['emailLog']||[],_0x3aaa7e='<div\x20style=\x22margin-bottom:10px\x22>'+resumeQuotaHTML(typeof PharmaEmail!==_0x5627d2(0x5cc)?PharmaEmail[_0x5627d2(0x56d)](DATA):null,![])+_0x5627d2(0x30a);if(!_0x3e0e34[_0x5627d2(0x589)]){_0x171f43['innerHTML']=_0x3aaa7e+'<div\x20style=\x22text-align:center;padding:20px;color:var(--texte-3);font-size:0.82rem\x22>Aucun\x20email\x20automatique\x20envoyé\x20pour\x20le\x20moment.</div>';return;}var _0x3dd43f=_0x3e0e34[_0x5627d2(0x3bb)](function(_0xe34888){var _0x4c8575=_0x5627d2,_0x36cc02=new Date(_0xe34888[_0x4c8575(0x234)]),_0x312a8f=('0'+_0x36cc02[_0x4c8575(0x539)]())['slice'](-0x2)+'/'+('0'+(_0x36cc02[_0x4c8575(0x1c5)]()+0x1))['slice'](-0x2)+'\x20'+('0'+_0x36cc02[_0x4c8575(0x394)]())[_0x4c8575(0x1b9)](-0x2)+'h'+('0'+_0x36cc02[_0x4c8575(0x2b3)]())[_0x4c8575(0x1b9)](-0x2),_0x3f0786=_0xe34888['statut']===_0x4c8575(0x500),_0x1c8930=_0xe34888[_0x4c8575(0x3da)]===_0x4c8575(0x26f);return'<tr><td\x20class=\x22txt-muted\x22>'+_0x312a8f+_0x4c8575(0x3c8)+escHtml(LIBELLES_EMAIL[_0xe34888[_0x4c8575(0x4fe)]]||_0xe34888[_0x4c8575(0x4fe)])+_0x4c8575(0x56c)+_0x4c8575(0x4d8)+escHtml(_0xe34888['commande']||'—')+'</td><td\x20class=\x22txt-muted\x22>'+escHtml(_0xe34888[_0x4c8575(0x369)])+'</td>'+_0x4c8575(0x603)+(_0x3f0786?_0x4c8575(0x5d0):_0x1c8930?_0x4c8575(0x4f0):'b-red')+'\x22>'+escHtml(_0xe34888['statut'])+_0x4c8575(0x25b)+(_0x3f0786||!_0xe34888[_0x4c8575(0x54e)]?'':'<div\x20class=\x22td-sub\x22>'+escHtml(_0xe34888[_0x4c8575(0x54e)])+_0x4c8575(0x30a))+_0x4c8575(0x27e);})[_0x5627d2(0x314)]('');_0x171f43[_0x5627d2(0x453)]=_0x3aaa7e+_0x5627d2(0x286)+_0x3dd43f+_0x5627d2(0x1e4);}function saveRapportConfig(){var _0x254d7e=_0x5d326d,_0x2b0355=(getVal(_0x254d7e(0x434))||'')[_0x254d7e(0x617)]();if(_0x2b0355&&!pharmaEmailValide(_0x2b0355)){toast('Adresse\x20email\x20du\x20rapport\x20invalide','error');return;}var _0x41f60c=document[_0x254d7e(0x30b)](_0x254d7e(0x22d)),_0x3071eb=document['getElementById'](_0x254d7e(0x3f9));DATA[_0x254d7e(0x526)][_0x254d7e(0x42a)]=_0x2b0355;if(_0x41f60c)DATA[_0x254d7e(0x526)]['rapportJour']=_0x41f60c[_0x254d7e(0x413)];if(_0x3071eb)DATA[_0x254d7e(0x526)][_0x254d7e(0x438)]=_0x3071eb[_0x254d7e(0x413)];DATA[_0x254d7e(0x526)][_0x254d7e(0x387)]={'promos':!!(document['getElementById'](_0x254d7e(0x309))||{})['checked'],'codes':!!(document[_0x254d7e(0x30b)](_0x254d7e(0x297))||{})[_0x254d7e(0x3d4)],'ventes':!!(document['getElementById'](_0x254d7e(0x577))||{})['checked'],'employes':!!(document[_0x254d7e(0x30b)](_0x254d7e(0x1fe))||{})[_0x254d7e(0x3d4)]},persist(),toast(_0x254d7e(0x2b5));}function _0x5e6d(){var _0x5c261e=['q29TBwfUzguGCMxdP3vL','ugHVDg8GBM9UigfQB3v0W6LLidOG','tw9KDwXLigqNzw52B2KGywjZzw50icHLBwfPBhmUANmP','pc9ZDhjVBMC+pc90zd48Dgq+','CgfYyw1LDhjLCW','phrKignSyxnZpsjHy3rPB25ZlwnLBgWIpJXKAxy+','C2v1AwW','sM91CIbZCmoPy2LHBa','uMf5B25Z','Cc1ZzxvPBa','pgXPignSyxnZpsjWCM9KDwL0lxjHEw9UiIbKyxrHlwLKpsi','qMfUzgvHDsbHy3rPzIbZDxiGBguGC2L0zq','t3v2zxj0','W4aGoIa','pc9IDxr0B24+pc90zd48l3rYpG','yI1YzwqGChvSC2u','tguGC3rVy2SGzg9PDcddQNrYzsb1BIbUB21ICMuGzw50AwvYihbVC2L0AwyGB3uGBNvS','ignOzwnRzwq','zMLSDgvYlxn0yxr1Dc10AwnRzxrZ','ywnOyxrZ','zxjYB3i','igfYAweTBgfIzwW9iG','otC0BvPjCunR','z2v0rgf0zq','y2XL','phnWyw4Gy2XHC3m9iMjHzgDLigiTyMX1zsi+msbMAwnOAwvYpc9ZCgfUpG','tM91DMvSBguGChjVBw8','ChjVz3jLC3nPB24','BM90zq','pc9ZDhjVBMC+igv4Axn0yw50CYdcTYa8C3rYB25NpG','zNvUy3rPB24','y29UC2vPBhm','lwrLyG','zgvZDgLUyxrHAxjLCW','Cg9PBNrLCMrVD24','ugHHCM1Hy2LL','igrPC2fIBgvK','DhjHBNnSyxrLwsG','zw52B3LLCW','pgrPDIbJBgfZCZ0IBM90AwyTyM9KEsi+pgrPDIbJBgfZCZ0IBM90AwyTDgL0CMuIpG','zw0TC2L0zq','tcDHzhjLC3nLigr1ihnPDguGzg9PDcbJB21Tzw5JzxiGCgfYigH0DhbZoI8V','y29TBwfUzgvZ','zgf0ys1PBMrLEa','zgv0ywLS','pc90CJ4','pgjYpJXZCgfUihn0EwXLpsjMB250lxnPEMu6mc43ohjLBtTJB2XVCJP2yxiOls10zxH0zs0Yksi+','Aw5UzxjizwLNAhq','phrKpJXKAxyGy2XHC3m9iMzSzxGTz2fWiJ48C3bHBIbZDhLSzt0IBwLUlxDPzhrOoJi0ChG7y29SB3i6','zY1TC2C','ihjLC3rHBNq','pgj1DhrVBIb0ExbLpsjIDxr0B24IignSyxnZpsjIDg4GyNrUlwDOB3n0iIbKyxrHlwfJDgLVBJ0IC3vWChjPBwvYiIbZDhLSzt0Iy29SB3i6DMfYkc0TCM91z2uPiIbHCMLHlwXHyMvSpsi','BM93','C2L6zq','zg9JDw1LBNrfBgvTzw50','BwfYzgK','tSoPy2vZC2L0zsb1BIbZzxj2zxvYihbVDxiGC3vYDMvPBgXLCIbSzxmGC3rVy2TZigHVCNmGy29UBMv4Aw9UlG','y3bJDa','z2v0rNvSBfLLyxi','phnWyw4Gy2XHC3m9iMjHzgDLigiTz3jLzw4IpKfJDgLMpc9ZCgfUpG','pgLUChv0ignSyxnZpsjPBNaIig1HEgXLBMD0Ad0InJaIigfYAweTBgfIzwW9iG','CMvWBgfJzvDPDgG','u3vWChjPBwvYigXHihbYB21VDgLVBIaI','pgrPDIbJBgfZCZ0ICMf5B24Tywn0Aw9UCYi+','tguGDgL0CMuGzxn0ig9IBgLNyxrVAxjL','tM90zsbPBNrLCM5Limk3ia','Ag9YywLYzxm','phnWyw4Gy2XHC3m9iMjHzgDLigiTyMX1zsi+','i2fQB3v0lxjHEw9UlxjLC3vSDgf0CW','CgfYlwzPzc1Yzwr1y3rPB24','zw52B3LLCLbOB3rV','pgXPignSyxnZpsj2AwrLiJ7IGkyGChldQwnPC2v6igXHihjLy2HLCMnOzsbWB3vYihzVAxiGBgvZigf1DhjLCYbWCM9KDwL0CZWVBgK+','CgfYlwfKCMvZC2u','q29UC2vPBcbHy3rPDSoP','pc90zd4','CxvVDge','4OkSpc90zd4','w2rHDgeTCMv0AxjLCL0','tM91DMvHDsbUB20GzhuGCMf5B24G','zM9YBq','igvYCMv1CG','zw1HAwXrDw90yq','tM91DMvSBguGywn0AxzPDmoPihjLW6D1zq','lNrVCgjHCI1ZzwfYy2GGAw5WDxq','CMnZ','CMfWlxzLBNrLCW','zMLSDgvY','u3vWChjPBwvYignLDhrLig5VDgLMAwnHDgLVBIbKzsbSj2HPC3rVCMLXDwuGpW','CgfYlw5VBq','jYWGDgHPCY5JAgvJA2vKksi+phnWyw4Gy2XHC3m9iNrVz2DSzs10CMfJAYi+pc9ZCgfUpJWVBgfIzwW+','sw5KAxf1zxOGBcDOzxvYzsbKj291DMvYDhvYzsbLDcbKzsbMzxjTzxr1CMuGzhuG','DgjVzhKTy29Kzxm','Bs1LBxbSB3LL','q29UC2vPBcbHAM91DmoPiokaLcbSzxmGmYbWCMvTAwvYCYbJB25ZzwLSCYbHy3rPzNmGCYDHzMzPy2HLBNqGC3vYigWNywnJDwvPBcbKDsbZAxrL','rM9YBwf0igqNAw1Hz2uGBM9UihjLy29UBNuGoIb1DgLSAxnLEIb1BMuGCgHVDg8GsLbfrYWGue5hig91ifDLyLaU','zw52B3LLCG','DgL0DwXHAxjL','qw5UDwZdQwu','zw0TDgvZDc1Kzxn0','qMfUzgvHDsbTAxmGW6aGAM91CG','iIbHCMLHlwHPzgrLBJ0IDhj1zsi+pc9KAxy+','phvSignSyxnZpsjYzxn1BhrHDhmTywPVDxqIigLKpsjHAM91Dc1YyxLVBI1Yzxn1BhrHDhmIpJWVDwW+pc9KAxy+pc9KAxy+','BgLBzgf0ys1Pzf0GyNv0Dg9U','BgvUz3rO','BM90AwyTCgfUzwWTyM9KEq','vg91CYbSzxmGy2XPzw50CW','BgLLBK1HAwX0BW','u2fPC2LZC2v6igXLig51BCoPCM8GzguGy29TBwfUzguGB3uGBguGy29KzsbKzsbYzxrYywL0','re9nq29UDgvUDeXVywrLza','4OkSpc9ZDhjVBMC+pc90zd4','lM5VDgLMlxDYyxa','zML4zwq','pc9KAxy+pc9KAxy+phnWyw4Gy2XHC3m9iMjHzgDLia','y2XHC3nmAxn0','CMDWza','BwvYy3jLzgK','pgrPDIbZDhLSzt0IBwfYz2LUlxrVCdO4ChGIpJXIDxr0B24Gy2XHC3m9iMfJDc1IDg4Iihn0EwXLpsjJB2XVCJP2yxiOls1YB3vNzsKIig9Uy2XPy2S9iMrLBgv0zu5VDgLMAwnHDgLVBIG','DMLZAwjSzq','cK9IAMv0idOG','ihn1CIbJzsbYyxLVBIa6igLS','AM91CNntCgvJAwf1Ea','BxnN','CMf5B25Z','og1ADu1ZEq','ywn0AxzLrwXLBwvUDa','DhzH','ignVzgu','tguGBM9TigvZDcbVyMXPz2f0B2LYzq','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJaUnZzYzw07y29SB3i6DMfYkc0TDgv4DguTmIK7BgLUzs1OzwLNAhq6ms43iJ4','yMfUzgvHDs1TC2C','CMvTB3zLrxzLBNrmAxn0zw5LCG','vgLJA2v0ia','y29SB3i6DMfYkc0TCM91z2uPo2zVBNqTD2vPz2H0oJCWma','B25JBgLJAW','ksiGDgL0Bgu9iK1VzgLMAwvYiJ4','uMv0AxldQwu','q3ldQg1LihnVBgfPCMuGu1bgntaGW5CGmsWGvML0yw1PBMuGqYddLYaY','iJ5bAM91DgvYpc9IDxr0B24+pc9SAt4','t3vPlcbHBM51BgvYigXHignVBw1HBMrL','iokaLca','zgfZAc10AwnRzxrZ','C3vQzxq','pc9IDxr0B24+pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGB25JBgLJAZ0IBM91DMvSBgvqCM9TBYGN','u0vmrunu','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiIbZDhLSzt0IBwfYz2LUlxrVCdO2ChGIpG','rmoPCgXHy2vYigXLihjHEw9Uia','ChjVzhvPDeLK','y3mTy291Bgv1CG','Cg9PBNrLCMnHBMnLBa','sw5KAxf1zxOGDw4GBM9TyNjLigvUDgLLCIaOmcbVDsbWBhvZkq','ihvUCMvHza','y29UC2vPBhmTBgLZDa','qMfUzgvHDsbKDsbZAxrLigtdQxnHy3rPDSoP','Aw5WDxrBDhLWzt1MAwXLxq','yMfUzgvHDufJDgLM','u3vWChjPBwvYigXLihjHEw9Uia','pgrPDIbJBgfZCZ0IDgqTC3vIiJ5nAxnLigvUigf2yw50ihn1CIbSj2fJy3vLAwW8l2rPDJ4','phrKpJXKAxyGy2XHC3m9iMzSzxGTz2fWiJ48zgL2ignSyxnZpsjWCM9NCMvZCYiGC3r5Bgu9iNDPzhrOoJyWChGIpJXKAxyGy2XHC3m9iNbYB2DYzxnZlwzPBgWIihn0EwXLpsj3Awr0AdO','w2rHDgeTywn0Aw9UpsjZDxbWCMLTzxiIxq','q3ldQwvYihvUzsbWCM9TB3rPB24','uMvUC2vPz25LEIbSzsbtzxj2AwnLieLelcbSzsbuzw1WBgf0zsbjrcbLDcbSysbJBmoPihb1yMXPCxvL','DgLJA2v0lxjLCg9UC2u','zgf0zq','ChjPBNq','BxndCNLWDg8','C3rHDc1ZDg9JA3m','pgrPDJ5dB2rLCYbWCM9TBYa6idXZDhjVBMC+','Aw5UzxjxAwr0Aa','igrLC3rPBMf0ywLYzsHZktWVzgL2pG','yM91Dg9U','Dw5KzwzPBMvK','ugHVDg8GCMv0AxldQwuGoIbJBgLXDwv6ihn1CIbtyxv2zwDHCMrLCIbWB3vYignVBMzPCM1LCI4','iL0GlNbOB3rVlwv0yxq','jMD0oW','yI1NCMvLBG','CMvSyw5JzvjLDhjHAxq','iokaKYa','pgrPDIbZDhLSzt0IzgLZCgXHEtPMBgv4o2zSzxGTzgLYzwn0Aw9UoMnVBhvTBJTHBgLNBI1PDgvTCZO','idXZCgfUignSyxnZpsj0EhqTBxv0zwqIpSk3ihjLBgv2W6KGoIa','phn2zYb3Awr0Ad0ImtmIigHLAwDODd0ImtmIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0ImIiGyxjPys1OAwrKzw49iNrYDwuIpJXYzwn0ihG9iJmIihK9iJmIihDPzhrOpsiXociGAgvPz2H0psiXociGCNG9iJiIlZ48y2LYy2XLign4psi4lJuIign5psi4lJuIihi9iJeUnsiVpJXWB2X5BgLUzsbWB2LUDhm9iJiXide1ide2ideWiduGmJeIlZ48l3n2zZ4','zgvWzw5Zzxm','tM90AwzPy2f0Aw9Uihn1ChbYAw3dQwu','pc9IDxr0B24+pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGC3r5Bgu9iMnVBg9YoNzHCIGTlxjVDwDLksiGB25JBgLJAZ0IzgvSzxrLuhjVBw8O','vgvZDcbUB24Gzw52B3NdQsa6ia','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiIbZDhLSzt0IzM9UDc1ZAxPLoJaUohjLBsi+tcDLBwfPBcbHDxrVBwf0Axf1zsbUj2vZDcbWyxmGCgfYDgKUievUDM95zxOTBguGzgvWDwLZihzVDhjLig1LC3nHz2vYAwuGoIb0B3v0igvZDcbKW6LQW6aGCSoPzgLNW6KUpc9KAxy+','iL0Gw2rHDgeTywn0Aw9Upsj2AxnPyMXLiL0','C2vHCMnOlwnTza','pc9KAxy+pc90zd48l3rYpG','Cc1WAg90BY1JAg9PC2LYlxr4Da','tSoPy2vZC2L0zsb1BIbZzxj2zxvYihf1Asb2W6LYAwzPzsbSzxmGzgf0zxmGzw4Gy29UDgLUDs4','BxnNlwnSAwvUDa','Dg90ywW','phrYpJX0zd48C3rYB25NpG','Aw1Hz2vtBw9VDgHPBMDrDwfSAxr5','Dgv4DgfYzwe','Aw5MBW','vgLJA2v0CYbtDxbWB3j0','pgrPDIbZDhLSzt0IzMXLEdOXo21PBI13Awr0AdOYmdbWEci+phn0CM9UzZ4','Bs1JB25MAxjT','q29UC2vPBhmGjIbsywnJB3vYy2LZ','pc9ZDhjVBMC+','AMv0B24','DMLZAwjPBgL0EwnOyw5Nzq','tM91DMvHDsbYyxLVBG','y29KzvjLDhjHAxq','lNjHEw9Ulw91DNjPCG','zM9YBwvkDxjPzgLXDwu','B3bHy2L0EtOWlJu1oW','ChjLDa','ChjVBw8TChjVzhvPDa','zgvTyxjYzxi','z2XPC3nLCI1Hy3rPzG','ChjLCY1LzgL0Aw9UlwzLCM1Lzq','CxvLCNLtzwXLy3rVCKfSBa','Aw5KzxHpzG','pg9WDgLVBIb2ywX1zt0I','imoPy2HLyW','C2vYDMLJzuLK','tM90AwzPy2f0Aw9UCW','D3jPDgvuzxH0','phrYpJX0zcbJB2XZCgfUpsi5iIbZDhLSzt0IDgv4Dc1HBgLNBJPJzw50zxi7CgfKzgLUzZOYmhb4o2nVBg9YoNzHCIGTlxrLEhrLltmPiJ5bDwn1BIbJB2rLihbYB21VihbVDxiGBguGBw9Tzw50pc90zd48l3rYpG','y291Bgv1CLbYAw1HAxjL','CMvM','ignSAwvUDcHZkq','CMvKDwnL','phrKpJXZCgfUignSyxnZpsjIywrNzsa','BhvUzgK','zMLSzxm','yI1NCMv5','BM90zxjnyw51zwW','y3nJB3bL','tM91DMvHDsbJB25ZzwLS','ChjVBw8TCxrL','zMXVB3i','C2LKzwjHCI1IywnRzhjVCa','phbHDgGGzd0ItteYidiUnJLSns42nIa1lJy2ytGGocaWideGms0Xms4ZmsaWEIiVpG','uMf5B24G','o2rPC3bSyxK6zMXLEdTHBgLNBI1PDgvTCZPJzw50zxi7ANvZDgLMEs1JB250zw50oMnLBNrLCJTMBgv4lxnOCMLUAZOWiJ4','phbHDgGGzd0ItteWlJuGmJaUnuWZlJuGmtmUnwe1iduGmcaWideGnY03BdCGn2e1iduGmcaWideTnYa3EIiVpJXSAw5LihGXpsi4lJuIihKXpsi4lJuIihGYpsiXns41iIb5mJ0ImtuUnsiVpG','tcDHzhjLC3nLigr1igXVz28Gzg9PDcbJB21Tzw5JzxiGCgfYigH0DhbZoI8V','tM91DMvHDsbWCM9KDwL0','ChjPEe5VCM1HBa','q29TBwfUzgvZicSGvgLJA2v0CW','CMvWBgfJzq','CMvNzw5dB2rLkcK','DhjPBq','u3vWChjPBwvYigtdQwzPBML0AxzLBwvUDcbSzsbJB2rLici','phnWyw4Gy2XHC3m9iMjHzgDLlxbYAw5JAxbHBciGDgL0Bgu9iLjHEw9UignOB2LZAsbKyw5ZigXHigzLBSoQDhjLigr1ihbYB2r1AxqIpLjHEw9UihbYAw5JAxbHBdWVC3bHBJ4','y29KzvbYB21V','rw52B3NdQsbHDxrVBwf0Axf1zw1LBNqGCxvHBMqGBguGy2XPzw50igf0DgvPBNqGBguGCgfSAwvYignVBMzPz3vYW6KU','igfJAgf0CZWVzgL2pG','q2XPzw50ifrLC3q','i0iWn0mWma','ihjLDgLYW6KGzhuGCMf5B24G','C2v0qxr0CMLIDxrL','sM91CIbZCmoPy2LHBcbZDxbWCMLTW6K','rmoPy29TChrLig1PCYddOcbQB3vYidOG','BMf0DxjHBeHLAwDODa','mty5mtmXwwfcr25m','phrKignSyxnZpsjHy3rPB25ZlwnLBgWIpJXKAxy+pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGB25JBgLJAZ0IzwrPDfbYB2r1AxqO','tSoPy2vZC2L0zsb1BIbZzxj2zxvYihf1Asb2W6LYAwzPzsbSzxmGy29TBwfUzgvZigvUignVBNrPBNuU','Bs1WCM9TBW','y3rH','C2XPy2u','phnWyw4Gy2XHC3m9iMjHzgDLigiTCMvKiJ5eW6LZywn0AxBdQtWVC3bHBJ4','Cgn0','qwPVDxrLCIa','zgf0ys1Hy3rPB24','CgfYlwXVz28','uMv0AxjLCIa','phrKpJXZCgfUignSyxnZpsjIywrNzsbIlxzPzIi+','C2nYB2XSwq','lM92zxjSyxKUB3bLBG','y29YChm','z2v0uMfUzg9TvMfSDwvZ','z2v0tw9UDgG','B3bLBK1VzgfSkcjTlxbYB2r1AxqIkq','rw1WBg95W6LZ','ChjLCMvTCgXP','BxnNlwfKBwLU','CgfYlwzPzc1ZzxvPBa','phbHDgGGzd0Itte0lJuGmKG2ytiGmIaWidaGmc0Yidj2mtzHmIaYidaGmcaWidiGmMGXmMeYidiGmcaWidaGmI0YvJCUnxOIlZ48Cg9SEwXPBMuGCg9PBNrZpsiXncaYide0idGGmJaGociVpG','yxbWzw5Kq2HPBgq','y2fSBa','q29TBwfUzguGChldQNrL','pgrPDIbZDhLSzt0ID2LKDgG6ndzWEdTOzwLNAhq6ndzWEdTIB3jKzxiTCMfKAxvZoJeYChG7yMfJA2DYB3vUzdOJrtu1mZuZo2rPC3bSyxK6zMXLEdTHBgLNBI1PDgvTCZPJzw50zxi7ANvZDgLMEs1JB250zw50oMnLBNrLCJTTyxjNAw46mcbHDxrVideYChGIpJXZDMCGD2LKDgG9iJiYiIbOzwLNAhq9iJiYiIbMAwXSpsjUB25LiIb2Awv3qM94psiWidaGmJqGmJqIihn0CM9Rzt0Ii2zMzIiGC3rYB2TLlxDPzhrOpsiYiIbZDhjVA2uTBgLUzwnHCd0ICM91BMqIpJXYzwn0ihG9iJmIihK9iJeXiIb3Awr0Ad0ImtGIigHLAwDODd0ImteIihj4psiYiI8+phbHDgGGzd0IttCGmtfwn2e1iduGmcaWideGmtaGmhy0iI8+pc9ZDMC+pc9KAxy+','phrYpG','lNjHEw9UlwXPz25Lw2rHDgeTAw5KzxG9iG','uMvSyw5JzsbJB21Tyw5KzsbUB24GCMv0AxldQwu','sw1WB3nZAwjSzsbKj2fUBNvSzxiGDw5LignVBw1HBMrLigtdQwRdOcbYzxrPCSoPzq','pc9IDxr0B24+pc9KAxy+pc90zd4','jYKIpK1HCNf1zxiGCSoPC29SDtWVyNv0Dg9UpG','tM90zsbPBNrLCM5LigvUCMvNAxn0CSoPzq','tcDLBNzVAsbKDsbYyxbWB3j0ihbHCIbLBwfPBcbHCNjPDMvYysbHDMvJigXLihnLCNzLDxiUievUigf0DgvUzgfUDcWGDxrPBgLZzxOGBguGyM91Dg9UifberIbWB3vYigWNAw1WCMLTzxiGB3uGBcDLBNjLz2LZDhjLCI4','C2XPzgveB3DUidaUmJjZigvHC2uGzM9YD2fYzhm','phrKpJXZCgfUignSyxnZpsjIywrNzsbIlwjSDwuIpG','ywrKrxzLBNrmAxn0zw5LCG','vg91CYbWCM9KDwL0CW','jYKIpKvUDM95zxiGCSoPCg9UC2u8l2j1DhrVBJ4','y3mTDgL0CMu','AwDUB3jL','jYKIpG','qwrYzxnZzsbLBwfPBcbPBNzHBgLKzq','pgeGy2XHC3m9iMj0BIbIDg4Tz2HVC3qIihn0EwXLpsjOzwLNAhq6mJHWEdTMB250lxnPEMu6mc43mNjLBsiGAhjLzJ0I','zM9YBs1WCM9KDwL0','qwXLCNrLihn0B2nRigzHAwjSzq','pc90yM9KEt48l3rHyMXLpG','uhjVzhvPDcbLBNjLz2LZDhldQsbZyw5ZigXHihbOB3rVidOGBgeGBCoPBw9PCMuGzguGy2uGBMf2AwDHDgv1CIbLC3qGCgXLAw5L','BwLZzuvUqxzHBNq','Aw1N','i2XPC3rLlxjHEw9UCYaUCMf5B24TBgLNBMuUB3v2zxj0ic5WCM9KDwL0lxjHEw9UoM50Ac1JAgLSzcG','sM91CIbZCmoPy2LHBcbHAM91DmoP','y2WTDhLWzq','CgfYlwvTywLS','CMfPC29Uu29JAwfSzq','BgLZDguTCMf5B25Z','DgL0Bgu','jYKIihrPDgXLpsjwB2LYigXLigtdQxrHAwWIpG','zgLZCg8','o21HCMDPBI1IB3r0B206mtjWEci+','zgfZAgjVyxjK','q2uGy29KzsbLEgLZDguGzmoPASoGiokaLcbYW6LNW6LUW6LYzxOTzw4GDw4Gyxv0CMu','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiIbZDhLSzt0ICgfKzgLUzZOXmhb4iJ5bDwn1BIbQB3vYihnWW6LJAwfSpc9KAxy+','vg91CW','ksi+tCoGAJWVyNv0Dg9UpJWVzgL2pJWVDgq+','jtWVC3bHBJ48l3rKpG','Dg9HC3q','Cc1UzxCTy2f0','CMv0CMfPDfrZ','BM90AwyTAgLZDg9YAxf1zq','CMvUB21TzxjsyxLVBG','Bs1JB25ZzwLS','CMfWlwvTCgXVEwvZ','zxjYzxvYigLUy29UBNvL','q29UC2vPBcbTB2rPzMNdQq','pc9ZDhjVBMC+pc90zd48Dgq+pgrPDIbJBgfZCZ0IDgqTBwfPBIi+','DMvUDgvZ','CMvZDhjPy3rPB25fBxbSB3LLCW','DMfSAwrLCLjLDhjHAxq','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJaUnZHYzw07y29SB3i6DMfYkc0TDgv4DguTmIK7BgLUzs1OzwLNAhq6ms41iJ4','vxjNzw50','iIbZDhLSzt0ID2LKDgG6nZbWEdTOzwLNAhq6mZbWEci+pgj1DhrVBIbJBgfZCZ0IyNrUigj0BI1WCMLTyxj5iIbZDhLSzt0IAgvPz2H0oJmWChG7zM9UDc1ZAxPLoJaUn3jLBtTWywrKAw5NoJaGmtbWEciGB25JBgLJAZ0IDxbKyxrLu3rVy2SO','CM91BMq','DgL0CMu','phrKignSyxnZpsj0EhqTBxv0zwqIpG','yNv0Dg9Uw3r5Cgu9yNv0Dg9Uxq','yI1VCG','pgrPDIbZDhLSzt0IBwLUlwHLAwDODdOXmdb2AdTKAxnWBgf5oMzSzxG7ywXPz24TAxrLBxm6y2vUDgvYo2P1C3rPzNKTy29UDgvUDdPJzw50zxi7zMXLEc1KAxjLy3rPB246y29SDw1Uo2DHCdOYmhb4o2jHy2TNCM91BMq6DMfYkc0TzM9UzcK7zM9UDc1Myw1PBhK6twfUCM9WzsXZyw5ZlxnLCMLMo3rLEhqTywXPz246y2vUDgvYo3bHzgrPBMC6mZbWEci+','iIa/','ywrK','pc9IDxr0B24+pc9KAxy+pc90zd48l3rYpG','pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGB25JBgLJAZ0IDg9Nz2XLq29KzsGN','y2XHC3noyw1L','ugfYDgLLBa','CMfWCg9YDa','Cc1Yzwy','qxjYB3DeB3DU','B25SB2fK','y29TBwfUzgvjza','u3vWChjPBwvYigXLignSAwvUDcaI','pgrPDJ48zgL2ihn0EwXLpsjMB250lxDLAwDODdO3mda7zM9UDc1ZAxPLoJaUodjYzw0IpG','q29TBwfUzgvZ','zgfZAc1XDw90yq','ywX0','iJ5szxrPCMvYpc9IDxr0B24+','pc9KAxy+pgrPDIbJBgfZCZ0IC2rHEs10ExbLiJ4','jNf1B3q7','Aw1WCMvZC2LVBI1YyxbWB3j0','rmoPCgXHy2vYia','u3vWChjPBwvYigXLihjHEw9UimkRia','ihbYB2r1Axq','uMfWCgvSignVzguGChjVBw8GyMLLBNtdThqGzxHWAxldQq','qwrTAw4GuhjPBMnPCgfS','jYKIihrPDgXLpsjdB3bPzxiIpJXZDMCGD2LKDgG9iJeZiIbOzwLNAhq9iJeZiIbMAwXSpsjUB25LiIb2Awv3qM94psiWidaGmJqGmJqIihn0CM9Rzt0Iy3vYCMvUDenVBg9YiIbZDhjVA2uTD2LKDgG9iJiIpJXYzwn0ihG9iJKIihK9iJKIihDPzhrOpsiXmYiGAgvPz2H0psiXmYiGCNG9iJiIlZ48Cgf0AcbKpsjnnsaXnuG0ytiGmIaWidaGms0YltjwngeYidiGmcaWideGmI0YAdLHmIaYidaGmcaXidiGmNyXiI8+pc9ZDMC+pc9IDxr0B24+','4OkSigf1igXPzxuGzguG','BwvZC2fNzxmTDgHYzwfK','CgfNzs0','B3bLBK1VzgfSkcjTlwvTCgXVEwuIkq','vg91CYbSzxmGzw1HAwXZigvUDM95W6LZihnVBNqGzmoPy29TChtdQxmSihKGy29TChjPCYbSzxmGy29UzMLYBwf0Aw9UCYbWyxj0AwvZigr1ihtdQwZdQxbOB25LigrLCYbJBgLLBNrZlIbszwnHBgv6igrLihrLBxbZigvUihrLBxbZigf2zwmGBguGy2HPzMzYzsbKj0vTywLSsLmU','CgfYlxjHChbVCNqTAM91CG','W4LJAgvJ','pc9ZDhjVBMC+ihvUAxtdQq','zw1WlwvTywLS','CgfYDgLJBgvZ','y3jLyxrLt2jQzwn0vvjm','lwzPBG','DgLTzxn0yw1W','pc9ZCgfUpJWVDgq+','BgvNywW','DgjVzhKTDgLJA2v0CW','imoGia','id88yNi+phnWyw4GC3r5Bgu9iMzVBNqTC2L6ztOWlJC4CMvTo2nVBg9YoNzHCIGTlxrLEhrLltiPiJ5mzsbZDg9JAYbZzxjHihldQwfWChjVDMLZAw9UBSoPigv0igXLignVBxb0zxvYigrLigzPzmoPBgL0W6KGzhuGy2XPzw50ignVCNjPz8oPlJWVC3bHBJ4','rw4Gyxr0zw50zsbKj2vUDM9P','rw1HAwWGAw1WB3nZAwjSzsddOcbWCSoPCgfYzxiGCg91CIbJzxr0zsbJB21Tyw5Kzq','C2v0ug9PBNrLCKnHChr1CMu','pgj1DhrVBIbJBgfZCZ0IyNrUigj0BI1WCMLTyxj5iIbVBMnSAwnRpsjYzxbVBMrYzvrPy2TLDcGN','DMvUzhjLzgK','ywn0AxzL','pc9KAxy+pc90zd48Dgq+phnWyw4Gy2XHC3m9iMjHzgDLia','CMf5lw5VBq','jsbZDxiG','CMfWCg9YDePVDxi','igLUzM9YBwf0Aw9UkhmPimoGignVBxbSW6L0zxi8l3n0CM9UzZ4GyxzHBNqGBgeGBwLZzsbLBIbSAwDUzsbWDwjSAxf1zs4Gvw5LigfIC2vUy2uGzguGBwvUDgLVBNmGBmoPz2fSzxmGy29UzM9YBwvZigv4Cg9ZzsddOcbKzxmGC2fUy3rPB25ZlJWVzgL2pG','BgCTywXLCNrL','w2rHDgeTywn0Aw9Upsj2AxnPyMXLiL0','BgfUzW','pg9WDgLVBIb2ywX1zt0IDg91CYi+vg91CYbSzxmGy2XPzw50CYaO','pgj1DhrVBIbJBgfZCZ0IyNrUigj0BI1WCMLTyxj5iIbZDhLSzt0IAgvPz2H0oJi2ChG7zM9UDc1ZAxPLoJaUn3jLBtTWywrKAw5NoJaGmtbWEciGB25JBgLJAZ0IBwfYCxvLCLbYzxrLkcC','ihjLDgLYW6LL','ugfUAwvYig1VEwvU','qxbWyxjLBMnLihnHDxzLz2fYzmoPzq','rw1HAwW','AgLNAa','sw5KAxf1zxOGDw4GChjPEcbZDxddQxjPzxvYimoGida','DMfYkc0TB3iTCgfSzsWGCMDIysGYmtCSmty0ldy1ldaUmtqPkq','AgfZt3DUuhjVCgvYDhK','phn2zYb3Awr0Ad0ImtqIigHLAwDODd0ImtqIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0ImI42iIbHCMLHlwHPzgrLBJ0IDhj1zsi+pgXPBMuGEde9iJe4iIb5mt0InIiGEdi9iJyIihKYpsiXociVpJXSAw5LihGXpsi2iIb5mt0InIiGEdi9iJe4iIb5mJ0ImtGIlZ48l3n2zZ4','B3bLBK1VzgfSkcjTlwnVBNnLAwWIktTKB2n1BwvUDc5NzxrfBgvTzw50qNLjzcGIy3mTAwqIks52ywX1zt0IiG','DMfYkc0TDMvYDc12AwyP','y2fUDMfZ','ig1HCNf1W6KGCSoPC29SDq','Cc1WAg90BY1MAwnOAwvY','pgrPDIbJBgfZCZ0IywPVDxqTChjVzhvPDhmIpJXSywjLBcbMB3i9iMfQB3v0lxjHEw9UlxjLy2HLCMnOzsi+qwPVDxrLCIbKzxmGChjVzhvPDhm8l2XHyMvSpG','Bs1NyxjKzq','DgjVzhKTzw1WBg95zxm','pc9ZCgfUpG','rw4Gy291CNm','BgfIzwW','rhuG','phnWyw4Gy2XHC3m9iMjHzgDLigiTz3jLEsi+rw4Gyxr0zw50ztWVC3bHBJ4','y29Kzuv4CgLYzq','sw1Hz2uGAwXSAxnPyMXLlG','CMfWlq','zM9YBs1YyxLVBG','Bwf0y2G','ChjVBw9Z','pgj1DhrVBIb0ExbLpsjIDxr0B24IignSyxnZpsjYyxLVBI1VDxzYAxiIigfYAweTzxHWyw5Kzwq9iG','uSoPC29SDq','yI1Yzwq','zgLTyw5JAgu','rgLZCg9UAwjSzq','pgnPCMnSzsbJEd0ImtiIign5psiXmIiGCJ0InsiVpJXSAw5LihGXpsiXmIiGEte9iJeIihGYpsiXmIiGEti9iJmIlZ48BgLUzsb4mt0ImtiIihKXpsiYmsiGEdi9iJeYiIb5mJ0ImJmIlZ48BgLUzsb4mt0Inc4YiIb5mt0Inc4YiIb4mJ0Ins42iIb5mJ0Ins42iI8+pgXPBMuGEde9iJe4lJqIihKXpsiXoc40iIb4mJ0ImtKUociGEti9iJe5lJGIlZ48BgLUzsb4mt0ImsiGEte9iJeYiIb4mJ0ImYiGEti9iJeYiI8+pgXPBMuGEde9iJiXiIb5mt0ImtiIihGYpsiYmYiGEti9iJeYiI8+','CMfUzg9T','C3rVy2ST','zw1HAwXQCW','uhldQxbHCSoPicHLBNzVAsbTyw51zwWP','zxjYzxvYia','C3rVy2TZ','zgvJB25Uzwn0zxi','pgrPDIbZDhLSzt0ID2LKDgG6nJbWEdTOzwLNAhq6nJbWEdTIywnRz3jVDw5KoMXPBMvHCI1NCMfKAwvUDcGXmZvKzwCSiZfcnKi0nsWJmKvdqZDbktTIB3jKzxiTCMfKAxvZoJe2ChG7zgLZCgXHEtPMBgv4o2fSAwDUlwL0zw1ZoMnLBNrLCJTQDxn0Awz5lwnVBNrLBNq6y2vUDgvYo21HCMDPBJOWigf1Dg8IpJXZDMCGD2LKDgG9iJi4iIbOzwLNAhq9iJi4iIbMAwXSpsjUB25LiIb2Awv3qM94psiWidaGmJqGmJqIihn0CM9Rzt0Ii2zMzIiGC3rYB2TLlxDPzhrOpsiYlJuIpJXWyxrOigq9iK0XmIaYtdiGn2WXmca1ideWltuTmtaTnxOIlZ48Cgf0AcbKpsjnmIaXn2WXmca1ideWltuIlZ48Cgf0AcbKpsjnmIaXmMWXmca1ideWltuIlZ48l3n2zZ48l2rPDJ4','iIbOzwLNAhq9iG','y3j5ChrV','pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGB25JBgLJAZ0IzwrPDenVBNnLAwWO','idOGz2XPC3nLCIWGB3uGzMZdQgnOzxmGAgf1DcbLDcbIyxm','qxvJDw4GAM91CIbZCmoPy2LHBcddOcb2zw5PCG','pgrPDIbZDhLSzt0IyMfJA2DYB3vUzdP2yxiOls1MB25KktTIB3jKzxiTCMfKAxvZoJLWEdTWywrKAw5NoJeYChG7yM9YzgvYoJfWEcbZB2XPzcb2yxiOls1IB3jKksi+','ChjLDMLVDxnfBgvTzw50u2LIBgLUzW','CMvTB3zL','tgeGCSoPzhvJDgLVBIbKB2L0imoQDhjLigvUDhjLideGzxqGmtaWicu','C2nYB2XSsgvPz2H0','pc90zd48l3rYpG','B2zMC2v0v2LKDgG','pgj1DhrVBIb0ExbLpsjIDxr0B24IignSyxnZpsjIDg4GyNrUlwDOB3n0iIbKyxrHlwfJDgLVBJ0ICMvUB21TzxiIigfYAweTBgfIzwW9iG','uhjVBw90Aw9Uihb1yMXPW6LLihn1CIbSzsbZAxrL','phrKpJXZDhjVBMC+','qwzMAwnOzxiGBguGCMf5B24G','AgLZDg9YAxf1zq','lMXPC3rLlxbYB2r1AxrZlxjHEw9U','phrHyMXLpJX0AgvHzd48Dhi+phrOpKrHDgu8l3rOpJX0Ad5uExbLpc90Ad48DgG+q29TBwfUzgu8l3rOpJX0Ad5ezxn0Aw5HDgfPCMu8l3rOpJX0Ad5tDgf0Dxq8l3rOpJWVDhi+pc90AgvHzd48DgjVzhK+','C2L0zvvYBa','Dw5PDgvZ','zw0TCxvVDge','z2v0qM91BMrPBMDdBgLLBNrszwn0','uhldQxbHCMf0Aw9UigrLigXHihbOB3rV4OcM','pc9ZDhjVBMC+pc90zd4','pgrPDIbJBgfZCZ0IzMXLEc1NyxaGBwiZiJ48C3bHBIbJBgfZCZ0IyMfKz2uG','phrKpJXKAxyGy2XHC3m9iNrKlw1HAw4IpG','y29UzMLYBs10AxrYzq','CMvKDwn0Aw9U','CMfPC29U','DxnHz2vZ','BM9T','tguGC2v1AwWGzcDHBgvYDguGzg9PDcddQNrYzsb1BIbUB21ICMuGzw50AwvYihbVC2L0AwyGB3uGBNvS','pgXPignSyxnZpsjYyxLVBI1SAwDUzq','phrKignSyxnZpsjHy3rPB25ZlwnLBgWIpJXKAxy+pgLUChv0ignSyxnZpsjPBNaIihr5Cgu9iM51BwjLCIiGAwq9iNn0B2nRlq','CMfWlwnVzgvZ','y291Bgv1CG','y2WTzw1HAwW','pc9ZCgfUpJWVyNv0Dg9UpG','mZeZmJa2nLvzAhbjuW','zMXLEc1ZDgfYDa','mZq3mdiWweLPCND1','uhjVBw90Aw9Uihn1ChbYAw3dQwu','ihn1ChbYAw3dQwu','jYWN','phn2zYb3Awr0Ad0ImtqIigHLAwDODd0ImtqIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0ImIi+phbVBhLSAw5LihbVAw50CZ0ImYa2iduGnIaYmsa2iI8+phbHDgGGzd0Itte5idzSlteGmtrHmIaYidaGmcaXltiGmKG4ytiGmIaWidaGms0Yltjmnsa2iI8+phbHDgGGzd0ItteWideXDJznmtqGmtf2nIiVpJXWyxrOigq9iK05idzwngeXideGmcaWideGms0XAdrHmsaXidaGmcaXideGmxyYiI8+pc9ZDMC+','C3rHDc1WCM9TB3m','u3rVy2SGzguGiG','ugHVDg8','4OkSpc9KAxy+','q29KzsbZDxbWCMLTW6K','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiJ5dB21Tyw5KzsbYzCoNDwuG4Ocuia','pc9IDxr0B24+','phbHDgGGzd0IttyGmIaZidz2mtrHmIaYidaGmcaWidiGmMGXngeYidiGmcaWidaGmI0YvJzSltmTnhOIlZ48BgLUzsb4mt0ImYiGEte9iJyIihGYpsiYmsiGEti9iJyIlZ48Cgf0AcbKpsjnmtyGmtbHnca0idaGmcaXltGGmciVpG','D2LKDgG','w2rHDgeTywn0Aw9UpsjYzxrPCMvYlxbOB3rViL0','q29UzMLYBwf0Aw9UigrLignVBw1HBMrL','Cc1WAg90BY1YzxrPCMvY','DgvZDa','ChjPB3jPDgu','phn2zYb3Awr0Ad0ImJiIigHLAwDODd0ImJiIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0Ims42iJ48CMvJDcb4psiZiIb5psiZiIb3Awr0Ad0ImtGIigHLAwDODd0ImtGIihj4psiYiI8+pgnPCMnSzsbJEd0Ioc41iIbJEt0Ioc41iIbYpsiXlJuIlZ48Cg9SEwXPBMuGCg9PBNrZpsiYmsaXnsaXnIaXmca1idiXiI8+pc9ZDMC+','zMLSDgvYlxr5CguTy2XPzw50CW','qwnJW6HZigvUigrLAg9YCYbKzxmGAgv1CMvZigqNB3v2zxj0DxjLidOGBcDHzg1PBMLZDhjHDgLVBIbLC3qGCSoPC2vYDSoPzsbHDxGGAgv1CMvZigqNB3v2zxj0DxjLihbVDxiGBgvZignVBxb0zxmGWQSGzw1WBg95W6KGWRSU','z2v0twLUDxrLCW','zw1HAwWTAM91CM5HBa','q29UzMLNDxjHDgLVBIbKDsbYyxbWB3j0igvUCMvNAxn0CSoPzq','C3rVy2S','jYKIpK91DNjPCIbSj2vTywLSpc9HpG','iJ48C3rYB25NpG','zgLZCgXHEq','Cg9ZAxrPB24','ks4Grw52B3LLEI1SzsbKzxb1AxmGDM90CMuGBwvZC2fNzxjPzsa6pc9KAxy+','C3rVCMfNzq','ChGP','phnWyw4+','y3mTChjLDMLLDY10zxH0zq','pgj1DhrVBIb0ExbLpsjIDxr0B24IignSyxnZpsjIDg4GyNrUlwDOB3n0iIbKyxrHlxjLDgLYzxiGyxjPys1SywjLBd0I','ugfYyw3dQhrYzxmGC2f1DMvNyxjKW6LZ','phvSignSyxnZpsjSAxn0zs1WCM9KDwL0CY1YyxLVBIi+','ihzHBgLKW6LLihbHCIa','pgrPDIbZDhLSzt0IzgLZCgXHEtPMBgv4o2zSzxGTD3jHCdP3CMfWo2fSAwDUlwL0zw1ZoMnLBNrLCJTNyxa6nNb4o21HCMDPBI10B3a6nNb4iJ48C3bHBIbZDhLSzt0IzMXLEdOXo21PBI13Awr0AdOXndbWEdTMB250lxnPEMu6mc44CMvTo2zVBNqTD2vPz2H0oJyWmci+','yMfUzgvHDu1ZzW','DgfYz2v0','pc9ZCgfUpJWVDgq+pc90CJ4','q29KzxmGuhjVBw8GjIbgAwtdQwXPDmoP','DgL0CMvbAM91Da','C2nHBG','tguGChjPEcbWCM9TBYbKB2L0imoQDhjLigLUzSoPCMLLDxiGyxuGChjPEcbUB3jTywW','idOGCgfZigvUy29YzsbZDxiGBguGC2L0zq','pc9ZDMC+pc9KAxy+','pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGB25JBgLJAZ0IzgvSzxrLsM91CLnWzwnPywWO','mZe1mte5n1LOvureqG','vw4Gyxv0CMuGy2XPzw50ihv0AwXPC2uGzmoPASoGignLDhrLigfKCMvZC2uGzw1HAwW','phnWyw4Gy2XHC3m9iMjHzgDLigiTz3jLzw4IpG','vgfUDcbXDwuGBguGC2L0zsbUj2vZDcbWyxmGCMvSACoPigf1ihnLCNzLDxiSihnLDwXZigXLCYbLBwfPBhmGCgfYDgLZigrLignLig5HDMLNyxrLDxiGC29UDcbKW6LJB21WDmoPCY4GtgvZignVBMzPCM1HDgLVBNmGCgfYDgvUDcbKDsb0W6LSW6LWAg9UzsbKzxmGy2XPzw50CYa6igXLignOAwzMCMuGCSoPzwWGCgv1DcddQNrYzsbWBhvZigjHCY4GuMvJywXLEI1SzsbKzsb0zw1WCYbLBIb0zw1WCYbHDMvJignLBhvPigqNrw1HAwXkuY4','B3bLBK1VzgfSkcjTlwDHCMrLiIK','Bs1JBgLLBNq','CgfNzs10AxrSzq','vg91CYbSzxmGChjVzhvPDhmGC29UDcbKW6LQW6aGzgfUCYbJzsbYyxLVBG','DMfYkc0TDMvYDcK','qwrTAw4','ihn1ChbYAw3dQq','pc9KAxy+pgrPDIbJBgfZCZ0IDgqTC3vIiJ4','zw1WlwLK','Bs1JB25ZzwLSlxrPDgXL','zw1HAwXmB2C','u3vWChjPBwvYigtdQwzPBML0AxzLBwvUDcbSysbJB21Tyw5Kzsa','y2nSAwvUDa','Aw5Zzxj0qMvMB3jL','Dg9WyMfYlwn0yq','q29KzsbYW6LHy3rPDSoP','pc9JB2rLpJWVDgq+','BM91DMvSBgvqCM9TBYGP','DgHLBG','CMv2B2TLt2jQzwn0vvjm','zM9YBs1JBgLLBNq','Bg9NB1vYBa','y2f0','zw0TBg9NBW','zM9JDxm','DgLJA2v0lw5VDgu','u3rVy2TZ','yNvYz2vYlwj0BG','C2vHCMnOlwnSAwvUDhm','AgfZlw5LDW','pgrPDIbJBgfZCZ0IzZiIihn0EwXLpsjNyxa6ohb4o21HCMDPBI1IB3r0B206mtbWEci+','pc9ZCgfUpJWVBgfIzwW+','phrYpJX0zcbJB2XZCgfUpsi2iIbZDhLSzt0IDgv4Dc1HBgLNBJPJzw50zxi7CgfKzgLUzZOZmhb4o2nVBg9YoNzHCIGTlxrLEhrLltmPiJ5bDwn1BIbWCM9KDwL0ihrYB3v2W6K8l3rKpJWVDhi+','zgLZCgXHEtPMBgv4o2fSAwDUlwL0zw1ZoMnLBNrLCJTQDxn0Awz5lwnVBNrLBNq6C3bHy2uTyMv0D2vLBJTNyxa6mtrWEdTWywrKAw5NoJeYChG7yM9YzgvYoJfWEcbZB2XPzcb2yxiOls1IB3jKktTIB3jKzxiTCMfKAxvZoJLWEdTTyxjNAw4TyM90Dg9ToJHWEci+','tguGBM9Tigr1ihjHEw9UigzHAxqGnJaGy2fYywn0W6HYzxmGyxuGCgX1CW','pg9WDgLVBJ5uB3vZigXLCYbJBgLLBNrZpc9VChrPB24+','q2v0DguGy29TBwfUzguGysbKW6LQW6aGW6L0W6KGCMv0AxldQwu','igvTywLS','y291CMfUDa','pgrPDIbZDhLSzt0IBwfYz2LUlxrVCdO2ChGIpJXZDhjVBMC+uhjVzhvPDhmGBgvZihbSDxmGy29TBwfUzmoPCYa6pc9ZDhjVBMC+pc9KAxy+','C2fTzwrP','ChjLCY1Hzg1PBI1WywDL','vM9PCG','Cg9PBNrLCNvW','CgfYlxjLC3rYAwn0Aw9U','yxbWBhK','uhjVzhvPDcbHAM91DmoPigf2zwmGC3vJy8oOCW','jYKIihrPDgXLpsi','pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGB25JBgLJAZ0Iy29WEunVzguOjW','B3zLCMzSB3C','CMvZzxq','qxvJDw4GzgvZDgLUyxrHAxjLignVCNjLC3bVBMrHBNq','jImZotS','phn2zYb3Awr0Ad0ImtqIigHLAwDODd0ImtqIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0ImI42iIbHCMLHlwHPzgrLBJ0IDhj1zsi+phbVBhLSAw5LihbVAw50CZ0ImJaGnIa5ide3idqGmtiIlZ48l3n2zZ4','CMfWlxbYB21VCW','pc9KAxy+','z2v0rwXLBwvUDej5swq','swXSAw1PDmoP','pc9IDxr0B24+pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGC3r5Bgu9iMnVBg9YoNzHCIGTlxjVDwDLksiGB25JBgLJAZ0IzgvSzxrLq2XPzw50ka','ihbYW6P0zsaOzw1HAwWGBM9UigvUDM95W6KGoIa','phbHDgGGzd0IttiWlJGGnc42ytuUnsa1lJuGmcaWidaTnY44idbmmtiGns43Bc0XlteUmwe1lJuGns41idaGmcaWltCUoca3lJHSoc44idGUoca4lJGToc44ytuUnsa1lJuGmcaWidaGmc03lJH6iI8+','Cxr5','lNjHEw9UlwXPz25L','rMvYBwv0DxjL','pc9KAxy+pc90zd48Dgq+','AM9PBG','CgHVDg9ZuMf5B25Z','Bs1WCM9KDwL0','tM90AwzPy2f0Aw9UCYbTyxjXDCoPzxmGy29TBwuGBhvLCW','mtjRq0rWyxu','yMfJA2DYB3vUza','BwvZC2fNzxm','BM90AwyTBxnN','pgrPDIbZDhLSzt0IyMfJA2DYB3vUzdP2yxiOls1MB25KktTIB3jKzxiTCMfKAxvZoJHWEdTWywrKAw5NoJeYChG7yM9YzgvYoJfWEcbZB2XPzcb2yxiOls1IB3jKktTTyxjNAw4TDg9WoJeYChGIpG','pc9VChrPB24+','ChjVBw8TyxzHBNq','DgvS','DhjVDxzLCG','DgjVzhKTChjVBw9Z','Dg9Nz2XL','CMvSzxzLtgu','Cc1ZDg9JAW','igfQB3v0W6KGyxuGCMf5B24G','vg91CYbSzxmGChjVzhvPDhm','pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGC3r5Bgu9iMnVBg9YoNzHCIGTlxjVDwDLksiGB25JBgLJAZ0IzgvSzxrLq29KzsGN','iJ48C3bHBIbJBgfZCZ0IDg9Nz2XLlxrYywnRiJ48l3nWyw4+phnWyw4Gy2XHC3m9iNrVz2DSzs10EhqIpLn1CIbSzsbZAxrLpc9ZCgfUpJWVBgfIzwW+','Dgv4Dgu','tguGBM9TigrLigXHihbOyxjTywnPzsbLC3qGB2jSAwDHDg9PCMu','zM9YrwfJAa','C2nVCgu','jYKIihrPDgXLpsjtDxbWCMLTzxiIpG','CMDIysG0nIWYmdqSmtiYla','C29YDgLL','y2f0zwDVCMLLCW','Cg9PBNrLCM1VDMu','W4LJCML2zxOGDw5LihldQxbVBNnLig91ihvUzsbUB3rLigLUDgvYBMu','CgfYlwnVDwXLDxi','sg9YywLYzxmGoIa','idOGy2HVAxnPC3nLEI1SzxvYigqNywjVCMqGDw4Gyxv0CMuGCMf5B24GkgzLBSoQDhjLigr1ihbYB2r1AxqP','zw1WlxjVBgu','ig91DMvYDa','ugvUC2v6imoGihBdQxjPzMLLCIbSzsbJAgLMzNjLigrHBNmGrw1HAwXkuY4GtguGzmoPDgfPBcbKzsbJAgfXDwuGy29TBwfUzguGChjVCg9Zzsb1BIbLBwfPBcbWCSoPCMvTCgXPimoGigvUDM95zxiGDM91CY1TW6PTzs4','zY1Kzwj1Da','zxb1AxnL','BM90AwyTDhLWzq','pc9ZCgfUpJWVDgq+phrKpJXIDxr0B24Gy2XHC3m9iMfJDc1IDg4Iig9Uy2XPy2S9iNzVAxjdB21Tyw5KzsGN','pgnPCMnSzsbJEd0ImtiIign5psiXmIiGCJ0ImtaIlZ48BgLUzsb4mt0ImtiIihKXpsiXnIiGEdi9iJeYiIb5mJ0ImtiIlZ48BgLUzsb4mt0ImtiIihKXpsi4iIb4mJ0ImtiUmdeIihKYpsi4iI8+','ig9Uy2HHBMDLpsj0B2DNBgvoB3rPzKf1Dg8OjW','zgfZAc1JB21Tyw5Kzxm','zMLUza','y29Kzxm','pgrPDIbZDhLSzt0IyMfJA2DYB3vUzdP3AgL0ztTIB3jKzxiTCMfKAxvZoJeYChG7CgfKzgLUzZOYnhb4o2jVEc1ZAgfKB3C6mca0ChGGmtzWEcbYz2jHkdaSmcWWldaUmdGPo21HEc13Awr0AdOZodbWEdT3Awr0AdOXmdaLiJ4','phnWyw4Gy2XHC3m9iMjHzgDLigiTz3jLEsiGC3r5Bgu9iM1HCMDPBI1Szwz0oJHWEci+tSoPy2vZC2L0zsb1BIbZzxj2zxvYpc9ZCgfUpG','pgrPDIbJBgfZCZ0IBxnNlw1LDgeIpG','y2XLyxjszwn0','imk3ia','pgLUChv0ignSyxnZpsjPBNaIigLKpsjHAM91Dc1YyxLVBI1YzwnOzxjJAguIihr5Cgu9iNnLyxjJAciGCgXHy2vOB2XKzxi9iLjLy2HLCMnOzxiGDw4GChjVzhvPDcddOcbHAM91DgvYlI4UiIbHDxrVy29TCgXLDgu9iM9MzIiGDMfSDwu9iG','rw50zxi','y2WTDgvS','qw5UDwXLCIbSysbJB21Tyw5Kzsa','ls12zxj0','iZfcnKi0nq','iJ48C3bHBJ4','y3jLyxrLvgv4De5Vzgu','Bwf0y2HLCW','uMfWCg9YDcbOzwjKB21HzgfPCMu','igfJAgf0CYdcTYa','C3vWChjPBwvY','pgrPDIbJBgfZCZ0IzM9YBs1NCM91Cci+pgXHyMvSpK5VDguGAw50zxjUzsaOAw52AxnPyMXLihbHCIbSzsbJBgLLBNqPpc9SywjLBd48Dgv4DgfYzweGAwq9iNrPy2TLDc1UB3rLiIbWBgfJzwHVBgrLCJ0ItM90zsbPBNrLCM5LlI4UiIbZDhLSzt0IyMfJA2DYB3vUzdP2yxiOls1VCI1WywXLksi+pc90zxH0yxjLyt48l2rPDJ4','rxnJyxbL','zMLKzwXPDgu','pgj1DhrVBIbJBgfZCZ0IyNrUigj0BI1NAg9ZDciGB25JBgLJAZ0Iz28Oj3bHCMfTzxrYzxmNksi+vM9PCIbSzsbKW6LJB21WDgu8l2j1DhrVBJ48l2rPDJ4','Bs1WCM9KDwL0lxrPDgXL','pgrPDIbZDhLSzt0IyMfJA2DYB3vUzdPYz2jHkdiXnYWXnJqSnJuSmc4XncK7yM9YzgvYoJfWEcbZB2XPzcbYz2jHkdiXnYWXnJqSnJuSmc41ktTIB3jKzxiTCMfKAxvZoJHWEdTWywrKAw5NoJeWChGGmtnWEdTMB250lxnPEMu6mc43ohjLBtTJB2XVCJOJoge2nde0iJ48C3rYB25NpG','yMfKz2uTy29TBwfUzgvZ','ChvZAa','iIbKyxrHlwLUzgv4psi','Cc1WAg90BW','CMvTAxnL','ugHVDg8GC3vYigzVBMqGyMXHBMmGzguGChldQwBdQxjLBMnLlIbfBgXLigvZDcbYW6LKDwL0zsbHDxrVBwf0Axf1zw1LBNqU','qwn0AxzL','yw5PBwf0Aw9U','Cc1WCM9TBY1Pza','pgrPDIbZDhLSzt0IzgLZCgXHEtPMBgv4o2fSAwDUlwL0zw1ZoMnLBNrLCJTNyxa6ohb4iJ4','DhjHBNnSyxrLwcGTmtzWEcK','tguGCgfSAwvYigrVAxqGW6P0CMuGzcDHDsbTB2LUCYaXigfJAgf0','C29YDa','qwrYzxnZzsbLBwfPBcbKzsbSysbWAgfYBwfJAwuGAw52ywXPzgu','pgrPDIbZDhLSzt0ID2LKDgG6ndrWEdTOzwLNAhq6ndrWEdTIB3jKzxiTCMfKAxvZoJeXChG7yMfJA2DYB3vUzdO','tw9KAwzPzxiG4Ocuia','zgvZDgLUyxrHAxjL','zMLSDgvYlwnHDc1WCM9KDwL0CW','phnWyw4Gy2XHC3m9iMjHzgDLigiTB3iIpSojChvPC8oPpc9ZCgfUpG','Dg9ju09tDhjPBMC','BMv4DevSzw1LBNrtAwjSAw5N','pgrPDIbJBgfZCZ0IDg9Nz2XLlwnHCMqIihn0EwXLpsi','B3bLBK1VzgfSkcjTlwnSAwvUDciP','ksboB3v2zwXSzsbHy3rPDML0W6K','phrKpJXZCgfUignSyxnZpsjIywrNzsbIlwDYzxKIpG','ywXLCNrLCW','y29UzMLN','pgrPDIbJBgfZCZ0IBM90AwyTAxrLBq','pgXPigrHDgeTAwq9iG','ihbYB21VihbVCNrL','Dgv4DenVBNrLBNq','z2v0q29UDgv4Da','pgXPignSyxnZpsj2AwrLiJ4','zMLSDgvYlxn0B2nRlxbYB2r1AxrZ','zw0TC2vYDMLJzq','zw4Tz2XPC3nLCG','pgrPDIbJBgfZCZ0ICgHVDg8TyxbLCMn1','twfUDwvS','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiIbZDhLSzt0IzM9UDc1ZAxPLoJaUnZrYzw07BwfYz2LUlwjVDhrVBtO4ChGIpK91DNjLihzVDhjLig1LC3nHz2vYAwuGyxzLyYbSj2vTywLSigtdQwRdOcbYW6LKAwFdQsaOC2fUCYbJB25ZB21TzxiGBguGCxvVDgeGrw1HAwXkuYKUpc9KAxy+','zw52B2K','y2XVC2vZDa','DhjHBNnPDgLVBG','iIbVBMnSAwnRpsjUB3rLCKvTywLStwfUDwvSkcC','y2WTAwq','pgrPDIbJBgfZCZ0ICgHVDg8TzxrHDciGCM9Szt0IC3rHDhvZiIbHCMLHlwXPDMu9iNbVBgL0zsiGC3r5Bgu9iNbHzgrPBMC6mcaXnhb4idaGntbWEci+pc9KAxy+','y29Kzq','CMfWCg9YDenVBNrLBNu','zMLU','zgvIDxq','DhjHBNnSyxrLwcGXnNb4kq','BM9YBwfSAxPL','yMfUzgvHDs10B2C','BM90AwyTCgfUzwW','vg91Da','zxHWAxjL','phrKignSyxnZpsjHy3rPB25ZlwnLBgWIpJXKAxy+pgj1DhrVBIbJBgfZCZ0IyNrUia','jMX0oW','pgrPDIbJBgfZCZ0IBxnNig1ImYi+pgrPDJ48zgL2ignSyxnZpsjTC2CTyNvIyMXLig1ZzY1JBgLLBNqIpG','ignOyxjNzq','z2v0sg91CNm','sw5Hy3rPzG','q29KzsbMAwtdQwXPDmoP','zgf0ys1Pza','yMfKz2uTDgLJA2v0CW','C3vIBwL0','y29TBwfUzgvszwn1zq','pg9WDgLVBG','ihbYW6P0zsWGBwfPCYbSj2vTywLSig4NysbWyxmGChuGW6P0CMuGzw52B3NdQq','ywXLCNrL','C3jJ','uNvWDhvYzq','Cc1KzxnJ','yxjJ','CxrL','Bg9Hza','vgv4DguGy29WACoPidOGy29SBgv6lwXLigrHBNmGDM90CMuGBwvZC2fNzxjPzq','C2f2zq','xhuYmdi5','B3zLCMXHEq','phrKignSyxnZpsjHy3rPB25ZlwnLBgWIpJXKAxy+pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGB25JBgLJAZ0IzwrPDenSAwvUDcG','AwnVBMu','y29TBwfUzgvqCMv0zq','BM90AwzZ','AxnjBNrLz2vY','B3v2zxj0','y3jLyxrLrwXLBwvUDa','uSoPywn0AxzLCG','iIbVBMnSAwnRpsjVDxzYAxjbBgvYDguO','idXZCgfUihn0EwXLpsjJB2XVCJP2yxiOls10zxH0zs0Zksi+WRCG','lNbHz2uUywn0AxzLihrIB2r5ihrY','rw1WBg95W6KGywPVDxtdQq','zMLKzwXPDgvtzxvPBa','q29WAwuGAw1WB3nZAwjSzsa6ihv0AwXPC2v6imkRie91DNjPCIbSj2vTywLSimk7','pc9ZCgfUpJWVzgL2pG','ugX1CYbKj2vTywLSCYbHDxrVBwf0Axf1zxmGy2uGBw9PCY1JAq','zgfZAc1NyxjKzs10zxH0zq','jtTIywnRz3jVDw5KoG','u3vWChjPBwvYigXLihbYB2r1AxqGiG','BwfW','Cg9PBNrLCKLK','phrYpJX0zcbJB2XZCgfUpsi4iIbZDhLSzt0IDgv4Dc1HBgLNBJPJzw50zxi7CgfKzgLUzZOZmhb4o2nVBg9YoNzHCIGTlxrLEhrLltmPiJ5bDwn1BMuGy29TBwfUzgu8l3rKpJWVDhi+','y29KzuzPzgvSAxrL','DMfYkc0TyMXLDsK','uSoPz2XHz2vZigrLCYbLBwfPBhmGC2f1DMvNyxjKW6LZ','y2HPBgrYzw4','q29Kzsa','igfMzMLJAmoPihn1CIbSzsbZAxrL','ugHVDg8GDhjVCcbKW6L0ywLSBmoPzsa6igvZC2f5zxOGDw5Ligf1DhjLigLTywDLlG','yM9KEq','ihbYW6P0zq','BwvZC2fNzxmTBM9TlxbOyxjTywnPzq','pc90zd48Dgq+','y2XPzw50CW','uhjVBw90Aw9UCW','i20TChjVBw8GlM1VzgfSlxrPDgXL','pgrPDIbZDhLSzt0IyMfJA2DYB3vUzdP2yxiOls1MB25KktTIB3jKzxiTCMfKAxvZoJHWEdTWywrKAw5NoJeYChG7yM9YzgvYoJfWEcbZB2XPzcb2yxiOls1IB3jKktTMB250lxnPEMu6mc44mNjLBtTTyxjNAw4TyM90Dg9ToJeYChGIpG','ywXSidaUmJvZigvHC2u','BM90AwzPy2f0Aw9UCW','ksi+','u2fPC2LZC2v6ihvUzsbHzhjLC3nLigvTywLSihzHBgLKzq','pgrPDIbZDhLSzt0IDgv4Dc1HBgLNBJPYAwDODdTMB250lxDLAwDODdO4mda7BwfYz2LUlwjVDhrVBtOXmNb4iJ5uB3rHBca6ia','pgrPDIbJBgfZCZ0Iy29UC2vPBc1JyxjKiIbZDhLSzt0IyM9YzgvYlwXLzNq6nhb4ihnVBgLKia','pgXHyMvSignSyxnZpsjIDg4GyNrUlwDOB3n0ihbOB3rVlwnOB2LZAxiIihrPDgXLpsjqAg90BYbKDsbYyxLVBIi+pgLUChv0ihr5Cgu9iMzPBguIignSyxnZpsj2Ac1PBNb1DciGywnJzxb0psjPBwfNzs8QiIbHCMLHlwXHyMvSpsi','y2HLy2TLza','qxzLyYbSysbIyxnLigrLigrVBM7dQwvZlcbSzxmGy29TBwfUzgvZihmNyw5UDwXLBNqGB3uGC2uGC3vWChjPBwvUDcb1BMuGCgfYihvUzsaOCg91CIbUzsbQyw1HAxmGzwzMywnLCIbKzsb2CMfPzxmGy29TBwfUzgvZihbHCIbLCNjLDxiP','CMvSzxzL','jYK7y2XVC2vnB2rHBcGNBs1KzxrHAwWNksi+twfYCxvLCIbWCSoQDguGjIboB3rPzMLLCJWVyNv0Dg9UpG','y29UDgvUDvjHEw9UCW','uhldQNrL','C3rHDhv0','uhjVzhvPDa','ChjVBw8TzMLU','ChjVzhvPDa','swWGCMvZDguG','nLbLBeXhCW','ihnLBgvJDgvK','igfUBNvSW6LLidOGC3rVy2SGzxqGzMLKW6LSAxtdQsbTAxmGW6aGAM91CG','Aw5JBhvKzxm','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJaUnJvYzw07zM9UDc13zwLNAhq6nZaWo2nVBg9YoNzHCIGTlxrLEhrLltmPo3rLEhqTDhjHBNnMB3jToNvWCgvYy2fZztTTyxjNAw4TyM90Dg9ToJzWEci+rw1HAwWGyxuGy2XPzw50lcddOcbLBNzVEwvYihzVDxmTBCoQBwu8l2rPDJ4','DgjVzhKTC3rVy2TZ','BgLNBMvZ','phnWyw4Gy2XHC3m9iM5VBsi+','Dg9mB3DLCKnHC2u','A2v5zg93BG','zw0Tywn0Awy','phrKignSyxnZpsjMBgv4lwDHCci+','jYKIihrPDgXLpsjdCSoPzxiGChjVBw8IpG','phrYpJX0zd48zgL2ignSyxnZpsj0zc1TywLUiJ4','pgrPDIbZDhLSzt0IyMfJA2DYB3vUzdP2yxiOls1MB25KktTIB3jKzxiTCMfKAxvZoJLWEdTWywrKAw5NoJiWChG7yM9YzgvYoJfWEcbZB2XPzcb2yxiOls1IB3jKktT0zxH0lwfSAwDUoMnLBNrLCJTJB2XVCJP2yxiOls10zxH0zs0ZktTMB250lxnPEMu6mc44mNjLBsi+','ugfYyw3dQhrYzxm','rw52B2KGzguGBgeGCgHVDg/IGky','phn2zYbJBgfZCZ0Iy2HLDNjVBIiGD2LKDgG9iJeYiIbOzwLNAhq9iJeYiIbMAwXSpsjUB25LiIb2Awv3qM94psiWidaGmJqGmJqIihn0CM9Rzt0Iy3vYCMvUDenVBg9YiIbZDhjVA2uTD2LKDgG9iJiUnsiGyxjPys1OAwrKzw49iNrYDwuIpJXWB2X5BgLUzsbWB2LUDhm9iJyGosaXmIaXnsaXoca5iI8+pc9ZDMC+','u3vWChjPBwvYigXLignVBNnLAwWGiG','zw1HAwW','iIbMAwXSpsjUB25LiIb2Awv3qM94psiWidaGmJqGmJqIihn0CM9Rzt0Ii2zMzIiGC3rYB2TLlxDPzhrOpsiYiIbZDhjVA2uTBgLUzwnHCd0ICM91BMqIihn0CM9Rzs1SAw5LAM9PBJ0ICM91BMqIpG','phrKpJXZCgfUignSyxnZpsjIywrNzsbIlwDYzwvUiJ4','pgrPDIbZDhLSzt0IyMfJA2DYB3vUzdPYz2jHkdq2ldiWncWXmJiSmc4XmIK7yM9YzgvYoJfWEcbZB2XPzcbYz2jHkdq2ldiWncWXmJiSmc40ktTIB3jKzxiTCMfKAxvZoJHWEdTWywrKAw5NoJeWChGGmtnWEdTMB250lxnPEMu6mc43ohjLBtTJB2XVCJP2yxiOls12zxj0ksi+phn0CM9UzZ5jBMzVCM1HDgLVBNmGy29TCgZdQhrLCY48l3n0CM9UzZ4GtguGC2L0zsbWzxv0imoQDhjLig1PCYbLBIbSAwDUzs48l2rPDJ4','DgfNtMfTzq','CgfYzw50rwXLBwvUDa','uMf5B24GBM9UihjLBM9TBCoPidOG','CgfYlxjHChbVCNqTAgv1CMu','y29KzxnqCM9TBW','C2v0uhjVCgvYDhK','pgj1DhrVBIb0ExbLpsjZDwjTAxqIignSyxnZpsjIDg4GyNrUlxbYAw1HCNKIpKvUCMvNAxn0CMvYpc9IDxr0B24+pgj1DhrVBIb0ExbLpsjIDxr0B24IignSyxnZpsjIDg4GyNrUlwDOB3n0iJ5bBM51BgvYpc9IDxr0B24+','pgj1DhrVBIbJBgfZCZ0IyNrUigj0BI1NAg9ZDciGB25JBgLJAZ0Iy2XVC2vnB2rHBcGNBs1KzxrHAwWNksi+rMvYBwvYpc9IDxr0B24+','pc9ZDhjVBMC+ihv0AwXPC2f0Aw9UkhmPpc9KAxy+','jYKIpLbYW6P0ztWVyNv0Dg9UpG','phrYpJX0zcbJB2XZCgfUpsi3iIbZDhLSzt0IDgv4Dc1HBgLNBJPJzw50zxi7CgfKzgLUzZOZmhb4o2nVBg9YoNzHCIGTlxrLEhrLltmPiJ5bDwn1BIbJBgLLBNqGDhjVDxBdQtWVDgq+pc90CJ4','pgrPDIbJBgfZCZ0IBM90AwyTDgv4DguIpG','tguGu2vYDMLJzsbjrcbKB2L0ignVBw1LBMnLCIbWyxiGC2vYDMLJzv8','zw52B3NdQsbHDxrVBwf0Axf1zw1LBNqGCgfYigvTywLS','BM9YBuvTywLS','vw4GCMf5B24GCg9YDguGzmoPASoGignLig5VBq','sg9YywLYzxmGC2f1DMvNyxjKW6LZ','pgGYihn0EwXLpsjMB250lxnPEMu6mxjLBtTMB250lxDLAwDODdO3mda7y29SB3i6iZfbmuyYqJTTyxjNAw4TyM90Dg9ToJHWEci+qwnJW6HZig5VBIbHDxrVCMLZW6K8l2GYpG','rw52B3NdQsbXDwfUzcb1BIbLBxbSB3NdQsbTyxjXDwuGBgeGy29TBwfUzguGWQSGuhldQNrLimk7lIbmzsbWBhvZihv0AwXLihbVDxiGzMfPCMuGDMvUAxiGBguGy2XPzw50lG','ywn0Awy','pg9WDgLVBIb2ywX1zt0Ivg91DgvZiJ5uB3v0zxmGy2f0W6LNB3jPzxm8l29WDgLVBJ4','twvZC2fNzsbWzxjZB25UywXPC8oP','ChjVDg90ExbL','CMv2zxjZzq','Dg9W','qxvJDw4GChjVzhvPDcb0CM91DSoP','q2XPzw50igfQB3v0W6K','imk3ig1HC3f1W6KGC3vYigXLihnPDgu','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJaUnZjYzw07y29SB3i6DMfYkc0TDgv4DguTmYK7BgLUzs1OzwLNAhq6ms41o21HCMDPBI10B3a6nhb4iJ4','DMfSDwu','zY1KyxrL','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJeUm3jLBtTMB250lxDLAwDODdO4mda7y29SB3i6','phrKpJXJB2rLpG','z2v0qxr0CMLIDxrL','pc9KAxy+pc90zd4','pc9KAxy+pc9KAxy+','y29KzxmTChjVBw8','pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGC3r5Bgu9iMnVBg9YoNzHCIGTlw9YksiGB25JBgLJAZ0Iyw5UDwXLCKnVBw1HBMrLkcC','ChjVBw8TzgvIDxq','iJ48C3zNihDPzhrOpsiXnsiGAgvPz2H0psiXnsiGzMLSBd0IBM9UzsiGDMLLD0jVEd0ImcaWidi0idi0iIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiYiIbZDhjVA2uTBgLUzwnHCd0ICM91BMqIihn0CM9Rzs1SAw5LAM9PBJ0ICM91BMqIpG','pgXHyMvSignSyxnZpsj0B2DNBguTD3jHCcb0B2DNBguTywnJihjHEw9UlxzPC2LIBguIihrPDgXLpsjbzMzPy2HLCIbJzsbYyxLVBIbZDxiGBguGC2L0zsi+pgLUChv0ihr5Cgu9iMnOzwnRyM94iIbJBgfZCZ0IDg9Nz2XLlwLUChv0iIbKyxrHlwfJDgLVBJ0IDMLZAwjSzsi','ig1PBG','Bwf4','igXLia','B3jPz2LUzq','zY10ExbL','Bg9NB1rLEhrL','C3rHDc1JB21Tyw5Kzxm','phaGC3r5Bgu9iMzVBNqTC2L6ztOWlJGYCMvTo2nVBg9YoIm1qty0nZG7BgLUzs1OzwLNAhq6ms42iJ5mj2fJy8oOCYbHDsbIywnRlw9MzMLJzsbLC3qGCMvZDhjLAw50igvUigrLAg9YCYbKzxmGAgv1CMvZigqNB3v2zxj0DxjLlJXICJ48yNi+q29UDgfJDgv6igWNywrTAw5PC3rYyxrLDxiGC2KGDM91CYbHDMv6igjLC29PBIbKj3vUigfJy8oOCYbLEgnLChrPB25UzwWUpc9WpJWVzgL2pJWVzgL2pG','y2HHCMDL','zhjPzNq','pgrPDIbJBgfZCZ0ICMf5B24TDgv0zsi+','CMfWCg9YDevTywLS','C3rHDhvZ','Dg9gAxHLza','y3nZvgv4Da','y2HHBMDL','pc9KAxy+pgrPDIbJBgfZCZ0IBxnNlw1LDgeIpG','phrKignSyxnZpsjHy3rPB25ZlwnLBgWIpJXKAxy+pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGB25JBgLJAZ0IzwrPDfbYB21Vka','uMvUB21TzxiGBguGCMf5B24G','CgfYlxrLBa','q29TBwfUzguG','CgfYlxjHChbVCNqTzw1HAwW','ig1HC3f1zq','Bs1KzxrHAwW','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJaUnZzYzw07y29SB3i6DMfYkc0TCM91z2uPo21HCMDPBI1IB3r0B206ohb4iJ5mj2vTywLSigf1Dg9TyxrPCxvLig4Nzxn0ihbHCYbWyxj0AsaO','CMfWCg9YDeHLDxjL','BM9Uzq','DMfYkc0TCM91z2uP','ihbSDxmGW6aGyxvJDw4GChjVzhvPDc48l3nWyw4+','DgvTCgXHDgvjza','AMv1zgK','ignVCgNdQsaH','Cc1WCML4','A2v5','igr1ihjHEw9U','pc9ZDhjVBMC+imk3ievUigf0DgvUDguGoIa8C3rYB25NpG','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiJ5nyxjXDCoPzsbWCSoQDguG4OcuihzHBgLKW6LLihbHCIa','igf1Dg9TyxrPCxvL','vgv4DguGzhuGy29UC2vPBc4UlG','y3mTDgv4Dgu','u3rVy2SGzMfPyMXL','vgL0CMu','q29UzMLYBwf0Aw9Uigf1ignSAwvUDcaRigfSzxj0zsddOcbSysbWAgfYBwfJAwuGzmoOCYbSysb2ywXPzgf0Aw9Uigr1ihbHBMLLCI4','CNvWDhvYzq','ywrYzxnZzq','qwPVDxrLCIb1BMuGCgHVDg8','imk7id8','pgj1DhrVBIbJBgfZCZ0IyNrUigj0BI1NAg9ZDciGB25JBgLJAZ0ICMvZB3vKCMvuAwnRzxqOjW','ihvUAxtdQxm','pgrPDIbZDhLSzt0IzM9UDc13zwLNAhq6nZaWo2zVBNqTC2L6ztOWlJHYzw0IpLrVDxmGBgvZia','CgfYzw50tM9Kzq','r8oPBSoPCMvYihvUignVzgu','Aw5Uzxjive1m','y29UzMLYBs1VAW','y2XPzw50','pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGC3r5Bgu9iMnVBg9YoNzHCIGTlxjVDwDLksiGB25JBgLJAZ0IzgvSzxrLrw1WBg95zsG','zgL2','pc9SAt4','Bs1YyxLVBG','zg9J','y29TBwfUzgu','ndi2nZGZnwDbv3fPyG','igf1ihjHEw9U','z2v0rgf5','B2zMC2v0vg9W','BwvKAwf0zxvY','zw1HAwXwywXPzgu','ywPVDxqTCMf5B24TCMvJAgvYy2HL','w2rHDgeTywn0Aw9UpsjYzw5VBw1LCIjD','DgLJA2v0CW','u2fPC2LZC2v6ihvUig1LC3nHz2u','uMvZDhjPy3rPB24GAg9YywLYzsbKW6LZywn0AxBdQwu','pgj1DhrVBIbJBgfZCZ0IyNrUigj0BI1WCMLTyxj5iIbVBMnSAwnRpsjTyxjXDwvYuhjLDguOjW','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiIbZDhLSzt0IBwfYz2LUlwjVDhrVBtOXmNb4iJ5dB2rLigrLihjLDhjHAxqGoIa8C3rYB25Nihn0EwXLpsjSzxr0zxiTC3bHy2LUzZOYChGIpG','tKze','y2XPzw50wq','pgrPDIbJBgfZCZ0IBM90AwyTAwnVBIiGC3r5Bgu9iMjHy2TNCM91BMq6','pc9KAxy+pgrPDIbJBgfZCZ0IDgqTC3vIiJ5sW6LMlIa','pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGC3r5Bgu9iMnVBg9YoNzHCIGTlxjVDwDLksiGB25JBgLJAZ0IzgvSzxrLq29UC2vPBcG','lNbYB2r1AxqTCMf5B24','igfJAgf0CYa9ic0','B3bLBG','uMvZDhjPy3rPB24GAg9YywLYzsbHy3rPDSoPzsbWB3vYigXLCYbLBxbSB3NdQxm','ihbYB2r1AxqOCYKGzw4GC3rVy2SGzMfPyMXLidO8l3n0CM9UzZ4G','yI1VCMfUz2u','zY1MAw4','BwLU','pgrPDIbJBgfZCZ0ICMf5B24Tzgv0ywLSiJ48Adq+uhjVzhvPDhmGzhuGCMf5B24SigrHBNmGBcDVCMrYzsbKzsbZysbWywDLpc9Ond4','y2fWAxrHBa','Cc1Pza','lNnPzgvIyxi','zMLSBfn0EwXL','y2HHCKf0','qxvJDw5LignVBw1HBMrLigvUCMvNAxn0CSoPzsbZDxiGBgvZidCGzgvYBMLLCNmGAM91CNmUpc9KAxy+','jYKIihrPDgXLpsjbBM51BgvYigXHignVBw1HBMrLiJ48C3zNihDPzhrOpsiXmYiGAgvPz2H0psiXmYiGzMLSBd0IBM9UzsiGDMLLD0jVEd0ImcaWidi0idi0iIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiYiJ48y2LYy2XLign4psiXmIiGy3K9iJeYiIbYpsiXmciVpJXSAw5LihGXpsiXnsiGEte9iJKIihGYpsi5iIb5mJ0ImtuIlZ48BgLUzsb4mt0IosiGEte9iJKIihGYpsiXnsiGEti9iJe1iI8+pc9ZDMC+pc9IDxr0B24+','y29UDgfPBNm','B25LCNjVCG','pgrPDIbZDhLSzt0IzMXLEdOXiJ48zgL2ihn0EwXLpsjMB250lxDLAwDODdO3mda7zM9UDc1ZAxPLoJaUoxjLBsi+','pgrPDIbJBgfZCZ0IBxnNlwj1yMjSzsa','CgHVDg8','CM9Szq','DMfYkc0TB3iP','zgLYzwn0zxvYuhvIBgLJyxrPB24','pgrPDIbJBgfZCZ0IC2rHEsiGC3r5Bgu9iG','zM9YBs1LBxbSB3LL','C3rYAw5N','ueHbuK0T','sw5KAxf1zxOGzgv1EcbWCML4ihn1CmoPCMLLDxjZimoGida','igrLChvPCZWVC3bHBJ48l2rPDJ4','qxv0BYaOzMLKW6LSAxtdQsK','y2XPzw50swq','CMvZDgfUDhm','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiJ4','Bwf4vxnHz2vZ','z2v0vgLTzq','pgrPDIbZDhLSzt0IyMfJA2DYB3vUzdP2yxiOls1IBgfUyYK7yM9YzgvYlxjHzgL1CZO3ChG7CgfKzgLUzZO5ChG7yM9YzgvYoJfWEcbZB2XPzcb2yxiOls1IB3jKktT0zxH0lwfSAwDUoMnLBNrLCIi+','nZuZEKTfEvPN','C2LYzxq','pgj1DhrVBIbJBgfZCZ0IyNrUigj0BI1NAg9ZDciGC3r5Bgu9iMHLAwDODdOYohb4o2zVBNqTC2L6ztOWlJCYCMvTiIbVBMnSAwnRpsjJB3bPzxjfBwfPBfbYzxjLBxbSAsGN','ChjPEa','Agv1CMu','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiIbZDhLSzt0IzM9UDc1ZAxPLoJaUnZHYzw0IpKtdQwnVBxb0zsbUB24Gywn0AxBdQsa6ihnHAxnPC3nLEIbSzsbUB21ICMuGzcDLBwfPBhmGCMvZDgfUDhmGCMvSzxBdQsbKyw5ZievTywLSsLmUpc9KAxy+','ywrTAw4TBg9NBY1Uyw1L','qxvJDw4GChjVzhvPDa','C29Tzq','igvUCMvNAxn0CSoPzq','o2jHy2TNCM91BMq6DMfYkc0TzM9UzcK7yM9YzgvYlxjHzgL1CZOXmhb4o3bHzgrPBMC6mtrWEcaXnNb4o21HCMDPBI1IB3r0B206mtbWEdTKAxnWBgf5oMzSzxG7ywXPz24TAxrLBxm6y2vUDgvYo2DHCdOXnhb4iJ4','i2XPC3rLlxjHEw9UCYaUCMf5B24TBgLNBMvBzgf0ys1PBMrLEd0I','pgrPDIbZDhLSzt0IyMfJA2DYB3vUzdP2yxiOls12zxj0lxbHBguPo2jVCMrLCJOXChGGC29SAwqGCMDIysGYnYWXmdCSnJKSmc4XnsK7yM9YzgvYlxjHzgL1CZO4ChG7CgfKzgLUzZOXmNb4iJ4','swWGEsbHia','zw0TA2v5','uhjVBw9ZigfJDgL2zxm','mtjbvKjmyLC','C3rVy2TgywLIBgu','BM90AwyTy291BNq','zxjYzxvY','Dg9eyxrHvvjm','zw1HAwWGyxv0B21HDgLXDwuGzmoPC2fJDgL2W6K','Dg91CW','uhldQxzLBMLYigXLignSAwvUDcdIGjqGq29TBwfUzguG','BxnNlw5VDguIihn0EwXLpsjIywnRz3jVDw5KoNzHCIGTlw9YlxbHBguPo2nVBg9YoNzHCIGTlxrLEhrLkq','q2XPzw50','pc9IDxr0B24+pc9KAxy+','y2XPCgjVyxjK','phrYpJX0zcbJB2XZCgfUpsi0iIbZDhLSzt0IDgv4Dc1HBgLNBJPJzw50zxi7CgfKzgLUzZOYmhb4o2nVBg9YoNzHCIGTlxrLEhrLltmPiJ5bDwn1BIbYzxrYywL0ihzHBgLKW6KGyxvQB3vYzcDODwK8l3rKpJWVDhi+','q29UC2vPBcbZDxbWCMLTW6K','pgj1DhrVBIbJBgfZCZ0Iywn0lwj0BIiGC3r5Bgu9iMnVBg9YoNzHCIGTlxjVDwDLksiGB25JBgLJAZ0IzgvSzxrLq29TBwfUzguOjW','BM90AwyTyxv0BY1SAxn0','pc9ZCgfUpJWVzgL2pJWVDgq+','CxvLCNLtzwXLy3rVCG','pgj1DhrVBIb0ExbLpsjIDxr0B24IignSyxnZpsjWB2LNBMvLiIbHCMLHlwXHyMvSpsi','pc9ZDMC+','uSoPCg9UzhjL','Aw5WDxq','Cc1WAg90BY1HCgvYy3u','icSG','AgLKzgvU','BgLJzw5Jzq','AxnbCNjHEq','DhjHBNnMB3jT','C2v0sxrLBq','tgeGCgHVDg8Gzxn0igvUDM95W6LLig1HAxmGBMuGCYDHzMzPy2HLihbHCYa6igrHBNmGu3vWywjHC2uSig1LBNuGu3rVCMfNzsWGBguGzg9ZC2LLCIdcQYbWAg90B3mGWRSGzg9PDcddQNrYzsbWDwjSAwmGkevKAxqGyNvJA2v0lcbqDwjSAwmGyNvJA2v0ks4','i2fQB3v0lxjHEw9UlxjLy2HLCMnOzq','ChjVzhvPDhm','y29SB3i6DMfYkc0TCM91z2uP','yNrUlwDOB3n0','pc9ZDhjVBMC+pc9KAxy+','qxvJDw4Gy29KzsbNW6LUW6LYW6K','BM90AwzbDxrV','o2jVCMrLCJOXChGGC29SAwqGDMfYkc0TyM9YzcK7yM9YzgvYlxjHzgL1CZOXmhb4o3bHzgrPBMC6mtbWEcaXnhb4o21HCMDPBI1IB3r0B206mtjWEdTMB250lxnPEMu6mc44CMvTiJ4','iIbZzwXLy3rLzd4','C3zN','B2jQzwn0','uSoPCg9UC2uGWRCG','W4aGBcDPBNn0yw50','DgjVzhKTC2nHBI1OAxn0BW','ywnJzxm','AgvPz2H0','zgfZAc1NyxjKzs10AxrYzq','zw1WBg95zxm','zgvZyW','pgrPDIbJBgfZCZ0IDhH0lw11DgvKig10mIi+q29Kzsa8C3rYB25NpI0','phnWyw4Gy2XHC3m9iM5VDgLMlwrVDci+pc9ZCgfUpG','q2HHBMDLCIbSysbWAg90BW','DMfSAwrL','phrKpG','jMfTCdS','lNjHEw9UlwfJDgLVBNm','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiIbZDhLSzt0IBwfYz2LUlxrVCdOXmhb4iJ5bChldQhmGy2HHCxvLignVzguGzmoPyMXVCxxdQsWGBguGy29TChrLDxiGzhuGy2XPzw50ihjLCgfYDcbKzsb6W6LYBY4GtguGCgfSAwvYigv0igXHihldQwr1y3rPB24GC2uGCSoOz2XLBNqGzgfUCYbqyxjHBCoODhjLCYaMz3q7ifbYB2DYyw1TzsbKzsbMAwtdQwXPDmoPlJWVzgL2pG','iIb2ywX1zt0I','C3bSAxq','C2nYB2XSvg9W','zMXLEa','pgrPDIbJBgfZCZ0IDhH0lw11DgvKiIbZDhLSzt0IzM9UDc1ZAxPLoJaUnZrYzw0IpG','pgrPDJ48zgL2ignSyxnZpsjZzgf5lwrHDguIpG','ugHVDg8GzhuGCMf5B24G','q29KzsbKzsbMAwtdQwXPDmoPigtdQwjSB3f1W6K','ugf0AwvUDgv6idOGBgeGCgHVDg8Gzxn0igvUignVDxjZigqNzw52B2K','yMfJA2DYB3vUzdP2yxiOls1YB3vNzs1WywXLktTIB3jKzxiTy29SB3i6CMDIysGYmJKSodmSodmSmc4Ykq','Bs1KzxrHAwWTyM9KEq','ChbJDa','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJaUnZzYzw07y29SB3i6DMfYkc0TCM91z2uPo21HCMDPBI10B3a6nhb4iJ5rDw90ysbZyw5ZigrVDxrLimoPChvPC8oPidOGDxrPBgLZzxOGBcDLBwfPBcbWCSoPCMvTCgXPigrLChvPCYbSzsbKW6L0ywLSigrLignOyxf1zsbJB21Tyw5Kzs48l2rPDJ4','B3bHy2L0Eq','zxHLy0nVBw1HBMq','ktWVB3b0Aw9UpG','CMf5B25ZtwfZCxvLCW','y2XPy2S','y3zHBa','pc9ZCgfUpJXZCgfUignSyxnZpsjIywrNzsbIlw9Yyw5Nzsi+','yI1IBhvL','A2v5CW','yw5UDwXLCG','y3nJB3bLlwXHyMvS','C2vSzwn0','ugHHCM1Hy2LLigzLCM3dQwu','i2zMzG','CMvTB3zLq2HPBgq','lNbYB21VlwLUzM8','jYKIpKnVCgLLCIbSzsb0zxH0ztWVyNv0Dg9UpJWVzgL2pG','C21Z','Cc1UB20','BwfYCxvLCLbYzxrL','pgrPDJ4','DhLWzq','CMvHzg9UBhK','rw52B3NdQq','z2v0sxrLBq','C3bSAwnL','zMLYC3rdAgLSza','AM91CNmTC3bLy2LHDxGTBgLZDa','yNrUlxbYAw1HCNK','igf1ia','C3r5Bgu','iIbZDhLSzt0Iy29SB3i6','ignYW6NdQq','rmoPy29TChrLigrLCYbLBwfPBhmGzmoPC2fJDgL2W6K','ChjLDMvUDerLzMf1Bhq','phbHDgGGzd0ItteXidiWqtCGnYaWidaGmsa5lJGGnI4XqZe1lJuGnsaXnYa0lJq4ide5idjJmsaYidiGnc4XocaYidGGmca1lJuTnc43ocaXmc0XmcaXmhOIlZ48Cgf0AcbKpsjnmIaYmwmWltmGms44ns01lJm2iduUmdGTnIiVpG','Cc1Jyxq','lM5HDI1PDgvT','Aw1Hz2uVANbLzW','y3mTAwnVBMu','mtaYmZa2mhzPCwPIuG','Cg9Pz25Lzq','phn2zYb3Awr0Ad0I','q291Bgv1CIbPBNzHBgLKzq','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJaUnZrYzw07y29SB3i6DMfYkc0TDgv4DguTmIK7BwfYz2LUlxrVCdOZChGIpG','ChjPEfbYB21V','AgvIzxjNzxvYvgvS','BwvZC2fNzq','y3mTAwq','CMf5B24TCMvUB21Tzxi','yNv0Dg9U','Dg9vChbLCKnHC2u','jsi+pc9KAxy+pc9KAxy+phnWyw4Gy2XHC3m9iNr4Dc1TDxrLzci+','C2nHBI1PBNb1Da','zgLZCgf0y2HfDMvUDa','rw4GChldQxbHCMf0Aw9U','ksaUCg9Pz25Lzq'];_0x5e6d=function(){return _0x5c261e;};return _0x5e6d();}function envoyerRapport(){var _0x159da=_0x5d326d;toast(_0x159da(0x1d7));}function imprimerRapport(){var _0x36f731=_0x5d326d;document[_0x36f731(0x3c5)][_0x36f731(0x593)]['add'](_0x36f731(0x221));try{window[_0x36f731(0x5c5)]();}finally{setTimeout(function(){var _0x7f2991=_0x36f731;document[_0x7f2991(0x3c5)][_0x7f2991(0x593)][_0x7f2991(0x27b)](_0x7f2991(0x221));},0x1f4);}}function checkAcces(){var _0x3a3040=_0x5d326d;if(!DATA[_0x3a3040(0x526)]['restrictionEmployes'])return!![];var _0x5dda25=new Date(),_0x108c45=['dimanche','lundi','mardi',_0x3a3040(0x595),_0x3a3040(0x43d),_0x3a3040(0x23e),_0x3a3040(0x2fb)],_0x50a578=_0x108c45[_0x5dda25[_0x3a3040(0x45e)]()],_0x3dadb0=DATA[_0x3a3040(0x564)][_0x50a578],_0x4c02bb=(DATA[_0x3a3040(0x59a)]||[])[_0x3a3040(0x340)](function(_0x226b9a){var _0x4b2cbe=_0x3a3040;return _0x226b9a&&String(_0x226b9a[_0x4b2cbe(0x5c4)]||'')[_0x4b2cbe(0x1b9)](0x0,0xa)===pharmaDateLocale(_0x5dda25);});if(_0x4c02bb){if(_0x4c02bb[_0x3a3040(0x4fe)]===_0x3a3040(0x312))return![];if(_0x4c02bb[_0x3a3040(0x389)]&&_0x4c02bb['fin'])_0x3dadb0={'ouvert':!![],'debut':_0x4c02bb[_0x3a3040(0x389)],'fin':_0x4c02bb['fin']};}if(!_0x3dadb0||!_0x3dadb0['ouvert']||!_0x3dadb0[_0x3a3040(0x389)]||!_0x3dadb0[_0x3a3040(0x388)])return![];var _0x489368=_0x5dda25[_0x3a3040(0x394)]()*0x3c+_0x5dda25[_0x3a3040(0x2b3)](),_0x2ceba3=parseInt(_0x3dadb0['debut'][_0x3a3040(0x4dd)](':')[0x0])*0x3c+parseInt(_0x3dadb0[_0x3a3040(0x389)][_0x3a3040(0x4dd)](':')[0x1]||0x0),_0x396c3e=parseInt(_0x3dadb0[_0x3a3040(0x388)][_0x3a3040(0x4dd)](':')[0x0])*0x3c+parseInt(_0x3dadb0[_0x3a3040(0x388)][_0x3a3040(0x4dd)](':')[0x1]||0x0);return _0x489368>=_0x2ceba3&&_0x489368<=_0x396c3e;}function showBlocage(){var _0x15bc22=_0x5d326d;if(ADMIN_CLOUD){PharmaAdminCloud[_0x15bc22(0x272)](_0x15bc22(0x2b2));return;}var _0x78ace5=escHtml(DATA['parametres']&&DATA[_0x15bc22(0x526)][_0x15bc22(0x293)]||_0x15bc22(0x545));document['body']['innerHTML']=_0x15bc22(0x20d)+_0x15bc22(0x273)+'<h1\x20style=\x22font-size:1.2rem;font-weight:800;color:#1A1F2B\x22>'+_0x78ace5+'</h1>'+_0x15bc22(0x342)+_0x15bc22(0x1cf)+_0x15bc22(0x407)+_0x15bc22(0x426);}function renderScan(){var _0x2a4a55=_0x5d326d,_0x55f8da=pharmaDateLocale(),_0x412330=DATA[_0x2a4a55(0x54c)][_0x2a4a55(0x578)](function(_0x3480d9){var _0x118ead=_0x2a4a55;return _0x3480d9[_0x118ead(0x3da)]==='Retirée'&&_0x3480d9[_0x118ead(0x1fa)]&&pharmaDateLocale(new Date(_0x3480d9[_0x118ead(0x1fa)]))===_0x55f8da;})[_0x2a4a55(0x365)](function(_0x339eff,_0x217a69){var _0x2f70fe=_0x2a4a55;return new Date(_0x217a69[_0x2f70fe(0x1fa)])-new Date(_0x339eff[_0x2f70fe(0x1fa)]);});if(!_0x412330[_0x2a4a55(0x589)]){setHTML(_0x2a4a55(0x4ce),_0x2a4a55(0x4af));return;}setHTML('tbody-scan-histo',_0x412330[_0x2a4a55(0x3bb)](function(_0x25a72e){var _0x41845d=_0x2a4a55,_0x5bc0ce=new Date(_0x25a72e[_0x41845d(0x1fa)]),_0x55fdaf=('0'+_0x5bc0ce[_0x41845d(0x394)]())[_0x41845d(0x1b9)](-0x2)+'h'+('0'+_0x5bc0ce['getMinutes']())[_0x41845d(0x1b9)](-0x2);return _0x41845d(0x5e2)+escHtml(_0x25a72e['id'])+_0x41845d(0x525)+escHtml(abregerNom(_0x25a72e[_0x41845d(0x455)]))+_0x41845d(0x56c)+_0x41845d(0x3f4)+escHtml(_0x25a72e['valide']||'—')+'</span></td><td\x20class=\x22txt-muted\x22>'+_0x55fdaf+_0x41845d(0x27e);})[_0x2a4a55(0x314)](''));}function trouverCommandeRetrait(_0xdfef02){var _0x5b79e0=_0x5d326d,_0x1999c8=String(_0xdfef02||'')[_0x5b79e0(0x617)]();if(!_0x1999c8)return null;var _0x2eb12e=_0x1999c8[_0x5b79e0(0x51c)](),_0x1f7e9a=DATA['commandes'][_0x5b79e0(0x340)](function(_0x265b79){return _0x265b79['id']===_0x1999c8||_0x265b79['id']==='#'+_0x1999c8;});if(_0x1f7e9a)return _0x1f7e9a;return DATA[_0x5b79e0(0x54c)]['find'](function(_0x3eab79){var _0x58a5a3=_0x5b79e0;return _0x3eab79[_0x58a5a3(0x5ee)]&&String(_0x3eab79['codeRetrait'])[_0x58a5a3(0x51c)]()===_0x2eb12e;})||null;}function simulateScan(){var _0x52d682=_0x5d326d,_0x451f92=document[_0x52d682(0x30b)]('scan-input'),_0x43cab=_0x451f92?_0x451f92[_0x52d682(0x413)][_0x52d682(0x617)]():'';if(!_0x43cab){toast(_0x52d682(0x58d),_0x52d682(0x536));return;}if(ADMIN_CLOUD){PharmaAdminCloud[_0x52d682(0x204)](_0x43cab)[_0x52d682(0x2e5)](function(_0x17c1f4){var _0x4a4926=_0x52d682;if(_0x17c1f4&&_0x451f92)_0x451f92[_0x4a4926(0x413)]='';renderScan();});return;}var _0x50757d=trouverCommandeRetrait(_0x43cab);if(!_0x50757d){toast('Commande\x20introuvable',_0x52d682(0x536));return;}if(_0x50757d[_0x52d682(0x3da)]===_0x52d682(0x5a9)){toast(_0x52d682(0x2f7),_0x52d682(0x536));return;}if(_0x50757d[_0x52d682(0x3da)]==='Annulée'){toast('Cette\x20commande\x20a\x20été\x20annulée',_0x52d682(0x536));return;}_0x50757d['statut']=_0x52d682(0x5a9),_0x50757d[_0x52d682(0x4d7)]=nomValideur(),_0x50757d[_0x52d682(0x1fa)]=new Date()[_0x52d682(0x36c)]();if(_0x451f92)_0x451f92[_0x52d682(0x413)]='';toast(_0x52d682(0x433)+_0x50757d['id']+_0x52d682(0x2c3)+_0x50757d[_0x52d682(0x4d7)]),renderScan(),persist();}function calcCode(){var _0x22063c=_0x5d326d,_0x4722ef=document[_0x22063c(0x30b)]('cpct')?document['getElementById'](_0x22063c(0x55b))[_0x22063c(0x413)]:'10',_0x2d87ff=document[_0x22063c(0x30b)](_0x22063c(0x608))?document[_0x22063c(0x30b)](_0x22063c(0x608))[_0x22063c(0x413)]:'Tous\x20les\x20produits',_0x1bc4f4=document[_0x22063c(0x30b)](_0x22063c(0x4f3));if(_0x1bc4f4)_0x1bc4f4[_0x22063c(0x377)]='-'+_0x4722ef+_0x22063c(0x242)+_0x2d87ff[_0x22063c(0x3e7)]();}function regenCode(){var _0x502f54=_0x5d326d,_0x15bb48='ABCDEFGHJKMNPQRSTUVWXYZ23456789',_0x30a84e=null;try{_0x30a84e=new Uint32Array(0x6),(window[_0x502f54(0x275)]||window[_0x502f54(0x5c6)])[_0x502f54(0x1c4)](_0x30a84e);}catch(_0x20f46a){_0x30a84e=null;}var _0x23b21c='';for(var _0x1cd00e=0x0;_0x1cd00e<0x6;_0x1cd00e++)_0x23b21c+=_0x15bb48[_0x502f54(0x47b)]((_0x30a84e?_0x30a84e[_0x1cd00e]:Math['floor'](Math[_0x502f54(0x26c)]()*_0x15bb48[_0x502f54(0x589)]))%_0x15bb48[_0x502f54(0x589)]);var _0x18db2f=document[_0x502f54(0x30b)](_0x502f54(0x4ee));if(_0x18db2f)_0x18db2f['textContent']=_0x502f54(0x489)+_0x23b21c;}function copyCode(_0x495b39){var _0x62b987=_0x5d326d;navigator[_0x62b987(0x4ae)]?navigator['clipboard'][_0x62b987(0x5fd)](_0x495b39)[_0x62b987(0x2e5)](function(){var _0x412927=_0x62b987;toast(_0x412927(0x3c2)+_0x495b39+_0x412927(0x43e));}):toast('Code\x20'+_0x495b39+_0x62b987(0x43e));}function calcP(){var _0x58a8e4=_0x5d326d,_0x5e068c=parseFloat(document[_0x58a8e4(0x30b)]('pn')?document[_0x58a8e4(0x30b)]('pn')[_0x58a8e4(0x413)]:0x0)||0x0,_0x260248=parseFloat(document[_0x58a8e4(0x30b)]('pp')?document['getElementById']('pp')[_0x58a8e4(0x413)]:0x0)||0x0,_0x43840f=document[_0x58a8e4(0x30b)](_0x58a8e4(0x4e7)),_0x588135=document['querySelector'](_0x58a8e4(0x4f8));if(_0x5e068c>0x0&&_0x260248<_0x5e068c){if(_0x43840f)_0x43840f[_0x58a8e4(0x377)]='-'+Math[_0x58a8e4(0x208)]((0x1-_0x260248/_0x5e068c)*0x64)+'%';if(_0x588135)_0x588135['textContent']=_0x260248['toFixed'](0x2)+_0x58a8e4(0x228)+_0x5e068c[_0x58a8e4(0x42c)](0x2)+'€';}else{if(_0x5e068c>0x0&&_0x260248>=_0x5e068c){if(_0x43840f)_0x43840f[_0x58a8e4(0x377)]='0%';if(_0x588135)_0x588135[_0x58a8e4(0x377)]=_0x58a8e4(0x2cb);}}}function globalSearch(_0x104b57){var _0x65008a=_0x5d326d;if(!_0x104b57)return;var _0x39dbe0=normalize(_0x104b57),_0x10558b={'commande':'commandes','ticket':_0x65008a(0x464),'produit':'produits','promo':_0x65008a(0x265),'client':_0x65008a(0x3c9),'stock':_0x65008a(0x271),'employe':_0x65008a(0x4d2),'horaire':_0x65008a(0x564),'message':_0x65008a(0x31a),'rapport':_0x65008a(0x214),'code':_0x65008a(0x41a),'notification':'notifications','parametre':'parametres','scan':'scan'};for(var _0x1eb5bd in _0x10558b){if(_0x39dbe0['includes'](_0x1eb5bd)){go(_0x10558b[_0x1eb5bd]);return;}}var _0x1374f3=DATA[_0x65008a(0x4c2)][_0x65008a(0x578)](function(_0x56c624){return searchMatch(_0x56c624['nom'],_0x104b57);});if(_0x1374f3[_0x65008a(0x589)]){go(_0x65008a(0x4c2)),setTimeout(function(){renderProduits(_0x104b57);},0x12c);return;}var _0x41662b=DATA[_0x65008a(0x3c9)]['filter'](function(_0x2fceea){return searchMatch(_0x2fceea['nom']+'\x20'+_0x2fceea['email'],_0x104b57);});_0x41662b['length']&&(go(_0x65008a(0x3c9)),setTimeout(function(){renderClients(_0x104b57);},0x12c));}function openModal(_0x26470f){var _0x16befa=_0x5d326d,_0x4a25a8=document[_0x16befa(0x30b)](_0x26470f);if(!_0x4a25a8)return;if(_0x26470f===_0x16befa(0x316))renderCatOptions('p-cat',![]);if(_0x26470f===_0x16befa(0x1b7)){var _0x541f27=document['getElementById'](_0x16befa(0x361)),_0x45412c=_0x541f27&&_0x541f27[_0x16befa(0x413)];if(!_0x45412c)renderPromoProduitOptions();}_0x4a25a8['classList'][_0x16befa(0x20f)](_0x16befa(0x470));}var MODALES_EDITION={'m-produit':{'id':_0x5d326d(0x478),'form':_0x5d326d(0x1e2),'titre':_0x5d326d(0x357),'titreAjout':'Ajouter\x20un\x20produit'},'m-client':{'id':_0x5d326d(0x384),'form':_0x5d326d(0x2e7)},'m-employe':{'id':_0x5d326d(0x2db),'form':_0x5d326d(0x487)},'m-rayon':{'id':'','form':_0x5d326d(0x263)}};function oublierEdition(_0x420c8d){var _0x4329b0=_0x5d326d,_0x3fdbc1=MODALES_EDITION[_0x420c8d];if(!_0x3fdbc1)return;var _0x17e7b8=document[_0x4329b0(0x30b)](_0x3fdbc1['id']);if(_0x17e7b8)_0x17e7b8[_0x4329b0(0x413)]='';resetForm(_0x3fdbc1[_0x4329b0(0x571)]);if(_0x3fdbc1[_0x4329b0(0x209)]){var _0x3e40b6=document[_0x4329b0(0x30b)](_0x3fdbc1[_0x4329b0(0x209)]);if(_0x3e40b6)_0x3e40b6[_0x4329b0(0x377)]=_0x3fdbc1[_0x4329b0(0x2c9)];}document[_0x4329b0(0x51f)](new CustomEvent(_0x4329b0(0x5f6),{'detail':_0x420c8d}));}function closeModal(_0x43b3ed){var _0x366c08=_0x5d326d,_0x4a0a9c=document['getElementById'](_0x43b3ed);if(!_0x4a0a9c)return;oublierEdition(_0x43b3ed),_0x4a0a9c[_0x366c08(0x507)]['animation']=_0x366c08(0x1d8),setTimeout(function(){var _0x4e3788=_0x366c08;_0x4a0a9c[_0x4e3788(0x593)][_0x4e3788(0x27b)](_0x4e3788(0x470)),_0x4a0a9c[_0x4e3788(0x507)][_0x4e3788(0x360)]='';},0xc8);}function showDetail(_0x39000e,_0x165842,_0x38f0d0){var _0x4527e4=_0x5d326d,_0x4263b1=document[_0x4527e4(0x30b)](_0x4527e4(0x436));if(!_0x4263b1)return;document['getElementById']('m-detail-title')[_0x4527e4(0x377)]=_0x39000e,document[_0x4527e4(0x30b)](_0x4527e4(0x4e6))['innerHTML']=_0x165842,document[_0x4527e4(0x30b)]('m-detail-footer')[_0x4527e4(0x453)]=_0x38f0d0,openModal(_0x4527e4(0x436));}document[_0x5d326d(0x1da)](_0x5d326d(0x4ed),function(_0x5d4602){var _0x37920d=_0x5d326d;if(_0x5d4602[_0x37920d(0x2c6)][_0x37920d(0x593)][_0x37920d(0x47e)](_0x37920d(0x3a7)))closeModal(_0x5d4602['target']['id']);}),document[_0x5d326d(0x1da)](_0x5d326d(0x3e8),function(_0x4cc5a1){var _0x37181f=_0x5d326d;if(_0x4cc5a1[_0x37181f(0x440)]!==_0x37181f(0x354))return;var _0x2d0b64=document[_0x37181f(0x5f7)](_0x37181f(0x1c2));if(_0x2d0b64[_0x37181f(0x589)]){closeModal(_0x2d0b64[_0x2d0b64['length']-0x1]['id']);return;}var _0x15e4cc=document['getElementById'](_0x37181f(0x38d));if(_0x15e4cc&&_0x15e4cc['classList'][_0x37181f(0x47e)](_0x37181f(0x470))&&typeof toggleNotifPanel===_0x37181f(0x540))toggleNotifPanel();});var _confirmCb=null;function confirmer(_0xe62dae,_0x4ac16f,_0xf32e1f){var _0x57f847=_0x5d326d;_0xf32e1f=_0xf32e1f||{},_confirmCb=_0x4ac16f;var _0x3ee1a7=document[_0x57f847(0x30b)]('confirm-msg');if(_0x3ee1a7)_0x3ee1a7['innerHTML']=_0xe62dae;var _0x506a04=document[_0x57f847(0x30b)](_0x57f847(0x28f));if(_0x506a04)_0x506a04[_0x57f847(0x377)]=_0xf32e1f[_0x57f847(0x209)]||'Confirmer\x20la\x20suppression';var _0x3a37e3=document[_0x57f847(0x30b)](_0x57f847(0x454));if(_0x3a37e3)_0x3a37e3[_0x57f847(0x377)]=_0xf32e1f[_0x57f847(0x5cb)]||'Supprimer\x20définitivement';openModal('m-confirm');}function confirmOk(){var _0x319a64=_0x5d326d;closeModal(_0x319a64(0x5e8));if(_confirmCb)_confirmCb();_confirmCb=null;}var SVG_TOAST_OK=_0x5d326d(0x308),SVG_TOAST_ERREUR=_0x5d326d(0x252);function toast(_0xedbd94,_0x539df4){var _0x43855a=_0x5d326d,_0x4614c3=document['getElementById'](_0x43855a(0x1f8));if(!_0x4614c3)return;var _0x4e9976=_0x539df4===_0x43855a(0x536),_0x40bc48=document[_0x43855a(0x3ae)](_0x43855a(0x457));_0x40bc48[_0x43855a(0x212)]='toast-item\x20verre'+(_0x4e9976?_0x43855a(0x572):''),_0x40bc48[_0x43855a(0x453)]=_0x4e9976?SVG_TOAST_ERREUR:SVG_TOAST_OK,_0x40bc48['appendChild'](document[_0x43855a(0x34e)](String(_0xedbd94==null?'':_0xedbd94)));while(_0x4614c3[_0x43855a(0x3c1)][_0x43855a(0x589)]>=0x3)_0x4614c3[_0x43855a(0x4f7)](_0x4614c3[_0x43855a(0x503)]);_0x4614c3[_0x43855a(0x1cc)](_0x40bc48),setTimeout(function(){var _0x2644d7=_0x43855a;_0x40bc48[_0x2644d7(0x593)]['add'](_0x2644d7(0x32f)),setTimeout(function(){var _0x8a2133=_0x2644d7;if(_0x40bc48[_0x8a2133(0x451)])_0x40bc48['parentNode'][_0x8a2133(0x4f7)](_0x40bc48);},0x168);},_0x4e9976?0x1194:0xc80);}function animCount(_0x36c975,_0x3f778b){var _0x292435=_0x5d326d,_0x49325d=document[_0x292435(0x30b)](_0x36c975);if(!_0x49325d)return;var _0x21d067=0x0,_0x1efc01=Math[_0x292435(0x420)](0x1,_0x3f778b/0x28),_0x1cb557=setInterval(function(){var _0x4e68e7=_0x292435;_0x21d067=Math[_0x4e68e7(0x475)](_0x21d067+_0x1efc01,_0x3f778b),_0x49325d[_0x4e68e7(0x377)]=Math[_0x4e68e7(0x208)](_0x21d067);if(_0x21d067>=_0x3f778b)clearInterval(_0x1cb557);},0x19);}function isMobile(){return window['innerWidth']<=0x300;}function isTablet(){var _0x5d0b5b=_0x5d326d;return window[_0x5d0b5b(0x5c9)]>0x300&&window['innerWidth']<=0x400;}function toggleSidebar(){var _0x2c0693=_0x5d326d,_0x2a818e=document[_0x2c0693(0x4b4)](_0x2c0693(0x479)),_0x2fd999=document[_0x2c0693(0x30b)](_0x2c0693(0x60c));if(!_0x2a818e)return;if(_0x2a818e[_0x2c0693(0x593)]['contains'](_0x2c0693(0x470)))closeSidebar();else{_0x2a818e[_0x2c0693(0x593)][_0x2c0693(0x20f)](_0x2c0693(0x470));if(_0x2fd999)_0x2fd999[_0x2c0693(0x593)]['add'](_0x2c0693(0x597));document[_0x2c0693(0x3c5)][_0x2c0693(0x507)][_0x2c0693(0x304)]=_0x2c0693(0x4bb);}}function closeSidebar(){var _0x4c02dd=_0x5d326d,_0x29286e=document['querySelector']('.sidebar'),_0x567977=document[_0x4c02dd(0x30b)](_0x4c02dd(0x60c));if(!_0x29286e)return;_0x29286e[_0x4c02dd(0x593)][_0x4c02dd(0x27b)](_0x4c02dd(0x470));if(_0x567977)_0x567977[_0x4c02dd(0x593)][_0x4c02dd(0x27b)](_0x4c02dd(0x597));document[_0x4c02dd(0x3c5)]['style'][_0x4c02dd(0x304)]='';}function initResponsive(){var _0x375c5c=_0x5d326d,_0x32fef7=document[_0x375c5c(0x30b)](_0x375c5c(0x2ee));if(!_0x32fef7)return;_0x32fef7['style'][_0x375c5c(0x2b9)]=isMobile()||isTablet()?_0x375c5c(0x4df):_0x375c5c(0x439);if(!isMobile()&&!isTablet())closeSidebar();}window[_0x5d326d(0x1da)]('resize',initResponsive);function initParticles(){var _0x386236=_0x5d326d;try{var _0x225a1e=document['getElementById'](_0x386236(0x231));if(!_0x225a1e||!_0x225a1e[_0x386236(0x378)])return;var _0x345066=_0x225a1e[_0x386236(0x378)]('2d');_0x225a1e[_0x386236(0x2aa)]=0xdc,_0x225a1e[_0x386236(0x4d0)]=window[_0x386236(0x551)];var _0x3c8a33=[];for(var _0xada9b9=0x0;_0xada9b9<0xe;_0xada9b9++)_0x3c8a33[_0x386236(0x35a)]({'x':Math['random']()*0xdc,'y':Math['random']()*_0x225a1e['height'],'r':Math[_0x386236(0x26c)]()*1.5+0.5,'speed':Math[_0x386236(0x26c)]()*0.25+0.08,'opacity':Math[_0x386236(0x26c)]()*0.2+0.04,'drift':(Math[_0x386236(0x26c)]()-0.5)*0.2});function _0x209774(){var _0x51bc48=_0x386236;_0x345066[_0x51bc48(0x345)](0x0,0x0,0xdc,_0x225a1e[_0x51bc48(0x4d0)]),_0x3c8a33[_0x51bc48(0x32b)](function(_0x59e290){var _0x1bb457=_0x51bc48;_0x345066['beginPath'](),_0x345066[_0x1bb457(0x3a1)](_0x59e290['x'],_0x59e290['y'],_0x59e290['r'],0x0,Math['PI']*0x2),_0x345066[_0x1bb457(0x47a)]=_0x1bb457(0x32e)+_0x59e290['opacity']+')',_0x345066['fill'](),_0x59e290['y']-=_0x59e290['speed'],_0x59e290['x']+=_0x59e290['drift'];_0x59e290['y']<-0xa&&(_0x59e290['y']=_0x225a1e[_0x1bb457(0x4d0)]+0xa,_0x59e290['x']=Math[_0x1bb457(0x26c)]()*0xdc);if(_0x59e290['x']<0x0||_0x59e290['x']>0xdc)_0x59e290[_0x1bb457(0x428)]*=-0x1;}),requestAnimationFrame(_0x209774);}_0x209774(),window[_0x386236(0x1da)]('resize',function(){var _0x31f785=_0x386236;_0x225a1e[_0x31f785(0x4d0)]=window[_0x31f785(0x551)];});}catch(_0x3ce36e){}}function svgEdit(){return'<svg\x20width=\x2214\x22\x20height=\x2214\x22\x20fill=\x22none\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22><path\x20d=\x22M11\x204H4a2\x202\x200\x200\x200-2\x202v14a2\x202\x200\x200\x200\x202\x202h14a2\x202\x200\x200\x200\x202-2v-7\x22/><path\x20d=\x22M18.5\x202.5a2.121\x202.121\x200\x200\x201\x203\x203L12\x2015l-4\x201\x201-4\x209.5-9.5z\x22/></svg>';}function svgTrash(){var _0x436699=_0x5d326d;return _0x436699(0x2a1);}function svgEye(){return'<svg\x20width=\x2214\x22\x20height=\x2214\x22\x20fill=\x22none\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22><path\x20d=\x22M1\x2012s4-8\x2011-8\x2011\x208\x2011\x208-4\x208-11\x208-11-8-11-8z\x22/><circle\x20cx=\x2212\x22\x20cy=\x2212\x22\x20r=\x223\x22/></svg>';}function svgTag(){return'<svg\x20width=\x2214\x22\x20height=\x2214\x22\x20fill=\x22none\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22><path\x20d=\x22M20.59\x2013.41l-7.17\x207.17a2\x202\x200\x200\x201-2.83\x200L2\x2012V2h10l8.59\x208.59a2\x202\x200\x200\x201\x200\x202.82z\x22/><line\x20x1=\x227\x22\x20y1=\x227\x22\x20x2=\x227.01\x22\x20y2=\x227\x22/></svg>';}function setHTML(_0x343660,_0x6b8240){var _0x4f95e0=_0x5d326d,_0x5de5c3=document[_0x4f95e0(0x30b)](_0x343660);if(_0x5de5c3)_0x5de5c3[_0x4f95e0(0x453)]=_0x6b8240;}function getVal(_0x306fb8){var _0x35df84=_0x5d326d,_0x494448=document[_0x35df84(0x30b)](_0x306fb8);return _0x494448?_0x494448[_0x35df84(0x413)]:'';}function setVal(_0x157761,_0xe35f92){var _0x5d5079=_0x5d326d,_0x40b085=document['getElementById'](_0x157761);if(_0x40b085)_0x40b085[_0x5d5079(0x413)]=_0xe35f92||'';}function resetForm(_0x6c7000){var _0x3bf36b=_0x5d326d,_0x54a671=document[_0x3bf36b(0x30b)](_0x6c7000);if(_0x54a671)_0x54a671[_0x3bf36b(0x305)]();}window['addEventListener'](_0x5d326d(0x58e),function(){var _0x47ba9d=_0x5d326d;appliquerCouleur(),initNotifSync(),renderNotifCloche(![]),initResponsive(),initParticles();var _0x17d163=document[_0x47ba9d(0x30b)](_0x47ba9d(0x2e1));if(_0x17d163)_0x17d163[_0x47ba9d(0x507)][_0x47ba9d(0x2b9)]=_0x47ba9d(0x439);var _0x5b4863=document['getElementById'](_0x47ba9d(0x60c));if(_0x5b4863)_0x5b4863[_0x47ba9d(0x1da)](_0x47ba9d(0x4ed),closeSidebar);var _0x5023da=document[_0x47ba9d(0x4b4)](_0x47ba9d(0x575));_0x5023da&&(_0x5023da[_0x47ba9d(0x1da)](_0x47ba9d(0x3e8),function(_0x218f41){if(_0x218f41['key']==='Enter')globalSearch(this['value']);}),_0x5023da['addEventListener'](_0x47ba9d(0x4b8),function(){var _0x4923c6=_0x47ba9d;if(!this['value']){var _0x417b16=document[_0x4923c6(0x5f7)](_0x4923c6(0x3b2));_0x417b16[_0x4923c6(0x32b)](function(_0x335ee9){var _0x1b11ce=_0x4923c6;_0x335ee9[_0x1b11ce(0x507)][_0x1b11ce(0x2b9)]='';});}}));var _0x16b58b=document['getElementById'](_0x47ba9d(0x51e));if(_0x16b58b)_0x16b58b[_0x47ba9d(0x1da)](_0x47ba9d(0x3e8),function(_0x49d961){var _0x4f0859=_0x47ba9d;if(_0x49d961['key']===_0x4f0859(0x348))simulateScan();});renderCatOptions(_0x47ba9d(0x50d),![]),renderCatOptions(_0x47ba9d(0x36a)),[_0x47ba9d(0x510),'cs-titre',_0x47ba9d(0x446),_0x47ba9d(0x5b5)][_0x47ba9d(0x32b)](function(_0x1d90f6){var _0x376338=_0x47ba9d,_0x11814f=document[_0x376338(0x30b)](_0x1d90f6);if(!_0x11814f)return;var _0x4890f4=_0x11814f[_0x376338(0x3f6)]===_0x376338(0x5b1)?_0x376338(0x42e):'input';_0x11814f[_0x376338(0x1da)](_0x4890f4,function(){var _0x40d2fb=_0x376338,_0x50316b=getVal(_0x40d2fb(0x510))||'info',_0x4424ff=getVal('cs-titre')||_0x40d2fb(0x448),_0x5407ee=getVal(_0x40d2fb(0x446))||_0x40d2fb(0x445),_0x13f868=getVal(_0x40d2fb(0x5b5))||_0x40d2fb(0x34c),_0x4b28a2=document['getElementById']('cs-preview-icone'),_0x245d73=document[_0x40d2fb(0x30b)]('cs-preview-titre'),_0x299b4b=document['getElementById'](_0x40d2fb(0x2bf)),_0x2f5602=_0x4b28a2&&_0x4b28a2[_0x40d2fb(0x3f7)];if(_0x4b28a2)_0x4b28a2['innerHTML']=svgConseil(_0x50316b);if(_0x245d73)_0x245d73[_0x40d2fb(0x377)]=_0x4424ff;if(_0x299b4b)_0x299b4b[_0x40d2fb(0x377)]=_0x5407ee;if(_0x2f5602)_0x2f5602[_0x40d2fb(0x507)][_0x40d2fb(0x319)]=_0x13f868;});}),currentPage=pageMemorisee();var _0x5ea5a1=document[_0x47ba9d(0x30b)]('page-'+currentPage);if(_0x5ea5a1)_0x5ea5a1[_0x47ba9d(0x593)][_0x47ba9d(0x20f)](_0x47ba9d(0x23f));majEnTetePage(currentPage),setTimeout(function(){renderPage(currentPage);},0x64);if(ADMIN_CLOUD)PharmaAdminCloud[_0x47ba9d(0x5f4)]();});
+// ============================================================
+// PHARMACIE DÉMO — Back-office JS
+// ============================================================
+
+// ── DONNÉES PARTAGÉES ───────────────────────────────────────
+// DATA vient désormais de data.js (PharmaStore), partagé avec site.html et compte.html via localStorage.
+var DATA = PharmaStore.load();
+
+// Sauvegarde DATA dans localStorage — à appeler après chaque modification.
+function persist() {
+  PharmaStore.save(DATA);
+  updateNavBadges();
+  if (typeof renderNotifCloche === 'function') renderNotifCloche(false);
+}
+
+var currentUser = { nom: 'Admin Principal', role: 'Admin' };
+// Mode base de données (cloud-admin.js) : connexion obligatoire, données lues et enregistrées dans Supabase
+var ADMIN_CLOUD = (typeof PharmaAdminCloud !== 'undefined') && PharmaAdminCloud.actif;
+var currentPage = 'dashboard';
+
+// Échappe une chaîne destinée à être injectée dans un attribut onclick="...('...')".
+// Sans cela, un nom contenant une apostrophe (L'Oréal, N'Guyen) casse le HTML généré
+// et rend les boutons de la ligne inopérants.
+function escAttr(str) {
+  return String(str == null ? '' : str)
+    .replace(/\\/g, '\\\\')
+    .replace(/'/g, "\\'")
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\r/g, '\\r')
+    .replace(/\n/g, '\\n')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
+}
+
+// Échappe une chaîne affichée dans du HTML (innerHTML), pour qu'un nom
+// contenant < ou > s'affiche tel quel au lieu d'être interprété.
+function escHtml(str) {
+  return String(str == null ? '' : str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Nombre sûr : une valeur manquante ou enregistrée en texte (« 8.40 ») ne fait pas planter l'affichage
+function nombre(v) { var n = Number(v); return isFinite(n) ? n : 0; }
+
+// Couleur CSS sûre : seules les couleurs hexadécimales sont acceptées (sinon couleur par défaut),
+// pour qu'une valeur saisie ne puisse pas injecter du style ou du code dans un attribut.
+function couleurSure(c, defaut) {
+  return /^#[0-9a-fA-F]{3,8}$/.test(String(c || '')) ? c : (defaut || '#1B6B45');
+}
+
+// Abrège un nom en "Prénom N." — tolère un nom en un seul mot ou vide.
+function abregerNom(nom) {
+  var parts = (nom || '').trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return 'Client';
+  if (parts.length === 1) return parts[0];
+  return parts[0] + ' ' + parts[1].charAt(0) + '.';
+}
+
+// Formate le nom de l'utilisateur courant en "Prénom N." — tolère un nom en un seul mot.
+function nomValideur() {
+  return abregerNom(currentUser.nom);
+}
+
+// ── NORMALISATION (accents/casse) ───────────────────────────
+function normalize(str) {
+  return (str||'').toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9 ]/g, '');
+}
+
+function searchMatch(text, query) {
+  if (!query) return true;
+  var t = normalize(text), q = normalize(query);
+  if (t.includes(q)) return true;
+  // tolérance partielle
+  var words = q.split(' ');
+  return words.every(function(w) { return t.includes(w); });
+}
+
+// ── NAVIGATION ──────────────────────────────────────────────
+var PAGE_META = {
+  dashboard:     { title:'Tableau de bord',        cta:null },
+  produits:      { title:'Produits',               cta:{ label:'Nouveau produit', fn:'openModal("m-produit")' } },
+  rayons:        { title:'Rayons',                 cta:{ label:'Nouveau rayon', fn:'nouveauRayon()' } },
+  promos:        { title:'Promotions',             cta:{ label:'Nouvelle promo', fn:'nouvellePromo()' } },
+  'codes-promo': { title:'Codes Promo & Fidélité', cta:{ label:'Générer un code', fn:'regenCode()' } },
+  conseils:      { title:'Conseils & Raccourcis',  cta:{ label:'Nouveau conseil', fn:'openModal("m-conseil");document.getElementById("cs-id").value=""' } },
+  stocks:        { title:'Stocks',                 cta:null },
+  commandes:     { title:'Commandes',              cta:null },
+  tickets:       { title:'Tickets Support',        cta:null },
+  clients:       { title:'Clients',                cta:{ label:'Nouveau client', fn:'openModal("m-client")' } },
+  notifications: { title:'Notifications',          cta:null },
+  rapport:       { title:'Rapport hebdomadaire',   cta:null },
+  scan:          { title:'Validation Scan',        cta:null },
+  employes:      { title:'Employés',               cta:{ label:'Nouvel employé', fn:'openModal("m-employe")' } },
+  messages:      { title:'Messages internes',      cta:null },
+  horaires:      { title:'Horaires & Gardes',      cta:{ label:'Jour spécial', fn:'openModal("m-garde")' } },
+  parametres:    { title:'Paramètres',             cta:null }
+};
+
+// Dernière page ouverte dans cet onglet : on la retrouve en revenant du site (même onglet, même session).
+// sessionStorage : oublié à la fermeture de l'onglet, rien n'est gardé d'une session à l'autre.
+var CLE_PAGE_ADMIN = 'pres-admin-page';
+function memoriserPage(id) { try { sessionStorage.setItem(CLE_PAGE_ADMIN, id); } catch (e) {} }
+function pageMemorisee() {
+  var id = null;
+  try { id = sessionStorage.getItem(CLE_PAGE_ADMIN); } catch (e) {}
+  return (id && PAGE_META[id] && document.getElementById('page-' + id)) ? id : 'dashboard';
+}
+// Titre, bouton principal et menu de la page affichée
+function majEnTetePage(id) {
+  var meta = PAGE_META[id] || { title:id, cta:null };
+  document.getElementById('page-title').textContent = meta.title;
+  var cta = document.getElementById('topbar-cta');
+  var ctaLbl = document.getElementById('topbar-cta-label');
+  if (meta.cta) {
+    cta.style.display = '';
+    ctaLbl.textContent = meta.cta.label;
+    cta.setAttribute('onclick', meta.cta.fn);
+  } else { cta.style.display = 'none'; }
+  document.querySelectorAll('.nav-item').forEach(function(n) {
+    var oc = n.getAttribute('onclick') || '';
+    n.classList.toggle('active', oc.indexOf("'"+id+"'") !== -1);
+  });
+}
+
+function go(id) {
+  // Vérif accès employé hors horaires
+  if (currentUser.role !== 'Admin' && !checkAcces()) {
+    showBlocage(); return;
+  }
+  if (id === currentPage) { if (isMobile()||isTablet()) closeSidebar(); return; }
+  var old = document.getElementById('page-' + currentPage);
+  if (old) {
+    old.style.transition = 'all 0.22s ease';
+    old.style.opacity = '0';
+    old.style.transform = 'translateX(-16px)';
+    setTimeout(function() { old.classList.remove('active'); old.style.cssText = ''; }, 220);
+  }
+  currentPage = id;
+  memoriserPage(id);
+  setTimeout(function() {
+    var np = document.getElementById('page-' + id);
+    if (np) {
+      np.style.opacity = '0';
+      np.style.transform = 'translateX(16px)';
+      np.classList.add('active');
+      requestAnimationFrame(function() {
+        np.style.transition = 'all 0.25s ease';
+        np.style.opacity = '1';
+        np.style.transform = 'translateX(0)';
+        setTimeout(function() { np.style.cssText = ''; }, 260);
+      });
+    }
+    majEnTetePage(id);
+    renderPage(id);
+    if (isMobile() || isTablet()) closeSidebar();
+  }, 230);
+}
+
+// ── RENDER PAGES ────────────────────────────────────────────
+function renderPage(id) {
+  switch(id) {
+    case 'dashboard':   renderDashboard(); break;
+    case 'produits':    renderProduits(); break;
+    case 'rayons':      renderRayonsAdmin(); break;
+    case 'promos':      renderPromos(); break;
+    case 'clients':     renderClients(); break;
+    case 'commandes':   renderCommandes(); break;
+    case 'tickets':     renderTickets(); break;
+    case 'employes':    renderEmployes(); break;
+    case 'conseils':    renderConseils(); break;
+    case 'stocks':      renderStocks(); break;
+    case 'codes-promo': renderCodesPromo(); break;
+    case 'rapport':     renderRapport(); break;
+    case 'notifications': renderNotifications(); break;
+    case 'messages':    renderMessages(); break;
+    case 'horaires':    renderHoraires(); break;
+    case 'parametres':  renderParametres(); break;
+    case 'scan':        renderScan(); break;
+  }
+}
+
+// ── DASHBOARD ───────────────────────────────────────────────
+function renderDashboard() {
+  var cmdAtt = DATA.commandes.filter(function(c){ return c.statut==='En préparation'; }).length;
+  var stockFaible = DATA.produits.filter(function(p){ return p.stock <= p.seuil; }).length;
+  var promosActives = DATA.promos.filter(function(p){ return p.statut==='Active'; }).length;
+  var ticketsOuverts = DATA.tickets.filter(function(t){ return t.statut==='Ouvert'||t.statut==='En cours'; }).length;
+  animCount('stat-commandes', cmdAtt);
+  animCount('stat-stocks', stockFaible);
+  animCount('stat-promos', promosActives);
+  animCount('stat-tickets', ticketsOuverts);
+  // Dernières commandes
+  var html = '';
+  DATA.commandes.slice(0,3).forEach(function(c) {
+    var bc = c.statut==='Prête'?'b-green':c.statut==='Retirée'?'b-blue':'b-orange';
+    html += '<tr><td><strong>'+escHtml(c.id)+'</strong></td><td><div class="td-main">'+escHtml(abregerNom(c.client))+'</div></td><td><span class="badge '+bc+'">'+escHtml(c.statut)+'</span></td><td><button class="act-btn" onclick="voirCommande(\''+escAttr(c.id)+'\')">'+svgEye()+'</button></td></tr>';
+  });
+  setHTML('dash-commandes', html);
+  // Tickets
+  var thtml = '';
+  DATA.tickets.slice(0,3).forEach(function(t) {
+    var bc = t.priorite==='Urgent'?'b-red pulse':'b-orange';
+    thtml += '<tr><td><div class="td-main">'+escHtml(t.sujet)+'</div><div class="td-sub">'+escHtml(t.type)+'</div></td><td>'+escHtml(t.client)+'</td><td><span class="badge '+bc+'">'+escHtml(t.priorite)+'</span></td></tr>';
+  });
+  setHTML('dash-tickets', thtml);
+  renderGardeTableauDeBord();
+  renderQuotaTableauDeBord();
+  // Messages non lus
+  var nonLus = DATA.messages.filter(function(m){ return !m.lu; }).length;
+  var msgBadge = document.getElementById('msg-badge');
+  if (msgBadge) msgBadge.textContent = nonLus > 0 ? nonLus : '';
+  if (msgBadge) msgBadge.style.display = nonLus > 0 ? '' : 'none';
+  updateNavBadges();
+}
+
+// Encadré « jours spéciaux » du tableau de bord : prochain jour de garde ou de fermeture réel
+function renderGardeTableauDeBord() {
+  var titre = document.getElementById('dash-garde-titre');
+  var texte = document.getElementById('dash-garde-texte');
+  if (!titre || !texte) return;
+  var auj = pharmaDateLocale();
+  var prochains = (DATA.joursSpeciaux || []).filter(function(j){ return j && String(j.date || '').slice(0, 10) >= auj; })
+    .sort(function(a, b){ return String(a.date) < String(b.date) ? -1 : 1; });
+  var bandeau = DATA.parametres.bandeauActif && DATA.parametres.bandeauMsg ? 'Bandeau actif sur le site' : 'Bandeau du site désactivé';
+  if (!prochains.length) {
+    titre.textContent = 'Aucun jour spécial à venir';
+    texte.textContent = bandeau;
+    return;
+  }
+  var j = prochains[0];
+  var d = String(j.date).slice(0, 10).split('-');
+  var date = d.length === 3 ? d[2] + '/' + d[1] + '/' + d[0] : j.date;
+  titre.textContent = (j.type === 'Fermeture' ? 'Fermeture exceptionnelle' : (j.type || 'Jour spécial')) + ' — ' + date;
+  texte.textContent = (j.type === 'Fermeture' ? 'Pharmacie fermée' : 'Horaires : ' + (j.debut || '?') + ' – ' + (j.fin || '?')) + ' · ' + bandeau;
+}
+
+// Badges de la sidebar : reflètent le nombre réel d'éléments nécessitant une action.
+function updateNavBadges() {
+  var enAttente = DATA.commandes.filter(function(c){ return c.statut === 'En préparation'; }).length;
+  var ticketsOuverts = DATA.tickets.filter(function(t){ return t.statut === 'Ouvert' || t.statut === 'En cours'; }).length;
+  [['badge-commandes', enAttente], ['badge-tickets', ticketsOuverts]].forEach(function(pair) {
+    var el = document.getElementById(pair[0]);
+    if (!el) return;
+    el.textContent = pair[1];
+    el.style.display = pair[1] > 0 ? '' : 'none';
+  });
+}
+
+// ── PRODUITS ────────────────────────────────────────────────
+function renderProduits(filtre, cat) {
+  var html = '';
+  // Filtre de stock (Normal / Faible / Rupture), mêmes seuils que les badges du tableau
+  var stockEl = document.getElementById('filter-stock-produits');
+  var etatStock = stockEl ? stockEl.value : '';
+  var list = DATA.produits.filter(function(p) {
+    var matchSearch = !filtre || searchMatch(p.nom+' '+p.ref+' '+p.cat, filtre);
+    var matchCat = !cat || cat === 'Toutes' || p.cat === cat;
+    var matchStock = !etatStock
+      || (etatStock === 'rupture' && p.stock <= 0)
+      || (etatStock === 'faible' && p.stock > 0 && p.stock <= p.seuil)
+      || (etatStock === 'ok' && p.stock > p.seuil);
+    return matchSearch && matchCat && matchStock;
+  });
+  if (list.length === 0) {
+    html = '<tr><td colspan="6" style="text-align:center;padding:30px;color:var(--texte-3)">Aucun produit trouvé</td></tr>';
+  }
+  list.forEach(function(p) {
+    var pct = Math.round(p.stock / Math.max(p.stock + p.seuil, 1) * 100);
+    var bc = p.stock <= 0 ? 'b-red' : p.stock <= p.seuil ? 'b-or' : 'b-green';
+    var label = p.stock <= 0 ? 'Rupture' : p.stock <= p.seuil ? 'Stock faible' : 'Disponible';
+    var barColor = p.stock <= 0 ? 'var(--rouge)' : p.stock <= p.seuil ? 'var(--or)' : 'var(--vert-vif)';
+    html += '<tr>';
+    html += '<td><div class="td-main">'+escHtml(p.nom)+'</div><div class="td-sub">Réf. '+escHtml(p.ref)+'</div></td>';
+    html += '<td><span class="badge b-grey">'+escHtml(p.cat)+'</span></td>';
+    html += '<td>'+nombre(p.prix).toFixed(2)+'€</td>';
+    html += '<td><div class="flex-gap"><span style="min-width:24px;color:'+(p.stock<=0?'var(--rouge)':p.stock<=p.seuil?'var(--or)':'')+'">'+p.stock+'</span><div class="progress" style="width:70px"><div class="progress-fill" style="width:'+Math.min(pct,100)+'%;background:'+barColor+'"></div></div></div></td>';
+    html += '<td><span class="badge '+bc+'">'+label+'</span></td>';
+    html += '<td class="actions-cell"><div><button class="act-btn" onclick="editProduit('+p.id+')" title="Modifier">'+svgEdit()+'</button><button class="act-btn" onclick="nouvellePromo(\''+escAttr(p.nom)+'\')" title="Créer promo">'+svgTag()+'</button><button class="act-btn" style="color:var(--rouge)" onclick="deleteProduit('+p.id+',\''+escAttr(p.nom)+'\')" title="Supprimer">'+svgTrash()+'</button></div></td>';
+    html += '</tr>';
+  });
+  setHTML('tbody-produits', html);
+  // Mettre à jour les catégories du filtre
+  renderCatOptions('filter-cat-produits');
+}
+
+// Alimente un <select> de catégories.
+// avecToutes : true pour un filtre (ajoute « Toutes catégories »),
+// false pour un formulaire de saisie — sinon un produit pourrait être
+// enregistré avec la catégorie littérale « Toutes », qui n'existe pas
+// et le rendrait introuvable dans les filtres du catalogue client.
+function renderCatOptions(elId, avecToutes) {
+  var el = document.getElementById(elId);
+  if (!el) return;
+  var val = el.value;
+  el.innerHTML = (avecToutes === false) ? '' : '<option value="Toutes">Toutes catégories</option>';
+  DATA.categories.forEach(function(c) {
+    el.innerHTML += '<option value="'+escAttr(c)+'"'+(val===c?' selected':'')+'>'+escHtml(c)+'</option>';
+  });
+}
+
+function editProduit(id) {
+  var p = DATA.produits.find(function(x){ return x.id===id; });
+  if (!p) return;
+  setVal('p-nom', p.nom); setVal('p-ref', p.ref);
+  setVal('p-prix', p.prix); setVal('p-stock', p.stock);
+  setVal('p-seuil', p.seuil); setVal('p-desc', p.desc);
+  var catSel = document.getElementById('p-cat');
+  if (catSel) catSel.value = p.cat;
+  document.getElementById('p-id').value = id;
+  document.getElementById('m-produit-title').textContent = 'Modifier — ' + p.nom;
+  reinitialiserPhotoProduit();
+  majChampPhotoProduit(p.photo);
+  openModal('m-produit');
+}
+
+function saveProduit() {
+  var id = parseInt(document.getElementById('p-id').value);
+  var nom = getVal('p-nom');
+  var newCat = getVal('p-new-cat').trim();
+  var cat = newCat || getVal('p-cat');
+  if (newCat && !DATA.categories.includes(newCat)) DATA.categories.push(newCat);
+  if (!nom || !nom.trim()) { toast('Le nom est obligatoire', 'error'); return; }
+  nom = nom.trim();
+  var prix = parseFloat(String(getVal('p-prix')).replace(',', '.'));
+  var stockSaisi = getVal('p-stock') === '' ? 0 : Number(getVal('p-stock'));
+  var seuilSaisi = getVal('p-seuil') === '' ? 10 : Number(getVal('p-seuil'));
+  if (!isFinite(prix) || prix <= 0) { toast('Indiquez un prix supérieur à 0', 'error'); return; }
+  if (!Number.isInteger(stockSaisi) || stockSaisi < 0) { toast('Le stock doit être un nombre entier positif ou nul', 'error'); return; }
+  if (!Number.isInteger(seuilSaisi) || seuilSaisi < 0) { toast('Le seuil d\'alerte doit être un nombre entier positif ou nul', 'error'); return; }
+  prix = Math.round(prix * 100) / 100;
+  if (DATA.produits.some(function(x){ return x.id !== id && String(x.nom).trim().toLowerCase() === nom.toLowerCase(); })) {
+    toast('Un produit porte déjà ce nom', 'error'); return;
+  }
+  if (photoProduit.envoi) { toast('Patientez : la photo est en cours d\'envoi', 'error'); return; }
+  var photo = pharmaPhotoValide(getVal('p-photo'));
+  var cible = null, anciennePhoto = '';
+  if (id) {
+    var p = DATA.produits.find(function(x){ return x.id===id; });
+    if (p) { anciennePhoto = p.photo || ''; p.nom=nom; p.ref=getVal('p-ref'); p.cat=cat; p.prix=prix; p.stock=stockSaisi; p.seuil=seuilSaisi; p.desc=getVal('p-desc'); p.photo=photo; cible = p; }
+  } else {
+    var newId = DATA.produits.length ? Math.max.apply(null, DATA.produits.map(function(x){return x.id;})) + 1 : 1;
+    cible = { id:newId, nom:nom, ref:getVal('p-ref'), cat:cat, prix:prix, stock:stockSaisi, seuil:seuilSaisi, desc:getVal('p-desc'), photo:photo };
+    DATA.produits.push(cible);
+  }
+  // Mode démonstration : mémoire du navigateur pleine, le produit est gardé sans la nouvelle photo
+  var sansPhoto = false;
+  if (!ADMIN_CLOUD && cible && photo && photo !== anciennePhoto && !PharmaStore.save(DATA)) {
+    cible.photo = anciennePhoto; sansPhoto = true;
+  }
+  if (sansPhoto) toast('Produit enregistré sans la photo : la mémoire de ce navigateur est pleine', 'error');
+  else toast(id ? 'Produit modifié avec succès' : 'Produit ajouté avec succès');
+  closeModal('m-produit');
+  renderProduits();
+  resetForm('form-produit');
+  persist();
+}
+
+function deleteProduit(id, nom) {
+  confirmer('Supprimer le produit "'+escHtml(nom)+'" ?', function() {
+    DATA.produits = DATA.produits.filter(function(p){ return p.id !== id; });
+    // Le produit sort aussi des rayons où il avait été ajouté
+    Object.keys(DATA.contenuRayons || {}).forEach(function(c) {
+      if (Array.isArray(DATA.contenuRayons[c])) DATA.contenuRayons[c] = DATA.contenuRayons[c].filter(function(x) { return x !== id; });
+    });
+    renderProduits();
+    toast(nom+' supprimé');
+    persist();
+  });
+}
+
+// ── PHOTOS DES PRODUITS ET DES RAYONS ───────────────────────
+// La photo choisie (ou prise avec le téléphone) est réduite dans le navigateur avant l'envoi :
+// une photo de 4 Mo devient un fichier d'environ 100 Ko, affiché rapidement sur le site.
+//  * mode base de données : elle est envoyée dans le dossier « photos » de Supabase ;
+//  * mode démonstration : elle est gardée dans ce navigateur (place limitée).
+var PHOTO_LOCAL_TOTAL_MAX = 2500000;   // démonstration : il faut laisser de la place aux commandes
+var SVG_PHOTO = '<svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>';
+function photoCloud() { return ADMIN_CLOUD; }
+
+function redimensionnerPhoto(fichier, cote, qualite) {
+  return new Promise(function(ok, ko) {
+    if (!fichier || !/^image\//.test(fichier.type || '')) { ko(new Error('Choisissez une image (photo JPEG, PNG ou WebP).')); return; }
+    if (fichier.size > 25 * 1024 * 1024) { ko(new Error('Image trop lourde (25 Mo au maximum).')); return; }
+    var adresse = URL.createObjectURL(fichier);
+    var img = new Image();
+    img.onload = function() {
+      URL.revokeObjectURL(adresse);
+      var w = img.naturalWidth, h = img.naturalHeight;
+      if (!w || !h) { ko(new Error('Image illisible.')); return; }
+      var r = Math.min(1, cote / Math.max(w, h));
+      var c = document.createElement('canvas');
+      c.width = Math.max(1, Math.round(w * r));
+      c.height = Math.max(1, Math.round(h * r));
+      var ctx = c.getContext('2d');
+      ctx.fillStyle = '#fff';               // fond blanc pour les images transparentes (PNG)
+      ctx.fillRect(0, 0, c.width, c.height);
+      ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+      ok(c);
+    };
+    img.onerror = function() { URL.revokeObjectURL(adresse); ko(new Error('Format d\'image non reconnu : utilisez une photo JPEG, PNG ou WebP.')); };
+    img.src = adresse;
+  });
+}
+
+// Place occupée par les photos gardées dans le navigateur (mode démonstration)
+function poidsPhotosLocales(sauf) {
+  var total = 0;
+  (DATA.produits || []).forEach(function(p) { if (p.photo && p.photo !== sauf && /^data:/.test(p.photo)) total += p.photo.length; });
+  Object.keys(DATA.photosRayons || {}).forEach(function(k) { var v = DATA.photosRayons[k]; if (v && v !== sauf && /^data:/.test(v)) total += String(v).length; });
+  return total;
+}
+
+// Prépare la photo et renvoie son adresse (promesse). remplace : photo actuelle, qui libère sa place.
+function preparerPhoto(fichier, dossier, remplace) {
+  if (photoCloud()) {
+    return redimensionnerPhoto(fichier, 1000, 0.82).then(function(c) {
+      return new Promise(function(ok, ko) {
+        c.toBlob(function(b) { b ? ok(b) : ko(new Error('Conversion de la photo impossible.')); }, 'image/jpeg', 0.82);
+      });
+    }).then(function(b) { return b.arrayBuffer(); }).then(function(octets) {
+      return PharmaAdminCloud.envoyerPhoto(octets, dossier);
+    });
+  }
+  return redimensionnerPhoto(fichier, 640, 0.78).then(function(c) {
+    var url = c.toDataURL('image/jpeg', 0.78);
+    if (!pharmaPhotoValide(url)) url = c.toDataURL('image/jpeg', 0.55);
+    if (!pharmaPhotoValide(url)) throw new Error('Photo trop détaillée : essayez une autre image.');
+    if (poidsPhotosLocales(remplace) + url.length > PHOTO_LOCAL_TOTAL_MAX) {
+      throw new Error('Mode démonstration : la place réservée aux photos dans ce navigateur est pleine. Retirez une photo, ou reliez le site à la base de données.');
+    }
+    return url;
+  });
+}
+
+function afficherApercuPhoto(el, url, avecAlt) {
+  if (!el) return;
+  var u = pharmaPhotoValide(url);
+  el.innerHTML = '';
+  if (!u) { el.innerHTML = SVG_PHOTO; return; }
+  var img = document.createElement('img');
+  img.alt = avecAlt || '';
+  img.src = u;
+  el.appendChild(img);
+}
+
+// Champ « Photo du produit » de la fenêtre Produit
+var photoProduit = { jeton: 0, envoi: false };
+function etatPhotoProduit(msg, erreur) {
+  var el = document.getElementById('p-photo-etat');
+  if (!el) return;
+  el.textContent = msg || '';
+  el.classList.toggle('erreur', !!erreur);
+}
+function majChampPhotoProduit(url) {
+  var u = pharmaPhotoValide(url);
+  setVal('p-photo', u);
+  afficherApercuPhoto(document.getElementById('p-photo-apercu'), u);
+  var retirer = document.getElementById('p-photo-retirer');
+  if (retirer) retirer.hidden = !u;
+  var txt = document.getElementById('p-photo-choisir-txt');
+  if (txt) txt.textContent = u ? 'Changer la photo' : 'Ajouter une photo';
+}
+function reinitialiserPhotoProduit() {
+  photoProduit.jeton++;
+  photoProduit.envoi = false;
+  majChampPhotoProduit('');
+  etatPhotoProduit('Photo sur fond blanc de préférence. Elle est réduite automatiquement.');
+  var a = document.getElementById('p-photo-apercu');
+  if (a) a.classList.remove('charge');
+}
+function choisirPhotoProduit(fichier) {
+  if (!fichier) return;
+  var jeton = ++photoProduit.jeton;
+  var avant = getVal('p-photo');
+  photoProduit.envoi = true;
+  var apercu = document.getElementById('p-photo-apercu');
+  if (apercu) apercu.classList.add('charge');
+  etatPhotoProduit(photoCloud() ? 'Envoi de la photo…' : 'Préparation de la photo…');
+  preparerPhoto(fichier, 'produits', avant).then(function(url) {
+    if (jeton !== photoProduit.jeton) return;   // fenêtre fermée ou autre photo choisie entre-temps
+    photoProduit.envoi = false;
+    if (apercu) apercu.classList.remove('charge');
+    majChampPhotoProduit(url);
+    etatPhotoProduit('Photo prête : cliquez sur Sauvegarder pour l\'enregistrer.');
+    verifierAffichagePhoto(apercu, etatPhotoProduit);
+  }, function(e) {
+    if (jeton !== photoProduit.jeton) return;
+    photoProduit.envoi = false;
+    if (apercu) apercu.classList.remove('charge');
+    etatPhotoProduit('Photo non ajoutée : ' + ((e && e.message) || 'erreur inconnue'), true);
+  });
+}
+// Mode base de données : la photo envoyée doit pouvoir s'afficher (dossier « photos » public)
+function verifierAffichagePhoto(conteneur, signaler) {
+  var img = conteneur && conteneur.querySelector('img');
+  if (!img || !photoCloud()) return;
+  img.addEventListener('error', function() {
+    signaler('La photo est envoyée mais ne s\'affiche pas : dans Supabase, menu Storage, le dossier « photos » doit être public (Edit bucket, Public bucket).', true);
+  }, { once: true });
+}
+
+// Photos des rayons : gérées dans la page Rayons (une photo par rayon, affichée sur l'accueil)
+var photoRayons = { envoi: {} };
+function renderPhotosRayons() { if (typeof renderRayonsAdmin === 'function') renderRayonsAdmin(); }
+function etatTuileRayon(cat, msg, erreur) {
+  var i = (DATA.categories || []).indexOf(cat);
+  var el = document.querySelector('#liste-rayons .rayon-ligne[data-index="' + i + '"] .photo-etat');
+  if (!el) return;
+  el.textContent = msg; el.classList.toggle('erreur', !!erreur);
+}
+function choisirPhotoRayon(cat, fichier) {
+  photoRayons.envoi[cat] = true;
+  renderPhotosRayons();
+  etatTuileRayon(cat, photoCloud() ? 'Envoi de la photo…' : 'Préparation de la photo…');
+  preparerPhoto(fichier, 'rayons', pharmaPhotoRayon(DATA, cat)).then(function(url) {
+    delete photoRayons.envoi[cat];
+    enregistrerPhotoRayon(cat, url);
+  }, function(e) {
+    delete photoRayons.envoi[cat];
+    renderPhotosRayons();
+    etatTuileRayon(cat, 'Photo non ajoutée : ' + ((e && e.message) || 'erreur inconnue'), true);
+  });
+}
+function enregistrerPhotoRayon(cat, url) {
+  if ((DATA.categories || []).indexOf(cat) === -1) { renderPhotosRayons(); return; }   // rayon supprimé entre-temps
+  if (!DATA.photosRayons || typeof DATA.photosRayons !== 'object') DATA.photosRayons = {};
+  var avant = DATA.photosRayons[cat];
+  if (url) DATA.photosRayons[cat] = url; else delete DATA.photosRayons[cat];
+  if (!photoCloud() && !PharmaStore.save(DATA)) {
+    if (avant) DATA.photosRayons[cat] = avant; else delete DATA.photosRayons[cat];
+    renderPhotosRayons();
+    etatTuileRayon(cat, 'Photo non enregistrée : la mémoire de ce navigateur est pleine.', true);
+    return;
+  }
+  persist();
+  renderPhotosRayons();
+  toast(url ? 'Photo du rayon ' + cat + ' enregistrée' : 'Photo du rayon ' + cat + ' retirée');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  var f = document.getElementById('p-photo-fichier');
+  if (f) f.addEventListener('change', function() {
+    if (f.files && f.files[0]) choisirPhotoProduit(f.files[0]);
+    f.value = '';   // la même photo peut être choisie à nouveau
+  });
+  var r = document.getElementById('p-photo-retirer');
+  if (r) r.addEventListener('click', function() {
+    photoProduit.jeton++;
+    photoProduit.envoi = false;
+    majChampPhotoProduit('');
+    etatPhotoProduit('Photo retirée : cliquez sur Sauvegarder pour confirmer.');
+  });
+  reinitialiserPhotoProduit();
+});
+document.addEventListener('pres-edition-fermee', function(ev) {
+  if (ev.detail === 'm-produit') reinitialiserPhotoProduit();
+});
+
+// ── RAYONS : ordre, nom, photo et produits ──────────────────
+// L'ordre des rayons est celui du site (accueil, menu, filtres du catalogue). Chaque rayon a sa page sur
+// le site. Un produit est toujours dans son rayon principal (fenêtre du produit) et peut être ajouté à
+// d'autres rayons ici. L'ordre des produits d'un rayon est celui de sa page.
+var rayonOuvert = null;
+var rechercheAjoutRayon = '';
+var SVG_POIGNEE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg>';
+var SVG_PHOTO_PETIT = '<svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>';
+var SVG_CHEVRON = '<svg class="chevron" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>';
+
+function nomRayonValide(nom, ancien) {
+  var n = String(nom == null ? '' : nom).trim().replace(/\s+/g, ' ');
+  if (!n) return { erreur: 'Indiquez le nom du rayon' };
+  if (n.length > 60) return { erreur: 'Le nom du rayon fait 60 caractères au plus' };
+  if ((DATA.categories || []).some(function(c) { return c !== ancien && c.toLowerCase() === n.toLowerCase(); })) return { erreur: 'Un rayon porte déjà ce nom' };
+  return { nom: n };
+}
+
+function renderRayonsAdmin() {
+  var ul = document.getElementById('liste-rayons');
+  if (!ul) return;
+  var cats = DATA.categories || [];
+  if (rayonOuvert && cats.indexOf(rayonOuvert) === -1) rayonOuvert = null;
+  if (!cats.length) { ul.innerHTML = '<li class="rayons-aide">Aucun rayon pour l\'instant : créez-en un avec « Nouveau rayon ».</li>'; return; }
+  var focusVisible = document.activeElement && document.activeElement.getAttribute('data-action') === 'visible'
+    ? document.activeElement.closest('.rayon-ligne').getAttribute('data-index') : null;
+  ul.innerHTML = cats.map(function(c, i) {
+    var n = pharmaProduitsDuRayon(DATA, c).length;
+    var ouvert = c === rayonOuvert, enCours = !!photoRayons.envoi[c];
+    var visible = pharmaRayonVisible(DATA, c);
+    var etat = (n ? n + ' produit' + (n > 1 ? 's' : '') : 'Aucun produit') + (!visible ? ' · masqué sur le site' : (n ? '' : ' : pas encore sur le site'));
+    return '<li class="rayon-ligne' + (ouvert ? ' ouvert' : '') + (visible ? '' : ' masque') + '" data-index="' + i + '">'
+      + '<div class="rayon-tete">'
+      + '<button type="button" class="poignee" aria-label="' + escHtml('Déplacer le rayon ' + c + ' : glisser, ou flèches haut et bas') + '">' + SVG_POIGNEE + '</button>'
+      + '<div class="photo-apercu' + (enCours ? ' charge' : '') + '" aria-hidden="true"></div>'
+      + '<button type="button" class="rayon-ouvrir" aria-expanded="' + ouvert + '"><strong>' + escHtml(c) + '</strong><span>' + etat + '</span></button>'
+      + '<div class="rayon-actions">'
+      + '<label class="toggle-wrap toggle-acc rayon-visible" title="Afficher ce rayon sur le site"><input type="checkbox" class="toggle-input" data-action="visible"' + (visible ? ' checked' : '') + ' aria-label="' + escHtml('Afficher le rayon ' + c + ' sur le site') + '"><span class="toggle-track"></span><span class="toggle-txt">Sur le site</span></label>'
+      + '<label class="btn btn-ghost photo-choisir" title="Photo du rayon"><input type="file" class="vh-input" accept="image/*" aria-label="' + escHtml('Photo du rayon ' + c) + '"' + (enCours ? ' disabled' : '') + '>' + SVG_PHOTO_PETIT + '<span>' + (enCours ? 'Envoi…' : 'Photo') + '</span></label>'
+      + '<button type="button" class="btn btn-ghost" data-action="renommer" aria-label="' + escHtml('Renommer le rayon ' + c) + '">' + svgEdit() + '<span>Renommer</span></button>'
+      + '<button type="button" class="btn btn-ghost" data-action="supprimer" style="color:var(--rouge)" aria-label="' + escHtml('Supprimer le rayon ' + c) + '">' + svgTrash() + '</button>'
+      + SVG_CHEVRON + '</div></div>'
+      + '<div class="photo-etat" role="status" aria-live="polite" style="padding:0 14px 0 50px"></div>'
+      + (ouvert ? detailRayonHTML(c) : '')
+      + '</li>';
+  }).join('');
+  ul.querySelectorAll('.rayon-ligne').forEach(function(li) {
+    var c = cats[parseInt(li.getAttribute('data-index'), 10)];
+    afficherApercuPhoto(li.querySelector('.photo-apercu'), pharmaPhotoRayon(DATA, c));
+    li.querySelector('.rayon-ouvrir').addEventListener('click', function() {
+      rayonOuvert = rayonOuvert === c ? null : c;
+      rechercheAjoutRayon = '';
+      renderRayonsAdmin();
+    });
+    var fichier = li.querySelector('input[type=file]');
+    fichier.addEventListener('change', function() { if (fichier.files && fichier.files[0]) choisirPhotoRayon(c, fichier.files[0]); });
+    li.querySelector('[data-action="renommer"]').addEventListener('click', function() { editerNomRayon(li, c); });
+    li.querySelector('[data-action="supprimer"]').addEventListener('click', function() { supprimerRayon(c); });
+    li.querySelector('[data-action="visible"]').addEventListener('change', function() { basculerRayonVisible(c, this.checked); });
+    if (c === rayonOuvert) brancherDetailRayon(li, c);
+  });
+  if (focusVisible !== null) {
+    var bouton = ul.querySelector('.rayon-ligne[data-index="' + focusVisible + '"] [data-action="visible"]');
+    if (bouton) bouton.focus();
+  }
+  rendreReordonnable(ul, '.rayon-ligne', function(de, vers) {
+    var avaitFocus = !!(document.activeElement && document.activeElement.classList.contains('poignee'));
+    var c = DATA.categories.splice(de, 1)[0];
+    DATA.categories.splice(vers, 0, c);
+    persist();
+    renderRayonsAdmin();
+    var p = document.querySelector('#liste-rayons .rayon-ligne[data-index="' + vers + '"] .rayon-tete .poignee');
+    if (p && avaitFocus) p.focus();
+  });
+}
+
+function detailRayonHTML(c) {
+  var produits = pharmaProduitsDuRayon(DATA, c);
+  var html = '<div class="rayon-detail"><h4>Produits du rayon, dans l\'ordre de sa page</h4>';
+  if (!produits.length) html += '<p class="rayons-aide">Aucun produit pour l\'instant. Ajoutez-en ci-dessous.</p>';
+  html += '<ul class="liste-produits-rayon">' + produits.map(function(p) {
+    var principal = p.cat === c;
+    return '<li class="produit-rayon" data-id="' + nombre(p.id) + '">'
+      + '<button type="button" class="poignee" aria-label="' + escHtml('Déplacer ' + p.nom + ' : glisser, ou flèches haut et bas') + '">' + SVG_POIGNEE + '</button>'
+      + '<span class="nom">' + escHtml(p.nom) + '</span>'
+      + (principal ? '<span class="badge-principal" title="Rayon choisi dans la fenêtre du produit">Rayon principal</span>'
+                   : '<button type="button" class="btn btn-ghost" data-retirer aria-label="' + escHtml('Retirer ' + p.nom + ' du rayon') + '">Retirer</button>')
+      + '</li>';
+  }).join('') + '</ul>';
+  if (pharmaPhotoRayon(DATA, c)) html += '<button type="button" class="btn btn-ghost" data-action="retirer-photo" style="margin-top:10px">Retirer la photo du rayon</button>';
+  html += '<div class="ajout-produits"><label for="ajout-rayon-recherche">Ajouter des produits</label>'
+    + '<input class="inp" id="ajout-rayon-recherche" type="search" placeholder="Rechercher un produit à ajouter..." autocomplete="off" value="' + escHtml(rechercheAjoutRayon) + '">'
+    + '<ul class="resultats-ajout" id="ajout-rayon-resultats"></ul></div></div>';
+  return html;
+}
+function resultatsAjoutRayon(c) {
+  var dans = pharmaProduitsDuRayon(DATA, c).map(function(p) { return p.id; });
+  var liste = (DATA.produits || []).filter(function(p) { return dans.indexOf(p.id) === -1 && searchMatch(p.nom + ' ' + p.ref + ' ' + p.cat, rechercheAjoutRayon); });
+  if (!liste.length) return '<li class="vide">' + (rechercheAjoutRayon ? 'Aucun produit trouvé' : 'Tous les produits sont déjà dans ce rayon') + '</li>';
+  return liste.slice(0, 30).map(function(p) {
+    return '<li data-id="' + nombre(p.id) + '"><span>' + escHtml(p.nom) + (p.cat ? ' <span style="color:var(--texte-3)">· ' + escHtml(p.cat) + '</span>' : '') + '</span>'
+      + '<button type="button" class="btn btn-ghost" aria-label="' + escHtml('Ajouter ' + p.nom + ' au rayon') + '">Ajouter</button></li>';
+  }).join('') + (liste.length > 30 ? '<li class="vide">… précisez la recherche pour voir les autres produits</li>' : '');
+}
+function brancherDetailRayon(li, c) {
+  var liste = li.querySelector('.liste-produits-rayon');
+  liste.querySelectorAll('[data-retirer]').forEach(function(b) {
+    b.addEventListener('click', function() { retirerDuRayon(c, nombre(b.closest('.produit-rayon').getAttribute('data-id'))); });
+  });
+  rendreReordonnable(liste, '.produit-rayon', function(de, vers) {
+    var avaitFocus = !!(document.activeElement && document.activeElement.classList.contains('poignee'));
+    var ids = pharmaProduitsDuRayon(DATA, c).map(function(p) { return p.id; });
+    var id = ids.splice(de, 1)[0];
+    ids.splice(vers, 0, id);
+    enregistrerContenuRayon(c, ids);
+    var p = document.querySelector('#liste-rayons .rayon-ligne.ouvert .produit-rayon:nth-child(' + (vers + 1) + ') .poignee');
+    if (p && avaitFocus) p.focus();
+  });
+  var retirerPhoto = li.querySelector('[data-action="retirer-photo"]');
+  if (retirerPhoto) retirerPhoto.addEventListener('click', function() { enregistrerPhotoRayon(c, ''); });
+  var champ = li.querySelector('#ajout-rayon-recherche');
+  var res = li.querySelector('#ajout-rayon-resultats');
+  function remplir() {
+    res.innerHTML = resultatsAjoutRayon(c);
+    res.querySelectorAll('li[data-id] button').forEach(function(b) {
+      b.addEventListener('click', function() { ajouterAuRayon(c, nombre(b.closest('li').getAttribute('data-id'))); });
+    });
+  }
+  champ.addEventListener('input', function() { rechercheAjoutRayon = champ.value; remplir(); });
+  remplir();
+}
+function enregistrerContenuRayon(c, ids) {
+  if (!DATA.contenuRayons || typeof DATA.contenuRayons !== 'object') DATA.contenuRayons = {};
+  DATA.contenuRayons[c] = ids;
+  persist();
+  renderRayonsAdmin();
+}
+function ajouterAuRayon(c, id) {
+  var ids = pharmaProduitsDuRayon(DATA, c).map(function(p) { return p.id; });
+  if (ids.indexOf(id) !== -1) return;
+  ids.push(id);
+  var p = DATA.produits.find(function(x) { return x.id === id; });
+  enregistrerContenuRayon(c, ids);
+  var champ = document.getElementById('ajout-rayon-recherche');
+  if (champ) champ.focus();
+  toast((p ? p.nom : 'Produit') + ' ajouté au rayon ' + c);
+}
+function retirerDuRayon(c, id) {
+  var p = DATA.produits.find(function(x) { return x.id === id; });
+  if (p && p.cat === c) { toast('C\'est le rayon principal de ce produit : changez-le dans la fenêtre du produit', 'error'); return; }
+  enregistrerContenuRayon(c, pharmaProduitsDuRayon(DATA, c).map(function(x) { return x.id; }).filter(function(x) { return x !== id; }));
+  toast((p ? p.nom : 'Produit') + ' retiré du rayon ' + c);
+}
+
+function nouveauRayon() {
+  openModal('m-rayon');
+  setTimeout(function() { var f = document.getElementById('ray-nom'); if (f) f.focus(); }, 80);
+}
+function creerRayon() {
+  var v = nomRayonValide(getVal('ray-nom'));
+  if (v.erreur) { toast(v.erreur, 'error'); return; }
+  DATA.categories.push(v.nom);
+  rayonOuvert = v.nom;
+  rechercheAjoutRayon = '';
+  closeModal('m-rayon');
+  persist();
+  if (currentPage === 'rayons') renderRayonsAdmin();
+  toast('Rayon ' + v.nom + ' créé : ajoutez-lui des produits');
+}
+
+// Renommer : les produits, la photo, l'ordre et les codes promo du rayon suivent le nouveau nom
+function editerNomRayon(li, c) {
+  var tete = li.querySelector('.rayon-ouvrir');
+  var bloc = document.createElement('form');
+  bloc.className = 'rayon-renommer';
+  bloc.innerHTML = '<input class="inp" maxlength="60" aria-label="' + escHtml('Nouveau nom du rayon ' + c) + '" value="' + escHtml(c) + '">'
+    + '<button type="submit" class="btn btn-primary">Enregistrer</button><button type="button" class="btn btn-ghost">Annuler</button>';
+  tete.replaceWith(bloc);
+  li.querySelector('.rayon-actions').style.display = 'none';
+  var champ = bloc.querySelector('input');
+  champ.focus(); champ.select();
+  bloc.querySelector('button[type=button]').addEventListener('click', renderRayonsAdmin);
+  champ.addEventListener('keydown', function(e) { if (e.key === 'Escape') renderRayonsAdmin(); });
+  bloc.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var v = nomRayonValide(champ.value, c);
+    if (v.erreur) { toast(v.erreur, 'error'); return; }
+    if (v.nom === c) { renderRayonsAdmin(); return; }
+    renommerRayon(c, v.nom);
+  });
+}
+// Bouton « Sur le site » d'un rayon : masqué, il disparaît du site (rayons, filtres, menu, sa page),
+// ses produits restent en vente dans « Tous » et dans leurs autres rayons
+function basculerRayonVisible(c, visible) {
+  if (!Array.isArray(DATA.rayonsMasques)) DATA.rayonsMasques = [];
+  DATA.rayonsMasques = DATA.rayonsMasques.filter(function(x) { return x !== c; });
+  if (!visible) DATA.rayonsMasques.push(c);
+  persist();
+  renderRayonsAdmin();
+  toast(visible ? 'Rayon ' + c + ' affiché sur le site' : 'Rayon ' + c + ' masqué sur le site : ses produits restent en vente');
+}
+function renommerRayon(ancien, nouveau) {
+  if (ADMIN_CLOUD) {
+    // Avec la base : renommé directement par la base, qui met à jour les produits en même temps
+    PharmaAdminCloud.renommerRayon(ancien, nouveau).then(function() {
+      if (rayonOuvert === ancien) rayonOuvert = nouveau;
+      renderRayonsAdmin();
+      toast('Rayon renommé : ' + nouveau);
+    }, function(e) { toast('Rayon non renommé : ' + ((e && e.message) || 'erreur inconnue'), 'error'); renderRayonsAdmin(); });
+    return;
+  }
+  DATA.categories = DATA.categories.map(function(c) { return c === ancien ? nouveau : c; });
+  DATA.produits.forEach(function(p) { if (p.cat === ancien) p.cat = nouveau; });
+  (DATA.codesPromo || []).forEach(function(k) { if (k.scope === ancien) k.scope = nouveau; });
+  if (Array.isArray(DATA.rayonsMasques)) DATA.rayonsMasques = DATA.rayonsMasques.map(function(x) { return x === ancien ? nouveau : x; });
+  ['photosRayons', 'contenuRayons'].forEach(function(cle) {
+    var o = DATA[cle];
+    if (o && Object.prototype.hasOwnProperty.call(o, ancien)) { o[nouveau] = o[ancien]; delete o[ancien]; }
+  });
+  if (rayonOuvert === ancien) rayonOuvert = nouveau;
+  persist();
+  renderRayonsAdmin();
+  toast('Rayon renommé : ' + nouveau);
+}
+function supprimerRayon(c) {
+  var principaux = DATA.produits.filter(function(p) { return p.cat === c; });
+  if (principaux.length) {
+    toast('Le rayon ' + c + ' est le rayon principal de ' + principaux.length + ' produit' + (principaux.length > 1 ? 's' : '') + ' : choisissez-leur d\'abord un autre rayon (fenêtre du produit)', 'error');
+    return;
+  }
+  var codes = (DATA.codesPromo || []).filter(function(k) { return k.scope === c; }).length;
+  confirmer('Supprimer le rayon « ' + escHtml(c) + ' » ?' + (codes ? '<br><span style="font-size:0.78rem;color:var(--texte-2)">' + codes + ' code' + (codes > 1 ? 's' : '') + ' promo porte' + (codes > 1 ? 'nt' : '') + ' sur ce rayon : il' + (codes > 1 ? 's' : '') + ' ne s\'appliquer' + (codes > 1 ? 'ont' : 'a') + ' plus à aucun produit.</span>' : ''), function() {
+    DATA.categories = DATA.categories.filter(function(x) { return x !== c; });
+    if (DATA.photosRayons) delete DATA.photosRayons[c];
+    if (DATA.contenuRayons) delete DATA.contenuRayons[c];
+    if (Array.isArray(DATA.rayonsMasques)) DATA.rayonsMasques = DATA.rayonsMasques.filter(function(x) { return x !== c; });
+    if (rayonOuvert === c) rayonOuvert = null;
+    persist();
+    renderRayonsAdmin();
+    toast('Rayon ' + c + ' supprimé');
+  });
+}
+
+// Glisser-déposer par la poignée, au doigt comme à la souris (l'élément suit le doigt et prend sa place
+// au passage), et au clavier : flèches haut et bas sur la poignée.
+function rendreReordonnable(liste, selecteur, surDeplacement) {
+  var elements = Array.prototype.filter.call(liste.children, function(el) { return el.matches(selecteur); });
+  elements.forEach(function(el, index) {
+    var poignee = el.querySelector('.poignee');
+    if (!poignee || poignee.closest(selecteur) !== el) return;
+    poignee.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowUp' && index > 0) { e.preventDefault(); surDeplacement(index, index - 1); }
+      else if (e.key === 'ArrowDown' && index < elements.length - 1) { e.preventDefault(); surDeplacement(index, index + 1); }
+    });
+    poignee.addEventListener('pointerdown', function(e) { glisser(e, liste, el, selecteur, surDeplacement, poignee); });
+  });
+}
+function glisser(e, liste, el, selecteur, surDeplacement, poignee) {
+  if (e.button !== undefined && e.button !== 0) return;
+  e.preventDefault();
+  var freres = function() { return Array.prototype.filter.call(liste.children, function(x) { return x.matches(selecteur); }); };
+  var depart = freres().indexOf(el);
+  var pageY0 = e.clientY + window.scrollY, haut0 = el.offsetTop, dernierY = e.clientY;
+  var defilement = null;
+  try { poignee.setPointerCapture(e.pointerId); } catch (err) {}
+  el.classList.add('en-glisser');
+  document.body.classList.add('glisser-actif');
+  function placer(clientY) {
+    dernierY = clientY;
+    var dy = clientY + window.scrollY - pageY0;
+    el.style.transform = 'translateY(' + (dy - (el.offsetTop - haut0)) + 'px)';
+    var r = el.getBoundingClientRect(), centre = r.top + r.height / 2;
+    var suivant = el.nextElementSibling, precedent = el.previousElementSibling;
+    if (suivant && suivant.matches(selecteur)) {
+      var rs = suivant.getBoundingClientRect();
+      if (centre > rs.top + rs.height / 2) { liste.insertBefore(suivant, el); placer(clientY); return; }
+    }
+    if (precedent && precedent.matches(selecteur)) {
+      var rp = precedent.getBoundingClientRect();
+      if (centre < rp.top + rp.height / 2) { liste.insertBefore(el, precedent); placer(clientY); return; }
+    }
+  }
+  // Près du haut ou du bas de l'écran, la page défile toute seule (longue liste sur téléphone)
+  function auBord() {
+    var v = dernierY < 70 ? -10 : (dernierY > window.innerHeight - 70 ? 10 : 0);
+    if (v) { window.scrollBy(0, v); placer(dernierY); }
+    defilement = requestAnimationFrame(auBord);
+  }
+  defilement = requestAnimationFrame(auBord);
+  // Écoute sur tout le document : déplacer la ligne dans la liste fait perdre la « capture » du pointeur
+  // à la poignée ; sans cela, un relâchement hors de la poignée laissait le glisser bloqué et l'ordre non enregistré.
+  function bouge(ev) { if (ev.pointerId === e.pointerId) placer(ev.clientY); }
+  function fin(ev) {
+    if (ev && ev.pointerId !== undefined && ev.pointerId !== e.pointerId) return;
+    cancelAnimationFrame(defilement);
+    document.removeEventListener('pointermove', bouge);
+    document.removeEventListener('pointerup', fin);
+    document.removeEventListener('pointercancel', fin);
+    el.classList.remove('en-glisser');
+    el.style.transform = '';
+    document.body.classList.remove('glisser-actif');
+    var arrivee = freres().indexOf(el);
+    if (arrivee !== depart && arrivee !== -1) surDeplacement(depart, arrivee);
+  }
+  document.addEventListener('pointermove', bouge);
+  document.addEventListener('pointerup', fin);
+  document.addEventListener('pointercancel', fin);
+}
+
+// ── CONSEILS PERSONNALISÉS ───────────────────────────────────
+function renderConseils() {
+  var html = '';
+  DATA.conseils.forEach(function(c) {
+    html += '<div class="conseil-card" style="border-left:4px solid '+couleurSure(c.couleur)+';background:var(--fond);border-radius:10px;padding:14px 16px;margin-bottom:10px;display:flex;align-items:center;gap:14px">';
+    html += '<div style="width:44px;height:44px;border-radius:11px;background:'+couleurSure(c.couleur)+';display:flex;align-items:center;justify-content:center;flex-shrink:0">'+svgConseil(c.icone)+'</div>';
+    html += '<div style="flex:1"><div style="font-weight:700;font-size:0.9rem">'+escHtml(c.titre)+'</div><div style="font-size:0.76rem;color:var(--texte-2);margin-top:2px">'+escHtml(c.texte)+'</div></div>';
+    html += '<div style="display:flex;align-items:center;gap:8px">';
+    html += '<label class="toggle-wrap"><input type="checkbox" class="toggle-input"'+(c.actif?' checked':'')+' onchange="toggleConseil('+c.id+',this.checked)"><span class="toggle-track"></span></label>';
+    html += '<button class="act-btn" onclick="editConseil('+c.id+')">'+svgEdit()+'</button>';
+    html += '<button class="act-btn" style="color:var(--rouge)" onclick="deleteConseil('+c.id+',\''+escAttr(c.titre)+'\')">'+svgTrash()+'</button>';
+    html += '</div></div>';
+  });
+  setHTML('conseils-list', html);
+}
+
+function editConseil(id) {
+  var c = DATA.conseils.find(function(x){ return x.id===id; });
+  if (!c) return;
+  setVal('cs-icone', c.icone || 'info');
+  setVal('cs-titre', c.titre);
+  setVal('cs-texte', c.texte);
+  setVal('cs-couleur', c.couleur);
+  document.getElementById('cs-id').value = id;
+  document.getElementById('m-conseil-title').textContent = 'Modifier le conseil';
+  openModal('m-conseil');
+}
+
+function saveConseil() {
+  var id = parseInt(document.getElementById('cs-id').value);
+  var icone = getVal('cs-icone') || 'info';
+  var titre = getVal('cs-titre');
+  var texte = getVal('cs-texte');
+  var couleur = getVal('cs-couleur')||'#1B6B45';
+  if (!titre) { toast('Le titre est obligatoire','error'); return; }
+  if (id) {
+    var c = DATA.conseils.find(function(x){ return x.id===id; });
+    if (c) { c.icone=icone; c.titre=titre; c.texte=texte; c.couleur=couleur; }
+    toast('Conseil modifié');
+  } else {
+    var nid = DATA.conseils.length ? Math.max.apply(null,DATA.conseils.map(function(x){return x.id;}))+1 : 1;
+    DATA.conseils.push({ id:nid, icone:icone, titre:titre, texte:texte, couleur:couleur, actif:true });
+    toast('Conseil ajouté — les 3 premiers conseils actifs s\'affichent sur l\'accueil du site');
+  }
+  closeModal('m-conseil');
+  renderConseils();
+  document.getElementById('cs-id').value='';
+  persist();
+}
+
+function toggleConseil(id, actif) {
+  var c = DATA.conseils.find(function(x){ return x.id===id; });
+  if (c) { c.actif=actif; toast(actif?'Conseil activé':'Conseil désactivé'); persist(); }
+}
+
+function deleteConseil(id, titre) {
+  confirmer('Supprimer le conseil "'+escHtml(titre)+'" ?', function() {
+    DATA.conseils = DATA.conseils.filter(function(c){ return c.id!==id; });
+    renderConseils(); toast('Conseil supprimé');
+    persist();
+  });
+}
+
+// ── PROMOS ──────────────────────────────────────────────────
+function renderPromos(filtre) {
+  var html = '';
+  var list = DATA.promos.filter(function(p) {
+    return !filtre || searchMatch(p.produit, filtre);
+  });
+  if (list.length === 0) html = '<tr><td colspan="7" style="text-align:center;padding:30px;color:var(--texte-3)">Aucune promotion</td></tr>';
+  list.forEach(function(p) {
+    var bc = p.statut==='Active'?'b-green':'b-grey';
+    html += '<tr><td><div class="td-main">'+escHtml(p.produit)+'</div>'+(p.miseEnAvant ? '<div class="td-sub">Mise en avant sur l\'accueil</div>' : '')+'</td>';
+    html += '<td>'+nombre(p.prixNormal).toFixed(2)+'€</td>';
+    html += '<td><strong>'+nombre(p.prixPromo).toFixed(2)+'€</strong></td>';
+    html += '<td><span class="badge b-vif">'+escHtml(p.pct)+'%</span></td>';
+    html += '<td>'+escHtml(p.fin)+'</td>';
+    html += '<td><span class="badge '+bc+'">'+escHtml(p.statut)+'</span></td>';
+    html += '<td class="actions-cell"><div><button class="act-btn" onclick="editPromo('+p.id+')">'+svgEdit()+'</button><button class="act-btn" style="color:var(--rouge)" onclick="deletePromo('+p.id+',\''+escAttr(p.produit)+'\')">'+svgTrash()+'</button></div></td></tr>';
+  });
+  setHTML('tbody-promos', html);
+}
+
+function editPromo(id) {
+  var p = DATA.promos.find(function(x){ return x.id===id; });
+  if (!p) return;
+  renderPromoProduitOptions(p.produit);
+  document.getElementById('pn').value = p.prixNormal;
+  document.getElementById('pp').value = p.prixPromo;
+  setVal('promo-debut', p.debut || '');
+  setVal('promo-fin', p.fin || '');
+  setVal('promo-qte', p.qte || 1);
+  var avant = document.getElementById('promo-avant');
+  if (avant) avant.checked = p.miseEnAvant === true;
+  document.getElementById('p-promo-id').value = id;
+  calcP();
+  openModal('m-promo');
+}
+
+// Remplit le select produit du modal promo avec les vrais produits du catalogue
+function renderPromoProduitOptions(selected) {
+  var el = document.getElementById('promo-produit');
+  if (!el) return;
+  var val = selected || el.value;
+  el.innerHTML = DATA.produits.map(function(p) {
+    return '<option value="'+escAttr(p.nom)+'"'+(val===p.nom?' selected':'')+'>'+escHtml(p.nom)+'</option>';
+  }).join('');
+  // Si la promo éditée porte sur un libellé absent du catalogue (ex. un lot), on l'ajoute
+  if (val && !DATA.produits.some(function(p){ return p.nom === val; })) {
+    el.innerHTML += '<option value="'+escHtml(val)+'" selected>'+escHtml(val)+'</option>';
+  }
+}
+
+// Ouvre le modal promo en mode CRÉATION (réinitialise les champs et l'id d'édition).
+// Nécessaire car p-promo-id conserve sa valeur si une édition précédente a été annulée.
+function nouvellePromo(nomProduit) {
+  var pid = document.getElementById('p-promo-id');
+  if (pid) pid.value = '';
+  renderPromoProduitOptions(nomProduit || '');
+  setVal('promo-debut', '');
+  setVal('promo-fin', '');
+  setVal('promo-qte', 1);
+  var avant = document.getElementById('promo-avant');
+  if (avant) avant.checked = false;
+  var pn = document.getElementById('pn'), pp = document.getElementById('pp');
+  if (pn) pn.value = '';
+  if (pp) pp.value = '';
+  var titre = document.querySelector('#m-promo .modal-title');
+  if (titre) titre.textContent = 'Créer une promotion';
+  openModal('m-promo');
+}
+
+function savePromo() {
+  var id = parseInt(document.getElementById('p-promo-id') ? document.getElementById('p-promo-id').value : 0);
+  var pn = parseFloat(document.getElementById('pn').value)||0;
+  var pp = parseFloat(document.getElementById('pp').value)||0;
+  if (!(pn > 0) || !(pp > 0)) { toast('Indiquez deux prix supérieurs à 0','error'); return; }
+  if (pp >= pn) { toast('Le prix promo doit être inférieur au prix normal','error'); return; }
+  var pct = -Math.round((1-pp/pn)*100);
+  var debut = getVal('promo-debut');
+  var fin = getVal('promo-fin');
+  if (debut && fin && fin < debut) { toast('La date de fin doit être après la date de début','error'); return; }
+  var qte = parseInt(getVal('promo-qte')) || 1;
+  var caseAvant = document.getElementById('promo-avant');
+  var miseEnAvant = !!(caseAvant && caseAvant.checked);
+  if (!(parseInt(getVal('promo-qte'), 10) >= 1)) { toast('Le nombre d\'unités par lot doit être d\'au moins 1','error'); return; }
+  if (id) {
+    var p = DATA.promos.find(function(x){ return x.id===id; });
+    if (p) {
+      p.produit = getVal('promo-produit') || p.produit;
+      p.prixNormal=pn; p.prixPromo=pp; p.pct=pct;
+      p.debut=debut; p.fin=fin; p.qte=qte; p.miseEnAvant=miseEnAvant;
+    }
+    toast('Promo modifiée');
+  } else {
+    var nid = DATA.promos.length ? Math.max.apply(null,DATA.promos.map(function(x){return x.id;}))+1 : 1;
+    DATA.promos.push({
+      id:nid, produit:getVal('promo-produit'), prixNormal:pn, prixPromo:pp, pct:pct,
+      debut:debut, fin:fin, qte:qte, statut:'Active', miseEnAvant:miseEnAvant
+    });
+    toast('Promotion publiée sur le site');
+  }
+  closeModal('m-promo');
+  renderPromos();
+  if (document.getElementById('p-promo-id')) document.getElementById('p-promo-id').value='';
+  persist();
+}
+
+function deletePromo(id, produit) {
+  confirmer('Supprimer la promotion "'+escHtml(produit)+'" ?', function() {
+    DATA.promos = DATA.promos.filter(function(p){ return p.id!==id; });
+    renderPromos(); toast('Promotion supprimée');
+    persist();
+  });
+}
+
+// ── CODES PROMO ─────────────────────────────────────────────
+function renderRegleFidelite() {
+  var cfg = PharmaFidelite.config(DATA);
+  var auto = DATA.parametres.notifAuto || {};
+  var email = auto.codeFidelite === true && typeof PharmaEmail !== 'undefined' && PharmaEmail.pret(DATA);
+  setHTML('regle-fidelite',
+    '<div style="background:var(--vert-pale);border:1px solid rgba(27,107,69,0.15);border-radius:8px;padding:12px">'
+    + '<div style="font-weight:700;font-size:0.8rem">Tous les '+cfg.seuil+' achats</div>'
+    + '<div class="txt-muted mt2">Code <strong>-'+cfg.reduction+'%</strong> sur tous les produits · 30 jours · usage unique · réservé au client · '
+    + (email ? 'envoyé automatiquement par email' : 'email automatique désactivé')+'</div></div>'
+    + '<div class="txt-muted" style="margin-top:10px">Après chaque code débloqué, le compteur du client repart de zéro. Le palier et la réduction se règlent dans Paramètres &gt; Programme de fidélité.</div>');
+}
+
+function renderCodesPromo() {
+  renderRegleFidelite();
+  // Code proposé : toujours tiré au hasard à l'ouverture (jamais une valeur fixe, qui serait
+  // la même dans toutes les pharmacies équipées du site et donc facile à deviner)
+  var codeAffiche = document.getElementById('cval');
+  if (codeAffiche && !/^PHARM-[A-Z0-9]{6}$/.test(codeAffiche.textContent.trim())) regenCode();
+  // Alimente les listes déroulantes avec les vraies données
+  var selClient = document.getElementById('cclient');
+  if (selClient) {
+    var cur = selClient.value;
+    selClient.innerHTML = '<option>Tous les clients</option>' +
+      DATA.clients.map(function(c){ return '<option'+(cur===c.nom?' selected':'')+'>'+escHtml(c.nom)+'</option>'; }).join('');
+  }
+  var selScope = document.getElementById('cscope');
+  if (selScope) {
+    var curS = selScope.value;
+    selScope.innerHTML = '<option value="Tous">Tous les produits</option>' +
+      DATA.categories.map(function(c){ return '<option'+(curS===c?' selected':'')+'>'+escHtml(c)+'</option>'; }).join('');
+  }
+  calcCode();
+
+  var tb = document.getElementById('tbody-codes');
+  if (!tb) return;
+  if (!DATA.codesPromo.length) {
+    tb.innerHTML = '<tr><td colspan="9" style="text-align:center;padding:20px;color:var(--texte-3)">Aucun code promo pour le moment</td></tr>';
+    return;
+  }
+  var html = '';
+  DATA.codesPromo.forEach(function(c) {
+    var expire = c.expire ? c.expire.split('-').reverse().join('/') : 'Illimité';
+    var usages = c.maxUsages ? (c.usages+'/'+c.maxUsages) : (c.usages+'/∞');
+    var epuise = c.maxUsages && c.usages >= c.maxUsages;
+    var statut = !c.actif ? '<span class="badge b-red">Désactivé</span>'
+               : epuise ? '<span class="badge b-or">Épuisé</span>'
+               : '<span class="badge b-green">Actif</span>';
+    html += '<tr>';
+    html += '<td><code>'+escHtml(c.code)+'</code></td>';
+    html += '<td>'+escHtml(c.client)+'</td>';
+    html += '<td><span class="badge b-vif">-'+escHtml(c.pct)+'%</span></td>';
+    html += '<td>'+(c.scope==='Tous'?'Tous produits':escHtml(c.scope))+'</td>';
+    html += '<td><span class="badge b-blue">'+escHtml(c.origine)+'</span></td>';
+    html += '<td>'+escHtml(usages)+'</td>';
+    html += '<td>'+escHtml(expire)+'</td>';
+    html += '<td>'+statut+'</td>';
+    html += '<td class="flex-gap">';
+    html += '<button class="act-btn" onclick="copyCode(\''+escAttr(c.code)+'\')" title="Copier"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>';
+    html += '<button class="act-btn" onclick="toggleCode(\''+escAttr(c.code)+'\')" title="'+(c.actif?'Désactiver':'Réactiver')+'" style="color:'+(c.actif?'var(--rouge)':'var(--vert)')+'"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></button>';
+    html += '<button class="act-btn" style="color:var(--rouge)" onclick="deleteCode(\''+escAttr(c.code)+'\')" title="Supprimer">'+svgTrash()+'</button>';
+    html += '</td></tr>';
+  });
+  tb.innerHTML = html;
+}
+
+function genererCode() {
+  var codeEl = document.getElementById('cval');
+  var code = codeEl ? codeEl.textContent.trim() : '';
+  if (!code) { toast('Aucun code généré','error'); return; }
+  if (DATA.codesPromo.some(function(c){ return c.code === code; })) {
+    toast('Ce code existe déjà — régénérez-en un autre','error'); return;
+  }
+  var pct = parseInt(getVal('cpct')) || 0;
+  if (pct <= 0 || pct > 100) { toast('Réduction invalide (1 à 100%)','error'); return; }
+  var scopeEl = document.getElementById('cscope');
+  var scope = scopeEl ? (scopeEl.value === 'Tous les produits' ? 'Tous' : scopeEl.value) : 'Tous';
+  var client = getVal('cclient') || 'Tous les clients';
+  DATA.codesPromo.push({
+    code: code, client: client, pct: pct, scope: scope,
+    origine: 'Manuel', usages: 0, maxUsages: (client === 'Tous les clients' ? 0 : 1),
+    expire: '', actif: true
+  });
+  persist();
+  renderCodesPromo();
+  regenCode();
+  toast('Code '+code+' créé');
+}
+
+function toggleCode(code) {
+  var c = DATA.codesPromo.find(function(x){ return x.code === code; });
+  if (!c) return;
+  c.actif = !c.actif;
+  persist();
+  renderCodesPromo();
+  toast(c.actif ? 'Code réactivé' : 'Code désactivé');
+}
+
+function deleteCode(code) {
+  confirmer('Supprimer définitivement le code "'+escHtml(code)+'" ?', function() {
+    DATA.codesPromo = DATA.codesPromo.filter(function(c){ return c.code !== code; });
+    persist();
+    renderCodesPromo();
+    toast('Code supprimé');
+  });
+}
+
+// Icônes SVG des conseils (charte : SVG uniquement, pas d'emoji dans l'UI)
+var CONSEIL_ICONES_ANCIEN = {
+  soleil:   '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>',
+  pilule:   '<path d="M10.5 20.5L3.5 13.5a5 5 0 0 1 7-7l7 7a5 5 0 0 1-7 7z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/>',
+  goutte:   '<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>',
+  coeur:    '<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/>',
+  bouclier: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>',
+  feuille:  '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/>',
+  info:     '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>'
+};
+var CONSEIL_ICONES = (typeof PHARMA_ICONES_CONSEIL !== 'undefined') ? PHARMA_ICONES_CONSEIL : CONSEIL_ICONES_ANCIEN;
+function svgConseil(cle, taille) {
+  var path = CONSEIL_ICONES[cle] || CONSEIL_ICONES.info;
+  var t = taille || 22;
+  return '<svg width="'+t+'" height="'+t+'" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+path+'</svg>';
+}
+
+// ── RAPPORT HEBDOMADAIRE (statistiques réelles calculées depuis DATA) ──
+function renderRapport() {
+  var rc = DATA.parametres.rapportContenu;
+  if (rc) ['promos','codes','ventes','employes'].forEach(function(k){ var el = document.getElementById('rap-'+k); if (el) el.checked = !!rc[k]; });
+  var rjEl = document.getElementById('par-rapport-jour'), rhEl = document.getElementById('par-rapport-heure');
+  setVal('par-rapport-email', DATA.parametres.rapportEmail);
+  if (rjEl && DATA.parametres.rapportJour) rjEl.value = DATA.parametres.rapportJour;
+  if (rhEl && DATA.parametres.rapportHeure) rhEl.value = DATA.parametres.rapportHeure;
+  var maintenant = new Date();
+  var debut = new Date(maintenant.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+  // On ne retient que les commandes horodatées des 7 derniers jours.
+  // Les anciennes commandes sans timestamp sont exclues du calcul.
+  var semaine = DATA.commandes.filter(function(c) {
+    if (!c.timestamp) return false;
+    var d = new Date(c.timestamp);
+    return d >= debut && d <= maintenant;
+  });
+
+  var ca = semaine.reduce(function(s, c) { return s + nombre(c.total); }, 0);
+  var nb = semaine.length;
+  var panierMoyen = nb ? ca / nb : 0;
+  var retirees = semaine.filter(function(c){ return c.statut === 'Retirée'; }).length;
+  var enAttente = DATA.commandes.filter(function(c){ return c.statut === 'En préparation'; }).length;
+  var promosActives = DATA.promos.filter(function(p){ return p.statut === 'Active'; }).length;
+  var codesUtilises = DATA.codesPromo.reduce(function(s, c){ return s + (c.usages || 0); }, 0);
+  var codesGeneres = DATA.codesPromo.length;
+  var stockFaible = DATA.produits.filter(function(p){ return p.stock <= p.seuil; });
+
+  // Produits les plus commandés (extraits du libellé "Nom xQté + Nom xQté")
+  var ventes = {};
+  semaine.forEach(function(c) {
+    (c.produits || '').split(' + ').forEach(function(part) {
+      var m = part.match(/^(.*?)\s+x(\d+)$/);
+      if (!m) return;
+      var nom = m[1].trim();
+      ventes[nom] = (ventes[nom] || 0) + parseInt(m[2], 10);
+    });
+  });
+  var top = Object.keys(ventes).map(function(k){ return { nom:k, qte:ventes[k] }; })
+    .sort(function(a,b){ return b.qte - a.qte; }).slice(0, 3);
+
+  var fmtDate = function(d) { return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2); };
+  var per = document.getElementById('rapport-periode');
+  if (per) per.textContent = 'Du ' + fmtDate(debut) + ' au ' + fmtDate(maintenant);
+
+  var box = document.getElementById('rapport-contenu');
+  if (!box) return;
+
+  var html = '<div style="background:var(--fond);border-radius:9px;padding:12px;border:1px solid var(--bord)">';
+  html += '<div class="g2" style="gap:8px;margin-bottom:10px">';
+  html += statBox(nombre(ca).toFixed(2).replace('.', ',') + '€', 'Chiffre d\'affaires', 'var(--vert)');
+  html += statBox(nb, 'Commandes', 'var(--bleu)');
+  html += '</div>';
+  html += '<div class="g2" style="gap:8px;margin-bottom:10px">';
+  html += statBox(nombre(panierMoyen).toFixed(2).replace('.', ',') + '€', 'Panier moyen', 'var(--vert)');
+  html += statBox(promosActives, 'Promos actives', 'var(--or)');
+  html += '</div>';
+  html += '<div style="font-size:0.76rem;color:var(--texte-2);line-height:1.7">';
+  html += '<div>Commandes retirées : <strong>' + retirees + '</strong> · En attente : <strong>' + enAttente + '</strong></div>';
+  html += '<div>Codes promo : <strong>' + codesGeneres + '</strong> existants · <strong>' + codesUtilises + '</strong> utilisation(s)</div>';
+  if (top.length) {
+    html += '<div style="margin-top:6px"><strong>Produits les plus commandés :</strong></div>';
+    top.forEach(function(t, i) {
+      html += '<div>' + (i+1) + '. ' + escHtml(t.nom) + ' — <strong>' + escHtml(t.qte) + '</strong> unité' + (t.qte>1?'s':'') + '</div>';
+    });
+  }
+  if (stockFaible.length) {
+    html += '<div style="margin-top:6px;color:var(--rouge)"><strong>' + stockFaible.length + ' produit(s) en stock faible :</strong> '
+         + stockFaible.map(function(p){ return escHtml(p.nom) + ' (' + escHtml(p.stock) + ')'; }).join(', ') + '</div>';
+  }
+  html += '</div></div>';
+
+  if (!nb) {
+    html = '<div style="background:var(--fond);border-radius:9px;padding:20px;border:1px solid var(--bord);text-align:center;color:var(--texte-3);font-size:0.82rem">'
+         + 'Aucune commande enregistrée sur les 7 derniers jours.</div>';
+  }
+  box.innerHTML = html;
+}
+function statBox(valeur, label, couleur) {
+  return '<div style="background:var(--blanc);border-radius:7px;padding:9px;border:1px solid var(--bord);text-align:center">'
+       + '<div style="font-size:1.3rem;font-weight:800;color:'+couleur+'">'+valeur+'</div>'
+       + '<div class="txt-muted">'+label+'</div></div>';
+}
+
+// ── NOTIFICATIONS ───────────────────────────────────────────
+// Chaque événement indique s'il est réalisable sans serveur. Les autres
+// nécessitent un serveur (un envoi différé suppose un serveur qui tourne).
+var NOTIF_EVENTS = [
+  { cle:'commandeRecue',  titre:'Commande reçue',            desc:'Confirmation au client + alerte à la pharmacie dès la validation du panier.', dispo:true },
+  { cle:'commandePrete',  titre:'Commande prête à retirer',  desc:'Envoyé quand un employé marque la commande « Prête ». Le plus utile pour faire venir le client.', dispo:true },
+  { cle:'codeFidelite',   titre:'Code de fidélité débloqué', desc:'Envoyé automatiquement quand le client atteint le palier configuré.', dispo:true },
+  { cle:'relanceRetrait', titre:'Relance commande non retirée', desc:'Nécessite un serveur qui vérifie les commandes en continu.', dispo:false },
+  { cle:'codeExpire',     titre:'Rappel code promo bientôt expiré', desc:'Nécessite un serveur qui vérifie les dates en continu.', dispo:false },
+  { cle:'stockFaible',    titre:'Alerte stock faible',       desc:'Nécessite un serveur pour surveiller les stocks hors connexion.', dispo:false }
+];
+
+function renderNotifications() {
+  var cfg = DATA.parametres.notifAuto || {};
+  var box = document.getElementById('notif-auto-list');
+  if (box) {
+    box.innerHTML = NOTIF_EVENTS.map(function(ev) {
+      var actif = cfg[ev.cle] === true;
+      var opacite = ev.dispo ? '' : 'opacity:0.55;';
+      var badge = ev.dispo ? '' : '<span class="badge b-grey" style="margin-left:8px">Nécessite un serveur</span>';
+      return '<div class="toggle-card" style="'+opacite+'display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px;border:1px solid var(--bord);border-radius:9px;margin-bottom:8px">'
+        + '<div><div style="font-weight:700;font-size:0.82rem">'+ev.titre+badge+'</div>'
+        + '<div style="font-size:0.74rem;color:var(--texte-2);margin-top:3px">'+ev.desc+'</div></div>'
+        + '<label class="toggle-wrap" style="flex-shrink:0"><input type="checkbox" class="toggle-input"'
+        + (actif?' checked':'') + (ev.dispo?'':' disabled')
+        + ' onchange="toggleNotifAuto(\''+ev.cle+'\', this.checked)"><span class="toggle-track"></span></label>'
+        + '</div>';
+    }).join('');
+  }
+
+  // Destinataires : effectifs réels, plus de nombre inventé
+  var sel = document.getElementById('notif-dest');
+  if (sel) {
+    var avecEmail = DATA.clients.filter(function(c){ return c.email; }).length;
+    var avecSms = DATA.clients.filter(function(c){ return c.tel; }).length;
+    sel.innerHTML = '<option value="tous">Tous les clients ('+DATA.clients.length+')</option>'
+      + '<option value="email">Clients avec email ('+avecEmail+')</option>'
+      + '<option value="sms">Clients avec téléphone ('+avecSms+')</option>';
+  }
+  renderNotifHistorique();
+  renderEmailJournal();
+}
+
+function toggleNotifAuto(cle, actif) {
+  if (!DATA.parametres.notifAuto) DATA.parametres.notifAuto = {};
+  DATA.parametres.notifAuto[cle] = actif;
+  persist();
+  var ev = NOTIF_EVENTS.find(function(e){ return e.cle === cle; });
+  toast((ev ? ev.titre : 'Notification') + (actif ? ' activée' : ' désactivée'));
+}
+
+function envoyerNotification() {
+  var msg = (getVal('notif-msg') || '').trim();
+  if (!msg) { toast('Saisissez un message','error'); return; }
+  var type = getVal('notif-type') || 'Message personnalisé';
+  var destCle = getVal('notif-dest') || 'tous';
+  var cibles = DATA.clients.filter(function(c) {
+    if (destCle === 'email') return !!c.email;
+    if (destCle === 'sms') return !!c.tel;
+    return true;
+  });
+  if (!cibles.length) { toast('Aucun destinataire correspondant','error'); return; }
+  DATA.notifications.push({
+    id: Date.now(),
+    type: type,
+    message: msg,
+    destinataires: cibles.length,
+    cible: destCle,
+    timestamp: new Date().toISOString(),
+    statut: 'En attente d\'envoi'
+  });
+  persist();
+  setVal('notif-msg', '');
+  renderNotifHistorique();
+  toast('Notification enregistrée pour ' + cibles.length + ' client(s)');
+}
+
+function renderNotifHistorique() {
+  var box = document.getElementById('notif-historique');
+  if (!box) return;
+  if (!DATA.notifications || !DATA.notifications.length) {
+    box.innerHTML = '<div style="text-align:center;padding:20px;color:var(--texte-3);font-size:0.82rem">Aucune notification envoyée pour le moment.</div>';
+    return;
+  }
+  var liste = DATA.notifications.slice().sort(function(a,b){ return new Date(b.timestamp) - new Date(a.timestamp); });
+  box.innerHTML = liste.map(function(n) {
+    var d = new Date(n.timestamp);
+    var date = ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+'/'+d.getFullYear()+' à '+('0'+d.getHours()).slice(-2)+'h'+('0'+d.getMinutes()).slice(-2);
+    return '<div style="border:1px solid var(--bord);border-radius:9px;padding:12px;margin-bottom:8px">'
+      + '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:5px">'
+      + '<span style="font-weight:700;font-size:0.8rem">'+escHtml(n.type)+'</span>'
+      + '<span class="badge b-orange">'+escHtml(n.statut)+'</span></div>'
+      + '<div style="font-size:0.78rem;color:var(--texte-2);line-height:1.5">'+escHtml(n.message)+'</div>'
+      + '<div class="txt-muted" style="margin-top:6px">'+date+' · '+escHtml(n.destinataires)+' destinataire(s)</div>'
+      + '<div style="margin-top:8px"><button class="act-btn" style="color:var(--rouge)" onclick="deleteNotification('+n.id+')" title="Supprimer">'+svgTrash()+'</button></div>'
+      + '</div>';
+  }).join('');
+}
+
+function deleteNotification(id) {
+  confirmer('Supprimer cette notification de l\'historique ?', function() {
+    DATA.notifications = DATA.notifications.filter(function(n){ return n.id !== id; });
+    persist();
+    renderNotifHistorique();
+    toast('Notification supprimée');
+  });
+}
+
+// ── FILTRES (recherche + statut combinés) ───────────────────
+// Chaque filtre lit les DEUX champs, sinon changer l'un effaçait l'autre.
+function filtrerCommandes() {
+  renderCommandes(getVal('search-cmd'), getVal('filter-statut-cmd'));
+}
+function filtrerTickets() {
+  renderTickets(getVal('search-tickets'), getVal('filter-statut-tickets'));
+}
+function filtrerClients() {
+  renderClients(getVal('search-clients'), getVal('filter-type-clients'));
+}
+
+// ── GESTION DES COMMANDES ───────────────────────────────────
+// Annuler : la commande reste visible (traçabilité) mais passe en "Annulée",
+// et le stock des produits est remis à disposition.
+function annulerCommande(id) {
+  var c = DATA.commandes.find(function(x){ return x.id === id; });
+  if (!c) return;
+  if (c.statut === 'Annulée') { toast('Cette commande est déjà annulée'); return; }
+  if (c.statut === 'Retirée') { toast('Impossible d\'annuler une commande déjà retirée','error'); return; }
+  confirmer('Annuler la commande ' + escHtml(id) + ' de ' + escHtml(c.client) + ' ?<br><span style="font-size:0.78rem;color:var(--texte-2)">Le stock sera réapprovisionné et le compteur de fidélité du client corrigé.</span>', function() {
+    if (ADMIN_CLOUD) { PharmaAdminCloud.annuler(id); return; }
+    defaireCommande(c);
+    c.statut = 'Annulée';
+    persist();
+    filtrerCommandes();
+    toast('Commande ' + id + ' annulée : stock et fidélité mis à jour');
+  }, { titre: 'Annuler la commande', bouton: 'Oui, annuler la commande' });
+}
+
+// Supprimer définitivement (efface aussi la trace côté client)
+function deleteCommande(id) {
+  var c = DATA.commandes.find(function(x){ return x.id === id; });
+  if (!c) return;
+  confirmer('Supprimer définitivement la commande ' + escHtml(id) + ' ?<br><span style="font-size:0.78rem;color:var(--texte-2)">Cette action est irréversible. Préférez « Annuler » pour garder une trace.</span>', function() {
+    if (ADMIN_CLOUD) { PharmaAdminCloud.supprimer(id); return; }
+    // Si elle n'était ni annulée ni retirée, le stock lui est encore réservé
+    if (c.statut !== 'Annulée' && c.statut !== 'Retirée') defaireCommande(c);
+    DATA.commandes = DATA.commandes.filter(function(x){ return x.id !== id; });
+    persist();
+    filtrerCommandes();
+    toast('Commande ' + id + ' supprimée');
+  });
+}
+
+// Remet en stock les produits d'une commande (annulation / suppression)
+function restaurerStock(commande) {
+  // Commandes récentes : détail exact des articles enregistré à la commande
+  if (Array.isArray(commande.lignes) && commande.lignes.length) {
+    commande.lignes.forEach(function(l) {
+      var p = DATA.produits.find(function(x){ return x.id === l.produitId; });
+      if (p) p.stock += (parseInt(l.qty, 10) || 0) * (parseInt(l.unites, 10) || 1);
+    });
+    return;
+  }
+  // Anciennes commandes : on retrouve les articles à partir du résumé texte
+  (commande.produits || '').split(' + ').forEach(function(part) {
+    var m = part.match(/^(.*?)\s+x(\d+)$/);
+    if (!m) return;
+    var nom = m[1].trim();
+    var qte = parseInt(m[2], 10);
+    var p = DATA.produits.find(function(x){ return x.nom === nom; });
+    var unites = 1;
+    if (!p) {
+      // Article promo (lot) : correspondance approximative sur le premier mot
+      var premierMot = nom.replace(/^Lot\s+/i, '').split(' ')[0].toLowerCase();
+      p = DATA.produits.find(function(x){ return x.nom.toLowerCase().indexOf(premierMot) !== -1; });
+      // Un lot contient plusieurs unités du produit : on restitue le bon total.
+      var promo = DATA.promos.find(function(pr){ return pr.produit === nom; });
+      if (promo && promo.qte > 0) {
+        unites = promo.qte;
+      } else {
+        var mLot = nom.match(/x\s*(\d+)\s*$/i);
+        if (mLot) unites = parseInt(mLot[1], 10);
+      }
+    }
+    if (p) p.stock += qte * unites;
+  });
+}
+
+// Défait les effets d'une commande non retirée : stock remis en rayon, compteur de
+// fidélité et dépenses du client diminués, code promo utilisé rendu, code fidélité
+// déclenché par cette commande retiré s'il n'a pas servi (5 fausses commandes ≠ un code).
+function defaireCommande(c) {
+  restaurerStock(c);
+  var client = DATA.clients.find(function(x){ return c.clientId !== undefined && x.id === c.clientId; })
+    || PharmaClients.trouver(DATA, c.client, c.email);
+  if (client) {
+    client.achats = Math.max(0, (client.achats || 0) - 1);
+    client.depenses = Math.max(0, Math.round(((client.depenses || 0) - (c.total || 0)) * 100) / 100);
+  }
+  if (c.codePromo) {
+    var cp = DATA.codesPromo.find(function(x){ return x.code === c.codePromo; });
+    if (cp && cp.usages > 0) cp.usages -= 1;
+  }
+  DATA.codesPromo = DATA.codesPromo.filter(function(x) {
+    return !(x.commandeId && x.commandeId === c.id && !x.usages && String(x.origine || '').indexOf('Auto (fidélité)') === 0);
+  });
+}
+
+// Vide toutes les commandes de démonstration (données de test)
+function viderCommandesDemo() {
+  if (ADMIN_CLOUD) {
+    toast('Avec la base de données, les commandes s\'annulent ou se suppriment une par une (pour ne jamais effacer de vraies commandes par erreur)', 'error');
+    return;
+  }
+  confirmer('Supprimer TOUTES les commandes ?<br><span style="font-size:0.78rem;color:var(--texte-2)">Utile pour repartir sur des données propres pendant les tests.</span>', function() {
+    DATA.commandes = [];
+    persist();
+    filtrerCommandes();
+    toast('Toutes les commandes ont été supprimées');
+  });
+}
+
+// ── CLOCHE DE NOTIFICATIONS ─────────────────────────────────
+var NOTIF_STYLES = {
+  commande: { couleur:'var(--vert)',  svg:'<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>' },
+  stock:    { couleur:'var(--rouge)', svg:'<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>' },
+  ticket:   { couleur:'var(--or)',    svg:'<path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5z"/><polyline points="14 2 14 8 20 8"/>' },
+  fidelite: { couleur:'var(--bleu)',  svg:'<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>' }
+};
+var _titreOriginal = document.title;
+var _clignoteTimer = null;
+
+function nbAlertesNonLues() {
+  return (DATA.alertes || []).filter(function(a){ return !a.lu; }).length;
+}
+
+function renderNotifCloche(animer) {
+  var nb = nbAlertesNonLues();
+  var badge = document.getElementById('notif-count');
+  if (badge) {
+    badge.textContent = nb > 9 ? '9+' : nb;
+    badge.style.display = nb > 0 ? '' : 'none';
+  }
+  var bell = document.getElementById('notif-bell');
+  if (bell && animer && nb > 0) {
+    bell.classList.remove('has-new');
+    void bell.offsetWidth; // force le redémarrage de l'animation
+    bell.classList.add('has-new');
+  }
+  majTitreOnglet(nb);
+  renderNotifPanel();
+}
+
+// Fait clignoter le titre de l'onglet : l'employé voit l'alerte
+// même si l'admin est ouvert en arrière-plan.
+function majTitreOnglet(nb) {
+  if (_clignoteTimer) { clearInterval(_clignoteTimer); _clignoteTimer = null; }
+  if (nb > 0 && document.hidden) {
+    var alterne = false;
+    _clignoteTimer = setInterval(function() {
+      document.title = alterne ? _titreOriginal : '(' + nb + ') Nouvelle activité';
+      alterne = !alterne;
+    }, 1200);
+  } else {
+    document.title = nb > 0 ? '(' + nb + ') ' + _titreOriginal : _titreOriginal;
+  }
+}
+
+function renderNotifPanel() {
+  var box = document.getElementById('notif-panel-body');
+  if (!box) return;
+  var liste = DATA.alertes || [];
+  if (!liste.length) {
+    box.innerHTML = '<div class="notif-vide">Aucune notification pour le moment.</div>';
+    return;
+  }
+  box.innerHTML = liste.map(function(a) {
+    var st = NOTIF_STYLES[a.type] || NOTIF_STYLES.commande;
+    return '<div class="notif-item'+(a.lu?'':' unread')+'" onclick="ouvrirAlerte('+a.id+')">'
+      + '<div class="notif-icon" style="background:'+st.couleur+'"><svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+st.svg+'</svg></div>'
+      + '<div class="notif-body"><div class="notif-titre">'+escHtml(a.titre)+'</div>'
+      + '<div class="notif-texte">'+escHtml(a.texte)+'</div>'
+      + '<div class="notif-heure">'+tempsRelatif(a.timestamp)+'</div></div>'
+      + (a.lu ? '' : '<span class="notif-dot"></span>')
+      + '</div>';
+  }).join('');
+}
+
+// Affiche "il y a 5 min" plutôt qu'une date brute
+function tempsRelatif(iso) {
+  if (!iso) return '';
+  var diff = Math.floor((Date.now() - new Date(iso).getTime()) / 1000);
+  if (diff < 60) return 'À l\'instant';
+  if (diff < 3600) return 'Il y a ' + Math.floor(diff/60) + ' min';
+  if (diff < 86400) return 'Il y a ' + Math.floor(diff/3600) + ' h';
+  var d = new Date(iso);
+  return ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+' à '+('0'+d.getHours()).slice(-2)+'h'+('0'+d.getMinutes()).slice(-2);
+}
+
+function toggleNotifPanel() {
+  var panel = document.getElementById('notif-panel');
+  if (!panel) return;
+  panel.classList.toggle('open');
+  if (panel.classList.contains('open')) renderNotifPanel();
+}
+
+function ouvrirAlerte(id) {
+  var a = (DATA.alertes || []).find(function(x){ return x.id === id; });
+  if (!a) return;
+  if (!a.lu) { a.lu = true; persist(); }
+  var panel = document.getElementById('notif-panel');
+  if (panel) panel.classList.remove('open');
+  renderNotifCloche(false);
+  if (a.lien) go(a.lien);
+}
+
+function marquerToutLu() {
+  (DATA.alertes || []).forEach(function(a){ a.lu = true; });
+  persist();
+  renderNotifCloche(false);
+  toast('Notifications marquées comme lues');
+}
+
+// Détection des nouvelles alertes créées depuis un autre onglet
+// (ex. une commande passée sur site.html pendant que l'admin est ouvert).
+function initNotifSync() {
+  window.addEventListener('storage', function(e) {
+    if (e.key !== PHARMA_STORAGE_KEY) return;
+    var avant = nbAlertesNonLues();
+    DATA = PharmaStore.load();
+    var apres = nbAlertesNonLues();
+    renderNotifCloche(apres > avant);
+    updateNavBadges();
+    // Rafraîchit la page courante pour refléter les nouvelles données
+    // Pages à formulaire (Paramètres, Horaires) : on ne les redessine pas, sinon une saisie
+    // en cours serait effacée dès qu'un client passe commande dans un autre onglet.
+    if (typeof currentPage === 'string' && ['parametres', 'horaires'].indexOf(currentPage) === -1) renderPage(currentPage);
+    if (apres > avant) toast('Nouvelle activité reçue');
+  });
+  // Le clignotement du titre s'arrête quand l'employé revient sur l'onglet
+  document.addEventListener('visibilitychange', function() {
+    majTitreOnglet(nbAlertesNonLues());
+  });
+  // Ferme le panneau au clic extérieur
+  document.addEventListener('click', function(e) {
+    var wrap = document.querySelector('.notif-wrap');
+    var panel = document.getElementById('notif-panel');
+    if (wrap && panel && !wrap.contains(e.target)) panel.classList.remove('open');
+  });
+}
+
+// ── INFORMATIONS LÉGALES ────────────────────────────────────
+var LEGAL_CHAMPS = {
+  'lg-raison':'raisonSociale', 'lg-forme':'formeJuridique', 'lg-capital':'capital',
+  'lg-siret':'siret', 'lg-rcs':'rcs', 'lg-tva':'tva', 'lg-titulaire':'titulaire',
+  'lg-ordre':'numeroOrdre', 'lg-directeur':'directeurPublication',
+  'lg-mediateur':'mediateur', 'lg-ars':'ars', 'lg-licence':'licence',
+  'lg-hebergeur':'hebergeur', 'lg-hebergeur-tel':'hebergeurTel'
+};
+function renderLegal() {
+  var l = DATA.parametres.legal || {};
+  Object.keys(LEGAL_CHAMPS).forEach(function(id) {
+    setVal(id, l[LEGAL_CHAMPS[id]] || '');
+  });
+  majAlerteLegal();
+}
+// Signale les champs encore à compléter : le site ne doit pas être publié tant qu'il en reste.
+function majAlerteLegal() {
+  var l = DATA.parametres.legal || {};
+  var manquants = Object.keys(LEGAL_CHAMPS).filter(function(id) {
+    var v = l[LEGAL_CHAMPS[id]];
+    return !v || String(v).indexOf('[') === 0;
+  });
+  var box = document.getElementById('lg-alerte');
+  if (!box) return;
+  if (!manquants.length) {
+    box.innerHTML = '<div style="background:rgba(46,204,122,0.12);border:1px solid rgba(46,204,122,0.4);border-radius:8px;padding:10px 13px;font-size:0.78rem;color:var(--vert)"><strong>Informations complètes.</strong> Le site peut être mis en ligne.</div>';
+  } else {
+    box.innerHTML = '<div style="background:rgba(217,164,65,0.14);border:1px solid rgba(217,164,65,0.5);border-radius:8px;padding:10px 13px;font-size:0.78rem;color:#8a6414"><strong>'
+      + manquants.length + ' information(s) à compléter</strong> avant la mise en ligne publique. Une absence de mentions légales conformes expose à des sanctions.</div>';
+  }
+}
+function saveLegal() {
+  if (!DATA.parametres.legal) DATA.parametres.legal = {};
+  Object.keys(LEGAL_CHAMPS).forEach(function(id) {
+    DATA.parametres.legal[LEGAL_CHAMPS[id]] = (getVal(id) || '').trim();
+  });
+  persist();
+  majAlerteLegal();
+  toast('Informations légales sauvegardées');
+}
+
+// ── CLIENTS ─────────────────────────────────────────────────
+function renderClients(filtre, type) {
+  var html = '';
+  // Carte de fidélité scannée dans la recherche (« FID-000123 ») : le client est retrouvé par son numéro
+  var idCarte = pharmaIdDepuisCarte(filtre);
+  var list = DATA.clients.filter(function(c) {
+    var ms = idCarte !== null ? c.id === idCarte : (!filtre || searchMatch(c.nom+' '+c.email+' '+c.tel, filtre));
+    var mt = !type || type==='Tous' || c.type===type;
+    return ms && mt;
+  });
+  if (list.length === 0) html = '<tr><td colspan="7" style="text-align:center;padding:30px;color:var(--texte-3)">Aucun client trouvé</td></tr>';
+  list.forEach(function(c) {
+    var fidCfg = PharmaFidelite.config(DATA);
+    var fidProg = PharmaFidelite.progression(c.achats, fidCfg.seuil);
+    html += '<tr>';
+    html += '<td><div class="td-main">'+escHtml(c.nom)+'</div><div class="td-sub">'+escHtml(c.email)+'</div></td>';
+    html += '<td><span class="badge '+(c.type==='Compte'?'b-green':'b-grey')+'">'+escHtml(c.type)+'</span></td>';
+    html += '<td>'+escHtml(c.notifs)+'</td>';
+    html += '<td><span class="badge '+(c.rgpd?'b-green':'b-or')+'">'+(c.rgpd?'Consenti':'Partiel')+'</span></td>';
+    html += '<td>'+nombre(c.achats)+' achats · '+nombre(c.depenses).toFixed(2)+'€</td>';
+    html += '<td><div class="flex-gap"><div class="progress" style="width:60px"><div class="progress-fill" style="width:'+fidProg.pct+'%"></div></div><span class="txt-muted">'+fidProg.courant+'/'+fidCfg.seuil+'</span></div></td>';
+    html += '<td class="actions-cell"><div><button class="act-btn" onclick="editClient('+c.id+')">'+svgEdit()+'</button><button class="act-btn" style="color:var(--rouge)" onclick="deleteClient('+c.id+',\''+escAttr(c.nom)+'\')">'+svgTrash()+'</button></div></td>';
+    html += '</tr>';
+  });
+  setHTML('tbody-clients', html);
+}
+
+function editClient(id) {
+  var c = DATA.clients.find(function(x){ return x.id===id; });
+  if (!c) return;
+  setVal('cl-nom', c.nom); setVal('cl-email', c.email); setVal('cl-tel', c.tel);
+  document.getElementById('cl-type').value = c.type;
+  document.getElementById('cl-id').value = id;
+  openModal('m-client');
+}
+
+function saveClient() {
+  var id = parseInt(document.getElementById('cl-id').value);
+  var nom = (getVal('cl-nom') || '').trim(), email = (getVal('cl-email') || '').trim();
+  if (!nom) { toast('Le nom est obligatoire', 'error'); return; }
+  if (email && !pharmaEmailValide(email)) { toast('Adresse email invalide', 'error'); return; }
+  // L'email identifie le client (fidélité, historique) : deux fiches ne peuvent pas partager la même adresse
+  if (email && DATA.clients.some(function(x){ return x.id !== id && PharmaClients.normEmail(x.email) === PharmaClients.normEmail(email); })) {
+    toast('Un autre client utilise déjà cette adresse email', 'error'); return;
+  }
+  if (id) {
+    var c = DATA.clients.find(function(x){ return x.id===id; });
+    if (c) { c.nom=nom; c.email=email; c.tel=getVal('cl-tel'); c.type=getVal('cl-type'); }
+    toast('Client modifié');
+  } else {
+    var newId = DATA.clients.length ? Math.max.apply(null,DATA.clients.map(function(x){return x.id;}))+1 : 1;
+    DATA.clients.push({ id:newId, nom:nom, email:email, tel:getVal('cl-tel'), type:getVal('cl-type'), notifs:'Email', rgpd:false, achats:0, depenses:0 });
+    toast('Client ajouté');
+  }
+  closeModal('m-client');
+  renderClients();
+  resetForm('form-client');
+  persist();
+}
+
+function deleteClient(id, nom) {
+  confirmer('Supprimer le client "'+escHtml(nom)+'" ?', function() {
+    DATA.clients = DATA.clients.filter(function(c){ return c.id!==id; });
+    renderClients(); toast(nom+' supprimé');
+    persist();
+  });
+}
+
+// ── COMMANDES ───────────────────────────────────────────────
+function renderCommandes(filtre, statut) {
+  var html = '';
+  var list = DATA.commandes.filter(function(c) {
+    var ms = !filtre || searchMatch(c.id+' '+c.client+' '+c.produits, filtre);
+    var mst = !statut || statut==='Tous' || c.statut===statut;
+    return ms && mst;
+  });
+  if (!list.length) html = '<tr><td colspan="8" style="text-align:center;padding:30px;color:var(--texte-3)">Aucune commande</td></tr>';
+  list.forEach(function(c) {
+    var bc = c.statut==='Prête'?'b-green':c.statut==='Retirée'?'b-blue':c.statut==='Annulée'?'b-red':'b-orange';
+    html += '<tr>';
+    html += '<td><strong>'+escHtml(c.id)+'</strong></td>';
+    html += '<td><div class="td-main">'+escHtml(c.client)+'</div><div class="td-sub">'+escHtml(c.tel)+'</div></td>';
+    html += '<td class="txt-muted">'+escHtml(c.produits)+'</td>';
+    html += '<td><strong>'+nombre(c.total).toFixed(2)+'€</strong></td>';
+    html += '<td class="txt-muted">'+escHtml(c.date)+'</td>';
+    html += '<td>'+(c.valide?'<span class="badge b-green">'+escHtml(c.valide)+'</span>':'<span class="badge b-grey">En attente</span>')+'</td>';
+    html += '<td><span class="badge '+bc+'">'+escHtml(c.statut)+'</span></td>';
+    html += '<td class="actions-cell"><div><button class="act-btn" onclick="voirCommande(\''+escAttr(c.id)+'\')" title="Voir le détail">'+svgEye()+'</button>'
+      + (c.statut==='En préparation'?'<button class="btn btn-primary" style="height:26px;font-size:0.7rem;padding:0 10px" onclick="marquerPrete(\''+escAttr(c.id)+'\')">Prête</button>':'')
+      + (c.statut!=='Retirée' && c.statut!=='Annulée' ? '<button class="act-btn" style="color:var(--or)" onclick="annulerCommande(\''+escAttr(c.id)+'\')" title="Annuler la commande"><svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></button>':'')
+      + '<button class="act-btn" style="color:var(--rouge)" onclick="deleteCommande(\''+escAttr(c.id)+'\')" title="Supprimer définitivement">'+svgTrash()+'</button>'
+      + '</div></td>';
+    html += '</tr>';
+  });
+  setHTML('tbody-commandes', html);
+}
+
+function voirCommande(id) {
+  var c = DATA.commandes.find(function(x){ return x.id===id; });
+  if (!c) return;
+  var bc = c.statut==='Prête'?'b-green':c.statut==='Retirée'?'b-blue':'b-orange';
+  var body = '<div class="flex-between mb3"><div><div class="td-main">'+escHtml(c.client)+'</div><div class="td-sub">'+escHtml(c.tel)+(c.email ? ' · '+escHtml(c.email) : '')+'</div></div><span class="badge '+bc+'">'+escHtml(c.statut)+'</span></div>';
+  body += '<div style="background:var(--fond);border-radius:8px;padding:12px;border:1px solid var(--bord);font-size:0.82rem;margin-bottom:12px">'+escHtml(c.produits)+'</div>';
+  if (c.codeRetrait) body += '<div class="txt-muted" style="margin-bottom:12px">Code de retrait : <strong style="letter-spacing:2px">'+escHtml(c.codeRetrait)+'</strong></div>';
+  body += '<div style="text-align:right;font-weight:800;margin-bottom:12px">Total : '+nombre(c.total).toFixed(2)+'€</div>';
+  body += '<div style="background:var(--fond);border-radius:8px;padding:12px;border:1px solid var(--bord)"><div style="font-size:0.65rem;font-weight:700;color:var(--texte-3);text-transform:uppercase;margin-bottom:6px">Historique</div>';
+  body += '<div class="txt-muted">Commande reçue — '+escHtml(c.date)+'</div>';
+  if (c.statut !== 'En préparation') body += '<div class="txt-muted">Marquée prête — validée par '+escHtml(c.valide||'—')+'</div>';
+  if (c.statut === 'Retirée') body += '<div class="txt-muted">Retirée en pharmacie</div>';
+  body += '</div>';
+  body += blocEmailPrerempliHTML(c);
+  var footer = '<button class="btn btn-ghost" onclick="closeModal(\'m-detail\')">Fermer</button>';
+  if (c.statut === 'En préparation') footer += '<button class="btn btn-primary" onclick="marquerPrete(\''+escAttr(c.id)+'\');closeModal(\'m-detail\')">Marquer prête & Notifier</button>';
+  showDetail('Commande '+c.id, body, footer);
+}
+
+function marquerPrete(id) {
+  // Base de données : le serveur change le statut et signe la validation
+  if (ADMIN_CLOUD) {
+    PharmaAdminCloud.marquerPrete(id).then(function(ok) { if (ok) notifierCommandePrete(id); });
+    return;
+  }
+  var c = DATA.commandes.find(function(x){ return x.id===id; });
+  if (!c) return;
+  c.statut = 'Prête';
+  c.valide = nomValideur();
+  persist();
+  renderCommandes();
+  notifierCommandePrete(id);
+}
+
+// Email « commande prête » au client (et proposition de l'email prérempli si l'envoi échoue)
+function notifierCommandePrete(id) {
+  var c = DATA.commandes.find(function(x){ return x.id===id; });
+  if (!c) return;
+  if (typeof PharmaEmail === 'undefined') { toast('Commande '+id+' prête'); return; }
+  // Email « commande prête » : asynchrone et tolérant. Le statut est déjà enregistré,
+  // un échec d'envoi ne bloque rien et est signalé à l'employé.
+  var ctx = { commande: {
+    id: c.id, client: c.client, email: c.email, produits: c.produits, total: c.total,
+    timestamp: c.timestamp, lang: c.lang, codeRetrait: c.codeRetrait
+  } };
+  PharmaEmail.envoyer('commandePrete', DATA, ctx).then(function(r) {
+    DATA = PharmaStore.load(); // le journal d'envoi a été écrit en base
+    if (currentPage === 'commandes') renderCommandes();
+    if (currentPage === 'notifications') renderEmailJournal();
+    if (currentPage === 'parametres') renderEtatQuota();
+    renderQuotaTableauDeBord();
+    if (r && r.ok) { toast('Client notifié par email — Commande '+id+' prête'); return; }
+    if (r && r.ignore) toast('Commande '+id+' prête (email non envoyé : '+r.raison+')');
+    else toast('Commande '+id+' prête, mais l\'email n\'a pas pu être envoyé','error');
+    // Proposition immédiate de l'email « commande prête » prérempli, à envoyer soi-même :
+    // si l'envoi a échoué, ou si les emails automatiques sont coupés (quota épuisé…).
+    // Pas de fenêtre quand la pharmacie a volontairement désactivé ce type d'email dans Notifications.
+    var proposer = !(r && r.ignore) || /non configuré/.test(String(r.raison || ''));
+    var c2 = DATA.commandes.find(function(x){ return x.id === id; });
+    if (proposer && c2 && PharmaEmail.emailValide(c2.email)) {
+      showDetail('Prévenir le client — Commande '+id,
+        '<div class="txt-muted" style="font-size:0.8rem">L\'email automatique n\'est pas parti. Envoyez-le depuis votre messagerie : tout est déjà rédigé.</div>' + blocEmailPrerempliHTML(c2),
+        '<button class="btn btn-ghost" onclick="closeModal(\'m-detail\')">Fermer</button>');
+    }
+  });
+}
+
+// ── TICKETS ─────────────────────────────────────────────────
+function renderTickets(filtre, statut) {
+  var html = '';
+  var list = DATA.tickets.filter(function(t) {
+    var ms = !filtre || searchMatch(t.id+' '+t.client+' '+t.sujet+' '+t.type, filtre);
+    var mst = !statut || statut==='Tous' || t.statut===statut;
+    return ms && mst;
+  });
+  if (!list.length) html = '<tr><td colspan="9" style="text-align:center;padding:30px;color:var(--texte-3)">Aucun ticket</td></tr>';
+  list.forEach(function(t) {
+    var bcp = t.priorite==='Urgent'?'b-red pulse':'b-grey';
+    var bcs = t.statut==='Ouvert'?'b-red':t.statut==='En cours'?'b-orange':'b-green';
+    html += '<tr>';
+    html += '<td><strong>'+escHtml(t.id)+'</strong></td>';
+    html += '<td>'+escHtml(t.client)+'</td>';
+    html += '<td class="txt-muted">'+escHtml(t.type)+'</td>';
+    html += '<td><div class="td-main">'+escHtml(t.sujet)+'</div></td>';
+    html += '<td>'+(t.commande?'<span class="badge b-blue">'+escHtml(t.commande)+'</span>':'—')+'</td>';
+    html += '<td>'+(t.doc?'<span class="badge b-blue">1 fichier</span>':'—')+'</td>';
+    html += '<td><span class="badge '+bcp+'">'+escHtml(t.priorite)+'</span></td>';
+    html += '<td><span class="badge '+bcs+'">'+escHtml(t.statut)+'</span></td>';
+    html += '<td class="actions-cell"><div><button class="btn '+(t.statut==='Ouvert'?'btn-primary':'btn-ghost')+'" style="height:26px;font-size:0.7rem;padding:0 10px" onclick="voirTicket(\''+escAttr(t.id)+'\')">'+(t.statut==='Ouvert'?'Répondre':'Voir')+'</button></div></td>';
+    html += '</tr>';
+  });
+  setHTML('tbody-tickets', html);
+}
+
+function voirTicket(id) {
+  var t = DATA.tickets.find(function(x){ return x.id===id; });
+  if (!t) return;
+  var body = '<div class="flex-gap mb3"><span class="badge '+(t.priorite==='Urgent'?'b-red':'b-grey')+'">'+escHtml(t.priorite)+'</span><span class="badge b-orange">'+escHtml(t.type)+'</span>'+(t.commande?'<span class="badge b-blue">'+escHtml(t.commande)+'</span>':'')+'</div>';
+  body += '<div class="msg mb3"><div><div class="msg-bubble msg-client">'+escHtml(t.sujet)+'</div><div class="msg-meta">'+escHtml(t.client)+'</div></div></div>';
+  (Array.isArray(t.historique) ? t.historique : []).forEach(function(h) {
+    var d = new Date(h.date);
+    var quand = isNaN(d) ? '' : ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+' '+('0'+d.getHours()).slice(-2)+'h'+('0'+d.getMinutes()).slice(-2);
+    body += '<div class="msg mb3" style="text-align:right"><div><div class="msg-bubble '+(h.type==='note'?'msg-note" style="background:var(--or-pale);color:var(--texte)':'msg-admin')+'">'+escHtml(h.texte)+'</div>'
+      + '<div class="msg-meta">'+(h.type==='note'?'Note interne · ':'Réponse · ')+escHtml(h.auteur)+' · '+escHtml(quand)+'</div></div></div>';
+  });
+  body += '<hr><div class="form-group mb3"><label>Répondre au client</label><textarea id="ticket-reponse" placeholder="Votre réponse..."></textarea></div>';
+  body += '<div class="form-group"><label>Note interne (invisible par le client)</label><textarea id="ticket-note" placeholder="Note interne..." style="background:var(--or-pale)"></textarea></div>';
+  var footer = '<button class="btn btn-ghost" onclick="closeModal(\'m-detail\')">Fermer</button>';
+  footer += '<button class="btn btn-ghost" onclick="resoudreTicket(\''+escAttr(id)+'\')">Marquer résolu</button>';
+  footer += '<button class="btn btn-primary" onclick="repondreTicket(\''+escAttr(id)+'\')">Envoyer réponse</button>';
+  showDetail('Ticket '+id+' — '+t.client, body, footer);
+}
+
+function repondreTicket(id) {
+  var t = DATA.tickets.find(function(x){ return x.id===id; });
+  if (!t) return;
+  var reponse = (getVal('ticket-reponse') || '').trim();
+  var note = (getVal('ticket-note') || '').trim();
+  if (!reponse && !note) { toast('Écrivez une réponse ou une note interne', 'error'); return; }
+  if (!Array.isArray(t.historique)) t.historique = [];
+  var maintenant = new Date().toISOString();
+  if (reponse) { t.historique.push({ type:'reponse', texte:reponse, auteur:nomValideur(), date:maintenant }); t.statut = 'En cours'; }
+  if (note) t.historique.push({ type:'note', texte:note, auteur:nomValideur(), date:maintenant });
+  closeModal('m-detail');
+  renderTickets();
+  // L'envoi au client par email arrivera avec la messagerie du serveur : on ne prétend pas l'avoir envoyé
+  toast(reponse ? 'Réponse enregistrée dans le ticket (à transmettre au client par téléphone ou email en attendant l\'envoi automatique)' : 'Note interne enregistrée');
+  persist();
+}
+
+function resoudreTicket(id) {
+  var t = DATA.tickets.find(function(x){ return x.id===id; });
+  if (t) t.statut = 'Résolu';
+  closeModal('m-detail');
+  renderTickets();
+  toast('Ticket '+id+' marqué résolu');
+  persist();
+}
+
+// ── EMPLOYES ────────────────────────────────────────────────
+function renderEmployes() {
+  var html = '';
+  DATA.employes.forEach(function(e) {
+    html += '<tr>';
+    html += '<td><div class="td-main">'+escHtml(e.nom)+'</div><div class="td-sub">'+escHtml(e.email)+'</div></td>';
+    html += '<td><span class="badge '+(e.role==='Admin'?'b-red':'b-blue')+'">'+escHtml(e.role)+'</span></td>';
+    html += '<td class="txt-muted">'+escHtml(e.acces)+'</td>';
+    html += '<td><span class="badge '+(e.actif?'b-green':'b-grey')+'">'+(e.actif?'Actif':'Inactif')+'</span></td>';
+    html += '<td class="actions-cell"><div>';
+    if (currentUser.role === 'Admin') {
+      html += '<button class="act-btn" onclick="editEmploye('+e.id+')">'+svgEdit()+'</button>';
+      if (e.role !== 'Admin') html += '<button class="act-btn" style="color:var(--rouge)" onclick="deleteEmploye('+e.id+',\''+escAttr(e.nom)+'\')">'+svgTrash()+'</button>';
+    }
+    html += '</div></td></tr>';
+  });
+  setHTML('tbody-employes', html);
+}
+
+function editEmploye(id) {
+  var e = DATA.employes.find(function(x){ return x.id===id; });
+  if (!e) return;
+  setVal('emp-nom', e.nom); setVal('emp-email', e.email);
+  document.getElementById('emp-role').value = e.role;
+  document.getElementById('emp-id').value = id;
+  openModal('m-employe');
+}
+
+function saveEmploye() {
+  var id = parseInt(document.getElementById('emp-id').value);
+  var nom = (getVal('emp-nom') || '').trim(), email = (getVal('emp-email') || '').trim(), role = getVal('emp-role');
+  if (!nom) { toast('Le nom est obligatoire', 'error'); return; }
+  if (email && !pharmaEmailValide(email)) { toast('Adresse email invalide', 'error'); return; }
+  if (id) {
+    var e = DATA.employes.find(function(x){ return x.id===id; });
+    if (e) { e.nom=nom; e.email=email; e.role=role; e.acces=role==='Admin'?'Tout':'Commandes + Tickets'; }
+    toast('Employé modifié');
+  } else {
+    var nid = DATA.employes.length ? Math.max.apply(null,DATA.employes.map(function(x){return x.id;}))+1 : 1;
+    DATA.employes.push({ id:nid, nom:nom, email:email, role:role, acces:role==='Admin'?'Tout':'Commandes + Tickets', actif:true });
+    toast('Employé ajouté');
+  }
+  closeModal('m-employe'); renderEmployes(); resetForm('form-employe');
+  persist();
+}
+
+function deleteEmploye(id, nom) {
+  confirmer('Supprimer le compte de "'+escHtml(nom)+'" ?', function() {
+    DATA.employes = DATA.employes.filter(function(e){ return e.id!==id; });
+    renderEmployes(); toast(nom+' supprimé');
+    persist();
+  });
+}
+
+// ── STOCKS ──────────────────────────────────────────────────
+function renderStocks(filtre) {
+  var html = '';
+  var list = DATA.produits.filter(function(p) {
+    return !filtre || searchMatch(p.nom+' '+p.ref, filtre);
+  });
+  list.forEach(function(p) {
+    var bc = p.stock<=0?'b-red':p.stock<=p.seuil?'b-or':'b-green';
+    var label = p.stock<=0?'Rupture':p.stock<=p.seuil?'Faible':'OK';
+    html += '<tr>';
+    html += '<td><div class="td-main">'+escHtml(p.nom)+'</div><div class="td-sub">'+escHtml(p.ref)+'</div></td>';
+    html += '<td style="'+(p.stock<=0?'color:var(--rouge);font-weight:700':p.stock<=p.seuil?'color:var(--or);font-weight:700':'')+'">'+p.stock+'</td>';
+    html += '<td>'+p.seuil+'</td>';
+    html += '<td><span class="badge '+bc+'">'+label+'</span></td>';
+    html += '<td class="actions-cell"><div><input class="inp" type="number" id="stock-'+p.id+'" value="'+p.stock+'" style="width:70px;height:30px"><button class="btn btn-primary" style="height:30px;font-size:0.7rem;padding:0 10px" onclick="updateStock('+p.id+')">Màj</button></div></td>';
+    html += '</tr>';
+  });
+  setHTML('tbody-stocks', html);
+}
+
+function updateStock(id) {
+  var p = DATA.produits.find(function(x){ return x.id===id; });
+  var input = document.getElementById('stock-'+id);
+  if (p && input) {
+    var v = input.value === '' ? NaN : Number(input.value);
+    if (!Number.isInteger(v) || v < 0) { toast('Le stock doit être un nombre entier positif ou nul','error'); return; }
+    p.stock = v;
+    renderStocks();
+    toast('Stock de "'+p.nom+'" mis à jour : '+p.stock+' unités');
+    persist();
+  }
+}
+
+// ── MESSAGES INTERNES ───────────────────────────────────────
+function renderMessages() {
+  var html = '';
+  DATA.messages.forEach(function(m) {
+    var isMe = m.de === currentUser.nom;
+    html += '<div style="display:flex;flex-direction:column;align-items:'+(isMe?'flex-end':'flex-start');
+    html += ';margin-bottom:12px">';
+    html += '<div class="msg-bubble '+(isMe?'msg-admin':'msg-client')+'">'+escHtml(m.msg)+'</div>';
+    html += '<div class="msg-meta">'+(isMe?'Vous':escHtml(m.de))+' · '+escHtml(m.heure)+'</div></div>';
+  });
+  setHTML('messages-thread', html);
+  // Marquer tous comme lus
+  var hadUnread = DATA.messages.some(function(m){ return !m.lu; });
+  DATA.messages.forEach(function(m){ m.lu=true; });
+  if (hadUnread) persist();
+  var badge = document.getElementById('msg-badge');
+  if (badge) { badge.textContent=''; badge.style.display='none'; }
+  // Scroll bas
+  var thread = document.getElementById('messages-thread');
+  if (thread) thread.scrollTop = thread.scrollHeight;
+}
+
+function envoyerMessage() {
+  var inp = document.getElementById('msg-input');
+  if (!inp || !inp.value.trim()) return;
+  var now = new Date();
+  var heure = now.getHours()+'h'+(now.getMinutes()<10?'0':'')+now.getMinutes();
+  DATA.messages.push({ id:DATA.messages.length+1, de:currentUser.nom, msg:inp.value.trim(), heure:heure, lu:true });
+  inp.value = '';
+  renderMessages();
+  persist();
+}
+
+// ── HORAIRES ────────────────────────────────────────────────
+function renderHoraires() {
+  var jours = ['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'];
+  jours.forEach(function(j) {
+    var h = (DATA.horaires && DATA.horaires[j]) || { ouvert: false, debut: '', fin: '' };
+    var tog = document.getElementById('h-'+j);
+    var deb = document.getElementById('h-'+j+'-deb');
+    var fin = document.getElementById('h-'+j+'-fin');
+    if (tog) tog.checked = h.ouvert;
+    if (deb) deb.value = h.debut;
+    if (fin) fin.value = h.fin;
+  });
+  // Jours spéciaux
+  var html = '';
+  DATA.joursSpeciaux.forEach(function(js, i) {
+    var bg = js.type==='Fermeture'?'background:var(--rouge-pale);border-color:rgba(229,83,83,0.2)':'';
+    html += '<div class="sday" style="'+bg+'">';
+    html += '<div><div class="sday-date">'+escHtml(js.date)+'</div><div class="sday-type">'+escHtml(js.type)+'</div></div>';
+    html += '<div class="sday-hrs" style="'+(js.type==='Fermeture'?'color:var(--rouge)':'')+'">'+(js.type==='Fermeture'?'Fermé':escHtml(js.debut)+' – '+escHtml(js.fin))+'</div>';
+    html += '<button class="act-btn" onclick="deleteJourSpecial('+i+')">'+svgTrash()+'</button>';
+    html += '</div>';
+  });
+  setHTML('jours-speciaux-list', html || '<div class="txt-muted" style="padding:10px">Aucun jour spécial</div>');
+  // Bandeau
+  var bTog = document.getElementById('bandeau-tog');
+  var bMsg = document.getElementById('bandeau-msg');
+  if (bTog) bTog.checked = DATA.parametres.bandeauActif;
+  if (bMsg) bMsg.value = DATA.parametres.bandeauMsg;
+}
+
+function saveHoraires() {
+  var jours = ['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'];
+  var nouveaux = {};
+  for (var i = 0; i < jours.length; i++) {
+    var j = jours[i];
+    var tog = document.getElementById('h-'+j);
+    var deb = document.getElementById('h-'+j+'-deb');
+    var fin = document.getElementById('h-'+j+'-fin');
+    var h = { ouvert: tog?tog.checked:false, debut: deb?deb.value:'', fin: fin?fin.value:'' };
+    if (h.ouvert && (!h.debut || !h.fin)) { toast('Indiquez l\'heure d\'ouverture et de fermeture du '+j, 'error'); return; }
+    if (h.ouvert && h.fin <= h.debut) { toast('Le '+j+', l\'heure de fermeture doit être après l\'ouverture', 'error'); return; }
+    nouveaux[j] = h;
+  }
+  DATA.horaires = nouveaux;
+  toast('Horaires sauvegardés');
+  persist();
+}
+
+function saveGarde() {
+  var date = getVal('g-date'), type = getVal('g-type');
+  var debut = getVal('g-debut'), fin = getVal('g-fin'), msg = getVal('g-msg');
+  if (!date) { toast('La date est obligatoire','error'); return; }
+  DATA.joursSpeciaux.push({ date:date, type:type, debut:debut, fin:fin, msg:msg });
+  closeModal('m-garde');
+  renderHoraires();
+  toast('Jour spécial ajouté');
+  persist();
+}
+
+function deleteJourSpecial(i) {
+  confirmer('Supprimer ce jour spécial ?', function() {
+    DATA.joursSpeciaux.splice(i, 1);
+    renderHoraires();
+    toast('Jour spécial supprimé');
+    persist();
+  });
+}
+
+function saveBandeau() {
+  var tog = document.getElementById('bandeau-tog');
+  var msg = document.getElementById('bandeau-msg');
+  DATA.parametres.bandeauActif = tog ? tog.checked : false;
+  DATA.parametres.bandeauMsg = msg ? msg.value : '';
+  toast('Bandeau mis à jour');
+  persist();
+}
+
+// ── PARAMETRES ──────────────────────────────────────────────
+function renderParametres() {
+  setVal('par-nom', DATA.parametres.nom);
+  setVal('par-adresse', DATA.parametres.adresse);
+  setVal('par-tel', DATA.parametres.tel);
+  setVal('par-email', DATA.parametres.email);
+  setVal('par-rapport-email', DATA.parametres.rapportEmail);
+  setVal('par-couleur', DATA.parametres.couleurPrimaire || '#1B6B45');
+  setVal('par-logo', DATA.parametres.logoTexte || DATA.parametres.nom);
+  setVal('par-fid-seuil', DATA.parametres.fideliteSeuil || 5);
+  setVal('par-fid-reduction', DATA.parametres.fideliteReduction || 10);
+  var rj = document.getElementById('par-rapport-jour');
+  var rh = document.getElementById('par-rapport-heure');
+  var rt = document.getElementById('par-restriction');
+  if (rj) rj.value = DATA.parametres.rapportJour;
+  if (rh) rh.value = DATA.parametres.rapportHeure;
+  if (rt) rt.checked = DATA.parametres.restrictionEmployes;
+  renderLegal();
+  renderEmailParams();
+}
+
+// Apparence : couleur principale + logo, appliqués aussi au site client
+function saveApparence() {
+  var couleur = getVal('par-couleur') || '#1B6B45';
+  if (!/^#[0-9a-fA-F]{6}$/.test(couleur)) { toast('Couleur invalide','error'); return; }
+  DATA.parametres.couleurPrimaire = couleur;
+  DATA.parametres.logoTexte = (getVal('par-logo') || '').trim() || DATA.parametres.nom;
+  persist();
+  appliquerCouleur();
+  toast('Apparence sauvegardée');
+}
+
+// Applique la couleur principale à l'interface admin en direct
+function appliquerCouleur() {
+  var c = DATA.parametres.couleurPrimaire;
+  if (c) document.documentElement.style.setProperty('--vert', c);
+  // Nom de la pharmacie dans la sidebar et le titre de l'onglet
+  var nom = DATA.parametres.nom || 'Pharmacie';
+  var logo = document.getElementById('admin-logo-name');
+  if (logo) logo.textContent = nom;
+  var equipe = document.getElementById('messages-nom-pharmacie');
+  if (equipe) equipe.textContent = nom;
+  document.title = nom + ' — Administration';
+  _titreOriginal = document.title;
+}
+
+// Programme de fidélité : palier et réduction
+function saveFidelite() {
+  var seuil = parseInt(getVal('par-fid-seuil'), 10);
+  var reduction = parseInt(getVal('par-fid-reduction'), 10);
+  if (!seuil || seuil < 1) { toast('Le palier doit être d\'au moins 1 achat','error'); return; }
+  if (!reduction || reduction < 1 || reduction > 100) { toast('La réduction doit être entre 1 et 100 %','error'); return; }
+  DATA.parametres.fideliteSeuil = seuil;
+  DATA.parametres.fideliteReduction = reduction;
+  persist();
+  toast('Programme de fidélité mis à jour : ' + seuil + ' achats = -' + reduction + '%');
+}
+
+function saveParametres() {
+  var nom = (getVal('par-nom') || '').trim();
+  var email = (getVal('par-email') || '').trim();
+  if (!nom) { toast('Le nom de la pharmacie est obligatoire','error'); return; }
+  if (email && !pharmaEmailValide(email)) { toast('Adresse email de la pharmacie invalide','error'); return; }
+  DATA.parametres.nom = nom;
+  DATA.parametres.adresse = (getVal('par-adresse') || '').trim();
+  DATA.parametres.tel = (getVal('par-tel') || '').trim();
+  DATA.parametres.email = email;
+  toast('Paramètres sauvegardés');
+  persist();
+  appliquerCouleur();
+}
+
+// La restriction horaire s'enregistre dès qu'on bascule l'interrupteur
+function saveRestriction(actif) {
+  DATA.parametres.restrictionEmployes = !!actif;
+  persist();
+  toast(actif ? 'Restriction horaire activée pour les employés' : 'Restriction horaire désactivée');
+}
+
+// ── EMAILS (EmailJS) ────────────────────────────────────────
+function renderEmailParams() {
+  var c = (DATA.parametres.emailjs) || {};
+  var tog = document.getElementById('em-actif');
+  if (tog) tog.checked = c.actif === true;
+  setVal('em-service', c.serviceId);
+  setVal('em-template', c.templateId);
+  setVal('em-key', c.publicKey);
+  setVal('em-logo', c.logoUrl);
+  setVal('em-site', c.siteUrl);
+  var q = (typeof PharmaEmail !== 'undefined') ? PharmaEmail.quota(DATA) : null;
+  setVal('em-quota', q ? String(q.restants) : '');
+  renderEtatQuota();
+}
+
+// ── DÉCOMPTE DES EMAILS RESTANTS ────────────────────────────
+function texteDateCourte(iso) {
+  var d = new Date(iso);
+  return isNaN(d) ? '' : ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2);
+}
+// Résumé du décompte (HTML sûr : uniquement des nombres et des textes fixes)
+function resumeQuotaHTML(q, avecNote) {
+  if (!q) return '<div class="txt-muted" style="font-size:0.78rem">Décompte non activé : saisissez le nombre d\'emails restants relevé dans EmailJS.</div>';
+  var couleur = q.epuise ? 'var(--rouge)' : (q.alerte ? '#B07C00' : 'var(--vert)');
+  var html = '<div style="font-size:0.82rem;line-height:1.5"><strong style="color:'+couleur+'">'+q.restants+' email'+(q.restants > 1 ? 's' : '')+' restant'+(q.restants > 1 ? 's' : '')+'</strong>'
+    + ' <span class="txt-muted">· relevé : '+q.releve+(q.releveLe ? ' le '+texteDateCourte(q.releveLe) : '')+' · '+q.envoyes+' envoyé'+(q.envoyes > 1 ? 's' : '')+' depuis</span></div>';
+  if (avecNote) html += '<div style="font-size:0.72rem;color:var(--texte-3);line-height:1.5;margin-top:4px">'
+    + (ADMIN_CLOUD
+      ? 'Tous les emails envoyés sont décomptés, y compris les confirmations parties du téléphone des clients. Recalez de temps en temps avec le chiffre d\'EmailJS.'
+      : 'Tant que le site n\'est pas relié au serveur, seuls les emails partis de ce navigateur sont décomptés. Les confirmations partent du téléphone des clients : le chiffre réel peut être plus bas. Recalez-le de temps en temps avec celui d\'EmailJS.')
+    + '</div>';
+  if (q.epuise) html += '<div style="font-size:0.76rem;color:var(--rouge);margin-top:4px">Quota sans doute épuisé : utilisez l\'email prérempli depuis le détail de chaque commande.</div>';
+  return html;
+}
+function renderEtatQuota() {
+  var box = document.getElementById('em-quota-etat');
+  if (box) box.innerHTML = resumeQuotaHTML(typeof PharmaEmail !== 'undefined' ? PharmaEmail.quota(DATA) : null, true);
+}
+function saveEmailQuota() {
+  var brut = (getVal('em-quota') || '').trim();
+  if (brut === '') {
+    DATA.parametres.emailQuota = null;
+    persist(); renderEtatQuota(); renderQuotaTableauDeBord();
+    toast('Décompte des emails désactivé');
+    return;
+  }
+  if (!/^\d{1,6}$/.test(brut)) { toast('Indiquez un nombre entier (0 ou plus)','error'); return; }
+  var n = parseInt(brut, 10);
+  DATA.parametres.emailQuota = { releve: n, releveLe: new Date().toISOString(), envoyes: 0 };
+  persist(); renderEtatQuota(); renderQuotaTableauDeBord();
+  toast('Décompte mis à jour : '+n+' email'+(n > 1 ? 's' : '')+' restant'+(n > 1 ? 's' : ''));
+}
+// Alerte du tableau de bord quand il reste peu d'emails (20 ou moins)
+function renderQuotaTableauDeBord() {
+  var box = document.getElementById('dash-quota');
+  if (!box) return;
+  var q = (typeof PharmaEmail !== 'undefined') ? PharmaEmail.quota(DATA) : null;
+  if (!q || !q.alerte) { box.innerHTML = ''; return; }
+  var fond = q.epuise ? 'var(--rouge-pale, rgba(229,83,83,0.1))' : 'var(--or-pale, rgba(217,164,65,0.14))';
+  box.innerHTML = '<div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;background:'+fond+';border:1px solid var(--bord);border-radius:10px;padding:10px 14px;margin-bottom:12px;font-size:0.8rem">'
+    + '<div style="flex:1;min-width:200px"><strong>'+(q.epuise ? 'Plus d\'emails automatiques ce mois-ci' : 'Il reste '+q.restants+' email'+(q.restants > 1 ? 's' : '')+' automatique'+(q.restants > 1 ? 's' : ''))+'</strong>'
+    + '<div class="txt-muted" style="font-size:0.74rem">'+(q.epuise ? 'Prévenez les clients avec l\'email prérempli (détail de la commande).' : 'Pensez à vérifier le chiffre dans EmailJS. Le détail de chaque commande propose un email prérempli à envoyer vous-même.')+'</div></div>'
+    + '<button class="btn btn-ghost" onclick="go(\'parametres\')">Voir le décompte</button></div>';
+}
+
+// ── EMAIL PRÉREMPLI (envoi manuel) ──────────────────────────
+var TYPES_PREREMPLI = { commandeRecue: 'Confirmation de commande', commandePrete: 'Commande prête', codeFidelite: 'Code fidélité' };
+function ctxEmailCommande(c, type) {
+  var ctx = { commande: { id: c.id, client: c.client, email: c.email, produits: c.produits, total: c.total,
+    timestamp: c.timestamp, lang: c.lang, codeRetrait: c.codeRetrait, codePromo: c.codePromo, remise: c.remise } };
+  if (type === 'codeFidelite') {
+    var code = (DATA.codesPromo || []).find(function(x){ return x && x.commandeId === c.id; });
+    if (!code) return null;
+    var cfg = PharmaFidelite.config(DATA);
+    ctx.fidelite = { seuil: cfg.seuil, reduction: cfg.reduction };
+    ctx.code = { code: code.code, pct: code.pct, expire: code.expire };
+  }
+  return ctx;
+}
+function preparerEmail(id, type) {
+  if (typeof PharmaEmail === 'undefined') return null;
+  var c = DATA.commandes.find(function(x){ return x.id === id; });
+  if (!c || !PharmaEmail.emailValide(c.email)) return null;
+  var ctx = ctxEmailCommande(c, type);
+  return ctx ? PharmaEmail.prerempli(type, DATA, ctx) : null;
+}
+// Types d'email proposés pour une commande (selon son état)
+function typesEmailCommande(c) {
+  var t = ['commandeRecue'];
+  if (c.statut === 'Prête') t.push('commandePrete');
+  if ((DATA.codesPromo || []).some(function(x){ return x && x.commandeId === c.id; })) t.push('codeFidelite');
+  return t;
+}
+function blocEmailPrerempliHTML(c) {
+  if (typeof PharmaEmail === 'undefined') return '';
+  if (!PharmaEmail.emailValide(c.email)) return '<div class="txt-muted" style="font-size:0.76rem;margin-top:12px">Pas d\'adresse email valide pour ce client : prévenez-le par téléphone.</div>';
+  var echecs = (DATA.emailLog || []).filter(function(e){ return e && e.commande === c.id && e.statut === 'Échec'; }).length;
+  var html = '<div style="background:var(--fond);border-radius:8px;padding:12px;border:1px solid var(--bord);margin-top:12px">'
+    + '<div style="font-size:0.65rem;font-weight:700;color:var(--texte-3);text-transform:uppercase;margin-bottom:6px">Email au client, à envoyer vous-même</div>';
+  if (echecs) html += '<div style="font-size:0.76rem;color:var(--rouge);margin-bottom:8px">L\'email automatique n\'est pas parti ('+echecs+' échec'+(echecs > 1 ? 's' : '')+'). Envoyez-le depuis votre messagerie :</div>';
+  else html += '<div class="txt-muted" style="font-size:0.74rem;margin-bottom:8px">Ouvre votre messagerie avec l\'email déjà rédigé (sans consommer le quota EmailJS).</div>';
+  typesEmailCommande(c).forEach(function(type) {
+    var pre = preparerEmail(c.id, type);
+    var lien = pre ? PharmaEmail.lienMailto(pre) : '';
+    if (!lien) return;
+    html += '<div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:6px"><span style="flex:1;min-width:140px;font-size:0.8rem;font-weight:600">'+escHtml(TYPES_PREREMPLI[type])+'</span>'
+      + '<a class="btn btn-ghost" style="height:28px;font-size:0.72rem" href="'+escHtml(lien)+'" onclick="noterEmailManuel(\''+escAttr(c.id)+'\',\''+type+'\')">Ouvrir l\'email</a>'
+      + '<button class="btn btn-ghost" style="height:28px;font-size:0.72rem" onclick="copierEmailPrerempli(\''+escAttr(c.id)+'\',\''+type+'\')">Copier le texte</button></div>';
+  });
+  return html + '</div>';
+}
+function noterEmailManuel(id, type) {
+  var pre = preparerEmail(id, type);
+  if (!pre) return;
+  PharmaEmail.noterManuel(pre);
+  DATA = PharmaStore.load();
+  if (currentPage === 'notifications') renderEmailJournal();
+}
+function copierEmailPrerempli(id, type) {
+  var pre = preparerEmail(id, type);
+  if (!pre) { toast('Email impossible à préparer pour cette commande','error'); return; }
+  var texte = 'À : ' + pre.destinataire + '\nObjet : ' + pre.sujet + '\n\n' + pre.corps;
+  var fini = function() { noterEmailManuel(id, type); toast('Texte copié : collez-le dans votre messagerie'); };
+  var secours = function() {
+    var zone = document.createElement('textarea');
+    zone.value = texte; zone.setAttribute('readonly', ''); zone.style.position = 'fixed'; zone.style.opacity = '0';
+    document.body.appendChild(zone); zone.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(zone);
+    if (ok) fini(); else toast('Copie impossible : utilisez « Ouvrir l\'email »','error');
+  };
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(texte).then(fini, secours);
+    else secours();
+  } catch (e) { secours(); }
+}
+
+function saveEmailParams() {
+  var tog = document.getElementById('em-actif');
+  var actif = tog ? tog.checked : false;
+  var service = getVal('em-service').trim();
+  var template = getVal('em-template').trim();
+  var cle = getVal('em-key').trim();
+  var logo = getVal('em-logo').trim();
+  var site = getVal('em-site').trim();
+  if (actif && (!service || !template || !cle)) { toast('Renseignez le Service ID, le Template ID et la clé publique','error'); return; }
+  if (service && !/^service_[A-Za-z0-9_-]+$/.test(service)) { toast('Le Service ID doit commencer par service_','error'); return; }
+  if (template && !/^template_[A-Za-z0-9_-]+$/.test(template)) { toast('Le Template ID doit commencer par template_','error'); return; }
+  if (cle && !/^[A-Za-z0-9_-]{10,40}$/.test(cle)) { toast('Clé publique invalide','error'); return; }
+  if (logo && !/^https:\/\//i.test(logo)) { toast('L\'adresse du logo doit commencer par https://','error'); return; }
+  if (site && !/^https?:\/\//i.test(site)) { toast('L\'adresse du site doit commencer par https://','error'); return; }
+  DATA.parametres.emailjs = { actif: actif, serviceId: service, templateId: template, publicKey: cle, logoUrl: logo, siteUrl: site };
+  persist();
+  toast('Réglages des emails sauvegardés');
+}
+
+function envoyerEmailTest() {
+  var dest = getVal('em-test-dest').trim();
+  var etat = document.getElementById('em-test-etat');
+  if (typeof PharmaEmail === 'undefined') { toast('Module d\'envoi absent (emails.js)','error'); return; }
+  if (!PharmaEmail.emailValide(dest)) { toast('Saisissez une adresse email valide','error'); return; }
+  if (etat) etat.textContent = 'Envoi en cours…';
+  var ctx = {
+    commande: {
+      id: '#TEST', client: 'Client Test', email: dest, lang: 'fr', codeRetrait: 'A1B2C3',
+      produits: 'Crème solaire SPF50 × 1, Vitamine C × 2', total: 24.9, timestamp: new Date().toISOString()
+    },
+    fidelite: { seuil: PharmaFidelite.config(DATA).seuil, reduction: PharmaFidelite.config(DATA).reduction, achats: 2 }
+  };
+  PharmaEmail.envoyer('commandeRecue', DATA, ctx, { test: true }).then(function(r) {
+    DATA = PharmaStore.load();
+    renderEtatQuota(); // le test compte dans le quota
+    if (currentPage === 'parametres') { /* les champs en cours de saisie ne sont pas réinitialisés */ }
+    if (r && r.ok) { if (etat) etat.textContent = 'Test envoyé'; toast('Email de test envoyé à '+dest); }
+    else {
+      var raison = r && r.ignore ? r.raison : 'erreur ' + (r && r.status ? r.status : '') + ' ' + String(r && r.detail || '').slice(0, 80);
+      if (etat) etat.textContent = 'Échec';
+      toast('Test non envoyé : '+raison,'error');
+    }
+  });
+}
+
+var LIBELLES_EMAIL = { commandeRecue:'Commande reçue', commandePrete:'Commande prête', codeFidelite:'Code fidélité', test:'Test' };
+function renderEmailJournal() {
+  var box = document.getElementById('email-journal');
+  if (!box) return;
+  var log = DATA.emailLog || [];
+  var entete = '<div style="margin-bottom:10px">'+resumeQuotaHTML(typeof PharmaEmail !== 'undefined' ? PharmaEmail.quota(DATA) : null, false)+'</div>';
+  if (!log.length) {
+    box.innerHTML = entete + '<div style="text-align:center;padding:20px;color:var(--texte-3);font-size:0.82rem">Aucun email automatique envoyé pour le moment.</div>';
+    return;
+  }
+  var lignes = log.map(function(e) {
+    var d = new Date(e.timestamp);
+    var date = ('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2)+' '+('0'+d.getHours()).slice(-2)+'h'+('0'+d.getMinutes()).slice(-2);
+    var ok = e.statut === 'Envoyé';
+    var manuel = e.statut === 'Préparé (envoi manuel)';
+    return '<tr><td class="txt-muted">'+date+'</td><td>'+escHtml(LIBELLES_EMAIL[e.type] || e.type)+'</td>'
+      + '<td>'+escHtml(e.commande || '—')+'</td><td class="txt-muted">'+escHtml(e.destinataire)+'</td>'
+      + '<td><span class="badge '+(ok?'b-green':(manuel?'b-blue':'b-red'))+'">'+escHtml(e.statut)+'</span>'
+      + (ok || !e.detail ? '' : '<div class="td-sub">'+escHtml(e.detail)+'</div>')+'</td></tr>';
+  }).join('');
+  box.innerHTML = entete + '<table><thead><tr><th>Date</th><th>Type</th><th>Commande</th><th>Destinataire</th><th>Statut</th></tr></thead><tbody>'+lignes+'</tbody></table>';
+}
+
+// ── RAPPORT : configuration, envoi, impression ──────────────
+function saveRapportConfig() {
+  var email = (getVal('par-rapport-email') || '').trim();
+  if (email && !pharmaEmailValide(email)) { toast('Adresse email du rapport invalide','error'); return; }
+  var rj = document.getElementById('par-rapport-jour'), rh = document.getElementById('par-rapport-heure');
+  DATA.parametres.rapportEmail = email;
+  if (rj) DATA.parametres.rapportJour = rj.value;
+  if (rh) DATA.parametres.rapportHeure = rh.value;
+  DATA.parametres.rapportContenu = {
+    promos: !!(document.getElementById('rap-promos') || {}).checked,
+    codes: !!(document.getElementById('rap-codes') || {}).checked,
+    ventes: !!(document.getElementById('rap-ventes') || {}).checked,
+    employes: !!(document.getElementById('rap-employes') || {}).checked
+  };
+  persist();
+  toast('Configuration du rapport enregistrée');
+}
+function envoyerRapport() {
+  toast('L\'envoi du rapport par email arrivera avec le serveur. En attendant, utilisez le bouton PDF pour l\'imprimer ou l\'enregistrer.');
+}
+function imprimerRapport() {
+  document.body.classList.add('impression-rapport');
+  try { window.print(); } finally {
+    setTimeout(function(){ document.body.classList.remove('impression-rapport'); }, 500);
+  }
+}
+
+// ── ACCÈS RESTREINT ──────────────────────────────────────────
+function checkAcces() {
+  if (!DATA.parametres.restrictionEmployes) return true;
+  var now = new Date();
+  var jours = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  var jour = jours[now.getDay()];
+  var h = DATA.horaires[jour];
+  // Jour spécial aujourd'hui : fermeture = pas d'accès ; garde ou horaires modifiés = ses heures
+  var special = (DATA.joursSpeciaux || []).find(function(j){ return j && String(j.date || '').slice(0, 10) === pharmaDateLocale(now); });
+  if (special) {
+    if (special.type === 'Fermeture') return false;
+    if (special.debut && special.fin) h = { ouvert: true, debut: special.debut, fin: special.fin };
+  }
+  if (!h || !h.ouvert || !h.debut || !h.fin) return false;
+  var hNow = now.getHours() * 60 + now.getMinutes();
+  var hDeb = parseInt(h.debut.split(':')[0])*60 + parseInt(h.debut.split(':')[1]||0);
+  var hFin = parseInt(h.fin.split(':')[0])*60 + parseInt(h.fin.split(':')[1]||0);
+  return hNow >= hDeb && hNow <= hFin;
+}
+
+function showBlocage() {
+  if (ADMIN_CLOUD) {
+    PharmaAdminCloud.deconnecter('Accès en dehors des heures d\'ouverture : l\'administration est réservée aux heures d\'ouverture pour les comptes « employé ».');
+    return;
+  }
+  var nom = escHtml((DATA.parametres && DATA.parametres.nom) || 'Pharmacie');
+  document.body.innerHTML = '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;background:var(--fond);font-family:Manrope,sans-serif;text-align:center;padding:30px">'
+    + '<div style="width:60px;height:60px;background:linear-gradient(135deg,#1B6B45,#2ECC7A);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto"><svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>'
+    + '<h1 style="font-size:1.2rem;font-weight:800;color:#1A1F2B">' + nom + '</h1>'
+    + '<div style="background:white;border-radius:12px;padding:24px;box-shadow:0 4px 16px rgba(0,0,0,0.08);max-width:380px;width:100%">'
+    + '<div style="width:46px;height:46px;border-radius:12px;background:#E55353;display:flex;align-items:center;justify-content:center;margin:0 auto 12px"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>'
+    + '<h2 style="font-size:1rem;font-weight:700;color:#1A1F2B;margin-bottom:8px">Accès non autorisé</h2>'
+    + '<p style="font-size:0.82rem;color:#5A6478;line-height:1.6">L\'accès au back-office est restreint en dehors des heures d\'ouverture.<br><br>Contactez l\'administrateur si vous avez besoin d\'un accès exceptionnel.</p></div></div>';
+}
+
+// ── SCAN ────────────────────────────────────────────────────
+function renderScan() {
+  var auj = pharmaDateLocale();
+  var lignes = DATA.commandes.filter(function(c) {
+    return c.statut === 'Retirée' && c.retraitTs && pharmaDateLocale(new Date(c.retraitTs)) === auj;
+  }).sort(function(a, b) { return new Date(b.retraitTs) - new Date(a.retraitTs); });
+  if (!lignes.length) {
+    setHTML('tbody-scan-histo', '<tr><td colspan="4" style="text-align:center;padding:20px;color:var(--texte-3)">Aucun retrait validé aujourd\'hui</td></tr>');
+    return;
+  }
+  setHTML('tbody-scan-histo', lignes.map(function(c) {
+    var d = new Date(c.retraitTs);
+    var heure = ('0'+d.getHours()).slice(-2)+'h'+('0'+d.getMinutes()).slice(-2);
+    return '<tr><td><strong>'+escHtml(c.id)+'</strong></td><td>'+escHtml(abregerNom(c.client))+'</td>'
+      + '<td><span class="badge b-green">'+escHtml(c.valide || '—')+'</span></td><td class="txt-muted">'+heure+'</td></tr>';
+  }).join(''));
+}
+
+// Retrouve une commande par son numéro (#1042 ou 1042) ou par son code de retrait
+function trouverCommandeRetrait(saisie) {
+  var val = String(saisie || '').trim();
+  if (!val) return null;
+  var up = val.toUpperCase();
+  var parNumero = DATA.commandes.find(function(x){ return x.id === val || x.id === '#'+val; });
+  if (parNumero) return parNumero;
+  return DATA.commandes.find(function(x){ return x.codeRetrait && String(x.codeRetrait).toUpperCase() === up; }) || null;
+}
+
+function simulateScan() {
+  var inp = document.getElementById('scan-input');
+  var val = inp ? inp.value.trim() : '';
+  if (!val) { toast('Saisissez le numéro de commande ou le code de retrait','error'); return; }
+  if (ADMIN_CLOUD) {
+    PharmaAdminCloud.validerRetrait(val).then(function(ok) { if (ok && inp) inp.value = ''; renderScan(); });
+    return;
+  }
+  var c = trouverCommandeRetrait(val);
+  if (!c) { toast('Commande introuvable','error'); return; }
+  if (c.statut === 'Retirée') { toast('Cette commande a déjà été retirée','error'); return; }
+  if (c.statut === 'Annulée') { toast('Cette commande a été annulée','error'); return; }
+  c.statut = 'Retirée';
+  c.valide = nomValideur();
+  c.retraitTs = new Date().toISOString();
+  if (inp) inp.value = '';
+  toast('Commande '+c.id+' validée par '+c.valide);
+  renderScan();
+  persist();
+}
+
+// ── CODE PROMO ──────────────────────────────────────────────
+function calcCode() {
+  var pct = document.getElementById('cpct') ? document.getElementById('cpct').value : '10';
+  var scope = document.getElementById('cscope') ? document.getElementById('cscope').value : 'Tous les produits';
+  var lbl = document.getElementById('cscope-label');
+  if (lbl) lbl.textContent = '-'+pct+'% sur '+scope.toLowerCase();
+}
+
+// Code de 6 caractères tirés au hasard (plus de 800 millions de combinaisons) : impossible à
+// deviner par essais successifs, contrairement à l'ancien format à 4 caractères.
+function regenCode() {
+  var alphabet = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+  var tirage = null;
+  try { tirage = new Uint32Array(6); (window.crypto || window.msCrypto).getRandomValues(tirage); } catch (e) { tirage = null; }
+  var s = '';
+  for (var i = 0; i < 6; i++) s += alphabet.charAt((tirage ? tirage[i] : Math.floor(Math.random() * alphabet.length)) % alphabet.length);
+  var el = document.getElementById('cval');
+  if (el) el.textContent = 'PHARM-'+s;
+}
+
+function copyCode(code) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(code).then(function(){ toast('Code '+code+' copié !'); });
+  } else { toast('Code '+code+' copié !'); }
+}
+
+// ── PROMO CALC ──────────────────────────────────────────────
+function calcP() {
+  var n = parseFloat(document.getElementById('pn')?document.getElementById('pn').value:0)||0;
+  var p = parseFloat(document.getElementById('pp')?document.getElementById('pp').value:0)||0;
+  var elPct = document.getElementById('ppct');
+  var elInfo = document.querySelector('.promo-info');
+  if (n>0 && p<n) {
+    if (elPct) elPct.textContent = '-'+Math.round((1-p/n)*100)+'%';
+    if (elInfo) elInfo.textContent = p.toFixed(2)+'€ au lieu de '+n.toFixed(2)+'€';
+  } else if (n>0 && p>=n) {
+    if (elPct) elPct.textContent = '0%';
+    if (elInfo) elInfo.textContent = 'Le prix promo doit être inférieur au prix normal';
+  }
+}
+
+// ── RECHERCHE GLOBALE ───────────────────────────────────────
+function globalSearch(query) {
+  if (!query) return;
+  var q = normalize(query);
+  var shortcuts = {
+    'commande': 'commandes', 'ticket': 'tickets', 'produit': 'produits',
+    'promo': 'promos', 'client': 'clients', 'stock': 'stocks',
+    'employe': 'employes', 'horaire': 'horaires', 'message': 'messages',
+    'rapport': 'rapport', 'code': 'codes-promo', 'notification': 'notifications',
+    'parametre': 'parametres', 'scan': 'scan'
+  };
+  for (var k in shortcuts) {
+    if (q.includes(k)) { go(shortcuts[k]); return; }
+  }
+  // Recherche dans produits
+  var found = DATA.produits.filter(function(p){ return searchMatch(p.nom, query); });
+  if (found.length) { go('produits'); setTimeout(function(){ renderProduits(query); }, 300); return; }
+  // Recherche dans clients
+  var fc = DATA.clients.filter(function(c){ return searchMatch(c.nom+' '+c.email, query); });
+  if (fc.length) { go('clients'); setTimeout(function(){ renderClients(query); }, 300); }
+}
+
+// ── MODALS ──────────────────────────────────────────────────
+function openModal(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  // Les listes déroulantes alimentées par les données sont rafraîchies à
+  // l'ouverture : une catégorie ou un produit ajouté entre-temps doit apparaître.
+  if (id === 'm-produit') renderCatOptions('p-cat', false);
+  // Le modal promo doit toujours proposer les produits réellement présents au catalogue
+  if (id === 'm-promo') {
+    var pid = document.getElementById('p-promo-id');
+    var enEdition = pid && pid.value;
+    if (!enEdition) renderPromoProduitOptions();
+  }
+  el.classList.add('open');
+}
+
+// Fenêtres d'ajout et de modification : à la fermeture (enregistrement, Annuler, croix, Échap,
+// clic à côté), l'élément modifié est oublié et le formulaire vidé. Sans cela, « Nouveau produit »
+// (ou client, employé) ouvert après une modification écrasait l'élément modifié au lieu d'en créer un.
+var MODALES_EDITION = {
+  'm-produit': { id: 'p-id', form: 'form-produit', titre: 'm-produit-title', titreAjout: 'Ajouter un produit' },
+  'm-client':  { id: 'cl-id', form: 'form-client' },
+  'm-employe': { id: 'emp-id', form: 'form-employe' },
+  'm-rayon':   { id: '', form: 'form-rayon' }
+};
+function oublierEdition(modalId) {
+  var m = MODALES_EDITION[modalId];
+  if (!m) return;
+  var cache = document.getElementById(m.id);
+  if (cache) cache.value = '';
+  resetForm(m.form);
+  if (m.titre) { var t = document.getElementById(m.titre); if (t) t.textContent = m.titreAjout; }
+  document.dispatchEvent(new CustomEvent('pres-edition-fermee', { detail: modalId }));
+}
+
+function closeModal(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  oublierEdition(id);
+  el.style.animation = 'slideDown 0.22s ease forwards';
+  setTimeout(function(){ el.classList.remove('open'); el.style.animation=''; }, 200);
+}
+
+function showDetail(title, body, footer) {
+  var el = document.getElementById('m-detail');
+  if (!el) return;
+  document.getElementById('m-detail-title').textContent = title;
+  document.getElementById('m-detail-body').innerHTML = body;
+  document.getElementById('m-detail-footer').innerHTML = footer;
+  openModal('m-detail');
+}
+
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('overlay')) closeModal(e.target.id);
+});
+
+// Touche Échap : ferme la fenêtre ouverte (la plus récente) — accessibilité clavier
+document.addEventListener('keydown', function(e) {
+  if (e.key !== 'Escape') return;
+  var ouvertes = document.querySelectorAll('.overlay.open');
+  if (ouvertes.length) { closeModal(ouvertes[ouvertes.length - 1].id); return; }
+  var panel = document.getElementById('notif-panel');
+  if (panel && panel.classList.contains('open') && typeof toggleNotifPanel === 'function') toggleNotifPanel();
+});
+
+// ── CONFIRMATION ────────────────────────────────────────────
+var _confirmCb = null;
+// options : { titre, bouton } — par défaut une suppression définitive.
+function confirmer(msg, cb, options) {
+  options = options || {};
+  _confirmCb = cb;
+  var el = document.getElementById('confirm-msg');
+  // innerHTML pour permettre la mise en forme (<br>, précisions en petit).
+  // Les données insérées dans ces messages sont toujours échappées (escHtml).
+  if (el) el.innerHTML = msg;
+  var titre = document.getElementById('confirm-titre');
+  if (titre) titre.textContent = options.titre || 'Confirmer la suppression';
+  var bouton = document.getElementById('confirm-ok');
+  if (bouton) bouton.textContent = options.bouton || 'Supprimer définitivement';
+  openModal('m-confirm');
+}
+function confirmOk() { closeModal('m-confirm'); if (_confirmCb) _confirmCb(); _confirmCb=null; }
+
+// ── TOAST ────────────────────────────────────────────────────
+var SVG_TOAST_OK = '<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
+var SVG_TOAST_ERREUR = '<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+function toast(msg, type) {
+  var container = document.getElementById('toast');
+  if (!container) return;
+  var erreur = type === 'error';
+  var el = document.createElement('div');
+  el.className = 'toast-item verre' + (erreur ? ' erreur' : '');
+  el.innerHTML = erreur ? SVG_TOAST_ERREUR : SVG_TOAST_OK;
+  // Texte brut : un nom de client ou de produit affiché dans un message ne peut pas injecter de HTML
+  el.appendChild(document.createTextNode(String(msg == null ? '' : msg)));
+  // Trois messages au plus à l'écran : le plus ancien laisse sa place
+  while (container.children.length >= 3) container.removeChild(container.firstChild);
+  container.appendChild(el);
+  // Une erreur reste un peu plus longtemps : elle se lit en entier
+  setTimeout(function(){
+    el.classList.add('sortie');
+    setTimeout(function(){ if(el.parentNode) el.parentNode.removeChild(el); }, 360);
+  }, erreur ? 4500 : 3200);
+}
+
+// ── COMPTEURS ANIMÉS ─────────────────────────────────────────
+function animCount(id, target) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var n=0, step=Math.max(1,target/40);
+  var t = setInterval(function(){
+    n=Math.min(n+step,target);
+    el.textContent=Math.round(n);
+    if(n>=target) clearInterval(t);
+  }, 25);
+}
+
+// ── SIDEBAR RESPONSIVE ───────────────────────────────────────
+function isMobile() { return window.innerWidth <= 768; }
+function isTablet() { return window.innerWidth > 768 && window.innerWidth <= 1024; }
+
+function toggleSidebar() {
+  var sb = document.querySelector('.sidebar');
+  var bd = document.getElementById('sidebar-backdrop');
+  if (!sb) return;
+  if (sb.classList.contains('open')) { closeSidebar(); }
+  else { sb.classList.add('open'); if(bd) bd.classList.add('visible'); document.body.style.overflow='hidden'; }
+}
+
+function closeSidebar() {
+  var sb = document.querySelector('.sidebar');
+  var bd = document.getElementById('sidebar-backdrop');
+  if (!sb) return;
+  sb.classList.remove('open');
+  if(bd) bd.classList.remove('visible');
+  document.body.style.overflow='';
+}
+
+function initResponsive() {
+  var burger = document.getElementById('burger-btn');
+  if (!burger) return;
+  burger.style.display = (isMobile()||isTablet()) ? 'flex' : 'none';
+  if (!isMobile() && !isTablet()) closeSidebar();
+}
+window.addEventListener('resize', initResponsive);
+
+// ── PARTICULES ───────────────────────────────────────────────
+function initParticles() {
+  try {
+    var canvas = document.getElementById('particles');
+    if (!canvas || !canvas.getContext) return;
+    var ctx = canvas.getContext('2d');
+    canvas.width=220; canvas.height=window.innerHeight;
+    var pts=[];
+    for(var i=0;i<14;i++) pts.push({x:Math.random()*220,y:Math.random()*canvas.height,r:Math.random()*1.5+0.5,speed:Math.random()*0.25+0.08,opacity:Math.random()*0.2+0.04,drift:(Math.random()-0.5)*0.2});
+    function draw(){
+      ctx.clearRect(0,0,220,canvas.height);
+      pts.forEach(function(p){
+        ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle='rgba(46,204,122,'+p.opacity+')'; ctx.fill();
+        p.y-=p.speed; p.x+=p.drift;
+        if(p.y<-10){p.y=canvas.height+10;p.x=Math.random()*220;}
+        if(p.x<0||p.x>220) p.drift*=-1;
+      });
+      requestAnimationFrame(draw);
+    }
+    draw();
+    window.addEventListener('resize',function(){canvas.height=window.innerHeight;});
+  } catch(e){}
+}
+
+// ── SVG ICONS ────────────────────────────────────────────────
+function svgEdit() { return '<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>'; }
+function svgTrash() { return '<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>'; }
+function svgEye() { return '<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>'; }
+function svgTag() { return '<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>'; }
+
+// ── UTILS ────────────────────────────────────────────────────
+function setHTML(id, html) { var el=document.getElementById(id); if(el) el.innerHTML=html; }
+function getVal(id) { var el=document.getElementById(id); return el?el.value:''; }
+function setVal(id, val) { var el=document.getElementById(id); if(el) el.value=val||''; }
+function resetForm(id) { var el=document.getElementById(id); if(el) el.reset(); }
+
+// ── INIT ─────────────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded', function() {
+  appliquerCouleur();
+  initNotifSync();
+  renderNotifCloche(false);
+  initResponsive();
+  initParticles();
+  var cta = document.getElementById('topbar-cta');
+  if (cta) cta.style.display='none';
+  var bd = document.getElementById('sidebar-backdrop');
+  if (bd) bd.addEventListener('click', closeSidebar);
+  var srch = document.querySelector('.topbar-search input');
+  if (srch) {
+    srch.addEventListener('keydown', function(e){ if(e.key==='Enter') globalSearch(this.value); });
+    srch.addEventListener('input', function(){ if(!this.value) { var rows=document.querySelectorAll('.page.active tbody tr'); rows.forEach(function(r){r.style.display='';}); } });
+  }
+  var si = document.getElementById('scan-input');
+  if (si) si.addEventListener('keydown', function(e){ if(e.key==='Enter') simulateScan(); });
+  renderCatOptions('p-cat', false);
+  renderCatOptions('filter-cat-produits');
+  // Preview conseil en temps réel
+  ['cs-icone','cs-titre','cs-texte','cs-couleur'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    // 'change' pour le <select>, 'input' pour les champs texte
+    var evt = (el.tagName === 'SELECT') ? 'change' : 'input';
+    el.addEventListener(evt, function() {
+      var icone = getVal('cs-icone') || 'info';
+      var titre = getVal('cs-titre') || 'Titre';
+      var texte = getVal('cs-texte') || 'Texte du conseil...';
+      var couleur = getVal('cs-couleur') || '#1B6B45';
+      var pe = document.getElementById('cs-preview-icone');
+      var pt = document.getElementById('cs-preview-titre');
+      var px = document.getElementById('cs-preview-texte');
+      var box = pe && pe.parentElement;
+      if (pe) pe.innerHTML = svgConseil(icone);
+      if (pt) pt.textContent = titre;
+      if (px) px.textContent = texte;
+      if (box) box.style.background = couleur;
+    });
+  });
+  // Page de départ : la dernière ouverte dans cet onglet (retour depuis le site), sinon le tableau de bord
+  currentPage = pageMemorisee();
+  var dp = document.getElementById('page-' + currentPage);
+  if (dp) dp.classList.add('active');
+  majEnTetePage(currentPage);
+  setTimeout(function() { renderPage(currentPage); }, 100);
+  // Base de données : écran de connexion, puis lecture des données
+  if (ADMIN_CLOUD) PharmaAdminCloud.demarrer();
+});

@@ -1,2 +1,497 @@
 /* © 2026 Alexis Ngakosso. Tous droits réservés. Reproduction, modification ou réutilisation interdites sans autorisation écrite. */
-var _0x4c3eb3=_0x46df;(function(_0x121aa0,_0x427713){var _0x173b9d=_0x46df,_0x2bc54a=_0x121aa0();while(!![]){try{var _0x4ab399=-parseInt(_0x173b9d(0x1d5))/0x1+parseInt(_0x173b9d(0x265))/0x2+parseInt(_0x173b9d(0x1ae))/0x3+parseInt(_0x173b9d(0x20f))/0x4+-parseInt(_0x173b9d(0x1da))/0x5*(parseInt(_0x173b9d(0x281))/0x6)+parseInt(_0x173b9d(0x271))/0x7*(-parseInt(_0x173b9d(0x1f5))/0x8)+parseInt(_0x173b9d(0x206))/0x9;if(_0x4ab399===_0x427713)break;else _0x2bc54a['push'](_0x2bc54a['shift']());}catch(_0xf59e5e){_0x2bc54a['push'](_0x2bc54a['shift']());}}}(_0x5500,0x2e303));var DATA=PharmaStore[_0x4c3eb3(0x21d)]();function applyPharmacyConfig(){var _0x47627d=_0x4c3eb3,_0x165d57=DATA[_0x47627d(0x1bb)]||{};document[_0x47627d(0x261)]=_0x47627d(0x1dd)+(_0x165d57[_0x47627d(0x1b9)]||'Pharmacie\x20Démo');var _0x371245=document[_0x47627d(0x274)](_0x47627d(0x228));if(_0x371245)_0x371245[_0x47627d(0x22c)]=_0x165d57[_0x47627d(0x1b9)]||'Pharmacie\x20Démo';}function getClientInitials(_0x2bc0dc){var _0x2285ad=_0x4c3eb3,_0x3867b9=_0x2bc0dc[_0x2285ad(0x1e7)]('\x20')['map'](function(_0x4b91ab){var _0x576f4d=_0x2285ad;return _0x4b91ab['charAt'](0x0)[_0x576f4d(0x1d8)]();})['join']('')['slice'](0x0,0x2);return _0x3867b9||'CL';}function getProfilEnregistre(){var _0x1b465f=_0x4c3eb3,_0x5c5f60=null;try{_0x5c5f60=JSON[_0x1b465f(0x1f6)](localStorage[_0x1b465f(0x23f)]('pres-profil')||_0x1b465f(0x230));}catch(_0x35aefa){}return _0x5c5f60;}function getCurrentClientNom(){var _0xc316c5=_0x4c3eb3,_0x37153b=getProfilEnregistre();if(_0x37153b&&(_0x37153b[_0xc316c5(0x234)]||_0x37153b['nom'])){var _0x4e1c27=((_0x37153b[_0xc316c5(0x234)]||'')+'\x20'+(_0x37153b[_0xc316c5(0x1b9)]||''))['trim']();if(_0x4e1c27)return _0x4e1c27;}return _0xc316c5(0x200);}function getCurrentClientEmail(){var _0x8b6498=_0x4c3eb3,_0x12b1e0=getProfilEnregistre();return _0x12b1e0&&_0x12b1e0[_0x8b6498(0x212)]?String(_0x12b1e0[_0x8b6498(0x212)])[_0x8b6498(0x1b5)]():'';}function getCurrentClient(){var _0x3704ee=_0x4c3eb3;return PharmaClients[_0x3704ee(0x222)](DATA,getCurrentClientNom(),getCurrentClientEmail());}function formatDateFr(_0x405e30){var _0x49fdca=_0x4c3eb3,_0x21aba3=/^(\d{4})-(\d{2})-(\d{2})/[_0x49fdca(0x1c7)](String(_0x405e30||''));return _0x21aba3?_0x21aba3[0x3]+'/'+_0x21aba3[0x2]+'/'+_0x21aba3[0x1]:String(_0x405e30||'');}function initFidelite(){var _0xefef3b=_0x4c3eb3,_0x1a31cb=PharmaFidelite['config'](DATA),_0x5ee7bf=_0x1a31cb[_0xefef3b(0x210)],_0x3f38d3=getCurrentClientNom(),_0x44d5b9=getCurrentClient(),_0x545f85=_0x44d5b9?_0x44d5b9[_0xefef3b(0x1b6)]:0x0,_0x28625e=PharmaFidelite[_0xefef3b(0x1cd)](_0x545f85,_0x5ee7bf),_0x68c985=PharmaFidelite['codeActif'](DATA,_0x44d5b9),_0x30e31c=document[_0xefef3b(0x274)]('fid-nom');if(_0x30e31c)_0x30e31c[_0xefef3b(0x22c)]=_0x3f38d3;var _0x18abba=document[_0xefef3b(0x274)](_0xefef3b(0x1fa)),_0x346786=pharmaNumeroFidelite(_0x44d5b9);if(_0x18abba)_0x18abba[_0xefef3b(0x22c)]=_0x44d5b9?_0xefef3b(0x256)+_0x346786:_0xefef3b(0x26a);var _0x353b5d=document[_0xefef3b(0x274)](_0xefef3b(0x22e));_0x353b5d&&(_0x353b5d[_0xefef3b(0x25e)][_0xefef3b(0x1e3)]=_0x44d5b9?'':_0xefef3b(0x26f),_0x353b5d['innerHTML']=_0x44d5b9?pharmaCodeBarres(_0x346786,0x3c)+_0xefef3b(0x201)+_0x346786+'</div>':'',pharmaAjusterCodeBarres(_0x353b5d),!_0x353b5d[_0xefef3b(0x295)]&&(_0x353b5d[_0xefef3b(0x295)]=!![],window[_0xefef3b(0x21c)]('resize',function(){pharmaAjusterCodeBarres(_0x353b5d);})));var _0x53c9c3=document[_0xefef3b(0x274)](_0xefef3b(0x268));if(_0x53c9c3)_0x53c9c3[_0xefef3b(0x22c)]=_0x28625e[_0xefef3b(0x237)]+_0xefef3b(0x20e)+_0x5ee7bf+_0xefef3b(0x235);var _0x26e23a;if(!_0x44d5b9||_0x545f85===0x0)_0x26e23a=_0xefef3b(0x23c)+_0x5ee7bf+'\x20achats\x20pour\x20débloquer\x20'+_0x1a31cb[_0xefef3b(0x1ed)]+_0xefef3b(0x209);else{if(_0x28625e[_0xefef3b(0x203)])_0x26e23a=_0xefef3b(0x1d4);else _0x26e23a=_0x28625e[_0xefef3b(0x22b)]+_0xefef3b(0x244)+(_0x28625e['restant']>0x1?'s':'')+_0xefef3b(0x250);}var _0x14fbdd=document[_0xefef3b(0x274)](_0xefef3b(0x243));if(_0x14fbdd)_0x14fbdd[_0xefef3b(0x22c)]=_0x26e23a;var _0xf54722=document[_0xefef3b(0x274)]('fid-code-label'),_0x3f730f=document[_0xefef3b(0x274)](_0xefef3b(0x247));if(_0x68c985){if(_0xf54722)_0xf54722[_0xefef3b(0x22c)]=_0xefef3b(0x254)+_0x68c985[_0xefef3b(0x1f2)]+_0xefef3b(0x1e2);if(_0x3f730f)_0x3f730f[_0xefef3b(0x22c)]=_0x68c985[_0xefef3b(0x24a)]+(_0x68c985[_0xefef3b(0x1c4)]?_0xefef3b(0x248)+formatDateFr(_0x68c985[_0xefef3b(0x1c4)]):'');}else{var _0x5be139=_0xefef3b(0x254)+_0x1a31cb[_0xefef3b(0x1ed)]+_0xefef3b(0x28f),_0x373754='—';if(_0x44d5b9&&_0x28625e['atteint']){var _0x38088f=(DATA[_0xefef3b(0x1eb)]||[])['filter'](function(_0x280725){var _0x470fc9=_0xefef3b,_0x58a0a1=_0x280725[_0x470fc9(0x25d)]!==undefined?_0x280725[_0x470fc9(0x25d)]===_0x44d5b9['id']:_0x280725[_0x470fc9(0x27a)]===_0x44d5b9[_0x470fc9(0x1b9)];return _0x58a0a1&&String(_0x280725['origine']||'')[_0x470fc9(0x1ff)]('Auto\x20(fidélité)')===0x0;})[_0xefef3b(0x1fe)]();_0x38088f&&(_0x5be139=_0xefef3b(0x254)+_0x38088f['pct']+'%',_0x373754=_0x38088f['maxUsages']>0x0&&_0x38088f['usages']>=_0x38088f[_0xefef3b(0x262)]?_0xefef3b(0x283):_0xefef3b(0x269));}if(_0xf54722)_0xf54722[_0xefef3b(0x22c)]=_0x5be139;if(_0x3f730f)_0x3f730f[_0xefef3b(0x22c)]=_0x373754;}var _0x10865a=document[_0xefef3b(0x274)](_0xefef3b(0x276));if(_0x10865a)_0x10865a[_0xefef3b(0x25e)][_0xefef3b(0x215)]=_0x28625e[_0xefef3b(0x1f2)]+'%';}function escHtml(_0x39175e){var _0x472b5a=_0x4c3eb3;return String(_0x39175e==null?'':_0x39175e)['replace'](/&/g,_0x472b5a(0x207))[_0x472b5a(0x1e0)](/</g,_0x472b5a(0x205))['replace'](/>/g,'&gt;')[_0x472b5a(0x1e0)](/"/g,_0x472b5a(0x1c8))[_0x472b5a(0x1e0)](/'/g,'&#39;');}function renderMesCommandes(){var _0x6218fc=_0x4c3eb3,_0x5e1dfe=document[_0x6218fc(0x274)](_0x6218fc(0x25f));if(!_0x5e1dfe)return;var _0x27ecc0=getCurrentClientNom(),_0x378622=getCurrentClientEmail(),_0x345044=DATA[_0x6218fc(0x242)][_0x6218fc(0x1d6)](function(_0x2b98fc){var _0x3ac3b5=_0x6218fc;return PharmaClients[_0x3ac3b5(0x21e)](_0x2b98fc,_0x27ecc0,_0x378622);})['slice']()['sort'](function(_0x3f4990,_0x566f2b){var _0x19bf24=_0x6218fc;if(!_0x3f4990['timestamp']&&!_0x566f2b['timestamp'])return 0x0;if(!_0x3f4990['timestamp'])return 0x1;if(!_0x566f2b[_0x19bf24(0x1c3)])return-0x1;return new Date(_0x566f2b[_0x19bf24(0x1c3)])-new Date(_0x3f4990[_0x19bf24(0x1c3)]);});if(!_0x345044[_0x6218fc(0x1fb)]){_0x5e1dfe[_0x6218fc(0x23b)]=_0x6218fc(0x1de)+_0x6218fc(0x1ee)+_0x6218fc(0x27b)+_0x6218fc(0x28b)+_0x6218fc(0x1b1);return;}var _0x22bac9={'En\x20préparation':{'cls':_0x6218fc(0x22f),'label':_0x6218fc(0x1f8)},'Prête':{'cls':'ob-ready','label':_0x6218fc(0x1ce)},'Retirée':{'cls':'ob-done','label':_0x6218fc(0x23e)},'Annulée':{'cls':'ob-cancel','label':_0x6218fc(0x272)}},_0x117961='';_0x345044[_0x6218fc(0x20c)](function(_0xce7dcc){var _0x2ac908=_0x6218fc,_0x56116e=_0x22bac9[_0xce7dcc[_0x2ac908(0x28a)]]||{'cls':'ob-prep','label':_0xce7dcc[_0x2ac908(0x28a)]};_0x117961+='<div\x20class=\x22order\x22>',_0x117961+='<div\x20class=\x22order-head\x22><div><div\x20class=\x22order-id\x22>Commande\x20'+escHtml(_0xce7dcc['id'])+_0x2ac908(0x253)+escHtml(_0xce7dcc['date'])+_0x2ac908(0x216),_0x117961+=_0x2ac908(0x260)+_0x56116e[_0x2ac908(0x1d3)]+'\x22>'+escHtml(_0x56116e[_0x2ac908(0x1d0)])+_0x2ac908(0x1cb),_0x117961+=_0x2ac908(0x277)+escHtml(_0xce7dcc[_0x2ac908(0x264)])+_0x2ac908(0x1b1);if(_0xce7dcc[_0x2ac908(0x259)]&&_0xce7dcc[_0x2ac908(0x28a)]!==_0x2ac908(0x23e))_0x117961+=_0x2ac908(0x1e1)+escHtml(_0xce7dcc[_0x2ac908(0x259)])+'</strong></div>';_0x117961+=_0x2ac908(0x288)+Number(_0xce7dcc[_0x2ac908(0x249)]||0x0)['toFixed'](0x2)[_0x2ac908(0x1e0)]('.',',')+'€</div>',_0xce7dcc['statut']===_0x2ac908(0x220)&&(_0x117961+=_0x2ac908(0x292)+(_0xce7dcc['codeRetrait']?'\x20ou\x20votre\x20code\x20de\x20retrait\x20<strong>'+escHtml(_0xce7dcc[_0x2ac908(0x259)])+_0x2ac908(0x1b3):'')+_0x2ac908(0x214)),_0x117961+='</div>';}),_0x5e1dfe[_0x6218fc(0x23b)]=_0x117961;}function _0x5500(){var _0x428dda=['CM9Szq','zMLKlwnVzguTyMfYCMvZ','B2iTChjLCa','BNvSBa','ChjLCY1HDMf0yxi','BMfPC3nHBMnL','vmoPBmoPy2HHCMDLBwvUDcbPBxbVC3nPyMXLihn1CIbJzsbUyxzPz2f0zxvY','ChjLBM9T','igfJAgf0CW','Dg9Nz2XL','y291CMfUDa','BM90AwyTDhLWzxm','BgLNAhq','y2HLy2TLza','Aw5Uzxjive1m','qxvJDw4GywnOyxqGCg91CIbSj2LUC3rHBNqG4Ocuia','zgf0ys10AgvTzq','uMv0AxldQwu','z2v0sxrLBq','yxzLyY1TzxnZywDL','ChjLCY10AgvTzq','y29TBwfUzgvZ','zMLKlxn0yxr1Da','igfJAgf0','BM90AwyTz2XVyMfS','yxzHDgfYlwLUChv0','zMLKlwnVzgu','imk3ihzHBgfIBguGANvZCxuNyxuG','Dg90ywW','y29Kzq','z2v0sg91CNm','B3bHy2L0Eq','y29SB3i','BM90AwyTzw1HAwW','Aw5Zzxj0qMvMB3jL','igf2yw50ihzVDhjLihldQwr1y3rPB24','zg9JDw1LBNrfBgvTzw50','DgHLBwuTyNrU','pc9KAxy+pgrPDIbJBgfZCZ0IB3jKzxiTzgf0zsi+','q29KzsaT','DMLSBgu','q2fYDguGBSkWia','re9nq29UDgvUDeXVywrLza','y3jLyxrLvgv4De5Vzgu','y29KzvjLDhjHAxq','DMfYkc0TDgv4DguTmYK','A2v5CW','C2nYB2XSvg8','y2XPzw50swq','C3r5Bgu','B3jKzxjZlwXPC3q','phnWyw4Gy2XHC3m9iM9YzgvYlwjHzgDLia','DgL0Bgu','Bwf4vxnHz2vZ','yxbWzw5Kq2HPBgq','ChjVzhvPDhm','mZuYmJq2sLPMr0zf','C2L6zq','CgyT','zMLKlwnVBxb0zxvY','q29KzsbLEhbPCSoPiokaLcbJB250ywn0zxOGBgeGCgHHCM1Hy2LL','vM90CMuGy2fYDguGyxbWyxjHW650CMeGyxbYW6HZihzVDhjLihbYzw1PzxiGywnOyxq','DgvS','CxvLCNLtzwXLy3rVCG','CMDWza','Cg9PBNrLCKv2zw50CW','BM9Uzq','vM91CYbUj2f2zxOGCgfZigrVBM7dQsb2B3rYzsbHy2nVCMqGCg91CIbYzwnLDM9PCIbSzxmGy29TBxvUAwnHDgLVBNmGzguGBgeGCgHHCM1Hy2LLlIbwB3mGzg9UBSoPzxmGC2vYDMvUDcb1BMLXDwvTzw50imoGihzVCYbJB21Tyw5KzxmGzxqGW6aGDM90CMuGy2fYDguGzguGzMLKW6LSAxtdQs4','mJK0DffKq2zs','qw5UDwZdQwu','DgfYz2v0','z2v0rwXLBwvUDej5swq','BM90AwyTChjLDa','zMLKlwzPBgW','pgrPDIbJBgfZCZ0IB3jKzxiTAxrLBxmIpG','pgnPCMnSzsbJEd0ImtiIign5psiXmIiGCJ0InsiVpJXSAw5LihGXpsiXmIiGEte9iJeIihGYpsiXmIiGEti9iJmIlZ48BgLUzsb4mt0ImtiIihKXpsiYmsiGEdi9iJeYiIb5mJ0ImJmIlZ48BgLUzsb4mt0Inc4YiIb5mt0Inc4YiIb4mJ0Ins42iIb5mJ0Ins42iI8+pgXPBMuGEde9iJe4lJqIihKXpsiXoc40iIb4mJ0ImtKUociGEti9iJe5lJGIlZ48BgLUzsb4mt0ImsiGEte9iJeYiIb4mJ0ImYiGEti9iJeYiI8+pgXPBMuGEde9iJiXiIb5mt0ImtiIihGYpsiYmYiGEti9iJeYiI8+','BwvZlwrVBM5LzxmUANnVBG','y2XPzw50','phaGC3r5Bgu9iM1HCMDPBJOWidaGmtzWEci+vM91CYbUj2f2zxOGCgfZigvUy29YzsbWyxnZW6KGzguGy29TBwfUzguUpc9WpG','twvYy2KGzguGy2HVAxnPCIb1BIbMAwnOAwvYigLTywDL','vM91CYbHDMv6igfJy2vWDmoPigrLihjLy2v2B2LYigXLCYbJB21TDw5Py2f0Aw9UCYbKzsbSysbWAgfYBwfJAwuUifzVDxmGCg91DMv6ihjLDgLYzxiGy2v0igfJy29YzcddOcb0B3v0ig1VBwvUDcbLBIbJB250ywn0yw50igXHihbOyxjTywnPzs4','zgL2','y2XHC3nmAxn0','Bg9JyxrPB24','mtGWmtiXofHeC0rbvG','C3rVCMfNzq','q29KzsbKW6LQW6aGDxrPBgLZW6K','ChjLCY1WCM9MAwW','ChjLCY1UB3rPzNm','lNbHz2uTDgfI','lM1LBNuTAxrLBq','pgrPDIbJBgfZCZ0IB3jKzxiTDg90ywWIpLrVDgfSidOG','Bwf4lxDPzhrOoJeXmdbWEdTTyxjNAw46mJbWEcbHDxrVida7CgfKzgLUzZOWide2ChG','C3rHDhv0','pgeGAhjLzJ0IC2L0zs5ODg1Si2nHDgfSB2D1zsiGy2XHC3m9iMj0BIbIDg4TChjPBwfYEsiGC3r5Bgu9iNrLEhqTzgvJB3jHDgLVBJPUB25LiJ5eW6LJB3v2CMLYigXLignHDgfSB2D1ztWVyt4','zMLSzxm','CMDWzc1JB25Zzw50zw1LBNqTzxrHDa','DMfSDwu','jsddOcbKW6LIBg9XDwvY','C3rYAw5NAwz5','zMLYC3rdAgLSza','pgrPDIbJBgfZCZ0IB3jKzxiTCMvHzhKTyMfUBMvYiJ48C3zNihDPzhrOpsiXnIiGAgvPz2H0psiXnIiGzMLSBd0IBM9UzsiGDMLLD0jVEd0ImcaWidi0idi0iIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiYiJ48Cgf0AcbKpsjnmJiGmteUmdHwmtjHmtaGmtaGmcaXideTns45mY05lJe0iI8+phbVBhLSAw5LihbVAw50CZ0ImJiGncaXmIaXnc4Wmsa5ideXlJaXiI8+pc9ZDMC+vM90CMuGy29TBwfUzguGzxn0ihbYW6P0zsaHifbYW6LZzw50zxOGDM90CMuGBNvTW6LYBYbKzsbJB21Tyw5Kzq','Dg9HC3qGDMvYCMu','yxbWBgLJyxrPB24VANnVBG','x19HANvZDgu','C2v0qxr0CMLIDxrL','nJC5mJa5vMzzA2Pm','y2XHC3noyw1L','Dg9mB3DLCKnHC2u','pc9KAxy+','C2LKzwjHCI1LBwfPBa','pc9ZDhjVBMC+','vM9ZigrVBM7dQwvZig9UDcddQxtdQsb0W6LSW6LJAgfYz8oPzxm','DhjPBq','ywnOyxrZ','BM90AwyTz2fYzgvZ','y3jLyxrLrwXLBwvUDa','BM9T','Aw1N','CgfYyw1LDhjLCW','B25SB2fK','lNrOzw1Llw9WDa','uhldQwBdQxjLBMnLigqNyxbWyxjLBMnLigvUCMvNAxn0CSoPzq','Bwf0y2HLCW','C2LKzwjHCI1UB20','ChjVzMLSzs1HDMf0yxi','y2HHBMDL','DgLTzxn0yw1W','zxHWAxjL','z2v0qxr0CMLIDxrL','BgfUz3vL','zxHLyW','jNf1B3q7','DMfYkc0TDMvYDcK','y2HPBgrYzw4','pc9ZCgfUpJWVzgL2pG','uhldQwBdQxjLBMnLCYbLBNjLz2LZDhldQwvZ','ChjVz3jLC3nPB24','uhldQNrLimoGihjLDgLYzxi','yxzPCY1IyxnL','BgfIzwW','uhldQwBdQxjLBMnLCYbUB24Gzw5YzwDPC3rYW6LLCYa6ihn0B2nRywDLigr1ig5HDMLNyxrLDxiGAw5KAxnWB25PyMXL','BM90AwyTChjVBw9Z','y2XZ','ugfSAwvYigf0DgvPBNqGiq','mJqZmdK5rwfyq2Lv','zMLSDgvY','CMvTB3zLq2HPBgq','Dg9vChbLCKnHC2u','Bwf0y2HnzwrPyq','nvrjwuPxrG','lM1LBNuTAxrLBvTVBMnSAwnRkJ0I','AgfZAa','tw9UigvZCgfJzsdIGjqG','pgrPDIbZDhLSzt0IDgv4Dc1HBgLNBJPJzw50zxi7CgfKzgLUzZO0mhb4idiWChG7y29SB3i6DMfYkc0TDgv4DguTmYKIpG','y3nZvgv4Da','CMvWBgfJzq','pgrPDIbJBgfZCZ0IB3jKzxiTAxrLBxmIihn0EwXLpsjTyxjNAw4TDg9WoJzWEci+q29KzsbKzsbYzxrYywL0idOGphn0CM9UzYbZDhLSzt0IBgv0DgvYlxnWywnPBMC6mNb4iJ4','jsbKAxnWB25PyMXL','zgLZCgXHEq','CMvTB3zL','qwrYzxnZzsbLBwfPBcbPBNzHBgLKzq','CMv2B2TLt2jQzwn0vvjm','C3bSAxq','ywn0AxzL','DgfIlq','y2XPy2S','y29KzxnqCM9TBW','mc40','CMvKDwn0Aw9U','phn2zYb3Awr0Ad0IndaIigHLAwDODd0IndaIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0Ims41iIbZDhLSzt0IB3bHy2L0EtOWlJq7BwfYz2LUlwjVDhrVBtOXmNb4iJ48y2LYy2XLign4psi5iIbJEt0ImJeIihi9iJeIlZ48y2LYy2XLign4psiYmciGy3K9iJiXiIbYpsiXiI8+phbHDgGGzd0ItteGmwG0BdiUnJGGmtmUmZLHmIaYidaGmcaWidiGms42mwG5lJCYytiGmIaWidaGmcaYlteUnJfmmJmGnKG2iI8+pc9ZDMC+','B2jQzwn0','yxzHDgfYlwLUAxrPywXZ','ChjLCY1KyxrH','Cgn0','sw1Hz2uGDhjVCcbSB3vYzguGkdiGtw8GBwf4Aw11BsK','y3jLyxrLt2jQzwn0vvjm','mJK4nZjsCw1WA0m','CgfYC2u','BM90AwyTCMvUB3v2zwXSzw1LBNq','rw4GChldQxbHCMf0Aw9U','CgHHCM1Hvg9HC3q','zMLKlw51BwvYBW','BgvUz3rO','ugHVDg8GzguGChjVzMLSig1PC2uGW6aGAM91CG','C2v0sxrLBq','Cg9W','Aw5KzxHpzG','twfYAwuGrhvWB250','pgrPDIbJBgfZCZ0Iy29Kzs1IyxjYzxmTBNvTiJ4','BM90AwyTy2fUywWTzw1HAwW','yxr0zwLUDa','CMvTB3zLsxrLBq','jMX0oW','mty2mZy5nw11u3jYtq','jMfTCdS','yM9VBgvHBG','icuGzguGCSoPzhvJDgLVBG','BgfUz3vHz2u','ywrK','zM9YrwfJAa','zgfYAW','ic8G','mtiWnZC0ngPACMn4zG','C2v1AwW','CxvLCNLtzwXLy3rVCKfSBa','zw1HAwW','yxv0BW','igvUihbOyxjTywnPzs48l2rPDJ4','D2LKDgG','pc9KAxy+pc9KAxy+','CMvHzefZrgf0yvvsta','uhjVzMLSig1PCYddOcbQB3vY','CgfYzw50tM9Kzq','DxnLCKXHBMD1ywDL','DhLWzq','ywrKrxzLBNrmAxn0zw5LCG','Bg9Hza','y29TBwfUzgvbChbHCNrPzw50','CMDWzc1JB25Zzw50zw1LBNqTDgv4Dgu','uhldQNrL','vg91DgvZigXLCYbUB3rPzMLJyxrPB25ZihnVBNqGzmoPC2fJDgL2W6LLCW','DhjVDxzLCG','pgrPDIbZDhLSzt0ICgfKzgLUzZOXmNb4ide2ChG7yM9YzgvYlxjHzgL1CZOXmNb4o2jHy2TNCM91BMq6i0zcrJferJTJB2XVCJOJnumZrdbco2zVBNqTC2L6ztOWlJGYCMvTo2XPBMuTAgvPz2H0oJeUntTIB3jKzxi6mxb4ihnVBgLKicnfqKncoeiIpG','lMXHEw91Da','CMvZDwX0','C3jJ','zg93BMXVywq','yNjHBMqTBMfTzs1OzwfKzxi','phbHDgGGzd0IttiXideYlJC5qtKGosaWideGmsaXms4YmsaZidCGnYaWidaGmcaYmsaXmI43oxOIlZ4','yM9KEq','CMvZDgfUDa','Dgv4DenVBNrLBNq'];_0x5500=function(){return _0x428dda;};return _0x5500();}function initTheme(){var _0x24fed3=_0x4c3eb3,_0x2149e0=null;try{_0x2149e0=localStorage[_0x24fed3(0x23f)](_0x24fed3(0x241));}catch(_0x346eda){}if(_0x2149e0){setTheme(_0x2149e0);return;}setTheme(themeAutomatique(),![]),window[_0x24fed3(0x1d9)]&&window[_0x24fed3(0x1d9)]('(prefers-color-scheme:\x20dark)')[_0x24fed3(0x21c)](_0x24fed3(0x1c2),function(_0x27bb3a){var _0x4b18f6=_0x24fed3,_0x4479b6=null;try{_0x4479b6=localStorage[_0x4b18f6(0x23f)](_0x4b18f6(0x241));}catch(_0x4e84bf){}if(!_0x4479b6)setTheme(_0x27bb3a[_0x4b18f6(0x1bf)]?_0x4b18f6(0x20d):_0x4b18f6(0x239),![]);});}function themeAutomatique(){var _0x23a827=_0x4c3eb3,_0x4f06f3=window[_0x23a827(0x1d9)]&&window['matchMedia']('(prefers-color-scheme:\x20dark)')[_0x23a827(0x1bf)];if(_0x4f06f3)return _0x23a827(0x20d);var _0x55040e=new Date()[_0x23a827(0x24b)]();return _0x55040e>=0x14||_0x55040e<0x7?_0x23a827(0x20d):_0x23a827(0x239);}function setTheme(_0xec254b,_0x300f88){var _0x11b8ec=_0x4c3eb3;document[_0x11b8ec(0x251)][_0x11b8ec(0x1ad)]('data-theme',_0xec254b);if(_0x300f88!==![])try{localStorage[_0x11b8ec(0x1fd)]('pres-theme',_0xec254b);}catch(_0x2c91c9){}var _0x4c31fe=document['getElementById']('theme-icon');if(_0x4c31fe){if(_0xec254b===_0x11b8ec(0x20d))_0x4c31fe['innerHTML']=_0x11b8ec(0x229);else _0x4c31fe[_0x11b8ec(0x23b)]=_0x11b8ec(0x278);}}function toggleTheme(){var _0x255870=_0x4c3eb3,_0x2f3097=document['documentElement'][_0x255870(0x1c5)](_0x255870(0x23d));setTheme(_0x2f3097===_0x255870(0x20d)?_0x255870(0x239):_0x255870(0x20d));}function initAvatar(){var _0x5b6332=_0x4c3eb3,_0x2f829e=null;try{_0x2f829e=localStorage['getItem'](_0x5b6332(0x231));}catch(_0x44eec7){}if(_0x2f829e)setAvatarImage(_0x2f829e);var _0x31d003=document[_0x5b6332(0x274)](_0x5b6332(0x246));_0x31d003&&_0x31d003[_0x5b6332(0x21c)](_0x5b6332(0x1c2),function(_0x3a23ec){var _0x22a4d9=_0x5b6332,_0x4a159c=_0x3a23ec['target'][_0x22a4d9(0x28c)]&&_0x3a23ec[_0x22a4d9(0x273)][_0x22a4d9(0x28c)][0x0];if(!_0x4a159c)return;if(!_0x4a159c[_0x22a4d9(0x21b)]['match'](/^image\//)){pharmaToast(_0x22a4d9(0x27c));return;}if(_0x4a159c[_0x22a4d9(0x266)]>0x2*0x400*0x400){pharmaToast(_0x22a4d9(0x1f3));return;}var _0x2222dd=new FileReader();_0x2222dd[_0x22a4d9(0x1bc)]=function(_0xd4df01){var _0x298ed8=_0x22a4d9,_0x2aaaf6=_0xd4df01[_0x298ed8(0x273)][_0x298ed8(0x225)];try{localStorage[_0x298ed8(0x1fd)]('pres-avatar',_0x2aaaf6);}catch(_0x67d50f){pharmaToast('Image\x20trop\x20lourde\x20pour\x20être\x20enregistrée');return;}setAvatarImage(_0x2aaaf6),pharmaToast(_0x298ed8(0x1fc));},_0x2222dd[_0x22a4d9(0x217)](_0x4a159c);});}function setAvatarImage(_0x1f72b3){var _0x5bfb1d=_0x4c3eb3,_0x5ecfeb=document[_0x5bfb1d(0x274)](_0x5bfb1d(0x1c1));if(!_0x5ecfeb)return;var _0x194d08=_0x5ecfeb[_0x5bfb1d(0x26c)](_0x5bfb1d(0x1ba));!_0x194d08&&(_0x194d08=document[_0x5bfb1d(0x1b8)]('img'),_0x5ecfeb[_0x5bfb1d(0x24f)](_0x194d08,_0x5ecfeb[_0x5bfb1d(0x291)]));_0x194d08[_0x5bfb1d(0x226)]=_0x1f72b3;var _0x8801a6=document[_0x5bfb1d(0x274)](_0x5bfb1d(0x1f0));if(_0x8801a6)_0x8801a6['style'][_0x5bfb1d(0x1e3)]=_0x5bfb1d(0x26f);}var PROFIL_FIELDS=['prenom',_0x4c3eb3(0x1b9),_0x4c3eb3(0x212),_0x4c3eb3(0x26b),_0x4c3eb3(0x232),_0x4c3eb3(0x1c6),'adresse','cp',_0x4c3eb3(0x255)],SUPPORTED_LANGS=['fr','en','ar','he'];function detectSystemLang(){var _0x180828=_0x4c3eb3,_0x277df8=(navigator[_0x180828(0x20a)]||navigator[_0x180828(0x21a)]||'fr')[_0x180828(0x1b0)](),_0x3af3e8=_0x277df8['split']('-')[0x0];if(_0x3af3e8==='iw')_0x3af3e8='he';return SUPPORTED_LANGS[_0x180828(0x1ff)](_0x3af3e8)!==-0x1?_0x3af3e8:'fr';}function initProfil(){var _0x3ced82=_0x4c3eb3,_0x156171=null;try{_0x156171=JSON['parse'](localStorage[_0x3ced82(0x23f)](_0x3ced82(0x284))||'null');}catch(_0x2913e2){}if(!_0x156171){_0x156171={'langue':detectSystemLang()};try{localStorage['setItem']('pres-profil',JSON['stringify'](_0x156171));}catch(_0x1809ce){}}else{if(!_0x156171[_0x3ced82(0x1c6)]){_0x156171[_0x3ced82(0x1c6)]=detectSystemLang();try{localStorage[_0x3ced82(0x1fd)](_0x3ced82(0x284),JSON['stringify'](_0x156171));}catch(_0x2716a1){}}}PROFIL_FIELDS[_0x3ced82(0x20c)](function(_0x209e60){var _0x70b1a3=_0x3ced82,_0x57658b=document[_0x70b1a3(0x274)](_0x70b1a3(0x267)+_0x209e60);if(_0x57658b&&_0x156171[_0x209e60]!==undefined)_0x57658b[_0x70b1a3(0x28e)]=_0x156171[_0x209e60];});}function _0x46df(_0x55220c,_0xa85fa7){_0x55220c=_0x55220c-0x1ad;var _0x550041=_0x5500();var _0x46dfd1=_0x550041[_0x55220c];if(_0x46df['DIfHCe']===undefined){var _0x5e9d61=function(_0x1e866c){var _0x107da2='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x165d57='',_0x371245='';for(var _0x2bc0dc=0x0,_0x3867b9,_0x4b91ab,_0x5c5f60=0x0;_0x4b91ab=_0x1e866c['charAt'](_0x5c5f60++);~_0x4b91ab&&(_0x3867b9=_0x2bc0dc%0x4?_0x3867b9*0x40+_0x4b91ab:_0x4b91ab,_0x2bc0dc++%0x4)?_0x165d57+=String['fromCharCode'](0xff&_0x3867b9>>(-0x2*_0x2bc0dc&0x6)):0x0){_0x4b91ab=_0x107da2['indexOf'](_0x4b91ab);}for(var _0x35aefa=0x0,_0x37153b=_0x165d57['length'];_0x35aefa<_0x37153b;_0x35aefa++){_0x371245+='%'+('00'+_0x165d57['charCodeAt'](_0x35aefa)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x371245);};_0x46df['rbqkGM']=_0x5e9d61,_0x46df['ntuAxp']={},_0x46df['DIfHCe']=!![];}var _0x52415b=_0x550041[0x0],_0x459f03=_0x55220c+_0x52415b,_0x2ada9c=_0x46df['ntuAxp'][_0x459f03];return!_0x2ada9c?(_0x46dfd1=_0x46df['rbqkGM'](_0x46dfd1),_0x46df['ntuAxp'][_0x459f03]=_0x46dfd1):_0x46dfd1=_0x2ada9c,_0x46dfd1;}function saveProfil(){var _0x4773da=_0x4c3eb3,_0x41ea23={};PROFIL_FIELDS['forEach'](function(_0x48633f){var _0x5cc000=_0x46df,_0x3d2819=document['getElementById'](_0x5cc000(0x267)+_0x48633f);_0x41ea23[_0x48633f]=_0x3d2819?String(_0x3d2819[_0x5cc000(0x28e)])[_0x5cc000(0x1b5)]():'';});if(_0x41ea23[_0x4773da(0x212)]&&!pharmaEmailValide(_0x41ea23[_0x4773da(0x212)])){pharmaToast(_0x4773da(0x1e5));return;}try{localStorage[_0x4773da(0x1fd)](_0x4773da(0x284),JSON[_0x4773da(0x290)](_0x41ea23));}catch(_0x2a5699){}syncProfilDisplay(),initFidelite(),renderMesCommandes(),pharmaToast(_0x4773da(0x218));}function syncProfilDisplay(){var _0x3adad2=_0x4c3eb3,_0x3f0b6b=null;try{_0x3f0b6b=JSON[_0x3adad2(0x1f6)](localStorage[_0x3adad2(0x23f)](_0x3adad2(0x284))||_0x3adad2(0x230));}catch(_0x1020bc){}if(!_0x3f0b6b)return;var _0xa32bd3=((_0x3f0b6b['prenom']||'')+'\x20'+(_0x3f0b6b[_0x3adad2(0x1b9)]||''))[_0x3adad2(0x1b5)]();if(_0xa32bd3){var _0x1e93a5=document[_0x3adad2(0x274)](_0x3adad2(0x1c0));if(_0x1e93a5)_0x1e93a5[_0x3adad2(0x22c)]=_0xa32bd3;var _0xa7b921=document['getElementById'](_0x3adad2(0x1f0));if(_0xa7b921)_0xa7b921['textContent']=getClientInitials(_0xa32bd3);}if(_0x3f0b6b[_0x3adad2(0x212)]){var _0x4a95ed=document[_0x3adad2(0x274)](_0x3adad2(0x1b2));if(_0x4a95ed)_0x4a95ed[_0x3adad2(0x22c)]=_0x3f0b6b[_0x3adad2(0x212)];var _0x278724=document['getElementById'](_0x3adad2(0x24e));if(_0x278724)_0x278724['textContent']=_0x3f0b6b[_0x3adad2(0x212)];}}function setThemePref(_0x568720){var _0x418cc1=_0x4c3eb3;if(_0x568720==='auto'){try{localStorage[_0x418cc1(0x204)]('pres-theme');}catch(_0x173875){}initTheme();}else setTheme(_0x568720);updateThemeOptionsUI(),pharmaToast(_0x418cc1(0x1be));}function updateThemeOptionsUI(){var _0x435e8c=_0x4c3eb3,_0x1d7fc0=null;try{_0x1d7fc0=localStorage[_0x435e8c(0x23f)]('pres-theme');}catch(_0x4eb713){}var _0x1ac8db=_0x1d7fc0||'auto';document[_0x435e8c(0x211)](_0x435e8c(0x1bd))[_0x435e8c(0x20c)](function(_0x4ef851){var _0x424cc0=_0x435e8c;_0x4ef851[_0x424cc0(0x27f)][_0x424cc0(0x236)](_0x424cc0(0x1e8),_0x4ef851[_0x424cc0(0x1c5)](_0x424cc0(0x23d))===_0x1ac8db);});}function showTab(_0xd699c0,_0x9508b3){var _0x48f8b4=_0x4c3eb3,_0xccd464=document[_0x48f8b4(0x274)]('tab-'+_0xd699c0);if(!_0xccd464)return;document[_0x48f8b4(0x211)](_0x48f8b4(0x286))[_0x48f8b4(0x20c)](function(_0x23fc0e){var _0x2b3f5b=_0x48f8b4;_0x23fc0e[_0x2b3f5b(0x27f)][_0x2b3f5b(0x1e4)](_0x2b3f5b(0x1e8));}),_0xccd464['classList']['add'](_0x48f8b4(0x1e8)),document[_0x48f8b4(0x211)](_0x48f8b4(0x287))[_0x48f8b4(0x20c)](function(_0x568622){var _0x17cd7d=_0x48f8b4;_0x568622['classList']['remove'](_0x17cd7d(0x1e8));});if(_0x9508b3)_0x9508b3[_0x48f8b4(0x27f)][_0x48f8b4(0x20b)](_0x48f8b4(0x1e8));if(_0xd699c0==='fidelite')pharmaAjusterCodeBarres(document[_0x48f8b4(0x274)]('fid-code-barres'));window[_0x48f8b4(0x25c)]({'top':0x0,'behavior':'smooth'});}function toggleGlobalNotif(){var _0x2bd9a2=_0x4c3eb3,_0x455b99=document[_0x2bd9a2(0x274)](_0x2bd9a2(0x245)),_0x406790=document[_0x2bd9a2(0x274)](_0x2bd9a2(0x238));if(!_0x455b99||!_0x406790)return;_0x455b99[_0x2bd9a2(0x23a)]?(_0x406790[_0x2bd9a2(0x25e)][_0x2bd9a2(0x24c)]='1',_0x406790['style'][_0x2bd9a2(0x26e)]=_0x2bd9a2(0x213)):(_0x406790[_0x2bd9a2(0x25e)][_0x2bd9a2(0x24c)]=_0x2bd9a2(0x1ec),_0x406790[_0x2bd9a2(0x25e)][_0x2bd9a2(0x26e)]=_0x2bd9a2(0x26f),pharmaToast(_0x2bd9a2(0x221)));}var CLE_NOTIFS=_0x4c3eb3(0x285),CHAMPS_NOTIFS={'global':_0x4c3eb3(0x245),'pret':_0x4c3eb3(0x275),'promos':_0x4c3eb3(0x1d2),'renouvellement':_0x4c3eb3(0x1f7),'gardes':_0x4c3eb3(0x1b7),'email':_0x4c3eb3(0x202)};function lireNotifs(){var _0x4fd8ba=_0x4c3eb3,_0x1334a6=null;try{_0x1334a6=JSON['parse'](localStorage[_0x4fd8ba(0x23f)](CLE_NOTIFS)||_0x4fd8ba(0x230));}catch(_0x126678){}return _0x1334a6&&typeof _0x1334a6===_0x4fd8ba(0x1ef)?_0x1334a6:null;}function initNotifs(){var _0x5370f9=_0x4c3eb3,_0xc6300e=lireNotifs();if(!_0xc6300e)return;Object['keys'](CHAMPS_NOTIFS)[_0x5370f9(0x20c)](function(_0x10eba0){var _0x5ca5bb=_0x5370f9,_0x49464a=document[_0x5ca5bb(0x274)](CHAMPS_NOTIFS[_0x10eba0]);if(_0x49464a&&typeof _0xc6300e[_0x10eba0]===_0x5ca5bb(0x208))_0x49464a[_0x5ca5bb(0x23a)]=_0xc6300e[_0x10eba0];});var _0x53445f=document['getElementById'](_0x5370f9(0x238)),_0x2216d7=document[_0x5370f9(0x274)](_0x5370f9(0x245));_0x53445f&&_0x2216d7&&!_0x2216d7[_0x5370f9(0x23a)]&&(_0x53445f[_0x5370f9(0x25e)][_0x5370f9(0x24c)]=_0x5370f9(0x1ec),_0x53445f[_0x5370f9(0x25e)][_0x5370f9(0x26e)]=_0x5370f9(0x26f));}function enregistrerNotifs(){var _0x4a7db3=_0x4c3eb3,_0x54cd6d={};Object[_0x4a7db3(0x25b)](CHAMPS_NOTIFS)[_0x4a7db3(0x20c)](function(_0x2ac57e){var _0xe9ca28=_0x4a7db3,_0x467618=document[_0xe9ca28(0x274)](CHAMPS_NOTIFS[_0x2ac57e]);if(_0x467618)_0x54cd6d[_0x2ac57e]=!!_0x467618[_0xe9ca28(0x23a)];});try{localStorage[_0x4a7db3(0x1fd)](CLE_NOTIFS,JSON['stringify'](_0x54cd6d));}catch(_0x2e78ae){pharmaToast(_0x4a7db3(0x1d1));return;}pharmaToast(_0x4a7db3(0x1cc));}function telechargerMesDonnees(){var _0x3d9ccf=_0x4c3eb3,_0x368ac4=getCurrentClient(),_0x595c58=getCurrentClientNom(),_0x31df97=getCurrentClientEmail(),_0x1f01b4=(DATA[_0x3d9ccf(0x242)]||[])[_0x3d9ccf(0x1d6)](function(_0x241110){return PharmaClients['commandeAppartient'](_0x241110,_0x595c58,_0x31df97);}),_0x32b87e=_0x368ac4?(DATA['codesPromo']||[])['filter'](function(_0x52975c){var _0x5e3894=_0x3d9ccf;return _0x52975c[_0x5e3894(0x25d)]!==undefined?_0x52975c['clientId']===_0x368ac4['id']:_0x52975c[_0x5e3894(0x27a)]===_0x368ac4['nom'];}):[],_0x40709f={'pharmacie':DATA['parametres']&&DATA[_0x3d9ccf(0x1bb)][_0x3d9ccf(0x1b9)]||'','date':new Date()['toISOString'](),'profil':getProfilEnregistre(),'fiche':_0x368ac4?{'nom':_0x368ac4[_0x3d9ccf(0x1b9)],'email':_0x368ac4[_0x3d9ccf(0x212)],'telephone':_0x368ac4[_0x3d9ccf(0x26b)],'communications':!!_0x368ac4[_0x3d9ccf(0x26d)],'achats':_0x368ac4[_0x3d9ccf(0x1b6)]}:null,'carteFidelite':_0x368ac4?pharmaNumeroFidelite(_0x368ac4):null,'commandes':_0x1f01b4,'codesFidelite':_0x32b87e,'preferencesNotifications':lireNotifs()},_0x2f3296=JSON[_0x3d9ccf(0x290)](_0x40709f,null,0x2);try{var _0x760499=new Blob([_0x2f3296],{'type':_0x3d9ccf(0x294)}),_0x1840d8=URL[_0x3d9ccf(0x1f4)](_0x760499),_0x1c6fd5=document['createElement']('a');_0x1c6fd5['href']=_0x1840d8,_0x1c6fd5[_0x3d9ccf(0x227)]=_0x3d9ccf(0x279),document[_0x3d9ccf(0x22a)][_0x3d9ccf(0x263)](_0x1c6fd5),_0x1c6fd5[_0x3d9ccf(0x1ea)](),_0x1c6fd5[_0x3d9ccf(0x1e4)](),setTimeout(function(){var _0x54b2dd=_0x3d9ccf;URL[_0x54b2dd(0x1e6)](_0x1840d8);},0x3e8),pharmaToast(_0x3d9ccf(0x1b4));}catch(_0x1b2150){pharmaToast(_0x3d9ccf(0x233));}}function afficherConsentement(){var _0x3b65f2=_0x4c3eb3,_0x3b4294=document[_0x3b65f2(0x274)](_0x3b65f2(0x21f)),_0x2fb7ec=document[_0x3b65f2(0x274)](_0x3b65f2(0x28d));if(!_0x3b4294||!_0x2fb7ec)return;var _0x343679=getCurrentClient(),_0x45ba3a=!!(_0x343679&&_0x343679[_0x3b65f2(0x26d)]);_0x3b4294[_0x3b65f2(0x22c)]=_0x45ba3a?_0x3b65f2(0x27d):_0x3b65f2(0x270),_0x2fb7ec[_0x3b65f2(0x22c)]=_0x45ba3a?'Accepté':'Non\x20accepté',_0x2fb7ec[_0x3b65f2(0x25e)][_0x3b65f2(0x24d)]=_0x45ba3a?_0x3b65f2(0x1c9):_0x3b65f2(0x25a);}function confirmDelete(){confirm('Êtes-vous\x20sûr\x20de\x20vouloir\x20supprimer\x20définitivement\x20votre\x20compte\x20?\x20Cette\x20action\x20est\x20irréversible.')&&pharmaToast('Demande\x20de\x20suppression\x20enregistrée');}window[_0x4c3eb3(0x1f9)]=function(_0x1c8e55){var _0x975912=_0x4c3eb3,_0x430556=document[_0x975912(0x274)]('toast');if(!_0x430556)return;var _0x5ebd67=document['createElement'](_0x975912(0x27e));_0x5ebd67[_0x975912(0x1af)]=_0x975912(0x293),_0x5ebd67['innerHTML']='<svg\x20width=\x2215\x22\x20height=\x2215\x22\x20fill=\x22none\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222.6\x22\x20aria-hidden=\x22true\x22><polyline\x20points=\x2220\x206\x209\x2017\x204\x2012\x22/></svg>',_0x5ebd67['appendChild'](document[_0x975912(0x258)](String(_0x1c8e55==null?'':_0x1c8e55)));while(_0x430556['children'][_0x975912(0x1fb)]>=0x3)_0x430556[_0x975912(0x1d7)](_0x430556[_0x975912(0x291)]);_0x430556['appendChild'](_0x5ebd67),document['body'][_0x975912(0x27f)]['add']('avec-message'),setTimeout(function(){_0x5ebd67['classList']['add']('sortie'),setTimeout(function(){var _0x2f6493=_0x46df;if(_0x5ebd67[_0x2f6493(0x219)])_0x5ebd67[_0x2f6493(0x219)][_0x2f6493(0x1d7)](_0x5ebd67);if(!_0x430556[_0x2f6493(0x1ca)][_0x2f6493(0x1fb)])document[_0x2f6493(0x22a)][_0x2f6493(0x27f)][_0x2f6493(0x1e4)](_0x2f6493(0x240));},0x168);},0xaf0);};function afficherAvisCompteNonRelie(){var _0x129fd1=_0x4c3eb3,_0x348211=document[_0x129fd1(0x26c)](_0x129fd1(0x224));if(!_0x348211||document[_0x129fd1(0x274)](_0x129fd1(0x1cf)))return;var _0x53ba38=document[_0x129fd1(0x1b8)]('div');_0x53ba38['id']='avis-base',_0x53ba38['setAttribute'](_0x129fd1(0x22d),'note'),_0x53ba38[_0x129fd1(0x25e)][_0x129fd1(0x1df)]=_0x129fd1(0x289),_0x53ba38[_0x129fd1(0x23b)]=_0x129fd1(0x223)+'<strong>Aperçu\x20de\x20l\x27espace\x20client.</strong>\x20Il\x20n\x27est\x20pas\x20encore\x20relié\x20à\x20la\x20base\x20de\x20données\x20:\x20les\x20commandes\x20passées\x20sur\x20le\x20site\x20n\x27y\x20apparaissent\x20pas\x20encore.</div>',_0x348211[_0x129fd1(0x219)][_0x129fd1(0x24f)](_0x53ba38,_0x348211);}window[_0x4c3eb3(0x21c)](_0x4c3eb3(0x257),function(){var _0x208e72=_0x4c3eb3;if(typeof PHARMA_SUPABASE!=='undefined'&&PHARMA_SUPABASE)afficherAvisCompteNonRelie();applyPharmacyConfig(),initProfil(),syncProfilDisplay(),initFidelite(),renderMesCommandes(),initNotifs(),afficherConsentement(),initTheme(),updateThemeOptionsUI(),initAvatar(),window[_0x208e72(0x21c)](_0x208e72(0x282),function(_0x320753){var _0x50e29b=_0x208e72;_0x320753['key']===_0x50e29b(0x1f1)&&(DATA=PharmaStore[_0x50e29b(0x21d)](),initFidelite(),renderMesCommandes(),afficherConsentement());});var _0x56515d=document[_0x208e72(0x274)](_0x208e72(0x252));if(_0x56515d)_0x56515d['addEventListener'](_0x208e72(0x1ea),function(){toggleTheme(),updateThemeOptionsUI();});var _0x18f3f5=window[_0x208e72(0x280)][_0x208e72(0x1dc)][_0x208e72(0x1e0)]('#','')[_0x208e72(0x1e0)](/[^a-z-]/g,'');if(_0x18f3f5&&document[_0x208e72(0x274)](_0x208e72(0x1e9)+_0x18f3f5)){var _0x5e399e=document[_0x208e72(0x26c)](_0x208e72(0x1db)+_0x18f3f5+'\x22]');showTab(_0x18f3f5,_0x5e399e);}});
+// ════════════════════════════════════════════
+// PHARMACIE DÉMO — Espace client
+// ════════════════════════════════════════════
+
+// ── DONNÉES PARTAGÉES (mêmes que admin.html / site.html) ──
+var DATA = PharmaStore.load();
+
+// ── CONFIGURATION PHARMACIE ──
+function applyPharmacyConfig() {
+  var cfg = DATA.parametres || {};
+  document.title = 'Mon espace — ' + (cfg.nom || 'Pharmacie Démo');
+  var bn = document.getElementById('brand-name-header');
+  if (bn) bn.textContent = cfg.nom || 'Pharmacie Démo';
+}
+
+// ── FIDÉLITÉ (données réelles du client, partagées avec admin.html) ──
+function getClientInitials(nom) {
+  var initials = nom.split(' ').map(function(w){ return w.charAt(0).toUpperCase(); }).join('').slice(0, 2);
+  return initials || 'CL';
+}
+function getProfilEnregistre() {
+  var profil = null;
+  try { profil = JSON.parse(localStorage.getItem('pres-profil') || 'null'); } catch (e) {}
+  return profil;
+}
+function getCurrentClientNom() {
+  // Identité du client : profil enregistré dans "Mon profil", sinon persona démo
+  // "Marie Dupont" (tant qu'il n'y a pas de vraie authentification — étape Supabase à venir).
+  var profil = getProfilEnregistre();
+  if (profil && (profil.prenom || profil.nom)) {
+    var full = ((profil.prenom || '') + ' ' + (profil.nom || '')).trim();
+    if (full) return full;
+  }
+  return 'Marie Dupont';
+}
+// L'email du profil sert à retrouver le client de façon fiable (deux personnes
+// peuvent porter le même nom). Vide tant que le profil n'en contient pas.
+function getCurrentClientEmail() {
+  var profil = getProfilEnregistre();
+  return (profil && profil.email) ? String(profil.email).trim() : '';
+}
+function getCurrentClient() {
+  return PharmaClients.trouver(DATA, getCurrentClientNom(), getCurrentClientEmail());
+}
+function formatDateFr(iso) {
+  var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(iso || ''));
+  return m ? (m[3] + '/' + m[2] + '/' + m[1]) : String(iso || '');
+}
+function initFidelite() {
+  var cfg = PharmaFidelite.config(DATA);
+  var seuil = cfg.seuil;
+  var clientNom = getCurrentClientNom();
+  var client = getCurrentClient();
+  var achats = client ? client.achats : 0;
+  var prog = PharmaFidelite.progression(achats, seuil);
+  var code = PharmaFidelite.codeActif(DATA, client);
+
+  var nomEl = document.getElementById('fid-nom');
+  if (nomEl) nomEl.textContent = clientNom;
+  var numEl = document.getElementById('fid-numero');
+  var numero = pharmaNumeroFidelite(client);
+  if (numEl) numEl.textContent = client ? 'Carte n° ' + numero : 'Votre carte apparaîtra après votre premier achat';
+  // Code-barres (Code 128) lu par la douchette du comptoir ; le numéro est écrit dessous pour une saisie à la main
+  var cb = document.getElementById('fid-code-barres');
+  if (cb) {
+    cb.style.display = client ? '' : 'none';
+    cb.innerHTML = client ? pharmaCodeBarres(numero, 60) + '<div class="code-barres-num">' + numero + '</div>' : '';
+    pharmaAjusterCodeBarres(cb);
+    if (!cb.__ajuste) { cb.__ajuste = true; window.addEventListener('resize', function() { pharmaAjusterCodeBarres(cb); }); }
+  }
+  var compteurEl = document.getElementById('fid-compteur');
+  if (compteurEl) compteurEl.textContent = prog.courant + ' / ' + seuil + ' achats';
+
+  // Texte d'état selon la situation réelle du client
+  var statut;
+  if (!client || achats === 0) statut = 'Aucun achat pour l\'instant — ' + seuil + ' achats pour débloquer ' + cfg.reduction + ' % de réduction';
+  else if (prog.atteint) statut = 'Palier atteint !';
+  else statut = prog.restant + ' achat' + (prog.restant > 1 ? 's' : '') + ' avant votre réduction';
+  var statutEl = document.getElementById('fid-statut');
+  if (statutEl) statutEl.textContent = statut;
+
+  var codeLabelEl = document.getElementById('fid-code-label');
+  var codeEl = document.getElementById('fid-code');
+  if (code) {
+    if (codeLabelEl) codeLabelEl.textContent = 'Code -' + code.pct + '% disponible';
+    if (codeEl) codeEl.textContent = code.code + (code.expire ? ' · valable jusqu\'au ' + formatDateFr(code.expire) : '');
+  } else {
+    var label = 'Code -' + cfg.reduction + '% à débloquer';
+    var detail = '—';
+    if (client && prog.atteint) {
+      // Palier atteint mais aucun code utilisable : il a été utilisé ou il a expiré
+      var dernier = (DATA.codesPromo || []).filter(function(c) {
+        var sien = (c.clientId !== undefined) ? c.clientId === client.id : c.client === client.nom;
+        return sien && String(c.origine || '').indexOf('Auto (fidélité)') === 0;
+      }).pop();
+      if (dernier) {
+        label = 'Code -' + dernier.pct + '%';
+        detail = (dernier.maxUsages > 0 && dernier.usages >= dernier.maxUsages) ? 'Code déjà utilisé' : 'Code expiré — contactez la pharmacie';
+      }
+    }
+    if (codeLabelEl) codeLabelEl.textContent = label;
+    if (codeEl) codeEl.textContent = detail;
+  }
+  var fillEl = document.getElementById('fid-fill');
+  if (fillEl) fillEl.style.width = prog.pct + '%';
+}
+
+// Échappe une chaîne affichée dans du HTML : un nom de produit contenant
+// < ou > s'affiche tel quel au lieu d'être interprété comme une balise.
+function escHtml(str) {
+  return String(str == null ? '' : str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// ── MES COMMANDES (lues depuis DATA.commandes, partagées avec l'admin) ──
+function renderMesCommandes() {
+  var box = document.getElementById('orders-list');
+  if (!box) return;
+  var clientNom = getCurrentClientNom();
+  var clientEmail = getCurrentClientEmail();
+  var commandes = DATA.commandes.filter(function(c){ return PharmaClients.commandeAppartient(c, clientNom, clientEmail); })
+    .slice()
+    .sort(function(a, b) {
+      // Tri par timestamp réel (plus récentes en premier).
+      // Les anciennes commandes sans timestamp passent en dernier.
+      if (!a.timestamp && !b.timestamp) return 0;
+      if (!a.timestamp) return 1;
+      if (!b.timestamp) return -1;
+      return new Date(b.timestamp) - new Date(a.timestamp);
+    });
+
+  if (!commandes.length) {
+    box.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--texte-3)">'
+      + '<svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" style="opacity:0.4;margin-bottom:12px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>'
+      + '<p style="margin:0 0 16px">Vous n\'avez pas encore passé de commande.</p>'
+      + '<a href="site.html#catalogue" class="btn btn-primary" style="text-decoration:none">Découvrir le catalogue</a>'
+      + '</div>';
+    return;
+  }
+
+  var BADGES = {
+    'En préparation': { cls:'ob-prep', label:'En préparation' },
+    'Prête':          { cls:'ob-ready', label:'Prête à retirer' },
+    'Retirée':        { cls:'ob-done', label:'Retirée' },
+    'Annulée':        { cls:'ob-cancel', label:'Annulée' }
+  };
+  var html = '';
+  commandes.forEach(function(c) {
+    var badge = BADGES[c.statut] || { cls:'ob-prep', label:c.statut };
+    html += '<div class="order">';
+    html += '<div class="order-head"><div><div class="order-id">Commande '+escHtml(c.id)+'</div><div class="order-date">'+escHtml(c.date)+'</div></div>';
+    html += '<span class="order-badge '+badge.cls+'">'+escHtml(badge.label)+'</span></div>';
+    html += '<div class="order-items">'+escHtml(c.produits)+'</div>';
+    if (c.codeRetrait && c.statut !== 'Retirée') html += '<div class="order-items" style="margin-top:6px">Code de retrait : <strong style="letter-spacing:2px">'+escHtml(c.codeRetrait)+'</strong></div>';
+    html += '<div class="order-total">Total : '+Number(c.total || 0).toFixed(2).replace('.',',')+'€</div>';
+    if (c.statut === 'Prête') {
+      html += '<div class="order-ready-banner"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Votre commande est prête ! Présentez votre numéro de commande' + (c.codeRetrait ? ' ou votre code de retrait <strong>' + escHtml(c.codeRetrait) + '</strong>' : '') + ' en pharmacie.</div>';
+    }
+    html += '</div>';
+  });
+  box.innerHTML = html;
+}
+
+// ── THEME (détection intelligente) ──
+function initTheme() {
+  var saved = null;
+  try { saved = localStorage.getItem('pres-theme'); } catch(e){}
+  if (saved) { setTheme(saved); return; }
+  // Mode automatique : on APPLIQUE le thème sans l'enregistrer, sinon le choix
+  // « Automatique » se figerait aussitôt sur la valeur du moment et ne suivrait
+  // plus ni le réglage système ni l'heure de la journée.
+  setTheme(themeAutomatique(), false);
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      var mc = null;
+      try { mc = localStorage.getItem('pres-theme'); } catch(err){}
+      if (!mc) setTheme(e.matches ? 'dark' : 'light', false);
+    });
+  }
+}
+// Thème déduit du système, avec repli sur l'heure (nuit = sombre)
+function themeAutomatique() {
+  var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (systemPrefersDark) return 'dark';
+  var hour = new Date().getHours();
+  return (hour >= 20 || hour < 7) ? 'dark' : 'light';
+}
+function setTheme(theme, memoriser) {
+  document.documentElement.setAttribute('data-theme', theme);
+  // memoriser === false : application temporaire (mode automatique)
+  if (memoriser !== false) {
+    try { localStorage.setItem('pres-theme', theme); } catch(e){}
+  }
+  var icon = document.getElementById('theme-icon');
+  if (icon) {
+    if (theme === 'dark') icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+    else icon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>';
+  }
+}
+function toggleTheme() {
+  var cur = document.documentElement.getAttribute('data-theme');
+  setTheme(cur === 'dark' ? 'light' : 'dark');
+}
+
+// ── AVATAR (upload + aperçu local via localStorage) ──
+function initAvatar() {
+  var saved = null;
+  try { saved = localStorage.getItem('pres-avatar'); } catch(e){}
+  if (saved) setAvatarImage(saved);
+  var input = document.getElementById('avatar-input');
+  if (input) {
+    input.addEventListener('change', function(e) {
+      var file = e.target.files && e.target.files[0];
+      if (!file) return;
+      if (!file.type.match(/^image\//)) { pharmaToast('Merci de choisir un fichier image'); return; }
+      if (file.size > 2 * 1024 * 1024) { pharmaToast('Image trop lourde (2 Mo maximum)'); return; }
+      var reader = new FileReader();
+      reader.onload = function(ev) {
+        var dataUrl = ev.target.result;
+        try { localStorage.setItem('pres-avatar', dataUrl); } catch(err) { pharmaToast('Image trop lourde pour être enregistrée'); return; }
+        setAvatarImage(dataUrl);
+        pharmaToast('Photo de profil mise à jour');
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+}
+function setAvatarImage(dataUrl) {
+  var av = document.getElementById('profile-avatar');
+  if (!av) return;
+  var img = av.querySelector('img');
+  if (!img) {
+    img = document.createElement('img');
+    av.insertBefore(img, av.firstChild);
+  }
+  img.src = dataUrl;
+  var initials = document.getElementById('avatar-initials');
+  if (initials) initials.style.display = 'none';
+}
+
+// ── PROFIL (infos personnelles persistées en localStorage) ──
+var PROFIL_FIELDS = ['prenom','nom','email','tel','naissance','langue','adresse','cp','ville'];
+var SUPPORTED_LANGS = ['fr','en','ar','he'];
+function detectSystemLang() {
+  var nav = (navigator.language || navigator.userLanguage || 'fr').toLowerCase();
+  var code = nav.split('-')[0];
+  if (code === 'iw') code = 'he'; // ancien code ISO de l'hébreu, encore utilisé par certains navigateurs
+  return SUPPORTED_LANGS.indexOf(code) !== -1 ? code : 'fr'; // repli sur le français si langue non gérée
+}
+function initProfil() {
+  var saved = null;
+  try { saved = JSON.parse(localStorage.getItem('pres-profil') || 'null'); } catch(e){}
+  if (!saved) {
+    // Première visite : la langue s'initialise sur celle du système/navigateur
+    saved = { langue: detectSystemLang() };
+    try { localStorage.setItem('pres-profil', JSON.stringify(saved)); } catch(e){}
+  } else if (!saved.langue) {
+    // Profil existant créé avant l'ajout de ce champ : on la détecte a posteriori
+    saved.langue = detectSystemLang();
+    try { localStorage.setItem('pres-profil', JSON.stringify(saved)); } catch(e){}
+  }
+  PROFIL_FIELDS.forEach(function(key) {
+    var el = document.getElementById('pf-'+key);
+    if (el && saved[key] !== undefined) el.value = saved[key];
+  });
+}
+function saveProfil() {
+  var data = {};
+  PROFIL_FIELDS.forEach(function(key) {
+    var el = document.getElementById('pf-'+key);
+    data[key] = el ? String(el.value).trim() : '';
+  });
+  if (data.email && !pharmaEmailValide(data.email)) { pharmaToast('Adresse email invalide'); return; }
+  try { localStorage.setItem('pres-profil', JSON.stringify(data)); } catch(e){}
+  syncProfilDisplay();
+  initFidelite();
+  renderMesCommandes();
+  pharmaToast('Profil mis à jour');
+}
+
+// Répercute le profil enregistré partout dans la page (sidebar, avatar, notifications)
+function syncProfilDisplay() {
+  var profil = null;
+  try { profil = JSON.parse(localStorage.getItem('pres-profil') || 'null'); } catch(e){}
+  if (!profil) return;
+  var nomComplet = ((profil.prenom||'') + ' ' + (profil.nom||'')).trim();
+  if (nomComplet) {
+    var nomEl = document.getElementById('sidebar-nom');
+    if (nomEl) nomEl.textContent = nomComplet;
+    var initEl = document.getElementById('avatar-initials');
+    if (initEl) initEl.textContent = getClientInitials(nomComplet);
+  }
+  if (profil.email) {
+    var mailEl = document.getElementById('sidebar-email');
+    if (mailEl) mailEl.textContent = profil.email;
+    var notifMail = document.getElementById('notif-email');
+    if (notifMail) notifMail.textContent = profil.email;
+  }
+}
+
+// ── SÉLECTEUR DE THÈME (Clair / Sombre / Automatique) ──
+function setThemePref(pref) {
+  if (pref === 'auto') {
+    try { localStorage.removeItem('pres-theme'); } catch(e){}
+    initTheme();
+  } else {
+    setTheme(pref);
+  }
+  updateThemeOptionsUI();
+  pharmaToast('Préférence d\'apparence enregistrée');
+}
+function updateThemeOptionsUI() {
+  var saved = null;
+  try { saved = localStorage.getItem('pres-theme'); } catch(e){}
+  var current = saved || 'auto';
+  document.querySelectorAll('.theme-opt').forEach(function(btn) {
+    btn.classList.toggle('active', btn.getAttribute('data-theme') === current);
+  });
+}
+
+// ── TABS ──
+function showTab(id, el) {
+  // Protection : une ancre invalide dans l'URL (compte.html#inconnu) ne doit
+  // pas provoquer d'erreur JavaScript et bloquer le reste de la page.
+  var cible = document.getElementById('tab-' + id);
+  if (!cible) return;
+  document.querySelectorAll('.page-tab').forEach(function(t){ t.classList.remove('active'); });
+  cible.classList.add('active');
+  document.querySelectorAll('.menu-item').forEach(function(m){ m.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  if (id === 'fidelite') pharmaAjusterCodeBarres(document.getElementById('fid-code-barres'));
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+// ── NOTIF GLOBAL ──
+function toggleGlobalNotif() {
+  var global = document.getElementById('notif-global');
+  var types = document.getElementById('notif-types');
+  if (!global || !types) return;
+  if (global.checked) {
+    types.style.opacity = '1';
+    types.style.pointerEvents = 'auto';
+  } else {
+    types.style.opacity = '0.4';
+    types.style.pointerEvents = 'none';
+    pharmaToast('Toutes les notifications sont désactivées');
+  }
+}
+
+// ── PRÉFÉRENCES DE NOTIFICATION (enregistrées dans ce navigateur) ──
+var CLE_NOTIFS = 'pres-notifs';
+var CHAMPS_NOTIFS = { global:'notif-global', pret:'notif-pret', promos:'notif-promos', renouvellement:'notif-renouvellement', gardes:'notif-gardes', email:'notif-canal-email' };
+function lireNotifs() {
+  var p = null;
+  try { p = JSON.parse(localStorage.getItem(CLE_NOTIFS) || 'null'); } catch (e) {}
+  return (p && typeof p === 'object') ? p : null;
+}
+function initNotifs() {
+  var p = lireNotifs();
+  if (!p) return;
+  Object.keys(CHAMPS_NOTIFS).forEach(function(k) {
+    var el = document.getElementById(CHAMPS_NOTIFS[k]);
+    if (el && typeof p[k] === 'boolean') el.checked = p[k];
+  });
+  var types = document.getElementById('notif-types');
+  var global = document.getElementById('notif-global');
+  if (types && global && !global.checked) { types.style.opacity = '0.4'; types.style.pointerEvents = 'none'; }
+}
+function enregistrerNotifs() {
+  var p = {};
+  Object.keys(CHAMPS_NOTIFS).forEach(function(k) {
+    var el = document.getElementById(CHAMPS_NOTIFS[k]);
+    if (el) p[k] = !!el.checked;
+  });
+  try { localStorage.setItem(CLE_NOTIFS, JSON.stringify(p)); }
+  catch (e) { pharmaToast('Préférences non enregistrées : stockage du navigateur indisponible'); return; }
+  pharmaToast('Préférences enregistrées');
+}
+
+// ── MES DONNÉES (RGPD) : copie téléchargeable de ce que le site connaît du client ──
+function telechargerMesDonnees() {
+  var client = getCurrentClient();
+  var nom = getCurrentClientNom(), email = getCurrentClientEmail();
+  var commandes = (DATA.commandes || []).filter(function(c) { return PharmaClients.commandeAppartient(c, nom, email); });
+  var codes = client ? (DATA.codesPromo || []).filter(function(c) {
+    return (c.clientId !== undefined) ? c.clientId === client.id : c.client === client.nom;
+  }) : [];
+  var export_ = {
+    pharmacie: (DATA.parametres && DATA.parametres.nom) || '',
+    date: new Date().toISOString(),
+    profil: getProfilEnregistre(),
+    fiche: client ? { nom: client.nom, email: client.email, telephone: client.tel, communications: !!client.rgpd, achats: client.achats } : null,
+    carteFidelite: client ? pharmaNumeroFidelite(client) : null,
+    commandes: commandes,
+    codesFidelite: codes,
+    preferencesNotifications: lireNotifs()
+  };
+  var json = JSON.stringify(export_, null, 2);
+  try {
+    var blob = new Blob([json], { type: 'application/json' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'mes-donnees.json';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+    pharmaToast('Vos données ont été téléchargées');
+  } catch (e) { pharmaToast('Téléchargement impossible sur ce navigateur'); }
+}
+
+// Accord pour les communications : lu sur la fiche du client (aucune date inventée)
+function afficherConsentement() {
+  var txt = document.getElementById('rgpd-consentement-texte');
+  var etat = document.getElementById('rgpd-consentement-etat');
+  if (!txt || !etat) return;
+  var client = getCurrentClient();
+  var oui = !!(client && client.rgpd);
+  txt.textContent = oui
+    ? 'Vous avez accepté de recevoir les communications de la pharmacie. Vous pouvez retirer cet accord à tout moment en contactant la pharmacie.'
+    : 'Vous n\'avez pas donné votre accord pour recevoir les communications de la pharmacie. Vos données servent uniquement à vos commandes et à votre carte de fidélité.';
+  etat.textContent = oui ? 'Accepté' : 'Non accepté';
+  etat.style.color = oui ? 'var(--vert)' : 'var(--texte-3)';
+}
+
+// ── DELETE ACCOUNT ──
+function confirmDelete() {
+  if (confirm('Êtes-vous sûr de vouloir supprimer définitivement votre compte ? Cette action est irréversible.')) {
+    pharmaToast('Demande de suppression enregistrée');
+  }
+}
+
+// ── TOAST ──
+window.pharmaToast = function(msg) {
+  var c = document.getElementById('toast');
+  if (!c) return;
+  var el = document.createElement('div');
+  el.className = 'toast verre';
+  el.innerHTML = '<svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
+  // Le message est ajouté en texte brut : un nom de produit ne peut pas y injecter de HTML
+  el.appendChild(document.createTextNode(String(msg == null ? '' : msg)));
+  // Trois messages au plus à l'écran : le plus ancien laisse sa place
+  while (c.children.length >= 3) c.removeChild(c.firstChild);
+  c.appendChild(el);
+  document.body.classList.add('avec-message');
+  setTimeout(function() {
+    el.classList.add('sortie');
+    setTimeout(function() {
+      if (el.parentNode) el.parentNode.removeChild(el);
+      if (!c.children.length) document.body.classList.remove('avec-message');
+    }, 360);
+  }, 2800);
+};
+
+// Étape de transition : le site client est relié à la base de données, pas encore l'espace client
+function afficherAvisCompteNonRelie() {
+  var layout = document.querySelector('.layout');
+  if (!layout || document.getElementById('avis-base')) return;
+  var avis = document.createElement('div');
+  avis.id = 'avis-base';
+  avis.setAttribute('role', 'note');
+  avis.style.cssText = 'max-width:1100px;margin:20px auto 0;padding:0 16px';
+  avis.innerHTML = '<div style="padding:12px 16px;border-radius:12px;background:#FBF1DF;color:#5C3D0B;font-size:0.82rem;line-height:1.5;border:1px solid #EBCB8B">'
+    + '<strong>Aperçu de l\'espace client.</strong> Il n\'est pas encore relié à la base de données : les commandes passées sur le site n\'y apparaissent pas encore.</div>';
+  layout.parentNode.insertBefore(avis, layout);
+}
+
+// ── INIT ──
+window.addEventListener('DOMContentLoaded', function() {
+  if (typeof PHARMA_SUPABASE !== 'undefined' && PHARMA_SUPABASE) afficherAvisCompteNonRelie();
+  applyPharmacyConfig();
+  initProfil();
+  syncProfilDisplay();
+  initFidelite();
+  renderMesCommandes();
+  initNotifs();
+  afficherConsentement();
+  initTheme();
+  updateThemeOptionsUI();
+  initAvatar();
+  // L'admin (autre onglet) fait évoluer commandes et codes : on se recale sur les données les plus récentes.
+  window.addEventListener('storage', function(e) {
+    if (e.key === 'pres-data') { DATA = PharmaStore.load(); initFidelite(); renderMesCommandes(); afficherConsentement(); }
+  });
+  var tb = document.getElementById('theme-btn');
+  if (tb) tb.addEventListener('click', function(){ toggleTheme(); updateThemeOptionsUI(); });
+  // Ouvrir un onglet via hash (#commandes, #notifs...)
+  // Seuls des noms d'onglet simples sont acceptés (une ancre piégée ne peut pas casser la page)
+  var hash = window.location.hash.replace('#','').replace(/[^a-z-]/g, '');
+  if (hash && document.getElementById('tab-'+hash)) {
+    var menuItem = document.querySelector('.menu-item[onclick*="'+hash+'"]');
+    showTab(hash, menuItem);
+  }
+});

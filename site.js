@@ -1,2 +1,2964 @@
 /* © 2026 Alexis Ngakosso. Tous droits réservés. Reproduction, modification ou réutilisation interdites sans autorisation écrite. */
-var _0x44a01f=_0x1cc6;(function(_0x111ca8,_0x4082a3){var _0x1f9add=_0x1cc6,_0x1a1363=_0x111ca8();while(!![]){try{var _0x13ae3e=-parseInt(_0x1f9add(0x2e9))/0x1*(parseInt(_0x1f9add(0x217))/0x2)+parseInt(_0x1f9add(0x199))/0x3+-parseInt(_0x1f9add(0xf3))/0x4+parseInt(_0x1f9add(0x22e))/0x5*(-parseInt(_0x1f9add(0x370))/0x6)+-parseInt(_0x1f9add(0x2c9))/0x7+parseInt(_0x1f9add(0x3b2))/0x8+parseInt(_0x1f9add(0x1ca))/0x9*(parseInt(_0x1f9add(0x2d9))/0xa);if(_0x13ae3e===_0x4082a3)break;else _0x1a1363['push'](_0x1a1363['shift']());}catch(_0x29fab8){_0x1a1363['push'](_0x1a1363['shift']());}}}(_0x1fa5,0x8abf1));var MODE_CLOUD=typeof PharmaCloud!==_0x44a01f(0x130)&&PharmaCloud[_0x44a01f(0x23d)],DATA=MODE_CLOUD?PharmaCloud[_0x44a01f(0x206)]():PharmaStore[_0x44a01f(0x1be)](),SIMU=!MODE_CLOUD&&(/[?&]simu=(lent|coupe)(&|$)/['exec'](location[_0x44a01f(0x482)])||[])[0x1]||'',DONNEES_SIMU=null;SIMU&&(DONNEES_SIMU=DATA,DATA=JSON['parse'](JSON['stringify'](DATA)),[_0x44a01f(0x4a4),_0x44a01f(0x2c2),_0x44a01f(0x2b5),_0x44a01f(0x3e2),_0x44a01f(0x3f2)][_0x44a01f(0x114)](function(_0x43eba1){DATA[_0x43eba1]=[];}));var EN_LIGNE=MODE_CLOUD||!!SIMU,ETAT_CLOUD=MODE_CLOUD?PharmaCloud['actif']?_0x44a01f(0x32e):_0x44a01f(0x44f):SIMU?'chargement':_0x44a01f(0x3a5),dernierChargementCloud=0x0,CAT_ICON_MAP={'Solaire':'sun','Vitamines':_0x44a01f(0x2cf),'Hygiène':_0x44a01f(0x1d5),'Beauté':_0x44a01f(0x25d),'Bébé':_0x44a01f(0x16b),'Minceur':_0x44a01f(0x25d),'Aromathérapie':_0x44a01f(0x1d5)};function iconForCat(_0x5dc4b9){var _0x17ce8c=_0x44a01f;return CAT_ICON_MAP[_0x5dc4b9]||_0x17ce8c(0x25d);}function escAttr(_0x1ebbe7){var _0x3607b4=_0x44a01f;return String(_0x1ebbe7==null?'':_0x1ebbe7)['replace'](/\\/g,'\x5c\x5c')['replace'](/'/g,'\x5c\x27')['replace'](/"/g,_0x3607b4(0x19c))[_0x3607b4(0x3b5)](/</g,'&lt;')['replace'](/>/g,_0x3607b4(0x124))[_0x3607b4(0x3b5)](/\r/g,'\x5cr')[_0x3607b4(0x3b5)](/\n/g,'\x5cn')['replace'](/\u2028/g,_0x3607b4(0x3b6))['replace'](/\u2029/g,_0x3607b4(0x2f9));}function nombre(_0x14c8b7){var _0xe0139b=Number(_0x14c8b7);return isFinite(_0xe0139b)?_0xe0139b:0x0;}var MOIS_FR=[_0x44a01f(0x4a7),'février',_0x44a01f(0x378),_0x44a01f(0x2f4),_0x44a01f(0x1c7),'juin',_0x44a01f(0x31d),'août',_0x44a01f(0x356),_0x44a01f(0x2e6),_0x44a01f(0x4a0),'décembre'];function formatDateFr(_0x2edd88){var _0x2b5167=_0x44a01f;if(!_0x2edd88)return'';var _0x3ac77b=_0x2edd88[_0x2b5167(0x163)]('-');if(_0x3ac77b[_0x2b5167(0x420)]!==0x3)return _0x2edd88;var _0x43fc3c=parseInt(_0x3ac77b[0x2],0xa),_0x5f485c=MOIS_FR[parseInt(_0x3ac77b[0x1],0xa)-0x1]||'';return _0x43fc3c+'\x20'+_0x5f485c;}function escHtml(_0x12fc6d){var _0x23e348=_0x44a01f;return String(_0x12fc6d==null?'':_0x12fc6d)[_0x23e348(0x3b5)](/&/g,_0x23e348(0x2c5))[_0x23e348(0x3b5)](/</g,'&lt;')['replace'](/>/g,_0x23e348(0x124))['replace'](/"/g,_0x23e348(0x19c))[_0x23e348(0x3b5)](/'/g,_0x23e348(0x41e));}function matchProduitPourPromo(_0xc6cb54){var _0x2e6fc9=_0x44a01f,_0x3adcd1=String(_0xc6cb54||'')['replace'](/^Lot\s+/i,'')['replace'](/\s*x\d+$/i,'')['trim']()[_0x2e6fc9(0x3b9)](),_0x3971c6=_0x3adcd1['split']('\x20')[0x0];return DATA[_0x2e6fc9(0x2c2)][_0x2e6fc9(0x380)](function(_0x343573){var _0x375f2d=_0x2e6fc9;return String(_0x343573[_0x375f2d(0x22d)]||'')['toLowerCase']()[_0x375f2d(0x48c)](_0x3971c6)!==-0x1;});}var PROMOS=[],CATALOGUE=[];function buildCatalogueData(){var _0x4ca53f=_0x44a01f;CATALOGUE=DATA[_0x4ca53f(0x2c2)][_0x4ca53f(0x16d)](function(_0x1be176){var _0x232000=_0x4ca53f;return{'id':'prod-'+_0x1be176['id'],'produitId':_0x1be176['id'],'cat':_0x1be176[_0x232000(0x159)],'nom':_0x1be176['nom'],'prix':_0x1be176[_0x232000(0x340)],'icon':iconForCat(_0x1be176[_0x232000(0x159)]),'stock':_0x1be176[_0x232000(0x47f)],'photo':pharmaPhotoValide(_0x1be176[_0x232000(0x334)]),'rayons':pharmaRayonsDuProduit(DATA,_0x1be176)};});var _0x1b5a5d=pharmaDateLocale();PROMOS=DATA['promos']['filter'](function(_0x2b78aa){var _0x310682=_0x4ca53f;if(_0x2b78aa[_0x310682(0x3f8)]!==_0x310682(0x38f))return![];if(_0x2b78aa['debut']&&String(_0x2b78aa[_0x310682(0x296)])[_0x310682(0x118)](0x0,0xa)>_0x1b5a5d)return![];if(_0x2b78aa[_0x310682(0x1bb)]&&String(_0x2b78aa['fin'])[_0x310682(0x118)](0x0,0xa)<_0x1b5a5d)return![];return!![];})[_0x4ca53f(0x16d)](function(_0x1c1a18){var _0x28e8da=_0x4ca53f,_0x143121=_0x1c1a18['produitId']!=null&&DATA[_0x28e8da(0x2c2)][_0x28e8da(0x380)](function(_0x18a28f){var _0x1e72e7=_0x28e8da;return _0x18a28f['id']===_0x1c1a18[_0x1e72e7(0x258)];})||matchProduitPourPromo(_0x1c1a18[_0x28e8da(0x1a8)]),_0x9a546e=_0x143121?_0x143121['cat']:_0x28e8da(0x2fe);return{'id':_0x28e8da(0x439)+_0x1c1a18['id'],'promoId':_0x1c1a18['id'],'cat':_0x9a546e,'nom':_0x1c1a18[_0x28e8da(0x1a8)],'prixPromo':_0x1c1a18[_0x28e8da(0x10d)],'prixNormal':_0x1c1a18[_0x28e8da(0x34c)],'pct':Math[_0x28e8da(0x43d)](_0x1c1a18['pct']),'fin':formatDateFr(_0x1c1a18[_0x28e8da(0x1bb)]),'finIso':String(_0x1c1a18[_0x28e8da(0x1bb)]||'')[_0x28e8da(0x118)](0x0,0xa),'icon':iconForCat(_0x9a546e),'photo':_0x143121?pharmaPhotoValide(_0x143121[_0x28e8da(0x334)]):'','miseEnAvant':_0x1c1a18['miseEnAvant']===!![]};});}buildCatalogueData();var infosFiables=!EN_LIGNE||MODE_CLOUD&&PharmaCloud[_0x44a01f(0x369)];if(!infosFiables)document[_0x44a01f(0x2d4)][_0x44a01f(0x2db)][_0x44a01f(0x29c)](_0x44a01f(0x1ee));var FAQ=[{'q':'Comment\x20fonctionne\x20le\x20click\x20&\x20collect\x20?','a':'Vous\x20choisissez\x20vos\x20produits\x20sur\x20le\x20site,\x20vous\x20validez\x20votre\x20commande,\x20puis\x20vous\x20la\x20récupérez\x20directement\x20{A_LA_NOM}.\x20Le\x20règlement\x20se\x20fait\x20sur\x20place,\x20au\x20retrait.'},{'q':_0x44a01f(0x406),'a':_0x44a01f(0x2fa)},{'q':'Comment\x20payer\x20ma\x20commande\x20?','a':_0x44a01f(0x46a)},{'q':'Puis-je\x20modifier\x20ou\x20annuler\x20ma\x20commande\x20?','a':_0x44a01f(0x35b)},{'q':_0x44a01f(0x34d),'a':_0x44a01f(0x38b)},{'q':_0x44a01f(0x3a9),'a':_0x44a01f(0x1f8)}],ICONS={'sun':_0x44a01f(0x484),'pill':_0x44a01f(0x304),'drop':_0x44a01f(0x33f),'sparkle':_0x44a01f(0x2d0),'baby':_0x44a01f(0x1ba)};function visuelCarte(_0x39cdd6){var _0x55f41c=_0x44a01f,_0x3f5822=pharmaPhotoValide(_0x39cdd6&&_0x39cdd6[_0x55f41c(0x334)]);return _0x3f5822?'<img\x20class=\x22carte-photo\x22\x20src=\x22'+escHtml(_0x3f5822)+_0x55f41c(0x243)+escHtml(_0x39cdd6[_0x55f41c(0x3a1)]||'')+'\x22>':ICONS[_0x39cdd6&&_0x39cdd6['icon']]||'';}function suivrePhoto(_0x45e4ed,_0x4bc60a){var _0x504b51=_0x44a01f,_0x2bc409=_0x45e4ed[_0x504b51(0x467)];if(!_0x2bc409)return;function _0x48e297(){var _0x438606=_0x504b51;_0x2bc409[_0x438606(0x2db)]['add'](_0x438606(0x1f4));}function _0x1f8828(){var _0x77a7f9=_0x504b51;if(_0x4bc60a){_0x4bc60a(_0x45e4ed,_0x2bc409);return;}_0x2bc409['classList']['remove'](_0x77a7f9(0x188)),_0x2bc409['classList'][_0x77a7f9(0x29c)](_0x77a7f9(0x1f4)),_0x45e4ed[_0x77a7f9(0x24e)](_0x77a7f9(0x308),ICONS[_0x45e4ed[_0x77a7f9(0x28e)]('data-icone')]||''),_0x45e4ed[_0x77a7f9(0x180)]();}if(_0x45e4ed[_0x504b51(0x459)]&&_0x45e4ed['getAttribute']('src')){if(_0x45e4ed[_0x504b51(0x430)])_0x48e297();else _0x1f8828();return;}_0x45e4ed[_0x504b51(0x3d7)]('load',_0x48e297,{'once':!![]}),_0x45e4ed[_0x504b51(0x3d7)]('error',_0x1f8828,{'once':!![]});}function suivrePhotos(_0x1541a1){var _0x507ae1=_0x44a01f;if(!_0x1541a1)return;_0x1541a1['querySelectorAll'](_0x507ae1(0x395))[_0x507ae1(0x114)](function(_0xc5d3c1){var _0xb3f7f6=_0x507ae1;if(_0xc5d3c1[_0xb3f7f6(0x2b4)])return;_0xc5d3c1[_0xb3f7f6(0x2b4)]=!![],suivrePhoto(_0xc5d3c1);});}function photoArticle(_0x51bc07){var _0x341de5=_0x44a01f,_0x1380e4=CATALOGUE[_0x341de5(0x380)](function(_0x37aaf3){return _0x37aaf3['id']===_0x51bc07;})||PROMOS[_0x341de5(0x380)](function(_0x35fe12){return _0x35fe12['id']===_0x51bc07;});return _0x1380e4?pharmaPhotoValide(_0x1380e4[_0x341de5(0x334)]):'';}function vignetteArticle(_0x364878,_0x397ef6){var _0x3b5a51=_0x44a01f,_0xfd1e94=photoArticle(_0x364878&&_0x364878['id']);return'<span\x20class=\x22'+_0x397ef6+'\x20vignette'+(_0xfd1e94?'\x20avec-photo':'')+_0x3b5a51(0x404)+visuelCarte({'photo':_0xfd1e94,'icon':_0x364878&&_0x364878[_0x3b5a51(0x3a1)]})+'</span>';}var cart=[],appliedPromo=null,CART_KEY=_0x44a01f(0x2a4);function saveCart(){var _0x56734b=_0x44a01f;try{localStorage['setItem'](CART_KEY,JSON[_0x56734b(0x19e)]({'cart':cart,'promo':appliedPromo}));}catch(_0x440d92){}}function loadCart(){var _0x3bba8a=_0x44a01f,_0x53df52=null;try{_0x53df52=JSON[_0x3bba8a(0x1bf)](localStorage[_0x3bba8a(0x39c)](CART_KEY)||_0x3bba8a(0x3a2));}catch(_0x3785db){}if(!_0x53df52||!Array[_0x3bba8a(0x448)](_0x53df52[_0x3bba8a(0x390)]))return;cart=_0x53df52[_0x3bba8a(0x390)]['filter'](function(_0x5753e3){var _0x2c6bcf=_0x3bba8a;return _0x5753e3&&_0x5753e3['id']&&typeof _0x5753e3[_0x2c6bcf(0x340)]===_0x2c6bcf(0x1f6)&&_0x5753e3[_0x2c6bcf(0x415)]>0x0;});if(_0x53df52['promo']&&_0x53df52[_0x3bba8a(0x428)][_0x3bba8a(0x20f)]){if(MODE_CLOUD){var _0x307fde=_0x53df52[_0x3bba8a(0x428)],_0x50130f=parseInt(_0x307fde[_0x3bba8a(0x263)],0xa);appliedPromo=typeof _0x307fde[_0x3bba8a(0x20f)]===_0x3bba8a(0x39f)&&_0x50130f>=0x1&&_0x50130f<=0x64?{'code':_0x307fde[_0x3bba8a(0x20f)][_0x3bba8a(0x118)](0x0,0x28),'pct':_0x50130f,'scope':String(_0x307fde[_0x3bba8a(0x153)]||_0x3bba8a(0x2aa)),'label':String(_0x307fde[_0x3bba8a(0x305)]||'-'+_0x50130f+'%')}:null;}else{var _0x4aba81=findCodePromo(_0x53df52[_0x3bba8a(0x428)][_0x3bba8a(0x20f)]);appliedPromo=_0x4aba81&&!_0x4aba81[_0x3bba8a(0x44f)]?_0x4aba81:null;}if(appliedPromo){var _0x27a173=document[_0x3bba8a(0x3de)]('promo-label');if(_0x27a173)_0x27a173[_0x3bba8a(0x187)]='('+appliedPromo[_0x3bba8a(0x20f)]+')';var _0x539706=document[_0x3bba8a(0x3de)]('promo-input');if(_0x539706)_0x539706[_0x3bba8a(0x122)]=appliedPromo[_0x3bba8a(0x20f)];var _0x107d28=document[_0x3bba8a(0x3de)](_0x3bba8a(0x38e));_0x107d28&&(_0x107d28[_0x3bba8a(0x187)]='✓\x20Code\x20appliqué\x20:\x20'+appliedPromo[_0x3bba8a(0x305)],_0x107d28[_0x3bba8a(0x461)]['color']=_0x3bba8a(0x1d8));}}}function findCodePromo(_0x302593){var _0x5429f7=_0x44a01f,_0x3b5b96=DATA[_0x5429f7(0x24b)][_0x5429f7(0x380)](function(_0x2f8d22){var _0x333b9f=_0x5429f7;return _0x2f8d22[_0x333b9f(0x20f)]['toUpperCase']()===_0x302593[_0x333b9f(0x2d7)]();});if(!_0x3b5b96)return null;if(!_0x3b5b96[_0x5429f7(0x292)])return{'erreur':_0x5429f7(0x38a)};if(_0x3b5b96[_0x5429f7(0x4a6)]&&String(_0x3b5b96['expire'])[_0x5429f7(0x118)](0x0,0xa)<pharmaDateLocale())return{'erreur':_0x5429f7(0xfe)};if(_0x3b5b96[_0x5429f7(0x2fc)]&&_0x3b5b96[_0x5429f7(0x1fb)]>=_0x3b5b96['maxUsages'])return{'erreur':_0x5429f7(0x3d8)};return{'code':_0x3b5b96[_0x5429f7(0x20f)],'pct':_0x3b5b96['pct'],'scope':_0x3b5b96[_0x5429f7(0x153)],'label':'-'+_0x3b5b96[_0x5429f7(0x263)]+'%'+(_0x3b5b96[_0x5429f7(0x153)]!=='Tous'?'\x20'+_0x3b5b96['scope']:'')};}function applyPharmacyConfig(){var _0x5995dd=_0x44a01f,_0x515c4e=DATA['parametres']||{};appliquerCouleurTheme();var _0x406654=_0x515c4e['nom']||'Pharmacie\x20Démo',_0x3bbc44=PharmaTextes[_0x5995dd(0x253)](_0x515c4e[_0x5995dd(0x1c5)]);titreSite=_0x406654+'\x20—\x20Parapharmacie\x20&\x20Click\x20and\x20Collect'+(_0x3bbc44?_0x5995dd(0x394)+_0x3bbc44:'');if(!document[_0x5995dd(0x3c4)]||!document[_0x5995dd(0x3c4)][_0x5995dd(0x2db)][_0x5995dd(0x157)](_0x5995dd(0x309)))document[_0x5995dd(0x23f)]=titreSite;document['querySelectorAll'](_0x5995dd(0x433))[_0x5995dd(0x114)](function(_0x17229c){var _0x4da904=_0x5995dd;_0x17229c[_0x4da904(0x187)]=_0x406654;}),document[_0x5995dd(0x24f)](_0x5995dd(0x42e))[_0x5995dd(0x114)](function(_0x3bce02){var _0x3924c5=_0x5995dd;_0x3bce02['textContent']=PharmaTextes[_0x3924c5(0x3e7)](_0x406654);}),document['querySelectorAll']('[data-pharma=\x22ville\x22]')[_0x5995dd(0x114)](function(_0xd688fe){_0xd688fe['textContent']=_0x3bbc44;}),document[_0x5995dd(0x24f)](_0x5995dd(0x45c))[_0x5995dd(0x114)](function(_0x2c0d7f){var _0x1f760e=_0x5995dd;_0x2c0d7f['style'][_0x1f760e(0x1d9)]=_0x3bbc44?'':'none';}),document[_0x5995dd(0x24f)]('[data-pharma=\x22adresse-courte\x22]')[_0x5995dd(0x114)](function(_0x5e7132){var _0x3ac93c=_0x5995dd;_0x5e7132[_0x3ac93c(0x187)]=PharmaTextes[_0x3ac93c(0x141)](_0x515c4e['adresse']);}),majReferencement(_0x515c4e,_0x406654,_0x3bbc44);var _0x5f4174=document[_0x5995dd(0x3de)](_0x5995dd(0x312));if(_0x5f4174)_0x5f4174[_0x5995dd(0x187)]=_0x515c4e[_0x5995dd(0x1c5)]||'';var _0x4b81c5=document[_0x5995dd(0x3de)](_0x5995dd(0xfd));if(_0x4b81c5)_0x4b81c5[_0x5995dd(0x187)]=_0x515c4e[_0x5995dd(0x1c5)]||'';var _0x1841e6=document[_0x5995dd(0x3de)]('footer-tel-link');_0x1841e6&&_0x515c4e['tel']&&(_0x1841e6['textContent']=_0x515c4e['tel'],_0x1841e6['href']=_0x5995dd(0x2e7)+_0x515c4e[_0x5995dd(0x266)][_0x5995dd(0x3b5)](/\s+/g,''));var _0x3ead45=document[_0x5995dd(0x3de)](_0x5995dd(0x175));if(_0x3ead45&&_0x515c4e['email'])_0x3ead45[_0x5995dd(0x346)]=_0x5995dd(0x2e1)+_0x515c4e[_0x5995dd(0x36a)];var _0x4141cb=document[_0x5995dd(0x3de)](_0x5995dd(0x2dd));_0x4141cb&&(_0x515c4e[_0x5995dd(0x463)]&&_0x515c4e[_0x5995dd(0x3a3)]?(_0x4141cb[_0x5995dd(0x187)]=_0x515c4e[_0x5995dd(0x3a3)],_0x4141cb[_0x5995dd(0x461)]['display']=''):_0x4141cb[_0x5995dd(0x461)][_0x5995dd(0x1d9)]='none'),majHauteurBandeau(),renderFooterHoraires(),renderFideliteTextes();}function majReferencement(_0x35229b,_0x1c005d,_0x126804){var _0x539189=_0x44a01f;function _0x3e825a(_0x51f027,_0x5e4c87){var _0x464115=_0x1cc6,_0x4a4dd2=document[_0x464115(0x11e)](_0x51f027);if(_0x4a4dd2&&_0x5e4c87)_0x4a4dd2[_0x464115(0x13f)](_0x464115(0x145),_0x5e4c87);}var _0x17244f=PharmaTextes[_0x539189(0x141)](_0x35229b[_0x539189(0x1c5)]);_0x3e825a(_0x539189(0x30c),_0x539189(0x1b1)+PharmaTextes[_0x539189(0x3e7)](_0x1c005d)+(_0x17244f?',\x20'+_0x17244f:'')+_0x539189(0x1d0)),_0x3e825a(_0x539189(0x4a1),_0x1c005d),_0x3e825a('meta[property=\x22og:title\x22]',_0x1c005d+_0x539189(0x247)+(_0x126804?_0x539189(0x394)+_0x126804:''));var _0x2adc18=document[_0x539189(0x11e)](_0x539189(0x2ad));if(!_0x2adc18)return;try{var _0x4a3343=JSON['parse'](_0x2adc18[_0x539189(0x187)]),_0x3e416d=PharmaTextes[_0x539189(0x227)](_0x35229b[_0x539189(0x1c5)]);_0x4a3343[_0x539189(0x23e)]=_0x1c005d,_0x4a3343['address']={'@type':'PostalAddress','streetAddress':_0x3e416d['rue'],'postalCode':_0x3e416d['cp'],'addressLocality':_0x3e416d[_0x539189(0x26b)],'addressCountry':'FR'};var _0xf9375b=String(_0x35229b[_0x539189(0x266)]||'')[_0x539189(0x3b5)](/\D/g,'');if(/^0\d{9}$/[_0x539189(0x405)](_0xf9375b))_0x4a3343[_0x539189(0x19b)]='+33'+_0xf9375b['slice'](0x1);var _0x35601d={'lundi':_0x539189(0x3b0),'mardi':'Tuesday','mercredi':_0x539189(0x1da),'jeudi':_0x539189(0x409),'vendredi':_0x539189(0x267),'samedi':_0x539189(0x226),'dimanche':_0x539189(0x125)},_0x4b7a51=DATA['horaires']||{};_0x4a3343[_0x539189(0x222)]=JOURS_ORDRE[_0x539189(0x297)](function(_0x46fd22){var _0x32bc08=_0x539189;return _0x4b7a51[_0x46fd22]&&_0x4b7a51[_0x46fd22][_0x32bc08(0x389)]&&_0x4b7a51[_0x46fd22][_0x32bc08(0x296)]&&_0x4b7a51[_0x46fd22][_0x32bc08(0x1bb)];})[_0x539189(0x16d)](function(_0xcb4cb6){var _0x3d03e9=_0x539189;return{'@type':'OpeningHoursSpecification','dayOfWeek':_0x35601d[_0xcb4cb6],'opens':_0x4b7a51[_0xcb4cb6][_0x3d03e9(0x296)],'closes':_0x4b7a51[_0xcb4cb6][_0x3d03e9(0x1bb)]};}),_0x2adc18[_0x539189(0x187)]=JSON[_0x539189(0x19e)](_0x4a3343,null,0x2);}catch(_0x415271){}}function renderFideliteTextes(){var _0x34716a=_0x44a01f,_0x123e68=DATA[_0x34716a(0x2b6)]||{},_0x30b770=_0x123e68[_0x34716a(0x458)]||0x5,_0x47fe48=_0x123e68[_0x34716a(0x3e4)]||0xa,_0x5929f5=document[_0x34716a(0x3de)](_0x34716a(0x453));if(_0x5929f5)_0x5929f5[_0x34716a(0x187)]=_0x30b770+_0x34716a(0x457)+_0x47fe48+'%';var _0x23c60e=document[_0x34716a(0x3de)](_0x34716a(0x42c));if(_0x23c60e)_0x23c60e['innerHTML']=escHtml(_0x30b770)+'\x20achats\x20=\x20<span\x20style=\x22color:var(--or)\x22>-'+escHtml(_0x47fe48)+_0x34716a(0x361);var _0x584e8b=document[_0x34716a(0x3de)]('fid-resume-carte-qr');if(_0x584e8b)_0x584e8b[_0x34716a(0x187)]='Membre\x20·\x20'+_0x30b770+'\x20achats';}var JOURS_ORDRE=[_0x44a01f(0x100),_0x44a01f(0x498),'mercredi',_0x44a01f(0x413),_0x44a01f(0x451),_0x44a01f(0x37a),_0x44a01f(0x40f)],JOURS_COURT={'lundi':_0x44a01f(0x37c),'mardi':_0x44a01f(0x14c),'mercredi':_0x44a01f(0x2c6),'jeudi':_0x44a01f(0x2f6),'vendredi':_0x44a01f(0x3e1),'samedi':_0x44a01f(0x104),'dimanche':_0x44a01f(0xf5)};function formatHeure(_0x168d7a){var _0x1a6280=_0x44a01f;if(!_0x168d7a)return'';var _0x3ecec2=_0x168d7a[_0x1a6280(0x163)](':'),_0x3eafe9=_0x3ecec2[0x1]==='00'?'':_0x3ecec2[0x1];return parseInt(_0x3ecec2[0x0],0xa)+'h'+_0x3eafe9;}function renderFooterHoraires(){var _0x2f1ab9=_0x44a01f,_0x140238=document[_0x2f1ab9(0x3de)](_0x2f1ab9(0x20a));if(!_0x140238||!DATA[_0x2f1ab9(0x240)])return;var _0x4794b7=[];JOURS_ORDRE['forEach'](function(_0x3c39ea){var _0x212599=_0x2f1ab9,_0x478ed8=DATA[_0x212599(0x240)][_0x3c39ea];if(!_0x478ed8)return;var _0x275e69=_0x478ed8[_0x212599(0x389)]?formatHeure(_0x478ed8[_0x212599(0x296)])+'-'+formatHeure(_0x478ed8[_0x212599(0x1bb)]):_0x212599(0x106),_0x28be25=_0x4794b7[_0x4794b7['length']-0x1];_0x28be25&&_0x28be25['texte']===_0x275e69?_0x28be25[_0x212599(0x1bb)]=_0x3c39ea:_0x4794b7[_0x212599(0x2df)]({'debut':_0x3c39ea,'fin':_0x3c39ea,'texte':_0x275e69});});var _0x2851d1=_0x4794b7['map'](function(_0x24d96f){var _0x434d51=_0x2f1ab9,_0x5b7788=_0x24d96f[_0x434d51(0x296)]===_0x24d96f[_0x434d51(0x1bb)]?JOURS_COURT[_0x24d96f[_0x434d51(0x296)]]:JOURS_COURT[_0x24d96f[_0x434d51(0x296)]]+'-'+JOURS_COURT[_0x24d96f[_0x434d51(0x1bb)]];return _0x434d51(0x2ba)+escHtml(_0x5b7788)+_0x434d51(0x1c0)+escHtml(_0x24d96f[_0x434d51(0x2dc)])+_0x434d51(0x492);})[_0x2f1ab9(0x3ca)](''),_0x1a5123=pharmaDateLocale(),_0x24feea=new Date();_0x24feea[_0x2f1ab9(0x45a)](_0x24feea[_0x2f1ab9(0x460)]()+0xe);var _0x52c2ec=pharmaDateLocale(_0x24feea);(DATA['joursSpeciaux']||[])[_0x2f1ab9(0x297)](function(_0x38a8a0){var _0x1e60a1=String(_0x38a8a0&&_0x38a8a0['date']||'')['slice'](0x0,0xa);return _0x1e60a1&&_0x1e60a1>=_0x1a5123&&_0x1e60a1<=_0x52c2ec;})['sort'](function(_0x2db37b,_0x3b2236){var _0x4271b7=_0x2f1ab9;return String(_0x2db37b[_0x4271b7(0x30a)])<String(_0x3b2236[_0x4271b7(0x30a)])?-0x1:0x1;})['forEach'](function(_0x420ecc){var _0x314749=_0x2f1ab9,_0x8036b9=formatDateFr(String(_0x420ecc[_0x314749(0x30a)])[_0x314749(0x118)](0x0,0xa)),_0x5246de=_0x420ecc[_0x314749(0x44a)]===_0x314749(0x33c)?'Fermé\x20le\x20'+_0x8036b9:(_0x420ecc[_0x314749(0x44a)]||_0x314749(0x1ff))+_0x314749(0x22b)+_0x8036b9+(_0x420ecc[_0x314749(0x296)]&&_0x420ecc[_0x314749(0x1bb)]?_0x314749(0x1c0)+formatHeure(_0x420ecc['debut'])+'-'+formatHeure(_0x420ecc['fin']):'');_0x2851d1+=_0x314749(0x2d6)+escHtml(_0x5246de)+_0x314749(0x492);}),_0x140238[_0x2f1ab9(0x295)]=_0x2851d1;}function majHauteurBandeau(){var _0x9cb7de=_0x44a01f,_0x76913d=document[_0x9cb7de(0x3de)]('garde-bar'),_0x19781a=_0x76913d&&_0x76913d[_0x9cb7de(0x461)][_0x9cb7de(0x1d9)]!==_0x9cb7de(0x362)?_0x76913d[_0x9cb7de(0x183)]:0x0;document['documentElement'][_0x9cb7de(0x461)]['setProperty']('--bandeau-h',_0x19781a+'px');}window['addEventListener'](_0x44a01f(0x1d1),majHauteurBandeau),window[_0x44a01f(0x3d7)](_0x44a01f(0x194),majHauteurBandeau);if(document[_0x44a01f(0x140)]&&document[_0x44a01f(0x140)]['ready'])document[_0x44a01f(0x140)][_0x44a01f(0x2ed)][_0x44a01f(0x154)](majHauteurBandeau);function todo(_0x299b2d){var _0x462f3e=_0x44a01f;if(!_0x299b2d||String(_0x299b2d)[_0x462f3e(0x48c)]('[')===0x0)return _0x462f3e(0x403)+(_0x299b2d||_0x462f3e(0x408))+'</span>';return _0x299b2d;}function contenuLegal(_0x5918c5){var _0x187237=_0x44a01f,_0x109523=DATA[_0x187237(0x2b6)]||{},_0x27d45c={'nom':escHtml(_0x109523[_0x187237(0x22d)]),'adresse':escHtml(_0x109523[_0x187237(0x1c5)]),'tel':escHtml(_0x109523['tel']),'email':escHtml(_0x109523[_0x187237(0x36a)]),'fideliteSeuil':parseInt(_0x109523[_0x187237(0x458)],0xa)||0x5,'fideliteReduction':parseInt(_0x109523['fideliteReduction'],0xa)||0xa},_0x4d0090=!!(_0x109523[_0x187237(0x417)]&&_0x109523[_0x187237(0x417)]['actif']),_0x90e4b9={},_0x289e58=_0x109523['legal']||{};Object[_0x187237(0x476)](_0x289e58)[_0x187237(0x114)](function(_0x3337bc){_0x90e4b9[_0x3337bc]=escHtml(_0x289e58[_0x3337bc]);});var _0xaefa4=_0x27d45c[_0x187237(0x22d)]||_0x187237(0x160);if(_0x5918c5===_0x187237(0x3c0))return _0x187237(0x137)+'<p><strong>'+_0xaefa4+_0x187237(0x11f)+_0x187237(0x3cc)+todo(_0x90e4b9[_0x187237(0x275)])+_0x187237(0x44e)+_0x187237(0x319)+todo(_0x90e4b9['formeJuridique'])+_0x187237(0x44e)+'Capital\x20social\x20:\x20'+todo(_0x90e4b9[_0x187237(0x303)])+_0x187237(0x44e)+_0x187237(0x3c6)+(_0x27d45c[_0x187237(0x1c5)]||'')+'<br>'+'Téléphone\x20:\x20'+(_0x27d45c[_0x187237(0x266)]||'')+_0x187237(0x44e)+'Email\x20:\x20'+(_0x27d45c[_0x187237(0x36a)]||'')+_0x187237(0x281)+_0x187237(0x447)+_0x187237(0x1b6)+todo(_0x90e4b9[_0x187237(0x371)])+_0x187237(0x44e)+'RCS\x20:\x20'+todo(_0x90e4b9[_0x187237(0x473)])+_0x187237(0x44e)+_0x187237(0x26f)+todo(_0x90e4b9[_0x187237(0x225)])+_0x187237(0x281)+'<h3>Pharmacien\x20titulaire</h3>'+_0x187237(0x1db)+todo(_0x90e4b9[_0x187237(0x386)])+_0x187237(0x44e)+_0x187237(0x38d)+todo(_0x90e4b9[_0x187237(0x27b)])+_0x187237(0x281)+_0x187237(0x101)+_0x187237(0x1ec)+'<p>L\x27officine\x20exerce\x20sous\x20le\x20contrôle\x20de\x20l\x27autorité\x20ayant\x20délivré\x20son\x20autorisation\x20d\x27exploitation\x20:<br>'+todo(_0x90e4b9[_0x187237(0x48a)])+_0x187237(0x44e)+_0x187237(0x3dc)+todo(_0x90e4b9['licence'])+_0x187237(0x281)+_0x187237(0x43a)+_0x187237(0x1db)+todo(_0x90e4b9[_0x187237(0x31b)])+'</p>'+'<h3>Hébergeur</h3>'+_0x187237(0x1db)+todo(_0x90e4b9[_0x187237(0x307)])+_0x187237(0x44e)+'Téléphone\x20:\x20'+todo(_0x90e4b9[_0x187237(0x2a0)])+_0x187237(0x281)+_0x187237(0x2b1)+'<p>L\x27ensemble\x20des\x20contenus\x20de\x20ce\x20site\x20(textes,\x20visuels,\x20logos,\x20structure)\x20est\x20protégé\x20par\x20le\x20droit\x20de\x20la\x20propriété\x20intellectuelle.\x20Toute\x20reproduction,\x20même\x20partielle,\x20est\x20interdite\x20sans\x20autorisation\x20écrite\x20préalable.</p>'+_0x187237(0x3af)+'<p>Les\x20données\x20collectées\x20par\x20ce\x20site\x20et\x20vos\x20droits\x20sont\x20décrits\x20dans\x20la\x20politique\x20de\x20confidentialité.</p>'+_0x187237(0x2a8)+_0x187237(0x16a)+(_0x27d45c['email']||'')+_0x187237(0x1f9)+(_0x27d45c[_0x187237(0x266)]||'')+_0x187237(0x3e5)+_0x187237(0x377);if(_0x5918c5===_0x187237(0x139)){var _0x5211d9=_0x27d45c['fideliteSeuil']||0x5,_0xd8f548=_0x27d45c['fideliteReduction']||0xa;return _0x187237(0x28b)+'<p>Les\x20présentes\x20conditions\x20régissent\x20le\x20service\x20de\x20réservation\x20en\x20ligne\x20avec\x20retrait\x20en\x20officine\x20(«\x20click\x20&amp;\x20collect\x20»)\x20proposé\x20par\x20'+_0xaefa4+_0x187237(0x1e4)+_0x187237(0x1d7)+_0x187237(0xf6)+'<p>Le\x20service\x20concerne\x20exclusivement\x20des\x20produits\x20de\x20parapharmacie.\x20Aucun\x20médicament,\x20sur\x20ordonnance\x20ou\x20non,\x20n\x27est\x20vendu\x20via\x20ce\x20site.</p>'+_0x187237(0x15a)+_0x187237(0x2ab)+'<li>Un\x20récapitulatif\x20est\x20présenté\x20avant\x20validation.</li>'+_0x187237(0x166)+_0x187237(0x2d3)+_0x187237(0x46b)+_0x187237(0x230)+_0x187237(0x108)+_0x187237(0x11c)+'<h3>Paiement</h3>'+_0x187237(0x2e5)+_0x187237(0x3dd)+_0x187237(0x14d)+(_0x27d45c[_0x187237(0x266)]||'')+_0x187237(0x3e5)+_0x187237(0x39b)+_0x187237(0x12c)+_0x187237(0x1b9)+_0x5211d9+_0x187237(0x260)+_0xd8f548+_0x187237(0x42d)+_0x187237(0x270)+_0x187237(0x285)+'<h3>Litiges\x20et\x20médiation</h3>'+_0x187237(0x27c)+todo(_0x90e4b9[_0x187237(0x12b)])+_0x187237(0x281)+'<p>Pour\x20toute\x20question\x20relative\x20à\x20l\x27exercice\x20de\x20la\x20pharmacie\x20ou\x20à\x20un\x20conseil\x20de\x20santé,\x20vous\x20pouvez\x20également\x20saisir\x20le\x20Conseil\x20régional\x20de\x20l\x27Ordre\x20des\x20pharmaciens.</p>'+_0x187237(0x3d5)+_0x187237(0x156);}return _0x187237(0x466)+_0x187237(0x1db)+_0xaefa4+_0x187237(0x3f3)+(_0x27d45c[_0x187237(0x1c5)]||'')+_0x187237(0x1f5)+(_0x27d45c['tel']||'')+_0x187237(0x3ba)+(_0x27d45c[_0x187237(0x36a)]||'')+_0x187237(0x281)+_0x187237(0x2bb)+_0x187237(0x2b3)+_0x187237(0x1dc)+_0x187237(0x132)+_0x187237(0x49a)+_0x187237(0x315)+_0x187237(0x26a)+'<li>Vous\x20contacter\x20en\x20cas\x20d\x27indisponibilité\x20d\x27un\x20produit</li>'+_0x187237(0x338)+'<li>Répondre\x20à\x20vos\x20demandes</li></ul>'+_0x187237(0x410)+_0x187237(0x407)+'<p>Les\x20données\x20sont\x20destinées\x20à\x20'+_0xaefa4+_0x187237(0x12a)+(_0x4d0090?_0x187237(0x15b):'')+'<p>Le\x20site\x20est\x20hébergé\x20par\x20'+todo(_0x90e4b9['hebergeur'])+_0x187237(0x21f)+_0x187237(0x2d2)+'<p>Le\x20traitement\x20repose\x20sur\x20l\x27exécution\x20de\x20votre\x20demande\x20de\x20réservation\x20et,\x20pour\x20les\x20communications\x20facultatives,\x20sur\x20votre\x20consentement,\x20révocable\x20à\x20tout\x20moment.</p>'+'<h3>Durée\x20de\x20conservation</h3>'+'<p>Les\x20données\x20de\x20commande\x20sont\x20conservées\x203\x20ans\x20à\x20compter\x20du\x20dernier\x20contact.\x20Les\x20données\x20de\x20compte\x20sont\x20conservées\x20jusqu\x27à\x20sa\x20suppression.</p>'+_0x187237(0x15d)+_0x187237(0x29d)+(_0x27d45c['email']||'')+_0x187237(0x3e5)+'<p>Vous\x20pouvez\x20également\x20introduire\x20une\x20réclamation\x20auprès\x20de\x20la\x20CNIL\x20(3\x20place\x20de\x20Fontenoy,\x20TSA\x2080715,\x2075334\x20Paris\x20Cedex\x2007\x20—\x20cnil.fr).</p>'+_0x187237(0x399)+_0x187237(0x348)+_0x187237(0x2ec)+_0x187237(0x3f7)+'<p>Pour\x20afficher\x20le\x20site,\x20votre\x20navigateur\x20télécharge\x20ses\x20polices\x20de\x20caractères\x20depuis\x20les\x20serveurs\x20de\x20Google\x20(Google\x20Fonts).\x20Cette\x20requête\x20transmet\x20à\x20Google\x20votre\x20adresse\x20IP\x20et\x20des\x20informations\x20techniques\x20sur\x20votre\x20navigateur.\x20Le\x20site\x20ne\x20transmet\x20aucune\x20autre\x20donnée\x20à\x20Google.</p>'+_0x187237(0x44c)+_0x187237(0x3fe)+_0x187237(0xfa);}var LEGAL_TITRES={'mentions':'Mentions\x20légales','cgv':_0x44a01f(0x1c9),'confidentialite':_0x44a01f(0x32c)};function ouvrirLegal(_0x26a0ee){var _0x4cfded=_0x44a01f,_0x38f60a=document[_0x4cfded(0x3de)](_0x4cfded(0x150)),_0x17bdeb=document[_0x4cfded(0x3de)]('legal-content'),_0x55d4fd=document['getElementById'](_0x4cfded(0x347));if(!_0x55d4fd)return;if(_0x38f60a)_0x38f60a[_0x4cfded(0x187)]=LEGAL_TITRES[_0x26a0ee]||_0x4cfded(0x200);_0x17bdeb&&(_0x17bdeb['innerHTML']=contenuLegal(_0x26a0ee),_0x17bdeb[_0x4cfded(0x18e)]=0x0),_0x55d4fd['classList'][_0x4cfded(0x29c)]('open');}function fermerLegal(){var _0x9a2cd1=_0x44a01f,_0x3f389b=document[_0x9a2cd1(0x3de)](_0x9a2cd1(0x347));if(_0x3f389b)_0x3f389b[_0x9a2cd1(0x2db)][_0x9a2cd1(0x180)](_0x9a2cd1(0x41c));}var COOKIE_KEY=_0x44a01f(0x2bc);function initCookieBar(){var _0x3ca323=_0x44a01f,_0x5cdbdb=null;try{_0x5cdbdb=localStorage[_0x3ca323(0x39c)](COOKIE_KEY);}catch(_0x3e9bec){}if(_0x5cdbdb)return;var _0x394c17=document[_0x3ca323(0x3de)](_0x3ca323(0x26e));if(_0x394c17)setTimeout(function(){var _0x4bca29=_0x3ca323;_0x394c17[_0x4bca29(0x2db)]['add'](_0x4bca29(0x488));},0x384);}function cookieChoix(_0x1b8db0){var _0x1b7dd4=_0x44a01f;try{localStorage[_0x1b7dd4(0x1d3)](COOKIE_KEY,_0x1b8db0?'accepte':_0x1b7dd4(0x113));}catch(_0x3a22f4){}var _0x5813d2=document[_0x1b7dd4(0x3de)]('cookie-bar');if(_0x5813d2)_0x5813d2[_0x1b7dd4(0x2db)]['remove'](_0x1b7dd4(0x488));pharmaToast(_0x1b8db0?'Préférences\x20enregistrées':_0x1b7dd4(0x280));}function initTheme(){var _0x34b6ef=_0x44a01f,_0x51424a=null;try{_0x51424a=localStorage[_0x34b6ef(0x39c)](_0x34b6ef(0x48e));}catch(_0x2154db){}if(_0x51424a){setTheme(_0x51424a);return;}var _0x31c9f8=window[_0x34b6ef(0x34e)]&&window[_0x34b6ef(0x34e)]('(prefers-color-scheme:\x20dark)')[_0x34b6ef(0x422)],_0x521558=new Date()[_0x34b6ef(0x49e)](),_0x1fda12=_0x521558>=0x14||_0x521558<0x7,_0x36aef9;if(_0x31c9f8)_0x36aef9=_0x34b6ef(0x49b);else window[_0x34b6ef(0x34e)]&&window[_0x34b6ef(0x34e)](_0x34b6ef(0x496))['matches']?_0x36aef9=_0x1fda12?_0x34b6ef(0x49b):'light':_0x36aef9=_0x1fda12?_0x34b6ef(0x49b):_0x34b6ef(0x293);setTheme(_0x36aef9,![]),window[_0x34b6ef(0x34e)]&&window[_0x34b6ef(0x34e)]('(prefers-color-scheme:\x20dark)')[_0x34b6ef(0x3d7)](_0x34b6ef(0x14b),function(_0x785400){var _0x43ec38=_0x34b6ef,_0x2f87fe=null;try{_0x2f87fe=localStorage['getItem']('pres-theme');}catch(_0x4cce7b){}if(!_0x2f87fe)setTheme(_0x785400['matches']?_0x43ec38(0x49b):_0x43ec38(0x293),![]);});}function appliquerCouleurTheme(){var _0x1f3d47=_0x44a01f,_0x637228=typeof DATA!=='undefined'&&DATA&&DATA[_0x1f3d47(0x2b6)]||{},_0x9d3fab=document['documentElement'];if(_0x637228[_0x1f3d47(0x3c7)]&&_0x9d3fab[_0x1f3d47(0x28e)]('data-theme')!==_0x1f3d47(0x49b))_0x9d3fab[_0x1f3d47(0x461)][_0x1f3d47(0x49c)](_0x1f3d47(0x330),_0x637228[_0x1f3d47(0x3c7)]);else _0x9d3fab[_0x1f3d47(0x461)][_0x1f3d47(0x23c)](_0x1f3d47(0x330));}function setTheme(_0x3e671a,_0x567d21){var _0x5ea947=_0x44a01f;document[_0x5ea947(0x2d4)][_0x5ea947(0x13f)](_0x5ea947(0x47e),_0x3e671a),appliquerCouleurTheme();if(_0x567d21!==![])try{localStorage[_0x5ea947(0x1d3)](_0x5ea947(0x48e),_0x3e671a);}catch(_0x4e2623){}var _0x26df50=document[_0x5ea947(0x3de)](_0x5ea947(0x479));_0x26df50&&(_0x3e671a==='dark'?_0x26df50[_0x5ea947(0x295)]='<path\x20d=\x22M21\x2012.79A9\x209\x200\x201\x201\x2011.21\x203\x207\x207\x200\x200\x200\x2021\x2012.79z\x22/>':_0x26df50[_0x5ea947(0x295)]=_0x5ea947(0x418));}function toggleTheme(){var _0x55ac68=_0x44a01f,_0x24753f=document[_0x55ac68(0x2d4)][_0x55ac68(0x28e)](_0x55ac68(0x47e));setTheme(_0x24753f===_0x55ac68(0x49b)?_0x55ac68(0x293):_0x55ac68(0x49b));}function prefersReducedMotion(){var _0x380be6=_0x44a01f;return window[_0x380be6(0x34e)]&&window[_0x380be6(0x34e)](_0x380be6(0x3f4))[_0x380be6(0x422)];}function getPerfProfile(){var _0x5097c2=_0x44a01f;if(prefersReducedMotion())return{'anim':![],'nodes':0x0,'drops':0x0,'fps':0x0};var _0x304340=navigator[_0x5097c2(0x426)]||0x4,_0x23d226=window[_0x5097c2(0x23a)]<0x384;if(_0x304340<=0x4||window[_0x5097c2(0x23a)]<0x258)return{'anim':!![],'nodes':0xc,'drops':0x8,'fps':0x1e};if(_0x23d226)return{'anim':!![],'nodes':0x14,'drops':0xc,'fps':0x1e};return{'anim':!![],'nodes':0x1c,'drops':0x12,'fps':0x3c};}function initAmbient(){var _0x48951d=_0x44a01f,_0x394c92=document[_0x48951d(0x3de)](_0x48951d(0x3c2));if(!_0x394c92)return;var _0x5345e4=getPerfProfile();if(!_0x5345e4[_0x48951d(0x210)]){_0x394c92[_0x48951d(0x461)]['display']=_0x48951d(0x362);return;}var _0x18450a=_0x394c92[_0x48951d(0x3fc)]('2d'),_0x2a1b52,_0x36f9ab,_0x14a16d=[],_0x276b98=[],_0x41ceaa=null,_0x334c73=![],_0xf95701=!![],_0x579807=!![],_0x5b71d3=0x3e8/_0x5345e4['fps'],_0x4496cd=0x0,_0x45119b=0x0;function _0xe5b624(){var _0x203c24=_0x48951d,_0x10a0f6=_0x394c92[_0x203c24(0x2e3)]||window[_0x203c24(0x23a)],_0x15fc9a=_0x394c92[_0x203c24(0x105)]||window['innerHeight'];if(_0x10a0f6===_0x2a1b52&&_0x15fc9a===_0x36f9ab)return;_0x2a1b52=_0x394c92[_0x203c24(0x10a)]=_0x10a0f6,_0x36f9ab=_0x394c92[_0x203c24(0x2a9)]=_0x15fc9a;}_0xe5b624(),window['addEventListener'](_0x48951d(0x1d1),_0xe5b624,{'passive':!![]});for(var _0x9f291c=0x0;_0x9f291c<_0x5345e4[_0x48951d(0x39e)];_0x9f291c++){_0x14a16d[_0x48951d(0x2df)]({'x':Math[_0x48951d(0x2fb)]()*_0x2a1b52,'y':Math['random']()*_0x36f9ab,'vx':(Math['random']()-0.5)*0.3,'vy':(Math[_0x48951d(0x2fb)]()-0.5)*0.3,'r':Math['random']()*0x2+0x1});}for(var _0x1d5503=0x0;_0x1d5503<_0x5345e4['drops'];_0x1d5503++){_0x276b98['push']({'x':Math[_0x48951d(0x2fb)]()*_0x2a1b52,'y':Math[_0x48951d(0x2fb)]()*_0x36f9ab,'len':Math[_0x48951d(0x2fb)]()*0xe+0x6,'speed':Math[_0x48951d(0x2fb)]()*1.5+0.8,'opacity':Math[_0x48951d(0x2fb)]()*0.3+0.1});}function _0x30f1b6(_0x15131f){var _0x121d70=_0x48951d;if(!_0x334c73)return;_0x41ceaa=requestAnimationFrame(_0x30f1b6);if(_0x15131f&&_0x5b71d3>16.7){if(_0x15131f-_0x4496cd<_0x5b71d3)return;_0x4496cd=_0x15131f;}var _0xe6704f=_0x15131f&&_0x45119b?Math['min'](_0x15131f-_0x45119b,0x40)/16.67:0x1;_0x45119b=_0x15131f||0x0,_0x18450a[_0x121d70(0x46c)](0x0,0x0,_0x2a1b52,_0x36f9ab);var _0x4b316e=document[_0x121d70(0x2d4)][_0x121d70(0x28e)]('data-theme')===_0x121d70(0x49b),_0x3b6924=_0x4b316e?_0x121d70(0x2ac):_0x121d70(0x22f);for(var _0x1f4bd1=0x0;_0x1f4bd1<_0x14a16d[_0x121d70(0x420)];_0x1f4bd1++){var _0x1a4f53=_0x14a16d[_0x1f4bd1];_0x1a4f53['x']+=_0x1a4f53['vx']*_0xe6704f,_0x1a4f53['y']+=_0x1a4f53['vy']*_0xe6704f;if(_0x1a4f53['x']<0x0||_0x1a4f53['x']>_0x2a1b52)_0x1a4f53['vx']*=-0x1;if(_0x1a4f53['y']<0x0||_0x1a4f53['y']>_0x36f9ab)_0x1a4f53['vy']*=-0x1;_0x18450a['beginPath'](),_0x18450a[_0x121d70(0x21d)](_0x1a4f53['x'],_0x1a4f53['y'],_0x1a4f53['r'],0x0,Math['PI']*0x2),_0x18450a['fillStyle']=_0x121d70(0x45f)+_0x3b6924+_0x121d70(0x3e0),_0x18450a[_0x121d70(0x2c0)]();for(var _0x3619f4=_0x1f4bd1+0x1;_0x3619f4<_0x14a16d['length'];_0x3619f4++){var _0x59ae34=_0x14a16d[_0x3619f4],_0x24b957=_0x1a4f53['x']-_0x59ae34['x'],_0x2e7731=_0x1a4f53['y']-_0x59ae34['y'],_0xc7edd1=Math[_0x121d70(0x343)](_0x24b957*_0x24b957+_0x2e7731*_0x2e7731);_0xc7edd1<0x82&&(_0x18450a[_0x121d70(0x1de)](),_0x18450a[_0x121d70(0x462)](_0x1a4f53['x'],_0x1a4f53['y']),_0x18450a[_0x121d70(0x3d1)](_0x59ae34['x'],_0x59ae34['y']),_0x18450a[_0x121d70(0xfc)]=_0x121d70(0x45f)+_0x3b6924+','+0.15*(0x1-_0xc7edd1/0x82)+')',_0x18450a[_0x121d70(0x454)]=0x1,_0x18450a[_0x121d70(0x2c1)]());}}for(var _0xe6704f=0x0;_0xe6704f<_0x276b98['length'];_0xe6704f++){var _0x26959e=_0x276b98[_0xe6704f];_0x18450a['beginPath'](),_0x18450a[_0x121d70(0x462)](_0x26959e['x'],_0x26959e['y']),_0x18450a[_0x121d70(0x3d1)](_0x26959e['x'],_0x26959e['y']+_0x26959e[_0x121d70(0x30d)]);var _0x4bb847=_0x18450a[_0x121d70(0x392)](_0x26959e['x'],_0x26959e['y'],_0x26959e['x'],_0x26959e['y']+_0x26959e[_0x121d70(0x30d)]);_0x4bb847['addColorStop'](0x0,'rgba('+_0x3b6924+_0x121d70(0x1a4)),_0x4bb847[_0x121d70(0x128)](0x1,_0x121d70(0x45f)+_0x3b6924+','+_0x26959e[_0x121d70(0x3d6)]+')'),_0x18450a[_0x121d70(0xfc)]=_0x4bb847,_0x18450a[_0x121d70(0x454)]=1.5,_0x18450a['stroke'](),_0x18450a['beginPath'](),_0x18450a['arc'](_0x26959e['x'],_0x26959e['y']+_0x26959e[_0x121d70(0x30d)],1.5,0x0,Math['PI']*0x2),_0x18450a[_0x121d70(0x255)]='rgba('+_0x3b6924+','+_0x26959e[_0x121d70(0x3d6)]+')',_0x18450a[_0x121d70(0x2c0)](),_0x26959e['y']+=_0x26959e[_0x121d70(0x477)]*_0xe6704f,_0x26959e['y']>_0x36f9ab+0x14&&(_0x26959e['y']=-0x14,_0x26959e['x']=Math[_0x121d70(0x2fb)]()*_0x2a1b52);}}function _0xc842e6(){if(_0x334c73)return;_0x334c73=!![],_0x4496cd=0x0,_0x45119b=0x0,_0x41ceaa=requestAnimationFrame(_0x30f1b6);}function _0x3f7385(){_0x334c73=![],_0x41ceaa&&(cancelAnimationFrame(_0x41ceaa),_0x41ceaa=null);}function _0x2b7486(){if(_0xf95701&&_0x579807)_0xc842e6();else _0x3f7385();}document[_0x48951d(0x3d7)]('visibilitychange',function(){var _0x367720=_0x48951d;_0xf95701=!document[_0x367720(0x178)],_0x2b7486();}),window[_0x48951d(0x3c5)]&&new IntersectionObserver(function(_0x24d267){var _0x13e597=_0x48951d;_0x579807=_0x24d267[0x0][_0x13e597(0x388)],_0x2b7486();},{'threshold':0x0})[_0x48951d(0x481)](_0x394c92),_0xc842e6();}var JOURS_SEMAINE=[_0x44a01f(0x40f),_0x44a01f(0x100),_0x44a01f(0x498),_0x44a01f(0x117),_0x44a01f(0x413),_0x44a01f(0x451),_0x44a01f(0x37a)];function ordrePromos(_0x25bafe,_0x1c2e31){var _0x33c0f6=_0x44a01f,_0x2e2705=nombre(_0x1c2e31[_0x33c0f6(0x263)])-nombre(_0x25bafe[_0x33c0f6(0x263)]);if(_0x2e2705)return _0x2e2705;var _0x3717f7=_0x25bafe[_0x33c0f6(0x241)]||_0x33c0f6(0x174),_0x3542bf=_0x1c2e31[_0x33c0f6(0x241)]||'9999';return _0x3717f7<_0x3542bf?-0x1:_0x3717f7>_0x3542bf?0x1:0x0;}function promoALaUne(){var _0x370728=_0x44a01f;return PROMOS[_0x370728(0x118)]()['sort'](ordrePromos)[0x0]||null;}function _0x1fa5(){var _0xe7892a=['DNvLlxjHEw9U','zgf0zq','y29UzMLYBs1VCMrLCG','Bwv0yvTUyw1LpsjKzxnJCMLWDgLVBIjD','BgvU','Bg9NAw4TzM9YBq','phnWyw4Gy2XHC3m9iNrVyxn0lwnVy2HLiJ4','pgj1DhrVBIb0ExbLpsjIDxr0B24IignSyxnZpsj1BMuTCg9PBNqIigrHDgeTAt0I','Bw9IAwXLlw1LBNuTy2XVC2u','zM9VDgvYlwfKzhjLC3mTBgLUzq','i2zPzc1QyxvNzsaUzMLKlxnLzW','yxjPys1OAwrKzw4','pgGZpKzPBMfSAxtdQxm8l2GZpG','yxvQlxnWzwnPywW','phnTywXSpG','tM90zxOGyMLLBIb2B3rYzsbUDw3dQxjVigrLignVBw1HBMrLigv0ihzVDhjLignVzguGzguGCMv0CMfPDc4','rM9YBwuGANvYAwrPCxvLidOG','i2eTBgeTDw5Lic51BMu','zgLYzwn0zxvYuhvIBgLJyxrPB24','lMzHCs1PDgvTlM9Wzw4','ANvPBgXLDa','C2nYB2XSqMvOyxzPB3i','y2XPzw50CW','phn2zYb3Awr0Ad0ImtiIigHLAwDODd0ImtiIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0ImYiGyxjPys1OAwrKzw49iNrYDwuIpJXSAw5LihGXpsiXmIiGEte9iJuIihGYpsiXmIiGEti9iJe5iI8+pgXPBMuGEde9iJuIihKXpsiXmIiGEdi9iJe5iIb5mJ0ImtiIlZ48l3n2zZ4','Bw91C2u','CxrL','Cgf1C2u','re9nq29UDgvUDeXVywrLza','yM90Dg9T','zgvSywLfC3nHAq','tM91DMvSBguGy29TBwfUzguG','lNrPCc10AxrSzq','Dg9gAxHLza','twvYy2KGzcDPBMrPCxvLCIb2B3rYzsbUB20Gy29TCgXLDc4','DMLZAwjPBgL0Eq','ug9SAxrPCxvLigrLignVBMzPzgvUDgLHBgL0W6K','y28TBM9T','y2HHCMDLBwvUDa','tguGy2f0ywXVz3vLig5LihldQxbVBMqGCgfZ','ls12zxj0','Cg9PBNrLCMrVD24','phnWyw4Gy2XHC3m9iNbLBMr1BguTyMLSBguIpJXPpJWVAt48l3nWyw4+phnWyw4Gy2XHC3m9iNbLBMr1BguTyMLSBguIpJXPpJWVAt48l3nWyw4+pc9ZCgfUpG','yxzLyY1TzxnZywDL','CgHVDg8','BM93','Dw5Llxn1Axy','yM91BMrPBMDdBgLLBNrszwn0','pgXPpKFdQxjLCIbSzsbWCM9NCMfTBwuGzguGzMLKW6LSAxtdQtWVBgK+','BgfUz3vLq2XPzw50','pgrPDIbJBgfZCZ0IzMfXlwL0zw0IigLKpsjMyxeT','pc9KAxy+pgrPDIbJBgfZCZ0Iy2fYDc1XDhKIpG','rMvYBwv0DxjL','lMv0yxbLw2rHDgeTzxrHCgvD','DNvL','phn2zYb2Awv3qM94psiWidaGmJqGmJqIigzPBgW9iM5VBMuIihn0CM9Rzt0Iy3vYCMvUDenVBg9YiIbZDhjVA2uTD2LKDgG9iJeUnsi+phbHDgGGzd0ItteYidiUnJLSns42nIa1lJy2ytGGocaWideGms0Xms4ZmsaWEIiVpJWVC3zNpG','ChjPEa','y29KzuzPzgvSAxrL','E0fFtefFtK9nFq','C3fYDa','phnWyw4Gy2XHC3m9iNbYB21VlxrPBwvYiJ5kDxnXDsDHDsa','yxj0AwnSzq','AhjLzG','BgvNywWTBw9KywW','pha+q2uGC2L0zsb1DgLSAxnLihvUAxf1zw1LBNqGBguGC3rVy2THz2uGBg9JywWGzguGDM90CMuGBMf2AwDHDgv1CIbWB3vYigrLCYbMB25JDgLVBNmGC3rYAwn0zw1LBNqGBSoPy2vZC2fPCMvZidOGBCoPBw9YAxnLCIb2B3rYzsbWyw5PzxiSihzVCYbWCSoPzSoPCMvUy2vZigqNywzMAwnOywDLicH0AmoOBwuGy2XHAxiVC29TyNjLksbLDcb2B3mGAw5MB3jTyxrPB25ZigrLignVBxb0zs4GqxvJDw4Gy29VA2LLihb1yMXPy2L0ywLYzsWGyxvJDw4GDhjHy2v1CIWGyxvJDw4GB3v0AwWGzguGBwvZDxjLigqNyxvKAwvUy2uGDgLLCNmGBIDLC3qGDxrPBgLZW6KUpc9WpG','lMv0yxbLlwnOAwzMCMu','z2v0qM91BMrPBMDdBgLLBNrszwn0','y28TDgvS','ChjPEe5VCM1HBa','q29TBwvUDcbMB25JDgLVBM5LigXLihbYB2DYyw1TzsbKzsbMAwtdQwXPDmoPid8','Bwf0y2HnzwrPyq','ihbSzwLU','C3rHCNq','sg9YywLYzxmGBw9KAwzPW6LZ','BgvMDa','phn2zYb3Awr0Ad0ImtiIigHLAwDODd0ImtiIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0ImYiGyxjPys1OAwrKzw49iNrYDwuIpJXSAw5LihGXpsi1iIb5mt0ImtiIihGYpsiXosiGEti9iJeYiI8+pc9ZDMC+','lNvUzsaUy2HHCc1NzwfUDa','y29TBwfUzgvZ','C2vWDgvTyNjL','Ahr0Chm6lY93D3CUz29Vz2XLlMnVBs9TyxbZl3nLyxjJAc8/yxbPpteMCxvLCNK9','BgLUzwfYlwDYywrPzw50kdeZnwrLzYW','ChiTCgHVDg8','w2rHDgeTC2KTChjVBw9D','t3vPlcbJB250ywn0zxOGBgeGCgHHCM1Hy2LLihbHCIb0W6LSW6LWAg9UzsbSzsbWBhvZihtdThqGCg9ZC2LIBguGyxbYW6HZihzVDhjLignVBw1HBMrLlIbtAsbLBgXLigvZDcbKW6LQW6aGzw4GChldQxbHCMf0Aw9UlcbJzxj0ywLUzxmGBw9KAwzPy2f0Aw9UCYbWzxv2zw50ig5LihbSDxmGW6P0CMuGCg9ZC2LIBgvZlG','zgf0ys1MBgLWlwrLBgf5','o2nVBg9YoG','phnWyw4Gy2XHC3m9iNnRzwWTyMfYiIbZDhLSzt0ID2LKDgG6ntrWEdTOzwLNAhq6mJjWEdTIB3jKzxiTCMfKAxvZoJeYChGIpJWVC3bHBJ4','zMLKlwPHDwDL','zMLUzeLUzgv4','jsbVzMzLCNq8l3nWyw4+','BM9Uzq','i2zMzG','CMfJAY1JAgLMzNjL','ChiTyxv0CMvZ','i0u1ntm1mW','y2HHCKf0','y2D1lwnOzwnRB3v0','zgvWDwLZq2fJAgu','zw1HAwW','pgrPDIbJBgfZCZ0IAg9YCY1SAwDUzsiGCM9Szt0IywXLCNqIpG','Dw5LlxbVAw50CW','Dw5LlwzPBG','ltqYjsaWChGGltqYjsaWChG','pgrPDIbJBgfZCZ0IChjVBw8Ty2fYzcbZA2vSlwnHCNrLiIbHCMLHlwHPzgrLBJ0IDhj1zsi+pgrPDIbJBgfZCZ0IChjVBw8TAw1NiJ48l2rPDJ48zgL2ignSyxnZpsjWCM9TBY1JB250zw50iJ4','nJi4mtu5oerNB0XbEG','C2LYzxq','ChvZAfn0yxrL','DhjHBNnSyxrLwsGTmtaWjsK','vSoPCMLMAwnHDgLVBIbKDsbJB2rL4OcM','y2f0lwzPBhrLCNm','jYKIihn0EwXLpsjWywrKAw5NoJHWEcaXohb4o2jVCMrLCI1YywrPDxm6mZbWEdTIB3jKzxi6ms41ChGGC29SAwqG','pgrPDIbJBgfZCZ0IBgvNywWTBwfQiJ5mzxmGBwvUDgLVBNmGzw50B3vYW6LLCYbLBIbVCMfUz2uGCMvZDgvUDcddOcbJB21WBmoPDgvYigf2yw50igXHig1PC2uGzw4GBgLNBMuGChvIBgLXDwuGzhuGC2L0zs48l2rPDJ4','BwfYCW','DhjPBq','C2fTzwrP','Dg9HC3q','thvU','pgrPDIbJBgfZCZ0ICMvJyxaTDg90ywWIpJXZCgfUpLrVDgfSlca','C3rHDgu','phnWyw4Gy2XHC3m9iNrVyxn0lxzPz25LDhrLiJ4','zMLUza','imk7igr1ihbHBMLLCIi+','y29TBwfUzgu','4PYvienLignVzguGCYDHChbSAxf1zsbHDxGGChjVzhvPDhmG','4OkSpc9ZCgfUpJWVzgL2pG','pgj1DhrVBIbJBgfZCZ0IzMfXlxf1zxn0Aw9UiIbVBMnSAwnRpsj0B2DNBgvgyxeO','DgL0DwXHAxjL','zM9JDxm','AxnjBNrLCNnLy3rPBMC','B3v2zxj0','q2uGy29KzsbHimoPDmoPigtdQxnHy3rPDSoP','q2HHCxvLigfJAgf0ignVBxb0zsa6ihvUzsbMB2LZigXLihbHBgLLCIbHDhrLAw50lcb1BIbJB2rLigrLihldQwr1y3rPB24Gzxn0igf1Dg9TyxrPCxvLBwvUDcbNW6LUW6LYW6KGzxqGzgLZCg9UAwjSzsbKyw5ZihzVDhjLigvZCgfJzsbJBgLLBNqUienYW6LLEIb2B3rYzsbJB21WDguGCg91CIbJB21Tzw5JzxiGW6aGy3vTDwXLCI4','DMfYkc0TDgv4DguTmYK','tSkWigqNAw5Zy3jPChrPB24GW6aGBcDpCMrYzsbUyxrPB25HBcbKzxmGCgHHCM1Hy2LLBNmGoIa','ChjVBw8TzMvLzgjHy2S','qwn0AxzL','y2fYDa','CMvWBgfJzvn0yxrL','y3jLyxrLtgLUzwfYr3jHzgLLBNq','zMXLEa','imoGia','Aw1Nw2rHDgeTCgHVDg9D','phnWyw4Gy2XHC3m9iNbYB21VlwjHzgDLiJ4T','phaGy2XHC3m9iNzOiIbYB2XLpsjZDgf0DxmIpKnOyxjNzw1LBNqGzhuGy2f0ywXVz3vL4OcMpc9WpG','Dw5LlxbJDa','pgGZpKnVB2TPzxmGzxqGC3rVy2THz2uGBg9JywW8l2GZpG','y3jVAxGTy2XPCc0','pha+tguGzhjVAxqGzguGCSoPDhjHy3rHDgLVBIbKzsaXncbQB3vYCYbWCSoPDNuGCg91CIbSysb2zw50zsddOcbKAxn0yw5JzsbUzsbZj2fWCgXPCxvLihbHCYbPy2KSihb1AxnXDwuGBgeGDMvUDguGzxn0ignVBMnSDwuGzw4GB2zMAwnPBMuUifzVDxmGzgLZCg9ZzxOGBSoPyw5TB2LUCYbKzxmGz2fYyw50AwvZigZdQwDHBgvZidOGz2fYyw50AwuGzguGy29UzM9YBwL0W6KGkgrLDxGGyw5ZimoGignVBxb0zxiGzguGBgeGzmoPBgL2CMfUy2uGCg91CIb1BIbIAwvUig5LDwyPigv0igDHCMfUDgLLigrLCYb2AwnLCYbJywnOW6LZlJWVCd4','z2v0sxrLBq','phnWyw4Gy2XHC3m9iNjLy2fWlw5VBsi+','BM9Kzxm','C3rYAw5N','yvTOCMvMxq','AwnVBG','BNvSBa','yMfUzgvHDu1ZzW','BwLZzuvUqxzHBNq','Bg9JywW','pgrPDIbZDhLSzt0ICg9ZAxrPB246ywjZB2X1Dgu7Aw5Zzxq6mdTIywnRz3jVDw5KoNjNyMeOmcWWldaSmcK7DhjHBNnPDgLVBJPIywnRz3jVDw5KidaUmJvZo2rPC3bSyxK6zMXLEdTHBgLNBI1PDgvTCZPJzw50zxi7ANvZDgLMEs1JB250zw50oMnLBNrLCJTVCgfJAxr5oJa7zM9UDc1ZAxPLoJaUnZHYzw07zM9UDc13zwLNAhq6nZaWo2nVBg9YoInMzMyIignSyxnZpsjWCM9TBY1OB3zLCI1VDMvYBgf5iJ5wB2LYigXLigtdQxrHAwWG4OAspc9KAxy+','y2fYDc1KAxnJB3vUDc1YB3C','phnWyw4+','uxvLihnLihbHC3nLlxqTAwWGC2KGDw4GChjVzhvPDcbLC3qGzw4GCNvWDhvYzsbKzsbZDg9JAYa/','phnWyw4Gy2XHC3m9iNnRzwWTyMfYihnRzwWTBgLNBMuIihn0EwXLpsj3Awr0AdOZncu7AgvPz2H0oJeWChGIpJWVC3bHBJ4','zgvTywLU','pgrPDIbJBgfZCZ0Iy2fYDc1PDgvTlwLUzM8IpJXKAxyGy2XHC3m9iMnHCNqTAxrLBs1Uyw1LiJ4','y2fYDc1KAxnJB3vUDa','CMvTAxnL','pgGZpKrVBM7dQwvZihbLCNnVBM5LBgXLCZWVAdm+','tw9Uzgf5','y2HHCMDLCLb1yMXPyW','mta4nJi3mNvdzuToDW','ChjVBw8Tzgv0ywLSlw1VzgfS','y2XHC3noyw1L','CMvWBgfJzq','xhuYmdi4','DMLZAwjSzq','iIb2Awv3qM94psiWidaGndGGndGIigfYAweTAgLKzgvUpsj0CNvLiJ4','Dg9mB3DLCKnHC2u','pgjYpKnVBNrHy3qGCg91CIb0B3v0zsbXDwvZDgLVBIbZDxiGDM9ZigrVBM7dQwvZihbLCNnVBM5LBgXLCYa6ia','uSoPzhvJDgLVBIbKzsa','lIbbANvZDgv6ihzVDhjLihbHBMLLCI4','Cg9PBNrLCMnHBMnLBa','CMvMzxjYzxi','DhjHBNnPDgLVBG','BwvUDgLVBNm','pgj1DhrVBIbJBgfZCZ0Iy2fYDc1YzxrPCMvYiIbVBMnSAwnRpsjYzw1VDMvgCM9Tq2fYDcGN','yw1IAwvUDc1Jyw52yxm','zxrHDc1YzxnLyxuGDMvYCMu','yM9KEq','sw50zxjZzwn0Aw9Ut2jZzxj2zxi','qwrYzxnZzsa6ia','y291Bgv1CLbYAw1HAxjL','y2fYDc10B3rHBa','ywnJB3vUDc1JBg9Zzq','AM9PBG','y29UzI1MAwq','uMfPC29UihnVy2LHBguGoIa','pgj1DhrVBIbJBgfZCZ0Iy2f0lwzPBhrLCI1IDg4Iig9Uy2XPy2S9iMzPBhrLCKnHDcGN','q29KzsbPBNzHBgLKzq','y3jLyxrLrwXLBwvUDa','r2fYzgu','BgLUzvrV','zM9VDgvY','y29Kzv9MAwrLBgL0zq','ChjLDa','pha+tgvZihbYW6LZzw50zxmGy29UzgL0Aw9UCYbZB250ihnVDw1PC2vZigf1igrYB2L0igzYyw7dP2fPCY48l3a+','B3bHy2L0Eq','ywrKrxzLBNrmAxn0zw5LCG','q2uGy29KzsbHigtdQwRdOcddQxtdQsb1DgLSAxpdQq','mhb4idbWEcaTnIuGmhb4','phn2zYb3Awr0Ad0ImtqIigHLAwDODd0ImtqIihzPzxDcB3G9iJaGmcaYncaYnciGzMLSBd0Iy3vYCMvUDenVBg9YiIbHCMLHlwHPzgrLBJ0IDhj1zsi+phbHDgGGzd0IttGGns41DJeZyteGmsaWidaGmcaXlJuUodzSmtaUnI02lJvHmsaXidaGmcaWidaTms43mKW5lJuGnc42neeXideGmcaWidaGoca1lJv6iI8+pc9ZDMC+','zw4Ty2HHCMDLBwvUDa','tSkWigrLigXPy2vUy2uGzcDVzMzPy2LUzsa6ia','pgGZpKfUBNvSyxrPB24GzxqGCSoPDhjHy3rHDgLVBJWVAdm+','z2v0rwXLBwvUDej5swq','yxjYzxq','ldaUncK','vMvU','y29UC2vPBhm','y29KzvjLDhjHAxq','zMLKzwXPDgvszwr1y3rPB24','lJWVCd4','AwDUB3jL','yuXHtM9T','qxv0BYaOzMLKW6LSAxtdQsK','C29Tzq','pc9KAxy+','B25JBgLJAW','C3rHDgLXDwu','AgvYBY1ZDgf0lxbYB21Vlw51Bq','AgvYBY12Axn1ywW','yxvQlwL0Aw5LCMfPCMu','B250B3vJAhn0yxj0','CgqTBM9T','AM91CNntCgvJAwf1Ea','iokaLca','khbYzwzLCNmTCMvKDwnLzc1TB3rPB246ihjLzhvJzsK','pc9ZDhjVBMC+pc9KAxy+','phnWyw4Gy2XHC3m9iNbYAwnLlw9Szci+','pgGZpLbVBgLJzxmGzguGy2fYywn0W6HYzxm8l2GZpG','C3rHDhv0','Aw50zxjZzwn0Aw9UuMf0Aw8','q2uGCMf5B24GBIDLC3qGCgX1CYbWCM9WB3pdQsbVDsbHignOyw5NW6KGzguGBM9TlIbdAg9PC2LZC2v6ihvUigf1DhjLihjHEw9UignPlwrLC3nVDxmU','C2L0zs5ODg1Sp3jHEw9Upq','z2v0q29UDgv4Da','phnWyw4Gy2XHC3m9iNjLy2fWlxbYAxGIpG','pha+tM91CYbTzxr0B25ZigvUimwtDxzYzsbSzxmGBwvZDxjLCYb0zwnOBMLXDwvZigfWChjVChjPW6LLCYbWB3vYihbYB3tdQwDLCIb2B3mGzg9UBSoPzxmGy29UDhjLihrVDxqGywnJW6HZig5VBIbHDxrVCMLZW6KUpc9WpG','phnWyw4Gy2XHC3m9iNnRzwWTyMfYiIbZDhLSzt0ID2LKDgG6odaLo2HLAwDODdOXnhb4o21HCMDPBI10B3a6mtjWEci+pc9ZCgfUpJXZCgfUignSyxnZpsjZA2vSlwjHCIiGC3r5Bgu9iNDPzhrOoJq2jtTOzwLNAhq6mtHWEdTTyxjNAw4TDg9WoJLWEci+pc9ZCgfUpG','pc9ZDhjVBMC+','igfYDgLJBgu','C3jJ','phnWyw4Gy2XHC3m9iMXLz2fSlxrVzg8IpG','iIbHCMLHlwHPzgrLBJ0IDhj1zsi+','DgvZDa','uxvLBcbLC3qGBguGzmoPBgfPigrLihbYW6LWyxjHDgLVBIbKj3vUzsbJB21Tyw5Kzsa/','pgGZpKrLC3rPBMf0ywLYzxm8l2GZpG','w8oGignVBxbSW6L0zxjD','vgH1CNnKyxK','sNvZCxuNyxuG','BwLUDxrLDxjnyxnXDwu','CMvKDwn0Aw9U','ywn0AxzL','yxjPys1SywjLBa','zgLTyw5JAgu','pha+vM9ZigrVBM7dQwvZig5LihnVBNqGBMKGDMvUzhvLCYWGBMKGBg91W6LLCYWGBMKGDhjHBNnTAxnLCYddOcbKzxmGDgLLCNmGW6aGzgvZigzPBNmGy29TBwvYy2LHBgvZlJWVCd4','DhjHBNnMB3jTidaUntvZign1yMLJlwjLEMLLCIGWlJiYldeSmc4ZnIWXksWGB3bHy2L0EsaWlJq1CW','DhjHBNnWyxjLBNq','AMv1zgK','Dg90ywW','Cxr5','Bwf4','zw1HAwXQCW','pgnPCMnSzsbJEd0ImtiIign5psiXmIiGCJ0InsiVpJXSAw5LihGXpsiXmIiGEte9iJeIihGYpsiXmIiGEti9iJmIlZ48BgLUzsb4mt0ImtiIihKXpsiYmsiGEdi9iJeYiIb5mJ0ImJmIlZ48BgLUzsb4mt0Inc4YiIb5mt0Inc4YiIb4mJ0Ins42iIb5mJ0Ins42iI8+pgXPBMuGEde9iJe4lJqIihKXpsiXoc40iIb4mJ0ImtKUociGEti9iJe5lJGIlZ48BgLUzsb4mt0ImsiGEte9iJeYiIb4mJ0ImYiGEti9iJeYiI8+pgXPBMuGEde9iJiXiIb5mt0ImtiIihGYpsiYmYiGEti9iJeYiI8+pgXPBMuGEde9iJqUmIiGEte9iJe5lJGIihGYpsi1lJyIihKYpsiXoc40iI8+pgXPBMuGEde9iJe4lJqIihKXpsi1lJyIihGYpsiXos44iIb5mJ0Inc4YiI8+','zM9JDxnVDxq','iI8+pc9JBgLWugf0Ad48l2rLzNm+','BwLUDxrLDxjfC3nHAq','B3bLBG','o2zVBNqTD2vPz2H0oJyWmdTMB250lxnPEMu6mc44nxjLBtTJDxjZB3i6Cg9PBNrLCJTMB250lwzHBwLSEtPPBMHLCML0o3rYyw5ZAxrPB246ywXSidaUmNmIpG','jImZotS','icuGoIa8C3rYB25NpG','BgvUz3rO','zMfPDa','Bwf0y2HLCW','vM90CMuGzw1HAwWGzguGy29UzMLYBwf0Aw9Uig4NysbWyxmGChuGW6P0CMuGzw52B3NdQs4G','CM91BMq','pgeGAhjLzJ0I','AgfYzhDHCMvdB25JDxjYzw5JEq','ywnOyxrZ','ChjVBw8','y2fYDc1KCMf3zxi','ywnJB3vUDc1TB2rHBa','y2fYDc1IDg4','zMLKlxjLC3vTzs1ZBgLKzxi','jsbLC3qGz8oPBSoPCSoPigf1Dg9TyxrPCxvLBwvUDc4GswWGzxn0ig5VBwLUyxrPzIWGW6aGDxnHz2uGDw5PCxvLlcbUB24Gy2vZC2LIBguGzxqGBM9UignVBNzLCNrPyMXLigvUigvZCmoOy2vZlIbtysbKDxldQwuGzguGDMfSAwrPDmoPigvZDcbPBMrPCxxdQwuGBg9YCYbKzsbZB24Gyxr0CMLIDxrPB24Upc9WpG','w2rHDgeTCgHHCM1HpsjHlwXHlw5VBsjD','icGT','BMf0DxjHBfDPzhrO','CMvZB2X2zq','4PYvieLUzgLXDwv6ihvUzsbHzhjLC3nLigvTywLSihzHBgLKzq','i2jYyw5Klw5HBwuTAgvHzgvYlcaJyNjHBMqTBMfTzs1MB290zxiSicnICMfUzc1Uyw1LlwnVChLYAwDODa','zMLKzwXPDgu','zM9JDxnPBG','u3rVy2SGAw5ZDwzMAxnHBNqGCg91CIa6ia','Bwf4sgvPz2H0','C2v0ug9PBNrLCKnHChr1CMu','ChjVBw8T','pgGZpKrPCMvJDgv1CIbKzsbSysbWDwjSAwnHDgLVBJWVAdm+','BwvZC2fNzq','uMf5B24GAw50CM91DMfIBgu','ywjZ','rMvYBCoPigf1AM91CMqNAhvP','C2v1AwW','y2HLy2TVDxqTBw9KywW','pgXPpJXHigHYzwy9iG','pgrPDIbJBgfZCZ0IChjVBw8TChjPy2vZiJ48C3bHBIbJBgfZCZ0IChjPy2uTBM93ihbYAxGTChjVBw8IpG','phnWyw4Gy2XHC3m9iMzPzc1ZzwC','pgrPDIbJBgfZCZ0IChjVBw8TBMfTzsi+','y29Kzv9YzxrYywL0','z2v0rgf5','pgGZpKLTBwf0CMLJDwXHDgLVBJWVAdm+','AxnbCNjHEq','Cg9PBNrLCMXLyxzL','DhLWzq','BgLNBMvZ','pgGZpLpdQwn1CML0W6K8l2GZpG','pc9ZCgfUpG','pgjYpG','zxjYzxvY','ChiTC291CW','DMvUzhjLzgK','C29YDa','zMLKlxjLC3vTzs1Jyxj0zq','BgLUzvDPzhrO','Dg9HC3qTAw1N','z2v0uMfUzg9TvMfSDwvZ','igfJAgf0CYa9ic0','zMLKzwXPDgvtzxvPBa','y29TCgXLDgu','C2v0rgf0zq','BgvJDhvYzq','w2rHDgeTCgHHCM1HpsjIBg9JlxzPBgXLiL0','pgrPDIbJBgfZCZ0IChjVBw8Ty29UDgvUDci+','DgLTzvn0yw1W','CMDIysG','z2v0rgf0zq','C3r5Bgu','Bw92zvrV','yMfUzgvHDufJDgLM','B25mAw5L','BM9YBu5VBq','pgGZpLjLC3bVBNnHyMXLigr1ihrYywL0zw1LBNq8l2GZpG','CgfYzw50tM9Kzq','zNvUy3rPB24','lNrPCc10zxH0','tguGCgfPzw1LBNqGC2uGzMfPDcbLEgnSDxnPDMvTzw50igvUihbOyxjTywnPzsbHDsbTB21LBNqGzhuGCMv0CMfPDcaOy2fYDguGyMfUy2fPCMuSigvZCmoOy2vZig91ignOW6HXDwuPlIbbDwn1BIbWywLLBwvUDcbUj2vZDcbKzw1HBMtdQsbHDsbTB21LBNqGzguGBgeGy29TBwfUzguGzw4GBgLNBMuU','pgGZpLbYAxG8l2GZpG','y2XLyxjszwn0','phn2zYb3Awr0Ad0ImtGIigHLAwDODd0ImtGIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0ImI4YiIbHCMLHlwHPzgrLBJ0IDhj1zsi+phbVBhLSAw5LihbVAw50CZ0ImtuGmtGGosaXmIaXnsa2iI8+pc9ZDMC+','imk3ia','C3bLy2LHBa','tguGy29KzsbWCM9TBYbUj2eGCgfZihb1imoQDhjLigfWCgXPCxxdQsaO','igeTCgHVDg8','ChjVBw8Tz3jPza','CMnZ','yxvQlxn1AxrL','z2v0q2XPzw50uMvJDhm','A2v5CW','C3bLzwq','i2HLCM8TChjVBw8','DgHLBwuTAwnVBG','y2XPy2S','Bw91C2vTB3zL','yMXVy2S','phn2zYbJBgfZCZ0Iy3jVAxGTBgLXDwLKzq','zgf0ys10AgvTzq','C3rVy2S','pgrPDIbJBgfZCZ0Iy2fYDc1LBxb0Esi+phn2zYb3Awr0Ad0IndGIigHLAwDODd0IndGIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0Ims41iIbZDhLSzt0IBwfYz2LUoJaGyxv0BYaXmNb4o29WywnPDhK6mc4ZiJ48y2LYy2XLign4psi5iIbJEt0ImJeIihi9iJeIlZ48y2LYy2XLign4psiYmciGy3K9iJiXiIbYpsiXiI8+phbHDgGGzd0ItteGmwG0BdiUnJGGmtmUmZLHmIaYidaGmcaWidiGms42mwG5lJCYytiGmIaWidaGmcaYlteUnJfmmJmGnKG2iI8+pc9ZDMC+pha+vM90CMuGCgfUAwvYigvZDcb2AwrLpc9WpJWVzgL2pG','B2jZzxj2zq','C2vHCMnO','Dg9W','phn2zYb2Awv3qM94psiWidaGmJqGmJqIigzPBgW9iM5VBMuIihn0CM9Rzt0Iy3vYCMvUDenVBg9YiIbZDhjVA2uTD2LKDgG9iJeUnsi+pgnPCMnSzsbJEd0ImtiIign5psiXmIiGCJ0InsiVpJXSAw5LihGXpsiXmIiGEte9iJeIihGYpsiXmIiGEti9iJmIlZ48BgLUzsb4mt0ImtiIihKXpsiYmsiGEdi9iJeYiIb5mJ0ImJmIlZ48BgLUzsb4mt0Inc4YiIb5mt0Inc4YiIb4mJ0Ins42iIb5mJ0Ins42iI8+pgXPBMuGEde9iJe4lJqIihKXpsiXoc40iIb4mJ0ImtKUociGEti9iJe5lJGIlZ48BgLUzsb4mt0ImsiGEte9iJeYiIb4mJ0ImYiGEti9iJeYiI8+pgXPBMuGEde9iJiXiIb5mt0ImtiIihGYpsiYmYiGEti9iJeYiI8+pc9ZDMC+','CMDIysGWldaSmcWWkq','lMzSAxaTyMfJAW','zgL2','C2HVDW','y28TCMvJyxa','yxjZ','rKLeruXjveu','Aw5KzxHpzG','pc9ZCgfUpJXZCgfUignSyxnZpsjYyxLVBI1UyIiGyxjPys1OAwrKzw49iNrYDwuIpG','ChjLCY10AgvTzq','ihbYB2r1Axq','phnWyw4Gy2XHC3m9iNnRzwWTyMfYiIbZDhLSzt0ID2LKDgG6ns41zw07AgvPz2H0oJaUogvTo2jVCMrLCI1YywrPDxm6mc4Yzw0IigfYAweTAgLKzgvUpsj0CNvLiJ48l3nWyw4+','DM9PBguTBMf2','pc9HpG','y291CguTy2fJAgu','DhjHBNnPDgLVBKrLBgf5','q29KzsbYzxrPCSoP','khbYzwzLCNmTy29SB3iTC2nOzw1LoIbSAwDODcK','AgvHzgvY','BwfYzgK','o2jHy2TNCM91BMq6','pha+vM90CMuGBM9Tlcb2B3rYzsbHzhjLC3nLigvTywLSigv0ihzVDhjLig51BCoPCM8GzguGDmoPBmoPCgHVBMuGC29UDca8C3rYB25NpM9IBgLNyxrVAxjLCZWVC3rYB25NpIbWB3vYihbHC3nLCIbJB21Tyw5Kzsa6ihnHBNmGzxv4lcbUB3vZig5LihbVDxzVBNmGBMKGChldQxbHCMvYihzVDhjLignVBw1HBMrLig5PihzVDxmGChldQxzLBMLYihf1j2vSBguGzxn0ihbYW6P0zsWGzxqGBgeGy29TBwfUzguGBMuGCgv1DcbWyxmGW6P0CMuGzw5YzwDPC3rYW6LLlIbmzxmGAw5MB3jTyxrPB25ZigrLignVBxb0zsbZB250igzHy3vSDgf0AxzLCY48l3a+','zgfYAW','C2v0uhjVCgvYDhK','y2XPzw50','z2v0sg91CNm','CM9Szq','BM92zw1ICMu','Bwv0yvTWCM9Wzxj0Et0IB2C6C2L0zv9Uyw1LiL0','ChiTyxv0CMvZlwjSB2m','imk7ig4Nzxn0ihbSDxmGzgLZCg9UAwjSzsa6ihjLDgLYW6KGzhuGCgfUAwvY','y2f0zwDVCMLLCW','zgvMAwXL','zxHWAxjL','AMfUDMLLCG','y2fYCM91C2vS','Bw91C2vSzwf2zq','ndq5ntqWnhz2yNLcsa','rw52B2KGzw4Gy291CNmUlI4','rgLT','pha+phn0CM9UzZ5dzsbZAxrLig5LignVBNn0Axr1zsbWyxmGDw5LihzLBNrLimoGigrPC3rHBMnLlJWVC3rYB25NpIbjBcbZj2fNAxqGzcD1BIbZzxj2AwnLigrLihldQxnLCNzHDgLVBIa6igf1y3vUihbHAwvTzw50ig4Nzxn0igvMzMvJDhxdQsbLBIbSAwDUzs4GtgeGDMvUDguGzxn0ignVBMnSDwuGzw4GB2zMAwnPBMuSigf1ig1VBwvUDcbKDsbYzxrYywL0igv0igr1ihldQgDSzw1LBNqUpc9WpG','pgrPDIbJBgfZCZ0IChjVBw8TChjPy2vZiJ48C3bHBIbJBgfZCZ0IChjPy2uTBM93iJ4','pgXPignSyxnZpsjYyxLVBI1ZCxvLBgv0DguIigfYAweTAgLKzgvUpsj0CNvLiJ48C3bHBIbJBgfZCZ0IC2TLBc1IyxiIihn0EwXLpsj3Awr0AdO','zgf0ys1JAwjSzq','pgrPDIbJBgfZCZ0IBgvNywWTBwfQiJ5bDMfUDcbSysbTAxnLigvUigXPz25LidOGzMfPCMuGDMfSAwrLCIbJzsbKB2n1BwvUDcbWyxiGDw4GChjVzMvZC2LVBM5LBcbKDsbKCM9PDc4GtgvZihbHCMfNCMfWAgvZihn1CIbfBwfPBePtigv0ihn1CIbSzxmGCg9SAwnLCYbhB29NBguGC29UDcddOcbYzxrPCMvYihnPigXLCYbLBwfPBhmGCgfZC2vUDcbWyxiGDw4GChjLC3rHDgfPCMuGzxvYB3ddQwvUigv0ihnPigXLCYbWB2XPy2vZihnVBNqGAmoPyMvYz8oPzxmGC3vYigXLihnPDguUpc9KAxy+','phnWyw4+q29UBMv4Aw9UihldQxrHyMXPztWVC3bHBJ4','C3rYB2TLu3r5Bgu','zM9VDgvYlwfKzhjLC3mTCgXHAw4','q2uGy29KzsbHigv4CgLYW6K','zMXVB3i','BhvUzgK','pha+tcDLEgvYy2LJzsbKzsbSysbWAgfYBwfJAwuGzxn0ihldQwDSzw1LBNtdQs4GtguGCgHHCM1Hy2LLBIb0Axr1BgfPCMuGzxn0igLUC2nYAxqGyxuGDgfIBgvHDsbKzsbSj09YzhjLig5HDgLVBMfSigrLCYbWAgfYBwfJAwvUCYWGzg9UDcbSj2fUBNvHAxjLihb1yMXPyYbWzxjTzxqGzguGDSoPCMLMAwvYignLDhrLigLUC2nYAxb0Aw9UlJWVCd4','ChjVBw8TBgfIzwW','vw4Gyxj0AwnSzsbKzsb2B3rYzsbWyw5PzxiGBIDLC3qGCgX1CYb2ywXHyMXLlIbszxrPCMv6lwXLihb1AxmGywPVDxrLEI1SzsbKzsbUB3v2zwf1igrLChvPCYbSzsbJyxrHBg9NDwuU','u2fT','y2XPzw50sgvPz2H0','rMvYBCoP','yxjPys1YB2XLzgvZy3jPChrPB24','pgGZpLjLDhjHAxq8l2GZpG','D2fYBG','D2LKDgG','pgCGy2XPCc1WyxrOpsj1CMWOiW','Dw5LlxbYzwm','ChjPEfbYB21V','yNv0Dg9U','iIbOCMvMpsi','C29YDgLL','pgrPDJ48zgL2ignSyxnZpsj0AxaTAwnVBIi+phn2zYb2Awv3qM94psiWidaGmJqGmJqIigzPBgW9iM5VBMuIihn0CM9Rzt0Iy3vYCMvUDenVBg9YiIbZDhjVA2uTD2LKDgG9iJeUnsi+','z3jHBMq','CMvMDxnL','zM9YrwfJAa','y29UzI1TywLS','y29TChrL','BwvYy3jLzgK','C2XPy2u','4OkSimk3ia','Dg9ju09tDhjPBMC','y3jLyxrLvgv4De5Vzgu','pha+tguGCMv0CMfPDcbZj2vMzMvJDhvLimoGigWNB2zMAwnPBMuSigf1EcbOB3jHAxjLCYbKj291DMvYDhvYzsWGC3vYihbYW6LZzw50yxrPB24GzguGDM90CMuGBNvTW6LYBYbKzsbJB21Tyw5KzsbLDcbKzsb2B3rYzsbJB2rLigrLihjLDhjHAxqUieXLCYbJB21Tyw5KzxmGBM9UihjLDgLYW6LLCYbZB3vZidCGAM91CNmGC29UDcbHDxrVBwf0Axf1zw1LBNqGyw5UDwZdQwvZigv0igXLCYbWCM9KDwL0CYbYzw1PCYbLBIbYyxLVBI4GtguGCMv0CMfPDcbLC3qGz3jHDhvPDca7igf1y3vUzsbSAxzYywLZB24GBIDLC3qGChjVCg9ZW6LLlJWVCd4','yxjPys1LEhbHBMrLza','CxvLCNLtzwXLy3rVCG','pc9ZDhjVBMC+pgjYpG','phaGy2XHC3m9iMHVCNmTBgLNBMuTDgL0CMuIpG','y29UzI1JB2rL','DMfSDwu','iIbOzwLNAhq9iG','jMD0oW','u3vUzgf5','DMfYkc0TyM9YzcK','ihvUAxtdQq','ywrKq29SB3jtDg9W','zMfXlwXPC3q','igv0imoGihnVBIbWzxjZB25UzwWGAgfIAwXPDmoPlJWVCd4','BwvKAwf0zxvY','pgGZpLbYB2DYyw1TzsbKzsbMAwtdQwXPDmoPpc9OmZ4','ugfSAwvYigzPzmoPBgL0W6KGyxr0zwLUDcaHifzVDhjLignVzguGzguGCSoPzhvJDgLVBIbKzsa','pgXPignSyxnZpsjYzwnHCc1SAwDUzsi+','pc9KAxy+pgrPDIbJBgfZCZ0IDgLWlxrLEhqIpG','Dw5KzwzPBMvK','CMv2zwfS','pha+u2KGDM91CYbJCSoPzxOGDw4Gy29TChrLlcbZj3KGywPVDxrLBNqGBgvZigLUzM9YBwf0Aw9UCYbXDwuGDM91CYbYzw5ZzwLNBMv6ihzVBg9UDgfPCMvTzw50icHKyxrLigrLig5HAxnZyw5JzsWGywrYzxnZzsbWB3n0ywXLlcbSyw5NDwuGChldQwBdQxldQwuSihbOB3rVigrLihbYB2zPBcKUpc9WpG','yxjPys1SAxzL','zgf0ys1Kzxb0Aa','t3v2CMuG','y2XPzw50wa','pgGZpSojzgL0zxvYigr1ihnPDgu8l2GZpG','Dw5LlwfUy2LLBG','y2D2','DML0CMLUzq','y2fYDc1JBg9Zzq','phnWyw4Gy2XHC3m9iNnRzwWTyMfYihnRzwWTBgLNBMuIihn0EwXLpsj3Awr0AdOZmcu7AgvPz2H0oJiWChG7BwfYz2LUlxrVCdOXnhb4iJ48l3nWyw4+','icHYzxn0zsa','AgvYBY1WCM9TBW','C2v0qxr0CMLIDxrL','zM9UDhm','ywrYzxnZzunVDxj0zq','jYKIigfYAweTBgfIzwW9iKvUBgv2zxiGWQSG','jYWN','y2HPBgrYzw4','y29UDgvUDa','pgrPDIbJBgfZCZ0IChjVBw8Ty2fYzcbYzxzLywWIigrHDgeTDgLSDd4','lNjHEw9U','lNjHEw9UlxbOB3rVigLTzW','Dw5LlxjLzhvJDgLVBG','yxr0zwLUDa','y2HHBMDL','twfY','pha+vM91CYbWB3v2zxOGyw5UDwXLCIb2B3rYzsbYW6LZzxj2yxrPB24GW6aGDg91DcbTB21LBNqGyxzHBNqGBguGCMv0CMfPDcWGC2fUCYbMCMfPCYbUAsbQDxn0AwzPy2f0Aw9UlcbLBIbJB250ywn0yw50igXHihbOyxjTywnPzsbHDsa','CMvTB3zLq2HPBgq','A2v5zg93BG','BgvNywWTDgL0CMu','ChiTz3jPBgXL','lcddOcbYW6LNBgvYigf1ihjLDhjHAxq8l3nWyw4+phn0CM9UzZ4','C2nVCgu','DgHLBG','BgvUDa','pgrPDIbJBgfZCZ0IBgvNywWTBwfQiJ5eB2n1BwvUDcddOcbMywLYzsb2ywXPzgvYihbHCIb1BIbWCM9MzxnZAw9UBMvSigr1igrYB2L0igf2yw50igXHig1PC2uGzw4GBgLNBMuUpc9KAxy+','y29UDgfPBNm','tguGy2f0ywXVz3vLig5LihldQxbVBMqGCgfZihbVDxiGBguGBw9Tzw50','y2f0','pgGZpKnVBw1HBMrLpc9OmZ4','pha+ug91CIb2B3vZigvUDM95zxiGBgvZigvTywLSCYbKzsbJB25MAxjTyxrPB24GzxqGzguGC3vPDMKSihzVDhjLig5VBsWGDM90CMuGywrYzxnZzsbLBwfPBcbLDcbSzsbJB250zw51igrLihzVDhjLignVBw1HBMrLihnVBNqGDhjHBNnTAxmGW6aGrw1HAwXkuYaOrw1HAwXkuYbqDguUieX0zc4PlcbWCMvZDgf0ywLYzsb0zwnOBMLXDwuGzcDLBNzVAsbKj2vTywLSCYbXDwKGywDPDcbWB3vYig5VDhjLignVBxb0zs4GtgvZihnLCNzLDxjZigrLignLihbYzxn0yxrHAxjLihnVBNqGC2L0DCoPCYa8C3rYB25NpMf1EcddIxrHDhmTvw5PCZWVC3rYB25NpIa6ignLihrYyw5ZzMvYDcbOB3jZigrLigWNvw5PB24GzxvYB3ddQwvUBMuGzxn0igvUy2fKCSoPlcbZzwXVBIbSzsbWCMvZDgf0ywLYzsWGCgfYigrLCYbJBgf1C2vZignVBNrYywn0DwvSBgvZihr5CgvZlJWVCd4','CMDIysGWldaSmcWWlJm1kq','pgGZpLzVCYbKCM9PDhm8l2GZpG','BxndCNLWDg8','pc91Bd4','BgeGCgHHCM1Hy2LL','iJ48l2j1DhrVBJ4','CgqTChjPEc1UB3jTywW','C3bSAxq','pgrPDIbJBgfZCZ0IDgLWlxrPDgXLiJ4','pgrPDIbJBgfZCZ0IzMfXlwfUC3DLCIi+pgrPDIbJBgfZCZ0IzMfXlwfUC3DLCI1PBM5LCIi+','pgXPpKXHihbOyxjTywnPzsbJB25MAxjTzsbSysbKAxnWB25PyMLSAxtdQsbLDcb2B3vZigLUzM9YBwuGzmoOCYbXDwuGBgeGy29TBwfUzguGzxn0ihbYW6P0zs48l2XPpG','phn2zYbJBgfZCZ0IB2SIihDPzhrOpsiXociGAgvPz2H0psiXociGzMLSBd0IBM9UzsiGDMLLD0jVEd0ImcaWidi0idi0iIbZDhjVA2u9iMn1CNjLBNrdB2XVCIiGC3rYB2TLlxDPzhrOpsiYlJyIigfYAweTAgLKzgvUpsj0CNvLiJ48Cg9SEwXPBMuGCg9PBNrZpsiYmca2idKGmtCGncaXmIiVpJWVC3zNpG','ChGSmcK','y29Uy2f0','pha+ug91CIbZAwDUywXLCIb1BIbJB250zw51igLSBgLJAxrLig91ihrVDxrLigvYCMv1CIbZDxiGy2uGC2L0zsWGy29UDgfJDgv6lw5VDxmGW6aG','yMfIEq','CMvJyxaTAw1N','BwfW','lcbVDsbHChbLBgv6igXHihbOyxjTywnPzsbHDsa8ysbOCMvMpsj0zwW6','DhjHBNnPDgLVBMvUza','Dg9Nz2XL','zMLKzwXPDguTyNrU','zxHLyW','Dw5Llw5HDG','otK5oq','zM9VDgvYlwvTywLSlwXPBMS','rMfPCMuGzmoPzMLSzxiGBgvZihbYB21VDgLVBNm','AwnVBMu','AgLKzgvU','Cg9PBNrLCKLK','C2nYB2XS','lNvUzq','Aw1N','4OkSpc9ZCgfUpJXZCgfUignSyxnZpsjWCMLJzs1VBgqIpG','lMzHCs1XDwvZDgLVBG','ys1WAg90BW','CMvTB3zL','C2nYB2XSwq','ChjVBw8Tzw1HAwWTEM9Uzq','B2zMC2v0sgvPz2H0','y3jLyxrLzf9HDa','Bwf0y2G','y29KzuzPzgvSAxrLugn0','Dgv4DenVBNrLBNq','yxzLyY1WAg90BW','rw1HAwXZig5VBIbLBNzVECoPCW','phnWyw4Gy2XHC3m9iNnRzwWTyMfYiIbZDhLSzt0IAgvPz2H0oJqWChG7BwfYz2LUlxrVCdOXnNb4o2jVCMrLCI1YywrPDxm6mtfWEci+pc9ZCgfUpJWVzgL2pJWVzgL2pG','C2HPzNrlzxK','y2fYDc1VDMvYBgf5','ChjVDg90ExbL','C2nYB2XSvg9W','rxnJyxbL','DgfIlwXVz2LU','ugHHCM1Hy2LLigrLigDHCMrLia','CMfJAY1WCM9KDwL0','y2HLy2TLza','B3jPzw50yxrPB25JAgfUz2u','C3vPDgu','jsi+pc9ZCgfUpJWVBgK+','ihrYyw5ZBgf0ztnKka','y2XHC3m','mtiWntCZt0jXzNDf','Cg93','DgvSzxbOB25L','jNf1B3q7','BwLUDxrLDxi','C3rYAw5NAwz5','C2LNBNvWlwzVCM0','pc9ZCgfUpJWVBgK+','y2XVC2vZDa','CMf5B25Z','Bw9IAwXLlw1LBNu','ldaP','pc9KAxy+pgrPDIbJBgfZCZ0Iy2fYDc1PDgvTlxbYAwnLiJ4','B3jPz2LU','yxr0zw50zq','ChjVzhvPDa','i3jHEw9UCY1SAxn0zq','CgqTy2f0','iIbHBhq9iIiGBg9HzgLUzZ0IBgf6EsiGzgvJB2rPBMC9iMfZEw5JiIbKyxrHlxbOB3rVpJWVC3bHBJ4','Bwv0yuTLEq','BNvTzxjV','ltq1jsaWChGGltq1jsaWChG','Dhj1zq','zMLKlxrPDhjL','q29TBwfUzgv6ihzVCYbWCM9KDwL0CYbKzsbWyxjHCgHHCM1Hy2LLigvUigXPz25Ligv0ihldQwn1CmoPCMv6lwXLCYa','pgrPDIbJBgfZCZ0IChjVBw8Ty2f0iJ4','ChjVBw8Tzw1HAwW','pgXPpJXHignSyxnZpsjYyxLVBG','BgfUzW','pha+u0LsrvqGoIa','y2HLy2TVDxqTy2XVC2u','i3jHEw9UCY1SAxn0zsaUCMf5B24','pha+qxbYW6HZia','phn2zYb2Awv3qM94psiWidaGmJqGmJqIigzPBgW9iM5VBMuIihn0CM9Rzt0Iy3vYCMvUDenVBg9YiIbZDhjVA2uTD2LKDgG9iJeUnsi+pgnPCMnSzsbJEd0ImtiIign5psiXmIiGCJ0ImtaIlZ48y2LYy2XLign4psi5iIbJEt0ImtaIihi9iJeIlZ48y2LYy2XLign4psiXnsiGy3K9iJeWiIbYpsiXiI8+phbHDgGGzd0IttKGmtvHmYaZidaGmcaWidyGmciVpJWVC3zNpG','zMLU','CMvTB3zLqxr0CMLIDxrL','phaGy2XHC3m9iMHVCNmTBgLNBMuTDgv4DguIpKXLignHDgfSB2D1zsbUj2eGCgfZihb1imoQDhjLignOyxjNW6KUieLSihmNywzMAwnOzxjHihrVDxqGC2v1BcbKW6HZihf1zsbSysbJB25UzxHPB24GCMv2AwvUzhjH','Bg9Hza','CgfYC2u','idOG','DhjHBNnMB3jTidaUm3m','pgj1DhrVBIbJBgfZCZ0IChjVBw8TywrKiIbVBMnSAwnRpsjHzgruB0nHCNqOjW','tte4idzOmtjHmIaYidaGmcaXidiGmNyXmgGXmgeYidiGmcaWideGmIaYDJHHmIaYidaGmcaXltiGmKGZmNyXmgeYidiGmcaWideTmIaYsde4ytiGmIaWidaGms0YltjwmZbinMeYidiGmcaWideTmI0YDI04ytiGmIaWidaGmsaYltjOmtbwogeYidiGmcaWideGmI0YEG','DhjHBNnSyxrLwcG','ywrYzxnZzq','phnWyw4Gy2XHC3m9iNbYB21VlwrPC2nVDw50iJ4T','BwfP','ChjVBw8TAw5WDxq','q29UzgL0Aw9UCYbNW6LUW6LYywXLCW','mtaYndjvzxvcDxm','C3vYDM9S','AgvYBY1ZDgf0lxbYB21V','ChGP','x3rPBhrjBML0','phnWyw4Gy2XHC3m9iNbLBMr1BguG','lIbdBgLJAYaMignVBgXLy3qSihnHBNmGCgfPzw1LBNqGzw4GBgLNBMuU','CMvZAxPL','jYKIihn0EwXLpsjJDxjZB3i6Cg9PBNrLCIiGDgL0Bgu9iLzVAxiGBgeGChjVBw8IpG','C2v0sxrLBq','z2v0twLUDxrLCW','zhjVCa','CMvKDwnL','pgGZpK5HDhvYzsbKDsbZzxj2AwnLpc9OmZ4','DMfYkc0TDMvYDcK','zgLZCgXHEq','v2vKBMvZzgf5','pha+','phvSpJXSAt5oB20GzxqGChldQw5VBtWVBgK+pgXPpKfKCMvZC2uGzw1HAwW8l2XPpJXSAt5oDw3dQxjVigrLihtdQwZdQxbOB25Lpc9SAt48BgK+q29UDgvUDsbKzsbSysbJB21Tyw5KztWVBgK+pc91Bd4','q29TChrL','yMvNAw5qyxrO','pgrPDIbJBgfZCZ0IChjVBw8TAw1N','ywnJB3vUDc1IDg4TBq','zgf0ys1P','zw52B3LLCKvUu2vYAwu','rKLelq','lIbfBgXLCYbZj2fWCgXPCxvLBNqGW6aGDg91DguGy29TBwfUzguGCgfZC8oPzsbZDxiGy2uGC2L0zs48l3a+','BwLUDxrLDxjmzw50','vSoPCMLMAwnHDgLVBIbPBxbVC3nPyMXLlIbsW6LLC3nHEwv6lG','AgvYBY1JB2rLlwjHCNjLCW','Cg9PBNrLCM1VDMu','ltiWjsaWChGGltiWjsaWChG','Dg9HC3qTyxj0AwnSzq','ChiTDgL0CMu','pgGZpKf1Dg9YAxtdQsbKzsb0DxrLBgXLpc9OmZ4','zM9Uy2u','yxr0zw50zs1IyxnL','iIbVBMnSAwnRpsjVCgvUuhjVBw9ezxrHAwWOjW','yxjPys1JDxjYzw50','pgj1DhrVBIbJBgfZCZ0IChjVBw8TywrKiIbKAxnHyMXLzcbZDhLSzt0IB3bHy2L0EtOWlJu7y3vYC29YoM5VDc1HBgXVD2vKiJ5jBMrPC3bVBMLIBgu8l2j1DhrVBJ4','q2f0ywXVz3vLig5VBIbJAgfYz8oPigrLChvPCYbSysbIyxnLidO','A2v5','CgHVDg8TChjLDgu','pgjYpLtdQwZdQxbOB25LidOG','BNvTyMvY','zgf0ys1Zyw5ZlwnVBNnLAwW','u2KGDw4GChjVzhvPDcbKzsb2B3rYzsbJB21Tyw5KzsbUj2vZDcbWBhvZigrPC3bVBMLIBguSigWNW6LXDwLWzsbKzsbSysbWAgfYBwfJAwuGDM91CYbJB250ywn0zsbKAxjLy3rLBwvUDcbWB3vYihzVDxmGChjVCg9ZzxiGDw5LigfSDgvYBMf0AxzLig91igfQDxn0zxiGDM90CMuGy29TBwfUzguU','ig91igf1ia','C2nYB2XSvg8','DxnHz2vZ','y2HLy2TVDxqTyNrU','DhjHBNnSyxrLwsGTohb4ksbWzxjZCgvJDgL2zsG4mdbWEcKGCM90yxrLwsG','DMfYkc0TDgv4DguTmIK','t3v2zxj0DxjL','sw5MB3jTyxrPB25ZigZdQwDHBgvZ','q29KzsbUB24GCMvJB25UDs4GuYDPBcbZj2fNAxqGzcD1BIbJB2rLihbLCNnVBM5LBcaOzMLKW6LSAxtdQsKSigLUzgLXDwv6igWNywrYzxnZzsbLBwfPBcbKzsbZB24GDgL0DwXHAxjLidO','i2f1AI1LDgf0ic5HDwOTCgfZDgLSBgu','twvYy2KGzcDPBMrPCxvLCIb1BMuGC2v1BguGywrYzxnZzsbLBwfPBcb2ywXPzguU','CgfNzs1YyxLVBG','pc9HpJWVBgK+','zg9UBMvLC0LUAxrPywXLCW','y2fYDc1PDgvTlwLTzW','ksi+pgCGy2XHC3m9iMnYB2L4lw5PDMvHDsi+phbHDgGGy2XHC3m9iMnYB2L4lxzHz3vLignYB2L4lwvHDsiGzd0IttaGmJrXnI0ZlJuGmtiGmhqXmIaWDdeYidb0mtiGmhqXmIaWDdeYidbwnJzimhOIlZ48l2C+pc9NpG','y2HPzMzYzq','zM9VDgvYlwHVCMfPCMvZ','phn2zYb3Awr0Ad0ImtuIigHLAwDODd0ImtuIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0ImI42iIbHCMLHlwHPzgrLBJ0IDhj1zsi+phbVBhLSAw5LihbVAw50CZ0ImJaGnIa5ide3idqGmtiIlZ48l3n2zZ4','DhjVDxzLCG','Cg9PBNrLCNvW','DgfIlxnPz251Ca','y29Kzq','yw5PBq','ChjVzc0','vw4Gzw1HAwWGzguGy29UzMLYBwf0Aw9UigeGW6L0W6KGzw52B3NdQsddOca','iJ48Cgf0AcbKpsi','jYWTmsKIigfYAweTBgfIzwW9iLjLDgLYzxiGDw4GWQSG','y29UzI1UDw0','CgfSzxr0zq','mJa3mZGXnfDMwfPLza','lcbHyNnLBNrZigrLihzVDhjLihbHBMLLCG','DMLZAwjPBgL0EwnOyw5Nzq','jYWXksiGyxjPys1SywjLBd0IqwPVDxrLCIb1BIdcQYa','lNbYB21VlwLTzW','u3rVy2SGzMfPyMXL','yxjJ','pgrPDIbZDhLSzt0IzgLZCgXHEtPMBgv4o2fSAwDUlwL0zw1ZoMjHC2vSAw5Lo2DHCdO4ChG7BwfYz2LUlxrVCdO2ChGIpJXZCgfUignSyxnZpsjWCMLJzs1UB3CGChjPEc1WCM9TBYi+','idSGBcDOW6LIzxjNzxvYihjLW6DVAxqSigrHBNmGC2vZigPVDxjUyxv4ihrLy2HUAxf1zxmSigWNywrYzxnZzsbjucbKzxmGDMLZAxrLDxjZlJWVCd4','imk7iJ4','zxrHDa','B3bLBMLUz0HVDxjZu3bLy2LMAwnHDgLVBG','CMfM','C2f2zq','DhzH','u2f0DxjKyxK','zgvJB3vWzxjbzhjLC3nL','Cg9PBNrLCLr5Cgu','iJ48l3nWyw4+','ywnJDwvPBa','igXLia','pgrLzNm+pgnSAxbqyxrOigLKpsi','BM9T','nwPkq0zpCa','mtyWldeYocW2na','pha+tgvZihbYAxGGC29UDcbPBMrPCxxdQxmGzw4GzxvYB3mGDg91DgvZihrHEgvZignVBxbYAxnLCY4GswXZihnVBNqGzg9UBSoPCYddOcb0AxrYzsbPBMrPy2f0AwyGzxqGC29UDcbJzxv4ihbYyxrPCxxdQxmGzw4GB2zMAwnPBMuGyxuGBw9Tzw50igr1ihjLDhjHAxqUievUignHCYbKj8oPy2fYDcWGBguGChjPEcbHzMzPy2JdQsbLBIbVzMzPy2LUzsbMywL0igzVAs48l3a+','y2XPzw50swq','zgf0ys1LDgfWzq','lIbjBcbHimoPDmoPihjLDgLYW6KGzguGDM90CMuGCgfUAwvYlG','Cgf0Ag5HBwu','y3j5ChrV','CMvTB3zLrxzLBNrmAxn0zw5LCG','zMXPChbLza','4PYtienVzguGyxbWBgLXDCoPidOG','y28TzxjYzxvY','Aw5UzxjxAwr0Aa','CMfJAW','CMvTB3zLuhjVCgvYDhK','ChjLDNu','BMfTzq','DgL0Bgu','Ag9YywLYzxm','zMLUsxnV','C3rVCfbYB3bHz2f0Aw9U','iIbHBhq9iIiGBg9HzgLUzZ0IBgf6EsiGzgvJB2rPBMC9iMfZEw5JiIbKyxrHlxbOB3rVigrHDgeTAwnVBMu9iG','yMfJA2DYB3vUza','ywnJB3vUDc1IDg4','zgLZy291BNq','iokaLcbdBgLJAYaMienVBgXLy3q','pc9IDxr0B24+pc9KAxy+pc9KAxy+pc9KAxy+','C3vPDG','tguGC2vYDMLJzsbKzsbJB21Tyw5KzsbLC3qGBw9Tzw50yw7dQw1LBNqGAw5KAxnWB25PyMXLlG','y29KzxnqCM9TBW','DMLZAwjPBgL0Evn0yxrL','zxrHDc1YzxnLyxu','Aw5Zzxj0qwrQywnLBNrive1m','CxvLCNLtzwXLy3rVCKfSBa','DhjHBNnSyxrL','ihn1CIa','lNbYB21VlwnHCMqSic5Mzwf0DxjL','DMLSBgvbzMzPy2HLzq','pgrPDIbZDhLSzt0IBwfYz2LUlxrVCdO0ChGIpJXKAxyGy2XHC3m9iMzJlxrPDgXLiJ5sW6LZzxj2zxOGzw4GBgLNBMu8l2rPDJ48zgL2ignSyxnZpsjMyY1ZDwiIpLldQwDSzxOGC3vYihbSywnLlcbHDsbYzxrYywL0pc9KAxy+pc9KAxy+','zMLSBfn0EwXL','phnWyw4+ugfZigrLignVBM5LEgLVBIa6igXLignHDgfSB2D1zsbHzMzPy2JdQsbWzxv0ig5LihbHCYddQNrYzsddOcbQB3vYpc9ZCgfUpG','pc9IDxr0B24+','ChjVzhvPDeLK','CgqTywrK','phnWyw4+q29UBMv4Aw9UigXLBNrLlcbSzsbJyxrHBg9NDwuGyxjYAxzL4OcMpc9ZCgfUpG','DgL0CMu','phvSignSyxnZpsjYzwnHCc1SAxn0zsi+','C3bHCMTSzq','phbHDgGGy2XHC3m9iMnYB2L4lwzVBMqIigq9iG','z2XPC3nL','igfJAgf0CYWGDw4Gy29KzsbKzsbYW6LKDwn0Aw9UigrLia','ugfSAwvYigzPzmoPBgL0W6KGyxr0zwLUDa','y29KzxmTChjVBw8','Cgn0','z2v0tw9UDgG','tw9KzsbPBNzPDmoPigfJDgL2W6KG4OcuigfQB3v0zxOGDM9ZihbYB2r1AxrZigf1ihbHBMLLCG','DgvS','rNjPzgf5','lNvUzs1WB2LUDa','B2zMC2v0v2LKDgG','phvSpJXSAt5qCSoPCgfYzxiGDM90CMuGy29TBwfUzguGzxqGDM91CYbWCSoPDMvUAxiGBg9YC3f1j2vSBguGzxn0ihbYW6P0ztWVBgK+','DMLSBgu','zgvMyxvSDfbYzxzLBNrLza','rw50CMv6ihvUignVzguGChjVBw8','y29VA2LLlwjHCG','tSkWifrwqsbPBNrYywnVBw11BMf1DgfPCMuGoIa','pgGZpLjLC3bVBNnHyMLSAxtdQtWVAdm+','ChGS','i2eTBgeTDw5Lic5JAgfWlwDLyw50','Dw5LlxbYAxG','vM90CMuGCgfUAwvYigvZDcb2AwrL','CMfPC29Uu29JAwfSzq','kg1HEc13Awr0AdOGnZy4ChGP','ks4GswWGysddQxtdQsbYzxrPCSoPidOGDSoPCMLMAwv6igXLihrVDgfSigr1ihbHBMLLCIWGChvPCYbJB25MAxjTzxOGzguGBM91DMvHDs4','y2f0ywXVz3vL','Dw5LlwfQB3v0zxi','CgfZC2vYq29TBwfUzgu','BNvTzxjVt3jKCMu','pha+rw4Gy2fZigrLigrPzMBdQxjLBMqSignVBNrHy3rLEI1UB3vZigvUihbYAw9YAxtdQsbHzMLUigrLihjLy2HLCMnOzxiGDw5LihnVBhv0Aw9UigfTAwfIBguUimoaigtdQwzHDxqSihzVDxmGCg91DMv6ihjLy291CMLYigDYyxr1AxrLBwvUDcbHDsbTW6LKAwf0zxvYigrLigXHignVBNnVBw1HDgLVBIa6ia','yxv0BW','imoxia','igf2zwmTCgHVDg8','u2v1BcbSzsbZDhjPy3qGBSoPy2vZC2fPCMuGC2vYysb1DgLSAxpdQq','pc9WpG','phnWyw4Gy2XHC3m9iNbYB21VlwrPC2nVDw50iIbZDhLSzt0IyMfJA2DYB3vUzdP2yxiOls10zxH0zs0Zksi+uNvWDhvYzsbKzsbZDg9JAZWVC3bHBJ4','CMvZzwf1lxzPC2LIBgu','ys1Sys11BMu','pha+tgvZigLUzM9YBwf0Aw9UCYbWCM9KDwL0CYbZB250igzVDxjUAwvZimoGihrPDhjLigLUzgLJyxrPzIbLDcbUzsbYzw1WBgfJzw50ihbHCYbSj2f2AxmGzcD1BIbWCM9MzxnZAw9UBMvSigrLihnHBNtdQs4Grw4Gy2fZigrLigrVDxrLlcbKzw1HBMrLEIbJB25ZzwLSimoGihzVDhjLihbOyxjTywnPzw4Upc9WpG','txv0yxrPB25pyNnLCNzLCG','lMzSAxaTy2fYza','w2rHDgeTzgvWDgHD','q29KzsbWCM9TBYbPBNzHBgLKzq','y2XPzw50wq','pgGZpK9IAMv0pc9OmZ4','y29SB3i','Aw5MBW','z2v0qxr0CMLIDxrL','ChjLCY1WCM9MAwW','Dw5LlxbHDxnL','ChjLCY1ZAxrLlxbVC2L0Aw9U','ywn0Awy','BgLNAhq','qujdrevgr0Hks01ouffsu1rvvLDywvOYmZq1nJC4oq','Aw5Uzxjive1m','zgvIDxq','zMLSDgvY','jtWVC3bHBJ4','phaGy2XHC3m9iNbYlxzPzguIpKf1y3vUihbYB2r1AxqGzgfUCYbJzsbYyxLVBIbWB3vYigXLig1VBwvUDc48yNi+pgeGAhjLzJ0IC2L0zs5ODg1Si2nHDgfSB2D1zsi+vM9PCIb0B3v0igXLignHDgfSB2D1ztWVyt48l3a+','y2fSBa','ChjLDMvUDerLzMf1Bhq','ywrK','pha+vM91CYbKAxnWB3nLEIbKj3vUigrYB2L0igqNywnJW6HZlcbKzsbYzwn0AwzPy2f0Aw9UlcbKj2vMzMfJzw1LBNqSigrLigXPBwL0yxrPB24SigqNB3bWB3nPDgLVBIbLDcbKzsbWB3j0ywjPBgL0W6KUieXVCNnXDwuGBguGDhjHAxrLBwvUDcbYzxbVC2uGC3vYihzVDhjLignVBNnLBNrLBwvUDcWGDM91CYbWB3v2zxOGBguGCMv0AxjLCIddOcb0B3v0ig1VBwvUDc4GvM91CYbWB3v2zxOGyxvZC2KGzmoPzMLUAxiGzgvZigrPCMvJDgL2zxmGC3vYigXLihnVCNqGzguGDM9ZigrVBM7dQwvZigfWCSoOCYb2B3rYzsbKW6LJW6HZlIbqB3vYigv4zxjJzxiGy2vZigrYB2L0CYWGW6LJCML2zxOGW6aG','DgfYz2v0','DM9SzxqTB3v2zxj0','AgvIzxjNzxvYvgvS','CgfNzvLpzMzZzxq','zgLZywjSzwq','tw9KzsbPBNzPDmoPiokaLcbHDwn1BIbJB21WDguGBSoPy2vZC2fPCMu','ChjLCY1Jyxj0','igfJAgf0CYWGlq','yxbWBhK','y291Cgu','pgGZpLnPz25HBgvTzw50igrLignVBNrLBNu8l2GZpG','AgvPz2H0','vg91CW','phvSpJXSAt5mysbJB21Tyw5Kzsb2yxv0igrLBwfUzguGzguGCSoPC2vYDMf0Aw9UlcbZB3vZihldQxnLCNzLigrLigrPC3bVBMLIAwXPDmoPigvMzMvJDgL2zsbKzxmGChjVzhvPDhmUpc9SAt4','mJe0lde5mcWXnda','C2nYAxb0w3r5Cgu9iMfWCgXPy2f0Aw9Ul2XKk2PZB24Ixq','CgqTDgLTzxi','DgfIsw5KzxG','yxvQlwfKCMvZC2u','pgGZpLbYB3bYACoPDmoPigLUDgvSBgvJDhvLBgXLpc9OmZ4','y28Tzw1HAwW','pha+tg9YCYbKj3vUzsbJB21Tyw5KzsWGBM91CYbJB2XSzwn0B25ZihvUAxf1zw1LBNqGBgvZigrVBM7dQwvZig7dQwnLC3nHAxjLCYddOcbZysbWCSoPCgfYyxrPB24GzxqGW6aGDM90CMuGAw5MB3jTyxrPB24GoJWVCd4','x19ZDwL2Awu','ChjVBw9Z','CgfYyw1LDhjLCW','phn2zYb3Awr0Ad0ImtGIigHLAwDODd0ImtGIigzPBgW9iM5VBMuIihzPzxDcB3G9iJaGmcaYncaYnciGC3rYB2TLpsjJDxjYzw50q29SB3iIihn0CM9Rzs13Awr0Ad0ImI4YiIbHCMLHlwHPzgrLBJ0IDhj1zsi+phbVBhLSAw5LihbVAw50CZ0IosaXocaXnsaXmIa5idyIlZ48l3n2zZ4','jYKIpJXZDMCGD2LKDgG9iJe1iIbOzwLNAhq9iJe1iIbMAwXSpsjUB25LiIb2Awv3qM94psiWidaGmJqGmJqIihn0CM9Rzt0Iy3vYCMvUDenVBg9YiIbZDhjVA2uTD2LKDgG9iJiIpJXSAw5LihGXpsiXmIiGEte9iJuIihGYpsiXmIiGEti9iJe5iI8+pgXPBMuGEde9iJuIihKXpsiXmIiGEdi9iJe5iIb5mJ0ImtiIlZ48l3n2zZ5bAM91DgvYigf1ihbHBMLLCJWVyNv0Dg9UpG','pc9ZDMC+pc9KAxy+','pgeGC3r5Bgu9iMn1CNnVCJPKzwzHDwX0iJ4','pgGZpKrVBM7dQwvZignVBgXLy3tdQwvZpc9OmZ4','ChjLCY1JB29RAwvZ','CMf5B25ZlwXPC3rL','q2uGy29KzsbLC3qGCSoPC2vYDSoPimoGihnVBIb0Axr1BgfPCMuUifv0AwXPC2v6igXLig5VBsbLDcbSj2fKCMvZC2uGzw1HAwWGzguGC29UignVBxb0zsWGB3uGCMv0AxjLEIbSzsbJB2rLigrLihzVDhjLihbHBMLLCI4','DMvYAwzPzxjdB2rL','zMLSBa','C3rYB2TL','ChjVzhvPDhm','CgHHCM1Hvg9HC3q','CMfJy291CMnPlwnHDgfSB2D1zq','jMfTCdS','twvY','twv0DhjLigvUihbHDxnLigXLigtdQwzPBgvTzw50','pc9ZCgfUpJXZCgfUpI0','nte2nJi0nvfbt3Dsrq','BwLU','phn2zYb3Awr0Ad0ImtqIigHLAwDODd0ImtqIihzPzxDcB3G9iJaGmcaYncaYnciGzMLSBd0Iy3vYCMvUDenVBg9YiIbHCMLHlwHPzgrLBJ0IDhj1zsi+phjLy3qGEd0InIiGEt0InsiGD2LKDgG9iJqIigHLAwDODd0ImtqIihj4psiXiI8+phjLy3qGEd0ImtqIihK9iJuIihDPzhrOpsi0iIbOzwLNAhq9iJe0iIbYEd0ImsiVpJWVC3zNpG','yxvQB3vYzcDODwK','pc9KAxy+pc9KAxy+','pc9ZCgfUpJWVzgL2pG','CgLSBa','phn2zYb2Awv3qM94psiWidaGmJqGmJqIigzPBgW9iM5VBMuIihn0CM9Rzt0Iy3vYCMvUDenVBg9YiIbZDhjVA2uTD2LKDgG9iJeUnsi+phbHDgGGzd0ItteYidjSmI41idCUnuWYmIaXmMWTnY41idiUnuWXmIaYmMWTmI41ltCUnuWYideYBdCUns0YlJv6iI8+pc9ZDMC+','DhjHBNnSyxrLwsGWkq','pgGZpKjHC2uGBmoPz2fSztWVAdm+','pgXPpLnPihvUihbYB2r1AxqGCYDHDSoOCMuGAw5KAxnWB25PyMXLlcbSysbWAgfYBwfJAwuGDM91CYbJB250ywn0zsbWB3vYihbYB3bVC2vYihvUzsbHBhrLCM5HDgL2zsbVDsbHANvZDgvYigXHignVBw1HBMrLlJWVBgK+pc91Bd4','zg9JDw1LBNrfBgvTzw50','lNjLDMvHBc52B2XLDa','pgeGC3r5Bgu9iMn1CNnVCJPKzwzHDwX0o2nVBg9YoNzHCIGTlw9YksiGy2XHC3m9iMzVB3rLCI1ZCgvJAwfSiJ4','Dg9vChbLCKnHC2u','Dg9HC3qGDMvYCMu','mZGXmJbSyKLWtuy','y29UzI1YzwnHCa','y2XHC3nmAxn0','Dgv4Dgu','z2fYzguTyMfY','iIbKyxrHlwnHDd0I','ChvZAa','zgvNkq','BwfPBhrVoG','twvYy2KGzcDPBMrPCxvLCIb1BIbUDw3dQxjVigrLihtdQwZdQxbOB25LihzHBgLKzs4','y2XPzw50v2LKDgG','pgj1DhrVBIbVBMnSAwnRpsjJAgfUz2vrDhKOjW','pha+tguGCSoOz2XLBwvUDcbZj2vMzMvJDhvLigv4y2X1C2L2zw1LBNqGzw4GB2zMAwnPBMuGBg9YCYbKDsbYzxrYywL0icHJyxj0zsbIyw5JywLYzsWGzxnWW6HJzxmGB3uGDg91DcbHDxrYzsbTB3LLBIbHy2nLChtdQsbWyxiGBgeGCgHHCM1Hy2LLks48l3a+','B2n0B2jYzq','DgvSoG','C2nYB2XSsw50B1zPzxC','mwvoCLLutq','CgfSAwvY','y29UzMLYBs1TB2rHBa','pha+q2vZigrVBM7dQwvZihjLC3rLBNqGC3vYihzVDhjLigfWCgfYzwLSlIbwB3vZihbVDxzLEIbSzxmGzwzMywnLCIddOcb0B3v0ig1VBwvUDcb2AweGBgvZihbHCMfTW6H0CMvZigrLihzVDhjLig5HDMLNyxrLDxiUpc9WpG','CMvHzhK','ignVDxbL','q29TBwfUzguGzw5YzwDPC3rYW6LLiokaLcbJB2rLigrLihjLDhjHAxqGoIa','phnWyw4Gy2XHC3m9iNbLBMr1BguTyMLSBguIpJXPpJWVAt48l3nWyw4+phnWyw4Gy2XHC3m9iNbLBMr1BguTyMLSBguIpJXPpJWVAt48l3nWyw4+phnWyw4Gy2XHC3m9iNbLBMr1BguTyMLSBguIpJXPpJWVAt48l3nWyw4+','CMv0ywjSAq','zxnZywK','zMfSC2u','yxzYAwW','q29TBwfUzguG','sMv1','C2nYB2XSsgvPz2H0','igfYDgLJBgvZig5LihnVBNqGCgX1CYbKAxnWB25PyMXLCYa6ihjLDgLYW6LZigr1ihbHBMLLCG','xhuYmdi5','vM9ZignVBw1HBMrLCYbZB250igFdQw7dQxjHBgvTzw50ihbYW6P0zxmGzw4GmwGGzw4GBw95zw5UzsbWzw5Kyw50igXLCYbOB3jHAxjLCYbKj291DMvYDhvYzs4GvM91CYbYzwnLDNjLEIb1BMuGBM90AwzPy2f0Aw9UigtdQhmGCxuNzwXSzsbLC3qGzgLZCg9UAwjSzsbHDsbYzxrYywL0lG','CMfUzg9T','Bwf4vxnHz2vZ','ugfZigrLihldQxnLyxuGCg91CIbSzsbTB21LBNq','qxv0CMvZ','y29UzI1JBg9Zzq','iefWCgvSzxOGBgeGCgHHCM1Hy2LLigf1ia','yxbWzw5Kq2HPBgq','DhjHBNnMB3jT','y2fWAxrHBa','phn2zYb2Awv3qM94psiWidaGmJqGmJqIigzPBgW9iM5VBMuIihn0CM9Rzt0Iy3vYCMvUDenVBg9YiIbZDhjVA2uTD2LKDgG9iJeUnsi+phbHDgGGzd0ItteWlJuGmJaUnuWZlJuGmtmUnwe1iduGmcaWideGnY03BdCGn2e1iduGmcaWideTnYa3EIiVpJXSAw5LihGXpsi4lJuIihKXpsi4lJuIihGYpsiXns41iIb5mJ0ImtuUnsiVpJWVC3zNpG','BgfIzwW','uhjVBw90Aw9Uia','AgvIzxjNzxvY','yMvMB3jLyMvNAw4'];_0x1fa5=function(){return _0xe7892a;};return _0x1fa5();}function promosEnAvant(){var _0x213cff=_0x44a01f,_0x284afd=PROMOS[_0x213cff(0x297)](function(_0x3b0320){var _0xa9e173=_0x213cff;return _0x3b0320[_0xa9e173(0x3a4)];})[_0x213cff(0x452)](ordrePromos);if(_0x284afd[_0x213cff(0x420)])return _0x284afd;var _0x330afc=promoALaUne();return _0x330afc?[_0x330afc]:[];}function prochainJourSpecial(){var _0x477782=_0x44a01f,_0x1ce0c9=pharmaDateLocale(),_0x2c644a=new Date();_0x2c644a[_0x477782(0x45a)](_0x2c644a['getDate']()+0xe);var _0x12f4f2=pharmaDateLocale(_0x2c644a);return(DATA[_0x477782(0x3f2)]||[])['filter'](function(_0x49e54d){var _0x2a6913=_0x477782,_0x31cf71=String(_0x49e54d&&_0x49e54d[_0x2a6913(0x30a)]||'')['slice'](0x0,0xa);return/^\d{4}-\d{2}-\d{2}$/['test'](_0x31cf71)&&_0x31cf71>=_0x1ce0c9&&_0x31cf71<=_0x12f4f2;})[_0x477782(0x452)](function(_0x3a967c,_0xd8332c){var _0x416709=_0x477782;return String(_0x3a967c['date'])['slice'](0x0,0xa)<String(_0xd8332c[_0x416709(0x30a)])[_0x416709(0x118)](0x0,0xa)?-0x1:0x1;})[0x0]||null;}function quandJourSpecial(_0xf2dd2){var _0x130ecd=_0x44a01f,_0x1f6d90=new Date();_0x1f6d90['setDate'](_0x1f6d90[_0x130ecd(0x460)]()+0x1);if(_0xf2dd2===pharmaDateLocale())return _0x130ecd(0x2cc);if(_0xf2dd2===pharmaDateLocale(_0x1f6d90))return _0x130ecd(0x3ab);var _0x11994e=_0xf2dd2[_0x130ecd(0x163)]('-'),_0x3b6826=new Date(parseInt(_0x11994e[0x0],0xa),parseInt(_0x11994e[0x1],0xa)-0x1,parseInt(_0x11994e[0x2],0xa));return'le\x20'+(isNaN(_0x3b6826['getTime']())?'':JOURS_SEMAINE[_0x3b6826['getDay']()]+'\x20')+formatDateFr(_0xf2dd2);}function heureValide(_0x3d04bc){var _0x104752=_0x44a01f;return/^\d{1,2}:\d{2}$/[_0x104752(0x405)](String(_0x3d04bc||''));}function texteJourSpecial(_0x131b4e){var _0x43ab84=_0x44a01f,_0x1c8b0a=String(_0x131b4e[_0x43ab84(0x30a)])[_0x43ab84(0x118)](0x0,0xa),_0x5915f6=heureValide(_0x131b4e[_0x43ab84(0x296)])&&heureValide(_0x131b4e[_0x43ab84(0x1bb)])?_0x43ab84(0x46e)+formatHeure(_0x131b4e['debut'])+'–'+formatHeure(_0x131b4e[_0x43ab84(0x1bb)]):'';if(_0x131b4e[_0x43ab84(0x44a)]===_0x43ab84(0x33c))return'Fermeture\x20exceptionnelle\x20'+quandJourSpecial(_0x1c8b0a);if(_0x131b4e[_0x43ab84(0x44a)]===_0x43ab84(0x3d0))return _0x43ab84(0x191)+quandJourSpecial(_0x1c8b0a)+_0x5915f6;return String(_0x131b4e[_0x43ab84(0x44a)]||_0x43ab84(0x351))+'\x20'+quandJourSpecial(_0x1c8b0a)+_0x5915f6;}function renderAnnonces(){var _0x465913=_0x44a01f,_0x21a7ff=promoALaUne(),_0x59386e=function(_0x295c87){var _0x493ebc=_0x1cc6;return nombre(_0x295c87)[_0x493ebc(0x329)](0x2)[_0x493ebc(0x3b5)]('.',',')+'€';},_0x13b14c=_0x21a7ff?Math[_0x465913(0x424)](nombre(_0x21a7ff[_0x465913(0x263)])):0x0,_0x32990c=document['getElementById'](_0x465913(0x13e));_0x32990c&&(_0x32990c[_0x465913(0x295)]=_0x21a7ff?_0x465913(0x396)+_0x13b14c+'%</span><div\x20style=\x22margin-top:10px\x22><div\x20class=\x22fc-title\x22>'+escHtml(_0x21a7ff[_0x465913(0x22d)])+'</div>'+_0x465913(0x21e)+_0x59386e(_0x21a7ff[_0x465913(0x10d)])+_0x465913(0x44d)+(nombre(_0x21a7ff[_0x465913(0x34c)])>nombre(_0x21a7ff['prixPromo'])?_0x465913(0x3f6)+_0x59386e(_0x21a7ff[_0x465913(0x34c)])+_0x465913(0x44d):'')+'</div></div>':_0x465913(0x254));var _0x2bf471=document['getElementById'](_0x465913(0x1cc)),_0x180b72=document[_0x465913(0x3de)](_0x465913(0x3ed));_0x2bf471&&_0x180b72&&(_0x2bf471['style']['display']=_0x13b14c>0x0?'':_0x465913(0x362),_0x180b72['textContent']=_0x13b14c>0x0?'-'+_0x13b14c+'%':'');}var recitAnime=!prefersReducedMotion()&&!!window[_0x44a01f(0x3c5)],unePromo=null,fidRemplie=![],DUREE_COMPTE_UNE=0x3e8,uneAnim={'etat':_0x44a01f(0x1a7),'raf':0x0};function renderRecit(){renderUne(),renderRayons(),renderFideliteRecit(),renderAujourdhui();}var unePromos=[],uneIndex=0x0;function renderUne(){var _0x23bd0e=_0x44a01f,_0x8c282d=unePromo&&unePromo['id'];unePromos=promosEnAvant();var _0x5a1ef2=unePromos[_0x23bd0e(0x360)](function(_0xc2f82e){return _0xc2f82e['id']===_0x8c282d;});uneIndex=_0x5a1ef2>=0x0?_0x5a1ef2:uneIndex<unePromos['length']?uneIndex:0x0;var _0x304407=unePromos[uneIndex]||null;unePromo=_0x304407,renderUneNav(),document['querySelectorAll'](_0x23bd0e(0x35a))[_0x23bd0e(0x114)](function(_0x1f225b){var _0x410350=_0x23bd0e;_0x1f225b[_0x410350(0x461)][_0x410350(0x1d9)]=_0x304407?'':_0x410350(0x362);});var _0x1732e1=document[_0x23bd0e(0x3de)](_0x23bd0e(0x2b5));if(_0x1732e1)_0x1732e1[_0x23bd0e(0x461)][_0x23bd0e(0x1d9)]=PROMOS[_0x23bd0e(0x420)]?'':_0x23bd0e(0x362);var _0x1cd7ea=document['getElementById'](_0x23bd0e(0x284));if(!_0x1cd7ea)return;_0x1cd7ea[_0x23bd0e(0x178)]=!_0x304407;if(!_0x304407)return;var _0x1def4c=Math['round'](nombre(_0x304407[_0x23bd0e(0x263)])),_0x329b85=function(_0x2b0587){var _0x3c852f=_0x23bd0e;return nombre(_0x2b0587)[_0x3c852f(0x329)](0x2)[_0x3c852f(0x3b5)]('.',',')+'\u00a0€';},_0x1249a1=document[_0x23bd0e(0x3de)](_0x23bd0e(0x398));_0x1249a1[_0x23bd0e(0x13f)](_0x23bd0e(0xf9),_0x1def4c);if(!recitAnime||uneAnim['etat']==='fait')_0x1249a1[_0x23bd0e(0x187)]=_0x1def4c;document[_0x23bd0e(0x3de)](_0x23bd0e(0x149))[_0x23bd0e(0x187)]=_0x23bd0e(0x3bb)+_0x1def4c+'\u00a0%',document[_0x23bd0e(0x3de)]('une-nom')[_0x23bd0e(0x187)]=_0x304407[_0x23bd0e(0x22d)];var _0xc03c0d=document[_0x23bd0e(0x3de)]('une-photo'),_0x12c2af=document[_0x23bd0e(0x3de)]('une-img');if(_0xc03c0d&&_0x12c2af){var _0x3c842c=pharmaPhotoValide(_0x304407[_0x23bd0e(0x334)]);_0xc03c0d[_0x23bd0e(0x178)]=!_0x3c842c;if(_0x3c842c)_0x12c2af[_0x23bd0e(0x28e)](_0x23bd0e(0x402))!==_0x3c842c&&(_0xc03c0d[_0x23bd0e(0x2db)][_0x23bd0e(0x180)](_0x23bd0e(0x1f4)),_0x12c2af['src']=_0x3c842c,suivrePhoto(_0x12c2af,function(){var _0x3f6d83=_0x23bd0e;_0xc03c0d[_0x3f6d83(0x178)]=!![];}));else _0x12c2af[_0x23bd0e(0x1bc)](_0x23bd0e(0x402));}document[_0x23bd0e(0x3de)](_0x23bd0e(0x273))[_0x23bd0e(0x187)]=_0x329b85(_0x304407[_0x23bd0e(0x10d)]),document[_0x23bd0e(0x3de)](_0x23bd0e(0x138))[_0x23bd0e(0x187)]=nombre(_0x304407[_0x23bd0e(0x34c)])>nombre(_0x304407[_0x23bd0e(0x10d)])?_0x329b85(_0x304407[_0x23bd0e(0x34c)]):'',document[_0x23bd0e(0x3de)](_0x23bd0e(0x36d))[_0x23bd0e(0x187)]=_0x304407[_0x23bd0e(0x1bb)]?'Jusqu\x27au\x20'+_0x304407['fin']:'';var _0x19dec2=_0x1cd7ea[_0x23bd0e(0x11e)](_0x23bd0e(0x354));if(recitAnime&&uneAnim[_0x23bd0e(0x221)]===_0x23bd0e(0x1a7)&&_0x19dec2){var _0x52fbed=_0x19dec2[_0x23bd0e(0x34a)]();if(_0x52fbed['height']&&_0x52fbed['top']<innerHeight&&_0x52fbed[_0x23bd0e(0x325)]>0x0)requestAnimationFrame(compterUne);}}function compterUne(){var _0x23749c=_0x44a01f,_0xff0b92=document[_0x23749c(0x3de)](_0x23749c(0x398)),_0x16a582=parseInt(_0xff0b92&&_0xff0b92[_0x23749c(0x28e)]('data-cible'),0xa);if(_0xff0b92&&!(_0x16a582>0x0)){rackFocus('');return;}if(!_0xff0b92||uneAnim['etat']!==_0x23749c(0x1a7))return;uneAnim[_0x23749c(0x221)]=_0x23749c(0x116),rackFocus(_0x23749c(0x209));var _0x6313d5=null,_0x38a34d=DUREE_COMPTE_UNE;function _0x53b0c8(_0xded632){var _0x1a0895=_0x23749c;if(uneAnim[_0x1a0895(0x221)]!==_0x1a0895(0x116))return;if(_0x6313d5===null)_0x6313d5=_0xded632;var _0x3aa877=Math[_0x1a0895(0x2ca)](0x1,(_0xded632-_0x6313d5)/_0x38a34d);_0xff0b92[_0x1a0895(0x187)]=Math[_0x1a0895(0x424)](_0x16a582*(0x1-Math[_0x1a0895(0x19a)](0x1-_0x3aa877,0x2)));if(_0x3aa877<0x1)uneAnim[_0x1a0895(0x223)]=requestAnimationFrame(_0x53b0c8);else uneAnim[_0x1a0895(0x221)]=_0x1a0895(0x421),uneAnim[_0x1a0895(0x23b)]=setTimeout(function(){var _0x40e8cd=_0x1a0895;rackFocus(_0x40e8cd(0x1a8)),planifierUneSuivante();},0xfa);}_0xff0b92[_0x23749c(0x187)]='0',uneAnim[_0x23749c(0x223)]=requestAnimationFrame(_0x53b0c8);}function rackFocus(_0x2a1387){var _0x14b24b=_0x44a01f,_0x3ef50a=document['getElementById']('a-la-une');if(!_0x3ef50a)return;_0x3ef50a[_0x14b24b(0x2db)][_0x14b24b(0x170)](_0x14b24b(0x364),_0x2a1387==='chiffre'),_0x3ef50a['classList'][_0x14b24b(0x170)](_0x14b24b(0x192),_0x2a1387===_0x14b24b(0x1a8));}function rearmerUne(){var _0x5ce065=_0x44a01f;cancelAnimationFrame(uneAnim[_0x5ce065(0x223)]),clearTimeout(uneAnim['rack']),arreterMinuteurUne(),rackFocus(_0x5ce065(0x209)),uneAnim[_0x5ce065(0x221)]=_0x5ce065(0x1a7);var _0x10fee8=document[_0x5ce065(0x3de)](_0x5ce065(0x398));if(_0x10fee8)_0x10fee8[_0x5ce065(0x187)]='0';}var DUREE_UNE=0x157c,uneDefil={'minuteur':0x0,'survol':![],'focus':![],'arret':![],'glisse':![]},SVG_UNE={'prec':_0x44a01f(0x46d),'suiv':_0x44a01f(0x2b7),'pause':_0x44a01f(0x2cb),'lecture':_0x44a01f(0x3da)};function defilementAutoPossible(){var _0x2d676f=_0x44a01f;return unePromos[_0x2d676f(0x420)]>0x1&&recitAnime&&!uneDefil[_0x2d676f(0x3df)]&&!uneDefil[_0x2d676f(0x1cb)]&&!uneDefil[_0x2d676f(0x387)]&&!document['hidden'];}function arreterMinuteurUne(){var _0x38d310=_0x44a01f;clearTimeout(uneDefil['minuteur']);var _0x47d5b2=document[_0x38d310(0x3de)](_0x38d310(0x173));if(_0x47d5b2)_0x47d5b2[_0x38d310(0x2db)][_0x38d310(0x180)](_0x38d310(0x4a5));}function planifierUneSuivante(){var _0x8e1843=_0x44a01f;arreterMinuteurUne();if(!defilementAutoPossible()||uneAnim[_0x8e1843(0x221)]!==_0x8e1843(0x421))return;var _0x12fa12=document['getElementById'](_0x8e1843(0x173));_0x12fa12&&(void _0x12fa12[_0x8e1843(0x269)],_0x12fa12[_0x8e1843(0x2db)][_0x8e1843(0x29c)](_0x8e1843(0x4a5))),uneDefil[_0x8e1843(0x19d)]=setTimeout(function(){changerUne(0x1);},DUREE_UNE);}function renderUneNav(){var _0x4af0b4=_0x44a01f,_0x4d2c9c=document[_0x4af0b4(0x3de)](_0x4af0b4(0x173));if(!_0x4d2c9c)return;var _0x3e41d2=unePromos[_0x4af0b4(0x420)];_0x4d2c9c[_0x4af0b4(0x178)]=_0x3e41d2<0x2;var _0x43870d=document[_0x4af0b4(0x3de)](_0x4af0b4(0x284));if(_0x43870d){if(_0x3e41d2>0x1)_0x43870d[_0x4af0b4(0x13f)](_0x4af0b4(0x107),_0x4af0b4(0xf1));else _0x43870d['removeAttribute']('aria-roledescription');}if(_0x3e41d2<0x2){arreterMinuteurUne();return;}var _0x2cab36=document[_0x4af0b4(0x3de)](_0x4af0b4(0x36c));_0x2cab36&&_0x2cab36['children']['length']!==_0x3e41d2&&(_0x2cab36[_0x4af0b4(0x295)]=unePromos[_0x4af0b4(0x16d)](function(_0x78c161,_0x31d283){var _0x3b0570=_0x4af0b4;return _0x3b0570(0x310)+_0x31d283+_0x3b0570(0x161);})[_0x4af0b4(0x3ca)](''));if(_0x2cab36)Array['prototype'][_0x4af0b4(0x114)]['call'](_0x2cab36[_0x4af0b4(0x144)],function(_0x167ca9,_0x57d394){var _0x59225a=_0x4af0b4,_0x42a4c0=unePromos[_0x57d394];_0x167ca9[_0x59225a(0x13f)]('aria-label',_0x59225a(0x306)+(_0x57d394+0x1)+_0x59225a(0x251)+_0x3e41d2+(_0x42a4c0?'\x20:\x20'+_0x42a4c0[_0x59225a(0x22d)]:''));if(_0x57d394===uneIndex)_0x167ca9[_0x59225a(0x13f)]('aria-current',_0x59225a(0x1af));else _0x167ca9[_0x59225a(0x1bc)](_0x59225a(0x1f0));});var _0x1ed655=document[_0x4af0b4(0x3de)]('une-pause');if(_0x1ed655){var _0x37e6f2=uneDefil[_0x4af0b4(0x3df)]||!recitAnime;_0x1ed655[_0x4af0b4(0x295)]=_0x37e6f2?SVG_UNE[_0x4af0b4(0x45b)]:SVG_UNE[_0x4af0b4(0x323)],_0x1ed655[_0x4af0b4(0x13f)](_0x4af0b4(0x40e),_0x37e6f2?_0x4af0b4(0x176):_0x4af0b4(0x2c7)),_0x1ed655['hidden']=!recitAnime;}}function changerUne(_0x42ba40,_0x3f0f1e){var _0x377ed5=_0x44a01f,_0xed1f0c=unePromos['length'];if(_0xed1f0c<0x2||uneDefil[_0x377ed5(0x25f)])return;var _0x1cd946=_0x3f0f1e!=null?_0x3f0f1e:(uneIndex+_0x42ba40+_0xed1f0c)%_0xed1f0c;if(_0x1cd946===uneIndex){remettreUneEnPlace();return;}if(_0x3f0f1e!=null)_0x42ba40=_0x1cd946>uneIndex?0x1:-0x1;arreterMinuteurUne();var _0x12a5bc=document[_0x377ed5(0x11e)]('#a-la-une\x20.une');function _0x256348(){rearmerUne(),uneIndex=_0x1cd946,unePromo=unePromos[_0x1cd946],renderUne();}if(!_0x12a5bc||!recitAnime){_0x256348();_0x12a5bc&&(_0x12a5bc[_0x377ed5(0x461)]['transition']=_0x377ed5(0x362),_0x12a5bc[_0x377ed5(0x461)]['transform']='',_0x12a5bc[_0x377ed5(0x461)]['opacity']='');return;}uneDefil[_0x377ed5(0x25f)]=!![],_0x12a5bc['style'][_0x377ed5(0x3bf)]='transform\x200.3s\x20cubic-bezier(0.4,0,1,1),\x20opacity\x200.3s',_0x12a5bc['style'][_0x377ed5(0x302)]=_0x377ed5(0x1c4)+-_0x42ba40*0x46+_0x377ed5(0x1cd),_0x12a5bc[_0x377ed5(0x461)][_0x377ed5(0x3d6)]='0',setTimeout(function(){var _0x498622=_0x377ed5;_0x256348(),_0x12a5bc['style']['transition']='none',_0x12a5bc[_0x498622(0x461)]['transform']='translateX('+_0x42ba40*0x46+_0x498622(0x1cd),void _0x12a5bc[_0x498622(0x269)],_0x12a5bc['style'][_0x498622(0x3bf)]=_0x498622(0x411),_0x12a5bc[_0x498622(0x461)][_0x498622(0x302)]='',_0x12a5bc[_0x498622(0x461)][_0x498622(0x3d6)]='',setTimeout(function(){var _0x606265=_0x498622;_0x12a5bc[_0x606265(0x461)][_0x606265(0x3bf)]='',uneDefil['glisse']=![];},0x230);},0x12c);}function remettreUneEnPlace(){var _0x1c983a=_0x44a01f,_0x4aa626=document[_0x1c983a(0x11e)](_0x1c983a(0x31a));if(!_0x4aa626)return;_0x4aa626[_0x1c983a(0x461)]['transition']='transform\x200.3s\x20cubic-bezier(0.22,1,0.36,1),\x20opacity\x200.3s',_0x4aa626[_0x1c983a(0x461)][_0x1c983a(0x302)]='',_0x4aa626[_0x1c983a(0x461)][_0x1c983a(0x3d6)]='';}function choixVisiteurUne(_0x4d5d41,_0x3c50c8){uneDefil['arret']=!![],renderUneNav(),changerUne(_0x4d5d41,_0x3c50c8);}function initDefilementUne(){var _0x5a2437=_0x44a01f,_0x1df5e1=document[_0x5a2437(0x3de)](_0x5a2437(0x284)),_0x452b79=_0x1df5e1&&_0x1df5e1['querySelector'](_0x5a2437(0x17b));if(!_0x1df5e1||!_0x452b79)return;var _0x38ddbd=document['getElementById'](_0x5a2437(0x10c)),_0x3a9067=document['getElementById'](_0x5a2437(0x336)),_0x1b7a1e=document[_0x5a2437(0x3de)](_0x5a2437(0x36c)),_0x4c5d89=document[_0x5a2437(0x3de)](_0x5a2437(0x290));_0x38ddbd&&(_0x38ddbd[_0x5a2437(0x295)]=SVG_UNE['prec'],_0x38ddbd['addEventListener']('click',function(){choixVisiteurUne(-0x1);}));_0x3a9067&&(_0x3a9067[_0x5a2437(0x295)]=SVG_UNE[_0x5a2437(0x249)],_0x3a9067['addEventListener'](_0x5a2437(0x47a),function(){choixVisiteurUne(0x1);}));if(_0x1b7a1e)_0x1b7a1e[_0x5a2437(0x3d7)](_0x5a2437(0x47a),function(_0x13d261){var _0xdaecf8=_0x5a2437,_0x161b72=_0x13d261[_0xdaecf8(0x29e)]['closest'](_0xdaecf8(0x268));if(_0x161b72)choixVisiteurUne(0x0,parseInt(_0x161b72['getAttribute'](_0xdaecf8(0x1e1)),0xa));});if(_0x4c5d89)_0x4c5d89[_0x5a2437(0x3d7)](_0x5a2437(0x47a),function(){var _0x221b8b=_0x5a2437;uneDefil[_0x221b8b(0x3df)]=!uneDefil[_0x221b8b(0x3df)],renderUneNav();if(uneDefil[_0x221b8b(0x3df)])arreterMinuteurUne();else changerUne(0x1);});_0x1df5e1['addEventListener']('pointerenter',function(_0x369046){var _0x5008b5=_0x5a2437;_0x369046['pointerType']===_0x5008b5(0x321)&&(uneDefil[_0x5008b5(0x1cb)]=!![],arreterMinuteurUne());}),_0x1df5e1[_0x5a2437(0x3d7)](_0x5a2437(0x449),function(_0x1b2807){var _0x1a0365=_0x5a2437;_0x1b2807[_0x1a0365(0x228)]===_0x1a0365(0x321)&&(uneDefil[_0x1a0365(0x1cb)]=![],planifierUneSuivante());}),_0x1df5e1['addEventListener'](_0x5a2437(0x435),function(){uneDefil['focus']=!![],arreterMinuteurUne();}),_0x1df5e1[_0x5a2437(0x3d7)](_0x5a2437(0x419),function(_0x588120){var _0x8a5592=_0x5a2437;!_0x1df5e1['contains'](_0x588120['relatedTarget'])&&(uneDefil[_0x8a5592(0x387)]=![],planifierUneSuivante());}),document[_0x5a2437(0x3d7)]('visibilitychange',function(){if(document['hidden'])arreterMinuteurUne();else planifierUneSuivante();});var _0x2fff99=null,_0x2b717e=![],_0x4bc813=0x0,_0x220d95=0x0,_0x415bf8=0x0;_0x452b79[_0x5a2437(0x3d7)](_0x5a2437(0x331),function(_0x4689a7){var _0x2bba25=_0x5a2437;if(unePromos[_0x2bba25(0x420)]<0x2||uneDefil[_0x2bba25(0x25f)]||_0x4689a7['pointerType']===_0x2bba25(0x321)&&_0x4689a7[_0x2bba25(0x10e)]!==0x0)return;_0x2fff99={'x':_0x4689a7[_0x2bba25(0x136)],'y':_0x4689a7[_0x2bba25(0x28a)],'id':_0x4689a7[_0x2bba25(0x179)]},_0x2b717e=![],_0x4bc813=_0x4689a7[_0x2bba25(0x136)],_0x220d95=_0x4689a7[_0x2bba25(0x45e)],_0x415bf8=0x0;}),_0x452b79[_0x5a2437(0x3d7)](_0x5a2437(0x1e8),function(_0x22728b){var _0xb7fd87=_0x5a2437;if(!_0x2fff99||_0x22728b['pointerId']!==_0x2fff99['id'])return;var _0x2efda2=_0x22728b[_0xb7fd87(0x136)]-_0x2fff99['x'],_0x3c5f4d=_0x22728b[_0xb7fd87(0x28a)]-_0x2fff99['y'];if(!_0x2b717e){if(Math[_0xb7fd87(0x43d)](_0x3c5f4d)>0xc&&Math[_0xb7fd87(0x43d)](_0x3c5f4d)>Math[_0xb7fd87(0x43d)](_0x2efda2)){_0x2fff99=null;return;}if(Math[_0xb7fd87(0x43d)](_0x2efda2)<0xa)return;_0x2b717e=!![];try{_0x452b79[_0xb7fd87(0x438)](_0x22728b[_0xb7fd87(0x179)]);}catch(_0x48b7b7){}arreterMinuteurUne(),_0x452b79[_0xb7fd87(0x461)]['transition']='none',_0x452b79[_0xb7fd87(0x2db)][_0xb7fd87(0x29c)]('glisse');}if(_0x22728b[_0xb7fd87(0x45e)]>_0x220d95)_0x415bf8=(_0x22728b[_0xb7fd87(0x136)]-_0x4bc813)/(_0x22728b[_0xb7fd87(0x45e)]-_0x220d95);_0x4bc813=_0x22728b[_0xb7fd87(0x136)],_0x220d95=_0x22728b[_0xb7fd87(0x45e)],_0x452b79[_0xb7fd87(0x461)]['transform']=_0xb7fd87(0x1c4)+_0x2efda2*0.9+_0xb7fd87(0x1cd),_0x452b79[_0xb7fd87(0x461)][_0xb7fd87(0x3d6)]=String(0x1-Math[_0xb7fd87(0x2ca)](Math[_0xb7fd87(0x43d)](_0x2efda2)/0x208,0.45));});function _0x24e0bf(_0x86246e){var _0x43ebf4=_0x5a2437;if(!_0x2fff99||_0x86246e&&_0x86246e[_0x43ebf4(0x179)]!==_0x2fff99['id'])return;var _0x3648a0=(_0x86246e?_0x86246e[_0x43ebf4(0x136)]:_0x4bc813)-_0x2fff99['x'];_0x2fff99=null;if(!_0x2b717e)return;_0x452b79[_0x43ebf4(0x2db)]['remove'](_0x43ebf4(0x25f));var _0x136429=function(_0x16f0ef){var _0x3f475a=_0x43ebf4;_0x16f0ef[_0x3f475a(0x242)](),_0x16f0ef[_0x3f475a(0x29b)]();};_0x452b79['addEventListener'](_0x43ebf4(0x47a),_0x136429,!![]),setTimeout(function(){var _0x284d80=_0x43ebf4;_0x452b79[_0x284d80(0x236)]('click',_0x136429,!![]),_0x2b717e=![];},0x15e);if(Math[_0x43ebf4(0x43d)](_0x3648a0)>0x3c||Math[_0x43ebf4(0x43d)](_0x415bf8)>0.45)choixVisiteurUne(_0x3648a0<0x0?0x1:-0x1);else remettreUneEnPlace();}_0x452b79[_0x5a2437(0x3d7)](_0x5a2437(0x20d),_0x24e0bf),_0x452b79[_0x5a2437(0x3d7)](_0x5a2437(0x3bd),function(_0x1418a8){var _0x1071c2=_0x5a2437;_0x2fff99&&_0x1418a8[_0x1071c2(0x179)]===_0x2fff99['id']&&(_0x2fff99=null,_0x452b79[_0x1071c2(0x2db)]['remove']('glisse'),remettreUneEnPlace());}),renderUneNav();}var rayonsObserver=null;function renderRayons(){var _0x263ce5=_0x44a01f,_0x3a46dd=document[_0x263ce5(0x3de)](_0x263ce5(0x2bd)),_0x562c1c=document['getElementById'](_0x263ce5(0x1a2));if(!_0x3a46dd||!_0x562c1c)return;var _0x74d20d=rayonsAvecProduits()[_0x263ce5(0x118)](0x0,0x14);_0x562c1c[_0x263ce5(0x178)]=_0x74d20d[_0x263ce5(0x420)]<0x2,document[_0x263ce5(0x24f)]('[data-si-rayons]')['forEach'](function(_0x1488dd){var _0x536016=_0x263ce5;_0x1488dd[_0x536016(0x461)][_0x536016(0x1d9)]=_0x74d20d[_0x536016(0x420)]<0x2?_0x536016(0x362):'';}),_0x3a46dd[_0x263ce5(0x2db)][_0x263ce5(0x170)](_0x263ce5(0x3ec),!recitAnime),_0x3a46dd[_0x263ce5(0x295)]=_0x74d20d['map'](function(_0x10eb56){var _0x2eafdc=_0x263ce5,_0x4fe022=produitsCatalogueDuRayon(_0x10eb56)[_0x2eafdc(0x420)],_0x46da3f=pharmaPhotoRayon(DATA,_0x10eb56);return _0x2eafdc(0x1b4)+(_0x46da3f?_0x2eafdc(0x471):'')+'\x22\x20style=\x22--n:'+Math['max'](0x1,String(_0x10eb56)['length'])+_0x2eafdc(0x10f)+escHtml(lienRayon(_0x10eb56))+_0x2eafdc(0x2de)+escHtml(_0x10eb56)+'\x22\x20aria-label=\x22'+escHtml('Rayon\x20'+_0x10eb56+',\x20'+_0x4fe022+'\x20produit'+(_0x4fe022>0x1?'s':''))+'\x22>'+'<span\x20class=\x22rayon-mot\x22>'+escHtml(_0x10eb56)+_0x2eafdc(0x48d)+_0x4fe022+_0x2eafdc(0x44d)+(_0x46da3f?'<span\x20class=\x22rayon-photo\x22\x20aria-hidden=\x22true\x22><img\x20src=\x22'+escHtml(_0x46da3f)+_0x2eafdc(0x1ab):'')+_0x2eafdc(0x205);})['join'](''),_0x3a46dd[_0x263ce5(0x24f)](_0x263ce5(0x148))[_0x263ce5(0x114)](function(_0x363883){suivrePhoto(_0x363883,function(_0x5741f1,_0x5bbb0f){var _0xfeedb6=_0x1cc6,_0xc330e0=_0x5bbb0f[_0xfeedb6(0x467)];_0x5bbb0f[_0xfeedb6(0x180)]();if(_0xc330e0)_0xc330e0[_0xfeedb6(0x2db)][_0xfeedb6(0x180)](_0xfeedb6(0x17f));});});if(rayonsObserver)_0x3a46dd[_0x263ce5(0x24f)](_0x263ce5(0x147))[_0x263ce5(0x114)](function(_0x21c81d){var _0x55dc06=_0x263ce5;rayonsObserver[_0x55dc06(0x481)](_0x21c81d);});var _0x106acb=document[_0x263ce5(0x3de)]('mm-rayons');if(_0x106acb)_0x106acb[_0x263ce5(0x295)]=_0x74d20d[_0x263ce5(0x420)]<0x2?'':_0x74d20d['map'](function(_0x51de15){var _0x24b11e=_0x263ce5;return _0x24b11e(0x425)+escHtml(lienRayon(_0x51de15))+'\x22>'+escHtml(_0x51de15)+_0x24b11e(0x492);})['join']('');}var titreSite='';function lienRayon(_0xf93edb){var _0x130fd1=_0x44a01f;return _0x130fd1(0x3fb)+encodeURIComponent(pharmaSlugRayon(_0xf93edb));}function slugAdresse(){var _0x24b22e=_0x44a01f,_0x37de1e=/[?&]rayon=([^&#]*)/[_0x24b22e(0x172)](location[_0x24b22e(0x482)]);if(!_0x37de1e)return'';try{return decodeURIComponent(_0x37de1e[0x1])[_0x24b22e(0x3b9)]();}catch(_0x3818d5){return'';}}function afficherVue(_0x2e401d){var _0x5000d2=_0x44a01f,_0x101a64=document[_0x5000d2(0x3de)](_0x5000d2(0x204));if(!_0x101a64)return;var _0x45812a=slugAdresse();document[_0x5000d2(0x3c4)]['classList'][_0x5000d2(0x170)](_0x5000d2(0x309),!!_0x45812a),_0x101a64['hidden']=!_0x45812a;if(_0x45812a){renderPageRayon();if(_0x2e401d)window[_0x5000d2(0x1fa)](0x0,0x0);}else{if(titreSite)document[_0x5000d2(0x23f)]=titreSite;}}function renderPageRayon(){var _0x26da08=_0x44a01f,_0x3e7919=slugAdresse();if(!_0x3e7919)return;var _0x3fad2c=document['getElementById'](_0x26da08(0x1eb)),_0xeea3d4=document[_0x26da08(0x3de)](_0x26da08(0x450)),_0x2365cd=document[_0x26da08(0x3de)](_0x26da08(0x151)),_0x561976=document[_0x26da08(0x3de)](_0x26da08(0x359)),_0x53b041=document[_0x26da08(0x3de)](_0x26da08(0x365)),_0xa4df6=document[_0x26da08(0x3de)](_0x26da08(0x4a2));if(!_0x3fad2c||!_0x2365cd)return;var _0x20ba26=(DATA[_0x26da08(0x2b6)]||{})[_0x26da08(0x22d)]||'',_0x32a41c=function(_0x3ad51a){var _0x575ec3=_0x26da08,_0x4befb9=rayonsAvecProduits()[_0x575ec3(0x297)](function(_0x1ef099){return _0x1ef099!==_0x3ad51a;});_0xa4df6[_0x575ec3(0x178)]=!_0x4befb9[_0x575ec3(0x420)],_0x53b041[_0x575ec3(0x295)]=_0x4befb9[_0x575ec3(0x16d)](function(_0x3d4b90){var _0x2ba28e=_0x575ec3;return _0x2ba28e(0x441)+escHtml(lienRayon(_0x3d4b90))+'\x22>'+escHtml(_0x3d4b90)+_0x2ba28e(0x205);})[_0x575ec3(0x3ca)]('');};if(EN_LIGNE&&CATALOGUE[_0x26da08(0x420)]===0x0&&ETAT_CLOUD!==_0x26da08(0x3d4)){_0x3fad2c[_0x26da08(0x295)]=ETAT_CLOUD===_0x26da08(0x32e)?_0x26da08(0x490):'',_0xeea3d4[_0x26da08(0x187)]='',_0x561976['hidden']=!![],_0x2365cd[_0x26da08(0x295)]=messageCatalogueCloud(),_0xa4df6[_0x26da08(0x178)]=!![];return;}var _0x2de00a=pharmaRayonDepuisSlug(DATA,_0x3e7919);if(_0x2de00a&&!pharmaRayonVisible(DATA,_0x2de00a))_0x2de00a=null;if(!_0x2de00a){_0x3fad2c[_0x26da08(0x187)]=_0x26da08(0x43c),_0xeea3d4[_0x26da08(0x187)]=_0x26da08(0x3fa),_0x561976['hidden']=!![],_0x2365cd[_0x26da08(0x295)]='',_0x32a41c(null),document[_0x26da08(0x23f)]='Rayon\x20introuvable'+(_0x20ba26?_0x26da08(0x3f3)+_0x20ba26:'');return;}var _0x24ceae=produitsCatalogueDuRayon(_0x2de00a);_0x3fad2c[_0x26da08(0x187)]=_0x2de00a,_0xeea3d4[_0x26da08(0x187)]=_0x24ceae[_0x26da08(0x420)]?_0x24ceae[_0x26da08(0x420)]+_0x26da08(0x48f)+(_0x24ceae[_0x26da08(0x420)]>0x1?'s':'')+',\x20à\x20réserver\x20en\x20ligne\x20et\x20à\x20retirer\x20en\x20pharmacie':'';var _0x545402=pharmaPhotoRayon(DATA,_0x2de00a),_0x8a4dcf=_0x561976['querySelector'](_0x26da08(0x17c));_0x561976[_0x26da08(0x178)]=!_0x545402,_0x545402&&_0x8a4dcf['getAttribute']('src')!==_0x545402&&(_0x561976[_0x26da08(0x2db)][_0x26da08(0x180)](_0x26da08(0x1f4)),_0x8a4dcf[_0x26da08(0x402)]=_0x545402,suivrePhoto(_0x8a4dcf,function(){var _0x37bfcc=_0x26da08;_0x561976[_0x37bfcc(0x178)]=!![];})),_0x2365cd['innerHTML']=_0x24ceae[_0x26da08(0x420)]?_0x24ceae['map'](carteProduitHTML)[_0x26da08(0x3ca)](''):_0x26da08(0x299),suivrePhotos(_0x2365cd),observeReveals(),initTilt(),_0x32a41c(_0x2de00a),document[_0x26da08(0x23f)]=_0x2de00a+(_0x20ba26?'\x20—\x20'+_0x20ba26:'');}var voileNav=null,minuteurVoile=0x0;function sansDefilementDoux(_0x54371b){var _0x16aa9f=_0x44a01f,_0x1be5f8=document[_0x16aa9f(0x2d4)],_0x3500a7=_0x1be5f8['style'][_0x16aa9f(0x31e)];_0x1be5f8['style'][_0x16aa9f(0x31e)]=_0x16aa9f(0x27d),void getComputedStyle(_0x1be5f8)['scrollBehavior'];try{_0x54371b();}finally{_0x1be5f8[_0x16aa9f(0x461)][_0x16aa9f(0x31e)]=_0x3500a7;}}function allerA(_0x43b264,_0x419eb1){var _0x5e4996=_0x44a01f;function _0x50497a(){var _0x1ec133=_0x1cc6;return typeof _0x43b264===_0x1ec133(0x39f)?document['getElementById'](_0x43b264[_0x1ec133(0x3b5)](/^#/,'')):_0x43b264;}function _0x2e6d58(){if(_0x419eb1)_0x419eb1();var _0x491554=_0x50497a();if(!_0x491554)return;sansDefilementDoux(function(){var _0x573f44=_0x1cc6;_0x491554[_0x573f44(0x2e8)]({'block':_0x573f44(0x350)});});}if(prefersReducedMotion()){_0x2e6d58();return;}!voileNav&&(voileNav=document[_0x5e4996(0x3cf)]('div'),voileNav[_0x5e4996(0x3b4)]=_0x5e4996(0x491),voileNav[_0x5e4996(0x13f)](_0x5e4996(0x314),'true'),document[_0x5e4996(0x3c4)][_0x5e4996(0x301)](voileNav)),clearTimeout(minuteurVoile),voileNav['classList'][_0x5e4996(0x29c)]('visible'),minuteurVoile=setTimeout(function(){_0x2e6d58(),requestAnimationFrame(function(){requestAnimationFrame(function(){var _0x1d071f=_0x1cc6;voileNav[_0x1d071f(0x2db)]['remove'](_0x1d071f(0x3b7));});});},0xf0);}function initNavigationRayons(){var _0x49ae76=_0x44a01f;document[_0x49ae76(0x3d7)](_0x49ae76(0x47a),function(_0x5b8838){var _0x3c5c15=_0x49ae76;if(_0x5b8838[_0x3c5c15(0x26c)]||_0x5b8838[_0x3c5c15(0x10e)]!==0x0||_0x5b8838[_0x3c5c15(0x1ac)]||_0x5b8838['ctrlKey']||_0x5b8838[_0x3c5c15(0x18b)]||_0x5b8838['altKey'])return;var _0x1d3a89=_0x5b8838['target']['closest']&&_0x5b8838[_0x3c5c15(0x29e)][_0x3c5c15(0x1a1)](_0x3c5c15(0x3a0));if(!_0x1d3a89)return;var _0x491487=_0x1d3a89[_0x3c5c15(0x28e)](_0x3c5c15(0x346));if(/^site\.html\?rayon=[^#&]+$/['test'](_0x491487)){_0x5b8838[_0x3c5c15(0x29b)](),history[_0x3c5c15(0x372)]({'rayon':!![]},'',_0x491487),afficherVue(!![]);if(typeof closeMobileMenu==='function')closeMobileMenu();return;}if(document['body']['classList'][_0x3c5c15(0x157)](_0x3c5c15(0x309))&&/^(site\.html)?#[\w-]+$/[_0x3c5c15(0x405)](_0x491487)){_0x5b8838['preventDefault']();var _0x2f8fb9=_0x491487[_0x3c5c15(0x3b5)](/^site\.html/,'');if(typeof closeMobileMenu===_0x3c5c15(0x468))closeMobileMenu();allerA(_0x2f8fb9,function(){var _0x56c8b2=_0x3c5c15;history[_0x56c8b2(0x372)]({},'',location[_0x56c8b2(0x234)]+_0x2f8fb9),afficherVue(![]);});return;}if(/^#[\w-]+$/[_0x3c5c15(0x405)](_0x491487)){var _0x231b8f=document[_0x3c5c15(0x3de)](_0x491487[_0x3c5c15(0x118)](0x1));if(!_0x231b8f||_0x231b8f[_0x3c5c15(0x178)]||!_0x231b8f[_0x3c5c15(0x475)]()[_0x3c5c15(0x420)])return;_0x5b8838[_0x3c5c15(0x29b)]();if(typeof closeMobileMenu==='function')closeMobileMenu();try{history[_0x3c5c15(0x391)](history[_0x3c5c15(0x37e)],'',_0x491487);}catch(_0x259c3c){}allerA(_0x231b8f);}}),window[_0x49ae76(0x3d7)]('popstate',function(){afficherVue(![]);}),retrouverPositionSite(),afficherVue(![]);}var CLE_POSITION_SITE=_0x44a01f(0x291),positionARetrouver=null;window[_0x44a01f(0x3d7)]('pagehide',function(){var _0x480fd6=_0x44a01f;try{sessionStorage[_0x480fd6(0x1d3)](CLE_POSITION_SITE,JSON[_0x480fd6(0x19e)]({'vue':location[_0x480fd6(0x482)],'y':Math[_0x480fd6(0x424)](window[_0x480fd6(0x181)]||0x0),'t':Date[_0x480fd6(0x335)]()}));}catch(_0xad496c){}});function retrouverPositionSite(){var _0x36d832=_0x44a01f,_0x35596a=document[_0x36d832(0x3be)]||'',_0x5d4f5e=location[_0x36d832(0x1a6)]+location[_0x36d832(0x234)][_0x36d832(0x3b5)](/[^\/]*$/,'');if(_0x35596a['indexOf'](_0x5d4f5e)!==0x0||!/^(admin|compte)(?:\.html)?(?:[?#]|$)/['test'](_0x35596a[_0x36d832(0x118)](_0x5d4f5e[_0x36d832(0x420)])))return;if(location['hash']||location['search'])return;var _0x299e36=null;try{_0x299e36=JSON[_0x36d832(0x1bf)](sessionStorage['getItem'](CLE_POSITION_SITE)||_0x36d832(0x3a2));}catch(_0x3b50f0){}if(!_0x299e36||!(Date['now']()-_0x299e36['t']<0x1e*0x3c*0x3e8))return;if(/^\?rayon=[^&#]+$/['test'](_0x299e36[_0x36d832(0x33e)]||''))history[_0x36d832(0x391)](null,'',location[_0x36d832(0x234)]+_0x299e36['vue']);positionARetrouver=Math['max'](0x0,parseInt(_0x299e36['y'],0xa)||0x0),replacerPosition(),window[_0x36d832(0x3d7)]('load',replacerPosition),setTimeout(function(){positionARetrouver=null;},0x1770);}function replacerPosition(){if(positionARetrouver===null)return;var _0x3ab0cf=positionARetrouver;requestAnimationFrame(function(){sansDefilementDoux(function(){var _0x208503=_0x1cc6;window[_0x208503(0x1fa)](0x0,_0x3ab0cf);});});}function renderFideliteRecit(){var _0x61d84f=_0x44a01f,_0x33f207=DATA[_0x61d84f(0x2b6)]||{},_0x2f1d26=parseInt(_0x33f207[_0x61d84f(0x458)],0xa)||0x5,_0x2fdaee=parseInt(_0x33f207[_0x61d84f(0x3e4)],0xa)||0xa,_0x3a2ab8=document[_0x61d84f(0x3de)](_0x61d84f(0x1b0));if(_0x3a2ab8)_0x3a2ab8[_0x61d84f(0x187)]=_0x2f1d26+_0x61d84f(0x2a5)+_0x2fdaee+'\u00a0%';var _0x2c36b7=document[_0x61d84f(0x3de)]('fid-jauge');if(!_0x2c36b7)return;var _0x308930=Math[_0x61d84f(0x2ca)](Math['max'](_0x2f1d26,0x1),0xc);if(_0x2c36b7['children'][_0x61d84f(0x420)]!==_0x308930){var _0x3883e0='';for(var _0x38b7f8=0x0;_0x38b7f8<_0x308930;_0x38b7f8++)_0x3883e0+=_0x61d84f(0x443)+(!recitAnime||fidRemplie?_0x61d84f(0x34f):'')+_0x61d84f(0x229);_0x2c36b7['innerHTML']=_0x3883e0;}}function remplirFidelite(){var _0x4f6339=_0x44a01f;if(fidRemplie)return;fidRemplie=!![],document[_0x4f6339(0x24f)](_0x4f6339(0x313))[_0x4f6339(0x114)](function(_0x3c6ce7,_0x139618){setTimeout(function(){var _0x227537=_0x1cc6;_0x3c6ce7[_0x227537(0x2db)]['add']('plein');},0x8c*_0x139618);});}function minutesDe(_0x785587){var _0x2a95a6=_0x44a01f,_0x2891d6=String(_0x785587)[_0x2a95a6(0x163)](':');return parseInt(_0x2891d6[0x0],0xa)*0x3c+parseInt(_0x2891d6[0x1],0xa);}function horairesDu(_0x2235c0){var _0x1deb48=_0x44a01f,_0x3ed255=pharmaDateLocale(_0x2235c0),_0x3c2bc6=(DATA[_0x1deb48(0x3f2)]||[])[_0x1deb48(0x380)](function(_0x5b1959){var _0x314053=_0x1deb48;return _0x5b1959&&String(_0x5b1959[_0x314053(0x30a)]||'')[_0x314053(0x118)](0x0,0xa)===_0x3ed255;})||null;if(_0x3c2bc6&&_0x3c2bc6[_0x1deb48(0x44a)]===_0x1deb48(0x33c))return{'ouvert':![],'special':_0x3c2bc6};if(_0x3c2bc6&&heureValide(_0x3c2bc6[_0x1deb48(0x296)])&&heureValide(_0x3c2bc6['fin']))return{'ouvert':!![],'debut':_0x3c2bc6[_0x1deb48(0x296)],'fin':_0x3c2bc6[_0x1deb48(0x1bb)],'special':_0x3c2bc6};var _0x523b49=(DATA[_0x1deb48(0x240)]||{})[JOURS_ORDRE[(_0x2235c0[_0x1deb48(0x446)]()+0x6)%0x7]];if(_0x523b49&&_0x523b49['ouvert']&&heureValide(_0x523b49['debut'])&&heureValide(_0x523b49[_0x1deb48(0x1bb)]))return{'ouvert':!![],'debut':_0x523b49[_0x1deb48(0x296)],'fin':_0x523b49[_0x1deb48(0x1bb)],'special':_0x3c2bc6};return{'ouvert':![],'special':_0x3c2bc6};}function etatOuverture(_0x46f591){var _0x27a1b0=_0x44a01f;_0x46f591=_0x46f591||new Date();var _0xc06f5a=horairesDu(_0x46f591),_0x2d7b99=_0x46f591['getHours']()*0x3c+_0x46f591[_0x27a1b0(0x1d4)](),_0x1d55f6={'ouvert':![],'titre':'','suite':'','special':_0xc06f5a[_0x27a1b0(0x46f)]};if(_0xc06f5a[_0x27a1b0(0x389)]&&_0x2d7b99>=minutesDe(_0xc06f5a[_0x27a1b0(0x296)])&&_0x2d7b99<minutesDe(_0xc06f5a[_0x27a1b0(0x1bb)]))return _0x1d55f6[_0x27a1b0(0x389)]=!![],_0x1d55f6[_0x27a1b0(0x25b)]='Ouvert\x20jusqu\x27à\x20'+formatHeure(_0xc06f5a[_0x27a1b0(0x1bb)]),_0x1d55f6;if(_0xc06f5a[_0x27a1b0(0x389)]&&_0x2d7b99<minutesDe(_0xc06f5a['debut']))return _0x1d55f6['titre']='Ouvre\x20aujourd\x27hui\x20à\x20'+formatHeure(_0xc06f5a['debut']),_0x1d55f6;_0x1d55f6[_0x27a1b0(0x25b)]=_0xc06f5a['special']&&_0xc06f5a[_0x27a1b0(0x46f)][_0x27a1b0(0x44a)]==='Fermeture'?_0x27a1b0(0x43e):_0x27a1b0(0x106);for(var _0x168180=0x1;_0x168180<=0x7;_0x168180++){var _0x1f11e9=new Date(_0x46f591['getFullYear'](),_0x46f591[_0x27a1b0(0x264)](),_0x46f591[_0x27a1b0(0x460)]()+_0x168180),_0x534fed=horairesDu(_0x1f11e9);if(_0x534fed[_0x27a1b0(0x389)]){_0x1d55f6[_0x27a1b0(0x195)]=_0x27a1b0(0x135)+(_0x168180===0x1?'demain':JOURS_SEMAINE[_0x1f11e9[_0x27a1b0(0x446)]()])+_0x27a1b0(0x394)+formatHeure(_0x534fed[_0x27a1b0(0x296)]);break;}}return _0x1d55f6;}function renderAujourdhui(){var _0x3aa461=_0x44a01f,_0x4dca6a=document['getElementById']('auj-titre');if(!_0x4dca6a)return;var _0x54a7e3=DATA['parametres']||{},_0x1f5dd8=etatOuverture();_0x4dca6a['textContent']=_0x1f5dd8[_0x3aa461(0x25b)];var _0x45e973=document['querySelector'](_0x3aa461(0x202));if(_0x45e973)_0x45e973[_0x3aa461(0x2db)][_0x3aa461(0x170)]('ferme',!_0x1f5dd8['ouvert']);var _0x2cd7cf=document['getElementById'](_0x3aa461(0x474));if(_0x2cd7cf)_0x2cd7cf[_0x3aa461(0x187)]=_0x1f5dd8[_0x3aa461(0x195)]||(_0x1f5dd8[_0x3aa461(0x46f)]&&_0x1f5dd8['special'][_0x3aa461(0x44a)]===_0x3aa461(0x3d0)?'Pharmacie\x20de\x20garde\x20aujourd\x27hui':'');var _0x17ae45=document['getElementById'](_0x3aa461(0x316));if(_0x17ae45){var _0x13e584=prochainJourSpecial(),_0x7d6c3e=_0x13e584&&String(_0x13e584[_0x3aa461(0x30a)])[_0x3aa461(0x118)](0x0,0xa)!==pharmaDateLocale()?_0x13e584:null;_0x17ae45['hidden']=!_0x7d6c3e,_0x17ae45['textContent']=_0x7d6c3e?texteJourSpecial(_0x7d6c3e):'';}var _0x1ee817=document[_0x3aa461(0x3de)](_0x3aa461(0x2b0));if(_0x1ee817)_0x1ee817[_0x3aa461(0x187)]=_0x54a7e3[_0x3aa461(0x1c5)]||'';var _0x1941c9=document[_0x3aa461(0x3de)]('auj-tel');_0x1941c9&&(_0x1941c9[_0x3aa461(0x461)]['display']=_0x54a7e3[_0x3aa461(0x266)]?'':_0x3aa461(0x362),_0x1941c9[_0x3aa461(0x187)]=_0x54a7e3[_0x3aa461(0x266)]||'',_0x1941c9[_0x3aa461(0x346)]=_0x3aa461(0x2e7)+String(_0x54a7e3[_0x3aa461(0x266)]||'')[_0x3aa461(0x3b5)](/[^\d+]/g,''));var _0x4f1115=document[_0x3aa461(0x3de)](_0x3aa461(0x3ef));_0x4f1115&&(_0x4f1115['style'][_0x3aa461(0x1d9)]=_0x54a7e3['adresse']?'':_0x3aa461(0x362),_0x4f1115['href']=_0x3aa461(0x357)+encodeURIComponent((_0x54a7e3['nom']?_0x54a7e3[_0x3aa461(0x22d)]+',\x20':'')+(_0x54a7e3[_0x3aa461(0x1c5)]||'')));}function initRecit(){var _0x167d10=_0x44a01f,_0x10c187=document[_0x167d10(0x3de)](_0x167d10(0x279));if(_0x10c187)_0x10c187[_0x167d10(0x3d7)](_0x167d10(0x47a),function(){var _0x505118=_0x167d10,_0x743862=unePromo;if(_0x743862)addToCart(_0x743862['id'],_0x743862[_0x505118(0x22d)],nombre(_0x743862[_0x505118(0x10d)]),_0x743862[_0x505118(0x3a1)],_0x743862[_0x505118(0x159)]);});initRaccourci(),initDefilementUne(),setInterval(renderAujourdhui,0xea60);if(!recitAnime)return;var _0x10d8dc=document['querySelector'](_0x167d10(0x272));if(_0x10d8dc&&uneAnim[_0x167d10(0x221)]==='attente')rackFocus(_0x167d10(0x209));if(_0x10d8dc)new IntersectionObserver(function(_0x361dee){var _0x1a9a4c=_0x167d10;_0x361dee[_0x1a9a4c(0x114)](function(_0x3e015b){var _0x3ee101=_0x1a9a4c;if(_0x3e015b[_0x3ee101(0x3f9)]>=0.5)compterUne();else{if(!_0x3e015b[_0x3ee101(0x388)])rearmerUne();}});},{'threshold':[0x0,0.5]})[_0x167d10(0x481)](_0x10d8dc);var _0xb81c01=document[_0x167d10(0x24f)](_0x167d10(0x349)),_0x217da3=new IntersectionObserver(function(_0x57bcbc){var _0x7b1699=_0x167d10;_0x57bcbc[_0x7b1699(0x114)](function(_0xc1ad79){var _0x56bdbf=_0x7b1699;if(!_0xc1ad79[_0x56bdbf(0x388)])return;var _0x29f5a7=parseInt(_0xc1ad79['target'][_0x56bdbf(0x28e)](_0x56bdbf(0x232)),0xa);_0xb81c01[_0x56bdbf(0x114)](function(_0x590f21,_0xcf9b60){var _0x4c748f=_0x56bdbf;_0x590f21[_0x4c748f(0x2db)][_0x4c748f(0x170)](_0x4c748f(0x292),_0xcf9b60===_0x29f5a7);});});},{'rootMargin':_0x167d10(0x1ae)});document[_0x167d10(0x24f)](_0x167d10(0x33d))[_0x167d10(0x114)](function(_0x517f99){_0x217da3['observe'](_0x517f99);}),rayonsObserver=new IntersectionObserver(function(_0x110ff1){var _0x30292a=_0x167d10;_0x110ff1[_0x30292a(0x114)](function(_0xc7a55c){var _0x2416e2=_0x30292a;_0xc7a55c[_0x2416e2(0x29e)][_0x2416e2(0x2db)][_0x2416e2(0x170)]('actif',_0xc7a55c[_0x2416e2(0x388)]);});},{'rootMargin':_0x167d10(0x36e)}),document[_0x167d10(0x24f)](_0x167d10(0x1b8))[_0x167d10(0x114)](function(_0x552160){var _0x27a60a=_0x167d10;rayonsObserver[_0x27a60a(0x481)](_0x552160);});var _0x1f7c43=document[_0x167d10(0x3de)](_0x167d10(0x35f));if(_0x1f7c43)new IntersectionObserver(function(_0x2c6b11){var _0x24e403=_0x167d10;_0x2c6b11[_0x24e403(0x114)](function(_0x3a9995){var _0x478b9c=_0x24e403;if(_0x3a9995[_0x478b9c(0x388)])remplirFidelite();});},{'threshold':0.6})['observe'](_0x1f7c43);}function initRaccourci(){var _0x5eaf6c=_0x44a01f,_0x5b6bf3=document[_0x5eaf6c(0x3de)](_0x5eaf6c(0x2c4)),_0x58ed34=document['getElementById'](_0x5eaf6c(0x22a)),_0x3000cb=document[_0x5eaf6c(0x3de)](_0x5eaf6c(0x278)),_0x11759b=document[_0x5eaf6c(0x11e)](_0x5eaf6c(0x3d2));if(!_0x5b6bf3||!_0x58ed34||!_0x3000cb||!window['IntersectionObserver'])return;var _0x414952=!![],_0x407bdb=![],_0x2aa265=![];if(_0x11759b)new IntersectionObserver(function(_0x4b372b){var _0xa54857=_0x5eaf6c;_0x2aa265=_0x4b372b[0x0][_0xa54857(0x388)],_0x39e2fd();})['observe'](_0x11759b);function _0x39e2fd(){var _0xc7421d=_0x5eaf6c,_0x1da590=document['getElementById'](_0xc7421d(0x26e)),_0x48e301=_0x1da590&&_0x1da590[_0xc7421d(0x2db)][_0xc7421d(0x157)](_0xc7421d(0x488)),_0x4dc450=!_0x414952&&!_0x407bdb&&!_0x2aa265&&!_0x48e301;_0x5b6bf3[_0xc7421d(0x2db)][_0xc7421d(0x170)]('visible',_0x4dc450),_0x5b6bf3['setAttribute'](_0xc7421d(0x314),_0x4dc450?_0xc7421d(0x2f3):_0xc7421d(0x1af)),_0x5b6bf3[_0xc7421d(0x2af)]=_0x4dc450?0x0:-0x1;}new IntersectionObserver(function(_0x144991){_0x414952=_0x144991[0x0]['isIntersecting'],_0x39e2fd();})[_0x5eaf6c(0x481)](_0x58ed34),new IntersectionObserver(function(_0x26530a){var _0x2c8148=_0x5eaf6c;_0x407bdb=_0x26530a[0x0][_0x2c8148(0x388)],_0x39e2fd();},{'rootMargin':_0x5eaf6c(0x1e9)})[_0x5eaf6c(0x481)](_0x3000cb),_0x5b6bf3[_0x5eaf6c(0x3d7)](_0x5eaf6c(0x47a),function(_0x5077e0){var _0x5da863=_0x5eaf6c;_0x5077e0[_0x5da863(0x29b)](),allerA(_0x3000cb);});var _0x4f56eb=document[_0x5eaf6c(0x3de)]('cookie-bar');if(_0x4f56eb&&window[_0x5eaf6c(0x286)])new MutationObserver(_0x39e2fd)[_0x5eaf6c(0x481)](_0x4f56eb,{'attributes':!![],'attributeFilter':[_0x5eaf6c(0x198)]});}function openPromoDetail(_0xa2de77){var _0x47737f=_0x44a01f,_0x484113=PROMOS[_0x47737f(0x380)](function(_0x49c90e){return _0x49c90e['id']===_0xa2de77;});if(!_0x484113)return;var _0x1d840f=document['getElementById'](_0x47737f(0x3b3));if(!_0x1d840f)return;document['getElementById'](_0x47737f(0x1aa))[_0x47737f(0x187)]=_0x484113[_0x47737f(0x159)],document['getElementById'](_0x47737f(0x3f1))[_0x47737f(0x187)]=_0x484113[_0x47737f(0x22d)],document[_0x47737f(0x3de)]('pd-prix-promo')[_0x47737f(0x187)]=nombre(_0x484113[_0x47737f(0x10d)])['toFixed'](0x2)[_0x47737f(0x3b5)]('.',',')+'€',document[_0x47737f(0x3de)](_0x47737f(0x162))['textContent']=nombre(_0x484113[_0x47737f(0x34c)])[_0x47737f(0x329)](0x2)[_0x47737f(0x3b5)]('.',',')+'€',document[_0x47737f(0x3de)]('pd-badge')[_0x47737f(0x187)]='-'+_0x484113['pct']+'%',document[_0x47737f(0x3de)](_0x47737f(0x2ae))[_0x47737f(0x187)]=_0x47737f(0x40a)+_0x484113[_0x47737f(0x1bb)];var _0xd60523=document[_0x47737f(0x3de)]('pd-icon');_0xd60523[_0x47737f(0x295)]=visuelCarte(_0x484113),_0xd60523['classList']['remove'](_0x47737f(0x1f4)),_0xd60523['classList']['toggle'](_0x47737f(0x188),!!pharmaPhotoValide(_0x484113[_0x47737f(0x334)])),suivrePhotos(_0xd60523);var _0xd60a5=document[_0x47737f(0x3de)](_0x47737f(0x259));_0xd60a5[_0x47737f(0x1bc)](_0x47737f(0x3eb)),_0xd60a5['onclick']=function(){var _0x207226=_0x47737f;addToCart(_0x484113['id'],_0x484113['nom'],nombre(_0x484113[_0x207226(0x10d)]),_0x484113['icon'],_0x484113[_0x207226(0x159)]),closePromoDetail();},_0x1d840f[_0x47737f(0x2db)][_0x47737f(0x29c)](_0x47737f(0x41c));}function closePromoDetail(){var _0x523e2e=_0x44a01f,_0x44bdd0=document['getElementById'](_0x523e2e(0x3b3));if(_0x44bdd0)_0x44bdd0[_0x523e2e(0x2db)][_0x523e2e(0x180)]('open');}function renderPromos(){var _0x412c73=_0x44a01f,_0x1b7ec5=document['getElementById'](_0x412c73(0x472));if(!_0x1b7ec5)return;var _0x22d54e='';PROMOS[_0x412c73(0x114)](function(_0x2a92ee){var _0xd9020d=_0x412c73;_0x22d54e+=_0xd9020d(0x146),_0x22d54e+='<div\x20class=\x22promo-img'+(pharmaPhotoValide(_0x2a92ee[_0xd9020d(0x334)])?_0xd9020d(0x27f):'')+_0xd9020d(0x1ef)+escAttr(_0x2a92ee['id'])+_0xd9020d(0x1d2)+visuelCarte(_0x2a92ee),_0x22d54e+=_0xd9020d(0x1c6)+escHtml(_0x2a92ee[_0xd9020d(0x263)])+_0xd9020d(0x298),_0x22d54e+=_0xd9020d(0x344)+escHtml(_0x2a92ee[_0xd9020d(0x1bb)])+'</span>',_0x22d54e+=_0xd9020d(0x3a6),_0x22d54e+=_0xd9020d(0x3ea),_0x22d54e+=_0xd9020d(0x45d),_0x22d54e+='<div\x20class=\x22promo-cat\x22>'+escHtml(_0x2a92ee[_0xd9020d(0x159)])+_0xd9020d(0x3ea),_0x22d54e+=_0xd9020d(0x444)+escHtml(_0x2a92ee[_0xd9020d(0x22d)])+_0xd9020d(0x3ea),_0x22d54e+=_0xd9020d(0x442)+nombre(_0x2a92ee[_0xd9020d(0x10d)])[_0xd9020d(0x329)](0x2)['replace']('.',',')+_0xd9020d(0x17d)+nombre(_0x2a92ee['prixNormal'])['toFixed'](0x2)[_0xd9020d(0x3b5)]('.',',')+'€</span></div>',_0x22d54e+=_0xd9020d(0x1c2)+escAttr(_0x2a92ee['id'])+'\x27,\x27'+escAttr(_0x2a92ee[_0xd9020d(0x22d)])+'\x27,'+nombre(_0x2a92ee['prixPromo'])+',\x27'+escAttr(_0x2a92ee[_0xd9020d(0x3a1)])+'\x27,\x27'+escAttr(_0x2a92ee[_0xd9020d(0x159)])+'\x27)\x22><svg\x20width=\x2215\x22\x20height=\x2215\x22\x20fill=\x22none\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222\x22><line\x20x1=\x2212\x22\x20y1=\x225\x22\x20x2=\x2212\x22\x20y2=\x2219\x22/><line\x20x1=\x225\x22\x20y1=\x2212\x22\x20x2=\x2219\x22\x20y2=\x2212\x22/></svg>Ajouter\x20au\x20panier</button>',_0x22d54e+=_0xd9020d(0x2cd);}),_0x1b7ec5[_0x412c73(0x295)]=_0x22d54e,suivrePhotos(_0x1b7ec5),_0x1b7ec5[_0x412c73(0x24f)](_0x412c73(0x21b))['forEach'](function(_0x289f6c){var _0x3c6076=_0x412c73,_0x139083=_0x289f6c['querySelector']('.promo-hover-overlay');if(!_0x139083)return;_0x289f6c['addEventListener']('mouseenter',function(){var _0x2c8840=_0x1cc6;_0x139083[_0x2c8840(0x461)][_0x2c8840(0x3d6)]='1',_0x139083[_0x2c8840(0x461)][_0x2c8840(0x244)]=_0x2c8840(0x15c);}),_0x289f6c['addEventListener'](_0x3c6076(0xf2),function(){var _0x244db6=_0x3c6076;_0x139083[_0x244db6(0x461)]['opacity']='0',_0x139083['style'][_0x244db6(0x244)]=_0x244db6(0x485);});}),observeReveals(),initTilt();}var currentCat=_0x44a01f(0x2aa);function carteProduitHTML(_0x4c6c61){var _0x2dd4fc=_0x44a01f,_0x5f28af=_0x4c6c61[_0x2dd4fc(0x47f)]!==undefined&&_0x4c6c61[_0x2dd4fc(0x47f)]<=0x0,_0x576b46=_0x2dd4fc(0x146);_0x576b46+=_0x2dd4fc(0x1df)+(pharmaPhotoValide(_0x4c6c61[_0x2dd4fc(0x334)])?_0x2dd4fc(0x27f):'')+'\x22>'+visuelCarte(_0x4c6c61);if(_0x5f28af)_0x576b46+=_0x2dd4fc(0x282);return _0x576b46+=_0x2dd4fc(0x3ea),_0x576b46+=_0x2dd4fc(0x45d),_0x576b46+=_0x2dd4fc(0x1b2)+escHtml(_0x4c6c61['cat'])+_0x2dd4fc(0x3ea),_0x576b46+=_0x2dd4fc(0x444)+escHtml(_0x4c6c61[_0x2dd4fc(0x22d)])+_0x2dd4fc(0x3ea),_0x576b46+=_0x2dd4fc(0xf7)+nombre(_0x4c6c61[_0x2dd4fc(0x340)])[_0x2dd4fc(0x329)](0x2)['replace']('.',',')+_0x2dd4fc(0x384),_0x5f28af?_0x576b46+=_0x2dd4fc(0x1f1):_0x576b46+=_0x2dd4fc(0x1c2)+escAttr(_0x4c6c61['id'])+_0x2dd4fc(0x143)+escAttr(_0x4c6c61[_0x2dd4fc(0x22d)])+'\x27,'+nombre(_0x4c6c61[_0x2dd4fc(0x340)])+',\x27'+escAttr(_0x4c6c61[_0x2dd4fc(0x3a1)])+_0x2dd4fc(0x143)+escAttr(_0x4c6c61[_0x2dd4fc(0x159)])+_0x2dd4fc(0x2b8),_0x576b46+_0x2dd4fc(0x2cd);}function produitsCatalogueDuRayon(_0x13453c){var _0x3a4b75=_0x44a01f;return pharmaProduitsDuRayon(DATA,_0x13453c)['map'](function(_0x2951c9){var _0x5965a1=_0x1cc6;return CATALOGUE[_0x5965a1(0x380)](function(_0x1375d3){var _0x26f473=_0x5965a1;return _0x1375d3[_0x26f473(0x258)]===_0x2951c9['id'];});})[_0x3a4b75(0x297)](Boolean);}function rayonsAvecProduits(){var _0x5f08eb=_0x44a01f;return(DATA[_0x5f08eb(0x4a4)]||[])[_0x5f08eb(0x297)](function(_0x142526){var _0x3be90b=_0x5f08eb;return pharmaRayonVisible(DATA,_0x142526)&&produitsCatalogueDuRayon(_0x142526)[_0x3be90b(0x420)]>0x0;});}function renderCatalogue(){var _0x36cc03=_0x44a01f,_0x42a344=document['getElementById']('catalogue-grid'),_0x300f36=document['getElementById'](_0x36cc03(0x375));if(!_0x42a344)return;var _0xf64c17=['Tous'][_0x36cc03(0x169)](rayonsAvecProduits());if(_0xf64c17[_0x36cc03(0x48c)](currentCat)===-0x1)currentCat=_0x36cc03(0x2aa);_0x300f36&&(_0x300f36[_0x36cc03(0x295)]=_0xf64c17[_0x36cc03(0x16d)](function(_0x3ef711){var _0x3918a7=_0x36cc03;return _0x3918a7(0x3cd)+escAttr(_0x3ef711)+_0x3918a7(0x376)+(_0x3ef711===currentCat?_0x3918a7(0x1d8):_0x3918a7(0x126))+_0x3918a7(0x499)+(_0x3ef711===currentCat?_0x3918a7(0x1d8):_0x3918a7(0x412))+_0x3918a7(0x35d)+(_0x3ef711===currentCat?_0x3918a7(0x363):'var(--texte-2)')+_0x3918a7(0x41d)+escHtml(_0x3ef711)+_0x3918a7(0x257);})['join'](''));var _0x8c4f1e=currentCat===_0x36cc03(0x2aa)?CATALOGUE:produitsCatalogueDuRayon(currentCat);if(EN_LIGNE&&CATALOGUE[_0x36cc03(0x420)]===0x0&&ETAT_CLOUD!=='pret'){_0x42a344[_0x36cc03(0x295)]=messageCatalogueCloud();return;}_0x42a344[_0x36cc03(0x295)]=_0x8c4f1e[_0x36cc03(0x16d)](carteProduitHTML)[_0x36cc03(0x3ca)](''),suivrePhotos(_0x42a344),observeReveals(),initTilt();}function filterCat(_0x172132){currentCat=_0x172132,renderCatalogue();}function renderFaq(){var _0x3884bf=_0x44a01f,_0x18379b=document[_0x3884bf(0x3de)](_0x3884bf(0x129));if(!_0x18379b)return;var _0x4df726='';FAQ[_0x3884bf(0x114)](function(_0x2a0c70,_0x1764e8){var _0x576d6e=_0x3884bf;_0x4df726+=_0x576d6e(0x33a)+_0x1764e8+'\x22>',_0x4df726+=_0x576d6e(0x385)+_0x1764e8+')\x22\x20aria-expanded=\x22false\x22>',_0x4df726+=_0x576d6e(0x3a8)+escHtml(_0x2a0c70['q'])+_0x576d6e(0x44d),_0x4df726+='<span\x20class=\x22faq-icon\x22><svg\x20width=\x2212\x22\x20height=\x2212\x22\x20fill=\x22none\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222.5\x22><polyline\x20points=\x226\x209\x2012\x2015\x2018\x209\x22/></svg></span>',_0x4df726+=_0x576d6e(0x257);var _0x3f8935=_0x2a0c70['a'][_0x576d6e(0x3b5)](_0x576d6e(0x342),escHtml(PharmaTextes[_0x576d6e(0x3e7)]((DATA[_0x576d6e(0x2b6)]||{})[_0x576d6e(0x22d)])));_0x4df726+=_0x576d6e(0x165)+_0x3f8935+'</div></div>',_0x4df726+=_0x576d6e(0x3ea);}),_0x18379b[_0x3884bf(0x295)]=_0x4df726;}function toggleFaq(_0x273fdf){var _0x4906ea=_0x44a01f,_0x48b233=document['getElementById']('faq-'+_0x273fdf);if(!_0x48b233)return;var _0x2f1ac0=_0x48b233['classList']['contains'](_0x4906ea(0x41c));document[_0x4906ea(0x24f)](_0x4906ea(0x31c))[_0x4906ea(0x114)](function(_0x1cc0d3){var _0x44be55=_0x4906ea;_0x1cc0d3['classList'][_0x44be55(0x180)]('open'),_0x1cc0d3[_0x44be55(0x11e)](_0x44be55(0x17e))[_0x44be55(0x13f)]('aria-expanded',_0x44be55(0x2f3));var _0xb6c10a=_0x1cc0d3[_0x44be55(0x11e)]('.faq-answer');if(_0xb6c10a)_0xb6c10a[_0x44be55(0x461)][_0x44be55(0x437)]=null;});if(!_0x2f1ac0){_0x48b233['classList'][_0x4906ea(0x29c)]('open'),_0x48b233[_0x4906ea(0x11e)](_0x4906ea(0x17e))[_0x4906ea(0x13f)](_0x4906ea(0x11d),'true');var _0x29841b=_0x48b233[_0x4906ea(0x11e)]('.faq-answer');if(_0x29841b)_0x29841b['style']['maxHeight']=_0x29841b[_0x4906ea(0x2f7)]+'px';}}function addToCart(_0xac9794,_0x299d9b,_0x17b4d5,_0x133dc6,_0x444a91){var _0x4adff3=_0x44a01f,_0x17750f=cart[_0x4adff3(0x380)](function(_0x2f5958){return _0x2f5958['id']===_0xac9794;});_0x17750f?_0x17750f[_0x4adff3(0x415)]++:cart[_0x4adff3(0x2df)]({'id':_0xac9794,'nom':_0x299d9b,'prix':_0x17b4d5,'icon':_0x133dc6,'cat':_0x444a91||'Tous','qty':0x1});updateCart(),pharmaToast(_0x299d9b+'\x20ajouté\x20au\x20panier',{'article':{'id':_0xac9794,'icon':_0x133dc6}});var _0x2ef81d=document[_0x4adff3(0x3de)](_0x4adff3(0x42b));_0x2ef81d&&(_0x2ef81d[_0x4adff3(0x461)]['transform']='scale(1.2)',setTimeout(function(){var _0x15f852=_0x4adff3;_0x2ef81d[_0x15f852(0x461)][_0x15f852(0x302)]='';},0xc8));}function removeFromCart(_0x71fbe8){var _0xe0f079=_0x44a01f;cart=cart[_0xe0f079(0x297)](function(_0x362692){return _0x362692['id']!==_0x71fbe8;}),updateCart();}function changeQty(_0xc24153,_0x4bd784){var _0x30fdef=_0x44a01f,_0x1554ba=cart['find'](function(_0x1380c4){return _0x1380c4['id']===_0xc24153;});if(_0x1554ba){_0x1554ba[_0x30fdef(0x415)]+=_0x4bd784;if(_0x1554ba[_0x30fdef(0x415)]<=0x0)removeFromCart(_0xc24153);else updateCart();}}function totauxPanier(_0x682104,_0x456e83){var _0x52bbc4=_0x44a01f,_0x7ecba1=_0x682104['reduce'](function(_0x21a210,_0x17b667){var _0x1e3690=_0x1cc6;return _0x21a210+_0x17b667[_0x1e3690(0x340)]*_0x17b667['qty'];},0x0),_0xe43cd1=0x0;if(_0x456e83){if(_0x456e83[_0x52bbc4(0x153)]===_0x52bbc4(0x2aa))_0xe43cd1=_0x7ecba1*_0x456e83[_0x52bbc4(0x263)]/0x64;else{var _0x270b2a=_0x682104[_0x52bbc4(0x297)](function(_0x98da01){var _0x1a7216=_0x52bbc4;return _0x98da01[_0x1a7216(0x159)]===_0x456e83['scope'];})[_0x52bbc4(0x1d6)](function(_0x3864e1,_0xb245c8){var _0x272c5f=_0x52bbc4;return _0x3864e1+_0xb245c8[_0x272c5f(0x340)]*_0xb245c8[_0x272c5f(0x415)];},0x0);_0xe43cd1=_0x270b2a*_0x456e83[_0x52bbc4(0x263)]/0x64;}}return{'subtotal':_0x7ecba1,'discount':_0xe43cd1,'total':_0x7ecba1-_0xe43cd1};}function euros(_0x3b2307){var _0x3a8941=_0x44a01f;return nombre(_0x3b2307)['toFixed'](0x2)[_0x3a8941(0x3b5)]('.',',')+'€';}function recapArticlesHTML(_0x3bf757,_0x5e5dec,_0x163fdf){var _0x451a22=_0x44a01f,_0x2a34e2=totauxPanier(_0x3bf757,_0x5e5dec);if(_0x163fdf&&isFinite(Number(_0x163fdf[_0x451a22(0x414)])))_0x2a34e2={'discount':nombre(_0x163fdf[_0x451a22(0x3ae)]),'total':nombre(_0x163fdf[_0x451a22(0x414)])};var _0x30619d=_0x3bf757[_0x451a22(0x1d6)](function(_0x1853b1,_0x51175e){var _0x130084=_0x451a22;return _0x1853b1+nombre(_0x51175e[_0x130084(0x415)]);},0x0);return _0x451a22(0x25c)+_0x3bf757[_0x451a22(0x16d)](function(_0x360c2c){var _0x4c6a02=_0x451a22;return _0x4c6a02(0x12e)+vignetteArticle(_0x360c2c,_0x4c6a02(0x16c))+_0x4c6a02(0x39d)+escHtml(_0x360c2c['nom'])+_0x4c6a02(0x317)+nombre(_0x360c2c[_0x4c6a02(0x415)])+_0x4c6a02(0x27e)+euros(_0x360c2c[_0x4c6a02(0x340)])+'</small></span>'+_0x4c6a02(0x3fd)+euros(_0x360c2c[_0x4c6a02(0x340)]*_0x360c2c[_0x4c6a02(0x415)])+_0x4c6a02(0x1a0);})['join']('')+_0x451a22(0x15f)+(_0x2a34e2[_0x451a22(0x246)]>0x0?'<div\x20class=\x22recap-total\x20recap-remise\x22><span>Réduction'+(_0x5e5dec&&_0x5e5dec[_0x451a22(0x20f)]?'\x20('+escHtml(_0x5e5dec['code'])+')':'')+_0x451a22(0x2c8)+euros(_0x2a34e2[_0x451a22(0x246)])+_0x451a22(0x2ce):'')+_0x451a22(0x37d)+_0x30619d+_0x451a22(0x401)+(_0x30619d>0x1?'s':'')+_0x451a22(0x152)+euros(_0x2a34e2['total'])+_0x451a22(0x3f5);}function afficherRecapCommande(){var _0x3fe8c4=_0x44a01f,_0x512d40=document[_0x3fe8c4(0x3de)](_0x3fe8c4(0x489));if(!_0x512d40)return;_0x512d40['innerHTML']=cart[_0x3fe8c4(0x420)]?recapArticlesHTML(cart,appliedPromo):'',_0x512d40[_0x3fe8c4(0x178)]=!cart['length'],suivrePhotos(_0x512d40);}function updateCart(){var _0x3bd534=_0x44a01f;saveCart();var _0x3fac5c=cart[_0x3bd534(0x1d6)](function(_0x139320,_0x441d03){return _0x139320+_0x441d03['qty'];},0x0),_0x235a2a=totauxPanier(cart,appliedPromo),_0x2a34e4=_0x235a2a[_0x3bd534(0x246)],_0x41d90e=_0x235a2a['total'],_0x3a8bb2=document[_0x3bd534(0x3de)]('cart-count');_0x3a8bb2&&(_0x3a8bb2[_0x3bd534(0x187)]=_0x3fac5c,_0x3a8bb2[_0x3bd534(0x461)][_0x3bd534(0x1d9)]=_0x3fac5c>0x0?_0x3bd534(0x393):'none');var _0x40a4ad=document[_0x3bd534(0x3de)](_0x3bd534(0x3c8));if(_0x40a4ad)_0x40a4ad[_0x3bd534(0x187)]=_0x41d90e[_0x3bd534(0x329)](0x2)[_0x3bd534(0x3b5)]('.',',')+'€';var _0x457864=document[_0x3bd534(0x3de)](_0x3bd534(0x3a7)),_0x471d3d=document[_0x3bd534(0x3de)](_0x3bd534(0x3ad));_0x457864&&_0x471d3d&&(_0x2a34e4>0x0?(_0x457864[_0x3bd534(0x461)]['display']=_0x3bd534(0x393),_0x471d3d['textContent']='-'+_0x2a34e4[_0x3bd534(0x329)](0x2)[_0x3bd534(0x3b5)]('.',',')+'€'):_0x457864[_0x3bd534(0x461)][_0x3bd534(0x1d9)]=_0x3bd534(0x362));var _0x43ff34=document[_0x3bd534(0x3de)]('cart-items');if(_0x43ff34){if(cart[_0x3bd534(0x420)]===0x0)_0x43ff34[_0x3bd534(0x295)]=_0x3bd534(0x480);else{var _0x4d57f8=_0x3bd534(0x353),_0x2852ad=_0x3bd534(0x320),_0x283dc7='<svg\x20width=\x2214\x22\x20height=\x2214\x22\x20fill=\x22none\x22\x20viewBox=\x220\x200\x2024\x2024\x22\x20stroke=\x22currentColor\x22\x20stroke-width=\x222.4\x22\x20aria-hidden=\x22true\x22><line\x20x1=\x2218\x22\x20y1=\x226\x22\x20x2=\x226\x22\x20y2=\x2218\x22/><line\x20x1=\x226\x22\x20y1=\x226\x22\x20x2=\x2218\x22\x20y2=\x2218\x22/></svg>';_0x43ff34['innerHTML']=cart['map'](function(_0x135d2d){var _0x1970df=_0x3bd534,_0x1f5ecc=escAttr(_0x135d2d['id']),_0x2c74d5=escHtml(_0x135d2d['nom']);return'<div\x20class=\x22cart-item\x22>'+vignetteArticle(_0x135d2d,_0x1970df(0x207))+_0x1970df(0x3ac)+_0x2c74d5+_0x1970df(0x1a5)+euros(_0x135d2d[_0x1970df(0x340)])+_0x1970df(0x33b)+'<button\x20onclick=\x22changeQty(\x27'+_0x1f5ecc+_0x1970df(0x214)+_0x2c74d5+_0x1970df(0x220)+_0x4d57f8+'</button><span>'+nombre(_0x135d2d[_0x1970df(0x415)])+'</span>'+_0x1970df(0x2e4)+_0x1f5ecc+_0x1970df(0x21a)+_0x2c74d5+_0x1970df(0x220)+_0x2852ad+_0x1970df(0x257)+_0x1970df(0x3c1)+_0x1f5ecc+_0x1970df(0x142)+_0x2c74d5+_0x1970df(0x381)+_0x283dc7+_0x1970df(0x248);})[_0x3bd534(0x3ca)](''),suivrePhotos(_0x43ff34);}}var _0xceb5e=document[_0x3bd534(0x3de)](_0x3bd534(0x440));if(_0xceb5e&&_0xceb5e['classList'][_0x3bd534(0x157)](_0x3bd534(0x41c)))afficherRecapCommande();}function applyPromo(){var _0x9d82b6=_0x44a01f,_0x239b62=document[_0x9d82b6(0x3de)](_0x9d82b6(0x1c8)),_0x4ce7af=document[_0x9d82b6(0x3de)](_0x9d82b6(0x38e)),_0x2d7584=document[_0x9d82b6(0x3de)](_0x9d82b6(0x102));if(!_0x239b62)return;var _0x4a1e9b=_0x239b62[_0x9d82b6(0x122)]['trim']()['toUpperCase']();if(!_0x4a1e9b){var _0x4efe92=document[_0x9d82b6(0x3de)](_0x9d82b6(0x182));if(_0x4efe92)_0x4efe92[_0x9d82b6(0x461)][_0x9d82b6(0x1d9)]=_0x9d82b6(0x362);if(appliedPromo){appliedPromo=null;if(_0x2d7584)_0x2d7584[_0x9d82b6(0x187)]='';_0x4ce7af[_0x9d82b6(0x187)]=_0x9d82b6(0x495),_0x4ce7af[_0x9d82b6(0x461)][_0x9d82b6(0x28c)]='var(--texte-3)',updateCart();return;}_0x4ce7af['textContent']=_0x9d82b6(0x26d),_0x4ce7af['style']['color']=_0x9d82b6(0x38c);return;}if(cart[_0x9d82b6(0x420)]===0x0){_0x4ce7af[_0x9d82b6(0x187)]=_0x9d82b6(0x274),_0x4ce7af[_0x9d82b6(0x461)][_0x9d82b6(0x28c)]=_0x9d82b6(0x38c);return;}if(MODE_CLOUD){appliquerCodeCloud(_0x4a1e9b,emailConnu());return;}var _0x131b88=findCodePromo(_0x4a1e9b);if(!_0x131b88||_0x131b88['erreur']){_0x4ce7af[_0x9d82b6(0x187)]='✕\x20'+(_0x131b88&&_0x131b88[_0x9d82b6(0x44f)]?_0x131b88[_0x9d82b6(0x44f)]:_0x9d82b6(0x3ce)),_0x4ce7af[_0x9d82b6(0x461)][_0x9d82b6(0x28c)]='#E55353',appliedPromo=null,updateCart();return;}if(_0x131b88[_0x9d82b6(0x153)]!==_0x9d82b6(0x2aa)){var _0x5cc66a=cart['some'](function(_0x3033bb){var _0x3552cb=_0x9d82b6;return _0x3033bb[_0x3552cb(0x159)]===_0x131b88[_0x3552cb(0x153)];});if(!_0x5cc66a){_0x4ce7af['textContent']=_0x9d82b6(0x383)+_0x131b88[_0x9d82b6(0x153)]+_0x9d82b6(0x218),_0x4ce7af[_0x9d82b6(0x461)]['color']=_0x9d82b6(0x366),appliedPromo=null,updateCart();return;}}appliedPromo=_0x131b88;if(_0x2d7584)_0x2d7584[_0x9d82b6(0x187)]='('+_0x4a1e9b+')';_0x4ce7af['textContent']=_0x9d82b6(0x238)+_0x131b88[_0x9d82b6(0x305)],_0x4ce7af[_0x9d82b6(0x461)]['color']='var(--vert)',updateCart(),pharmaToast('Code\x20promo\x20appliqué\x20!');}function openCart(){var _0xea766e=_0x44a01f;document['getElementById'](_0xea766e(0x429))[_0xea766e(0x2db)][_0xea766e(0x29c)]('open'),document[_0xea766e(0x3de)](_0xea766e(0x18c))[_0xea766e(0x2db)][_0xea766e(0x29c)]('open');}function closeCart(){var _0x4d7e7c=_0x44a01f;document['getElementById']('cart-drawer')[_0x4d7e7c(0x2db)][_0x4d7e7c(0x180)]('open'),document['getElementById'](_0x4d7e7c(0x18c))[_0x4d7e7c(0x2db)]['remove'](_0x4d7e7c(0x41c));}function getVal(_0x9c1edb){var _0xca4858=_0x44a01f,_0x8395ca=document[_0xca4858(0x3de)](_0x9c1edb);return _0x8395ca?_0x8395ca['value']:'';}function continuerEnInvite(){var _0x56b2cd=_0x44a01f,_0x214a37=document[_0x56b2cd(0x3de)]('account-modal');if(_0x214a37)_0x214a37[_0x56b2cd(0x2db)][_0x56b2cd(0x180)](_0x56b2cd(0x41c));if(cart[_0x56b2cd(0x420)]>0x0){prefillCheckout();var _0x3f2c61=document[_0x56b2cd(0x3de)](_0x56b2cd(0x440));if(_0x3f2c61)_0x3f2c61[_0x56b2cd(0x2db)][_0x56b2cd(0x29c)]('open');pharmaToast(_0x56b2cd(0x2a3));}else allerA(_0x56b2cd(0x278)),pharmaToast(_0x56b2cd(0x265));}function prefillCheckout(){var _0x10e75c=_0x44a01f;afficherRecapCommande();var _0x6b1625=null;try{_0x6b1625=JSON[_0x10e75c(0x1bf)](localStorage[_0x10e75c(0x39c)](_0x10e75c(0x28f))||_0x10e75c(0x3a2));}catch(_0x4ff71e){}if(!_0x6b1625)return;var _0x23ccac=((_0x6b1625['prenom']||'')+'\x20'+(_0x6b1625[_0x10e75c(0x22d)]||''))[_0x10e75c(0x379)](),_0x165958=[[_0x10e75c(0x32d),_0x23ccac],[_0x10e75c(0x2b2),_0x6b1625[_0x10e75c(0x36a)]],['co-tel',_0x6b1625['tel']]];_0x165958[_0x10e75c(0x114)](function(_0x226bae){var _0x2d8d53=_0x10e75c,_0x204533=document[_0x2d8d53(0x3de)](_0x226bae[0x0]);if(_0x204533&&!_0x204533[_0x2d8d53(0x122)]&&_0x226bae[0x1])_0x204533[_0x2d8d53(0x122)]=_0x226bae[0x1];});}function genererCodeFidelite(_0xf2e43f,_0x5d6f45,_0x211395,_0x5b166a){var _0x31ada7=_0x44a01f,_0x4444d6=(_0xf2e43f['nom']||'CL')['split'](/\s+/)['map'](function(_0x58d4bc){var _0x5621eb=_0x1cc6;return _0x58d4bc[_0x5621eb(0x367)](0x0)[_0x5621eb(0x2d7)]();})[_0x31ada7(0x3ca)]('')['slice'](0x0,0x2)||'CL',_0x34dfc1=_0x31ada7(0x1e3)+_0x4444d6+_0x5d6f45,_0x10740b=_0x34dfc1,_0x2e3d1c=0x2;while(DATA[_0x31ada7(0x24b)][_0x31ada7(0x3e9)](function(_0x181fc1){var _0x26b9c6=_0x31ada7;return _0x181fc1[_0x26b9c6(0x20f)]===_0x10740b;})){_0x10740b=_0x34dfc1+'-'+_0x2e3d1c,_0x2e3d1c++;}var _0x496138=new Date();_0x496138[_0x31ada7(0x45a)](_0x496138[_0x31ada7(0x460)]()+0x1e);var _0x5cf28c={'code':_0x10740b,'client':_0xf2e43f[_0x31ada7(0x22d)],'clientId':_0xf2e43f['id'],'pct':_0x5d6f45,'scope':_0x31ada7(0x2aa),'origine':_0x31ada7(0x3e8),'usages':0x0,'maxUsages':0x1,'expire':pharmaDateLocale(_0x496138),'actif':!![],'commandeId':_0x211395||'','palier':_0x5b166a||0x0};return DATA['codesPromo'][_0x31ada7(0x2df)](_0x5cf28c),_0x5cf28c;}function codePourClient(_0x21ca25,_0x31353b){var _0x5b0ccd=_0x44a01f,_0x4778d0=_0x21ca25&&_0x21ca25[_0x5b0ccd(0x49d)];if(!_0x4778d0||_0x4778d0==='Tous\x20les\x20clients')return!![];if(!_0x31353b)return![];if(_0x21ca25[_0x5b0ccd(0x231)]!==undefined)return _0x21ca25[_0x5b0ccd(0x231)]===_0x31353b['id'];return PharmaClients[_0x5b0ccd(0x465)](_0x4778d0)===PharmaClients[_0x5b0ccd(0x465)](_0x31353b[_0x5b0ccd(0x22d)]);}function genererCodeRetrait(){var _0x3cb4cb=_0x44a01f,_0x2fd435=_0x3cb4cb(0x294),_0x21be50=DATA[_0x3cb4cb(0x355)][_0x3cb4cb(0x16d)](function(_0x481f7f){var _0x42df09=_0x3cb4cb;return _0x481f7f[_0x42df09(0x3e3)];}),_0x13c99e,_0x5c220b,_0x419b99;do{_0x13c99e='',_0x419b99=null;try{_0x419b99=new Uint32Array(0x6),(window[_0x3cb4cb(0x235)]||window[_0x3cb4cb(0x15e)])[_0x3cb4cb(0x456)](_0x419b99);}catch(_0x593c7f){_0x419b99=null;}for(_0x5c220b=0x0;_0x5c220b<0x6;_0x5c220b++){_0x13c99e+=_0x2fd435['charAt']((_0x419b99?_0x419b99[_0x5c220b]:Math[_0x3cb4cb(0xff)](Math[_0x3cb4cb(0x2fb)]()*_0x2fd435[_0x3cb4cb(0x420)]))%_0x2fd435[_0x3cb4cb(0x420)]);}}while(_0x21be50[_0x3cb4cb(0x48c)](_0x13c99e)!==-0x1);return _0x13c99e;}function generateOrderId(){var _0x151508=_0x44a01f,_0x3ca0f4=0x3e8;return DATA['commandes'][_0x151508(0x114)](function(_0x35efe9){var _0x711e21=_0x151508,_0x4686c6=parseInt((_0x35efe9['id']||'')[_0x711e21(0x3b5)]('#',''),0xa);if(!isNaN(_0x4686c6)&&_0x4686c6>_0x3ca0f4)_0x3ca0f4=_0x4686c6;}),'#'+(_0x3ca0f4+0x1);}function unitesParArticle(_0x5121d0){var _0x512af8=_0x44a01f;if(typeof _0x5121d0['id']===_0x512af8(0x39f)&&_0x5121d0['id'][_0x512af8(0x48c)](_0x512af8(0x439))===0x0){var _0x10f7ec=parseInt(_0x5121d0['id'][_0x512af8(0x3b5)](_0x512af8(0x439),''),0xa),_0x18d552=DATA[_0x512af8(0x2b5)][_0x512af8(0x380)](function(_0x5e9e53){return _0x5e9e53['id']===_0x10f7ec;});if(_0x18d552&&_0x18d552[_0x512af8(0x322)]>0x0)return _0x18d552[_0x512af8(0x322)];var _0x4c7813=(_0x5121d0[_0x512af8(0x22d)]||'')[_0x512af8(0x185)](/x\s*(\d+)\s*$/i);if(_0x4c7813)return parseInt(_0x4c7813[0x1],0xa);}return 0x1;}function resolveProduitForCartItem(_0x38c867){var _0x3d1c3b=_0x44a01f;if(typeof _0x38c867['id']==='string'&&_0x38c867['id'][_0x3d1c3b(0x48c)](_0x3d1c3b(0x211))===0x0){var _0x4b86de=parseInt(_0x38c867['id'][_0x3d1c3b(0x3b5)]('prod-',''),0xa),_0x3e2fdf=DATA['produits'][_0x3d1c3b(0x380)](function(_0x48c516){return _0x48c516['id']===_0x4b86de;});if(_0x3e2fdf)return _0x3e2fdf;}return matchProduitPourPromo(_0x38c867[_0x3d1c3b(0x22d)]);}function placeOrder(){var _0x434358=_0x44a01f;if(cart[_0x434358(0x420)]===0x0)return![];var _0x326d64=document[_0x434358(0x3de)](_0x434358(0x239));function _0x5be5bc(_0x5991ce){var _0x16481f=_0x434358;if(_0x326d64)_0x326d64[_0x16481f(0x187)]=_0x5991ce,_0x326d64['style'][_0x16481f(0x1d9)]=_0x16481f(0x47c);else pharmaToast(_0x5991ce);return![];}if(_0x326d64)_0x326d64[_0x434358(0x461)][_0x434358(0x1d9)]=_0x434358(0x362);var _0x263ba1=(getVal('co-nom')||'')[_0x434358(0x379)](),_0xe7008f=(getVal(_0x434358(0x2b2))||'')[_0x434358(0x379)](),_0x111ffa=(getVal(_0x434358(0x34b))||'')[_0x434358(0x379)]();if(!_0x263ba1)return _0x5be5bc(_0x434358(0x32a));if(!pharmaEmailValide(_0xe7008f))return _0x5be5bc(_0x434358(0x203));if(!_0x111ffa||_0x111ffa[_0x434358(0x3b5)](/\D/g,'')[_0x434358(0x420)]<0x9)return _0x5be5bc('Merci\x20d\x27indiquer\x20un\x20numéro\x20de\x20téléphone\x20valide.');var _0x1f77ed=document[_0x434358(0x3de)](_0x434358(0x368));if(_0x1f77ed&&!_0x1f77ed[_0x434358(0x193)])return _0x5be5bc('Vous\x20devez\x20accepter\x20les\x20conditions\x20pour\x20commander.');DATA=PharmaStore['load']();var _0x2e06a0=PharmaClients[_0x434358(0x20c)](DATA,_0x263ba1,_0xe7008f);if(appliedPromo&&appliedPromo[_0x434358(0x20f)]){var _0x53b53e=findCodePromo(appliedPromo[_0x434358(0x20f)]);if(!_0x53b53e||_0x53b53e['erreur'])return appliedPromo=null,updateCart(),_0x5be5bc('Le\x20code\x20promo\x20n\x27est\x20plus\x20valable'+(_0x53b53e&&_0x53b53e[_0x434358(0x44f)]?'\x20('+_0x53b53e[_0x434358(0x44f)][_0x434358(0x3b9)]()+')':'')+_0x434358(0x233));var _0x57c7fb=DATA[_0x434358(0x24b)][_0x434358(0x380)](function(_0x32c4fd){var _0x437a09=_0x434358;return _0x32c4fd[_0x437a09(0x20f)]===appliedPromo[_0x437a09(0x20f)];});if(_0x57c7fb&&!codePourClient(_0x57c7fb,_0x2e06a0))return _0x5be5bc(_0x434358(0x2be));}var _0x148ee6=[];cart[_0x434358(0x114)](function(_0x3cfefa){var _0x2d72ce=_0x434358,_0x2dcd84=resolveProduitForCartItem(_0x3cfefa),_0x5ecb4a=_0x3cfefa[_0x2d72ce(0x415)]*unitesParArticle(_0x3cfefa);_0x2dcd84&&_0x2dcd84['stock']<_0x5ecb4a&&_0x148ee6[_0x2d72ce(0x2df)](_0x3cfefa['nom']+_0x2d72ce(0x13d)+_0x2dcd84['stock']+')');});if(_0x148ee6[_0x434358(0x420)])return _0x5be5bc(_0x434358(0x436)+_0x148ee6[_0x434358(0x3ca)](',\x20')+_0x434358(0x3bc));var _0x49afb5=cart[_0x434358(0x16d)](function(_0x3566e9){var _0x383d9b=_0x434358;return _0x3566e9['nom']+'\x20x'+_0x3566e9[_0x383d9b(0x415)];})['join']('\x20+\x20'),_0xf98fba=cart[_0x434358(0x1d6)](function(_0x5ddb5b,_0x47e93e){var _0x142a8a=_0x434358;return _0x5ddb5b+_0x47e93e['prix']*_0x47e93e[_0x142a8a(0x415)];},0x0),_0x24025f=0x0;if(appliedPromo){if(appliedPromo[_0x434358(0x153)]===_0x434358(0x2aa))_0x24025f=_0xf98fba*appliedPromo[_0x434358(0x263)]/0x64;else{var _0xafa378=cart[_0x434358(0x297)](function(_0x17d49e){var _0x48ef18=_0x434358;return _0x17d49e[_0x48ef18(0x159)]===appliedPromo[_0x48ef18(0x153)];})['reduce'](function(_0x1ee86f,_0x442a83){var _0x325eb3=_0x434358;return _0x1ee86f+_0x442a83[_0x325eb3(0x340)]*_0x442a83[_0x325eb3(0x415)];},0x0);_0x24025f=_0xafa378*appliedPromo[_0x434358(0x263)]/0x64;}}var _0x503d89=Math[_0x434358(0x424)]((_0xf98fba-_0x24025f)*0x64)/0x64,_0x5c378f=new Date(),_0x4588d2=('0'+_0x5c378f['getDate']())['slice'](-0x2)+'/'+('0'+(_0x5c378f[_0x434358(0x264)]()+0x1))[_0x434358(0x118)](-0x2)+'\x20'+_0x5c378f[_0x434358(0x49e)]()+'h'+('0'+_0x5c378f[_0x434358(0x1d4)]())[_0x434358(0x118)](-0x2),_0x26ba3b=_0x5c378f[_0x434358(0x11a)](),_0x42fcb1=_0x263ba1,_0x1ea439=_0x111ffa,_0x4d946e=_0xe7008f,_0x5319d1=generateOrderId(),_0x428c89=genererCodeRetrait(),_0x48ed9b=typeof PharmaEmail!=='undefined'?PharmaEmail[_0x434358(0x339)]():'fr',_0x446f9a=appliedPromo&&appliedPromo[_0x434358(0x20f)]?appliedPromo[_0x434358(0x20f)]:'',_0x8b514d=Math[_0x434358(0x424)](_0x24025f*0x64)/0x64;DATA[_0x434358(0x355)][_0x434358(0x2df)]({'id':_0x5319d1,'client':_0x42fcb1,'email':_0x4d946e,'tel':_0x1ea439,'produits':_0x49afb5,'total':_0x503d89,'date':_0x4588d2,'timestamp':_0x26ba3b,'valide':'','statut':'En\x20préparation','codeRetrait':_0x428c89,'lang':_0x48ed9b,'codePromo':_0x446f9a,'remise':_0x8b514d,'lignes':cart[_0x434358(0x16d)](function(_0x4ca29c){var _0x424e5c=_0x434358,_0x33458f=resolveProduitForCartItem(_0x4ca29c);return{'nom':_0x4ca29c[_0x424e5c(0x22d)],'qty':_0x4ca29c[_0x424e5c(0x415)],'unites':unitesParArticle(_0x4ca29c),'produitId':_0x33458f?_0x33458f['id']:null};})});var _0xadba9a=[];cart[_0x434358(0x114)](function(_0x18a00a){var _0x15346a=_0x434358,_0x275678=resolveProduitForCartItem(_0x18a00a);if(_0x275678){_0x275678['stock']=Math['max'](0x0,_0x275678[_0x15346a(0x47f)]-_0x18a00a[_0x15346a(0x415)]*unitesParArticle(_0x18a00a));if(_0x275678[_0x15346a(0x47f)]<=_0x275678['seuil'])_0xadba9a[_0x15346a(0x2df)](_0x275678);}});if(!_0x2e06a0){var _0x590fdd=DATA[_0x434358(0x31f)][_0x434358(0x420)]?Math[_0x434358(0x416)][_0x434358(0x2a6)](null,DATA[_0x434358(0x31f)][_0x434358(0x16d)](function(_0x1185a8){return _0x1185a8['id'];}))+0x1:0x1;_0x2e06a0={'id':_0x590fdd,'nom':_0x42fcb1,'email':_0x4d946e,'tel':_0x1ea439,'type':_0x434358(0x1dd),'notifs':'Email','rgpd':![],'achats':0x0,'depenses':0x0},DATA[_0x434358(0x31f)][_0x434358(0x2df)](_0x2e06a0);}else{if(!_0x2e06a0['email'])_0x2e06a0['email']=_0x4d946e;if(!_0x2e06a0[_0x434358(0x266)])_0x2e06a0[_0x434358(0x266)]=_0x1ea439;}_0x2e06a0[_0x434358(0x427)]+=0x1,_0x2e06a0['depenses']=Math[_0x434358(0x424)]((_0x2e06a0['depenses']+_0x503d89)*0x64)/0x64;var _0x5a37f8=DATA[_0x434358(0x355)][DATA[_0x434358(0x355)][_0x434358(0x420)]-0x1];_0x5a37f8[_0x434358(0x231)]=_0x2e06a0['id'];var _0xd8259b=PharmaFidelite['config'](DATA),_0x5d7d24=_0xd8259b[_0x434358(0x43f)],_0x1d5e7d=_0xd8259b['reduction'],_0xbdead4=null;if(PharmaFidelite['progression'](_0x2e06a0[_0x434358(0x427)],_0x5d7d24)[_0x434358(0x14a)]){var _0x2d9474=Math[_0x434358(0xff)](_0x2e06a0[_0x434358(0x427)]/_0x5d7d24),_0x202396=DATA[_0x434358(0x24b)][_0x434358(0x3e9)](function(_0x2ee32b){var _0x30d48a=_0x434358;return _0x2ee32b[_0x30d48a(0x231)]===_0x2e06a0['id']&&_0x2ee32b[_0x30d48a(0x2ea)]===_0x2d9474;});if(!_0x202396)_0xbdead4=genererCodeFidelite(_0x2e06a0,_0x1d5e7d,_0x5319d1,_0x2d9474);}if(appliedPromo&&appliedPromo[_0x434358(0x20f)]){var _0x3d04b4=DATA[_0x434358(0x24b)][_0x434358(0x380)](function(_0x37a48e){var _0x3d6c66=_0x434358;return _0x37a48e['code']===appliedPromo[_0x3d6c66(0x20f)];});if(_0x3d04b4)_0x3d04b4[_0x434358(0x1fb)]+=0x1;}pharmaAjouterAlerte(DATA,_0x434358(0x382),_0x434358(0x327)+_0x5319d1,_0x42fcb1+_0x434358(0x3f3)+_0x503d89['toFixed'](0x2)[_0x434358(0x3b5)]('.',',')+_0x434358(0x119)+_0x49afb5,_0x434358(0x355)),_0xadba9a['forEach'](function(_0x26b9d4){var _0x5d3d81=_0x434358;pharmaAjouterAlerte(DATA,'stock',_0x26b9d4[_0x5d3d81(0x47f)]===0x0?'Rupture\x20de\x20stock':_0x5d3d81(0x21c),_0x26b9d4[_0x5d3d81(0x22d)]+'\x20:\x20'+_0x26b9d4[_0x5d3d81(0x47f)]+_0x5d3d81(0x127)+(_0x26b9d4[_0x5d3d81(0x47f)]>0x1?'s':'')+'\x20restante'+(_0x26b9d4[_0x5d3d81(0x47f)]>0x1?'s':''),'stocks');});_0xbdead4&&pharmaAjouterAlerte(DATA,_0x434358(0x434),_0x434358(0x261),_0x42fcb1+'\x20a\x20débloqué\x20le\x20code\x20'+_0xbdead4['code']+_0x434358(0x42f)+_0x1d5e7d+'%)',_0x434358(0x262));PharmaStore[_0x434358(0x224)](DATA);var _0xb0a49d=Promise[_0x434358(0x431)]([]);if(typeof PharmaEmail!=='undefined')try{var _0xc49826={'id':_0x5319d1,'client':_0x42fcb1,'email':_0x4d946e,'produits':_0x49afb5,'total':_0x503d89,'timestamp':_0x26ba3b,'lang':_0x48ed9b,'codeRetrait':_0x428c89,'codePromo':_0x446f9a,'remise':_0x8b514d},_0xbd94eb={'seuil':_0x5d7d24,'reduction':_0x1d5e7d,'achats':_0x2e06a0['achats']},_0x4e20bb=[{'type':'commandeRecue','data':DATA,'ctx':{'commande':_0xc49826,'fidelite':_0xbd94eb}}];_0xbdead4&&_0x4e20bb[_0x434358(0x2df)]({'type':_0x434358(0x341),'data':DATA,'ctx':{'commande':_0xc49826,'fidelite':_0xbd94eb,'code':{'code':_0xbdead4[_0x434358(0x20f)],'pct':_0xbdead4['pct'],'expire':_0xbdead4['expire']}}}),_0xb0a49d=PharmaEmail[_0x434358(0x1e2)](_0x4e20bb);}catch(_0x15a629){console[_0x434358(0x109)]('Emails\x20non\x20envoyés',_0x15a629);}return buildCatalogueData(),renderPromos(),renderCatalogue(),cart=[],appliedPromo=null,updateCart(),{'ok':!![],'codeFidelite':_0xbdead4?_0xbdead4[_0x434358(0x20f)]:null,'codeFidelitePct':_0x1d5e7d,'total':_0x503d89,'remise':_0x8b514d,'numero':_0x5319d1,'codeRetrait':_0x428c89,'email':_0x4d946e,'emails':_0xb0a49d};}var squelette={'visible':![],'minuteur':null};function attenteCatalogue(){var _0x47b691=_0x44a01f;return EN_LIGNE&&ETAT_CLOUD===_0x47b691(0x32e)&&CATALOGUE['length']===0x0;}function cartesSquelette(_0x352b40){var _0x729211=_0x44a01f,_0x464afd=_0x729211(0x36f)+_0x729211(0x3aa)+'<span\x20class=\x22skel-bar\x20skel-ligne\x22\x20style=\x22width:82%;height:16px;margin-top:12px\x22></span>'+_0x729211(0x13c)+_0x729211(0x18a),_0x27a2c8='';for(var _0x298d96=0x0;_0x298d96<_0x352b40;_0x298d96++)_0x27a2c8+=_0x464afd;return _0x27a2c8;}function afficherSquelette(){var _0x385545=_0x44a01f;if(!attenteCatalogue()||squelette[_0x385545(0x3b7)])return;squelette['visible']=!![],document[_0x385545(0x2d4)][_0x385545(0x2db)][_0x385545(0x29c)](_0x385545(0x3db));var _0x31b859=document[_0x385545(0x3de)](_0x385545(0x284));if(_0x31b859)_0x31b859[_0x385545(0x178)]=![];var _0x170535=document[_0x385545(0x3de)](_0x385545(0x1a2)),_0x4a1469=document[_0x385545(0x3de)](_0x385545(0x2bd));_0x170535&&_0x4a1469&&(_0x170535['hidden']=![],_0x4a1469['innerHTML']=[0x3e,0x30,0x46,0x28][_0x385545(0x16d)](function(_0x28b257){var _0x353197=_0x385545;return _0x353197(0xf8)+_0x28b257+_0x353197(0x196);})['join'](''));var _0xafc33a=document[_0x385545(0x3de)](_0x385545(0x13e));if(_0xafc33a)_0xafc33a[_0x385545(0x295)]=_0x385545(0x35e)+_0x385545(0x3ff);renderCatalogue(),renderPageRayon();}function preparerSquelette(){var _0x3b9ef9=_0x44a01f;clearTimeout(squelette[_0x3b9ef9(0x19d)]);if(attenteCatalogue())squelette[_0x3b9ef9(0x19d)]=setTimeout(afficherSquelette,0x12c);}function finSquelette(_0x12f126){var _0x20691d=_0x44a01f;clearTimeout(squelette[_0x20691d(0x19d)]);var _0x293583=squelette[_0x20691d(0x3b7)];return squelette['visible']=![],document[_0x20691d(0x2d4)][_0x20691d(0x2db)]['remove'](_0x20691d(0x3db)),function(){var _0x11957e=_0x20691d;if(!_0x293583||!_0x12f126)return;[_0x11957e(0x31a),_0x11957e(0x1a9),'#catalogue-grid',_0x11957e(0x478)][_0x11957e(0x114)](function(_0x459b1b){var _0x3016c9=_0x11957e,_0x488091=document[_0x3016c9(0x11e)](_0x459b1b);if(!_0x488091)return;_0x488091['classList']['remove']('vient-de-charger'),void _0x488091[_0x3016c9(0x269)],_0x488091[_0x3016c9(0x2db)][_0x3016c9(0x29c)]('vient-de-charger');});};}var reseau={'etat':'','minuteurLent':null,'minuteurEssai':null,'minuteurMasque':null,'delaiEssai':0x3a98,'chargement':null,'nbCroix':0x0},simuRetabli=![];function horsLigne(){var _0x54bb95=_0x44a01f;return navigator[_0x54bb95(0x464)]===![]||SIMU===_0x54bb95(0x2a7)&&!simuRetabli;}var CROIX_TRACE=_0x44a01f(0x1c3);function svgCroixLiquide(_0x2e2003,_0x28b600){var _0x518977=_0x44a01f,_0x2de1cf=_0x518977(0x39a)+ ++reseau['nbCroix'];return _0x518977(0x47d)+(_0x28b600?_0x518977(0x2ee):'')+'\x22\x20width=\x22'+_0x2e2003+_0x518977(0x123)+_0x2e2003+_0x518977(0x3b8)+_0x518977(0x22c)+_0x2de1cf+_0x518977(0x213)+CROIX_TRACE+_0x518977(0x41a)+_0x518977(0x25e)+CROIX_TRACE+'\x22/>'+_0x518977(0x10b)+_0x2de1cf+_0x518977(0x208)+'<path\x20class=\x22croix-contour\x22\x20d=\x22'+CROIX_TRACE+'\x22/></svg>';}function htmlPendule(_0x13ae9c){var _0x4e958d=_0x44a01f;return _0x4e958d(0x1cf)+(_0x13ae9c?_0x4e958d(0x112):'petit')+_0x4e958d(0x404)+_0x4e958d(0x2f0)+_0x4e958d(0x332);}var ICONE_RESEAU_OK=_0x44a01f(0x167);function afficherEtatReseau(_0x534cb5){var _0x78c1cd=_0x44a01f,_0x2806de=document[_0x78c1cd(0x3de)](_0x78c1cd(0x24d));clearTimeout(reseau['minuteurMasque']);!_0x2806de&&(_0x2806de=document[_0x78c1cd(0x3cf)](_0x78c1cd(0x487)),_0x2806de['id']=_0x78c1cd(0x24d),_0x2806de['className']=_0x78c1cd(0x3c3),_0x2806de[_0x78c1cd(0x13f)](_0x78c1cd(0x49f),'status'),_0x2806de['setAttribute'](_0x78c1cd(0x133),'polite'),_0x2806de[_0x78c1cd(0x178)]=!![],document[_0x78c1cd(0x3c4)]['appendChild'](_0x2806de));reseau[_0x78c1cd(0x221)]=_0x534cb5;if(!_0x534cb5){if(_0x2806de[_0x78c1cd(0x178)])return;_0x2806de[_0x78c1cd(0x2db)][_0x78c1cd(0x29c)](_0x78c1cd(0x110)),reseau['minuteurMasque']=setTimeout(function(){var _0x9dba1a=_0x78c1cd;_0x2806de[_0x9dba1a(0x178)]=!![],_0x2806de[_0x9dba1a(0x2db)][_0x9dba1a(0x180)](_0x9dba1a(0x110)),document['body'][_0x9dba1a(0x2db)][_0x9dba1a(0x180)]('reseau-visible');},0x168);return;}var _0x100220;if(_0x534cb5==='lent')_0x100220=svgCroixLiquide(0x1a)+_0x78c1cd(0x25a);else{if(_0x534cb5===_0x78c1cd(0x2a7))_0x100220=htmlPendule()+_0x78c1cd(0x3a8)+(horsLigne()?_0x78c1cd(0x2fd):_0x78c1cd(0x32f))+'</span><button\x20type=\x22button\x22>Réessayer</button>';else{if(_0x534cb5==='coupe-cache')_0x100220=htmlPendule()+_0x78c1cd(0x256);else{if(_0x534cb5==='essai')_0x100220=htmlPendule()+'<span>Nouvel\x20essai\x20de\x20connexion…</span>';else _0x100220=ICONE_RESEAU_OK+_0x78c1cd(0xfb);}}}_0x2806de[_0x78c1cd(0x295)]=_0x100220;var _0x39f9b4=_0x2806de['querySelector']('button');if(_0x39f9b4)_0x39f9b4[_0x78c1cd(0x3d7)](_0x78c1cd(0x47a),reessayerChargementCloud);_0x2806de[_0x78c1cd(0x2db)]['remove'](_0x78c1cd(0x110)),_0x2806de[_0x78c1cd(0x178)]=![],document[_0x78c1cd(0x3c4)][_0x78c1cd(0x2db)]['add'](_0x78c1cd(0x283));if(_0x534cb5===_0x78c1cd(0x2f1))reseau[_0x78c1cd(0x40b)]=setTimeout(function(){afficherEtatReseau('');},0x9c4);}function lancerAttenteLente(){clearTimeout(reseau['minuteurLent']),reseau['minuteurLent']=setTimeout(function(){var _0x307886=_0x1cc6;if(attenteCatalogue())afficherEtatReseau(_0x307886(0x155));},0xbb8);}function planifierNouvelEssai(){var _0x366a68=_0x44a01f;clearTimeout(reseau[_0x366a68(0x41b)]),reseau[_0x366a68(0x41b)]=setTimeout(function(){var _0x302be6=_0x366a68;if(ETAT_CLOUD!=='erreur'&&reseau['etat']!==_0x302be6(0x493))return;if(document[_0x302be6(0x24c)]==='hidden'){planifierNouvelEssai();return;}nouvelEssai();},reseau[_0x366a68(0x326)]),reseau[_0x366a68(0x326)]=Math[_0x366a68(0x2ca)](reseau[_0x366a68(0x326)]*0x2,0xea60);}function nouvelEssai(){var _0x1b91ad=_0x44a01f;if(CATALOGUE[_0x1b91ad(0x420)])chargerDonneesCloud();else reessayerChargementCloud();}function surveillerReseau(){var _0x4b39ec=_0x44a01f;window[_0x4b39ec(0x3d7)]('online',function(){var _0x53f183=_0x4b39ec;(ETAT_CLOUD===_0x53f183(0x44f)||reseau[_0x53f183(0x221)]===_0x53f183(0x2a7)||reseau[_0x53f183(0x221)]===_0x53f183(0x493))&&(reseau[_0x53f183(0x326)]=0x3a98,nouvelEssai());}),window[_0x4b39ec(0x3d7)]('offline',function(){var _0x3697d0=_0x4b39ec;if(ETAT_CLOUD==='pret'&&CATALOGUE['length'])afficherEtatReseau(_0x3697d0(0x493));});if(attenteCatalogue())lancerAttenteLente();}var essaisSimu=0x0;function chargerSimule(){var _0x35b390=_0x44a01f;essaisSimu++;if(SIMU===_0x35b390(0x2a7)&&essaisSimu>0x1)simuRetabli=!![];return new Promise(function(_0x483144,_0x569cb8){var _0xf1cae5=_0x35b390;if(SIMU===_0xf1cae5(0x2a7)&&!simuRetabli)setTimeout(function(){_0x569cb8(new Error('Connexion\x20au\x20serveur\x20impossible.'));},0x5dc);else setTimeout(function(){_0x483144(DONNEES_SIMU);},SIMU===_0xf1cae5(0x155)?0x1770:0x9c4);});}function messageCatalogueCloud(){var _0x17aa51=_0x44a01f;if(ETAT_CLOUD===_0x17aa51(0x32e))return _0x17aa51(0x397)+(squelette['visible']?cartesSquelette(0x6):'');var _0x296b3c=infosFiables&&DATA[_0x17aa51(0x2b6)]&&DATA['parametres']['tel']||'',_0x582aeb=_0x296b3c?_0x17aa51(0x16e)+escHtml(_0x296b3c[_0x17aa51(0x3b5)](/\s+/g,''))+'\x22>'+escHtml(_0x296b3c)+_0x17aa51(0x492):'';return _0x17aa51(0x36b)+htmlPendule(!![])+_0x17aa51(0x120)+(horsLigne()?_0x17aa51(0x2fd):_0x17aa51(0x158))+_0x17aa51(0x281)+_0x17aa51(0x1bd)+_0x582aeb+_0x17aa51(0x3e5)+'<button\x20type=\x22button\x22\x20class=\x22btn-lg\x20btn-primary\x22\x20onclick=\x22reessayerChargementCloud()\x22>Réessayer</button></div>';}function reessayerChargementCloud(){var _0x3093bf=_0x44a01f;if(!CATALOGUE[_0x3093bf(0x420)]){ETAT_CLOUD=_0x3093bf(0x32e),afficherSquelette(),renderCatalogue();if(reseau[_0x3093bf(0x221)]===_0x3093bf(0x2a7))afficherEtatReseau(_0x3093bf(0x2f2));else lancerAttenteLente();}chargerDonneesCloud();}function chargerDonneesCloud(){var _0x33bb7d=_0x44a01f;if(!EN_LIGNE)return Promise[_0x33bb7d(0x431)](![]);if(reseau['chargement'])return reseau[_0x33bb7d(0x32e)];if(!SIMU&&!PharmaCloud[_0x33bb7d(0x292)])return ETAT_CLOUD='erreur',renderCatalogue(),Promise['resolve'](![]);return reseau[_0x33bb7d(0x32e)]=(SIMU?chargerSimule():PharmaCloud[_0x33bb7d(0x3b1)]())[_0x33bb7d(0x154)](function(_0x4a605b){var _0x4d6def=_0x33bb7d;reseau[_0x4d6def(0x32e)]=null,clearTimeout(reseau[_0x4d6def(0x1e5)]),clearTimeout(reseau[_0x4d6def(0x41b)]),reseau['delaiEssai']=0x3a98;if(reseau[_0x4d6def(0x221)]==='coupe'||reseau[_0x4d6def(0x221)]===_0x4d6def(0x493)||reseau[_0x4d6def(0x221)]==='essai')afficherEtatReseau(_0x4d6def(0x2f1));else{if(reseau['etat']===_0x4d6def(0x155))afficherEtatReseau('');}DATA=_0x4a605b,ETAT_CLOUD='pret',dernierChargementCloud=Date['now'](),infosFiables=!![],document[_0x4d6def(0x2d4)]['classList'][_0x4d6def(0x180)](_0x4d6def(0x1ee));var _0x3dba67=finSquelette(!![]);return rafraichirAffichageCloud(),_0x3dba67(),!![];},function(_0x245e82){var _0x2985b6=_0x33bb7d;return reseau['chargement']=null,console[_0x2985b6(0x109)](_0x2985b6(0x1f2),_0x245e82&&_0x245e82[_0x2985b6(0x43b)]),ETAT_CLOUD=_0x2985b6(0x44f),clearTimeout(reseau[_0x2985b6(0x1e5)]),finSquelette(![]),renderAnnonces(),renderRecit(),renderCatalogue(),renderPageRayon(),afficherEtatReseau(CATALOGUE[_0x2985b6(0x420)]?'coupe-cache':_0x2985b6(0x2a7)),planifierNouvelEssai(),![];}),reseau[_0x33bb7d(0x32e)];}var flipCardsLancees=![];function rafraichirAffichageCloud(){applyPharmacyConfig(),buildCatalogueData(),renderPromos(),renderAnnonces(),renderRecit(),renderCatalogue(),renderPageRayon(),renderConseilsSite(),renderFaq(),!flipCardsLancees&&(flipCardsLancees=!![],initFlipCards()),nettoyerPanierCloud(),replacerPosition();}function nettoyerPanierCloud(){var _0x40b8fb=_0x44a01f;if(!cart['length'])return;var _0x109cdc=[],_0x24f943=CATALOGUE['concat'](PROMOS);cart=cart['filter'](function(_0x5321d9){var _0x3d7259=_0x1cc6,_0x3534ae=_0x24f943[_0x3d7259(0x380)](function(_0x157b34){return _0x157b34['id']===_0x5321d9['id'];});if(!_0x3534ae)return _0x109cdc[_0x3d7259(0x2df)](_0x5321d9['nom']),![];return _0x5321d9['nom']=_0x3534ae[_0x3d7259(0x22d)],_0x5321d9[_0x3d7259(0x340)]=nombre(_0x3534ae['prixPromo']!==undefined?_0x3534ae[_0x3d7259(0x10d)]:_0x3534ae['prix']),_0x5321d9[_0x3d7259(0x159)]=_0x3534ae['cat'],_0x5321d9[_0x3d7259(0x3a1)]=_0x3534ae[_0x3d7259(0x3a1)],!![];}),updateCart();if(_0x109cdc[_0x40b8fb(0x420)]===0x1)pharmaToast('«\x20'+_0x109cdc[0x0]+_0x40b8fb(0x4a3));else{if(_0x109cdc['length']>0x1)pharmaToast(_0x109cdc[_0x40b8fb(0x420)]+_0x40b8fb(0x2f8));}}function emailConnu(){var _0x551816=_0x44a01f,_0x43c358=[getVal('co-email'),getVal('promo-email')];try{var _0x16f05b=JSON[_0x551816(0x1bf)](localStorage[_0x551816(0x39c)](_0x551816(0x28f))||_0x551816(0x3a2));if(_0x16f05b&&_0x16f05b[_0x551816(0x36a)])_0x43c358[_0x551816(0x2df)](_0x16f05b[_0x551816(0x36a)]);}catch(_0x3c8bae){}for(var _0x4ca241=0x0;_0x4ca241<_0x43c358[_0x551816(0x420)];_0x4ca241++){var _0x45efe5=String(_0x43c358[_0x4ca241]||'')[_0x551816(0x379)]();if(pharmaEmailValide(_0x45efe5))return _0x45efe5;}return'';}var verificationCodeEnCours=![];function _0x1cc6(_0x30c9fc,_0x1bb526){_0x30c9fc=_0x30c9fc-0xf1;var _0x1fa5f2=_0x1fa5();var _0x1cc689=_0x1fa5f2[_0x30c9fc];if(_0x1cc6['HCdJob']===undefined){var _0x1c4013=function(_0x1e1d2e){var _0x90c490='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x43eba1='',_0x5dc4b9='';for(var _0x1ebbe7=0x0,_0x14c8b7,_0xe0139b,_0x2edd88=0x0;_0xe0139b=_0x1e1d2e['charAt'](_0x2edd88++);~_0xe0139b&&(_0x14c8b7=_0x1ebbe7%0x4?_0x14c8b7*0x40+_0xe0139b:_0xe0139b,_0x1ebbe7++%0x4)?_0x43eba1+=String['fromCharCode'](0xff&_0x14c8b7>>(-0x2*_0x1ebbe7&0x6)):0x0){_0xe0139b=_0x90c490['indexOf'](_0xe0139b);}for(var _0x3ac77b=0x0,_0x43fc3c=_0x43eba1['length'];_0x3ac77b<_0x43fc3c;_0x3ac77b++){_0x5dc4b9+='%'+('00'+_0x43eba1['charCodeAt'](_0x3ac77b)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x5dc4b9);};_0x1cc6['ZAtWjO']=_0x1c4013,_0x1cc6['MIeemU']={},_0x1cc6['HCdJob']=!![];}var _0x48aea5=_0x1fa5f2[0x0],_0x155beb=_0x30c9fc+_0x48aea5,_0x5f0d6f=_0x1cc6['MIeemU'][_0x155beb];return!_0x5f0d6f?(_0x1cc689=_0x1cc6['ZAtWjO'](_0x1cc689),_0x1cc6['MIeemU'][_0x155beb]=_0x1cc689):_0x1cc689=_0x5f0d6f,_0x1cc689;}function appliquerCodeCloud(_0x28d024,_0x3d691f){var _0x6b602c=_0x44a01f,_0x406615=document[_0x6b602c(0x3de)](_0x6b602c(0x38e)),_0x5863d4=document['getElementById'](_0x6b602c(0x102)),_0x74c84a=document[_0x6b602c(0x3de)](_0x6b602c(0x182));if(verificationCodeEnCours||!_0x406615)return;verificationCodeEnCours=!![],_0x406615[_0x6b602c(0x187)]=_0x6b602c(0x374),_0x406615[_0x6b602c(0x461)][_0x6b602c(0x28c)]='var(--texte-3)',PharmaCloud[_0x6b602c(0x2bf)](_0x28d024,_0x3d691f)[_0x6b602c(0x154)](function(_0xc186ba){var _0x1a2bd9=_0x6b602c;verificationCodeEnCours=![];if(!_0xc186ba['ok']){appliedPromo=null;if(_0x5863d4)_0x5863d4['textContent']='';updateCart();if(!_0x3d691f&&_0xc186ba[_0x1a2bd9(0x44f)]===_0x1a2bd9(0x289)&&_0x74c84a){_0x74c84a[_0x1a2bd9(0x461)][_0x1a2bd9(0x1d9)]=_0x1a2bd9(0x47c),_0x406615[_0x1a2bd9(0x187)]=_0x1a2bd9(0x201),_0x406615['style']['color']=_0x1a2bd9(0x1fe);var _0x24affb=document[_0x1a2bd9(0x3de)](_0x1a2bd9(0x1b3));if(_0x24affb)_0x24affb[_0x1a2bd9(0x387)]();return;}_0x406615[_0x1a2bd9(0x187)]='✕\x20'+_0xc186ba[_0x1a2bd9(0x44f)],_0x406615[_0x1a2bd9(0x461)][_0x1a2bd9(0x28c)]='#E55353';return;}if(_0x74c84a)_0x74c84a[_0x1a2bd9(0x461)][_0x1a2bd9(0x1d9)]=_0x1a2bd9(0x362);if(_0xc186ba[_0x1a2bd9(0x153)]!==_0x1a2bd9(0x2aa)&&!cart[_0x1a2bd9(0x3e9)](function(_0xd1ebae){var _0x267f60=_0x1a2bd9;return _0xd1ebae['cat']===_0xc186ba[_0x267f60(0x153)];})){appliedPromo=null;if(_0x5863d4)_0x5863d4[_0x1a2bd9(0x187)]='';updateCart(),_0x406615[_0x1a2bd9(0x187)]=_0x1a2bd9(0x383)+_0xc186ba[_0x1a2bd9(0x153)]+_0x1a2bd9(0x218),_0x406615[_0x1a2bd9(0x461)][_0x1a2bd9(0x28c)]=_0x1a2bd9(0x366);return;}appliedPromo={'code':_0xc186ba['code'],'pct':_0xc186ba['pct'],'scope':_0xc186ba['scope'],'label':'-'+_0xc186ba[_0x1a2bd9(0x263)]+'%'+(_0xc186ba[_0x1a2bd9(0x153)]!==_0x1a2bd9(0x2aa)?'\x20'+_0xc186ba['scope']:'')};if(_0x3d691f){var _0x197d26=document[_0x1a2bd9(0x3de)](_0x1a2bd9(0x2b2));if(_0x197d26&&!_0x197d26[_0x1a2bd9(0x122)])_0x197d26['value']=_0x3d691f;}if(_0x5863d4)_0x5863d4[_0x1a2bd9(0x187)]='('+_0xc186ba[_0x1a2bd9(0x20f)]+')';_0x406615[_0x1a2bd9(0x187)]=_0x1a2bd9(0x238)+appliedPromo[_0x1a2bd9(0x305)],_0x406615[_0x1a2bd9(0x461)][_0x1a2bd9(0x28c)]='var(--vert)',updateCart(),pharmaToast('Code\x20promo\x20appliqué\x20!');},function(_0x2fe5fe){var _0x5347c9=_0x6b602c;verificationCodeEnCours=![],_0x406615[_0x5347c9(0x187)]='✕\x20'+(_0x2fe5fe&&_0x2fe5fe['message']||_0x5347c9(0x1e6)),_0x406615[_0x5347c9(0x461)][_0x5347c9(0x28c)]='#E55353';});}function verifierCodePersonnel(){var _0x25f221=_0x44a01f,_0x187c0a=document[_0x25f221(0x3de)](_0x25f221(0x38e)),_0x40152b=(getVal('promo-input')||'')[_0x25f221(0x379)]()[_0x25f221(0x2d7)](),_0x59c1c4=(getVal(_0x25f221(0x1b3))||'')[_0x25f221(0x379)]();if(!_0x40152b){applyPromo();return;}if(!pharmaEmailValide(_0x59c1c4)){_0x187c0a&&(_0x187c0a['textContent']=_0x25f221(0x432),_0x187c0a[_0x25f221(0x461)][_0x25f221(0x28c)]='#E55353');return;}appliquerCodeCloud(_0x40152b,_0x59c1c4);}function placeOrderCloud(){var _0x2772a7=_0x44a01f;if(cart[_0x2772a7(0x420)]===0x0)return Promise[_0x2772a7(0x431)](![]);var _0x33d788=document['getElementById'](_0x2772a7(0x239));function _0x584421(_0x1b10e9){var _0x5db897=_0x2772a7;if(_0x33d788)_0x33d788[_0x5db897(0x187)]=_0x1b10e9,_0x33d788[_0x5db897(0x461)][_0x5db897(0x1d9)]='block';else pharmaToast(_0x1b10e9);return![];}if(_0x33d788)_0x33d788['style'][_0x2772a7(0x1d9)]='none';var _0x966ef8=(getVal(_0x2772a7(0x32d))||'')[_0x2772a7(0x379)]()['replace'](/\s+/g,'\x20'),_0x540b23=(getVal(_0x2772a7(0x2b2))||'')['trim'](),_0x28e989=(getVal(_0x2772a7(0x34b))||'')[_0x2772a7(0x379)]();if(_0x966ef8[_0x2772a7(0x420)]<0x2)return Promise[_0x2772a7(0x431)](_0x584421('Merci\x20d\x27indiquer\x20votre\x20nom\x20complet.'));if(!pharmaEmailValide(_0x540b23))return Promise[_0x2772a7(0x431)](_0x584421(_0x2772a7(0x203)));if(!_0x28e989||_0x28e989[_0x2772a7(0x3b5)](/\D/g,'')[_0x2772a7(0x420)]<0x9)return Promise['resolve'](_0x584421(_0x2772a7(0x2e2)));var _0x37a728=document[_0x2772a7(0x3de)](_0x2772a7(0x368));if(_0x37a728&&!_0x37a728['checked'])return Promise[_0x2772a7(0x431)](_0x584421('Vous\x20devez\x20accepter\x20les\x20conditions\x20pour\x20commander.'));var _0x111335=infosFiables&&DATA[_0x2772a7(0x2b6)]&&DATA[_0x2772a7(0x2b6)][_0x2772a7(0x266)]||'';if(!PharmaCloud[_0x2772a7(0x292)])return Promise[_0x2772a7(0x431)](_0x584421(_0x2772a7(0x24a)+(_0x111335?_0x2772a7(0x300)+_0x111335+'.':'')));var _0x2cd8cb=cart[_0x2772a7(0x16d)](function(_0x228c97){var _0x3dd464=_0x2772a7,_0x444941=/^(prod|promo)-(\d+)$/[_0x3dd464(0x172)](String(_0x228c97['id']));return _0x444941?{'type':_0x444941[0x1],'id':parseInt(_0x444941[0x2],0xa),'qty':_0x228c97['qty']}:null;});if(_0x2cd8cb['some'](function(_0x36a1b7){return!_0x36a1b7;}))return Promise[_0x2772a7(0x431)](_0x584421(_0x2772a7(0x103)));var _0x556c2c=typeof PharmaEmail!==_0x2772a7(0x130)?PharmaEmail[_0x2772a7(0x339)]():'fr',_0x3057d6=appliedPromo&&appliedPromo['code']?appliedPromo[_0x2772a7(0x20f)]:'';return PharmaCloud[_0x2772a7(0x27a)]({'nom':_0x966ef8,'email':_0x540b23,'tel':_0x28e989,'lignes':_0x2cd8cb,'code':_0x3057d6,'langue':_0x556c2c})[_0x2772a7(0x154)](function(_0x2c7f31){var _0x4b73ef=_0x2772a7;if(!_0x2c7f31||_0x2c7f31['ok']!==!![]){appliedPromo=null;var _0x52a8a8=document[_0x4b73ef(0x3de)](_0x4b73ef(0x102));if(_0x52a8a8)_0x52a8a8[_0x4b73ef(0x187)]='';var _0x41d48a=document[_0x4b73ef(0x3de)](_0x4b73ef(0x38e));if(_0x41d48a)_0x41d48a[_0x4b73ef(0x187)]='';updateCart();var _0x2a2500=String(_0x2c7f31&&_0x2c7f31[_0x4b73ef(0x44f)]||'code\x20promo\x20refusé');return _0x584421(_0x4b73ef(0x470)+_0x2a2500[_0x4b73ef(0x367)](0x0)[_0x4b73ef(0x3b9)]()+_0x2a2500[_0x4b73ef(0x118)](0x1)+_0x4b73ef(0x277));}var _0x442ff3=nombre(_0x2c7f31[_0x4b73ef(0x414)]),_0x43b6a9=nombre(_0x2c7f31[_0x4b73ef(0x3ae)]),_0x478a9b=_0x2c7f31[_0x4b73ef(0x3d3)]&&_0x2c7f31[_0x4b73ef(0x3d3)]['code']?_0x2c7f31[_0x4b73ef(0x3d3)]:null,_0x2119ef=Promise['resolve']([]);if(typeof PharmaEmail!==_0x4b73ef(0x130))try{var _0x186a0f={'id':_0x2c7f31['id'],'client':_0x966ef8,'email':_0x540b23,'produits':_0x2c7f31[_0x4b73ef(0x2c2)],'total':_0x442ff3,'timestamp':_0x2c7f31[_0x4b73ef(0x184)],'lang':_0x2c7f31[_0x4b73ef(0x1b5)]||_0x556c2c,'codeRetrait':_0x2c7f31[_0x4b73ef(0x445)],'codePromo':_0x3057d6,'remise':_0x43b6a9},_0x5ac395={'seuil':_0x2c7f31[_0x4b73ef(0x43f)],'reduction':_0x2c7f31['reduction'],'achats':_0x2c7f31['achats']},_0x270011=[{'type':'commandeRecue','data':DATA,'ctx':{'commande':_0x186a0f,'fidelite':_0x5ac395}}];_0x478a9b&&_0x270011['push']({'type':_0x4b73ef(0x341),'data':DATA,'ctx':{'commande':_0x186a0f,'fidelite':_0x5ac395,'code':{'code':_0x478a9b['code'],'pct':_0x478a9b[_0x4b73ef(0x263)],'expire':_0x478a9b[_0x4b73ef(0x4a6)]}}}),_0x2119ef=PharmaEmail[_0x4b73ef(0x1e2)](_0x270011);}catch(_0x57cee7){console[_0x4b73ef(0x109)](_0x4b73ef(0x189),_0x57cee7);}cart=[],appliedPromo=null;var _0x22d9cd=document['getElementById']('promo-feedback');if(_0x22d9cd)_0x22d9cd[_0x4b73ef(0x187)]='';var _0x17df7e=document[_0x4b73ef(0x3de)](_0x4b73ef(0x1c8));if(_0x17df7e)_0x17df7e['value']='';return updateCart(),chargerDonneesCloud(),{'ok':!![],'codeFidelite':_0x478a9b?_0x478a9b[_0x4b73ef(0x20f)]:null,'codeFidelitePct':_0x478a9b?_0x478a9b[_0x4b73ef(0x263)]:_0x2c7f31[_0x4b73ef(0x40c)],'total':_0x442ff3,'remise':_0x43b6a9,'numero':_0x2c7f31['id'],'codeRetrait':_0x2c7f31[_0x4b73ef(0x445)],'email':_0x540b23,'emails':_0x2119ef};},function(_0x40a5b8){var _0x19e50c=_0x2772a7;return _0x584421(_0x40a5b8&&_0x40a5b8[_0x19e50c(0x43b)]||'La\x20commande\x20n\x27a\x20pas\x20pu\x20être\x20enregistrée.\x20Réessayez.');});}function afficherConfirmation(_0xa5da34,_0x87b7c){var _0x4a0f0a=_0x44a01f,_0x229861=document[_0x4a0f0a(0x3de)](_0x4a0f0a(0x2eb));if(!_0x229861){pharmaToast(_0x4a0f0a(0x2ef)+_0xa5da34[_0x4a0f0a(0x3e3)]);return;}var _0x51e1d3=function(_0x25662f,_0x2c0bb8){var _0x2828f4=_0x4a0f0a,_0x22e922=document[_0x2828f4(0x3de)](_0x25662f);if(_0x22e922)_0x22e922[_0x2828f4(0x187)]=_0x2c0bb8;};_0x51e1d3(_0x4a0f0a(0x215),_0x4a0f0a(0x2f5)+_0xa5da34[_0x4a0f0a(0x1ad)]),_0x51e1d3(_0x4a0f0a(0x121),_0xa5da34[_0x4a0f0a(0x3e3)]);var _0x5371a6=document[_0x4a0f0a(0x3de)](_0x4a0f0a(0x2da));if(_0x5371a6){var _0x3ec1ab=_0x87b7c&&_0x87b7c[_0x4a0f0a(0x44b)]||[];_0x5371a6['innerHTML']=_0x3ec1ab[_0x4a0f0a(0x420)]?recapArticlesHTML(_0x3ec1ab,_0x87b7c[_0x4a0f0a(0x428)],{'total':_0xa5da34['total'],'remise':_0xa5da34[_0x4a0f0a(0x3ae)]}):'',_0x5371a6[_0x4a0f0a(0x178)]=!_0x3ec1ab[_0x4a0f0a(0x420)],suivrePhotos(_0x5371a6);}var _0x2b42f9=document[_0x4a0f0a(0x3de)](_0x4a0f0a(0x3cb));_0x2b42f9&&(_0xa5da34[_0x4a0f0a(0x341)]?(_0x2b42f9[_0x4a0f0a(0x461)]['display']=_0x4a0f0a(0x47c),_0x2b42f9[_0x4a0f0a(0x295)]=_0x4a0f0a(0x12d)+escHtml(_0xa5da34[_0x4a0f0a(0x186)])+_0x4a0f0a(0x41f)+escHtml(_0xa5da34[_0x4a0f0a(0x341)])+_0x4a0f0a(0x400)):(_0x2b42f9[_0x4a0f0a(0x461)]['display']=_0x4a0f0a(0x362),_0x2b42f9[_0x4a0f0a(0x295)]=''));var _0x5a5b1c=document[_0x4a0f0a(0x3de)](_0x4a0f0a(0x115)),_0x56f509=_0x4a0f0a(0x318);_0x5a5b1c&&(_0x5a5b1c['textContent']='Envoi\x20de\x20votre\x20email\x20de\x20confirmation…',Promise['resolve'](_0xa5da34['emails'])[_0x4a0f0a(0x154)](function(_0x5dcca0){var _0x489f66=_0x4a0f0a,_0xd235d8=_0x5dcca0&&_0x5dcca0[0x0];if(_0xd235d8&&_0xd235d8['ok'])_0x5a5b1c[_0x489f66(0x187)]=_0x489f66(0x212)+_0xa5da34[_0x489f66(0x36a)]+'.';else{if(_0xd235d8&&_0xd235d8[_0x489f66(0x3e6)])_0x5a5b1c['textContent']=_0x56f509;else _0x5a5b1c[_0x489f66(0x187)]=_0x489f66(0x423)+_0x56f509;}},function(){var _0x24a7e2=_0x4a0f0a;_0x5a5b1c[_0x24a7e2(0x187)]=_0x56f509;})),_0x229861['classList'][_0x4a0f0a(0x29c)](_0x4a0f0a(0x41c));}function fermerConfirmation(){var _0x216032=_0x44a01f,_0x57e525=document[_0x216032(0x3de)](_0x216032(0x2eb));if(_0x57e525)_0x57e525[_0x216032(0x2db)]['remove'](_0x216032(0x41c));}var CARTES_VOLET=_0x44a01f(0x252),revealObserver,revealSortie,voletEntree,voletSortie;function observeReveals(){var _0x4093fd=_0x44a01f,_0x59f641=document['querySelectorAll'](CARTES_VOLET);_0x59f641[_0x4093fd(0x114)](function(_0x211126){var _0xc7fcc5=_0x4093fd;if(_0x211126[_0xc7fcc5(0x2db)][_0xc7fcc5(0x157)](_0xc7fcc5(0x131)))_0x211126['classList'][_0xc7fcc5(0x29c)]('volet');});if(prefersReducedMotion()||!window[_0x4093fd(0x3c5)]){document['querySelectorAll']('.reveal')['forEach'](function(_0x4c3b2a){var _0x4af543=_0x4093fd;_0x4c3b2a[_0x4af543(0x2db)][_0x4af543(0x29c)](_0x4af543(0x3b7),_0x4af543(0x29f));});return;}!revealObserver&&(revealObserver=new IntersectionObserver(function(_0x2965f8){var _0x3b2c7=_0x4093fd;_0x2965f8[_0x3b2c7(0x114)](function(_0x254972){var _0x5e5211=_0x3b2c7;if(_0x254972[_0x5e5211(0x388)])_0x254972[_0x5e5211(0x29e)]['classList'][_0x5e5211(0x29c)](_0x5e5211(0x3b7));});},{'threshold':0x0,'rootMargin':'0px\x200px\x20-6%\x200px'}),revealSortie=new IntersectionObserver(function(_0x4311b7){var _0x49a618=_0x4093fd;_0x4311b7[_0x49a618(0x114)](function(_0x20eb5b){var _0x4fdcc4=_0x49a618;if(!_0x20eb5b[_0x4fdcc4(0x388)])_0x20eb5b[_0x4fdcc4(0x29e)]['classList'][_0x4fdcc4(0x180)](_0x4fdcc4(0x3b7));});},{'threshold':0x0}),voletEntree=new IntersectionObserver(function(_0x3277b0){var _0x35a4ea=_0x4093fd,_0x277260=_0x3277b0[_0x35a4ea(0x297)](function(_0x20644a){var _0x1e9458=_0x35a4ea;return _0x20644a[_0x1e9458(0x388)]&&!_0x20644a[_0x1e9458(0x29e)][_0x1e9458(0x2db)][_0x1e9458(0x157)](_0x1e9458(0x29f));});_0x277260['sort'](function(_0x4fd003,_0x204fd3){var _0x145b06=_0x35a4ea;return _0x4fd003[_0x145b06(0x337)][_0x145b06(0x483)]-_0x204fd3[_0x145b06(0x337)][_0x145b06(0x483)]||_0x4fd003[_0x145b06(0x337)][_0x145b06(0x352)]-_0x204fd3[_0x145b06(0x337)]['left'];}),_0x277260[_0x35a4ea(0x114)](function(_0x38fd32,_0x1631ad){var _0x4290e4=_0x35a4ea,_0x289ea0=_0x38fd32[_0x4290e4(0x29e)];_0x289ea0[_0x4290e4(0x461)][_0x4290e4(0x494)]=Math[_0x4290e4(0x2ca)](_0x1631ad,0x3)*0.08+'s',_0x289ea0[_0x4290e4(0x2db)][_0x4290e4(0x29c)](_0x4290e4(0x29f)),_0x289ea0[_0x4290e4(0x3d7)](_0x4290e4(0x16f),function _0x5dbc08(){var _0x3cf991=_0x4290e4;_0x289ea0[_0x3cf991(0x461)]['transitionDelay']='',_0x289ea0['removeEventListener'](_0x3cf991(0x16f),_0x5dbc08);});});},{'threshold':0x0,'rootMargin':_0x4093fd(0x3d9)}),voletSortie=new IntersectionObserver(function(_0x490101){_0x490101['forEach'](function(_0xa23882){var _0x5a558e=_0x1cc6;!_0xa23882['isIntersecting']&&(_0xa23882[_0x5a558e(0x29e)][_0x5a558e(0x461)][_0x5a558e(0x494)]='0s',_0xa23882[_0x5a558e(0x29e)][_0x5a558e(0x2db)]['remove'](_0x5a558e(0x29f)));});},{'threshold':0x0})),document[_0x4093fd(0x24f)]('.reveal:not(.volet)')[_0x4093fd(0x114)](function(_0x392e7a){var _0x48801a=_0x4093fd;revealObserver[_0x48801a(0x481)](_0x392e7a),revealSortie[_0x48801a(0x481)](_0x392e7a);}),document[_0x4093fd(0x24f)](_0x4093fd(0x2d5))['forEach'](function(_0x18d932){var _0x32cd91=_0x4093fd;voletEntree[_0x32cd91(0x481)](_0x18d932),voletSortie[_0x32cd91(0x481)](_0x18d932);});}function initTilt(){var _0x3f8b2e=_0x44a01f;if(prefersReducedMotion())return;if(_0x3f8b2e(0x3f0)in window||window[_0x3f8b2e(0x23a)]<=0x400)return;document['querySelectorAll']('[data-tilt]')[_0x3f8b2e(0x114)](function(_0x81ae0d){var _0x161de4=_0x3f8b2e;if(_0x81ae0d[_0x161de4(0x1ce)])return;_0x81ae0d[_0x161de4(0x1ce)]=!![],_0x81ae0d[_0x161de4(0x3d7)](_0x161de4(0x47b),function(_0x5a630a){var _0x5af170=_0x161de4,_0xd77b76=_0x81ae0d[_0x5af170(0x34a)](),_0x10c570=(_0x5a630a[_0x5af170(0x136)]-_0xd77b76[_0x5af170(0x352)])/_0xd77b76[_0x5af170(0x10a)]-0.5,_0x310717=(_0x5a630a[_0x5af170(0x28a)]-_0xd77b76[_0x5af170(0x483)])/_0xd77b76['height']-0.5;_0x81ae0d[_0x5af170(0x461)][_0x5af170(0x302)]=_0x5af170(0x1fd)+_0x10c570*0x8+'deg)\x20rotateX('+-_0x310717*0x8+_0x5af170(0x2e0);}),_0x81ae0d[_0x161de4(0x3d7)](_0x161de4(0xf2),function(){var _0x1a9f7f=_0x161de4;_0x81ae0d[_0x1a9f7f(0x461)]['transform']='';});});}function readingTime(_0x14297e){var _0x470db4=_0x44a01f,_0xf24222=(_0x14297e||'')['trim']()[_0x470db4(0x163)](/\s+/)[_0x470db4(0x420)],_0x186be7=Math[_0x470db4(0x416)](0x9c4,Math[_0x470db4(0x2ca)](0x1f40,_0xf24222/3.3*0x3e8));return _0x186be7;}function renderConseilsSite(){var _0xb68141=_0x44a01f,_0x9f9e83=(DATA[_0xb68141(0x3e2)]||[])[_0xb68141(0x297)](function(_0xa51b9a){var _0x17584e=_0xb68141;return _0xa51b9a&&_0xa51b9a[_0x17584e(0x292)]&&(_0xa51b9a[_0x17584e(0x25b)]||_0xa51b9a[_0x17584e(0x2dc)]);});document[_0xb68141(0x24f)](_0xb68141(0x287))[_0xb68141(0x114)](function(_0x1bd99f,_0x2e1554){var _0x27cb03=_0xb68141,_0x245138=_0x1bd99f[_0x27cb03(0x11e)](_0x27cb03(0x486)),_0x546104=_0x9f9e83[_0x2e1554];if(!_0x245138)return;if(!_0x546104){_0x1bd99f[_0x27cb03(0x13f)]('data-sans-conseil','1'),_0x245138[_0x27cb03(0x461)][_0x27cb03(0x32b)]=_0x27cb03(0x178);return;}_0x1bd99f[_0x27cb03(0x1bc)](_0x27cb03(0x1f7)),_0x245138[_0x27cb03(0x461)][_0x27cb03(0x32b)]='';var _0x137e1f=/^#[0-9a-fA-F]{6}$/[_0x27cb03(0x405)](String(_0x546104['couleur']||''))?_0x546104['couleur']:'#1B6B45',_0x3b6052=typeof PharmaEmail!==_0x27cb03(0x130)&&PharmaEmail[_0x27cb03(0x216)]?PharmaEmail[_0x27cb03(0x216)](_0x137e1f)[_0x27cb03(0x1ed)]:_0x137e1f;_0x245138[_0x27cb03(0x461)]['background']=_0x27cb03(0x358)+_0x137e1f+','+_0x3b6052+')';var _0x4ea066=PHARMA_ICONES_CONSEIL[_0x546104[_0x27cb03(0x177)]]||PHARMA_ICONES_CONSEIL[_0x27cb03(0x28d)];_0x245138['innerHTML']=_0x27cb03(0x111)+_0x4ea066+_0x27cb03(0x2b9)+_0x27cb03(0x164)+escHtml(_0x546104['titre'])+_0x27cb03(0x12f)+escHtml(_0x546104[_0x27cb03(0x2dc)])+_0x27cb03(0x2cd);});}function initFlipCards(){var _0x1ff57f=_0x44a01f,_0x525cf6=document[_0x1ff57f(0x24f)](_0x1ff57f(0x287));_0x525cf6[_0x1ff57f(0x114)](function(_0x258a04,_0x3f4855){var _0x159e13=_0x1ff57f;if(_0x258a04[_0x159e13(0x28e)](_0x159e13(0x1f7)))return;var _0x3bcfac=parseInt(_0x258a04[_0x159e13(0x28e)](_0x159e13(0x35c))||0x0),_0x3c3622=_0x258a04[_0x159e13(0x11e)](_0x159e13(0x469)),_0xb0827e=_0x3c3622?_0x3c3622[_0x159e13(0x187)]:'',_0x50ea5b=_0x258a04[_0x159e13(0x11e)](_0x159e13(0x328)),_0x1cb9c6=_0x50ea5b?_0x50ea5b['textContent']:'',_0x5bf8bb=_0x1cb9c6+'\x20'+_0xb0827e,_0x105182=0xfa0,_0x3bee89=readingTime(_0x5bf8bb),_0x174f02=![],_0x2a577d;function _0x572108(){_0x2a577d=setTimeout(function(){var _0x38e973=_0x1cc6;_0x174f02=!![],_0x258a04[_0x38e973(0x2db)]['add']('flipped'),_0x2a577d=setTimeout(function(){var _0x11e1a5=_0x38e973;_0x174f02=![],_0x258a04[_0x11e1a5(0x2db)][_0x11e1a5(0x180)]('flipped'),_0x572108();},_0x3bee89);},_0x105182);}_0x2a577d=setTimeout(function(){_0x572108();},_0x3bcfac+0x7d0+_0x3f4855*0x320),_0x258a04[_0x159e13(0x3d7)]('click',function(){var _0x500e15=_0x159e13;clearTimeout(_0x2a577d),_0x174f02=!_0x174f02,_0x258a04[_0x500e15(0x2db)][_0x500e15(0x170)]('flipped',_0x174f02),_0x2a577d=setTimeout(function(){var _0x5d1921=_0x500e15;_0x174f02=![],_0x258a04[_0x5d1921(0x2db)]['remove'](_0x5d1921(0x237)),_0x572108();},_0x174f02?_0x3bee89:_0x105182);});});}function initHeroParallax(){var _0x31e1ec=_0x44a01f,_0x431917=document['getElementById'](_0x31e1ec(0x3ee));if(!_0x431917)return;if(prefersReducedMotion())return;_0x431917['addEventListener'](_0x31e1ec(0x47b),function(_0x1cbfae){var _0x384eac=_0x31e1ec,_0x4ab972=_0x431917['getBoundingClientRect'](),_0x855587=(_0x1cbfae[_0x384eac(0x136)]-_0x4ab972[_0x384eac(0x352)])/_0x4ab972[_0x384eac(0x10a)]-0.5,_0x6a560f=(_0x1cbfae['clientY']-_0x4ab972[_0x384eac(0x483)])/_0x4ab972[_0x384eac(0x2a9)]-0.5;_0x431917['querySelectorAll'](_0x384eac(0x288))[_0x384eac(0x114)](function(_0x254e39){var _0x575435=_0x384eac,_0x102a4d=parseFloat(_0x254e39['getAttribute'](_0x575435(0x134)));_0x254e39[_0x575435(0x461)][_0x575435(0x302)]=_0x254e39[_0x575435(0x461)][_0x575435(0x302)]['replace'](/ translate3d[^)]*\)/g,'')+_0x575435(0x197)+_0x855587*0x1e*_0x102a4d+_0x575435(0x271)+_0x6a560f*0x1e*_0x102a4d+_0x575435(0x168);});});}function initScrollParallax(){var _0x1d6cae=_0x44a01f,_0x5bfcfb=document['getElementById'](_0x1d6cae(0x497)),_0x36d5ca=document[_0x1d6cae(0x3de)](_0x1d6cae(0x2dd)),_0x40769=document[_0x1d6cae(0x3de)](_0x1d6cae(0x3ee)),_0x50d8fc=_0x40769?Array[_0x1d6cae(0x18d)][_0x1d6cae(0x118)][_0x1d6cae(0x29a)](_0x40769[_0x1d6cae(0x24f)](_0x1d6cae(0x288))):[],_0x2876d6=_0x50d8fc['map'](function(_0x3fac73){var _0x2d2327=_0x1d6cae;return parseFloat(_0x3fac73['getAttribute'](_0x2d2327(0x134)))||0x0;}),_0x459ace=_0x50d8fc[_0x1d6cae(0x420)]&&!prefersReducedMotion()&&_0x1d6cae(0x250)in document[_0x1d6cae(0x2d4)]['style'],_0x3f3a0a=window[_0x1d6cae(0x34e)]?window[_0x1d6cae(0x34e)](_0x1d6cae(0x276)):{'matches':![]},_0x230968=![],_0x4fbf92=-0x1;function _0x52db35(){var _0x311b5a=_0x1d6cae;_0x230968=![];var _0x5ba365=window[_0x311b5a(0x181)]||window[_0x311b5a(0x2a1)]||0x0;if(_0x5ba365===_0x4fbf92)return;_0x4fbf92=_0x5ba365;if(_0x5bfcfb)_0x5bfcfb['classList'][_0x311b5a(0x170)]('scrolled',_0x5ba365>0x1e);_0x36d5ca&&(_0x36d5ca['style'][_0x311b5a(0x3bf)]=_0x311b5a(0x1c1),_0x36d5ca['style'][_0x311b5a(0x302)]=_0x5ba365>0x1e?_0x311b5a(0x373):_0x311b5a(0x2d1)),_0x459ace&&_0x5ba365<0x384&&_0x50d8fc[_0x311b5a(0x114)](function(_0x4cb103,_0x4446fa){var _0x142a89=_0x311b5a;_0x4cb103['style'][_0x142a89(0x250)]=_0x3f3a0a['matches']?'':'0\x20'+(_0x5ba365*_0x2876d6[_0x4446fa]*0.15)['toFixed'](0x1)+'px';});}window[_0x1d6cae(0x3d7)](_0x1d6cae(0x17a),function(){!_0x230968&&(_0x230968=!![],requestAnimationFrame(_0x52db35));},{'passive':!![]}),_0x52db35();}window[_0x44a01f(0x2c3)]=function(_0x12b93c,_0x54ddd8){var _0x219923=_0x44a01f,_0x10e732=document[_0x219923(0x3de)](_0x219923(0x37b));if(!_0x10e732)return;var _0x3c92e8=document[_0x219923(0x3cf)]('div');_0x3c92e8[_0x219923(0x3b4)]=_0x219923(0x2d8);var _0x35479a=_0x219923(0x20b),_0x5a5e7d=_0x54ddd8&&_0x54ddd8[_0x219923(0x345)];_0x5a5e7d&&photoArticle(_0x5a5e7d['id'])?(_0x3c92e8[_0x219923(0x2db)]['add'](_0x219923(0x1ea)),_0x3c92e8['innerHTML']=_0x219923(0x37f)+vignetteArticle(_0x5a5e7d,_0x219923(0x455))+_0x219923(0x30f)+_0x35479a+'</span></span>',suivrePhotos(_0x3c92e8)):_0x3c92e8[_0x219923(0x295)]=_0x35479a;_0x3c92e8['appendChild'](document[_0x219923(0x11b)](String(_0x12b93c==null?'':_0x12b93c)));while(_0x10e732[_0x219923(0x144)][_0x219923(0x420)]>=0x3)_0x10e732['removeChild'](_0x10e732['firstChild']);_0x10e732[_0x219923(0x301)](_0x3c92e8),document[_0x219923(0x3c4)]['classList'][_0x219923(0x29c)](_0x219923(0x333)),setTimeout(function(){var _0x566621=_0x219923;_0x3c92e8[_0x566621(0x2db)]['add'](_0x566621(0x110)),setTimeout(function(){var _0x2ebb20=_0x566621;if(_0x3c92e8[_0x2ebb20(0x467)])_0x3c92e8[_0x2ebb20(0x467)][_0x2ebb20(0x14e)](_0x3c92e8);if(!_0x10e732[_0x2ebb20(0x144)][_0x2ebb20(0x420)])document[_0x2ebb20(0x3c4)][_0x2ebb20(0x2db)][_0x2ebb20(0x180)]('avec-message');},0x168);},0xaf0);};function openAccount(){var _0x6abbf3=_0x44a01f;document[_0x6abbf3(0x3de)](_0x6abbf3(0x42a))[_0x6abbf3(0x2db)]['add'](_0x6abbf3(0x41c));}function closeAccount(){var _0x5a263d=_0x44a01f;document[_0x5a263d(0x3de)]('account-modal')[_0x5a263d(0x2db)]['remove'](_0x5a263d(0x41c));}window[_0x44a01f(0x3d7)](_0x44a01f(0x324),function(){var _0x35eca6=_0x44a01f,_0xc9b76a=document['getElementById'](_0x35eca6(0x1e7));_0xc9b76a&&(_0xc9b76a[_0x35eca6(0x295)]=pharmaCodeBarres(_0x35eca6(0x48b),0x34,{'embleme':_0x35eca6(0x13a)}),pharmaAjusterCodeBarres(_0xc9b76a),window[_0x35eca6(0x3d7)](_0x35eca6(0x1d1),function(){pharmaAjusterCodeBarres(_0xc9b76a);}));applyPharmacyConfig(),initTheme(),initAmbient(),renderAnnonces(),renderRecit(),initRecit(),renderPromos(),renderCatalogue(),initNavigationRayons(),renderFaq(),loadCart(),updateCart(),initCookieBar();var _0x40be5b=document[_0x35eca6(0x3de)](_0x35eca6(0x347));if(_0x40be5b)_0x40be5b[_0x35eca6(0x3d7)](_0x35eca6(0x47a),function(_0x118e9e){var _0x5658dd=_0x35eca6;if(_0x118e9e[_0x5658dd(0x29e)]===this)fermerLegal();});observeReveals(),initHeroParallax(),initScrollParallax(),renderConseilsSite();(!MODE_CLOUD||PharmaCloud['depuisCache'])&&(flipCardsLancees=!![],initFlipCards());EN_LIGNE&&(preparerSquelette(),surveillerReseau(),chargerDonneesCloud());MODE_CLOUD&&document[_0x35eca6(0x3d7)](_0x35eca6(0x219),function(){var _0x486cce=_0x35eca6;if(document[_0x486cce(0x24c)]===_0x486cce(0x3b7)&&Date[_0x486cce(0x335)]()-dernierChargementCloud>0x5*0x3c*0x3e8)chargerDonneesCloud();});var _0x343fb5=document['getElementById']('theme-btn');if(_0x343fb5)_0x343fb5[_0x35eca6(0x3d7)](_0x35eca6(0x47a),toggleTheme);document['getElementById'](_0x35eca6(0x42b))['addEventListener'](_0x35eca6(0x47a),openCart),document['getElementById'](_0x35eca6(0x13b))[_0x35eca6(0x3d7)](_0x35eca6(0x47a),closeCart),document[_0x35eca6(0x3de)](_0x35eca6(0x18c))[_0x35eca6(0x3d7)](_0x35eca6(0x47a),closeCart),document['getElementById'](_0x35eca6(0x245))[_0x35eca6(0x3d7)](_0x35eca6(0x47a),openAccount);var _0x4f4720=document[_0x35eca6(0x3de)](_0x35eca6(0x1e0));if(_0x4f4720)_0x4f4720['addEventListener']('click',function(){closeMobileMenu(),openAccount();});document[_0x35eca6(0x3de)](_0x35eca6(0x3c9))[_0x35eca6(0x3d7)](_0x35eca6(0x47a),closeAccount),document[_0x35eca6(0x3de)](_0x35eca6(0x42a))[_0x35eca6(0x3d7)](_0x35eca6(0x47a),function(_0x2ae8ae){var _0x55172c=_0x35eca6;if(_0x2ae8ae[_0x55172c(0x29e)]===this)closeAccount();}),document['getElementById'](_0x35eca6(0x171))[_0x35eca6(0x3d7)]('click',function(){var _0x55e0e1=_0x35eca6;document[_0x55e0e1(0x3de)](_0x55e0e1(0x20e))[_0x55e0e1(0x47a)](),openAccount();}),document[_0x35eca6(0x3de)](_0x35eca6(0x190))[_0x35eca6(0x3d7)](_0x35eca6(0x47a),function(){var _0x398418=_0x35eca6;this[_0x398418(0x2db)]['add'](_0x398418(0x40d)),document[_0x398418(0x3de)](_0x398418(0x20e))[_0x398418(0x2db)][_0x398418(0x180)](_0x398418(0x40d)),document[_0x398418(0x3de)](_0x398418(0x30e))['style'][_0x398418(0x1d9)]=_0x398418(0x47c),document[_0x398418(0x3de)](_0x398418(0x19f))[_0x398418(0x461)][_0x398418(0x1d9)]=_0x398418(0x362);}),document[_0x35eca6(0x3de)](_0x35eca6(0x20e))[_0x35eca6(0x3d7)](_0x35eca6(0x47a),function(){var _0x29a74a=_0x35eca6;this[_0x29a74a(0x2db)]['add']('active'),document[_0x29a74a(0x3de)](_0x29a74a(0x190))['classList'][_0x29a74a(0x180)](_0x29a74a(0x40d)),document[_0x29a74a(0x3de)]('login-form')[_0x29a74a(0x461)][_0x29a74a(0x1d9)]='none',document[_0x29a74a(0x3de)](_0x29a74a(0x19f))['style'][_0x29a74a(0x1d9)]='block';}),document[_0x35eca6(0x3de)](_0x35eca6(0x1fc))['addEventListener'](_0x35eca6(0x47a),function(){var _0x27aa8b=_0x35eca6;if(cart['length']===0x0){pharmaToast(_0x27aa8b(0x274));return;}closeCart(),prefillCheckout(),document[_0x27aa8b(0x3de)]('checkout-modal')[_0x27aa8b(0x2db)][_0x27aa8b(0x29c)]('open');}),document[_0x35eca6(0x3de)](_0x35eca6(0x1b7))[_0x35eca6(0x3d7)]('click',function(){var _0x446ff7=_0x35eca6;document['getElementById']('checkout-modal')[_0x446ff7(0x2db)]['remove'](_0x446ff7(0x41c));}),document[_0x35eca6(0x3de)]('checkout-modal')[_0x35eca6(0x3d7)](_0x35eca6(0x47a),function(_0x38ae8a){var _0x1fbcac=_0x35eca6;if(_0x38ae8a[_0x1fbcac(0x29e)]===this)this[_0x1fbcac(0x2db)]['remove'](_0x1fbcac(0x41c));});var _0x1a5e74=document[_0x35eca6(0x3de)](_0x35eca6(0x2ff));if(_0x1a5e74)_0x1a5e74[_0x35eca6(0x3d7)](_0x35eca6(0x47a),fermerConfirmation);var _0x1d94b0=document['getElementById'](_0x35eca6(0x2eb));if(_0x1d94b0)_0x1d94b0['addEventListener'](_0x35eca6(0x47a),function(_0x555989){var _0x175467=_0x35eca6;if(_0x555989[_0x175467(0x29e)]===this)fermerConfirmation();});document[_0x35eca6(0x3de)](_0x35eca6(0x30b))[_0x35eca6(0x3d7)](_0x35eca6(0x47a),function(){var _0x53b416=_0x35eca6,_0x59b8f0=this;if(_0x59b8f0['disabled'])return;_0x59b8f0['disabled']=!![];var _0x485aa2=_0x59b8f0[_0x53b416(0x187)];_0x59b8f0[_0x53b416(0x187)]=_0x53b416(0xf4);var _0x4ca07e={'lignes':cart[_0x53b416(0x16d)](function(_0x5fcad7){var _0x2cb5ed=_0x53b416;return{'id':_0x5fcad7['id'],'nom':_0x5fcad7[_0x2cb5ed(0x22d)],'prix':_0x5fcad7[_0x2cb5ed(0x340)],'icon':_0x5fcad7[_0x2cb5ed(0x3a1)],'cat':_0x5fcad7[_0x2cb5ed(0x159)],'qty':_0x5fcad7[_0x2cb5ed(0x415)]};}),'promo':appliedPromo?{'code':appliedPromo['code'],'pct':appliedPromo[_0x53b416(0x263)],'scope':appliedPromo['scope']}:null};Promise['resolve'](MODE_CLOUD?placeOrderCloud():placeOrder())['then'](function(_0x592611){var _0x154588=_0x53b416;_0x592611&&_0x592611['ok']&&(document[_0x154588(0x3de)](_0x154588(0x440))[_0x154588(0x2db)][_0x154588(0x180)](_0x154588(0x41c)),afficherConfirmation(_0x592611,_0x4ca07e)),setTimeout(function(){var _0x2e2913=_0x154588;_0x59b8f0[_0x2e2913(0x2a2)]=![],_0x59b8f0[_0x2e2913(0x187)]=_0x485aa2;},_0x592611&&_0x592611['ok']?0x320:0x12c);});}),document['getElementById']('burger-m')[_0x35eca6(0x3d7)](_0x35eca6(0x47a),function(){var _0x38f07c=_0x35eca6;document[_0x38f07c(0x3de)](_0x38f07c(0x1a3))[_0x38f07c(0x2db)]['add'](_0x38f07c(0x41c));}),document[_0x35eca6(0x3de)](_0x35eca6(0x311))[_0x35eca6(0x3d7)]('click',closeMobileMenu),document['querySelectorAll']('.mm-link')[_0x35eca6(0x114)](function(_0x4deb42){var _0x2407d4=_0x35eca6;_0x4deb42[_0x2407d4(0x3d7)](_0x2407d4(0x47a),closeMobileMenu);});});function closeMobileMenu(){var _0x583d0b=_0x44a01f;document[_0x583d0b(0x3de)](_0x583d0b(0x1a3))['classList']['remove'](_0x583d0b(0x41c));}document['addEventListener'](_0x44a01f(0x14f),function(_0x88335e){var _0x31a46d=_0x44a01f;if(_0x88335e[_0x31a46d(0x1f3)]!==_0x31a46d(0x18f))return;var _0x539aab=[_0x31a46d(0x2eb),_0x31a46d(0x440),_0x31a46d(0x42a),'legal-modal','promo-detail-modal'];for(var _0x27f38d=0x0;_0x27f38d<_0x539aab[_0x31a46d(0x420)];_0x27f38d++){var _0x53061d=document[_0x31a46d(0x3de)](_0x539aab[_0x27f38d]);if(_0x53061d&&_0x53061d[_0x31a46d(0x2db)][_0x31a46d(0x157)](_0x31a46d(0x41c))){if(_0x539aab[_0x27f38d]===_0x31a46d(0x347)&&typeof fermerLegal==='function')fermerLegal();else{if(_0x539aab[_0x27f38d]===_0x31a46d(0x2eb)&&typeof fermerConfirmation===_0x31a46d(0x468))fermerConfirmation();else _0x53061d[_0x31a46d(0x2db)][_0x31a46d(0x180)](_0x31a46d(0x41c));}return;}}var _0x4a098b=document[_0x31a46d(0x3de)]('cart-drawer');if(_0x4a098b&&_0x4a098b[_0x31a46d(0x2db)]['contains'](_0x31a46d(0x41c))){closeCart();return;}var _0x450fe7=document[_0x31a46d(0x3de)](_0x31a46d(0x1a3));if(_0x450fe7&&_0x450fe7[_0x31a46d(0x2db)]['contains'](_0x31a46d(0x41c)))closeMobileMenu();});
+// ════════════════════════════════════════════
+// PHARMACIE DÉMO — Site client
+// ════════════════════════════════════════════
+
+// ── DONNÉES PARTAGÉES (admin.html / site.html / compte.html) ──
+// Deux modes (voir cloud.js) :
+//  * base de données (supabase-config.js renseigné) : le catalogue et les réglages sont lus
+//    dans la base ; la commande est enregistrée par le serveur, qui relit prix, stock et codes.
+//  * local (démonstration) : DATA vient de data.js et reste dans le navigateur.
+var MODE_CLOUD = (typeof PharmaCloud !== 'undefined') && PharmaCloud.prevu;
+var DATA = MODE_CLOUD ? PharmaCloud.donneesInitiales() : PharmaStore.load();
+// Démonstration seulement (sans base) : le menu TEST simule un réseau lent ou coupé (site.html?simu=lent),
+// pour voir le squelette et l'animation sans couper son propre réseau. Sans effet avec la base.
+var SIMU = (!MODE_CLOUD && (/[?&]simu=(lent|coupe)(&|$)/.exec(location.search) || [])[1]) || '';
+var DONNEES_SIMU = null;
+if (SIMU) {
+  DONNEES_SIMU = DATA;
+  DATA = JSON.parse(JSON.stringify(DATA));
+  ['categories', 'produits', 'promos', 'conseils', 'joursSpeciaux'].forEach(function(k) { DATA[k] = []; });
+}
+// Le catalogue vient-il du réseau ? (base de données, ou simulation de la démonstration)
+var EN_LIGNE = MODE_CLOUD || !!SIMU;
+// 'local' | 'chargement' (attente de la base) | 'pret' | 'erreur' (base injoignable)
+var ETAT_CLOUD = MODE_CLOUD ? (PharmaCloud.actif ? 'chargement' : 'erreur') : (SIMU ? 'chargement' : 'local');
+var dernierChargementCloud = 0;
+
+// Chaque catégorie produit est associée à une icône SVG existante.
+// Nouvelle catégorie non prévue → icône générique 'sparkle' par défaut.
+var CAT_ICON_MAP = {
+  'Solaire': 'sun', 'Vitamines': 'pill', 'Hygiène': 'drop',
+  'Beauté': 'sparkle', 'Bébé': 'baby', 'Minceur': 'sparkle', 'Aromathérapie': 'drop'
+};
+function iconForCat(cat) { return CAT_ICON_MAP[cat] || 'sparkle'; }
+
+// Échappe une chaîne injectée dans un attribut onclick="...('...')".
+// Sans cela, un nom contenant une apostrophe (L'Oréal) casse le bouton généré.
+function escAttr(str) {
+  return String(str == null ? '' : str)
+    .replace(/\\/g, '\\\\')
+    .replace(/'/g, "\\'")
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\r/g, '\\r')
+    .replace(/\n/g, '\\n')
+    .replace(/\u2028/g, '\\u2028')
+    .replace(/\u2029/g, '\\u2029');
+}
+// Nombre sûr pour un affichage ou un appel onclick (jamais de texte)
+function nombre(v) { var n = Number(v); return isFinite(n) ? n : 0; }
+
+// Formate une date ISO (2025-06-30, format utilisé côté admin) en format lisible ("30 juin")
+var MOIS_FR = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+function formatDateFr(iso) {
+  if (!iso) return '';
+  var parts = iso.split('-');
+  if (parts.length !== 3) return iso; // déjà dans un autre format (ex: saisi manuellement) : on laisse tel quel
+  var day = parseInt(parts[2], 10);
+  var month = MOIS_FR[parseInt(parts[1], 10) - 1] || '';
+  return day + ' ' + month;
+}
+
+// Échappe une chaîne affichée dans du HTML : un nom de produit contenant
+// < ou > s'affiche tel quel au lieu d'être interprété comme une balise.
+function escHtml(str) {
+  return String(str == null ? '' : str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// Retrouve le produit du catalogue correspondant au nom d'une promo
+// (les promos peuvent être des "lots" au nom légèrement différent du
+// produit catalogue — comparaison approximative sur le premier mot).
+function matchProduitPourPromo(nomPromo) {
+  var clean = String(nomPromo || '').replace(/^Lot\s+/i, '').replace(/\s*x\d+$/i, '').trim().toLowerCase();
+  var premierMot = clean.split(' ')[0];
+  return DATA.produits.find(function(p) {
+    return String(p.nom || '').toLowerCase().indexOf(premierMot) !== -1;
+  });
+}
+
+var PROMOS = [];
+var CATALOGUE = [];
+// Reconstruit PROMOS/CATALOGUE à partir de DATA (à appeler après tout rechargement de DATA)
+function buildCatalogueData() {
+  CATALOGUE = DATA.produits.map(function(p) {
+    return { id:'prod-'+p.id, produitId:p.id, cat:p.cat, nom:p.nom, prix:p.prix, icon:iconForCat(p.cat), stock:p.stock, photo:pharmaPhotoValide(p.photo),
+             rayons:pharmaRayonsDuProduit(DATA, p) };
+  });
+  // Une promo n'est affichée que si elle est active ET dans sa période de validité.
+  // Sans ce contrôle, une promo oubliée resterait visible indéfiniment sur le site.
+  // Comparaison de dates AAAA-MM-JJ à la date locale du jour (une promo qui commence
+  // aujourd'hui est visible dès minuit, une promo qui finit aujourd'hui l'est jusqu'au soir)
+  var auj = pharmaDateLocale();
+  PROMOS = DATA.promos.filter(function(pr) {
+    if (pr.statut !== 'Active') return false;
+    if (pr.debut && String(pr.debut).slice(0, 10) > auj) return false;   // pas encore commencée
+    if (pr.fin && String(pr.fin).slice(0, 10) < auj) return false;        // terminée
+    return true;
+  }).map(function(pr) {
+    // Produit de la promo : celui qui lui est relié dans la base, sinon d'après son nom
+    var produit = (pr.produitId != null && DATA.produits.find(function(p) { return p.id === pr.produitId; })) || matchProduitPourPromo(pr.produit);
+    var cat = produit ? produit.cat : 'Autres';
+    return {
+      id: 'promo-'+pr.id, promoId: pr.id, cat: cat, nom: pr.produit,
+      prixPromo: pr.prixPromo, prixNormal: pr.prixNormal,
+      pct: Math.abs(pr.pct), fin: formatDateFr(pr.fin), finIso: String(pr.fin || '').slice(0, 10), icon: iconForCat(cat),
+      photo: produit ? pharmaPhotoValide(produit.photo) : '', miseEnAvant: pr.miseEnAvant === true
+    };
+  });
+}
+buildCatalogueData();
+// Base de données sans copie locale : les informations de la pharmacie ne sont connues qu'à la réponse
+// de la base. D'ici là, celles de data.js (une autre pharmacie) ne doivent pas apparaître.
+var infosFiables = !EN_LIGNE || (MODE_CLOUD && PharmaCloud.depuisCache);
+if (!infosFiables) document.documentElement.classList.add('attente-base');
+
+var FAQ = [
+  { q:'Comment fonctionne le click & collect ?', a:'Vous choisissez vos produits sur le site, vous validez votre commande, puis vous la récupérez directement {A_LA_NOM}. Le règlement se fait sur place, au retrait.' },
+  { q:'Quel est le délai de préparation d\'une commande ?', a:'Vos commandes sont généralement prêtes en 1h en moyenne pendant les horaires d\'ouverture. Vous recevrez une notification dès qu\'elle est disponible au retrait.' },
+  { q:'Comment payer ma commande ?', a:'Le paiement se fait exclusivement en pharmacie au moment du retrait (carte bancaire, espèces ou chèque). Aucun paiement n\'est demandé au moment de la commande en ligne.' },
+  { q:'Puis-je modifier ou annuler ma commande ?', a:'Oui, contactez la pharmacie par téléphone le plus tôt possible après votre commande. Si elle est déjà en préparation, certaines modifications peuvent ne plus être possibles.' },
+  { q:'Comment fonctionne le programme de fidélité ?', a:'Chaque achat compte : une fois le palier atteint, un code de réduction est automatiquement généré et disponible dans votre espace client. Créez votre compte pour commencer à cumuler.' },
+  { q:'Que se passe-t-il si un produit est en rupture de stock ?', a:'Si un produit de votre commande n\'est plus disponible, l\'équipe de la pharmacie vous contacte directement pour vous proposer une alternative ou ajuster votre commande.' }
+];
+
+var ICONS = {
+  sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg>',
+  pill: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.5 20.5L3.5 13.5a5 5 0 0 1 7-7l7 7a5 5 0 0 1-7 7z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg>',
+  drop: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>',
+  sparkle: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5z"/></svg>',
+  baby: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/><path d="M9 15a3 3 0 0 0 6 0"/></svg>'
+};
+
+// Visuel d'une carte : la photo ajoutée dans l'admin, sinon l'icône du rayon
+function visuelCarte(p) {
+  var u = pharmaPhotoValide(p && p.photo);
+  return u ? '<img class="carte-photo" src="' + escHtml(u) + '" alt="" loading="lazy" decoding="async" data-photo data-icone="' + escHtml(p.icon || '') + '">' : (ICONS[p && p.icon] || '');
+}
+
+// Photos : la case garde un reflet tant que l'image n'est pas arrivée, puis l'image apparaît en fondu.
+// Une image introuvable (supprimée, réseau coupé) laisse la place à l'icône du rayon.
+function suivrePhoto(img, siEchec) {
+  var cadre = img.parentNode;
+  if (!cadre) return;
+  function prete() { cadre.classList.add('photo-prete'); }
+  function echec() {
+    if (siEchec) { siEchec(img, cadre); return; }
+    cadre.classList.remove('avec-photo');
+    cadre.classList.add('photo-prete');
+    img.insertAdjacentHTML('beforebegin', ICONS[img.getAttribute('data-icone')] || '');
+    img.remove();
+  }
+  if (img.complete && img.getAttribute('src')) { if (img.naturalWidth) prete(); else echec(); return; }
+  img.addEventListener('load', prete, { once: true });
+  img.addEventListener('error', echec, { once: true });
+}
+function suivrePhotos(racine) {
+  if (!racine) return;
+  racine.querySelectorAll('img[data-photo]').forEach(function(img) {
+    if (img.__suivie) return;
+    img.__suivie = true;
+    suivrePhoto(img);
+  });
+}
+
+// Photo d'un article du panier : lue dans le catalogue au moment de l'affichage. Le panier enregistré
+// ne garde pas de photo : une photo changée ou retirée dans l'admin est suivie partout.
+function photoArticle(id) {
+  var a = CATALOGUE.find(function(x) { return x.id === id; }) || PROMOS.find(function(x) { return x.id === id; });
+  return a ? pharmaPhotoValide(a.photo) : '';
+}
+// Vignette d'un article (panier, récapitulatif, confirmation, message d'ajout) :
+// la même photo que sur sa carte du catalogue, sinon l'icône du rayon
+function vignetteArticle(item, classe) {
+  var photo = photoArticle(item && item.id);
+  return '<span class="' + classe + ' vignette' + (photo ? ' avec-photo' : '') + '" aria-hidden="true">' +
+    visuelCarte({ photo: photo, icon: item && item.icon }) + '</span>';
+}
+
+var cart = [];
+var appliedPromo = null;
+
+// ── PERSISTANCE DU PANIER ───────────────────────────────────
+// Le panier survit à un rechargement de page ou à une visite ultérieure.
+var CART_KEY = 'pres-cart';
+function saveCart() {
+  try {
+    localStorage.setItem(CART_KEY, JSON.stringify({ cart: cart, promo: appliedPromo }));
+  } catch (e) { /* quota dépassé ou navigation privée : le panier reste en mémoire */ }
+}
+function loadCart() {
+  var saved = null;
+  try { saved = JSON.parse(localStorage.getItem(CART_KEY) || 'null'); } catch (e) {}
+  if (!saved || !Array.isArray(saved.cart)) return;
+  // On ne restaure que les articles encore disponibles au catalogue,
+  // pour éviter un panier contenant un produit supprimé côté admin.
+  cart = saved.cart.filter(function(item) {
+    return item && item.id && typeof item.prix === 'number' && item.qty > 0;
+  });
+  if (saved.promo && saved.promo.code) {
+    if (MODE_CLOUD) {
+      // Mode base de données : le code est revérifié par le serveur au moment de la commande
+      // (les valeurs gardées ici ne servent qu'à afficher la réduction dans le panier).
+      var sp = saved.promo, pct = parseInt(sp.pct, 10);
+      appliedPromo = (typeof sp.code === 'string' && pct >= 1 && pct <= 100)
+        ? { code: sp.code.slice(0, 40), pct: pct, scope: String(sp.scope || 'Tous'), label: String(sp.label || ('-' + pct + '%')) }
+        : null;
+    } else {
+      // Le code promo est revalidé : il a pu expirer ou être désactivé entre-temps
+      var revalide = findCodePromo(saved.promo.code);
+      appliedPromo = (revalide && !revalide.erreur) ? revalide : null;
+    }
+    if (appliedPromo) {
+      var label = document.getElementById('promo-label');
+      if (label) label.textContent = '('+appliedPromo.code+')';
+      var input = document.getElementById('promo-input');
+      if (input) input.value = appliedPromo.code;
+      var feedback = document.getElementById('promo-feedback');
+      if (feedback) {
+        feedback.textContent = '✓ Code appliqué : '+appliedPromo.label;
+        feedback.style.color = 'var(--vert)';
+      }
+    }
+  }
+}
+
+// Codes promo valides (en vrai ça viendrait de la base de données)
+// Les codes promo viennent désormais de DATA.codesPromo (gérés depuis l'admin).
+// Un code est utilisable s'il est actif, non expiré et pas épuisé.
+function findCodePromo(code) {
+  var c = DATA.codesPromo.find(function(x){ return x.code.toUpperCase() === code.toUpperCase(); });
+  if (!c) return null;
+  if (!c.actif) return { erreur: 'Ce code a été désactivé' };
+  if (c.expire && String(c.expire).slice(0, 10) < pharmaDateLocale()) return { erreur: 'Ce code a expiré' };
+  if (c.maxUsages && c.usages >= c.maxUsages) return { erreur: 'Ce code a déjà été utilisé' };
+  return { code: c.code, pct: c.pct, scope: c.scope, label: '-'+c.pct+'%'+(c.scope!=='Tous' ? ' '+c.scope : '') };
+}
+
+// ── CONFIGURATION PHARMACIE (nom, adresse, contact, bandeau) ──
+function applyPharmacyConfig() {
+  var cfg = DATA.parametres || {};
+  // Couleur principale personnalisable depuis l'admin (revente à d'autres pharmacies).
+  // Appliquée uniquement en thème clair : le thème sombre a sa propre palette.
+  appliquerCouleurTheme();
+  var nomPharma = cfg.nom || 'Pharmacie Démo';
+  var villeTxt = PharmaTextes.villeAffichee(cfg.adresse);
+  titreSite = nomPharma + ' — Parapharmacie & Click and Collect' + (villeTxt ? ' à ' + villeTxt : '');
+  if (!document.body || !document.body.classList.contains('vue-rayon')) document.title = titreSite;
+  document.querySelectorAll('#brand-name-header, #brand-name-footer, #brand-name-copyright').forEach(function(el) {
+    el.textContent = nomPharma;
+  });
+  // Phrases du site qui citent la pharmacie : nom et ville repris des Paramètres de l'admin
+  document.querySelectorAll('[data-pharma="a-la-nom"]').forEach(function(el) { el.textContent = PharmaTextes.aLaNom(nomPharma); });
+  document.querySelectorAll('[data-pharma="ville"]').forEach(function(el) { el.textContent = villeTxt; });
+  document.querySelectorAll('[data-pharma="bloc-ville"]').forEach(function(el) { el.style.display = villeTxt ? '' : 'none'; });
+  document.querySelectorAll('[data-pharma="adresse-courte"]').forEach(function(el) { el.textContent = PharmaTextes.adresseCourte(cfg.adresse); });
+  majReferencement(cfg, nomPharma, villeTxt);
+  var addrLine = document.getElementById('footer-address-line');
+  if (addrLine) addrLine.textContent = cfg.adresse || '';
+  var addrPlain = document.getElementById('footer-address-plain');
+  if (addrPlain) addrPlain.textContent = cfg.adresse || '';
+  var telLink = document.getElementById('footer-tel-link');
+  if (telLink && cfg.tel) {
+    telLink.textContent = cfg.tel;
+    telLink.href = 'tel:' + cfg.tel.replace(/\s+/g, '');
+  }
+  var emailLink = document.getElementById('footer-email-link');
+  if (emailLink && cfg.email) emailLink.href = 'mailto:' + cfg.email;
+  // Bandeau de garde / annonce (piloté depuis l'admin — Horaires & Gardes)
+  var gb = document.getElementById('garde-bar');
+  if (gb) {
+    if (cfg.bandeauActif && cfg.bandeauMsg) {
+      gb.textContent = cfg.bandeauMsg;
+      gb.style.display = '';
+    } else {
+      gb.style.display = 'none';
+    }
+  }
+  majHauteurBandeau();
+  renderFooterHoraires();
+  renderFideliteTextes();
+}
+
+// Description, aperçu de partage et fiche Google (données structurées) mis à jour avec
+// les informations de l'admin. Les aperçus de partage (WhatsApp, Facebook) lisent la page
+// sans l'exécuter : ils gardent ceux écrits dans site.html, à adapter à l'installation.
+function majReferencement(cfg, nomPharma, villeTxt) {
+  function meta(selecteur, valeur) {
+    var el = document.querySelector(selecteur);
+    if (el && valeur) el.setAttribute('content', valeur);
+  }
+  var adresseCourte = PharmaTextes.adresseCourte(cfg.adresse);
+  meta('meta[name="description"]', 'Commandez vos produits de parapharmacie en ligne et récupérez-les ' + PharmaTextes.aLaNom(nomPharma)
+    + (adresseCourte ? ', ' + adresseCourte : '') + '. Click & collect, sans paiement en ligne.');
+  meta('meta[property="og:site_name"]', nomPharma);
+  meta('meta[property="og:title"]', nomPharma + ' — Click & Collect' + (villeTxt ? ' à ' + villeTxt : ''));
+  var ld = document.querySelector('script[type="application/ld+json"]');
+  if (!ld) return;
+  try {
+    var fiche = JSON.parse(ld.textContent);
+    var d = PharmaTextes.decouperAdresse(cfg.adresse);
+    fiche.name = nomPharma;
+    fiche.address = { '@type': 'PostalAddress', streetAddress: d.rue, postalCode: d.cp, addressLocality: d.ville, addressCountry: 'FR' };
+    var chiffres = String(cfg.tel || '').replace(/\D/g, '');
+    if (/^0\d{9}$/.test(chiffres)) fiche.telephone = '+33' + chiffres.slice(1);
+    var jours = { lundi: 'Monday', mardi: 'Tuesday', mercredi: 'Wednesday', jeudi: 'Thursday', vendredi: 'Friday', samedi: 'Saturday', dimanche: 'Sunday' };
+    var h = DATA.horaires || {};
+    fiche.openingHoursSpecification = JOURS_ORDRE.filter(function(j) { return h[j] && h[j].ouvert && h[j].debut && h[j].fin; })
+      .map(function(j) { return { '@type': 'OpeningHoursSpecification', dayOfWeek: jours[j], opens: h[j].debut, closes: h[j].fin }; });
+    ld.textContent = JSON.stringify(fiche, null, 2);
+  } catch (e) { /* fiche laissée telle quelle */ }
+}
+
+// Textes du programme de fidélité, pilotés par la config admin
+// (palier et % de réduction sont personnalisables par pharmacie).
+function renderFideliteTextes() {
+  var cfg = DATA.parametres || {};
+  var seuil = cfg.fideliteSeuil || 5;
+  var reduction = cfg.fideliteReduction || 10;
+  var carte = document.getElementById('fid-resume-carte');
+  if (carte) carte.textContent = seuil + ' achats = -' + reduction + '%';
+  var slider = document.getElementById('fid-resume-slider');
+  if (slider) slider.innerHTML = escHtml(seuil) + ' achats = <span style="color:var(--or)">-' + escHtml(reduction) + '% offert</span>';
+  var qr = document.getElementById('fid-resume-carte-qr');
+  if (qr) qr.textContent = 'Membre · ' + seuil + ' achats';
+}
+
+// ── HORAIRES DU FOOTER (depuis DATA.horaires, éditables en admin) ──
+// Les jours consécutifs ayant les mêmes horaires sont regroupés (ex. "Lun-Ven : 9h-19h30").
+var JOURS_ORDRE = ['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'];
+var JOURS_COURT = { lundi:'Lun', mardi:'Mar', mercredi:'Mer', jeudi:'Jeu', vendredi:'Ven', samedi:'Sam', dimanche:'Dim' };
+function formatHeure(h) {
+  if (!h) return '';
+  var parts = h.split(':');
+  var min = parts[1] === '00' ? '' : parts[1];
+  return parseInt(parts[0], 10) + 'h' + min;
+}
+function renderFooterHoraires() {
+  var box = document.getElementById('footer-horaires');
+  if (!box || !DATA.horaires) return;
+  var groupes = [];
+  JOURS_ORDRE.forEach(function(jour) {
+    var h = DATA.horaires[jour];
+    if (!h) return;
+    var texte = h.ouvert ? (formatHeure(h.debut) + '-' + formatHeure(h.fin)) : 'Fermé';
+    var dernier = groupes[groupes.length - 1];
+    if (dernier && dernier.texte === texte) {
+      dernier.fin = jour;
+    } else {
+      groupes.push({ debut: jour, fin: jour, texte: texte });
+    }
+  });
+  var html = groupes.map(function(g) {
+    var label = g.debut === g.fin ? JOURS_COURT[g.debut] : JOURS_COURT[g.debut] + '-' + JOURS_COURT[g.fin];
+    return '<a style="cursor:default">' + escHtml(label) + ' : ' + escHtml(g.texte) + '</a>';
+  }).join('');
+  // Jours spéciaux des 14 prochains jours (gardes, fermetures exceptionnelles) saisis dans l'admin
+  var auj = pharmaDateLocale();
+  var limite = new Date(); limite.setDate(limite.getDate() + 14);
+  var fin = pharmaDateLocale(limite);
+  (DATA.joursSpeciaux || []).filter(function(j) {
+    var d = String(j && j.date || '').slice(0, 10);
+    return d && d >= auj && d <= fin;
+  }).sort(function(a, b) { return String(a.date) < String(b.date) ? -1 : 1; }).forEach(function(j) {
+    var jour = formatDateFr(String(j.date).slice(0, 10));
+    var texte = j.type === 'Fermeture' ? 'Fermé le ' + jour
+      : (j.type || 'Ouverture') + ' le ' + jour + (j.debut && j.fin ? ' : ' + formatHeure(j.debut) + '-' + formatHeure(j.fin) : '');
+    html += '<a style="cursor:default;color:var(--or)" class="footer-special">' + escHtml(texte) + '</a>';
+  });
+  box.innerHTML = html;
+}
+
+// Le bandeau du haut passe sur 2 lignes sur un petit écran : l'en-tête se place juste
+// en dessous, quelle que soit sa hauteur (et remonte en haut si le bandeau est désactivé).
+function majHauteurBandeau() {
+  var gb = document.getElementById('garde-bar');
+  var h = (gb && gb.style.display !== 'none') ? gb.offsetHeight : 0;
+  document.documentElement.style.setProperty('--bandeau-h', h + 'px');
+}
+window.addEventListener('resize', majHauteurBandeau);
+window.addEventListener('orientationchange', majHauteurBandeau);
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(majHauteurBandeau);
+
+// ── PAGES LÉGALES ───────────────────────────────────────────
+// Le contenu est généré depuis DATA.parametres : une autre pharmacie
+// n'a qu'à remplir ses informations dans l'admin pour être conforme.
+function todo(v) {
+  if (!v || String(v).indexOf('[') === 0) {
+    return '<span class="legal-todo">' + (v || '[à compléter]') + '</span>';
+  }
+  return v;
+}
+
+function contenuLegal(page) {
+  // Toutes les valeurs saisies dans l'admin sont échappées avant d'être insérées dans la page.
+  var brut = DATA.parametres || {};
+  var p = {
+    nom: escHtml(brut.nom), adresse: escHtml(brut.adresse), tel: escHtml(brut.tel), email: escHtml(brut.email),
+    fideliteSeuil: parseInt(brut.fideliteSeuil, 10) || 5, fideliteReduction: parseInt(brut.fideliteReduction, 10) || 10
+  };
+  var emailActif = !!(brut.emailjs && brut.emailjs.actif);
+  var l = {};
+  var lb = brut.legal || {};
+  Object.keys(lb).forEach(function(k) { l[k] = escHtml(lb[k]); });
+  var nom = p.nom || 'la pharmacie';
+
+  if (page === 'mentions') {
+    return '<h3>Éditeur du site</h3>'
+      + '<p><strong>' + nom + '</strong><br>'
+      + 'Raison sociale : ' + todo(l.raisonSociale) + '<br>'
+      + 'Forme juridique : ' + todo(l.formeJuridique) + '<br>'
+      + 'Capital social : ' + todo(l.capital) + '<br>'
+      + 'Adresse : ' + (p.adresse || '') + '<br>'
+      + 'Téléphone : ' + (p.tel || '') + '<br>'
+      + 'Email : ' + (p.email || '') + '</p>'
+      + '<h3>Immatriculation</h3>'
+      + '<p>SIRET : ' + todo(l.siret) + '<br>'
+      + 'RCS : ' + todo(l.rcs) + '<br>'
+      + 'N° TVA intracommunautaire : ' + todo(l.tva) + '</p>'
+      + '<h3>Pharmacien titulaire</h3>'
+      + '<p>' + todo(l.titulaire) + '<br>'
+      + 'N° d\'inscription à l\'Ordre national des pharmaciens : ' + todo(l.numeroOrdre) + '</p>'
+      + '<p>L\'exercice de la pharmacie est réglementé. Le pharmacien titulaire est inscrit au tableau de l\'Ordre national des pharmaciens, dont l\'annuaire public permet de vérifier cette inscription.</p>'
+      + '<h3>Autorité de tutelle</h3>'
+      + '<p>L\'officine exerce sous le contrôle de l\'autorité ayant délivré son autorisation d\'exploitation :<br>'
+      + todo(l.ars) + '<br>'
+      + 'N° de licence d\'officine : ' + todo(l.licence) + '</p>'
+      + '<h3>Directeur de la publication</h3>'
+      + '<p>' + todo(l.directeurPublication) + '</p>'
+      + '<h3>Hébergeur</h3>'
+      + '<p>' + todo(l.hebergeur) + '<br>'
+      + 'Téléphone : ' + todo(l.hebergeurTel) + '</p>'
+      + '<h3>Propriété intellectuelle</h3>'
+      + '<p>L\'ensemble des contenus de ce site (textes, visuels, logos, structure) est protégé par le droit de la propriété intellectuelle. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable.</p>'
+      + '<h3>Données personnelles</h3>'
+      + '<p>Les données collectées par ce site et vos droits sont décrits dans la politique de confidentialité.</p>'
+      + '<h3>Signalement de contenu</h3>'
+      + '<p>Pour signaler un contenu illicite ou toute erreur sur ce site, contactez-nous à ' + (p.email || '') + ' ou au ' + (p.tel || '') + '.</p>'
+      + '<div class="legal-maj">Les mentions entourées en orange restent à compléter avant la mise en ligne publique du site.</div>';
+  }
+
+  if (page === 'cgv') {
+    var seuil = p.fideliteSeuil || 5;
+    var reduc = p.fideliteReduction || 10;
+    return '<h3>Objet</h3>'
+      + '<p>Les présentes conditions régissent le service de réservation en ligne avec retrait en officine (« click &amp; collect ») proposé par ' + nom + '. Elles s\'appliquent à toute commande passée sur ce site.</p>'
+      + '<h3>Nature du service</h3>'
+      + '<p><strong>Ce site ne constitue pas une vente à distance.</strong> Il s\'agit d\'un service de réservation : aucun paiement n\'est effectué en ligne. La vente est conclue en officine, au moment du retrait et du règlement.</p>'
+      + '<p>Le service concerne exclusivement des produits de parapharmacie. Aucun médicament, sur ordonnance ou non, n\'est vendu via ce site.</p>'
+      + '<h3>Commande</h3>'
+      + '<ul><li>La commande vaut demande de réservation, sous réserve de disponibilité effective des produits.</li>'
+      + '<li>Un récapitulatif est présenté avant validation.</li>'
+      + '<li>La pharmacie confirme la disponibilité et vous informe dès que la commande est prête.</li>'
+      + '<li>Si un produit s\'avère indisponible, la pharmacie vous contacte pour proposer une alternative ou ajuster la commande.</li></ul>'
+      + '<h3>Prix</h3>'
+      + '<p>Les prix sont indiqués en euros toutes taxes comprises. Ils sont donnés à titre indicatif et sont ceux pratiqués en officine au moment du retrait. En cas d\'écart, le prix affiché en officine fait foi.</p>'
+      + '<h3>Retrait</h3>'
+      + '<p>Le retrait s\'effectue à l\'officine, aux horaires d\'ouverture, sur présentation de votre numéro de commande et de votre code de retrait. Les commandes non retirées sous 7 jours sont automatiquement annulées et les produits remis en rayon. Le retrait est gratuit ; aucune livraison n\'est proposée.</p>'
+      + '<h3>Paiement</h3>'
+      + '<p>Le règlement s\'effectue exclusivement en officine lors du retrait (carte bancaire, espèces ou tout autre moyen accepté par la pharmacie).</p>'
+      + '<h3>Annulation et rétractation</h3>'
+      + '<p>Vous pouvez annuler votre réservation à tout moment avant le retrait, sans frais ni justification, en contactant la pharmacie au ' + (p.tel || '') + '.</p>'
+      + '<p>Le droit de rétractation de 14 jours prévu pour la vente à distance ne s\'applique pas ici, puisque la vente est conclue en officine. Vous disposez néanmoins des garanties légales : garantie de conformité (deux ans à compter de la délivrance pour un bien neuf) et garantie des vices cachés.</p>'
+      + '<h3>Programme de fidélité</h3>'
+      + '<p>Après ' + seuil + ' achats, un code de réduction de ' + reduc + '% est généré automatiquement. Il est nominatif, à usage unique, non cessible et non convertible en espèces. Sa durée de validité est indiquée lors de son attribution.</p>'
+      + '<h3>Responsabilité</h3>'
+      + '<p>Les informations produits sont fournies à titre indicatif et ne remplacent pas l\'avis d\'un professionnel de santé. En cas de doute, demandez conseil à votre pharmacien.</p>'
+      + '<h3>Litiges et médiation</h3>'
+      + '<p>En cas de différend, contactez-nous en priorité afin de rechercher une solution amiable. À défaut, vous pouvez recourir gratuitement au médiateur de la consommation : ' + todo(l.mediateur) + '</p>'
+      + '<p>Pour toute question relative à l\'exercice de la pharmacie ou à un conseil de santé, vous pouvez également saisir le Conseil régional de l\'Ordre des pharmaciens.</p>'
+      + '<p>Les présentes conditions sont soumises au droit français.</p>'
+      + '<div class="legal-maj">Document à faire valider par un professionnel du droit avant la mise en ligne.</div>';
+  }
+
+  // Politique de confidentialité
+  return '<h3>Responsable du traitement</h3>'
+    + '<p>' + nom + ' — ' + (p.adresse || '') + '<br>Téléphone : ' + (p.tel || '') + '<br>Contact pour toute question sur vos données personnelles : ' + (p.email || '') + '</p>'
+    + '<h3>Données collectées</h3>'
+    + '<p>Lors d\'une commande, nous collectons uniquement les données nécessaires à sa préparation et à votre information :</p>'
+    + '<ul><li>Nom et prénom</li><li>Adresse email</li><li>Numéro de téléphone</li><li>Contenu de la commande</li></ul>'
+    + '<p>Si vous créez un compte, s\'y ajoutent les informations que vous renseignez volontairement (date de naissance, adresse postale, langue préférée, photo de profil).</p>'
+    + '<p>Votre nom, votre adresse email et votre numéro de téléphone sont <strong>obligatoires</strong> pour passer commande : sans eux, nous ne pouvons ni préparer votre commande ni vous prévenir qu\'elle est prête, et la commande ne peut pas être enregistrée. Les informations de compte sont facultatives.</p>'
+    + '<h3>Finalités</h3>'
+    + '<ul><li>Préparer votre commande et vous prévenir lorsqu\'elle est prête</li>'
+    + '<li>Vous contacter en cas d\'indisponibilité d\'un produit</li>'
+    + '<li>Gérer le programme de fidélité</li>'
+    + '<li>Répondre à vos demandes</li></ul>'
+    + '<p>Vos données ne sont ni vendues, ni louées, ni transmises à des tiers à des fins commerciales.</p>'
+    + '<h3>Destinataires</h3>'
+    + '<p>Les données sont destinées à ' + nom + ' et à son personnel habilité.</p>'
+    + (emailActif
+      ? '<p>Pour vous envoyer les emails de confirmation et de suivi, votre nom, votre adresse email et le contenu de votre commande sont transmis à EmailJS (EmailJS Pte. Ltd.), prestataire technique d\'envoi d\'emails qui agit pour notre compte. Les serveurs de ce prestataire sont situés <strong>aux États-Unis</strong> : ce transfert hors de l\'Union européenne est encadré, selon le prestataire, par des clauses contractuelles types.</p>'
+      : '')
+    + '<p>Le site est hébergé par ' + todo(l.hebergeur) + ' ; l\'hébergeur reçoit, dans ses journaux techniques, l\'adresse IP des visiteurs.</p>'
+    + '<h3>Base légale</h3>'
+    + '<p>Le traitement repose sur l\'exécution de votre demande de réservation et, pour les communications facultatives, sur votre consentement, révocable à tout moment.</p>'
+    + '<h3>Durée de conservation</h3>'
+    + '<p>Les données de commande sont conservées 3 ans à compter du dernier contact. Les données de compte sont conservées jusqu\'à sa suppression.</p>'
+    + '<h3>Vos droits</h3>'
+    + '<p>Vous disposez d\'un droit d\'accès, de rectification, d\'effacement, de limitation, d\'opposition et de portabilité. Lorsque le traitement repose sur votre consentement, vous pouvez le retirer à tout moment. Vous pouvez aussi définir des directives sur le sort de vos données après votre décès. Pour exercer ces droits, écrivez à ' + (p.email || '') + '.</p>'
+    + '<p>Vous pouvez également introduire une réclamation auprès de la CNIL (3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 — cnil.fr).</p>'
+    + '<h3>Cookies et stockage local</h3>'
+    + '<p>Ce site utilise uniquement le stockage local de votre navigateur pour des fonctions strictement nécessaires : mémoriser votre panier, vos préférences d\'affichage (thème clair/sombre) et vos informations de compte. Aucun cookie publicitaire, aucun traceur, aucun outil de mesure d\'audience tiers n\'est utilisé.</p>'
+    + '<p>Ces données restent sur votre appareil. Vous pouvez les effacer à tout moment via les paramètres de votre navigateur.</p>'
+    + '<h3>Polices de caractères</h3>'
+    + '<p>Pour afficher le site, votre navigateur télécharge ses polices de caractères depuis les serveurs de Google (Google Fonts). Cette requête transmet à Google votre adresse IP et des informations techniques sur votre navigateur. Le site ne transmet aucune autre donnée à Google.</p>'
+    + '<h3>Sécurité</h3>'
+    + '<p>Nous mettons en œuvre les mesures techniques appropriées pour protéger vos données contre tout accès non autorisé.</p>'
+    + '<div class="legal-maj">Avant la mise en ligne : faire valider ce document par un professionnel du droit. Les paragraphes sur EmailJS et sur les polices Google sont à retirer si les emails passent par un prestataire européen et si les polices sont hébergées sur le site.</div>';
+}
+
+var LEGAL_TITRES = {
+  mentions: 'Mentions légales',
+  cgv: 'Conditions générales',
+  confidentialite: 'Politique de confidentialité'
+};
+
+function ouvrirLegal(page) {
+  var titre = document.getElementById('legal-titre');
+  var contenu = document.getElementById('legal-content');
+  var modal = document.getElementById('legal-modal');
+  if (!modal) return;
+  if (titre) titre.textContent = LEGAL_TITRES[page] || 'Informations légales';
+  if (contenu) { contenu.innerHTML = contenuLegal(page); contenu.scrollTop = 0; }
+  modal.classList.add('open');
+}
+function fermerLegal() {
+  var modal = document.getElementById('legal-modal');
+  if (modal) modal.classList.remove('open');
+}
+
+// ── BANDEAU COOKIES ─────────────────────────────────────────
+// Le site n'utilise que du stockage strictement nécessaire, mais le bandeau
+// informe l'utilisateur et lui laisse un choix aussi simple dans les deux sens
+// (recommandation CNIL : refuser doit être aussi facile qu'accepter).
+var COOKIE_KEY = 'pres-cookies';
+function initCookieBar() {
+  var choix = null;
+  try { choix = localStorage.getItem(COOKIE_KEY); } catch (e) {}
+  if (choix) return;
+  var bar = document.getElementById('cookie-bar');
+  if (bar) setTimeout(function(){ bar.classList.add('show'); }, 900);
+}
+function cookieChoix(accepte) {
+  try { localStorage.setItem(COOKIE_KEY, accepte ? 'accepte' : 'refuse'); } catch (e) {}
+  var bar = document.getElementById('cookie-bar');
+  if (bar) bar.classList.remove('show');
+  pharmaToast(accepte ? 'Préférences enregistrées' : 'Seul le strict nécessaire sera utilisé');
+}
+
+// ── THEME JOUR/NUIT (détection intelligente) ──
+function initTheme() {
+  var saved = null;
+  try { saved = localStorage.getItem('pres-theme'); } catch(e){}
+
+  if (saved) {
+    // 1. Le client a déjà choisi → on respecte son choix
+    setTheme(saved);
+    return;
+  }
+
+  // 2. Suivre le réglage système du téléphone/ordinateur
+  var systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  // 3. Se baser sur l'heure (nuit entre 20h et 7h)
+  var hour = new Date().getHours();
+  var isNightTime = (hour >= 20 || hour < 7);
+
+  // Priorité : système → heure → par défaut nuit
+  var theme;
+  if (systemPrefersDark) {
+    theme = 'dark';
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    // Système explicitement en clair, mais on bascule en nuit la nuit
+    theme = isNightTime ? 'dark' : 'light';
+  } else {
+    // Pas de préférence système détectable → heure, défaut nuit
+    theme = isNightTime ? 'dark' : 'light';
+  }
+
+  setTheme(theme, false);
+
+  // Écouter les changements de mode système en temps réel (si pas de choix manuel)
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      var manualChoice = null;
+      try { manualChoice = localStorage.getItem('pres-theme'); } catch(err){}
+      if (!manualChoice) setTheme(e.matches ? 'dark' : 'light', false);
+    });
+  }
+}
+// Couleur principale choisie dans l'admin : appliquée en thème clair seulement. En passant au
+// thème sombre, elle est retirée (sinon le vert foncé restait affiché sur fond sombre, peu lisible).
+function appliquerCouleurTheme() {
+  var cfg = (typeof DATA !== 'undefined' && DATA && DATA.parametres) || {};
+  var racine = document.documentElement;
+  if (cfg.couleurPrimaire && racine.getAttribute('data-theme') !== 'dark') racine.style.setProperty('--vert', cfg.couleurPrimaire);
+  else racine.style.removeProperty('--vert');
+}
+
+function setTheme(theme, memoriser) {
+  document.documentElement.setAttribute('data-theme', theme);
+  appliquerCouleurTheme();
+  // memoriser === false : application temporaire (aucun choix explicite du visiteur),
+  // pour que le site continue de suivre le réglage système et l'heure.
+  if (memoriser !== false) {
+    try { localStorage.setItem('pres-theme', theme); } catch(e){}
+  }
+  var icon = document.getElementById('theme-icon');
+  if (icon) {
+    if (theme === 'dark') {
+      icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+    } else {
+      icon.innerHTML = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/>';
+    }
+  }
+}
+function toggleTheme() {
+  var cur = document.documentElement.getAttribute('data-theme');
+  setTheme(cur === 'dark' ? 'light' : 'dark');
+}
+
+// ── NIVEAU DE PERFORMANCE ──────────────────────────────────
+// Le mode "économie d'énergie" d'un téléphone n'est PAS exposé aux sites web
+// (aucune API standard, l'API Batterie ne fonctionne pas sur Safari/iOS).
+// On s'appuie donc sur des signaux fiables et universels :
+//  - prefers-reduced-motion : réglage système "Réduire les animations"
+//  - nombre de cœurs CPU et taille d'écran : puissance de l'appareil
+function prefersReducedMotion() {
+  return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+function getPerfProfile() {
+  if (prefersReducedMotion()) return { anim:false, nodes:0, drops:0, fps:0 };
+  var cores = navigator.hardwareConcurrency || 4;
+  var petitEcran = window.innerWidth < 900;
+  if (cores <= 4 || window.innerWidth < 600) return { anim:true, nodes:12, drops:8, fps:30 };
+  if (petitEcran) return { anim:true, nodes:20, drops:12, fps:30 };
+  return { anim:true, nodes:28, drops:18, fps:60 };
+}
+
+// ── AMBIENT BACKGROUND (molécules + gouttes) ──
+function initAmbient() {
+  var canvas = document.getElementById('ambient-canvas');
+  if (!canvas) return;
+  var perf = getPerfProfile();
+  // Animation désactivée si l'utilisateur a demandé de réduire les animations
+  if (!perf.anim) { canvas.style.display = 'none'; return; }
+  var ctx = canvas.getContext('2d');
+  var W, H, nodes = [], drops = [];
+  var rafId = null, running = false, visible = true, onScreen = true;
+  var frameInterval = 1000 / perf.fps, lastFrame = 0, lastDraw = 0;
+  // Taille du fond = sa taille affichée (hauteur de l'écran barre d'adresse repliée, voir .ambient).
+  // Sur téléphone, la barre d'adresse se replie ou revient au début du défilement et déclenche un
+  // « resize » : la taille affichée ne change pas, le dessin n'est donc ni effacé ni étiré.
+  function resize() {
+    var w = canvas.clientWidth || window.innerWidth, h = canvas.clientHeight || window.innerHeight;
+    if (w === W && h === H) return;
+    W = canvas.width = w;
+    H = canvas.height = h;
+  }
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+  // Molécules
+  for (var i = 0; i < perf.nodes; i++) {
+    nodes.push({ x:Math.random()*W, y:Math.random()*H, vx:(Math.random()-0.5)*0.3, vy:(Math.random()-0.5)*0.3, r:Math.random()*2+1 });
+  }
+  // Gouttes qui tombent
+  for (var d = 0; d < perf.drops; d++) {
+    drops.push({ x:Math.random()*W, y:Math.random()*H, len:Math.random()*14+6, speed:Math.random()*1.5+0.8, opacity:Math.random()*0.3+0.1 });
+  }
+  function draw(now) {
+    if (!running) return;
+    rafId = requestAnimationFrame(draw);
+    // Limitation du nombre d'images par seconde (30 fps sur mobile) :
+    // moitié moins de calculs, différence invisible pour un fond décoratif.
+    if (now && frameInterval > 16.7) {
+      if (now - lastFrame < frameInterval) return;
+      lastFrame = now;
+    }
+    // Déplacement proportionnel au temps écoulé : même vitesse si le téléphone saute des images
+    // pendant un défilement (sinon les molécules ralentissent puis rattrapent d'un coup)
+    var k = (now && lastDraw) ? Math.min(now - lastDraw, 64) / 16.67 : 1;
+    lastDraw = now || 0;
+    ctx.clearRect(0,0,W,H);
+    var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    // Molécules du fond : sable doré, discret (le vert reste au logo et aux boutons)
+    var color = isDark ? '214,190,140' : '160,128,64';
+    // Molécules + liens
+    for (var i = 0; i < nodes.length; i++) {
+      var n = nodes[i];
+      n.x += n.vx * k; n.y += n.vy * k;
+      if (n.x < 0 || n.x > W) n.vx *= -1;
+      if (n.y < 0 || n.y > H) n.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba('+color+',0.4)';
+      ctx.fill();
+      for (var j = i+1; j < nodes.length; j++) {
+        var m = nodes[j];
+        var dx = n.x-m.x, dy = n.y-m.y;
+        var dist = Math.sqrt(dx*dx+dy*dy);
+        if (dist < 130) {
+          ctx.beginPath();
+          ctx.moveTo(n.x, n.y);
+          ctx.lineTo(m.x, m.y);
+          ctx.strokeStyle = 'rgba('+color+','+(0.15*(1-dist/130))+')';
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+    // Gouttes qui tombent
+    for (var k = 0; k < drops.length; k++) {
+      var dp = drops[k];
+      ctx.beginPath();
+      ctx.moveTo(dp.x, dp.y);
+      ctx.lineTo(dp.x, dp.y + dp.len);
+      var grad = ctx.createLinearGradient(dp.x, dp.y, dp.x, dp.y+dp.len);
+      grad.addColorStop(0, 'rgba('+color+',0)');
+      grad.addColorStop(1, 'rgba('+color+','+dp.opacity+')');
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 1.5;
+      ctx.stroke();
+      // Petite goutte ronde en bas
+      ctx.beginPath();
+      ctx.arc(dp.x, dp.y + dp.len, 1.5, 0, Math.PI*2);
+      ctx.fillStyle = 'rgba('+color+','+dp.opacity+')';
+      ctx.fill();
+      dp.y += dp.speed * k;
+      if (dp.y > H + 20) { dp.y = -20; dp.x = Math.random()*W; }
+    }
+  }
+
+  // Démarre / arrête l'animation. Elle ne tourne que si la page est visible
+  // ET que le canvas est à l'écran — évite de consommer la batterie inutilement.
+  function start() {
+    if (running) return;
+    running = true;
+    lastFrame = 0; lastDraw = 0;
+    rafId = requestAnimationFrame(draw);
+  }
+  function stop() {
+    running = false;
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+  }
+  function refresh() {
+    if (visible && onScreen) start(); else stop();
+  }
+
+  // Pause quand l'onglet passe en arrière-plan ou que l'écran se verrouille
+  document.addEventListener('visibilitychange', function() {
+    visible = !document.hidden;
+    refresh();
+  });
+  // Pause quand le fond n'est plus à l'écran (client descendu dans la page)
+  if (window.IntersectionObserver) {
+    new IntersectionObserver(function(entries) {
+      onScreen = entries[0].isIntersecting;
+      refresh();
+    }, { threshold: 0 }).observe(canvas);
+  }
+  start();
+}
+
+// ── ANNONCES DE L'ACCUEIL (promo et jours spéciaux saisis dans l'admin) ──
+var JOURS_SEMAINE = ['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+
+// La promo mise en avant : la plus forte réduction, puis celle qui se termine le plus tôt
+function ordrePromos(a, b) {
+  var ecart = nombre(b.pct) - nombre(a.pct);
+  if (ecart) return ecart;
+  var fa = a.finIso || '9999', fb = b.finIso || '9999';
+  return fa < fb ? -1 : (fa > fb ? 1 : 0);
+}
+function promoALaUne() {
+  return PROMOS.slice().sort(ordrePromos)[0] || null;
+}
+// Promos qui défilent dans « La promo du moment » : celles cochées « Mise en avant » dans l'admin,
+// la plus forte remise d'abord. Aucune cochée : la plus forte remise seule, comme avant.
+function promosEnAvant() {
+  var choisies = PROMOS.filter(function(p) { return p.miseEnAvant; }).sort(ordrePromos);
+  if (choisies.length) return choisies;
+  var p = promoALaUne();
+  return p ? [p] : [];
+}
+
+// Prochain jour spécial (garde, fermeture, horaires modifiés) dans les 14 jours, comme dans le pied de page
+function prochainJourSpecial() {
+  var auj = pharmaDateLocale();
+  var limite = new Date(); limite.setDate(limite.getDate() + 14);
+  var fin = pharmaDateLocale(limite);
+  return (DATA.joursSpeciaux || []).filter(function(j) {
+    var d = String(j && j.date || '').slice(0, 10);
+    return /^\d{4}-\d{2}-\d{2}$/.test(d) && d >= auj && d <= fin;
+  }).sort(function(a, b) { return String(a.date).slice(0, 10) < String(b.date).slice(0, 10) ? -1 : 1; })[0] || null;
+}
+
+// « aujourd'hui », « demain » ou « le samedi 24 octobre »
+function quandJourSpecial(iso) {
+  var demain = new Date(); demain.setDate(demain.getDate() + 1);
+  if (iso === pharmaDateLocale()) return 'aujourd\'hui';
+  if (iso === pharmaDateLocale(demain)) return 'demain';
+  var p = iso.split('-');
+  var d = new Date(parseInt(p[0], 10), parseInt(p[1], 10) - 1, parseInt(p[2], 10));
+  return 'le ' + (isNaN(d.getTime()) ? '' : JOURS_SEMAINE[d.getDay()] + ' ') + formatDateFr(iso);
+}
+
+function heureValide(h) { return /^\d{1,2}:\d{2}$/.test(String(h || '')); }
+
+function texteJourSpecial(j) {
+  var iso = String(j.date).slice(0, 10);
+  var heures = (heureValide(j.debut) && heureValide(j.fin)) ? ' · ' + formatHeure(j.debut) + '–' + formatHeure(j.fin) : '';
+  if (j.type === 'Fermeture') return 'Fermeture exceptionnelle ' + quandJourSpecial(iso);
+  if (j.type === 'Garde') return 'Pharmacie de garde ' + quandJourSpecial(iso) + heures;
+  return String(j.type || 'Horaires modifiés') + ' ' + quandJourSpecial(iso) + heures;
+}
+
+// Carte « promo » et chiffre « Jusqu'à -X % » du haut de page
+function renderAnnonces() {
+  var promo = promoALaUne();
+  var prix = function(v) { return nombre(v).toFixed(2).replace('.', ',') + '€'; };
+  var pct = promo ? Math.round(nombre(promo.pct)) : 0;
+  var carte = document.getElementById('hero-promo');
+  if (carte) {
+    carte.innerHTML = promo
+      ? '<span class="promo-badge">-' + pct + '%</span><div style="margin-top:10px"><div class="fc-title">' + escHtml(promo.nom) + '</div>'
+        + '<div style="display:flex;align-items:baseline;gap:8px;margin-top:6px"><span class="price-now prix-promo">' + prix(promo.prixPromo) + '</span>'
+        + (nombre(promo.prixNormal) > nombre(promo.prixPromo) ? '<span class="price-old">' + prix(promo.prixNormal) + '</span>' : '') + '</div></div>'
+      : '<div style="margin-top:4px"><div class="fc-title">Réservez en ligne</div><div class="fc-sub">Réglez sur place, au retrait</div></div>';
+  }
+  var stat = document.getElementById('hero-stat-promo');
+  var statNum = document.getElementById('hero-stat-promo-num');
+  if (stat && statNum) {
+    stat.style.display = pct > 0 ? '' : 'none';
+    statNum.textContent = pct > 0 ? '-' + pct + '%' : '';
+  }
+}
+
+// ════ RÉCIT DE L'ACCUEIL ════
+// Chapitres remplis avec les données de l'admin : la promo du moment, les rayons, la fidélité
+// et l'état d'ouverture du jour. Un chapitre sans contenu est masqué.
+var recitAnime = !prefersReducedMotion() && !!window.IntersectionObserver;
+var unePromo = null, fidRemplie = false;
+// Chiffre de la promo : 'attente' (à 0, prêt à défiler), 'compte' (en train de défiler) ou 'fait'.
+// Durée du défilement : 1 seconde, en ralentissant vers la fin pour qu'on voie le chiffre arriver.
+var DUREE_COMPTE_UNE = 1000;
+var uneAnim = { etat: 'attente', raf: 0 };
+
+function renderRecit() {
+  renderUne();
+  renderRayons();
+  renderFideliteRecit();
+  renderAujourdhui();
+}
+
+// Chapitre « La promo du moment » : la promo affichée est celle où en est le défilement
+var unePromos = [], uneIndex = 0;
+function renderUne() {
+  var avant = unePromo && unePromo.id;
+  unePromos = promosEnAvant();
+  var garde = unePromos.findIndex(function(x) { return x.id === avant; });
+  uneIndex = garde >= 0 ? garde : (uneIndex < unePromos.length ? uneIndex : 0);
+  var p = unePromos[uneIndex] || null;
+  unePromo = p;
+  renderUneNav();
+  document.querySelectorAll('[data-si-promo]').forEach(function(el) { el.style.display = p ? '' : 'none'; });
+  var grille = document.getElementById('promos');
+  if (grille) grille.style.display = PROMOS.length ? '' : 'none';
+  var sec = document.getElementById('a-la-une');
+  if (!sec) return;
+  sec.hidden = !p;
+  if (!p) return;
+  var pct = Math.round(nombre(p.pct));
+  var prix = function(v) { return nombre(v).toFixed(2).replace('.', ',') + ' €'; };
+  var nb = document.getElementById('une-pct');
+  nb.setAttribute('data-cible', pct);
+  if (!recitAnime || uneAnim.etat === 'fait') nb.textContent = pct;
+  document.getElementById('une-reduction').textContent = 'Réduction de ' + pct + ' %';
+  document.getElementById('une-nom').textContent = p.nom;
+  var fig = document.getElementById('une-photo'), img = document.getElementById('une-img');
+  if (fig && img) {
+    var u = pharmaPhotoValide(p.photo);
+    fig.hidden = !u;
+    if (u) {
+      if (img.getAttribute('src') !== u) {
+        fig.classList.remove('photo-prete');
+        img.src = u;
+        suivrePhoto(img, function() { fig.hidden = true; });
+      }
+    } else img.removeAttribute('src');
+  }
+  document.getElementById('une-prix').textContent = prix(p.prixPromo);
+  document.getElementById('une-ancien').textContent = nombre(p.prixNormal) > nombre(p.prixPromo) ? prix(p.prixNormal) : '';
+  document.getElementById('une-fin').textContent = p.fin ? 'Jusqu\'au ' + p.fin : '';
+  // Promo arrivée alors que le chiffre est déjà à l'écran (chargement depuis la base) : il défile tout de suite
+  var geant = sec.querySelector('.une .chap-geant');
+  if (recitAnime && uneAnim.etat === 'attente' && geant) {
+    var r = geant.getBoundingClientRect();
+    if (r.height && r.top < innerHeight && r.bottom > 0) requestAnimationFrame(compterUne);
+  }
+}
+
+// Le chiffre de la réduction défile de 0 à sa valeur à chaque arrivée du chapitre à l'écran,
+// en descendant comme en remontant
+function compterUne() {
+  var nb = document.getElementById('une-pct');
+  var cible = parseInt(nb && nb.getAttribute('data-cible'), 10);
+  if (nb && !(cible > 0)) { rackFocus(''); return; }   // rien à compter : tout reste au premier plan
+  if (!nb || uneAnim.etat !== 'attente') return;
+  uneAnim.etat = 'compte';
+  rackFocus('chiffre');
+  var debut = null, duree = DUREE_COMPTE_UNE;
+  function pas(t) {
+    if (uneAnim.etat !== 'compte') return;
+    if (debut === null) debut = t;
+    var x = Math.min(1, (t - debut) / duree);
+    nb.textContent = Math.round(cible * (1 - Math.pow(1 - x, 2)));
+    if (x < 1) uneAnim.raf = requestAnimationFrame(pas);
+    else { uneAnim.etat = 'fait'; uneAnim.rack = setTimeout(function() { rackFocus('produit'); planifierUneSuivante(); }, 250); }
+  }
+  nb.textContent = '0';
+  uneAnim.raf = requestAnimationFrame(pas);
+}
+// Le chiffre a quitté l'écran : il repart de 0, prêt à défiler au prochain passage
+// Rack focus : la mise au point est sur le chiffre ('chiffre'), puis sur le produit ('produit'), ou neutre ('')
+function rackFocus(plan) {
+  var sec = document.getElementById('a-la-une');
+  if (!sec) return;
+  sec.classList.toggle('rack-chiffre', plan === 'chiffre');
+  sec.classList.toggle('rack-produit', plan === 'produit');
+}
+function rearmerUne() {
+  cancelAnimationFrame(uneAnim.raf);
+  clearTimeout(uneAnim.rack);
+  arreterMinuteurUne();
+  // Prêt pour le prochain passage : le produit attend déjà en retrait, le chiffre aura la mise au point
+  rackFocus('chiffre');
+  uneAnim.etat = 'attente';
+  var nb = document.getElementById('une-pct');
+  if (nb) nb.textContent = '0';
+}
+
+// ── DÉFILEMENT DES PROMOS MISES EN AVANT ──
+// La promo suivante arrive par la droite, la précédente part vers la gauche. Défilement automatique
+// toutes les 5,5 secondes une fois le chiffre arrivé ; il s'interrompt sous la souris, pendant qu'on
+// utilise le clavier dans le chapitre, hors de l'écran, et s'arrête dès que le visiteur choisit lui-même
+// (flèches, points, glisser au doigt) ou touche « pause ». Animations réduites : pas de défilement automatique.
+var DUREE_UNE = 5500;
+var uneDefil = { minuteur: 0, survol: false, focus: false, arret: false, glisse: false };
+var SVG_UNE = {
+  prec: '<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>',
+  suiv: '<svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>',
+  pause: '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>',
+  lecture: '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>'
+};
+function defilementAutoPossible() {
+  return unePromos.length > 1 && recitAnime && !uneDefil.arret && !uneDefil.survol && !uneDefil.focus && !document.hidden;
+}
+function arreterMinuteurUne() {
+  clearTimeout(uneDefil.minuteur);
+  var nav = document.getElementById('une-nav');
+  if (nav) nav.classList.remove('defile');
+}
+function planifierUneSuivante() {
+  arreterMinuteurUne();
+  if (!defilementAutoPossible() || uneAnim.etat !== 'fait') return;
+  var nav = document.getElementById('une-nav');
+  if (nav) { void nav.offsetWidth; nav.classList.add('defile'); }   // la jauge du point actif se remplit
+  uneDefil.minuteur = setTimeout(function() { changerUne(1); }, DUREE_UNE);
+}
+function renderUneNav() {
+  var nav = document.getElementById('une-nav');
+  if (!nav) return;
+  var n = unePromos.length;
+  nav.hidden = n < 2;
+  var sec = document.getElementById('a-la-une');
+  if (sec) {
+    if (n > 1) sec.setAttribute('aria-roledescription', 'carrousel'); else sec.removeAttribute('aria-roledescription');
+  }
+  if (n < 2) { arreterMinuteurUne(); return; }
+  var points = document.getElementById('une-points');
+  if (points && points.children.length !== n) {
+    points.innerHTML = unePromos.map(function(p, i) { return '<button type="button" class="une-point" data-i="' + i + '"></button>'; }).join('');
+  }
+  if (points) Array.prototype.forEach.call(points.children, function(b, i) {
+    var p = unePromos[i];
+    b.setAttribute('aria-label', 'Promotion ' + (i + 1) + ' sur ' + n + (p ? ' : ' + p.nom : ''));
+    if (i === uneIndex) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
+  });
+  var pause = document.getElementById('une-pause');
+  if (pause) {
+    var arrete = uneDefil.arret || !recitAnime;
+    pause.innerHTML = arrete ? SVG_UNE.lecture : SVG_UNE.pause;
+    pause.setAttribute('aria-label', arrete ? 'Faire défiler les promotions' : 'Mettre en pause le défilement');
+    pause.hidden = !recitAnime;
+  }
+}
+// sens : 1 = suivante (arrive par la droite), -1 = précédente ; cible : numéro précis (points)
+function changerUne(sens, cible) {
+  var n = unePromos.length;
+  if (n < 2 || uneDefil.glisse) return;
+  var i = cible != null ? cible : (uneIndex + sens + n) % n;
+  if (i === uneIndex) { remettreUneEnPlace(); return; }
+  if (cible != null) sens = i > uneIndex ? 1 : -1;
+  arreterMinuteurUne();
+  var une = document.querySelector('#a-la-une .une');
+  function montrer() {
+    rearmerUne();
+    uneIndex = i;
+    unePromo = unePromos[i];
+    renderUne();   // le chiffre repart de 0 et défile dès que la promo est à l'écran
+  }
+  if (!une || !recitAnime) {
+    montrer();
+    if (une) { une.style.transition = 'none'; une.style.transform = ''; une.style.opacity = ''; }
+    return;
+  }
+  uneDefil.glisse = true;
+  une.style.transition = 'transform 0.3s cubic-bezier(0.4,0,1,1), opacity 0.3s';
+  une.style.transform = 'translateX(' + (-sens * 70) + 'px)';
+  une.style.opacity = '0';
+  setTimeout(function() {
+    montrer();
+    une.style.transition = 'none';
+    une.style.transform = 'translateX(' + (sens * 70) + 'px)';
+    void une.offsetWidth;
+    une.style.transition = 'transform 0.55s cubic-bezier(0.22,1,0.36,1), opacity 0.45s';
+    une.style.transform = '';
+    une.style.opacity = '';
+    setTimeout(function() { une.style.transition = ''; uneDefil.glisse = false; }, 560);
+  }, 300);
+}
+function remettreUneEnPlace() {
+  var une = document.querySelector('#a-la-une .une');
+  if (!une) return;
+  une.style.transition = 'transform 0.3s cubic-bezier(0.22,1,0.36,1), opacity 0.3s';
+  une.style.transform = '';
+  une.style.opacity = '';
+}
+// Le visiteur choisit lui-même : le défilement automatique s'arrête (il peut le relancer avec le bouton)
+function choixVisiteurUne(sens, cible) {
+  uneDefil.arret = true;
+  renderUneNav();
+  changerUne(sens, cible);
+}
+function initDefilementUne() {
+  var sec = document.getElementById('a-la-une');
+  var une = sec && sec.querySelector('.une');
+  if (!sec || !une) return;
+  var prec = document.getElementById('une-prec'), suiv = document.getElementById('une-suiv');
+  var points = document.getElementById('une-points'), pause = document.getElementById('une-pause');
+  if (prec) { prec.innerHTML = SVG_UNE.prec; prec.addEventListener('click', function() { choixVisiteurUne(-1); }); }
+  if (suiv) { suiv.innerHTML = SVG_UNE.suiv; suiv.addEventListener('click', function() { choixVisiteurUne(1); }); }
+  if (points) points.addEventListener('click', function(e) {
+    var b = e.target.closest('.une-point');
+    if (b) choixVisiteurUne(0, parseInt(b.getAttribute('data-i'), 10));
+  });
+  if (pause) pause.addEventListener('click', function() {
+    uneDefil.arret = !uneDefil.arret;
+    renderUneNav();
+    if (uneDefil.arret) arreterMinuteurUne(); else changerUne(1);
+  });
+  // Pause sous la souris et pendant l'usage du clavier dans le chapitre
+  sec.addEventListener('pointerenter', function(e) { if (e.pointerType === 'mouse') { uneDefil.survol = true; arreterMinuteurUne(); } });
+  sec.addEventListener('pointerleave', function(e) { if (e.pointerType === 'mouse') { uneDefil.survol = false; planifierUneSuivante(); } });
+  sec.addEventListener('focusin', function() { uneDefil.focus = true; arreterMinuteurUne(); });
+  sec.addEventListener('focusout', function(e) { if (!sec.contains(e.relatedTarget)) { uneDefil.focus = false; planifierUneSuivante(); } });
+  document.addEventListener('visibilitychange', function() { if (document.hidden) arreterMinuteurUne(); else planifierUneSuivante(); });
+  // Glisser au doigt (ou à la souris) : la promo suit, puis passe à la suivante ou revient en place
+  var depart = null, glisse = false, dernierX = 0, dernierT = 0, vitesse = 0;
+  une.addEventListener('pointerdown', function(e) {
+    if (unePromos.length < 2 || uneDefil.glisse || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    depart = { x: e.clientX, y: e.clientY, id: e.pointerId };
+    glisse = false; dernierX = e.clientX; dernierT = e.timeStamp; vitesse = 0;
+  });
+  une.addEventListener('pointermove', function(e) {
+    if (!depart || e.pointerId !== depart.id) return;
+    var dx = e.clientX - depart.x, dy = e.clientY - depart.y;
+    if (!glisse) {
+      if (Math.abs(dy) > 12 && Math.abs(dy) > Math.abs(dx)) { depart = null; return; }   // défilement de la page
+      if (Math.abs(dx) < 10) return;
+      glisse = true;
+      try { une.setPointerCapture(e.pointerId); } catch (err) {}
+      arreterMinuteurUne();
+      une.style.transition = 'none';
+      une.classList.add('glisse');
+    }
+    if (e.timeStamp > dernierT) vitesse = (e.clientX - dernierX) / (e.timeStamp - dernierT);
+    dernierX = e.clientX; dernierT = e.timeStamp;
+    une.style.transform = 'translateX(' + (dx * 0.9) + 'px)';
+    une.style.opacity = String(1 - Math.min(Math.abs(dx) / 520, 0.45));
+  });
+  function finGlisse(e) {
+    if (!depart || (e && e.pointerId !== depart.id)) return;
+    var dx = (e ? e.clientX : dernierX) - depart.x;
+    depart = null;
+    if (!glisse) return;
+    une.classList.remove('glisse');
+    // Le toucher qui a servi à glisser ne déclenche pas le bouton sous le doigt (s'il y a un clic juste après)
+    var bloquer = function(ev) { ev.stopPropagation(); ev.preventDefault(); };
+    une.addEventListener('click', bloquer, true);
+    setTimeout(function() { une.removeEventListener('click', bloquer, true); glisse = false; }, 350);
+    if (Math.abs(dx) > 60 || Math.abs(vitesse) > 0.45) choixVisiteurUne(dx < 0 ? 1 : -1);
+    else remettreUneEnPlace();
+  }
+  une.addEventListener('pointerup', finGlisse);
+  une.addEventListener('pointercancel', function(e) { if (depart && e.pointerId === depart.id) { depart = null; une.classList.remove('glisse'); remettreUneEnPlace(); } });
+  renderUneNav();
+}
+
+// Chapitre « Nos rayons » : les rayons qui ont des produits, dans l'ordre de l'admin ; chacun mène à sa page
+var rayonsObserver = null;
+function renderRayons() {
+  var liste = document.getElementById('rayons-liste');
+  var sec = document.getElementById('rayons');
+  if (!liste || !sec) return;
+  var cats = rayonsAvecProduits().slice(0, 20);
+  sec.hidden = cats.length < 2;
+  document.querySelectorAll('[data-si-rayons]').forEach(function(el) { el.style.display = cats.length < 2 ? 'none' : ''; });
+  liste.classList.toggle('statique', !recitAnime);
+  liste.innerHTML = cats.map(function(c) {
+    var n = produitsCatalogueDuRayon(c).length;
+    var photo = pharmaPhotoRayon(DATA, c);
+    // --n : nombre de lettres ; sur téléphone, un nom long (« aromathérapie ») réduit sa taille pour laisser la place à la photo
+    return '<li><a class="rayon' + (photo ? ' a-photo' : '') + '" style="--n:' + Math.max(1, String(c).length) + '" href="' + escHtml(lienRayon(c)) + '" data-cat="' + escHtml(c) + '" aria-label="' + escHtml('Rayon ' + c + ', ' + n + ' produit' + (n > 1 ? 's' : '')) + '">'
+      + '<span class="rayon-mot">' + escHtml(c) + '</span><span class="rayon-nb" aria-hidden="true">' + n + '</span>'
+      + (photo ? '<span class="rayon-photo" aria-hidden="true"><img src="' + escHtml(photo) + '" alt="" loading="lazy" decoding="async" data-photo></span>' : '')
+      + '</a></li>';
+  }).join('');
+  liste.querySelectorAll('.rayon-photo img').forEach(function(img) {
+    suivrePhoto(img, function(i, cadre) { var b = cadre.parentNode; cadre.remove(); if (b) b.classList.remove('a-photo'); });
+  });
+  if (rayonsObserver) liste.querySelectorAll('.rayon').forEach(function(b) { rayonsObserver.observe(b); });
+  // Menu du téléphone : un lien par rayon
+  var mm = document.getElementById('mm-rayons');
+  if (mm) mm.innerHTML = cats.length < 2 ? '' : cats.map(function(c) { return '<a href="' + escHtml(lienRayon(c)) + '">' + escHtml(c) + '</a>'; }).join('');
+}
+
+// ════ PAGE D'UN RAYON (site.html?rayon=solaire) ════
+// Même page que l'accueil : l'adresse désigne un rayon, l'accueil s'efface et la page du rayon s'affiche.
+// L'adresse se partage ; le bouton « retour » du navigateur ramène à l'accueil.
+var titreSite = '';
+function lienRayon(nom) { return 'site.html?rayon=' + encodeURIComponent(pharmaSlugRayon(nom)); }
+function slugAdresse() {
+  var m = /[?&]rayon=([^&#]*)/.exec(location.search);
+  if (!m) return '';
+  try { return decodeURIComponent(m[1]).toLowerCase(); } catch (e) { return ''; }
+}
+function afficherVue(versHaut) {
+  var page = document.getElementById('page-rayon');
+  if (!page) return;
+  var slug = slugAdresse();
+  document.body.classList.toggle('vue-rayon', !!slug);
+  page.hidden = !slug;
+  if (slug) {
+    renderPageRayon();
+    if (versHaut) window.scrollTo(0, 0);
+  } else {
+    if (titreSite) document.title = titreSite;
+  }
+}
+function renderPageRayon() {
+  var slug = slugAdresse();
+  if (!slug) return;
+  var titre = document.getElementById('pr-titre'), sous = document.getElementById('pr-sous');
+  var grille = document.getElementById('pr-grille'), photo = document.getElementById('pr-photo');
+  var autres = document.getElementById('pr-autres'), blocAutres = document.getElementById('pr-autres-bloc');
+  if (!titre || !grille) return;
+  var nomPharma = ((DATA.parametres || {}).nom) || '';
+  var listeAutres = function(sauf) {
+    var cats = rayonsAvecProduits().filter(function(c) { return c !== sauf; });
+    blocAutres.hidden = !cats.length;
+    autres.innerHTML = cats.map(function(c) { return '<li><a href="' + escHtml(lienRayon(c)) + '">' + escHtml(c) + '</a></li>'; }).join('');
+  };
+  // Catalogue encore attendu (base de données) : squelette, ou message si le réseau manque
+  if (EN_LIGNE && CATALOGUE.length === 0 && ETAT_CLOUD !== 'pret') {
+    titre.innerHTML = ETAT_CLOUD === 'chargement' ? '<span class="skel-bar" style="width:5.5em;height:0.8em;border-radius:0.2em" aria-hidden="true"></span>' : '';
+    sous.textContent = '';
+    photo.hidden = true;
+    grille.innerHTML = messageCatalogueCloud();
+    blocAutres.hidden = true;
+    return;
+  }
+  var nom = pharmaRayonDepuisSlug(DATA, slug);
+  if (nom && !pharmaRayonVisible(DATA, nom)) nom = null;   // rayon masqué depuis l'admin
+  if (!nom) {
+    titre.textContent = 'Rayon introuvable';
+    sous.textContent = 'Ce rayon n\'est plus proposé ou a changé de nom. Choisissez un autre rayon ci-dessous.';
+    photo.hidden = true;
+    grille.innerHTML = '';
+    listeAutres(null);
+    document.title = 'Rayon introuvable' + (nomPharma ? ' — ' + nomPharma : '');
+    return;
+  }
+  var produits = produitsCatalogueDuRayon(nom);
+  titre.textContent = nom;
+  sous.textContent = produits.length ? produits.length + ' produit' + (produits.length > 1 ? 's' : '') + ', à réserver en ligne et à retirer en pharmacie' : '';
+  var u = pharmaPhotoRayon(DATA, nom), img = photo.querySelector('img');
+  photo.hidden = !u;
+  if (u && img.getAttribute('src') !== u) { photo.classList.remove('photo-prete'); img.src = u; suivrePhoto(img, function() { photo.hidden = true; }); }
+  grille.innerHTML = produits.length ? produits.map(carteProduitHTML).join('')
+    : '<p class="pr-vide">Aucun produit dans ce rayon pour le moment.<br><a href="site.html#catalogue">Voir tout le catalogue</a></p>';
+  suivrePhotos(grille);
+  observeReveals();
+  initTilt();
+  listeAutres(nom);
+  document.title = nom + (nomPharma ? ' — ' + nomPharma : '');
+}
+// Liens vers un rayon, et liens de l'accueil (#catalogue…) depuis la page d'un rayon : sans recharger la page
+// ── RACCOURCIS VERS UNE SECTION : en fondu ──
+// Le défilement automatique traversait toute la page trop vite. À la place : la page s'efface (fondu),
+// saute directement à la section, puis réapparaît en fondu. L'en-tête reste en place pendant ce temps.
+// avantSaut (facultatif) s'exécute page effacée : changer de vue (page d'un rayon -> accueil) par exemple.
+var voileNav = null, minuteurVoile = 0;
+// Saut immédiat malgré le défilement doux de la page (html{scroll-behavior:smooth}). La lecture du style
+// calculé oblige le navigateur à prendre en compte le changement avant de défiler.
+function sansDefilementDoux(fn) {
+  var racine = document.documentElement, avant = racine.style.scrollBehavior;
+  racine.style.scrollBehavior = 'auto';
+  void getComputedStyle(racine).scrollBehavior;
+  try { fn(); } finally { racine.style.scrollBehavior = avant; }
+}
+function allerA(cible, avantSaut) {
+  function trouver() { return typeof cible === 'string' ? document.getElementById(cible.replace(/^#/, '')) : cible; }
+  function sauter() {
+    if (avantSaut) avantSaut();
+    var el = trouver();
+    if (!el) return;
+    sansDefilementDoux(function() { el.scrollIntoView({ block: 'start' }); });
+  }
+  if (prefersReducedMotion()) { sauter(); return; }
+  if (!voileNav) {
+    voileNav = document.createElement('div');
+    voileNav.className = 'voile-nav';
+    voileNav.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(voileNav);
+  }
+  clearTimeout(minuteurVoile);
+  voileNav.classList.add('visible');
+  minuteurVoile = setTimeout(function() {
+    sauter();
+    // Une image pour que la page se place, puis elle réapparaît
+    requestAnimationFrame(function() { requestAnimationFrame(function() { voileNav.classList.remove('visible'); }); });
+  }, 240);
+}
+
+function initNavigationRayons() {
+  document.addEventListener('click', function(e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    if (/^site\.html\?rayon=[^#&]+$/.test(href)) {
+      e.preventDefault();
+      history.pushState({ rayon: true }, '', href);
+      afficherVue(true);
+      if (typeof closeMobileMenu === 'function') closeMobileMenu();
+      return;
+    }
+    if (document.body.classList.contains('vue-rayon') && /^(site\.html)?#[\w-]+$/.test(href)) {
+      e.preventDefault();
+      var ancre = href.replace(/^site\.html/, '');
+      if (typeof closeMobileMenu === 'function') closeMobileMenu();
+      allerA(ancre, function() {
+        history.pushState({}, '', location.pathname + ancre);
+        afficherVue(false);
+      });
+      return;
+    }
+    // Lien vers une section de l'accueil (menu, menu du téléphone, pied de page, boutons) : en fondu
+    if (/^#[\w-]+$/.test(href)) {
+      var cible = document.getElementById(href.slice(1));
+      if (!cible || cible.hidden || !cible.getClientRects().length) return;
+      e.preventDefault();
+      if (typeof closeMobileMenu === 'function') closeMobileMenu();
+      try { history.replaceState(history.state, '', href); } catch (err) {}
+      allerA(cible);
+    }
+  });
+  window.addEventListener('popstate', function() { afficherVue(false); });
+  retrouverPositionSite();
+  afficherVue(false);
+}
+
+// ── RETOUR DEPUIS L'ADMINISTRATION OU L'ESPACE CLIENT ──
+// En quittant le site pour l'admin ou l'espace client (même onglet), la page (accueil ou rayon) et la position
+// sont notées ; en revenant dans les 30 minutes, on les retrouve. sessionStorage : propre à l'onglet.
+var CLE_POSITION_SITE = 'pres-site-position';
+var positionARetrouver = null;
+window.addEventListener('pagehide', function() {
+  try { sessionStorage.setItem(CLE_POSITION_SITE, JSON.stringify({ vue: location.search, y: Math.round(window.scrollY || 0), t: Date.now() })); } catch (e) {}
+});
+function retrouverPositionSite() {
+  var ref = document.referrer || '', dossier = location.origin + location.pathname.replace(/[^\/]*$/, '');
+  // « .html » facultatif : certains hébergeurs (Cloudflare Pages) l'enlèvent des adresses
+  if (ref.indexOf(dossier) !== 0 || !/^(admin|compte)(?:\.html)?(?:[?#]|$)/.test(ref.slice(dossier.length))) return;
+  if (location.hash || location.search) return;   // lien précis (section, rayon) : on le respecte
+  var n = null;
+  try { n = JSON.parse(sessionStorage.getItem(CLE_POSITION_SITE) || 'null'); } catch (e) {}
+  if (!n || !(Date.now() - n.t < 30 * 60 * 1000)) return;
+  if (/^\?rayon=[^&#]+$/.test(n.vue || '')) history.replaceState(null, '', location.pathname + n.vue);
+  positionARetrouver = Math.max(0, parseInt(n.y, 10) || 0);
+  replacerPosition();
+  window.addEventListener('load', replacerPosition);
+  setTimeout(function() { positionARetrouver = null; }, 6000);   // plus tard, le visiteur a déjà bougé
+}
+// Appelée aussi à l'arrivée du catalogue de la base (la page s'allonge)
+function replacerPosition() {
+  if (positionARetrouver === null) return;
+  var y = positionARetrouver;
+  requestAnimationFrame(function() { sansDefilementDoux(function() { window.scrollTo(0, y); }); });
+}
+
+// Chapitre « Fidélité » : palier et réduction de l'admin, jauge qui se remplit à l'arrivée
+function renderFideliteRecit() {
+  var cfg = DATA.parametres || {};
+  var seuil = parseInt(cfg.fideliteSeuil, 10) || 5;
+  var reduction = parseInt(cfg.fideliteReduction, 10) || 10;
+  var titre = document.getElementById('fid-titre');
+  if (titre) titre.textContent = seuil + ' achats, -' + reduction + ' %';
+  var jauge = document.getElementById('fid-jauge');
+  if (!jauge) return;
+  var n = Math.min(Math.max(seuil, 1), 12);
+  if (jauge.children.length !== n) {
+    var html = '';
+    for (var i = 0; i < n; i++) html += '<span class="fid-seg' + ((!recitAnime || fidRemplie) ? ' plein' : '') + '"></span>';
+    jauge.innerHTML = html;
+  }
+}
+function remplirFidelite() {
+  if (fidRemplie) return;
+  fidRemplie = true;
+  document.querySelectorAll('#fid-jauge .fid-seg').forEach(function(seg, i) {
+    setTimeout(function() { seg.classList.add('plein'); }, 140 * i);
+  });
+}
+
+// Chapitre « Aujourd'hui » : ouvert ou fermé, d'après les horaires et les jours spéciaux de l'admin
+function minutesDe(h) { var p = String(h).split(':'); return parseInt(p[0], 10) * 60 + parseInt(p[1], 10); }
+function horairesDu(d) {
+  var iso = pharmaDateLocale(d);
+  var special = (DATA.joursSpeciaux || []).find(function(j) { return j && String(j.date || '').slice(0, 10) === iso; }) || null;
+  if (special && special.type === 'Fermeture') return { ouvert: false, special: special };
+  if (special && heureValide(special.debut) && heureValide(special.fin)) return { ouvert: true, debut: special.debut, fin: special.fin, special: special };
+  var h = (DATA.horaires || {})[JOURS_ORDRE[(d.getDay() + 6) % 7]];
+  if (h && h.ouvert && heureValide(h.debut) && heureValide(h.fin)) return { ouvert: true, debut: h.debut, fin: h.fin, special: special };
+  return { ouvert: false, special: special };
+}
+function etatOuverture(maintenant) {
+  maintenant = maintenant || new Date();
+  var jour = horairesDu(maintenant);
+  var m = maintenant.getHours() * 60 + maintenant.getMinutes();
+  var etat = { ouvert: false, titre: '', suite: '', special: jour.special };
+  if (jour.ouvert && m >= minutesDe(jour.debut) && m < minutesDe(jour.fin)) {
+    etat.ouvert = true;
+    etat.titre = 'Ouvert jusqu\'à ' + formatHeure(jour.fin);
+    return etat;
+  }
+  if (jour.ouvert && m < minutesDe(jour.debut)) {
+    etat.titre = 'Ouvre aujourd\'hui à ' + formatHeure(jour.debut);
+    return etat;
+  }
+  etat.titre = (jour.special && jour.special.type === 'Fermeture') ? 'Fermé aujourd\'hui' : 'Fermé';
+  for (var k = 1; k <= 7; k++) {
+    var d = new Date(maintenant.getFullYear(), maintenant.getMonth(), maintenant.getDate() + k);
+    var h = horairesDu(d);
+    if (h.ouvert) {
+      etat.suite = 'Ouvre ' + (k === 1 ? 'demain' : JOURS_SEMAINE[d.getDay()]) + ' à ' + formatHeure(h.debut);
+      break;
+    }
+  }
+  return etat;
+}
+function renderAujourdhui() {
+  var titre = document.getElementById('auj-titre');
+  if (!titre) return;
+  var cfg = DATA.parametres || {};
+  var etat = etatOuverture();
+  titre.textContent = etat.titre;
+  var pastille = document.querySelector('#auj-etat .auj-pastille');
+  if (pastille) pastille.classList.toggle('ferme', !etat.ouvert);
+  var suite = document.getElementById('auj-suite');
+  if (suite) suite.textContent = etat.suite || ((etat.special && etat.special.type === 'Garde') ? 'Pharmacie de garde aujourd\'hui' : '');
+  // Prochain jour spécial (à partir de demain : celui du jour est déjà pris en compte ci-dessus)
+  var special = document.getElementById('auj-special');
+  if (special) {
+    var j = prochainJourSpecial();
+    var aVenir = j && String(j.date).slice(0, 10) !== pharmaDateLocale() ? j : null;
+    special.hidden = !aVenir;
+    special.textContent = aVenir ? texteJourSpecial(aVenir) : '';
+  }
+  var adresse = document.getElementById('auj-adresse');
+  if (adresse) adresse.textContent = cfg.adresse || '';
+  var tel = document.getElementById('auj-tel');
+  if (tel) {
+    tel.style.display = cfg.tel ? '' : 'none';
+    tel.textContent = cfg.tel || '';
+    tel.href = 'tel:' + String(cfg.tel || '').replace(/[^\d+]/g, '');
+  }
+  var iti = document.getElementById('auj-itineraire');
+  if (iti) {
+    iti.style.display = cfg.adresse ? '' : 'none';
+    iti.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent((cfg.nom ? cfg.nom + ', ' : '') + (cfg.adresse || ''));
+  }
+}
+
+// Animations du récit, déclenchées par le navigateur à l'arrivée de chaque chapitre
+// (aucun calcul pendant le défilement), et coupées si le téléphone demande moins d'animations.
+function initRecit() {
+  var ajouter = document.getElementById('une-ajouter');
+  if (ajouter) ajouter.addEventListener('click', function() {
+    var p = unePromo;
+    if (p) addToCart(p.id, p.nom, nombre(p.prixPromo), p.icon, p.cat);
+  });
+  initRaccourci();
+  initDefilementUne();
+  setInterval(renderAujourdhui, 60000);
+  if (!recitAnime) return;
+  // Promo : le chiffre défile quand il est bien visible, et recommence après être sorti de l'écran
+  var chiffreUne = document.querySelector('#a-la-une .chap-geant');
+  if (chiffreUne && uneAnim.etat === 'attente') rackFocus('chiffre');
+  if (chiffreUne) new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.intersectionRatio >= 0.5) compterUne();
+      else if (!e.isIntersecting) rearmerUne();
+    });
+  }, { threshold: [0, 0.5] }).observe(chiffreUne);
+  // Étapes : le grand chiffre suit l'étape qui passe au milieu de l'écran
+  var chiffres = document.querySelectorAll('.etape-chiffre');
+  var etapes = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (!e.isIntersecting) return;
+      var i = parseInt(e.target.getAttribute('data-etape'), 10);
+      chiffres.forEach(function(c, k) { c.classList.toggle('actif', k === i); });
+    });
+  }, { rootMargin: '-45% 0px -45% 0px' });
+  document.querySelectorAll('.etape[data-etape]').forEach(function(el) { etapes.observe(el); });
+  // Rayons : le mot se remplit quand il traverse le milieu de l'écran
+  rayonsObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { e.target.classList.toggle('actif', e.isIntersecting); });
+  }, { rootMargin: '-42% 0px -42% 0px' });
+  document.querySelectorAll('#rayons-liste .rayon').forEach(function(b) { rayonsObserver.observe(b); });
+  // Fidélité : la jauge se remplit segment par segment, une seule fois
+  var fid = document.getElementById('fid-jauge');
+  if (fid) new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) { if (e.isIntersecting) remplirFidelite(); });
+  }, { threshold: 0.6 }).observe(fid);
+}
+
+// Raccourci « Catalogue » : visible pendant le récit, masqué en haut de page, sur le catalogue
+// lui-même, au pied de page (il cacherait les liens légaux) et tant que le bandeau des cookies est ouvert
+function initRaccourci() {
+  var lien = document.getElementById('raccourci-catalogue');
+  var hero = document.getElementById('accueil');
+  var cat = document.getElementById('catalogue');
+  var pied = document.querySelector('footer');
+  if (!lien || !hero || !cat || !window.IntersectionObserver) return;
+  var heroVu = true, catVu = false, piedVu = false;
+  if (pied) new IntersectionObserver(function(e) { piedVu = e[0].isIntersecting; maj(); }).observe(pied);
+  function maj() {
+    var cookies = document.getElementById('cookie-bar');
+    var cookiesOuverts = cookies && cookies.classList.contains('show');
+    var visible = !heroVu && !catVu && !piedVu && !cookiesOuverts;
+    lien.classList.toggle('visible', visible);
+    lien.setAttribute('aria-hidden', visible ? 'false' : 'true');
+    lien.tabIndex = visible ? 0 : -1;
+  }
+  new IntersectionObserver(function(e) { heroVu = e[0].isIntersecting; maj(); }).observe(hero);
+  new IntersectionObserver(function(e) { catVu = e[0].isIntersecting; maj(); }, { rootMargin: '-20% 0px -20% 0px' }).observe(cat);
+  lien.addEventListener('click', function(ev) {
+    ev.preventDefault();
+    allerA(cat);
+  });
+  var cookies = document.getElementById('cookie-bar');
+  if (cookies && window.MutationObserver) new MutationObserver(maj).observe(cookies, { attributes: true, attributeFilter: ['class'] });
+}
+
+
+// ── MODAL DÉTAIL PROMO ──
+function openPromoDetail(id) {
+  var p = PROMOS.find(function(x){ return x.id===id; });
+  if (!p) return;
+  var modal = document.getElementById('promo-detail-modal');
+  if (!modal) return;
+  document.getElementById('pd-cat').textContent = p.cat;
+  document.getElementById('pd-nom').textContent = p.nom;
+  document.getElementById('pd-prix-promo').textContent = nombre(p.prixPromo).toFixed(2).replace('.',',')+'€';
+  document.getElementById('pd-prix-normal').textContent = nombre(p.prixNormal).toFixed(2).replace('.',',')+'€';
+  document.getElementById('pd-badge').textContent = '-'+p.pct+'%';
+  document.getElementById('pd-timer').textContent = 'Jusqu\'au '+p.fin;
+  var visuel = document.getElementById('pd-icon');
+  visuel.innerHTML = visuelCarte(p);
+  visuel.classList.remove('photo-prete');
+  visuel.classList.toggle('avec-photo', !!pharmaPhotoValide(p.photo));
+  suivrePhotos(visuel);
+  // Gestionnaire posé directement (et non par une chaîne de code) : aucune donnée ne peut s'y injecter
+  var btnAjout = document.getElementById('pd-add');
+  btnAjout.removeAttribute('onclick');
+  btnAjout.onclick = function() { addToCart(p.id, p.nom, nombre(p.prixPromo), p.icon, p.cat); closePromoDetail(); };
+  modal.classList.add('open');
+}
+function closePromoDetail() {
+  var modal = document.getElementById('promo-detail-modal');
+  if (modal) modal.classList.remove('open');
+}
+
+function renderPromos() {
+  var grid = document.getElementById('promo-grid');
+  if (!grid) return;
+  var html = '';
+  PROMOS.forEach(function(p) {
+    html += '<div class="promo-card reveal" data-tilt>';
+    html += '<div class="promo-img'+(pharmaPhotoValide(p.photo)?' avec-photo':'')+'" onclick="openPromoDetail(\''+escAttr(p.id)+'\')" style="cursor:pointer" title="Voir la promo">'+visuelCarte(p);
+    html += '<span class="promo-discount">-'+escHtml(p.pct)+'%</span>';
+    html += '<span class="promo-timer">Jusqu\'au '+escHtml(p.fin)+'</span>';
+    html += '<div style="position:absolute;inset:0;background:rgba(0,0,0,0);transition:background 0.25s;display:flex;align-items:center;justify-content:center;opacity:0;font-size:0.78rem;font-weight:700;color:#fff" class="promo-hover-overlay">Voir le détail →</div>';
+    html += '</div>';
+    html += '<div class="promo-content">';
+    html += '<div class="promo-cat">'+escHtml(p.cat)+'</div>';
+    html += '<div class="promo-name">'+escHtml(p.nom)+'</div>';
+    html += '<div class="promo-prices"><span class="price-now prix-promo">'+nombre(p.prixPromo).toFixed(2).replace('.',',')+'€</span><span class="price-old">'+nombre(p.prixNormal).toFixed(2).replace('.',',')+'€</span></div>';
+    html += '<button class="promo-add" onclick="addToCart(\''+escAttr(p.id)+'\',\''+escAttr(p.nom)+'\','+nombre(p.prixPromo)+',\''+escAttr(p.icon)+'\',\''+escAttr(p.cat)+'\')"><svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Ajouter au panier</button>';
+    html += '</div></div>';
+  });
+  grid.innerHTML = html;
+  suivrePhotos(grid);
+  // Effet hover sur image promo
+  grid.querySelectorAll('.promo-img').forEach(function(img) {
+    var overlay = img.querySelector('.promo-hover-overlay');
+    if (!overlay) return;
+    img.addEventListener('mouseenter', function() { overlay.style.opacity='1'; overlay.style.background='rgba(0,0,0,0.35)'; });
+    img.addEventListener('mouseleave', function() { overlay.style.opacity='0'; overlay.style.background='rgba(0,0,0,0)'; });
+  });
+  observeReveals();
+  initTilt();
+}
+
+// ── RENDER CATALOGUE ──
+var currentCat = 'Tous';
+// Carte d'un produit (catalogue et pages de rayon)
+function carteProduitHTML(p) {
+  var rupture = p.stock !== undefined && p.stock <= 0;
+  var html = '<div class="promo-card reveal" data-tilt>';
+  html += '<div class="promo-img'+(pharmaPhotoValide(p.photo)?' avec-photo':'')+'">'+visuelCarte(p);
+  if (rupture) html += '<span class="promo-discount" style="background:var(--texte-3)">Rupture de stock</span>';
+  html += '</div>';
+  html += '<div class="promo-content">';
+  html += '<div class="promo-cat">'+escHtml(p.cat)+'</div>';
+  html += '<div class="promo-name">'+escHtml(p.nom)+'</div>';
+  html += '<div class="promo-prices"><span class="price-now">'+nombre(p.prix).toFixed(2).replace('.',',')+'€</span></div>';
+  if (rupture) {
+    html += '<button class="promo-add" disabled style="opacity:0.5;cursor:not-allowed">Indisponible</button>';
+  } else {
+    html += '<button class="promo-add" onclick="addToCart(\''+escAttr(p.id)+'\',\''+escAttr(p.nom)+'\','+nombre(p.prix)+',\''+escAttr(p.icon)+'\',\''+escAttr(p.cat)+'\')"><svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Ajouter au panier</button>';
+  }
+  return html + '</div></div>';
+}
+
+// Produits d'un rayon tels qu'affichés (catalogue du site), dans l'ordre choisi dans l'admin
+function produitsCatalogueDuRayon(nom) {
+  return pharmaProduitsDuRayon(DATA, nom).map(function(p) {
+    return CATALOGUE.find(function(x) { return x.produitId === p.id; });
+  }).filter(Boolean);
+}
+// Rayons qui ont au moins un produit, dans l'ordre de l'admin
+// Rayons proposés sur le site : ceux qui ont des produits et que l'admin n'a pas masqués
+function rayonsAvecProduits() {
+  return (DATA.categories || []).filter(function(c) { return pharmaRayonVisible(DATA, c) && produitsCatalogueDuRayon(c).length > 0; });
+}
+
+function renderCatalogue() {
+  var grid = document.getElementById('catalogue-grid');
+  var filters = document.getElementById('cat-filters');
+  if (!grid) return;
+  var cats = ['Tous'].concat(rayonsAvecProduits());
+  if (cats.indexOf(currentCat) === -1) currentCat = 'Tous';
+  if (filters) {
+    filters.innerHTML = cats.map(function(c){
+      return '<button class="cat-filter-btn" onclick="filterCat(\''+escAttr(c)+'\')" style="padding:8px 18px;border-radius:30px;border:1.5px solid '+(c===currentCat?'var(--vert)':'var(--bord)')+';background:'+(c===currentCat?'var(--vert)':'transparent')+';color:'+(c===currentCat?'#fff':'var(--texte-2)')+';font-weight:600;font-size:0.85rem;cursor:pointer;font-family:inherit;transition:all 0.2s">'+escHtml(c)+'</button>';
+    }).join('');
+  }
+  // Filtre d'un rayon : ses produits (rayon principal ou ajoutés), dans l'ordre choisi dans l'admin
+  var list = currentCat === 'Tous' ? CATALOGUE : produitsCatalogueDuRayon(currentCat);
+  if (EN_LIGNE && CATALOGUE.length === 0 && ETAT_CLOUD !== 'pret') {
+    grid.innerHTML = messageCatalogueCloud();
+    return;
+  }
+  grid.innerHTML = list.map(carteProduitHTML).join('');
+  suivrePhotos(grid);
+  observeReveals();
+  initTilt();
+}
+function filterCat(c) { currentCat = c; renderCatalogue(); }
+
+// ── FAQ ──
+function renderFaq() {
+  var list = document.getElementById('faq-list');
+  if (!list) return;
+  var html = '';
+  FAQ.forEach(function(f, i) {
+    html += '<div class="faq-item" id="faq-'+i+'">';
+    html += '<button class="faq-question" onclick="toggleFaq('+i+')" aria-expanded="false">';
+    html += '<span>'+escHtml(f.q)+'</span>';
+    html += '<span class="faq-icon"><svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>';
+    html += '</button>';
+    // {A_LA_NOM} : « à la Pharmacie … » d'après le nom saisi dans l'admin
+    var reponse = f.a.replace('{A_LA_NOM}', escHtml(PharmaTextes.aLaNom((DATA.parametres || {}).nom)));
+    html += '<div class="faq-answer"><div class="faq-answer-inner">'+reponse+'</div></div>';
+    html += '</div>';
+  });
+  list.innerHTML = html;
+}
+function toggleFaq(i) {
+  var item = document.getElementById('faq-'+i);
+  if (!item) return;
+  var wasOpen = item.classList.contains('open');
+  // Accordéon : un seul item ouvert à la fois
+  document.querySelectorAll('.faq-item.open').forEach(function(el) {
+    el.classList.remove('open');
+    el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    var ans = el.querySelector('.faq-answer');
+    if (ans) ans.style.maxHeight = null;
+  });
+  if (!wasOpen) {
+    item.classList.add('open');
+    item.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+    var ans = item.querySelector('.faq-answer');
+    if (ans) ans.style.maxHeight = ans.scrollHeight + 'px';
+  }
+}
+
+// ── PANIER ──
+function addToCart(id, nom, prix, icon, cat) {
+  var existing = cart.find(function(item){ return item.id===id; });
+  if (existing) { existing.qty++; }
+  else { cart.push({ id:id, nom:nom, prix:prix, icon:icon, cat:cat||'Tous', qty:1 }); }
+  updateCart();
+  pharmaToast(nom+' ajouté au panier', { article: { id: id, icon: icon } });
+  // Pulse cart icon
+  var btn = document.getElementById('cart-btn');
+  if (btn) { btn.style.transform='scale(1.2)'; setTimeout(function(){btn.style.transform='';},200); }
+}
+function removeFromCart(id) {
+  cart = cart.filter(function(item){ return item.id!==id; });
+  updateCart();
+}
+function changeQty(id, delta) {
+  var item = cart.find(function(i){ return i.id===id; });
+  if (item) { item.qty += delta; if (item.qty <= 0) removeFromCart(id); else updateCart(); }
+}
+// Sous-total, réduction du code promo et total d'une liste d'articles (le panier, ou sa copie
+// gardée pour la confirmation de commande)
+function totauxPanier(lignes, promo) {
+  var subtotal = lignes.reduce(function(s,i){ return s+i.prix*i.qty; }, 0);
+  var discount = 0;
+  if (promo) {
+    if (promo.scope === 'Tous') {
+      discount = subtotal * promo.pct / 100;
+    } else {
+      // Réduction sur une catégorie spécifique
+      var catTotal = lignes.filter(function(i){ return i.cat === promo.scope; }).reduce(function(s,i){ return s+i.prix*i.qty; }, 0);
+      discount = catTotal * promo.pct / 100;
+    }
+  }
+  return { subtotal: subtotal, discount: discount, total: subtotal - discount };
+}
+function euros(v) { return nombre(v).toFixed(2).replace('.', ',') + '€'; }
+
+// Liste des articles avec leur vignette, pour le récapitulatif avant de commander et la confirmation
+// montants : total et réduction enregistrés avec la commande (ceux de la base font foi), à la confirmation
+function recapArticlesHTML(lignes, promo, montants) {
+  var t = totauxPanier(lignes, promo);
+  if (montants && isFinite(Number(montants.total))) t = { discount: nombre(montants.remise), total: nombre(montants.total) };
+  var nb = lignes.reduce(function(s, i) { return s + nombre(i.qty); }, 0);
+  return '<ul class="recap-liste">' + lignes.map(function(i) {
+    return '<li class="recap-ligne">' + vignetteArticle(i, 'recap-img') +
+      '<span class="recap-nom">' + escHtml(i.nom) + '<small>' + nombre(i.qty) + ' × ' + euros(i.prix) + '</small></span>' +
+      '<span class="recap-prix">' + euros(i.prix * i.qty) + '</span></li>';
+  }).join('') + '</ul>' +
+  (t.discount > 0 ? '<div class="recap-total recap-remise"><span>Réduction' + (promo && promo.code ? ' (' + escHtml(promo.code) + ')' : '') + '</span><span>-' + euros(t.discount) + '</span></div>' : '') +
+  '<div class="recap-total"><span>Total, ' + nb + ' article' + (nb > 1 ? 's' : '') + ', à régler au retrait</span><strong>' + euros(t.total) + '</strong></div>';
+}
+function afficherRecapCommande() {
+  var el = document.getElementById('co-recap');
+  if (!el) return;
+  el.innerHTML = cart.length ? recapArticlesHTML(cart, appliedPromo) : '';
+  el.hidden = !cart.length;
+  suivrePhotos(el);
+}
+
+function updateCart() {
+  saveCart();
+  var count = cart.reduce(function(s,i){ return s+i.qty; }, 0);
+  var totaux = totauxPanier(cart, appliedPromo);
+  var discount = totaux.discount;
+  var total = totaux.total;
+  var countEl = document.getElementById('cart-count');
+  if (countEl) { countEl.textContent = count; countEl.style.display = count>0?'flex':'none'; }
+  var totalEl = document.getElementById('cart-total');
+  if (totalEl) totalEl.textContent = total.toFixed(2).replace('.',',')+'€';
+  // Ligne réduction
+  var discRow = document.getElementById('cart-discount-row');
+  var discEl = document.getElementById('cart-discount');
+  if (discRow && discEl) {
+    if (discount > 0) {
+      discRow.style.display = 'flex';
+      discEl.textContent = '-'+discount.toFixed(2).replace('.',',')+'€';
+    } else {
+      discRow.style.display = 'none';
+    }
+  }
+  var itemsEl = document.getElementById('cart-items');
+  if (itemsEl) {
+    if (cart.length === 0) {
+      itemsEl.innerHTML = '<div class="cart-empty"><svg width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" style="margin:0 auto 12px;opacity:0.3"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><p>Votre panier est vide</p></div>';
+    } else {
+      var svgMoins = '<svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/></svg>';
+      var svgPlus = '<svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>';
+      var svgRetirer = '<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+      itemsEl.innerHTML = cart.map(function(i){
+        var id = escAttr(i.id), nom = escHtml(i.nom);
+        return '<div class="cart-item">' + vignetteArticle(i, 'cart-item-img') + '<div class="cart-item-info"><div class="cart-item-name">'+nom+'</div><div class="cart-item-price">'+euros(i.prix)+'</div><div class="cart-qty">' +
+          '<button onclick="changeQty(\''+id+'\',-1)" aria-label="Retirer un « '+nom+' »">'+svgMoins+'</button><span>'+nombre(i.qty)+'</span>' +
+          '<button onclick="changeQty(\''+id+'\',1)" aria-label="Ajouter un « '+nom+' »">'+svgPlus+'</button>' +
+          '<button class="cart-retirer" onclick="removeFromCart(\''+id+'\')" aria-label="Enlever « '+nom+' » du panier">'+svgRetirer+'</button></div></div></div>';
+      }).join('');
+      suivrePhotos(itemsEl);
+    }
+  }
+  // Formulaire de commande déjà ouvert : son récapitulatif suit le panier (code promo appliqué, etc.)
+  var co = document.getElementById('checkout-modal');
+  if (co && co.classList.contains('open')) afficherRecapCommande();
+}
+
+// ── CODE PROMO ──
+function applyPromo() {
+  var input = document.getElementById('promo-input');
+  var feedback = document.getElementById('promo-feedback');
+  var label = document.getElementById('promo-label');
+  if (!input) return;
+  var code = input.value.trim().toUpperCase();
+  if (!code) {
+    var zoneEmail = document.getElementById('promo-email-zone');
+    if (zoneEmail) zoneEmail.style.display = 'none';
+    // Champ vide : si un code était appliqué, c'est une demande de retrait
+    if (appliedPromo) {
+      appliedPromo = null;
+      if (label) label.textContent = '';
+      feedback.textContent = 'Code retiré';
+      feedback.style.color = 'var(--texte-3)';
+      updateCart();
+      return;
+    }
+    feedback.textContent='Entrez un code promo'; feedback.style.color='var(--texte-3)'; return;
+  }
+  if (cart.length === 0) { feedback.textContent='Votre panier est vide'; feedback.style.color='var(--texte-3)'; return; }
+  if (MODE_CLOUD) { appliquerCodeCloud(code, emailConnu()); return; }
+  var promo = findCodePromo(code);
+  if (!promo || promo.erreur) {
+    feedback.textContent = '✕ ' + (promo && promo.erreur ? promo.erreur : 'Code invalide');
+    feedback.style.color = '#E55353';
+    appliedPromo = null;
+    updateCart();
+    return;
+  }
+  // Vérifier si applicable (catégorie présente dans le panier)
+  if (promo.scope !== 'Tous') {
+    var hasCategory = cart.some(function(i){ return i.cat === promo.scope; });
+    if (!hasCategory) {
+      feedback.textContent = '✕ Ce code s\'applique aux produits '+promo.scope+', absents de votre panier';
+      feedback.style.color = '#E55353';
+      appliedPromo = null;
+      updateCart();
+      return;
+    }
+  }
+  appliedPromo = promo;
+  if (label) label.textContent = '('+code+')';
+  feedback.textContent = '✓ Code appliqué : '+promo.label;
+  feedback.style.color = 'var(--vert)';
+  updateCart();
+  pharmaToast('Code promo appliqué !');
+}
+function openCart() {
+  document.getElementById('cart-drawer').classList.add('open');
+  document.getElementById('cart-overlay').classList.add('open');
+}
+function closeCart() {
+  document.getElementById('cart-drawer').classList.remove('open');
+  document.getElementById('cart-overlay').classList.remove('open');
+}
+
+// Lit la valeur d'un champ par son id (chaîne vide si absent)
+function getVal(id) {
+  var el = document.getElementById(id);
+  return el ? el.value : '';
+}
+
+// ── MODE INVITÉ ─────────────────────────────────────────────
+// Sort du modal compte et emmène directement le client là où il doit aller :
+// au paiement si son panier est prêt, au catalogue sinon.
+function continuerEnInvite() {
+  var modal = document.getElementById('account-modal');
+  if (modal) modal.classList.remove('open');
+  if (cart.length > 0) {
+    prefillCheckout();
+    var checkout = document.getElementById('checkout-modal');
+    if (checkout) checkout.classList.add('open');
+    pharmaToast('Mode invité — aucun compte nécessaire');
+  } else {
+    allerA('catalogue');
+    pharmaToast('Mode invité activé — ajoutez vos produits au panier');
+  }
+}
+
+// Pré-remplit le formulaire de commande avec le profil enregistré dans l'espace client,
+// pour éviter au client de ressaisir ses coordonnées à chaque commande.
+function prefillCheckout() {
+  // Appelé à chaque ouverture du formulaire : le récapitulatif montre le panier du moment
+  afficherRecapCommande();
+  var profil = null;
+  try { profil = JSON.parse(localStorage.getItem('pres-profil') || 'null'); } catch (e) {}
+  if (!profil) return;
+  var nom = ((profil.prenom||'') + ' ' + (profil.nom||'')).trim();
+  var champs = [['co-nom', nom], ['co-email', profil.email], ['co-tel', profil.tel]];
+  champs.forEach(function(pair) {
+    var el = document.getElementById(pair[0]);
+    if (el && !el.value && pair[1]) el.value = pair[1];
+  });
+}
+
+// Génère un code de réduction unique pour un client ayant atteint le palier.
+// Le code est ajouté à DATA.codesPromo : il est donc immédiatement visible
+// dans l'admin (page Codes Promo) et utilisable dans le panier.
+// Renvoie l'objet code créé ({code, pct, expire, ...}).
+function genererCodeFidelite(client, reduction, commandeId, palier) {
+  var initiales = (client.nom || 'CL').split(/\s+/).map(function(m){ return m.charAt(0).toUpperCase(); }).join('').slice(0,2) || 'CL';
+  var base = 'FID-' + initiales + reduction;
+  var code = base;
+  var n = 2;
+  // Garantit l'unicité si le client atteint le palier plusieurs fois
+  while (DATA.codesPromo.some(function(c){ return c.code === code; })) {
+    code = base + '-' + n;
+    n++;
+  }
+  var expire = new Date();
+  expire.setDate(expire.getDate() + 30); // valable 30 jours
+  var obj = {
+    code: code,
+    client: client.nom,
+    clientId: client.id,
+    pct: reduction,
+    scope: 'Tous',
+    origine: 'Auto (fidélité)',
+    usages: 0,
+    maxUsages: 1,
+    expire: pharmaDateLocale(expire),
+    actif: true,
+    commandeId: commandeId || '',   // commande qui l'a déclenché (annulée = code retiré s'il n'a pas servi)
+    palier: palier || 0             // 1er palier, 2e palier... : un seul code par palier
+  };
+  DATA.codesPromo.push(obj);
+  return obj;
+}
+
+// Un code créé pour un client précis (fidélité, ou généré à la main pour lui)
+// ne peut servir qu'à ce client ; les codes « Tous les clients » sont libres.
+function codePourClient(codeObj, client) {
+  var dest = codeObj && codeObj.client;
+  if (!dest || dest === 'Tous les clients') return true;
+  if (!client) return false;
+  if (codeObj.clientId !== undefined) return codeObj.clientId === client.id;
+  return PharmaClients.normNom(dest) === PharmaClients.normNom(client.nom);
+}
+
+// Code de retrait : 6 caractères sans ambiguïté (ni 0/O ni 1/I/L), à présenter
+// en pharmacie avec le numéro de commande.
+function genererCodeRetrait() {
+  var alphabet = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+  var existants = DATA.commandes.map(function(c) { return c.codeRetrait; });
+  var code, i, tirage;
+  do {
+    code = '';
+    tirage = null;
+    try { tirage = new Uint32Array(6); (window.crypto || window.msCrypto).getRandomValues(tirage); } catch (e) { tirage = null; }
+    for (i = 0; i < 6; i++) {
+      code += alphabet.charAt((tirage ? tirage[i] : Math.floor(Math.random() * alphabet.length)) % alphabet.length);
+    }
+  } while (existants.indexOf(code) !== -1);
+  return code;
+}
+
+// ── COMMANDE (persistée dans DATA partagée, visible côté admin) ──
+function generateOrderId() {
+  var maxNum = 1000;
+  DATA.commandes.forEach(function(c) {
+    var n = parseInt((c.id || '').replace('#', ''), 10);
+    if (!isNaN(n) && n > maxNum) maxNum = n;
+  });
+  return '#' + (maxNum + 1);
+}
+// Retrouve le produit DATA.produits correspondant à un article du panier
+// (article catalogue : id direct ; article promo : correspondance par nom, cf. matchProduitPourPromo)
+// Nombre d'unités du produit contenues dans un article du panier.
+// Un lot promo « Lot Crème Solaire SPF50 x3 » consomme 3 unités de stock,
+// pas 1 : sans cela le stock réel serait progressivement faussé.
+function unitesParArticle(item) {
+  if (typeof item.id === 'string' && item.id.indexOf('promo-') === 0) {
+    var promoId = parseInt(item.id.replace('promo-', ''), 10);
+    var promo = DATA.promos.find(function(p) { return p.id === promoId; });
+    if (promo && promo.qte > 0) return promo.qte;
+    // Pas de quantité renseignée : on la déduit du libellé (« ... x3 »)
+    var m = (item.nom || '').match(/x\s*(\d+)\s*$/i);
+    if (m) return parseInt(m[1], 10);
+  }
+  return 1;
+}
+
+function resolveProduitForCartItem(item) {
+  // Article venant du catalogue : on a l'id produit directement (ex. "prod-2")
+  if (typeof item.id === 'string' && item.id.indexOf('prod-') === 0) {
+    var pid = parseInt(item.id.replace('prod-', ''), 10);
+    var direct = DATA.produits.find(function(p) { return p.id === pid; });
+    if (direct) return direct;
+  }
+  // Article venant d'une promo (lot) : correspondance approximative sur le nom
+  return matchProduitPourPromo(item.nom);
+}
+function placeOrder() {
+  if (cart.length === 0) return false;
+
+  var err = document.getElementById('co-erreur');
+  function showErr(msg) {
+    if (err) { err.textContent = msg; err.style.display = 'block'; }
+    else pharmaToast(msg);
+    return false;
+  }
+  if (err) err.style.display = 'none';
+
+  // Validation des coordonnées saisies dans le formulaire de commande
+  var nomSaisi = (getVal('co-nom') || '').trim();
+  var emailSaisi = (getVal('co-email') || '').trim();
+  var telSaisi = (getVal('co-tel') || '').trim();
+  if (!nomSaisi) return showErr('Merci d\'indiquer votre nom complet.');
+  if (!pharmaEmailValide(emailSaisi)) return showErr('Merci d\'indiquer une seule adresse email valide.');
+  if (!telSaisi || telSaisi.replace(/\D/g, '').length < 9) return showErr('Merci d\'indiquer un numéro de téléphone valide.');
+  var cgu = document.getElementById('cgu-checkout');
+  if (cgu && !cgu.checked) return showErr('Vous devez accepter les conditions pour commander.');
+
+  // Recharge les données les plus récentes : cette page a pu rester ouverte
+  // longtemps pendant que la pharmacie modifiait stocks, prix ou codes. Sans
+  // cela, la commande réécrirait par-dessus ces modifications.
+  DATA = PharmaStore.load();
+
+  // Le code promo a pu être désactivé ou épuisé depuis qu'il a été appliqué
+  var client = PharmaClients.trouver(DATA, nomSaisi, emailSaisi);
+  if (appliedPromo && appliedPromo.code) {
+    var revalide = findCodePromo(appliedPromo.code);
+    if (!revalide || revalide.erreur) {
+      appliedPromo = null;
+      updateCart();
+      return showErr('Le code promo n\'est plus valable' + (revalide && revalide.erreur ? ' (' + revalide.erreur.toLowerCase() + ')' : '') + '. Il a été retiré de votre panier.');
+    }
+    var codeBrut = DATA.codesPromo.find(function(c){ return c.code === appliedPromo.code; });
+    if (codeBrut && !codePourClient(codeBrut, client)) {
+      return showErr('Ce code est réservé à son titulaire. Utilisez le nom et l\'adresse email de son compte, ou retirez le code de votre panier.');
+    }
+  }
+
+  // Vérification du stock disponible avant de valider
+  var indisponibles = [];
+  cart.forEach(function(item) {
+    var p = resolveProduitForCartItem(item);
+    var besoin = item.qty * unitesParArticle(item);
+    if (p && p.stock < besoin) {
+      indisponibles.push(item.nom + ' (reste ' + p.stock + ')');
+    }
+  });
+  if (indisponibles.length) {
+    return showErr('Stock insuffisant pour : ' + indisponibles.join(', ') + '. Ajustez votre panier.');
+  }
+
+  var produitsStr = cart.map(function(i) { return i.nom + ' x' + i.qty; }).join(' + ');
+  var subtotal = cart.reduce(function(s, i) { return s + i.prix * i.qty; }, 0);
+  var discount = 0;
+  if (appliedPromo) {
+    if (appliedPromo.scope === 'Tous') {
+      discount = subtotal * appliedPromo.pct / 100;
+    } else {
+      var catTotal = cart.filter(function(i) { return i.cat === appliedPromo.scope; }).reduce(function(s, i) { return s + i.prix * i.qty; }, 0);
+      discount = catTotal * appliedPromo.pct / 100;
+    }
+  }
+  // Arrondi au centime pour éviter les totaux type 44.400000000000006
+  var total = Math.round((subtotal - discount) * 100) / 100;
+
+  var now = new Date();
+  // On stocke un timestamp ISO complet (triable, avec l'année) EN PLUS de la
+  // date lisible : indispensable pour trier, filtrer et générer les rapports.
+  var dateStr = ('0'+now.getDate()).slice(-2)+'/'+('0'+(now.getMonth()+1)).slice(-2)+' '+now.getHours()+'h'+('0'+now.getMinutes()).slice(-2);
+  var timestamp = now.toISOString();
+
+  var clientNom = nomSaisi, clientTel = telSaisi, clientEmail = emailSaisi;
+
+  var numeroCommande = generateOrderId();
+  var codeRetrait = genererCodeRetrait();
+  var langueClient = (typeof PharmaEmail !== 'undefined') ? PharmaEmail.langueClient() : 'fr';
+  var codePromoUtilise = (appliedPromo && appliedPromo.code) ? appliedPromo.code : '';
+  var remiseEuros = Math.round(discount * 100) / 100;
+  DATA.commandes.push({
+    id: numeroCommande, client: clientNom, email: clientEmail, tel: clientTel,
+    produits: produitsStr, total: total, date: dateStr, timestamp: timestamp, valide: '', statut: 'En préparation',
+    codeRetrait: codeRetrait, lang: langueClient, codePromo: codePromoUtilise, remise: remiseEuros,
+    // Détail des articles : permet de remettre exactement le bon stock en cas d'annulation
+    lignes: cart.map(function(item) {
+      var pr = resolveProduitForCartItem(item);
+      return { nom: item.nom, qty: item.qty, unites: unitesParArticle(item), produitId: pr ? pr.id : null };
+    })
+  });
+
+  // Décrémente le stock des produits commandés
+  var alertesStock = [];
+  cart.forEach(function(item) {
+    var p = resolveProduitForCartItem(item);
+    if (p) {
+      p.stock = Math.max(0, p.stock - item.qty * unitesParArticle(item));
+      // Alerte si le produit passe sous son seuil d'alerte
+      if (p.stock <= p.seuil) alertesStock.push(p);
+    }
+  });
+
+  // Fidélité : incrémente le compteur du client (le crée s'il n'existe pas encore côté admin).
+  // Le client est identifié par son email (le nom seul ne suffit pas : deux
+  // personnes peuvent porter le même nom).
+  if (!client) {
+    var newId = DATA.clients.length ? Math.max.apply(null, DATA.clients.map(function(c){ return c.id; })) + 1 : 1;
+    client = { id:newId, nom:clientNom, email:clientEmail, tel:clientTel, type:'Compte', notifs:'Email', rgpd:false, achats:0, depenses:0 };
+    DATA.clients.push(client);
+  } else {
+    // Fiche existante : on la complète si une information manquait
+    if (!client.email) client.email = clientEmail;
+    if (!client.tel) client.tel = clientTel;
+  }
+  client.achats += 1;
+  client.depenses = Math.round((client.depenses + total) * 100) / 100;
+  var commandeCreee = DATA.commandes[DATA.commandes.length - 1];
+  commandeCreee.clientId = client.id;
+
+  // ── FIDÉLITÉ : génération automatique du code au palier atteint ──
+  // Le palier et la réduction sont configurables depuis l'admin (Paramètres).
+  var fcfg = PharmaFidelite.config(DATA);
+  var seuil = fcfg.seuil;
+  var reduction = fcfg.reduction;
+  var codeFidelite = null;
+  if (PharmaFidelite.progression(client.achats, seuil).atteint) {
+    // Un palier ne récompense qu'une fois (commande annulée puis repassée = pas de second code)
+    var palier = Math.floor(client.achats / seuil);
+    var dejaRecompense = DATA.codesPromo.some(function(c) { return c.clientId === client.id && c.palier === palier; });
+    if (!dejaRecompense) codeFidelite = genererCodeFidelite(client, reduction, numeroCommande, palier);
+  }
+
+  // Comptabilise l'utilisation du code promo (limite d'usage gérée en admin)
+  if (appliedPromo && appliedPromo.code) {
+    var codeObj = DATA.codesPromo.find(function(c){ return c.code === appliedPromo.code; });
+    if (codeObj) codeObj.usages += 1;
+  }
+
+  // ── ALERTES POUR LE BACK-OFFICE (remplacent l'email d'alerte) ──
+  pharmaAjouterAlerte(DATA, 'commande',
+    'Nouvelle commande ' + numeroCommande,
+    clientNom + ' — ' + total.toFixed(2).replace('.', ',') + '€ · ' + produitsStr,
+    'commandes');
+  alertesStock.forEach(function(p) {
+    pharmaAjouterAlerte(DATA, 'stock',
+      p.stock === 0 ? 'Rupture de stock' : 'Stock faible',
+      p.nom + ' : ' + p.stock + ' unité' + (p.stock > 1 ? 's' : '') + ' restante' + (p.stock > 1 ? 's' : ''),
+      'stocks');
+  });
+  if (codeFidelite) {
+    pharmaAjouterAlerte(DATA, 'fidelite',
+      'Palier fidélité atteint',
+      clientNom + ' a débloqué le code ' + codeFidelite.code + ' (-' + reduction + '%)',
+      'codes-promo');
+  }
+
+  PharmaStore.save(DATA);
+
+  // ── EMAILS (asynchrones : leur échec n'annule jamais la commande, déjà enregistrée) ──
+  var emails = Promise.resolve([]);
+  if (typeof PharmaEmail !== 'undefined') {
+    try {
+      var ctxCommande = {
+        id: numeroCommande, client: clientNom, email: clientEmail, produits: produitsStr,
+        total: total, timestamp: timestamp, lang: langueClient, codeRetrait: codeRetrait,
+        codePromo: codePromoUtilise, remise: remiseEuros
+      };
+      var ctxFid = { seuil: seuil, reduction: reduction, achats: client.achats };
+      var envois = [{ type: 'commandeRecue', data: DATA, ctx: { commande: ctxCommande, fidelite: ctxFid } }];
+      if (codeFidelite) {
+        envois.push({ type: 'codeFidelite', data: DATA, ctx: { commande: ctxCommande, fidelite: ctxFid,
+          code: { code: codeFidelite.code, pct: codeFidelite.pct, expire: codeFidelite.expire } } });
+      }
+      emails = PharmaEmail.envoyerEnSerie(envois);
+    } catch (e) {
+      console.warn('Emails non envoyés', e);
+    }
+  }
+
+  // Rafraîchit l'affichage (stock à jour immédiatement visible)
+  buildCatalogueData();
+  renderPromos();
+  renderCatalogue();
+
+  cart = [];
+  appliedPromo = null;
+  updateCart();
+  return { ok: true, codeFidelite: codeFidelite ? codeFidelite.code : null, codeFidelitePct: reduction,
+           total: total, remise: remiseEuros, numero: numeroCommande, codeRetrait: codeRetrait, email: clientEmail, emails: emails };
+}
+
+// ════════════════════════════════════════════
+// MODE BASE DE DONNÉES (Supabase)
+// ════════════════════════════════════════════
+
+// Message affiché à la place du catalogue tant que la base n'a pas répondu
+// ════ CHARGEMENT : SQUELETTE ════
+// Première visite (aucune copie locale du catalogue) : tant que la base n'a pas répondu, la page montre des
+// barres aux formes du contenu. Elles n'apparaissent qu'au-delà de 0,3 s, pour ne rien faire clignoter
+// sur une bonne connexion. Aux visites suivantes, la copie locale s'affiche tout de suite.
+var squelette = { visible: false, minuteur: null };
+function attenteCatalogue() { return EN_LIGNE && ETAT_CLOUD === 'chargement' && CATALOGUE.length === 0; }
+function cartesSquelette(n) {
+  var carte = '<div class="promo-card skel-carte" aria-hidden="true"><div class="promo-img"></div><div class="promo-content">'
+    + '<span class="skel-bar skel-ligne" style="width:34%;height:10px"></span>'
+    + '<span class="skel-bar skel-ligne" style="width:82%;height:16px;margin-top:12px"></span>'
+    + '<span class="skel-bar skel-ligne" style="width:30%;height:20px;margin-top:14px"></span>'
+    + '<span class="skel-bar" style="height:40px;margin-top:16px;border-radius:11px"></span></div></div>';
+  var html = '';
+  for (var i = 0; i < n; i++) html += carte;
+  return html;
+}
+function afficherSquelette() {
+  if (!attenteCatalogue() || squelette.visible) return;
+  squelette.visible = true;
+  document.documentElement.classList.add('en-chargement');
+  var une = document.getElementById('a-la-une');
+  if (une) une.hidden = false;
+  var rayons = document.getElementById('rayons'), liste = document.getElementById('rayons-liste');
+  if (rayons && liste) {
+    rayons.hidden = false;
+    liste.innerHTML = [62, 48, 70, 40].map(function(l) { return '<li class="rayon-squelette" aria-hidden="true"><span class="skel-bar" style="width:' + l + '%"></span></li>'; }).join('');
+  }
+  var carte = document.getElementById('hero-promo');
+  if (carte) carte.innerHTML = '<span class="skel-bar" style="width:54px;height:22px;border-radius:12px"></span>'
+    + '<span class="skel-bar" style="width:80%;height:14px;margin-top:12px"></span><span class="skel-bar" style="width:46%;height:18px;margin-top:9px"></span>';
+  renderCatalogue();
+  renderPageRayon();
+}
+function preparerSquelette() {
+  clearTimeout(squelette.minuteur);
+  if (attenteCatalogue()) squelette.minuteur = setTimeout(afficherSquelette, 300);
+}
+// Fin de l'attente : le squelette s'efface et le vrai contenu arrive en fondu
+function finSquelette(avecFondu) {
+  clearTimeout(squelette.minuteur);
+  var etaitVisible = squelette.visible;
+  squelette.visible = false;
+  document.documentElement.classList.remove('en-chargement');
+  return function() {
+    if (!etaitVisible || !avecFondu) return;
+    ['#a-la-une .une', '#rayons-liste', '#catalogue-grid', '#hero-promo'].forEach(function(sel) {
+      var el = document.querySelector(sel);
+      if (!el) return;
+      el.classList.remove('vient-de-charger');
+      void el.offsetWidth;
+      el.classList.add('vient-de-charger');
+    });
+  };
+}
+
+// ════ RÉSEAU LENT OU ABSENT ════
+// Safari ne donne pas la qualité du réseau aux sites : « connexion lente » = catalogue toujours attendu
+// après 3 s ; « pas de réseau » = le navigateur le signale, ou la base ne répond pas. Une pastille en verre
+// liquide l'indique avec la croix de la pharmacie qui se remplit, et le site réessaie tout seul.
+var reseau = { etat: '', minuteurLent: null, minuteurEssai: null, minuteurMasque: null, delaiEssai: 15000, chargement: null, nbCroix: 0 };
+var simuRetabli = false;
+function horsLigne() { return navigator.onLine === false || (SIMU === 'coupe' && !simuRetabli); }
+var CROIX_TRACE = 'M18 6h12a2 2 0 0 1 2 2v10h10a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H32v10a2 2 0 0 1-2 2H18a2 2 0 0 1-2-2V30H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h10V8a2 2 0 0 1 2-2z';
+function svgCroixLiquide(taille, coupe) {
+  var id = 'croix-clip-' + (++reseau.nbCroix);
+  return '<svg class="croix-liquide' + (coupe ? ' coupe' : '') + '" width="' + taille + '" height="' + taille + '" viewBox="0 0 48 48" aria-hidden="true">'
+    + '<defs><clipPath id="' + id + '"><path d="' + CROIX_TRACE + '"/></clipPath></defs>'
+    + '<path class="croix-fond" d="' + CROIX_TRACE + '"/>'
+    + '<g clip-path="url(#' + id + ')"><g class="croix-niveau"><path class="croix-vague croix-eau" d="M0 24q6-3.5 12 0t12 0t12 0t12 0t12 0t12 0V66H0z"/></g></g>'
+    + '<path class="croix-contour" d="' + CROIX_TRACE + '"/></svg>';
+}
+// Pendule de Newton (pas de connexion) : cinq comprimés blancs, ceux des bouts se renvoient le mouvement
+function htmlPendule(grand) {
+  return '<span class="pendule ' + (grand ? 'grand' : 'petit') + '" aria-hidden="true">'
+    + '<span class="pendule-bille"><i></i></span><span class="pendule-bille"><i></i></span><span class="pendule-bille"><i></i></span>'
+    + '<span class="pendule-bille"><i></i></span><span class="pendule-bille"><i></i></span></span>';
+}
+var ICONE_RESEAU_OK = '<svg class="ok" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
+// etat : 'lent' | 'coupe' (pas de catalogue) | 'coupe-cache' (catalogue déjà affiché) | 'essai' (nouvelle tentative)
+//        | 'retabli' | '' (masquée)
+function afficherEtatReseau(etat) {
+  var el = document.getElementById('etat-reseau');
+  clearTimeout(reseau.minuteurMasque);
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'etat-reseau';
+    el.className = 'etat-reseau verre';
+    el.setAttribute('role', 'status');
+    el.setAttribute('aria-live', 'polite');
+    el.hidden = true;
+    document.body.appendChild(el);
+  }
+  reseau.etat = etat;
+  if (!etat) {
+    if (el.hidden) return;
+    el.classList.add('sortie');
+    reseau.minuteurMasque = setTimeout(function() { el.hidden = true; el.classList.remove('sortie'); document.body.classList.remove('reseau-visible'); }, 360);
+    return;
+  }
+  var html;
+  if (etat === 'lent') html = svgCroixLiquide(26) + '<span>Connexion lente, le catalogue arrive…</span>';
+  else if (etat === 'coupe') html = htmlPendule() + '<span>' + (horsLigne() ? 'Pas de réseau pour le moment' : 'Le catalogue ne répond pas') + '</span><button type="button">Réessayer</button>';
+  else if (etat === 'coupe-cache') html = htmlPendule() + '<span>Pas de connexion : le catalogue affiché peut ne pas être à jour</span>';
+  else if (etat === 'essai') html = htmlPendule() + '<span>Nouvel essai de connexion…</span>';
+  else html = ICONE_RESEAU_OK + '<span>Connexion rétablie</span>';
+  el.innerHTML = html;
+  var bouton = el.querySelector('button');
+  if (bouton) bouton.addEventListener('click', reessayerChargementCloud);
+  el.classList.remove('sortie');
+  el.hidden = false;
+  document.body.classList.add('reseau-visible');
+  if (etat === 'retabli') reseau.minuteurMasque = setTimeout(function() { afficherEtatReseau(''); }, 2500);
+}
+function lancerAttenteLente() {
+  clearTimeout(reseau.minuteurLent);
+  reseau.minuteurLent = setTimeout(function() { if (attenteCatalogue()) afficherEtatReseau('lent'); }, 3000);
+}
+// Nouvel essai automatique : 15 s, puis 30 s, puis toutes les minutes (seulement page affichée)
+function planifierNouvelEssai() {
+  clearTimeout(reseau.minuteurEssai);
+  reseau.minuteurEssai = setTimeout(function() {
+    if (ETAT_CLOUD !== 'erreur' && reseau.etat !== 'coupe-cache') return;
+    if (document.visibilityState === 'hidden') { planifierNouvelEssai(); return; }
+    nouvelEssai();
+  }, reseau.delaiEssai);
+  reseau.delaiEssai = Math.min(reseau.delaiEssai * 2, 60000);
+}
+function nouvelEssai() {
+  if (CATALOGUE.length) chargerDonneesCloud();
+  else reessayerChargementCloud();
+}
+function surveillerReseau() {
+  window.addEventListener('online', function() {
+    if (ETAT_CLOUD === 'erreur' || reseau.etat === 'coupe' || reseau.etat === 'coupe-cache') { reseau.delaiEssai = 15000; nouvelEssai(); }
+  });
+  window.addEventListener('offline', function() {
+    if (ETAT_CLOUD === 'pret' && CATALOGUE.length) afficherEtatReseau('coupe-cache');
+  });
+  if (attenteCatalogue()) lancerAttenteLente();
+}
+// Démonstration : chargement simulé (lent : 6 s ; coupé : échec, puis retour du réseau au nouvel essai)
+var essaisSimu = 0;
+function chargerSimule() {
+  essaisSimu++;
+  if (SIMU === 'coupe' && essaisSimu > 1) simuRetabli = true;
+  return new Promise(function(ok, ko) {
+    if (SIMU === 'coupe' && !simuRetabli) setTimeout(function() { ko(new Error('Connexion au serveur impossible.')); }, 1500);
+    else setTimeout(function() { ok(DONNEES_SIMU); }, SIMU === 'lent' ? 6000 : 2500);
+  });
+}
+
+function messageCatalogueCloud() {
+  if (ETAT_CLOUD === 'chargement') return '<p class="vh" role="status">Chargement du catalogue…</p>' + (squelette.visible ? cartesSquelette(6) : '');
+  var tel = (infosFiables && DATA.parametres && DATA.parametres.tel) || '';
+  var appel = tel ? ', ou appelez la pharmacie au <a href="tel:' + escHtml(tel.replace(/\s+/g, '')) + '">' + escHtml(tel) + '</a>' : '';
+  return '<div class="hors-ligne" role="alert">' + htmlPendule(true)
+    + '<p class="hors-ligne-titre">' + (horsLigne() ? 'Pas de réseau pour le moment' : 'Le catalogue ne répond pas pour le moment') + '</p>'
+    + '<p class="hors-ligne-texte">Le catalogue n\'a pas pu être chargé. Il s\'affichera tout seul dès que la connexion reviendra' + appel + '.</p>'
+    + '<button type="button" class="btn-lg btn-primary" onclick="reessayerChargementCloud()">Réessayer</button></div>';
+}
+function reessayerChargementCloud() {
+  if (!CATALOGUE.length) {
+    ETAT_CLOUD = 'chargement';
+    afficherSquelette();
+    renderCatalogue();
+    if (reseau.etat === 'coupe') afficherEtatReseau('essai');
+    else lancerAttenteLente();
+  }
+  chargerDonneesCloud();
+}
+
+// Lit le catalogue, les promos, les conseils et les réglages dans la base, puis met la page à jour
+function chargerDonneesCloud() {
+  if (!EN_LIGNE) return Promise.resolve(false);
+  if (reseau.chargement) return reseau.chargement;
+  if (!SIMU && !PharmaCloud.actif) { ETAT_CLOUD = 'erreur'; renderCatalogue(); return Promise.resolve(false); }
+  reseau.chargement = (SIMU ? chargerSimule() : PharmaCloud.chargerPublic()).then(function(d) {
+    reseau.chargement = null;
+    clearTimeout(reseau.minuteurLent);
+    clearTimeout(reseau.minuteurEssai);
+    reseau.delaiEssai = 15000;
+    if (reseau.etat === 'coupe' || reseau.etat === 'coupe-cache' || reseau.etat === 'essai') afficherEtatReseau('retabli');
+    else if (reseau.etat === 'lent') afficherEtatReseau('');
+    DATA = d;
+    ETAT_CLOUD = 'pret';
+    dernierChargementCloud = Date.now();
+    infosFiables = true;
+    document.documentElement.classList.remove('attente-base');
+    var fondu = finSquelette(true);
+    rafraichirAffichageCloud();
+    fondu();
+    return true;
+  }, function(e) {
+    reseau.chargement = null;
+    console.warn('Catalogue non chargé depuis la base :', e && e.message);
+    ETAT_CLOUD = 'erreur';
+    clearTimeout(reseau.minuteurLent);
+    finSquelette(false);
+    // Les chapitres remplis par le squelette reprennent leur état (masqués sans données)
+    renderAnnonces();
+    renderRecit();
+    renderCatalogue();
+    renderPageRayon();
+    afficherEtatReseau(CATALOGUE.length ? 'coupe-cache' : 'coupe');
+    planifierNouvelEssai();
+    return false;
+  });
+  return reseau.chargement;
+}
+
+var flipCardsLancees = false;
+function rafraichirAffichageCloud() {
+  applyPharmacyConfig();
+  buildCatalogueData();
+  renderPromos();
+  renderAnnonces();
+  renderRecit();
+  renderCatalogue();
+  renderPageRayon();
+  renderConseilsSite();
+  renderFaq();
+  if (!flipCardsLancees) { flipCardsLancees = true; initFlipCards(); }
+  nettoyerPanierCloud();
+  replacerPosition();
+}
+
+// Le panier gardé d'une visite précédente est remis à jour avec le catalogue de la base :
+// prix et noms actuels, articles retirés de la vente enlevés.
+function nettoyerPanierCloud() {
+  if (!cart.length) return;
+  var retires = [];
+  var references = CATALOGUE.concat(PROMOS);
+  cart = cart.filter(function(item) {
+    var ref = references.find(function(x) { return x.id === item.id; });
+    if (!ref) { retires.push(item.nom); return false; }
+    item.nom = ref.nom;
+    item.prix = nombre(ref.prixPromo !== undefined ? ref.prixPromo : ref.prix);
+    item.cat = ref.cat;
+    item.icon = ref.icon;
+    return true;
+  });
+  updateCart();
+  if (retires.length === 1) pharmaToast('« ' + retires[0] + ' » n\'est plus disponible : retiré du panier');
+  else if (retires.length > 1) pharmaToast(retires.length + ' articles ne sont plus disponibles : retirés du panier');
+}
+
+// Adresse email déjà connue sur cet appareil (formulaire de commande, profil enregistré)
+function emailConnu() {
+  var candidats = [getVal('co-email'), getVal('promo-email')];
+  try {
+    var profil = JSON.parse(localStorage.getItem('pres-profil') || 'null');
+    if (profil && profil.email) candidats.push(profil.email);
+  } catch (e) {}
+  for (var i = 0; i < candidats.length; i++) {
+    var e = String(candidats[i] || '').trim();
+    if (pharmaEmailValide(e)) return e;
+  }
+  return '';
+}
+
+// Code promo vérifié par le serveur. Un code personnel (fidélité) n'est reconnu qu'avec
+// l'adresse email de son titulaire : si aucune adresse n'est connue, on la demande.
+var verificationCodeEnCours = false;
+function appliquerCodeCloud(code, email) {
+  var feedback = document.getElementById('promo-feedback');
+  var label = document.getElementById('promo-label');
+  var zone = document.getElementById('promo-email-zone');
+  if (verificationCodeEnCours || !feedback) return;
+  verificationCodeEnCours = true;
+  feedback.textContent = 'Vérification du code…';
+  feedback.style.color = 'var(--texte-3)';
+  PharmaCloud.verifierCode(code, email).then(function(r) {
+    verificationCodeEnCours = false;
+    if (!r.ok) {
+      appliedPromo = null;
+      if (label) label.textContent = '';
+      updateCart();
+      if (!email && r.erreur === 'Code promo invalide' && zone) {
+        zone.style.display = 'block';
+        feedback.textContent = 'Code non reconnu. S\'il s\'agit d\'un code personnel (fidélité), indiquez l\'adresse email de son titulaire :';
+        feedback.style.color = 'var(--texte-2)';
+        var champ = document.getElementById('promo-email');
+        if (champ) champ.focus();
+        return;
+      }
+      feedback.textContent = '✕ ' + r.erreur;
+      feedback.style.color = '#E55353';
+      return;
+    }
+    if (zone) zone.style.display = 'none';
+    if (r.scope !== 'Tous' && !cart.some(function(i) { return i.cat === r.scope; })) {
+      appliedPromo = null;
+      if (label) label.textContent = '';
+      updateCart();
+      feedback.textContent = '✕ Ce code s\'applique aux produits ' + r.scope + ', absents de votre panier';
+      feedback.style.color = '#E55353';
+      return;
+    }
+    appliedPromo = { code: r.code, pct: r.pct, scope: r.scope, label: '-' + r.pct + '%' + (r.scope !== 'Tous' ? ' ' + r.scope : '') };
+    // L'adresse qui a validé un code personnel est reprise dans le formulaire de commande
+    if (email) {
+      var co = document.getElementById('co-email');
+      if (co && !co.value) co.value = email;
+    }
+    if (label) label.textContent = '(' + r.code + ')';
+    feedback.textContent = '✓ Code appliqué : ' + appliedPromo.label;
+    feedback.style.color = 'var(--vert)';
+    updateCart();
+    pharmaToast('Code promo appliqué !');
+  }, function(e) {
+    verificationCodeEnCours = false;
+    feedback.textContent = '✕ ' + ((e && e.message) || 'Vérification impossible. Réessayez.');
+    feedback.style.color = '#E55353';
+  });
+}
+function verifierCodePersonnel() {
+  var feedback = document.getElementById('promo-feedback');
+  var code = (getVal('promo-input') || '').trim().toUpperCase();
+  var email = (getVal('promo-email') || '').trim();
+  if (!code) { applyPromo(); return; }
+  if (!pharmaEmailValide(email)) {
+    if (feedback) { feedback.textContent = '✕ Indiquez une adresse email valide'; feedback.style.color = '#E55353'; }
+    return;
+  }
+  appliquerCodeCloud(code, email);
+}
+
+// Commande enregistrée par le serveur (fonction passer_commande). Le navigateur n'envoie que
+// les articles et les quantités : le serveur relit prix, stock et code promo, calcule le total,
+// crée la fiche client, décompte le stock et la fidélité. Renvoie une promesse.
+function placeOrderCloud() {
+  if (cart.length === 0) return Promise.resolve(false);
+  var err = document.getElementById('co-erreur');
+  function showErr(msg) {
+    if (err) { err.textContent = msg; err.style.display = 'block'; }
+    else pharmaToast(msg);
+    return false;
+  }
+  if (err) err.style.display = 'none';
+
+  var nomSaisi = (getVal('co-nom') || '').trim().replace(/\s+/g, ' ');
+  var emailSaisi = (getVal('co-email') || '').trim();
+  var telSaisi = (getVal('co-tel') || '').trim();
+  if (nomSaisi.length < 2) return Promise.resolve(showErr('Merci d\'indiquer votre nom complet.'));
+  if (!pharmaEmailValide(emailSaisi)) return Promise.resolve(showErr('Merci d\'indiquer une seule adresse email valide.'));
+  if (!telSaisi || telSaisi.replace(/\D/g, '').length < 9) return Promise.resolve(showErr('Merci d\'indiquer un numéro de téléphone valide.'));
+  var cgu = document.getElementById('cgu-checkout');
+  if (cgu && !cgu.checked) return Promise.resolve(showErr('Vous devez accepter les conditions pour commander.'));
+
+  var tel = (infosFiables && DATA.parametres && DATA.parametres.tel) || '';
+  if (!PharmaCloud.actif) {
+    return Promise.resolve(showErr('Le service de commande est momentanément indisponible.' + (tel ? ' Appelez la pharmacie au ' + tel + '.' : '')));
+  }
+  var lignes = cart.map(function(item) {
+    var m = /^(prod|promo)-(\d+)$/.exec(String(item.id));
+    return m ? { type: m[1], id: parseInt(m[2], 10), qty: item.qty } : null;
+  });
+  if (lignes.some(function(l) { return !l; })) {
+    return Promise.resolve(showErr('Un article de votre panier n\'est plus valable. Retirez-le puis ajoutez-le de nouveau depuis le catalogue.'));
+  }
+  var langue = (typeof PharmaEmail !== 'undefined') ? PharmaEmail.langueClient() : 'fr';
+  var codeUtilise = (appliedPromo && appliedPromo.code) ? appliedPromo.code : '';
+
+  return PharmaCloud.passerCommande({ nom: nomSaisi, email: emailSaisi, tel: telSaisi, lignes: lignes, code: codeUtilise, langue: langue })
+    .then(function(r) {
+      if (!r || r.ok !== true) {
+        // Refus lié au code promo (le reste n'a pas été enregistré) : le code est retiré
+        appliedPromo = null;
+        var label = document.getElementById('promo-label');
+        if (label) label.textContent = '';
+        var fb = document.getElementById('promo-feedback');
+        if (fb) fb.textContent = '';
+        updateCart();
+        var raison = String((r && r.erreur) || 'code promo refusé');
+        return showErr('Le code promo n\'a pas pu être appliqué (' + raison.charAt(0).toLowerCase() + raison.slice(1)
+          + '). Il a été retiré : vérifiez le total du panier, puis confirmez de nouveau.');
+      }
+
+      var total = nombre(r.total), remise = nombre(r.remise);
+      var codeFid = r.code_fidelite && r.code_fidelite.code ? r.code_fidelite : null;
+
+      // ── EMAILS (leur échec n'annule jamais la commande, déjà enregistrée) ──
+      var emails = Promise.resolve([]);
+      if (typeof PharmaEmail !== 'undefined') {
+        try {
+          var ctxCommande = {
+            id: r.id, client: nomSaisi, email: emailSaisi, produits: r.produits,
+            total: total, timestamp: r.created_at, lang: r.lang || langue, codeRetrait: r.code_retrait,
+            codePromo: codeUtilise, remise: remise
+          };
+          var ctxFid = { seuil: r.seuil, reduction: r.reduction, achats: r.achats };
+          var envois = [{ type: 'commandeRecue', data: DATA, ctx: { commande: ctxCommande, fidelite: ctxFid } }];
+          if (codeFid) {
+            envois.push({ type: 'codeFidelite', data: DATA, ctx: { commande: ctxCommande, fidelite: ctxFid,
+              code: { code: codeFid.code, pct: codeFid.pct, expire: codeFid.expire } } });
+          }
+          emails = PharmaEmail.envoyerEnSerie(envois);
+        } catch (e) {
+          console.warn('Emails non envoyés', e);
+        }
+      }
+
+      cart = [];
+      appliedPromo = null;
+      var fb2 = document.getElementById('promo-feedback');
+      if (fb2) fb2.textContent = '';
+      var champCode = document.getElementById('promo-input');
+      if (champCode) champCode.value = '';
+      updateCart();
+      chargerDonneesCloud();   // stock à jour pour la suite de la visite
+
+      return { ok: true, codeFidelite: codeFid ? codeFid.code : null, codeFidelitePct: codeFid ? codeFid.pct : r.reduction,
+               total: total, remise: remise, numero: r.id, codeRetrait: r.code_retrait, email: emailSaisi, emails: emails };
+    }, function(e) {
+      return showErr((e && e.message) || 'La commande n\'a pas pu être enregistrée. Réessayez.');
+    });
+}
+
+// ── CONFIRMATION DE COMMANDE ──
+// Affiche le numéro et le code de retrait dans la page même : le client les a
+// sous les yeux quoi qu'il arrive à l'email (échec d'envoi, spams, adresse erronée).
+function afficherConfirmation(res, commande) {
+  var modal = document.getElementById('confirm-modal');
+  if (!modal) { pharmaToast('Commande enregistrée — code de retrait : ' + res.codeRetrait); return; }
+  var set = function(id, txt) { var el = document.getElementById(id); if (el) el.textContent = txt; };
+  set('conf-num', 'Commande ' + res.numero);
+  set('conf-code', res.codeRetrait);
+  // Articles commandés, d'après la copie du panier prise au moment de commander (le panier est vidé depuis)
+  var recap = document.getElementById('conf-recap');
+  if (recap) {
+    var lignes = commande && commande.lignes || [];
+    recap.innerHTML = lignes.length ? recapArticlesHTML(lignes, commande.promo, { total: res.total, remise: res.remise }) : '';
+    recap.hidden = !lignes.length;
+    suivrePhotos(recap);
+  }
+  var fid = document.getElementById('conf-fid');
+  if (fid) {
+    if (res.codeFidelite) {
+      fid.style.display = 'block';
+      fid.innerHTML = 'Palier fidélité atteint ! Votre code de réduction de ' + escHtml(res.codeFidelitePct) + ' % : <strong>' + escHtml(res.codeFidelite) + '</strong>';
+    } else {
+      fid.style.display = 'none';
+      fid.innerHTML = '';
+    }
+  }
+  var mail = document.getElementById('conf-mail');
+  var avert = 'Notez bien votre numéro de commande et votre code de retrait.';
+  if (mail) {
+    mail.textContent = 'Envoi de votre email de confirmation…';
+    Promise.resolve(res.emails).then(function(resultats) {
+      var r = resultats && resultats[0];
+      if (r && r.ok) mail.textContent = 'Un email de confirmation a été envoyé à ' + res.email + '.';
+      else if (r && r.ignore) mail.textContent = avert;
+      else mail.textContent = 'Votre email de confirmation n\'a pas pu être envoyé. ' + avert;
+    }, function() { mail.textContent = avert; });
+  }
+  modal.classList.add('open');
+}
+function fermerConfirmation() {
+  var modal = document.getElementById('confirm-modal');
+  if (modal) modal.classList.remove('open');
+}
+
+// ── APPARITION AU DÉFILEMENT ──
+// Titres et textes (« .reveal ») : apparition en fondu, une seule fois.
+// Cartes (promotions, catalogue, « Pourquoi nous choisir ») : effet « volet ».
+// La carte se déplie quand elle arrive à l'écran et se replie quand elle en sort complètement,
+// pour rejouer l'effet au passage suivant. Les cartes qui arrivent ensemble se déplient l'une
+// après l'autre, de gauche à droite. Aucun calcul pendant le défilement : c'est le navigateur
+// qui signale l'entrée et la sortie (IntersectionObserver).
+var CARTES_VOLET = '.promo-card, .feature';
+var revealObserver, revealSortie, voletEntree, voletSortie;
+function observeReveals() {
+  var cartes = document.querySelectorAll(CARTES_VOLET);
+  cartes.forEach(function(c) { if (c.classList.contains('reveal')) c.classList.add('volet'); });
+  if (prefersReducedMotion() || !window.IntersectionObserver) {
+    document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible', 'volet-ouvert'); });
+    return;
+  }
+  if (!revealObserver) {
+    // Les blocs apparaissent à chaque arrivée à l'écran : sortis entièrement, ils se replient pour le passage suivant
+    revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
+    revealSortie = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (!e.isIntersecting) e.target.classList.remove('visible'); });
+    }, { threshold: 0 });
+    voletEntree = new IntersectionObserver(function(entries) {
+      var entrees = entries.filter(function(e) { return e.isIntersecting && !e.target.classList.contains('volet-ouvert'); });
+      entrees.sort(function(x, y) {
+        return (x.boundingClientRect.top - y.boundingClientRect.top) || (x.boundingClientRect.left - y.boundingClientRect.left);
+      });
+      entrees.forEach(function(e, i) {
+        var el = e.target;
+        el.style.transitionDelay = (Math.min(i, 3) * 0.08) + 's';
+        el.classList.add('volet-ouvert');
+        // Une fois dépliée, la carte réagit sans délai (survol à la souris)
+        el.addEventListener('transitionend', function fin() { el.style.transitionDelay = ''; el.removeEventListener('transitionend', fin); });
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
+    voletSortie = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (!e.isIntersecting) { e.target.style.transitionDelay = '0s'; e.target.classList.remove('volet-ouvert'); }
+      });
+    }, { threshold: 0 });
+  }
+  document.querySelectorAll('.reveal:not(.volet)').forEach(function(el) { revealObserver.observe(el); revealSortie.observe(el); });
+  document.querySelectorAll('.reveal.volet').forEach(function(el) { voletEntree.observe(el); voletSortie.observe(el); });
+}
+
+// ── GYROSCOPE (accéléromètre iPhone/Android) ──
+
+// ── TILT 3D (souris desktop) ──
+function initTilt() {
+  if (prefersReducedMotion()) return;
+  if (('ontouchstart' in window) || window.innerWidth <= 1024) return;
+  document.querySelectorAll('[data-tilt]').forEach(function(card) {
+    if (card._tiltInit) return;
+    card._tiltInit = true;
+    card.addEventListener('mousemove', function(e) {
+      var r = card.getBoundingClientRect();
+      var x = (e.clientX - r.left) / r.width - 0.5;
+      var y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = 'translateY(-8px) perspective(800px) rotateY('+(x*8)+'deg) rotateX('+(-y*8)+'deg)';
+    });
+    card.addEventListener('mouseleave', function() { card.style.transform = ''; });
+  });
+}
+
+// ── FLIP CARDS AUTO (temps adaptatif au contenu) ──
+function readingTime(text) {
+  // 200 mots/min = ~3.3 mots/sec → minimum 2.5s, maximum 8s
+  var words = (text || '').trim().split(/\s+/).length;
+  var ms = Math.max(2500, Math.min(8000, (words / 3.3) * 1000));
+  return ms;
+}
+
+// ── CONSEILS DE LA PHARMACIE (gérés dans l'admin, page Conseils) ──
+// Les cartes animées de l'accueil affichent au verso les conseils actifs, dans l'ordre.
+function renderConseilsSite() {
+  var actifs = (DATA.conseils || []).filter(function(c) { return c && c.actif && (c.titre || c.texte); });
+  document.querySelectorAll('.flip-card').forEach(function(card, i) {
+    var back = card.querySelector('.flip-back');
+    var c = actifs[i];
+    if (!back) return;
+    if (!c) {
+      card.setAttribute('data-sans-conseil', '1');
+      back.style.visibility = 'hidden';
+      return;
+    }
+    card.removeAttribute('data-sans-conseil');
+    back.style.visibility = '';
+    var couleur = /^#[0-9a-fA-F]{6}$/.test(String(c.couleur || '')) ? c.couleur : '#1B6B45';
+    var fonce = (typeof PharmaEmail !== 'undefined' && PharmaEmail.palette) ? PharmaEmail.palette(couleur).fonce : couleur;
+    back.style.background = 'linear-gradient(135deg,' + couleur + ',' + fonce + ')';
+    var icone = PHARMA_ICONES_CONSEIL[c.icone] || PHARMA_ICONES_CONSEIL.info;
+    back.innerHTML = '<div><div class="tip-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">' + icone + '</svg></div>'
+      + '<div class="tip-title">' + escHtml(c.titre) + '</div><div class="tip-text">' + escHtml(c.texte) + '</div></div>';
+  });
+}
+
+function initFlipCards() {
+  var cards = document.querySelectorAll('.flip-card');
+  cards.forEach(function(card, i) {
+    if (card.getAttribute('data-sans-conseil')) return; // aucun conseil actif pour cette carte : elle ne se retourne pas
+    var delay = parseInt(card.getAttribute('data-flip-delay') || 0);
+    var backText = card.querySelector('.tip-text');
+    var texte = backText ? backText.textContent : '';
+    var titre = card.querySelector('.tip-title');
+    var titreText = titre ? titre.textContent : '';
+    var fullText = titreText + ' ' + texte;
+    // Temps côté recto (fixe, 4s) et côté verso (adaptatif au texte)
+    var tempsRecto = 4000;
+    var tempsVerso = readingTime(fullText);
+    var flipped = false;
+    var timer;
+
+    function startCycle() {
+      // Attendre tempsRecto puis flipper
+      timer = setTimeout(function() {
+        flipped = true;
+        card.classList.add('flipped');
+        // Attendre le temps de lecture du verso puis revenir
+        timer = setTimeout(function() {
+          flipped = false;
+          card.classList.remove('flipped');
+          startCycle(); // recommencer
+        }, tempsVerso);
+      }, tempsRecto);
+    }
+
+    // Démarrage décalé selon la carte (minuteur mémorisé : un toucher avant le départ l'annule)
+    timer = setTimeout(function() { startCycle(); }, delay + 2000 + i * 800);
+
+    // Toucher = flip manuel + reset du cycle
+    card.addEventListener('click', function() {
+      clearTimeout(timer);
+      flipped = !flipped;
+      card.classList.toggle('flipped', flipped);
+      // Reprendre le cycle automatique après interaction. Le minuteur est mémorisé :
+      // plusieurs touchers rapprochés ne lancent pas plusieurs cycles en parallèle.
+      timer = setTimeout(function() {
+        flipped = false;
+        card.classList.remove('flipped');
+        startCycle();
+      }, flipped ? tempsVerso : tempsRecto);
+    });
+  });
+}
+
+
+// Inclinaison des cartes du haut au gyroscope : retirée. Sur téléphone, ces cartes sont empilées sans
+// transformation (CSS « REPOSITIONNEMENT CARTES MOBILE ») : l'inclinaison ne se voyait plus, mais elle
+// demandait sur iPhone l'accès aux capteurs de mouvement et recalculait les cartes 60 fois par seconde.
+
+// ── HERO PARALLAX 3D ──
+function initHeroParallax() {
+  var visual = document.getElementById('hero-visual');
+  if (!visual) return;
+  if (prefersReducedMotion()) return;
+  visual.addEventListener('mousemove', function(e) {
+    var r = visual.getBoundingClientRect();
+    var x = (e.clientX - r.left) / r.width - 0.5;
+    var y = (e.clientY - r.top) / r.height - 0.5;
+    visual.querySelectorAll('[data-depth]').forEach(function(card) {
+      var d = parseFloat(card.getAttribute('data-depth'));
+      card.style.transform = card.style.transform.replace(/ translate3d[^)]*\)/g,'') + ' translate3d('+(x*30*d)+'px,'+(y*30*d)+'px,0)';
+    });
+  });
+}
+
+// ── DÉFILEMENT : en-tête, bandeau et profondeur des cartes du haut ──
+// Calculé une seule fois par image affichée (requestAnimationFrame). Les cartes du haut
+// bougent avec la propriété « translate », qui ne déclenche aucun recalcul de mise en page
+// et ne touche pas à leur rotation 3D (gérée par « transform »).
+function initScrollParallax() {
+  var header = document.getElementById('header');
+  var gb = document.getElementById('garde-bar');
+  var visual = document.getElementById('hero-visual');
+  var cartes = visual ? Array.prototype.slice.call(visual.querySelectorAll('[data-depth]')) : [];
+  var profondeurs = cartes.map(function(c) { return parseFloat(c.getAttribute('data-depth')) || 0; });
+  var parallaxe = cartes.length && !prefersReducedMotion() && ('translate' in document.documentElement.style);
+  // Téléphone et petite tablette : cartes empilées, sans décalage (calculé pendant le défilement, il suivait
+  // le doigt avec un temps de retard et se remettait en place d'un coup à l'arrêt)
+  var etroit = window.matchMedia ? window.matchMedia('(max-width: 768px)') : { matches: false };
+  var enAttente = false, dernierY = -1;
+  function majDefilement() {
+    enAttente = false;
+    var y = window.scrollY || window.pageYOffset || 0;
+    if (y === dernierY) return;
+    dernierY = y;
+    if (header) header.classList.toggle('scrolled', y > 30);
+    if (gb) { gb.style.transition = 'transform 0.3s'; gb.style.transform = y > 30 ? 'translateY(-100%)' : 'translateY(0)'; }
+    if (parallaxe && y < 900) {
+      cartes.forEach(function(c, i) { c.style.translate = etroit.matches ? '' : '0 ' + (y * profondeurs[i] * 0.15).toFixed(1) + 'px'; });
+    }
+  }
+  window.addEventListener('scroll', function() {
+    if (!enAttente) { enAttente = true; requestAnimationFrame(majDefilement); }
+  }, { passive: true });
+  majDefilement();
+}
+
+// ── TOAST ──
+// options.article : article ajouté au panier, montré par sa vignette (sa photo, sinon l'icône du rayon)
+window.pharmaToast = function(msg, options) {
+  var c = document.getElementById('toast');
+  if (!c) return;
+  var el = document.createElement('div');
+  el.className = 'toast verre';
+  var coche = '<svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.6" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>';
+  var article = options && options.article;
+  if (article && photoArticle(article.id)) {
+    el.classList.add('toast-article');
+    el.innerHTML = '<span class="toast-vignette">' + vignetteArticle(article, 'toast-img') + '<span class="toast-coche">' + coche + '</span></span>';
+    suivrePhotos(el);
+  } else {
+    el.innerHTML = coche;
+  }
+  // Le message est ajouté en texte brut : un nom de produit ne peut pas y injecter de HTML
+  el.appendChild(document.createTextNode(String(msg == null ? '' : msg)));
+  // Trois messages au plus à l'écran : le plus ancien laisse sa place
+  while (c.children.length >= 3) c.removeChild(c.firstChild);
+  c.appendChild(el);
+  document.body.classList.add('avec-message');
+  setTimeout(function() {
+    el.classList.add('sortie');
+    setTimeout(function() {
+      if (el.parentNode) el.parentNode.removeChild(el);
+      if (!c.children.length) document.body.classList.remove('avec-message');
+    }, 360);
+  }, 2800);
+};
+
+// ── MODAL COMPTE ──
+function openAccount() { document.getElementById('account-modal').classList.add('open'); }
+function closeAccount() { document.getElementById('account-modal').classList.remove('open'); }
+
+// ── INIT ──
+window.addEventListener('DOMContentLoaded', function() {
+  var cbHaut = document.getElementById('hero-code-barres');
+  if (cbHaut) {
+    cbHaut.innerHTML = pharmaCodeBarres('FIDELITE', 52, { embleme: 'vitrine' });
+    pharmaAjusterCodeBarres(cbHaut);
+    window.addEventListener('resize', function() { pharmaAjusterCodeBarres(cbHaut); });
+  }
+  applyPharmacyConfig();
+  initTheme();
+  initAmbient();
+  renderAnnonces();
+  renderRecit();
+  initRecit();
+  renderPromos();
+  renderCatalogue();
+  initNavigationRayons();
+  renderFaq();
+  loadCart();
+  updateCart();
+  initCookieBar();
+  var legalModal = document.getElementById('legal-modal');
+  if (legalModal) legalModal.addEventListener('click', function(e){ if (e.target === this) fermerLegal(); });
+  observeReveals();
+  initHeroParallax();
+  initScrollParallax();
+  renderConseilsSite();
+  // En mode base de données, les cartes ne démarrent qu'avec de vrais conseils
+  // (copie locale de la dernière visite, sinon à la réponse de la base)
+  if (!MODE_CLOUD || PharmaCloud.depuisCache) { flipCardsLancees = true; initFlipCards(); }
+  if (EN_LIGNE) {
+    preparerSquelette();
+    surveillerReseau();
+    chargerDonneesCloud();
+  }
+  if (MODE_CLOUD) {
+    // Retour sur la page après une longue absence : catalogue et stock relus
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'visible' && Date.now() - dernierChargementCloud > 5 * 60 * 1000) chargerDonneesCloud();
+    });
+  }
+
+  // Theme button
+  var tb = document.getElementById('theme-btn');
+  if (tb) tb.addEventListener('click', toggleTheme);
+
+  // Cart
+  document.getElementById('cart-btn').addEventListener('click', openCart);
+  document.getElementById('cart-close').addEventListener('click', closeCart);
+  document.getElementById('cart-overlay').addEventListener('click', closeCart);
+
+  // Account
+  document.getElementById('account-btn').addEventListener('click', openAccount);
+  var abm = document.getElementById('account-btn-m');
+  if (abm) abm.addEventListener('click', function(){ closeMobileMenu(); openAccount(); });
+  document.getElementById('account-close').addEventListener('click', closeAccount);
+  document.getElementById('account-modal').addEventListener('click', function(e){ if(e.target===this) closeAccount(); });
+  document.getElementById('fidelite-btn').addEventListener('click', function(){ document.getElementById('tab-signup').click(); openAccount(); });
+
+  // Tabs
+  document.getElementById('tab-login').addEventListener('click', function(){
+    this.classList.add('active'); document.getElementById('tab-signup').classList.remove('active');
+    document.getElementById('login-form').style.display='block'; document.getElementById('signup-form').style.display='none';
+  });
+  document.getElementById('tab-signup').addEventListener('click', function(){
+    this.classList.add('active'); document.getElementById('tab-login').classList.remove('active');
+    document.getElementById('login-form').style.display='none'; document.getElementById('signup-form').style.display='block';
+  });
+
+  // Checkout
+  document.getElementById('checkout-btn').addEventListener('click', function(){
+    if (cart.length===0) { pharmaToast('Votre panier est vide'); return; }
+    closeCart();
+    prefillCheckout();
+    document.getElementById('checkout-modal').classList.add('open');
+  });
+  document.getElementById('checkout-close').addEventListener('click', function(){ document.getElementById('checkout-modal').classList.remove('open'); });
+  document.getElementById('checkout-modal').addEventListener('click', function(e){ if(e.target===this) this.classList.remove('open'); });
+  var confClose = document.getElementById('conf-close');
+  if (confClose) confClose.addEventListener('click', fermerConfirmation);
+  var confModal = document.getElementById('confirm-modal');
+  if (confModal) confModal.addEventListener('click', function(e){ if (e.target === this) fermerConfirmation(); });
+  document.getElementById('confirm-order').addEventListener('click', function(){
+    // Protection anti double-clic : sans cela, un client impatient qui clique
+    // deux fois créerait deux commandes identiques.
+    var btn = this;
+    if (btn.disabled) return;
+    btn.disabled = true;
+    var libelle = btn.textContent;
+    btn.textContent = 'Envoi en cours...';
+    // Copie du panier commandé, pour la confirmation (le panier est vidé une fois la commande enregistrée)
+    var commande = {
+      lignes: cart.map(function(i) { return { id: i.id, nom: i.nom, prix: i.prix, icon: i.icon, cat: i.cat, qty: i.qty }; }),
+      promo: appliedPromo ? { code: appliedPromo.code, pct: appliedPromo.pct, scope: appliedPromo.scope } : null
+    };
+    // Mode base de données : la réponse du serveur arrive plus tard (promesse)
+    Promise.resolve(MODE_CLOUD ? placeOrderCloud() : placeOrder()).then(function(res) {
+      if (res && res.ok) {
+        document.getElementById('checkout-modal').classList.remove('open');
+        afficherConfirmation(res, commande);
+      }
+      // Réactivation : immédiate si erreur (le client doit corriger),
+      // différée en cas de succès pour laisser le modal se fermer.
+      setTimeout(function() {
+        btn.disabled = false;
+        btn.textContent = libelle;
+      }, res && res.ok ? 800 : 300);
+    });
+  });
+
+  // Mobile menu
+  document.getElementById('burger-m').addEventListener('click', function(){ document.getElementById('mobile-menu').classList.add('open'); });
+  document.getElementById('mobile-menu-close').addEventListener('click', closeMobileMenu);
+  document.querySelectorAll('.mm-link').forEach(function(l){ l.addEventListener('click', closeMobileMenu); });
+});
+
+function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+
+// Touche Échap : ferme la fenêtre ou le panneau ouvert (accessibilité clavier)
+document.addEventListener('keydown', function(e) {
+  if (e.key !== 'Escape') return;
+  var ouverts = ['confirm-modal', 'checkout-modal', 'account-modal', 'legal-modal', 'promo-detail-modal'];
+  for (var i = 0; i < ouverts.length; i++) {
+    var m = document.getElementById(ouverts[i]);
+    if (m && m.classList.contains('open')) {
+      if (ouverts[i] === 'legal-modal' && typeof fermerLegal === 'function') fermerLegal();
+      else if (ouverts[i] === 'confirm-modal' && typeof fermerConfirmation === 'function') fermerConfirmation();
+      else m.classList.remove('open');
+      return;
+    }
+  }
+  var drawer = document.getElementById('cart-drawer');
+  if (drawer && drawer.classList.contains('open')) { closeCart(); return; }
+  var menu = document.getElementById('mobile-menu');
+  if (menu && menu.classList.contains('open')) closeMobileMenu();
+});
