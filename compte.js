@@ -382,6 +382,43 @@ function enregistrerNotifs() {
   pharmaToast('Préférences enregistrées');
 }
 
+// ── CARTE APPLE WALLET ──
+// La carte est fabriquée et signée par la fonction serveur Supabase « carte-wallet » (le certificat
+// Apple et sa clé restent dans Supabase, jamais dans ce site). Le site relié à Supabase trouve son
+// adresse tout seul ; la démonstration utilise l'adresse saisie dans l'administration.
+var RE_ADRESSE_WALLET = /^https:\/\/[a-z0-9]{20}\.supabase\.co\/functions\/v1\/carte-wallet$/;
+function adresseCarteWallet() {
+  if (typeof PHARMA_SUPABASE !== 'undefined' && PHARMA_SUPABASE && PHARMA_SUPABASE.url) {
+    var u = String(PHARMA_SUPABASE.url).replace(/\/+$/, '') + '/functions/v1/carte-wallet';
+    return RE_ADRESSE_WALLET.test(u) ? u : '';
+  }
+  var a = String((DATA.parametres && DATA.parametres.walletAppleUrl) || '').trim();
+  return RE_ADRESSE_WALLET.test(a) ? a : '';
+}
+// Apple Wallet existe sur iPhone (et sur Mac, qui l'envoie à l'iPhone) ; pas sur iPad, Android ni Windows
+function appareilAvecWallet() {
+  var ua = navigator.userAgent || '';
+  if (/iPhone|iPod/.test(ua)) return true;
+  return /Macintosh/.test(ua) && !(navigator.maxTouchPoints > 1);   // un iPad se présente comme un Mac tactile
+}
+function ajouterAppleWallet() {
+  var client = getCurrentClient();
+  if (!client) { pharmaToast('Votre carte sera disponible après votre premier achat'); return; }
+  var adresse = adresseCarteWallet();
+  if (!adresse) { pharmaToast('Apple Wallet : bientôt disponible'); return; }
+  if (!appareilAvecWallet()) { pharmaToast('Ouvrez votre espace client sur votre iPhone pour ajouter la carte à Apple Wallet'); return; }
+  var cfg = PharmaFidelite.config(DATA);
+  var prog = PharmaFidelite.progression(client.achats, cfg.seuil);
+  // Seuls les caractères acceptés par la fonction partent (lettres, espaces, apostrophes, traits d'union, points)
+  var nom = getCurrentClientNom().replace(/[^\p{L} .'’-]/gu, ' ').replace(/\s+/g, ' ').trim().slice(0, 40).trim();
+  if (!/^\p{L}/u.test(nom)) nom = 'Client';
+  var params = new URLSearchParams({
+    nom: nom, numero: pharmaNumeroFidelite(client),
+    achats: String(prog.courant), seuil: String(cfg.seuil), reduction: String(cfg.reduction)
+  });
+  window.location.href = adresse + '?' + params.toString();
+}
+
 // ── MES DONNÉES (RGPD) : copie téléchargeable de ce que le site connaît du client ──
 function telechargerMesDonnees() {
   var client = getCurrentClient();

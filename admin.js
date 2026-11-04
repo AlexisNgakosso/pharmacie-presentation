@@ -2096,6 +2096,11 @@ function renderParametres() {
   setVal('par-logo', DATA.parametres.logoTexte || DATA.parametres.nom);
   setVal('par-fid-seuil', DATA.parametres.fideliteSeuil || 5);
   setVal('par-fid-reduction', DATA.parametres.fideliteReduction || 10);
+  setVal('par-wallet-apple', DATA.parametres.walletAppleUrl || '');
+  var siteRelie = typeof PHARMA_SUPABASE !== 'undefined' && !!PHARMA_SUPABASE;
+  var blocWallet = document.getElementById('bloc-wallet-apple'), noteWallet = document.getElementById('note-wallet-apple');
+  if (blocWallet) blocWallet.style.display = siteRelie ? 'none' : '';
+  if (noteWallet) noteWallet.style.display = siteRelie ? '' : 'none';
   var rj = document.getElementById('par-rapport-jour');
   var rh = document.getElementById('par-rapport-heure');
   var rt = document.getElementById('par-restriction');
@@ -2137,6 +2142,12 @@ function saveFidelite() {
   var reduction = parseInt(getVal('par-fid-reduction'), 10);
   if (!seuil || seuil < 1) { toast('Le palier doit être d\'au moins 1 achat','error'); return; }
   if (!reduction || reduction < 1 || reduction > 100) { toast('La réduction doit être entre 1 et 100 %','error'); return; }
+  var walletApple = String(getVal('par-wallet-apple') || '').trim().replace(/\/+$/, '');
+  if (walletApple && !/^https:\/\/[a-z0-9]{20}\.supabase\.co\/functions\/v1\/carte-wallet$/.test(walletApple)) {
+    toast('Adresse Apple Wallet invalide : elle doit ressembler à https://…supabase.co/functions/v1/carte-wallet', 'error'); return;
+  }
+  DATA.parametres.walletAppleUrl = walletApple;
+  setVal('par-wallet-apple', walletApple);
   DATA.parametres.fideliteSeuil = seuil;
   DATA.parametres.fideliteReduction = reduction;
   persist();

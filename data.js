@@ -128,6 +128,7 @@ var PHARMA_SEED_DATA = {
     rapportEmail: 'contact@pharmacie-demo.test',
     fideliteSeuil: 5,
     fideliteReduction: 10,
+    walletAppleUrl: '',   // adresse de la fonction « carte-wallet » (démonstration seulement ; le site relié à Supabase la trouve seul)
     // ── INFORMATIONS LÉGALES (obligatoires avant mise en ligne) ──
     // Article 1-1 de la LCEN + obligations propres aux officines.
     // Les valeurs entre crochets sont des marqueurs à compléter.
