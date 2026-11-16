@@ -88,4 +88,18 @@
   document.body.appendChild(nav);
   document.body.appendChild(pastille);
   appliquer(lireMasque());
+
+  // (16 novembre) Bandeau des cookies ouvert : le menu de démonstration passe au-dessus de lui,
+  // sinon il recouvrait le bouton « Refuser » sur téléphone
+  var cookies = document.getElementById('cookie-bar');
+  if (cookies && window.MutationObserver) {
+    var placer = function () {
+      var b = cookies.classList.contains('show') ? (cookies.offsetHeight + 20) + 'px' : '';
+      nav.style.bottom = b ? 'calc(' + b + ' + env(safe-area-inset-bottom, 0px))' : 'calc(10px + env(safe-area-inset-bottom, 0px))';
+      pastille.style.bottom = nav.style.bottom;
+    };
+    new MutationObserver(placer).observe(cookies, { attributes: true, attributeFilter: ['class'] });
+    window.addEventListener('resize', placer, { passive: true });
+    placer();
+  }
 })();

@@ -254,6 +254,8 @@ function applyPharmacyConfig() {
   document.querySelectorAll('#brand-name-header, #brand-name-footer, #brand-name-copyright').forEach(function(el) {
     el.textContent = nomPharma;
   });
+  var annee = document.getElementById('annee-copyright');
+  if (annee) annee.textContent = String(new Date().getFullYear());
   // Phrases du site qui citent la pharmacie : nom et ville repris des Paramètres de l'admin
   document.querySelectorAll('[data-pharma="a-la-nom"]').forEach(function(el) { el.textContent = PharmaTextes.aLaNom(nomPharma); });
   document.querySelectorAll('[data-pharma="ville"]').forEach(function(el) { el.textContent = villeTxt; });
@@ -381,6 +383,7 @@ function majHauteurBandeau() {
   var gb = document.getElementById('garde-bar');
   var h = (gb && gb.style.display !== 'none') ? gb.offsetHeight : 0;
   document.documentElement.style.setProperty('--bandeau-h', h + 'px');
+  try { localStorage.setItem('pres-bandeau-h', String(h)); } catch (e) {}
 }
 window.addEventListener('resize', majHauteurBandeau);
 window.addEventListener('orientationchange', majHauteurBandeau);
@@ -714,9 +717,9 @@ function initAmbient() {
         }
       }
     }
-    // Gouttes qui tombent
-    for (var k = 0; k < drops.length; k++) {
-      var dp = drops[k];
+    // Gouttes qui tombent (compteur « g » : « k » est le facteur de temps, partagé avec les molécules)
+    for (var g = 0; g < drops.length; g++) {
+      var dp = drops[g];
       ctx.beginPath();
       ctx.moveTo(dp.x, dp.y);
       ctx.lineTo(dp.x, dp.y + dp.len);
@@ -1159,7 +1162,8 @@ function afficherVue(versHaut) {
   page.hidden = !slug;
   if (slug) {
     renderPageRayon();
-    if (versHaut) window.scrollTo(0, 0);
+    // Saut immédiat en haut : avec le défilement doux, on voyait passer le pied de page (16 novembre)
+    if (versHaut) sansDefilementDoux(function() { window.scrollTo(0, 0); });
   } else {
     if (titreSite) document.title = titreSite;
   }
@@ -1257,6 +1261,8 @@ function initNavigationRayons() {
     var href = a.getAttribute('href');
     if (/^site\.html\?rayon=[^#&]+$/.test(href)) {
       e.preventDefault();
+      // Position notée sur l'entrée actuelle de l'historique : le bouton « retour » y ramène d'un coup
+      try { history.replaceState(Object.assign({}, history.state || {}, { y: Math.round(window.scrollY || 0) }), ''); } catch (err) {}
       history.pushState({ rayon: true }, '', href);
       afficherVue(true);
       if (typeof closeMobileMenu === 'function') closeMobileMenu();
@@ -1282,7 +1288,14 @@ function initNavigationRayons() {
       allerA(cible);
     }
   });
-  window.addEventListener('popstate', function() { afficherVue(false); });
+  // Retour / avance du navigateur : la vue change, puis la page se replace d'un coup à la position notée
+  // (sans le défilement doux, qui faisait traverser toute la page en une seconde)
+  window.addEventListener('popstate', function(e) {
+    afficherVue(false);
+    var etat = e.state || {};
+    if (typeof etat.y === 'number') sansDefilementDoux(function() { window.scrollTo(0, etat.y); });
+    else if (etat.rayon) sansDefilementDoux(function() { window.scrollTo(0, 0); });
+  });
   retrouverPositionSite();
   afficherVue(false);
 }
@@ -1633,6 +1646,10 @@ function toggleFaq(i) {
     if (ans) ans.style.maxHeight = ans.scrollHeight + 'px';
   }
 }
+// Écran tourné ou fenêtre redimensionnée : la réponse ouverte reprend la hauteur de son texte
+window.addEventListener('resize', function() {
+  document.querySelectorAll('.faq-item.open .faq-answer').forEach(function(ans) { ans.style.maxHeight = ans.scrollHeight + 'px'; });
+}, { passive: true });
 
 // ── PANIER ──
 function addToCart(id, nom, prix, icon, cat) {
@@ -2601,12 +2618,18 @@ function fermerConfirmation() {
 var CARTES_VOLET = '.promo-card, .feature';
 var revealObserver, revealSortie, voletEntree, voletSortie;
 function observeReveals() {
+  var racine = document.documentElement;
   var cartes = document.querySelectorAll(CARTES_VOLET);
   cartes.forEach(function(c) { if (c.classList.contains('reveal')) c.classList.add('volet'); });
   if (prefersReducedMotion() || !window.IntersectionObserver) {
+    racine.classList.add('anim-sans');
     document.querySelectorAll('.reveal').forEach(function(el) { el.classList.add('visible', 'volet-ouvert'); });
     return;
   }
+  racine.classList.add('anim-pret');
+  // Navigateurs récents : les apparitions suivent le défilement, en CSS (animation-timeline) ; seul
+  // le haut de page garde son apparition au chargement.
+  var lie = racine.classList.contains('defile-lie');
   if (!revealObserver) {
     // Les blocs apparaissent à chaque arrivée à l'écran : sortis entièrement, ils se replient pour le passage suivant
     revealObserver = new IntersectionObserver(function(entries) {
@@ -2634,8 +2657,8 @@ function observeReveals() {
       });
     }, { threshold: 0 });
   }
-  document.querySelectorAll('.reveal:not(.volet)').forEach(function(el) { revealObserver.observe(el); revealSortie.observe(el); });
-  document.querySelectorAll('.reveal.volet').forEach(function(el) { voletEntree.observe(el); voletSortie.observe(el); });
+  document.querySelectorAll(lie ? '.hero .reveal' : '.reveal:not(.volet)').forEach(function(el) { revealObserver.observe(el); if (!lie) revealSortie.observe(el); });
+  if (!lie) document.querySelectorAll('.reveal.volet').forEach(function(el) { voletEntree.observe(el); voletSortie.observe(el); });
 }
 
 // ── GYROSCOPE (accéléromètre iPhone/Android) ──
@@ -2943,6 +2966,65 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); }
+
+// ── PANNEAUX ET FENÊTRES OUVERTS (16 novembre) ──
+// Un seul endroit surveille le menu du téléphone, le panier et les fenêtres : pendant qu'un panneau est
+// ouvert, la page derrière ne défile plus, la touche Tab reste dans le panneau, et à la fermeture le
+// clavier revient sur le bouton qui l'avait ouvert. Les panneaux sont annoncés comme fenêtres aux
+// lecteurs d'écran.
+(function initPanneaux() {
+  var SELECTEUR = '#mobile-menu, #cart-drawer, .modal-ov';
+  var FOCUSABLES = 'a[href], button:not([disabled]), input:not([disabled]):not([type=hidden]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  var pile = [];   // panneaux ouverts, le dernier au premier plan
+  function boite(p) { return p.classList.contains('modal-ov') ? (p.querySelector('.modal-box') || p) : p; }
+  function visibles(p) {
+    return Array.prototype.filter.call(boite(p).querySelectorAll(FOCUSABLES), function(el) { return el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden'; });
+  }
+  function maj(p) {
+    var ouvert = p.classList.contains('open'), i = pile.indexOf(p);
+    if (ouvert && i < 0) {
+      pile.push(p);
+      p._retour = document.activeElement;
+      // Le clavier entre dans le panneau (après l'image où il devient visible)
+      requestAnimationFrame(function() {
+        if (!p.classList.contains('open') || boite(p).contains(document.activeElement)) return;
+        var f = visibles(p);
+        var cible = f.filter(function(el) { return !/close|fermer/i.test(el.id + ' ' + el.className); })[0] || f[0];
+        if (cible) { try { cible.focus({ preventScroll: true }); } catch (e) { cible.focus(); } }
+      });
+    } else if (!ouvert && i >= 0) {
+      pile.splice(i, 1);
+      var r = p._retour; p._retour = null;
+      if (r && r.focus && document.body.contains(r) && r.getClientRects().length && (!document.activeElement || document.activeElement === document.body || p.contains(document.activeElement))) {
+        try { r.focus({ preventScroll: true }); } catch (e) {}
+      }
+    }
+    document.documentElement.classList.toggle('panneau-ouvert', pile.length > 0);
+  }
+  document.querySelectorAll(SELECTEUR).forEach(function(p) {
+    var b = boite(p);
+    if (!b.hasAttribute('role')) b.setAttribute('role', 'dialog');
+    b.setAttribute('aria-modal', 'true');
+    var titre = b.querySelector('h2, h3');
+    if (titre && !b.hasAttribute('aria-labelledby') && !b.hasAttribute('aria-label')) {
+      if (!titre.id) titre.id = (p.id || 'panneau') + '-titre';
+      b.setAttribute('aria-labelledby', titre.id);
+    }
+    if (p.id === 'mobile-menu' && !b.hasAttribute('aria-label')) b.setAttribute('aria-label', 'Menu');
+    new MutationObserver(function() { maj(p); }).observe(p, { attributes: true, attributeFilter: ['class'] });
+    maj(p);
+  });
+  // Tab et Maj+Tab tournent dans le panneau du premier plan
+  document.addEventListener('keydown', function(e) {
+    if (e.key !== 'Tab' || !pile.length) return;
+    var p = pile[pile.length - 1], f = visibles(p);
+    if (!f.length) { e.preventDefault(); return; }
+    var premier = f[0], dernier = f[f.length - 1], actif = document.activeElement;
+    if (!boite(p).contains(actif)) { e.preventDefault(); (e.shiftKey ? dernier : premier).focus(); }
+    else if (e.shiftKey && actif === premier) { e.preventDefault(); dernier.focus(); }
+    else if (!e.shiftKey && actif === dernier) { e.preventDefault(); premier.focus(); }
+  });
+})();
 
 // Touche Échap : ferme la fenêtre ou le panneau ouvert (accessibilité clavier)
 document.addEventListener('keydown', function(e) {

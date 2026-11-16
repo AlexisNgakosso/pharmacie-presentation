@@ -46,6 +46,18 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+// (16 novembre) Avant le premier affichage. Les blocs ne sont masqués (pour leur animation d'arrivée)
+// que si les scripts suivent : sur un réseau lent, tout s'affiche au bout de 1,2 s sans animation.
+// Navigateurs récents : les apparitions suivent le défilement (« defile-lie », réglé en CSS).
+// Hauteur du bandeau du haut retenue de la visite précédente : la page ne saute plus à son arrivée.
+(function (r) {
+  r.classList.add('anim');
+  try { if (window.CSS && CSS.supports('animation-timeline: view()') && !matchMedia('(prefers-reduced-motion: reduce)').matches) r.classList.add('defile-lie'); } catch (e) {}
+  setTimeout(function () { if (!r.classList.contains('anim-pret')) r.classList.add('anim-sans'); }, 1200);
+  try { var h = parseInt(localStorage.getItem('pres-bandeau-h'), 10); if (h >= 0 && h < 200) r.style.setProperty('--bandeau-h', h + 'px'); } catch (e) {}
+})(document.documentElement);
+</script>
 <style>
 :root {
   /* Vert de la pharmacie (réglable dans l'admin) : logo, boutons, liens. Le reste du site est sur
@@ -102,6 +114,9 @@ html[data-theme="dark"] header.scrolled{background:var(--bg-card)}
 .nav-links a{padding:8px 16px;border-radius:10px;font-size:0.9rem;font-weight:600;color:var(--texte-2);transition:all 0.2s}
 .nav-links a:hover{color:var(--vert);background:var(--tuile)}
 .nav-actions{display:flex;align-items:center;gap:10px}
+/* (16 novembre) Entre 901 et 1180 px (iPad en paysage, petit portable) : tout tient sur une ligne */
+@media(min-width:901px){.btn-account,#brand-name-header{white-space:nowrap}}
+@media(max-width:1180px){.nav-links{gap:0}.nav-links a{padding:8px 10px;font-size:0.86rem}.nav-actions{gap:8px}.brand{font-size:1.05rem}}
 .theme-btn{width:38px;height:38px;border-radius:10px;border:1px solid var(--bord);background:var(--bg-card);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--texte-2);transition:all 0.25s}
 .theme-btn:hover{border-color:var(--vert);color:var(--vert);transform:rotate(20deg)}
 .cart-btn{position:relative;width:38px;height:38px;border-radius:10px;border:1px solid var(--bord);background:var(--bg-card);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--texte-2);transition:all 0.25s}
@@ -158,12 +173,15 @@ section{position:relative;z-index:1}
 .section-head.center .section-sub{margin:0 auto}
 
 /* ── REVEAL ANIM ── */
-.reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s cubic-bezier(0.22,1,0.36,1)}
-.reveal.visible{opacity:1;transform:translateY(0)}
+/* Apparitions (16 novembre) : visibles par défaut. Masquées pour leur animation seulement quand les scripts
+   suivent (classe « anim » posée dans l'en-tête de la page, retirée au bout de 1,2 s s'ils tardent). */
+.reveal{transition:opacity 0.8s cubic-bezier(0.22,1,0.36,1),transform 0.8s cubic-bezier(0.22,1,0.36,1)}
+html.anim:not(.anim-sans):not(.defile-lie) .reveal:not(.visible):not(.volet),
+html.anim:not(.anim-sans) .hero .reveal:not(.visible){opacity:0;transform:translateY(40px)}
 /* Effet « volet » des cartes (comme les 3 cartes de « Pourquoi nous choisir ») : la carte se déplie depuis son bord haut */
-.reveal.volet{opacity:0;transform:rotateX(-35deg) scaleY(0.85);transform-origin:top center;transition:opacity 0.55s cubic-bezier(0.4,0,0.2,1),transform 0.55s cubic-bezier(0.4,0,0.2,1),box-shadow 0.4s}
-.reveal.volet.volet-ouvert{opacity:1;transform:none}
-@media (prefers-reduced-motion: reduce){.reveal,.reveal.volet{opacity:1;transform:none;transition:none}}
+.reveal.volet{transform-origin:top center;transition:opacity 0.55s cubic-bezier(0.4,0,0.2,1),transform 0.55s cubic-bezier(0.4,0,0.2,1),box-shadow 0.4s}
+html.anim:not(.anim-sans):not(.defile-lie) .reveal.volet:not(.volet-ouvert){opacity:0;transform:rotateX(-35deg) scaleY(0.85)}
+@media (prefers-reduced-motion: reduce){.reveal,.reveal.volet{opacity:1!important;transform:none!important;transition:none}}
 .reveal-d1{transition-delay:0.1s}
 .reveal-d2{transition-delay:0.2s}
 .reveal-d3{transition-delay:0.3s}
@@ -319,7 +337,7 @@ footer{background:var(--bg-card);border-top:1px solid var(--bord);padding:60px 0
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 .modal-box{background:var(--bg-card);border-radius:24px;width:440px;max-width:100%;padding:32px;box-shadow:var(--shadow-lg);animation:popIn 0.35s cubic-bezier(0.34,1.56,0.64,1);margin:auto 0}
 @keyframes popIn{from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
-.modal-box h2{font-size:1.6rem;margin-bottom:8px}
+.modal-box h2{font-size:1.6rem;margin-bottom:8px;padding-right:36px}
 .modal-box .sub{color:var(--texte-2);font-size:0.92rem;margin-bottom:24px}
 .field{margin-bottom:16px}
 .field label{display:block;font-size:0.82rem;font-weight:600;color:var(--texte-2);margin-bottom:6px}
@@ -328,7 +346,7 @@ footer{background:var(--bg-card);border-top:1px solid var(--bord);padding:60px 0
 .modal-tabs{display:flex;gap:6px;background:var(--bg);padding:5px;border-radius:12px;margin-bottom:24px}
 .modal-tab{flex:1;padding:10px;text-align:center;border-radius:9px;font-weight:600;font-size:0.88rem;cursor:pointer;color:var(--texte-2);transition:all 0.2s}
 .modal-tab.active{background:var(--bg-card);color:var(--vert);box-shadow:var(--shadow-s)}
-.modal-close{position:absolute;top:20px;right:20px;width:32px;height:32px;border-radius:50%;border:none;background:var(--bg);cursor:pointer;color:var(--texte-2);display:flex;align-items:center;justify-content:center}
+.modal-close{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:none;background:var(--bg);cursor:pointer;color:var(--texte-2);display:flex;align-items:center;justify-content:center}
 .checkbox-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;font-size:0.82rem;color:var(--texte-2)}
 .checkbox-row input{margin-top:3px}
 
@@ -365,10 +383,11 @@ html[data-theme="dark"] .toast-coche{box-shadow:0 0 0 2px rgba(20,30,25,0.9)}
 
 /* ── GARDE BANNER ── */
 .garde-bar{background:linear-gradient(90deg,var(--or),var(--or-clair));color:#3A2A05;text-align:center;padding:12px 20px;font-size:0.85rem;font-weight:600;position:fixed;top:0;left:0;right:0;z-index:102;letter-spacing:0.2px;line-height:1.5}
-header{position:fixed;top:var(--bandeau-h,46px);left:0;right:0;z-index:100;padding:14px 0;transition:all 0.4s}
+header{position:fixed;top:var(--bandeau-h,46px);left:0;right:0;z-index:100;padding:14px 0;transition:background-color 0.4s,box-shadow 0.4s,padding 0.4s,transform 0.3s}
 /* Hauteur réelle du bandeau (sur 2 lignes sur téléphone) : le contenu descend d'autant */
 .hero{margin-top:calc(var(--bandeau-h,46px) - 46px)}
-header.scrolled{top:0;background:var(--bg-card);box-shadow:var(--shadow-s);padding:9px 0}
+/* En défilant, l'en-tête monte de la hauteur du bandeau (déplacement, sans recalcul de mise en page) */
+header.scrolled{transform:translateY(calc(-1 * var(--bandeau-h,46px)));background:var(--bg-card);box-shadow:var(--shadow-s);padding:9px 0}
 html[data-theme="dark"] header.scrolled{background:var(--bg-card)}
 .hero{padding-top:170px}
 
@@ -382,6 +401,18 @@ html[data-theme="dark"] header.scrolled{background:var(--bg-card)}
 .promo-add:active{transform:scale(0.97)}
 .promo-add .cart-ic{transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1)}
 .promo-add:hover .cart-ic{transform:scale(1.25) rotate(-12deg)}
+/* (16 novembre) Écrans tactiles : l'effet de survol restait collé après un appui (bouton du thème penché,
+   carte soulevée). Les mouvements de survol sont réservés à la souris. */
+@media(hover:none){
+  .theme-btn:hover,.cart-btn:hover{border-color:var(--bord);color:var(--texte-2);transform:none}
+  .btn-account:hover,.btn-outline:hover,.btn-white:hover,.btn-guest:hover,.btn-clair:hover,.btn-sombre:hover,.promo-add:hover,.feature:hover{transform:none;box-shadow:none}
+  .btn-primary:hover{transform:none;box-shadow:0 8px 24px rgba(27,107,69,0.28)}
+  .btn-outline:hover{border-color:var(--bord);color:var(--texte)}
+  .promo-card:hover{transform:none;box-shadow:var(--shadow-s)}
+  .promo-add:hover::after{transform:translateX(-100%)}
+  .promo-add:hover .cart-ic{transform:none}
+  .promo-add:active{transform:scale(0.97)}
+}
 
 /* ── CARTES SERVICES (effet hover Aprium) ── */
 
@@ -438,6 +469,10 @@ html[data-theme="dark"] header.scrolled{background:var(--bg-card)}
   .flip-inner{transform-style:preserve-3d}
   /* Cartes compactes sur mobile */
   .hero-visual .fc-code-barres{max-width:220px}
+  /* (16 novembre) Place réservée avant que le script remplisse la promo et le code-barres :
+     les cartes sont au-dessus du titre, leur agrandissement faisait sauter la page */
+  #hero-promo{min-height:113px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+  #hero-code-barres:empty{min-height:66px}
   .fc-head{padding:10px 14px}
   .fc-body{padding:10px 14px}
   .fc-ic{width:30px;height:30px;border-radius:8px}
@@ -456,6 +491,13 @@ html[data-theme="dark"] header.scrolled{background:var(--bg-card)}
 .voile-nav.visible{opacity:1;pointer-events:auto;transition-duration:0.24s}
 .mobile-menu{position:fixed;inset:0;background:var(--bg-card);z-index:200;transform:translateX(100%);transition:transform 0.4s;display:flex;flex-direction:column;padding:80px 30px 30px}
 .mobile-menu.open{transform:translateX(0)}
+/* (16 novembre) Fermés, le menu du téléphone et le panier sont hors de portée du clavier (invisibles) */
+.mobile-menu,.cart-drawer{visibility:hidden;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1),visibility 0s linear 0.4s}
+.mobile-menu.open,.cart-drawer.open{visibility:visible;transition:transform 0.4s cubic-bezier(0.4,0,0.2,1),visibility 0s}
+/* Panneau ou fenêtre ouverts : la page derrière ne défile plus (la barre de défilement garde sa place) */
+html{scrollbar-gutter:stable}
+html.panneau-ouvert,html.panneau-ouvert body{overflow:hidden}
+.mobile-menu,.cart-items,.modal-ov,.legal-content{overscroll-behavior:contain}
 .mobile-menu a{padding:16px 0;font-size:1.2rem;font-weight:600;border-bottom:1px solid var(--bord)}
 .mobile-menu-close{position:absolute;top:24px;right:24px;width:40px;height:40px;border:none;background:var(--bg);border-radius:50%;cursor:pointer;color:var(--texte)}
 
@@ -722,6 +764,54 @@ body.vue-rayon > section:not(#page-rayon),body.vue-rayon .raccourci{display:none
 .mm-rayons{display:flex;flex-wrap:wrap;gap:8px;padding:6px 0 16px;border-bottom:1px solid var(--bord)}
 .mobile-menu .mm-rayons a{padding:7px 14px;font-size:0.9rem;border-bottom:1.5px solid var(--bord)}
 .mm-rayons:empty{display:none}
+
+/* ════ ANIMATIONS LIÉES AU DÉFILEMENT (16 novembre) ════
+   Elles avancent et reculent avec le doigt ou la molette (« scroll-driven animations », natives :
+   Chrome 115, Safari 26, Firefox 159). Navigateurs plus anciens : les animations d'avant.
+   Réglage « Réduire les animations » : aucune. */
+
+/* A. « Comment ça marche » sur téléphone : chaque étape reste en place, la suivante vient la recouvrir */
+@media(max-width:820px){
+  .etapes-liste{padding-bottom:4vh}
+  .etape{position:sticky;top:calc(84px + var(--i,0) * 14px);min-height:44vh;margin-bottom:16vh;padding:26px 22px;border:1px solid var(--bord);border-radius:20px;background:var(--bg-card);box-shadow:0 -10px 30px rgba(42,27,0,0.08)}
+  .etape:last-child{margin-bottom:0;border-bottom:1px solid var(--bord)}
+  .etape:nth-child(2){--i:1}
+  .etape:nth-child(3){--i:2}
+}
+@media (prefers-reduced-motion: no-preference){
+  @supports (animation-timeline: view()){
+    /* D. Apparitions : titres et cartes suivent le défilement (plus de zone vide en défilement rapide) */
+    html.defile-lie .reveal:not(.hero .reveal){animation:sd-apparait linear both;animation-timeline:view();animation-range:entry 0px entry 260px}
+    html.defile-lie .reveal.volet{animation-name:sd-deplie}
+    @keyframes sd-apparait{from{opacity:0;transform:translateY(48px)}}
+    @keyframes sd-deplie{from{opacity:0;transform:rotateX(-35deg) scaleY(0.85)}}
+
+    /* A. Étapes (ordinateur) : l'étape au centre de l'écran s'allume, un trait grenat se trace au-dessus */
+    @media(min-width:821px){
+      html.defile-lie .etape{position:relative;animation:sd-etape linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+      html.defile-lie .etape::after{content:'';position:absolute;left:0;right:0;top:-1px;height:2px;background:var(--grenat);transform-origin:left center;animation:sd-trait linear both;animation-timeline:view();animation-range:cover 15% cover 45%}
+      @keyframes sd-etape{0%{opacity:0.25}35%,65%{opacity:1}100%{opacity:0.25}}
+      @keyframes sd-trait{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    }
+    /* A. Étapes (téléphone) : le texte de chaque carte apparaît en suivant le doigt */
+    @media(max-width:820px){
+      html.defile-lie .etape h3,html.defile-lie .etape p,html.defile-lie .etape-mobile{animation:sd-apparait linear both;animation-timeline:view();animation-range:entry 10% entry 90%}
+    }
+
+    /* B. Photos : elles s'ouvrent en largeur et dézooment en traversant l'écran */
+    html.defile-lie .chap-visuel{--r-visuel:22px;overflow:clip;animation:sd-visuel linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
+    html.defile-lie .chap-visuel img{animation:sd-zoom linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+    @media(max-width:820px){html.defile-lie .chap-visuel{--r-visuel:16px}}
+    @keyframes sd-visuel{from{clip-path:inset(0 8% round var(--r-visuel))}to{clip-path:inset(0 0 round var(--r-visuel))}}
+    @keyframes sd-zoom{from{transform:scale(1.18)}to{transform:scale(1.02)}}
+
+    /* C. Rayons : le mot se remplit de gauche à droite pendant qu'il monte vers le centre de l'écran */
+    html.defile-lie .rayon{background-image:linear-gradient(90deg,var(--texte) 50%,transparent 50%);background-size:200% 100%;background-repeat:no-repeat;background-position:100% 0;-webkit-background-clip:text;background-clip:text;animation:sd-remplit linear both;animation-timeline:view();animation-range:cover 18% cover 52%}
+    html.defile-lie .rayon.actif{color:transparent}
+    html.defile-lie .rayon:hover,html.defile-lie .rayon:focus-visible{color:var(--texte)}
+    @keyframes sd-remplit{to{background-position:0 0}}
+  }
+}
 </style>
 </head>
 <body>
@@ -993,7 +1083,7 @@ body.vue-rayon > section:not(#page-rayon),body.vue-rayon .raccourci{display:none
       <div class="footer-col"><h4>Contact</h4><a href="tel:0100000000" id="footer-tel-link">01 00 00 00 00</a><a href="mailto:contact@pharmacie-demo.test" id="footer-email-link">Email</a><a style="cursor:default" id="footer-address-plain">1 rue de l’Exemple</a></div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 <span id="brand-name-copyright">Pharmacie Démo</span>. Tous droits réservés.</p>
+      <p>© <span id="annee-copyright">2026</span> <span id="brand-name-copyright">Pharmacie Démo</span>. Tous droits réservés.</p>
       <p class="footer-legal"><a href="#" onclick="ouvrirLegal('mentions');return false">Mentions légales</a> · <a href="#" onclick="ouvrirLegal('confidentialite');return false">Confidentialité</a> · <a href="#" onclick="ouvrirLegal('cgv');return false">CGV</a></p>
     </div>
   </div>
@@ -1118,7 +1208,7 @@ body.vue-rayon > section:not(#page-rayon),body.vue-rayon .raccourci{display:none
 
 <script src="data.js?v=20261104122206"></script>
 <script src="emails.js?v=20261104122206"></script>
-<script src="site.js?v=20261104122206"></script>
+<script src="site.js?v=20261116010000"></script>
 
 <!-- MODAL PAGES LÉGALES -->
 <div class="modal-ov" id="legal-modal">
@@ -1141,6 +1231,6 @@ body.vue-rayon > section:not(#page-rayon),body.vue-rayon .raccourci{display:none
   </div>
 </div>
 
-<script src="demo-nav.js?v=20261104122206"></script>
+<script src="demo-nav.js?v=20261116010000"></script>
 </body>
 </html>
