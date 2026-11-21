@@ -192,7 +192,7 @@ function renderPage(id) {
 function renderDashboard() {
   var cmdAtt = DATA.commandes.filter(function(c){ return c.statut==='En préparation'; }).length;
   var stockFaible = DATA.produits.filter(function(p){ return p.stock <= p.seuil; }).length;
-  var promosActives = DATA.promos.filter(function(p){ return p.statut==='Active'; }).length;
+  var promosActives = DATA.promos.filter(function(p){ return pharmaEtatPromo(DATA, p) === 'Active'; }).length;
   var ticketsOuverts = DATA.tickets.filter(function(t){ return t.statut==='Ouvert'||t.statut==='En cours'; }).length;
   animCount('stat-commandes', cmdAtt);
   animCount('stat-stocks', stockFaible);
@@ -345,6 +345,13 @@ function saveProduit() {
   var cible = null, anciennePhoto = '';
   if (id) {
     var p = DATA.produits.find(function(x){ return x.id===id; });
+    // Produit renommé : ses promos qui portaient exactement son ancien nom le suivent (libellé et lien)
+    if (p && p.nom !== nom) {
+      var ancienNom = p.nom;
+      DATA.promos.forEach(function(pr) {
+        if (pr.produit === ancienNom && (pr.produitId === undefined || pr.produitId === p.id)) { pr.produit = nom; pr.produitId = p.id; }
+      });
+    }
     if (p) { anciennePhoto = p.photo || ''; p.nom=nom; p.ref=getVal('p-ref'); p.cat=cat; p.prix=prix; p.stock=stockSaisi; p.seuil=seuilSaisi; p.desc=getVal('p-desc'); p.photo=photo; cible = p; }
   } else {
     var newId = DATA.produits.length ? Math.max.apply(null, DATA.produits.map(function(x){return x.id;})) + 1 : 1;
@@ -365,7 +372,14 @@ function saveProduit() {
 }
 
 function deleteProduit(id, nom) {
-  confirmer('Supprimer le produit "'+escHtml(nom)+'" ?', function() {
+  // Ses promotions ne peuvent plus être commandées : elles sont arrêtées avec lui (et le disent)
+  var produit = DATA.produits.find(function(p){ return p.id === id; });
+  var promosLiees = DATA.promos.filter(function(pr){ return produit && pharmaProduitDeLaPromo(DATA, pr) === produit; });
+  var avis = promosLiees.length
+    ? '<br><span style="font-size:0.78rem;color:var(--texte-2)">' + (promosLiees.length === 1 ? 'Sa promotion « ' + escHtml(promosLiees[0].produit) + ' » sera retirée du site' : 'Ses ' + promosLiees.length + ' promotions seront retirées du site') + ' (elle' + (promosLiees.length > 1 ? 's restent' : ' reste') + ' visible' + (promosLiees.length > 1 ? 's' : '') + ' dans Promotions, marquée' + (promosLiees.length > 1 ? 's' : '') + ' « Terminée »).</span>'
+    : '';
+  confirmer('Supprimer le produit "'+escHtml(nom)+'" ?' + avis, function() {
+    promosLiees.forEach(function(pr){ pr.produitId = null; pr.statut = 'Terminée'; });
     DATA.produits = DATA.produits.filter(function(p){ return p.id !== id; });
     // Le produit sort aussi des rayons où il avait été ajouté
     Object.keys(DATA.contenuRayons || {}).forEach(function(c) {
@@ -945,14 +959,19 @@ function renderPromos(filtre) {
     return !filtre || searchMatch(p.produit, filtre);
   });
   if (list.length === 0) html = '<tr><td colspan="7" style="text-align:center;padding:30px;color:var(--texte-3)">Aucune promotion</td></tr>';
+  var auj = pharmaDateLocale();
   list.forEach(function(p) {
-    var bc = p.statut==='Active'?'b-green':'b-grey';
+    // État réel : une promo « Active » dont la date est passée est « Terminée », celle qui n'a pas
+    // commencé est « Programmée », celle dont le produit a été supprimé n'est plus sur le site
+    var etat = pharmaEtatPromo(DATA, p, auj);
+    var bc = etat==='Active'?'b-green':etat==='Programmée'?'b-blue':etat==='Sans produit'?'b-red':'b-grey';
+    var libelleEtat = etat==='Sans produit' ? 'Produit supprimé' : etat;
     html += '<tr><td><div class="td-main">'+escHtml(p.produit)+'</div>'+(p.miseEnAvant ? '<div class="td-sub">Mise en avant sur l\'accueil</div>' : '')+'</td>';
     html += '<td>'+nombre(p.prixNormal).toFixed(2)+'€</td>';
     html += '<td><strong>'+nombre(p.prixPromo).toFixed(2)+'€</strong></td>';
     html += '<td><span class="badge b-vif">'+escHtml(p.pct)+'%</span></td>';
     html += '<td>'+escHtml(p.fin)+'</td>';
-    html += '<td><span class="badge '+bc+'">'+escHtml(p.statut)+'</span></td>';
+    html += '<td><span class="badge '+bc+'" title="'+(etat==='Sans produit'?'Le produit de cette promo a été supprimé : elle n\'est plus affichée sur le site. Modifiez-la pour choisir un autre produit, ou supprimez-la.':'')+'">'+escHtml(libelleEtat)+'</span></td>';
     html += '<td class="actions-cell"><div><button class="act-btn" onclick="editPromo('+p.id+')">'+svgEdit()+'</button><button class="act-btn" style="color:var(--rouge)" onclick="deletePromo('+p.id+',\''+escAttr(p.produit)+'\')">'+svgTrash()+'</button></div></td></tr>';
   });
   setHTML('tbody-promos', html);
@@ -988,6 +1007,16 @@ function renderPromoProduitOptions(selected) {
   }
 }
 
+// Prix normal d'une promo = prix du produit choisi × unités du lot (modifiable ensuite à la main)
+function prixNormalDepuisProduit() {
+  var p = DATA.produits.find(function(x){ return x.nom === getVal('promo-produit'); });
+  var pn = document.getElementById('pn');
+  if (!p || !pn) return;
+  var qte = parseInt(getVal('promo-qte'), 10) || 1;
+  pn.value = (Math.round(nombre(p.prix) * qte * 100) / 100).toFixed(2);
+  calcP();
+}
+
 // Ouvre le modal promo en mode CRÉATION (réinitialise les champs et l'id d'édition).
 // Nécessaire car p-promo-id conserve sa valeur si une édition précédente a été annulée.
 function nouvellePromo(nomProduit) {
@@ -1005,6 +1034,7 @@ function nouvellePromo(nomProduit) {
   var titre = document.querySelector('#m-promo .modal-title');
   if (titre) titre.textContent = 'Créer une promotion';
   openModal('m-promo');
+  prixNormalDepuisProduit();
 }
 
 function savePromo() {
@@ -1021,10 +1051,16 @@ function savePromo() {
   var caseAvant = document.getElementById('promo-avant');
   var miseEnAvant = !!(caseAvant && caseAvant.checked);
   if (!(parseInt(getVal('promo-qte'), 10) >= 1)) { toast('Le nombre d\'unités par lot doit être d\'au moins 1','error'); return; }
+  // Produit choisi dans la liste : la promo lui est reliée par son numéro (le stock de CE produit
+  // est décompté), et non plus par une ressemblance de nom
+  var nomChoisi = getVal('promo-produit');
+  var produitChoisi = DATA.produits.find(function(x){ return x.nom === nomChoisi; }) || null;
+  if (!id && !produitChoisi) { toast('Choisissez le produit de la promotion','error'); return; }
   if (id) {
     var p = DATA.promos.find(function(x){ return x.id===id; });
     if (p) {
-      p.produit = getVal('promo-produit') || p.produit;
+      p.produit = nomChoisi || p.produit;
+      if (produitChoisi) { p.produitId = produitChoisi.id; p.statut = 'Active'; }
       p.prixNormal=pn; p.prixPromo=pp; p.pct=pct;
       p.debut=debut; p.fin=fin; p.qte=qte; p.miseEnAvant=miseEnAvant;
     }
@@ -1032,7 +1068,7 @@ function savePromo() {
   } else {
     var nid = DATA.promos.length ? Math.max.apply(null,DATA.promos.map(function(x){return x.id;}))+1 : 1;
     DATA.promos.push({
-      id:nid, produit:getVal('promo-produit'), prixNormal:pn, prixPromo:pp, pct:pct,
+      id:nid, produit:nomChoisi, produitId:produitChoisi.id, prixNormal:pn, prixPromo:pp, pct:pct,
       debut:debut, fin:fin, qte:qte, statut:'Active', miseEnAvant:miseEnAvant
     });
     toast('Promotion publiée sur le site');
@@ -1188,18 +1224,22 @@ function renderRapport() {
 
   // On ne retient que les commandes horodatées des 7 derniers jours.
   // Les anciennes commandes sans timestamp sont exclues du calcul.
-  var semaine = DATA.commandes.filter(function(c) {
+  // Les commandes annulées ne sont ni des ventes ni des commandes de la semaine : elles sont
+  // comptées à part (sinon le chiffre d'affaires, le panier moyen et le classement seraient faussés)
+  var semaineToutes = DATA.commandes.filter(function(c) {
     if (!c.timestamp) return false;
     var d = new Date(c.timestamp);
     return d >= debut && d <= maintenant;
   });
+  var semaine = semaineToutes.filter(function(c) { return c.statut !== 'Annulée'; });
+  var annulees = semaineToutes.length - semaine.length;
 
   var ca = semaine.reduce(function(s, c) { return s + nombre(c.total); }, 0);
   var nb = semaine.length;
   var panierMoyen = nb ? ca / nb : 0;
   var retirees = semaine.filter(function(c){ return c.statut === 'Retirée'; }).length;
   var enAttente = DATA.commandes.filter(function(c){ return c.statut === 'En préparation'; }).length;
-  var promosActives = DATA.promos.filter(function(p){ return p.statut === 'Active'; }).length;
+  var promosActives = DATA.promos.filter(function(p){ return pharmaEtatPromo(DATA, p) === 'Active'; }).length;
   var codesUtilises = DATA.codesPromo.reduce(function(s, c){ return s + (c.usages || 0); }, 0);
   var codesGeneres = DATA.codesPromo.length;
   var stockFaible = DATA.produits.filter(function(p){ return p.stock <= p.seuil; });
@@ -1234,7 +1274,7 @@ function renderRapport() {
   html += statBox(promosActives, 'Promos actives', 'var(--or)');
   html += '</div>';
   html += '<div style="font-size:0.76rem;color:var(--texte-2);line-height:1.7">';
-  html += '<div>Commandes retirées : <strong>' + retirees + '</strong> · En attente : <strong>' + enAttente + '</strong></div>';
+  html += '<div>Commandes retirées : <strong>' + retirees + '</strong> · En attente : <strong>' + enAttente + '</strong>' + (annulees ? ' · Annulées : <strong>' + annulees + '</strong> (hors chiffre d\'affaires)' : '') + '</div>';
   html += '<div>Codes promo : <strong>' + codesGeneres + '</strong> existants · <strong>' + codesUtilises + '</strong> utilisation(s)</div>';
   if (top.length) {
     html += '<div style="margin-top:6px"><strong>Produits les plus commandés :</strong></div>';
@@ -1250,7 +1290,7 @@ function renderRapport() {
 
   if (!nb) {
     html = '<div style="background:var(--fond);border-radius:9px;padding:20px;border:1px solid var(--bord);text-align:center;color:var(--texte-3);font-size:0.82rem">'
-         + 'Aucune commande enregistrée sur les 7 derniers jours.</div>';
+         + 'Aucune commande enregistrée sur les 7 derniers jours' + (annulees ? ' (' + annulees + ' annulée' + (annulees > 1 ? 's' : '') + ')' : '') + '.</div>';
   }
   box.innerHTML = html;
 }

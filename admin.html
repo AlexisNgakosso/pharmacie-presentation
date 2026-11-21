@@ -857,9 +857,9 @@ body.glisser-actif{user-select:none;-webkit-user-select:none;cursor:grabbing}
     <div class="modal-header"><div class="modal-title">Créer une promotion</div><button class="modal-close" onclick="closeModal('m-promo')">✕</button></div>
     <div class="modal-body">
       <input type="hidden" id="p-promo-id" value="">
-      <div class="form-group mb3"><label>Produit(s)</label><select class="inp" id="promo-produit"></select></div>
+      <div class="form-group mb3"><label>Produit(s)</label><select class="inp" id="promo-produit" onchange="prixNormalDepuisProduit()"></select></div>
       <div class="form-grid">
-        <div class="form-group full"><label>Unités par lot (ex. 3 pour « lot de 3 »)</label><input class="inp" type="number" min="1" id="promo-qte" value="1"></div>
+        <div class="form-group full"><label>Unités par lot (ex. 3 pour « lot de 3 »)</label><input class="inp" type="number" min="1" id="promo-qte" value="1" oninput="prixNormalDepuisProduit()"></div>
         <div class="form-group"><label>Prix normal (€)</label><input class="inp" type="number" step="0.01" value="25.20" id="pn" oninput="calcP()"></div>
         <div class="form-group"><label>Prix promo (€)</label><input class="inp" type="number" step="0.01" value="18.90" id="pp" oninput="calcP()"></div>
       </div>
@@ -927,7 +927,7 @@ body.glisser-actif{user-select:none;-webkit-user-select:none;cursor:grabbing}
         <div class="form-group full"><label>Date *</label><input type="date" class="inp" id="g-date"></div>
         <div class="form-group"><label>Ouverture</label><input type="time" class="inp" id="g-debut" value="08:00"></div>
         <div class="form-group"><label>Fermeture</label><input type="time" class="inp" id="g-fin" value="20:00"></div>
-        <div class="form-group full"><label>Message affiché sur le site</label><textarea class="inp" id="g-msg">Pharmacie de garde — Ouverts de 8h à 20h</textarea></div>
+        <div class="form-group full"><label>Message affiché sur le site</label><textarea class="inp" id="g-msg" maxlength="200" placeholder="Ex. : sonnez à l'interphone après 20h"></textarea></div>
       </div>
       <!-- « Notifier les clients (Email/SMS) » retiré : aucun envoi n'existait derrière cet interrupteur. -->
     </div>
@@ -955,10 +955,10 @@ body.glisser-actif{user-select:none;-webkit-user-select:none;cursor:grabbing}
   </div>
 </div>
 
-<script src="data.js?v=20261104122206"></script>
-<script src="emails.js?v=20261104122206"></script>
-<script src="admin.js?v=20261104122206"></script>
-<script src="guide-admin.js?v=20261104122206"></script>
-<script src="demo-nav.js?v=20261104122206"></script>
+<script src="data.js?v=20261121100000"></script>
+<script src="emails.js?v=20261121100000"></script>
+<script src="admin.js?v=20261121100000"></script>
+<script src="guide-admin.js?v=20261121100000"></script>
+<script src="demo-nav.js?v=20261121100000"></script>
 </body>
 </html>

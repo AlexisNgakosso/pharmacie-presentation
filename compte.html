@@ -90,6 +90,7 @@ header{background:var(--bg-card);border-bottom:1px solid var(--bord);padding:12p
 .switch input:checked+.switch-track{background:var(--vert-vif)}
 .switch-track::after{content:'';position:absolute;top:3px;left:3px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform 0.25s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 1px 3px rgba(0,0,0,0.2)}
 .switch input:checked+.switch-track::after{transform:translateX(20px)}
+.switch input:disabled+.switch-track{opacity:0.6;cursor:not-allowed}
 
 /* QR CARD */
 .qr-card{background:linear-gradient(135deg,var(--vert),#0F4A2E);border-radius:20px;padding:30px;text-align:center;color:#fff;position:relative;overflow:hidden}
@@ -299,22 +300,25 @@ html[data-theme="dark"]{--verre-fond:linear-gradient(145deg,rgba(66,60,50,0.6),r
     <div class="page-tab" id="tab-notifs">
       <div class="content-card">
         <h2 class="ct-title">Notifications</h2>
-        <p class="ct-sub">Choisissez ce que vous souhaitez recevoir et comment.</p>
+        <p class="ct-sub">Les emails de vos commandes (confirmation avec le code de retrait, commande prête, code fidélité) sont toujours envoyés à l'adresse indiquée en commandant : ils servent au retrait.</p>
+
+        <div class="toggle-card"><div class="toggle-card-info"><h4>Commande prête à retirer</h4><p>Toujours envoyé : c'est ce message qui vous dit de venir.</p></div><label class="switch" title="Toujours envoyé"><input type="checkbox" id="notif-pret" checked disabled><span class="switch-track"></span></label></div>
 
         <div class="toggle-card" style="background:var(--bg);border-color:var(--vert)">
-          <div class="toggle-card-info"><h4>Recevoir des notifications</h4><p>Interrupteur général. Désactivez pour tout couper.</p></div>
+          <div class="toggle-card-info"><h4>Informations de la pharmacie</h4><p>Promotions, rappels, gardes. Désactivez pour ne recevoir que les emails de vos commandes.</p></div>
           <label class="switch"><input type="checkbox" id="notif-global" checked onchange="toggleGlobalNotif()"><span class="switch-track"></span></label>
         </div>
 
         <div id="notif-types" style="margin-top:20px">
           <h3 style="font-size:1rem;margin-bottom:14px">Par type</h3>
-          <div class="toggle-card"><div class="toggle-card-info"><h4>Commande prête à retirer</h4><p>Soyez alerté dès que votre commande est disponible.</p></div><label class="switch"><input type="checkbox" id="notif-pret" checked><span class="switch-track"></span></label></div>
           <div class="toggle-card"><div class="toggle-card-info"><h4>Promotions & offres</h4><p>Recevez les nouvelles promos et codes fidélité.</p></div><label class="switch"><input type="checkbox" id="notif-promos" checked><span class="switch-track"></span></label></div>
           <div class="toggle-card"><div class="toggle-card-info"><h4>Rappel de renouvellement</h4><p>Pour vos produits achetés régulièrement.</p></div><label class="switch"><input type="checkbox" id="notif-renouvellement"><span class="switch-track"></span></label></div>
           <div class="toggle-card"><div class="toggle-card-info"><h4>Gardes & horaires exceptionnels</h4><p>Ouvertures spéciales, jours fériés, gardes.</p></div><label class="switch"><input type="checkbox" id="notif-gardes" checked><span class="switch-track"></span></label></div>
 
+          <p class="ct-sub" style="margin-top:10px">Les promotions, rappels et gardes ne sont pas encore envoyés par email. Votre choix est gardé sur cet appareil.</p>
+
           <h3 style="font-size:1rem;margin:24px 0 14px">Canal de réception</h3>
-          <div class="toggle-card"><div class="toggle-card-info"><h4>Par email</h4><p id="notif-email">marie.d@email.com</p></div><label class="switch"><input type="checkbox" id="notif-canal-email" checked><span class="switch-track"></span></label></div>
+          <div class="toggle-card"><div class="toggle-card-info"><h4>Par email</h4><p id="notif-email">marie.d@email.com</p></div><label class="switch" title="Seul moyen d'envoi pour le moment"><input type="checkbox" id="notif-canal-email" checked disabled><span class="switch-track"></span></label></div>
           <!-- « Par SMS » retiré : aucun envoi de SMS n'existe encore. À remettre quand un service d'envoi sera branché. -->
         </div>
 
@@ -343,14 +347,14 @@ html[data-theme="dark"]{--verre-fond:linear-gradient(145deg,rgba(66,60,50,0.6),r
         <h3 style="font-size:1rem;margin:30px 0 14px">Mes données (RGPD)</h3>
         <div class="rgpd-row"><div class="rgpd-info"><h4>Télécharger mes données</h4><p>Téléchargez une copie de vos données personnelles (profil, commandes, fidélité, préférences).</p></div><button class="btn btn-ghost" onclick="telechargerMesDonnees()">Télécharger</button></div>
         <div class="rgpd-row"><div class="rgpd-info"><h4>Communications de la pharmacie</h4><p id="rgpd-consentement-texte">Vos données servent à préparer vos commandes et à gérer votre carte de fidélité.</p></div><span id="rgpd-consentement-etat" style="font-weight:700;font-size:0.82rem;white-space:nowrap"></span></div>
-        <div class="rgpd-row"><div class="rgpd-info"><h4 style="color:var(--rouge)">Supprimer mon compte</h4><p>Suppression définitive de votre compte et vos données.</p></div><button class="btn btn-danger" onclick="confirmDelete()">Supprimer</button></div>
+        <div class="rgpd-row"><div class="rgpd-info"><h4 style="color:var(--rouge)">Supprimer mes données</h4><p>Efface ce qui est enregistré sur cet appareil et prépare l'email demandant à la pharmacie d'effacer votre fiche et votre historique.</p></div><button class="btn btn-danger" onclick="confirmDelete()">Supprimer</button></div>
       </div>
     </div>
   </main>
 </div>
 
-<script src="data.js?v=20261104122206"></script>
-<script src="compte.js?v=20261104122206"></script>
-<script src="demo-nav.js?v=20261104122206"></script>
+<script src="data.js?v=20261121100000"></script>
+<script src="compte.js?v=20261121100000"></script>
+<script src="demo-nav.js?v=20261121100000"></script>
 </body>
 </html>

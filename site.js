@@ -72,16 +72,8 @@ function escHtml(str) {
     .replace(/'/g, '&#39;');
 }
 
-// Retrouve le produit du catalogue correspondant au nom d'une promo
-// (les promos peuvent être des "lots" au nom légèrement différent du
-// produit catalogue — comparaison approximative sur le premier mot).
-function matchProduitPourPromo(nomPromo) {
-  var clean = String(nomPromo || '').replace(/^Lot\s+/i, '').replace(/\s*x\d+$/i, '').trim().toLowerCase();
-  var premierMot = clean.split(' ')[0];
-  return DATA.produits.find(function(p) {
-    return String(p.nom || '').toLowerCase().indexOf(premierMot) !== -1;
-  });
-}
+// Produit relié à une promo (lien enregistré, sinon nom exact : voir pharmaProduitDeLaPromo dans data.js)
+function produitDeLaPromo(pr) { return pharmaProduitDeLaPromo(DATA, pr); }
 
 var PROMOS = [];
 var CATALOGUE = [];
@@ -95,18 +87,15 @@ function buildCatalogueData() {
   // Sans ce contrôle, une promo oubliée resterait visible indéfiniment sur le site.
   // Comparaison de dates AAAA-MM-JJ à la date locale du jour (une promo qui commence
   // aujourd'hui est visible dès minuit, une promo qui finit aujourd'hui l'est jusqu'au soir)
+  // Une promo dont le produit a été supprimé n'est plus affichée : elle ne pourrait pas être commandée.
   var auj = pharmaDateLocale();
   PROMOS = DATA.promos.filter(function(pr) {
-    if (pr.statut !== 'Active') return false;
-    if (pr.debut && String(pr.debut).slice(0, 10) > auj) return false;   // pas encore commencée
-    if (pr.fin && String(pr.fin).slice(0, 10) < auj) return false;        // terminée
-    return true;
+    return pharmaEtatPromo(DATA, pr, auj) === 'Active';
   }).map(function(pr) {
-    // Produit de la promo : celui qui lui est relié dans la base, sinon d'après son nom
-    var produit = (pr.produitId != null && DATA.produits.find(function(p) { return p.id === pr.produitId; })) || matchProduitPourPromo(pr.produit);
+    var produit = produitDeLaPromo(pr);
     var cat = produit ? produit.cat : 'Autres';
     return {
-      id: 'promo-'+pr.id, promoId: pr.id, cat: cat, nom: pr.produit,
+      id: 'promo-'+pr.id, promoId: pr.id, produitId: produit ? produit.id : null, cat: cat, nom: pr.produit,
       prixPromo: pr.prixPromo, prixNormal: pr.prixNormal,
       pct: Math.abs(pr.pct), fin: formatDateFr(pr.fin), finIso: String(pr.fin || '').slice(0, 10), icon: iconForCat(cat),
       photo: produit ? pharmaPhotoValide(produit.photo) : '', miseEnAvant: pr.miseEnAvant === true
@@ -197,8 +186,7 @@ function loadCart() {
   var saved = null;
   try { saved = JSON.parse(localStorage.getItem(CART_KEY) || 'null'); } catch (e) {}
   if (!saved || !Array.isArray(saved.cart)) return;
-  // On ne restaure que les articles encore disponibles au catalogue,
-  // pour éviter un panier contenant un produit supprimé côté admin.
+  // Articles valides seulement ; leur disponibilité et leur prix sont revus ensuite avec le catalogue (nettoyerPanier)
   cart = saved.cart.filter(function(item) {
     return item && item.id && typeof item.prix === 'number' && item.qty > 0;
   });
@@ -266,13 +254,21 @@ function applyPharmacyConfig() {
   if (addrLine) addrLine.textContent = cfg.adresse || '';
   var addrPlain = document.getElementById('footer-address-plain');
   if (addrPlain) addrPlain.textContent = cfg.adresse || '';
+  // Téléphone et email de la pharmacie : ceux des Paramètres, ou rien. Jamais ceux écrits dans
+  // site.html (ceux de la pharmacie d'origine), qu'une autre pharmacie afficherait sinon.
   var telLink = document.getElementById('footer-tel-link');
-  if (telLink && cfg.tel) {
-    telLink.textContent = cfg.tel;
-    telLink.href = 'tel:' + cfg.tel.replace(/\s+/g, '');
+  if (telLink) {
+    var tel = String(cfg.tel || '').trim();
+    telLink.style.display = tel ? '' : 'none';
+    telLink.textContent = tel;
+    telLink.href = tel ? 'tel:' + tel.replace(/[^\d+]/g, '') : '#';
   }
   var emailLink = document.getElementById('footer-email-link');
-  if (emailLink && cfg.email) emailLink.href = 'mailto:' + cfg.email;
+  if (emailLink) {
+    var mail = pharmaEmailValide(String(cfg.email || '').trim()) ? String(cfg.email).trim() : '';
+    emailLink.style.display = mail ? '' : 'none';
+    emailLink.href = mail ? 'mailto:' + mail : '#';
+  }
   // Bandeau de garde / annonce (piloté depuis l'admin — Horaires & Gardes)
   var gb = document.getElementById('garde-bar');
   if (gb) {
@@ -1400,12 +1396,18 @@ function renderAujourdhui() {
   var suite = document.getElementById('auj-suite');
   if (suite) suite.textContent = etat.suite || ((etat.special && etat.special.type === 'Garde') ? 'Pharmacie de garde aujourd\'hui' : '');
   // Prochain jour spécial (à partir de demain : celui du jour est déjà pris en compte ci-dessus)
+  // Jour spécial : celui d'aujourd'hui montre son message ; sinon le prochain, avec son message
+  // (« Message affiché sur le site » saisi dans l'admin, Horaires & Gardes)
   var special = document.getElementById('auj-special');
   if (special) {
+    var msgDe = function(js) { return String((js && js.msg) || '').replace(/\s+/g, ' ').trim().slice(0, 200); };
     var j = prochainJourSpecial();
     var aVenir = j && String(j.date).slice(0, 10) !== pharmaDateLocale() ? j : null;
-    special.hidden = !aVenir;
-    special.textContent = aVenir ? texteJourSpecial(aVenir) : '';
+    var texte = '';
+    if (etat.special && msgDe(etat.special)) texte = msgDe(etat.special);
+    else if (aVenir) texte = texteJourSpecial(aVenir) + (msgDe(aVenir) ? ' — ' + msgDe(aVenir) : '');
+    special.hidden = !texte;
+    special.textContent = texte;
   }
   var adresse = document.getElementById('auj-adresse');
   if (adresse) adresse.textContent = cfg.adresse || '';
@@ -1922,7 +1924,7 @@ function generateOrderId() {
   return '#' + (maxNum + 1);
 }
 // Retrouve le produit DATA.produits correspondant à un article du panier
-// (article catalogue : id direct ; article promo : correspondance par nom, cf. matchProduitPourPromo)
+// (article catalogue : id direct ; article promo : produit relié à la promo, cf. pharmaProduitDeLaPromo)
 // Nombre d'unités du produit contenues dans un article du panier.
 // Un lot promo « Lot Crème Solaire SPF50 x3 » consomme 3 unités de stock,
 // pas 1 : sans cela le stock réel serait progressivement faussé.
@@ -1942,11 +1944,14 @@ function resolveProduitForCartItem(item) {
   // Article venant du catalogue : on a l'id produit directement (ex. "prod-2")
   if (typeof item.id === 'string' && item.id.indexOf('prod-') === 0) {
     var pid = parseInt(item.id.replace('prod-', ''), 10);
-    var direct = DATA.produits.find(function(p) { return p.id === pid; });
-    if (direct) return direct;
+    return DATA.produits.find(function(p) { return p.id === pid; }) || null;
   }
-  // Article venant d'une promo (lot) : correspondance approximative sur le nom
-  return matchProduitPourPromo(item.nom);
+  // Article venant d'une promo (lot) : le produit relié à cette promo
+  if (typeof item.id === 'string' && item.id.indexOf('promo-') === 0) {
+    var promoId = parseInt(item.id.replace('promo-', ''), 10);
+    return produitDeLaPromo(DATA.promos.find(function(pr) { return pr.id === promoId; })) || null;
+  }
+  return null;
 }
 function placeOrder() {
   if (cart.length === 0) return false;
@@ -1987,6 +1992,25 @@ function placeOrder() {
     if (codeBrut && !codePourClient(codeBrut, client)) {
       return showErr('Ce code est réservé à son titulaire. Utilisez le nom et l\'adresse email de son compte, ou retirez le code de votre panier.');
     }
+  }
+
+  // Articles retirés de la vente depuis leur mise au panier (produit supprimé, promo terminée)
+  buildCatalogueData();
+  var references = CATALOGUE.concat(PROMOS);
+  var plusEnVente = cart.filter(function(item) { return !references.some(function(x) { return x.id === item.id; }); });
+  if (plusEnVente.length) {
+    nettoyerPanier();
+    return showErr((plusEnVente.length === 1 ? '« ' + plusEnVente[0].nom + ' » n\'est plus disponible' : plusEnVente.length + ' articles ne sont plus disponibles')
+      + ' : retiré' + (plusEnVente.length > 1 ? 's' : '') + ' du panier. Vérifiez le panier, puis confirmez de nouveau.');
+  }
+  // Prix changé depuis la mise au panier : le client voit le nouveau total avant de confirmer
+  var prixChange = cart.some(function(item) {
+    var ref = references.find(function(x) { return x.id === item.id; });
+    return ref && Math.abs(nombre(ref.prixPromo !== undefined ? ref.prixPromo : ref.prix) - nombre(item.prix)) > 0.004;
+  });
+  if (prixChange) {
+    nettoyerPanier();
+    return showErr('Un prix a changé depuis l\'ajout au panier. Le total a été mis à jour : vérifiez-le, puis confirmez de nouveau.');
   }
 
   // Vérification du stock disponible avant de valider
@@ -2371,9 +2395,10 @@ function rafraichirAffichageCloud() {
   replacerPosition();
 }
 
-// Le panier gardé d'une visite précédente est remis à jour avec le catalogue de la base :
-// prix et noms actuels, articles retirés de la vente enlevés.
-function nettoyerPanierCloud() {
+// Le panier gardé d'une visite précédente est remis à jour avec le catalogue (de la base, ou de la
+// démonstration) : prix et noms actuels, articles retirés de la vente enlevés.
+function nettoyerPanierCloud() { nettoyerPanier(); }
+function nettoyerPanier() {
   if (!cart.length) return;
   var retires = [];
   var references = CATALOGUE.concat(PROMOS);
@@ -2868,6 +2893,9 @@ window.addEventListener('DOMContentLoaded', function() {
   initNavigationRayons();
   renderFaq();
   loadCart();
+  // Démonstration : le catalogue est déjà là, le panier gardé est remis à jour tout de suite
+  // (en mode base de données, c'est fait à la réponse de la base)
+  if (!EN_LIGNE) nettoyerPanier();
   updateCart();
   initCookieBar();
   var legalModal = document.getElementById('legal-modal');

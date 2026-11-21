@@ -50,7 +50,7 @@ var PHARMA_SEED_DATA = {
     { id:3, nom:'Gel Douche Surgras 400ml', ref:'HYG-034', cat:'Hygiène', prix:6.20, stock:0, seuil:10, desc:'Gel doux pour peaux sensibles' }
   ].concat(PHARMA_PRODUITS_DEMO_RAYONS),
   promos: [
-    { id:1, produit:'Lot Crème Solaire SPF50 x3', prixNormal:25.20, prixPromo:18.90, pct:-25, debut:_pharmaDate(-15), fin:_pharmaDate(30), statut:'Active' }
+    { id:1, produit:'Lot Crème Solaire SPF50 x3', produitId:1, qte:3, prixNormal:25.20, prixPromo:18.90, pct:-25, debut:_pharmaDate(-15), fin:_pharmaDate(30), statut:'Active' }
   ],
   conseils: [
     { id:1, icone:'soleil', titre:'Il fait chaud !', texte:'Hydratez-vous et protégez votre peau.', couleur:'#1B6B45', actif:true },
@@ -364,6 +364,43 @@ function pharmaPhotoRayon(data, cat) {
   var photos = data && data.photosRayons;
   if (!photos || typeof photos !== 'object' || !Object.prototype.hasOwnProperty.call(photos, cat)) return '';
   return pharmaPhotoValide(photos[cat]);
+}
+
+// ── PROMOTIONS : produit relié et état réel (20 novembre) ───
+// Produit dont la promo consomme le stock. D'abord le lien enregistré (produitId) : s'il pointe vers
+// un produit supprimé, la promo n'a plus de produit. Jamais reliée (anciennes promos de la démonstration),
+// le nom exact, puis le nom sans « Lot » ni « x3 » s'il désigne UN SEUL produit (« Lot Crème Solaire
+// SPF50 x3 » → « Crème Solaire SPF50 100ml »). Jamais le seul premier mot : « Crème mains » n'est pas
+// « Crème Solaire ».
+function pharmaProduitDeLaPromo(data, promo) {
+  var produits = (data && data.produits) || [];
+  if (!promo) return null;
+  // Lien enregistré : il fait foi. Un lien coupé (null : produit supprimé, ou promo de la base sans
+  // produit) = plus de produit. Seules les promos qui n'ont jamais eu de lien passent par le nom.
+  if (promo.produitId === null) return null;
+  if (promo.produitId !== undefined) {
+    return produits.find(function(p) { return p.id === promo.produitId; }) || null;
+  }
+  var norm = function(s) { return String(s || '').replace(/\s+/g, ' ').trim().toLowerCase(); };
+  var nom = norm(promo.produit);
+  if (!nom) return null;
+  var exact = produits.find(function(p) { return norm(p.nom) === nom; });
+  if (exact) return exact;
+  var court = nom.replace(/^lot\s+/, '').replace(/\s*x\s*\d+$/, '').trim();
+  if (!court) return null;
+  var candidats = produits.filter(function(p) { var n = norm(p.nom); return n === court || n.indexOf(court + ' ') === 0; });
+  return candidats.length === 1 ? candidats[0] : null;
+}
+// État d'une promo tel qu'il se vit sur le site : 'Active', 'Programmée' (pas encore commencée),
+// 'Terminée' (date de fin passée ou arrêtée), 'Sans produit' (produit supprimé), ou son statut enregistré.
+function pharmaEtatPromo(data, promo, aujourdhui) {
+  if (!promo) return 'Terminée';
+  var auj = aujourdhui || pharmaDateLocale();
+  if (promo.statut && promo.statut !== 'Active') return promo.statut;
+  if (!pharmaProduitDeLaPromo(data, promo)) return 'Sans produit';
+  if (promo.debut && String(promo.debut).slice(0, 10) > auj) return 'Programmée';
+  if (promo.fin && String(promo.fin).slice(0, 10) < auj) return 'Terminée';
+  return 'Active';
 }
 
 // ── RAYONS : contenu, ordre et adresse de leur page ─────────

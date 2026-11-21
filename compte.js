@@ -4,7 +4,21 @@
 // ════════════════════════════════════════════
 
 // ── DONNÉES PARTAGÉES (mêmes que admin.html / site.html) ──
-var DATA = PharmaStore.load();
+// Site relié à la base : l'espace client n'y est pas encore relié. Il ne montre donc AUCUNE donnée de
+// démonstration (carte « Marie Dupont », code PHARM-MD10…), que des visiteurs prendraient pour les leurs :
+// seulement les informations publiques de la pharmacie (copie gardée par le site) et ce que le client
+// a saisi dans son profil.
+var COMPTE_RELIE = typeof PHARMA_SUPABASE !== 'undefined' && !!PHARMA_SUPABASE;
+function donneesCompteRelie() {
+  var d = JSON.parse(JSON.stringify(PHARMA_SEED_DATA));
+  ['clients', 'commandes', 'codesPromo', 'tickets', 'messages', 'alertes', 'notifications', 'emailLog', 'employes'].forEach(function(k) { d[k] = []; });
+  try {
+    var c = JSON.parse(localStorage.getItem('pres-cache-public') || 'null');
+    if (c && c.d) ['parametres', 'horaires', 'joursSpeciaux'].forEach(function(k) { if (c.d[k]) d[k] = c.d[k]; });
+  } catch (e) {}
+  return d;
+}
+var DATA = COMPTE_RELIE ? donneesCompteRelie() : PharmaStore.load();
 
 // ── CONFIGURATION PHARMACIE ──
 function applyPharmacyConfig() {
@@ -32,7 +46,7 @@ function getCurrentClientNom() {
     var full = ((profil.prenom || '') + ' ' + (profil.nom || '')).trim();
     if (full) return full;
   }
-  return 'Marie Dupont';
+  return COMPTE_RELIE ? '' : 'Marie Dupont';
 }
 // L'email du profil sert à retrouver le client de façon fiable (deux personnes
 // peuvent porter le même nom). Vide tant que le profil n'en contient pas.
@@ -348,7 +362,7 @@ function toggleGlobalNotif() {
   } else {
     types.style.opacity = '0.4';
     types.style.pointerEvents = 'none';
-    pharmaToast('Toutes les notifications sont désactivées');
+    pharmaToast('Informations de la pharmacie désactivées : vous ne recevrez que les emails de vos commandes');
   }
 }
 
@@ -365,7 +379,7 @@ function initNotifs() {
   if (!p) return;
   Object.keys(CHAMPS_NOTIFS).forEach(function(k) {
     var el = document.getElementById(CHAMPS_NOTIFS[k]);
-    if (el && typeof p[k] === 'boolean') el.checked = p[k];
+    if (el && !el.disabled && typeof p[k] === 'boolean') el.checked = p[k];
   });
   var types = document.getElementById('notif-types');
   var global = document.getElementById('notif-global');
@@ -463,11 +477,29 @@ function afficherConsentement() {
   etat.style.color = oui ? 'var(--vert)' : 'var(--texte-3)';
 }
 
-// ── DELETE ACCOUNT ──
+// ── SUPPRIMER MES DONNÉES ──
+// Il n'y a pas encore de compte client sur un serveur : ce bouton ne prétend plus « enregistrer » une
+// demande. Il efface ce que CET appareil garde (profil, photo, préférences) et ouvre la messagerie avec
+// la demande d'effacement déjà rédigée pour la pharmacie, qui supprime la fiche et l'historique (RGPD).
 function confirmDelete() {
-  if (confirm('Êtes-vous sûr de vouloir supprimer définitivement votre compte ? Cette action est irréversible.')) {
-    pharmaToast('Demande de suppression enregistrée');
+  var cfg = DATA.parametres || {};
+  var emailPharma = pharmaEmailValide(cfg.email || '') ? cfg.email : '';
+  var ok = confirm('Effacer votre profil, votre photo et vos préférences de cet appareil ?\n\n'
+    + (emailPharma ? 'Votre messagerie s\'ouvrira ensuite avec la demande d\'effacement de votre fiche client et de vos commandes, à envoyer à la pharmacie.'
+                   : 'Pour faire effacer votre fiche client et vos commandes, contactez ensuite la pharmacie' + (cfg.tel ? ' au ' + cfg.tel : '') + '.'));
+  if (!ok) return;
+  var nom = getCurrentClientNom(), email = getCurrentClientEmail();
+  ['pres-profil', 'pres-avatar', 'pres-notifs'].forEach(function(k) { try { localStorage.removeItem(k); } catch (e) {} });
+  if (emailPharma) {
+    var corps = 'Bonjour,\n\nJe demande l\'effacement de ma fiche client, de mes commandes et de ma carte de fidélité (article 17 du RGPD).\n\n'
+      + (nom ? 'Nom : ' + nom + '\n' : '') + (email ? 'Adresse email utilisée pour mes commandes : ' + email + '\n' : '')
+      + '\nMerci de me confirmer la suppression.\n';
+    var lien = 'mailto:' + emailPharma + '?subject=' + encodeURIComponent('Demande de suppression de mes données') + '&body=' + encodeURIComponent(corps);
+    var a = document.createElement('a'); a.href = lien; a.style.display = 'none';
+    document.body.appendChild(a); a.click(); a.remove();
   }
+  pharmaToast(emailPharma ? 'Données de cet appareil effacées. Envoyez l\'email préparé à la pharmacie.' : 'Données de cet appareil effacées. Contactez la pharmacie pour effacer votre fiche.');
+  setTimeout(function() { window.location.reload(); }, 3200);
 }
 
 // ── TOAST ──
@@ -492,6 +524,14 @@ window.pharmaToast = function(msg) {
   }, 2800);
 };
 
+// Site relié : la colonne n'affiche pas l'identité de démonstration écrite dans compte.html
+// (elle est remplacée par le profil dès qu'il est rempli)
+function viderIdentiteDemo() {
+  var champs = { 'sidebar-nom': 'Mon espace', 'sidebar-email': '', 'avatar-initials': '', 'notif-email': '' };
+  Object.keys(champs).forEach(function(id) { var el = document.getElementById(id); if (el) el.textContent = champs[id]; });
+  var badge = document.querySelector('.profile-badge');
+  if (badge) badge.style.display = 'none';
+}
 // Étape de transition : le site client est relié à la base de données, pas encore l'espace client
 function afficherAvisCompteNonRelie() {
   var layout = document.querySelector('.layout');
@@ -507,7 +547,7 @@ function afficherAvisCompteNonRelie() {
 
 // ── INIT ──
 window.addEventListener('DOMContentLoaded', function() {
-  if (typeof PHARMA_SUPABASE !== 'undefined' && PHARMA_SUPABASE) afficherAvisCompteNonRelie();
+  if (COMPTE_RELIE) { afficherAvisCompteNonRelie(); viderIdentiteDemo(); }
   applyPharmacyConfig();
   initProfil();
   syncProfilDisplay();
@@ -520,7 +560,7 @@ window.addEventListener('DOMContentLoaded', function() {
   initAvatar();
   // L'admin (autre onglet) fait évoluer commandes et codes : on se recale sur les données les plus récentes.
   window.addEventListener('storage', function(e) {
-    if (e.key === 'pres-data') { DATA = PharmaStore.load(); initFidelite(); renderMesCommandes(); afficherConsentement(); }
+    if (e.key === 'pres-data' && !COMPTE_RELIE) { DATA = PharmaStore.load(); initFidelite(); renderMesCommandes(); afficherConsentement(); }
   });
   var tb = document.getElementById('theme-btn');
   if (tb) tb.addEventListener('click', function(){ toggleTheme(); updateThemeOptionsUI(); });
